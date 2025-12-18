@@ -1,6 +1,6 @@
-CHOCOLATIER: DECADENCE REFORGED
-Version 1.0
-Created by: Michael Lane
+# CHOCOLATIER: DECADENCE REFORGED
+## Version 0.1 (BETA)
+## Created by: Michael Lane
 
 INTRODUCTION
 ------------
