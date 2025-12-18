@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_whit.xml" source=".\main_whit*.png">
+  <img regx="86.000000" regy="123.000000" name="main_whit.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="86" regy="116" name="main_whit.png" w="168" h="252" x="0" y="0"/>
+    <frame regx="39" regy="69" name="main_whit_displeased.png" w="102" h="84" x="173" y="0"/>
+    <frame regx="39" regy="69" name="main_whit_neutral.png" w="72" h="84" x="276" y="0"/>
+    <frame regx="82" regy="85" name="main_whit_pleased.png" w="120" h="102" x="349" y="0"/>
+  </framelist>
+</sequence>

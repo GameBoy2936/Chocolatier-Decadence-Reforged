@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\tor_marketkeep.xml" source=".\tor_marketkeep*.png">
+  <img regx="87.000000" regy="130.000000" name="tor_marketkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="83" regy="108" name="tor_marketkeep.png" w="168" h="268" x="0" y="0"/>
+    <frame regx="78" regy="80" name="tor_marketkeep_displeased.png" w="104" h="85" x="167" y="0"/>
+    <frame regx="78" regy="80" name="tor_marketkeep_neutral.png" w="104" h="85" x="272" y="0"/>
+    <frame regx="78" regy="80" name="tor_marketkeep_pleased.png" w="104" h="85" x="377" y="0"/>
+  </framelist>
+</sequence>

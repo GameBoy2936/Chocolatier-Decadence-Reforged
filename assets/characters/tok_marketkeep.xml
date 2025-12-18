@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\tok_marketkeep.xml" source=".\tok_marketkeep*.png">
+  <img regx="85.000000" regy="125.000000" name="tok_marketkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="85" regy="114" name="tok_marketkeep.png" w="170" h="258" x="0" y="0"/>
+    <frame regx="26" regy="81" name="tok_marketkeep_displeased.png" w="59" h="133" x="171" y="0"/>
+    <frame regx="26" regy="81" name="tok_marketkeep_neutral.png" w="59" h="133" x="231" y="0"/>
+    <frame regx="26" regy="81" name="tok_marketkeep_pleased.png" w="60" h="133" x="291" y="0"/>
+  </framelist>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?> 
+<settings>
+	<game>chocolatier3</game>
+	<gameversion>dl,pf,1.1</gameversion>
+	<serverversion>3.0</serverversion>
+	<firstpeek>0</firstpeek>
+	<cheatmode>0</cheatmode> <!-- Activates the developer console in-game -->
+	<locale>en</locale>
+	<hiscorelocal>0</hiscorelocal>
+	<hiscoreanon>0</hiscoreanon>
+</settings>

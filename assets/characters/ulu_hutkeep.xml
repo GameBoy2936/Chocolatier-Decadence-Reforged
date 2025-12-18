@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\ulu_hutkeep.xml" source=".\ulu_hutkeep*.png">
+  <img regx="76.000000" regy="134.000000" name="ulu_hutkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="73" regy="94" name="ulu_hutkeep.png" w="158" h="250" x="0" y="0"/>
+    <frame regx="10" regy="57" name="ulu_hutkeep_displeased.png" w="48" h="74" x="153" y="0"/>
+    <frame regx="10" regy="57" name="ulu_hutkeep_neutral.png" w="48" h="74" x="227" y="0"/>
+    <frame regx="10" regy="58" name="ulu_hutkeep_pleased.png" w="48" h="75" x="301" y="0"/>
+  </framelist>
+</sequence>

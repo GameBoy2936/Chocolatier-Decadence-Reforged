@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\lim_fountain.xml" source=".\lim_fountain*.png">
+  <img regx="67.000000" regy="90.000000" name="lim_fountain.jpg" mask="lim_fountain.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="17" regy="41" name="lim_fountain1.png" w="34" h="82" x="0" y="0"/>
+    <frame regx="21" regy="36" name="lim_fountain2.png" w="42" h="82" x="35" y="0"/>
+    <frame regx="24" regy="29" name="lim_fountain3.png" w="46" h="80" x="78" y="0"/>
+    <frame regx="28" regy="21" name="lim_fountain4.png" w="57" h="71" x="125" y="0"/>
+    <frame regx="30" regy="42" name="lim_fountain5.png" w="63" h="96" x="183" y="0"/>
+  </framelist>
+<script luascript="function DoAnim() delay(200) while true do frames { 1,2,3,4,5 } end end"></script>
+</sequence>

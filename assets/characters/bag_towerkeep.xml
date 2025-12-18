@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\bag_towerkeep.xml" source=".\bag_towerkeep*.png">
+  <img regx="86.000000" regy="134.000000" name="bag_towerkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="88" regy="104" name="bag_towerkeep.png" w="172" h="270" x="0" y="0"/>
+    <frame regx="41" regy="69" name="bag_towerkeep_displeased.png" w="85" h="94" x="173" y="0"/>
+    <frame regx="41" regy="69" name="bag_towerkeep_neutral.png" w="85" h="94" x="259" y="0"/>
+    <frame regx="41" regy="69" name="bag_towerkeep_pleased.png" w="85" h="94" x="345" y="0"/>
+  </framelist>
+</sequence>

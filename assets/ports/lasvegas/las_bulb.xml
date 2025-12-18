@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\Playground Animation\las_bulb.xml" source=".\las_bulb*.png">
+  <img regx="179.000000" regy="123.000000" name="las_bulb.jpg" mask="las_bulb.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="177" regy="123" name="las_bulb_01.png" w="355" h="247" x="0" y="0"/>
+    <frame regx="179" regy="123" name="las_bulb_02.png" w="357" h="247" x="0" y="248"/>
+    <frame regx="179" regy="123" name="las_bulb_03.png" w="336" h="247" x="0" y="496"/>
+  </framelist>
+<script luascript="function DoAnim() delay(60) while true do frames { 01,02,03 } end end"></script>
+</sequence>

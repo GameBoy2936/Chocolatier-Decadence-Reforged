@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\travel_air.xml" source=".\airplane*.png">
+  <img regx="63.000000" regy="75.000000" name="travel_air.jpg" mask="travel_air.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="43" regy="34" name="airplane_0001.png" w="87" h="68" x="0" y="0"/>
+    <frame regx="39" regy="33" name="airplane_0004.png" w="83" h="68" x="88" y="0"/>
+    <frame regx="37" regy="30" name="airplane_0007.png" w="78" h="64" x="172" y="0"/>
+    <frame regx="43" regy="34" name="airplane_0011.png" w="77" h="63" x="251" y="0"/>
+    <frame regx="43" regy="37" name="airplane_0017.png" w="85" h="72" x="329" y="0"/>
+    <frame regx="42" regy="36" name="airplane_0023.png" w="79" h="67" x="415" y="0"/>
+    <frame regx="36" regy="40" name="airplane_0027.png" w="74" h="69" x="0" y="73"/>
+    <frame regx="42" regy="41" name="airplane_0030.png" w="85" h="73" x="75" y="73"/>
+    <frame regx="44" regy="40" name="airplane_0033.png" w="89" h="74" x="161" y="73"/>
+    <frame regx="42" regy="41" name="airplane_0036.png" w="84" h="73" x="251" y="73"/>
+    <frame regx="37" regy="40" name="airplane_0039.png" w="74" h="69" x="336" y="73"/>
+    <frame regx="38" regy="34" name="airplane_0044.png" w="81" h="67" x="411" y="73"/>
+    <frame regx="42" regy="37" name="airplane_0049.png" w="86" h="72" x="0" y="148"/>
+    <frame regx="35" regy="35" name="airplane_0054.png" w="80" h="65" x="87" y="148"/>
+    <frame regx="40" regy="30" name="airplane_0059.png" w="78" h="64" x="168" y="148"/>
+    <frame regx="44" regy="33" name="airplane_0062.png" w="84" h="68" x="247" y="148"/>
+  </framelist>
+</sequence>

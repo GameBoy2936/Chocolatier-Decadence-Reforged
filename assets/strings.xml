@@ -1,0 +1,4468 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Citizen Comrade</LastAuthor>
+  <Created>2006-10-04T22:28:33Z</Created>
+  <LastSaved>2009-01-12T00:53:41Z</LastSaved>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <Colors>
+   <Color>
+    <Index>0</Index>
+    <RGB>#010000</RGB>
+   </Color>
+   <Color>
+    <Index>2</Index>
+    <RGB>#993300</RGB>
+   </Color>
+   <Color>
+    <Index>3</Index>
+    <RGB>#FFFF00</RGB>
+   </Color>
+   <Color>
+    <Index>4</Index>
+    <RGB>#DDDDDD</RGB>
+   </Color>
+   <Color>
+    <Index>5</Index>
+    <RGB>#00FF00</RGB>
+   </Color>
+   <Color>
+    <Index>12</Index>
+    <RGB>#808000</RGB>
+   </Color>
+   <Color>
+    <Index>46</Index>
+    <RGB>#6666CC</RGB>
+   </Color>
+  </Colors>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11640</WindowHeight>
+  <WindowWidth>15480</WindowWidth>
+  <WindowTopX>360</WindowTopX>
+  <WindowTopY>300</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Worksheet ss:Name="strings">
+  <Table ss:ExpandedColumnCount="256" ss:ExpandedRowCount="1099" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="200.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
+	<Row>
+	 <Cell><Data ss:Type="String">windowtitle</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gamename</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">welcome</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome back, %1%!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">copyright</Data></Cell>
+	 <Cell><Data ss:Type="String">Copyright © 2009 PlayFirst, Inc. All Rights Reserved.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gVersionString</Data></Cell>
+	 <Cell><Data ss:Type="String">ver. 1.1 (GameBoy2936's Revamp)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">GENERAL UI LABELS BELOW</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ok</Data></Cell>
+	 <Cell><Data ss:Type="String">Ok</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yes</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">no</Data></Cell>
+	 <Cell><Data ss:Type="String">No</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">close</Data></Cell>
+	 <Cell><Data ss:Type="String">Close</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cancel</Data></Cell>
+	 <Cell><Data ss:Type="String">Cancel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">done</Data></Cell>
+	 <Cell><Data ss:Type="String">Done</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">start</Data></Cell>
+	 <Cell><Data ss:Type="String">Start</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">back</Data></Cell>
+	 <Cell><Data ss:Type="String">Back</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">enter</Data></Cell>
+	 <Cell><Data ss:Type="String">Enter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">exit</Data></Cell>
+	 <Cell><Data ss:Type="String">Exit</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">buy</Data></Cell>
+	 <Cell><Data ss:Type="String">Buy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sell</Data></Cell>
+	 <Cell><Data ss:Type="String">Sell</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sell_all</Data></Cell>
+	 <Cell><Data ss:Type="String">Sell All</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">haggle</Data></Cell>
+	 <Cell><Data ss:Type="String">Haggle</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">try_again</Data></Cell>
+	 <Cell><Data ss:Type="String">Try Again</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quest_log</Data></Cell>
+	 <Cell><Data ss:Type="String">Quest Log</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quest_log_letter</Data></Cell>
+	 <Cell><Data ss:Type="String">Q</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ledger_map</Data></Cell>
+	 <Cell><Data ss:Type="String">Map</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ledger_port</Data></Cell>
+	 <Cell><Data ss:Type="String">Port</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipes</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipes_letter</Data></Cell>
+	 <Cell><Data ss:Type="String">R</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">inventory</Data></Cell>
+	 <Cell><Data ss:Type="String">Inventory</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">inventory_letter</Data></Cell>
+	 <Cell><Data ss:Type="String">I</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">menu</Data></Cell>
+	 <Cell><Data ss:Type="String">Menu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">menu_letter</Data></Cell>
+	 <Cell><Data ss:Type="String">M</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ledger_catalogue</Data></Cell>
+	 <Cell><Data ss:Type="String">Catalogue</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ledger_catalogue_letter</Data></Cell>
+	 <Cell><Data ss:Type="String">C</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ledger_medals</Data></Cell>
+	 <Cell><Data ss:Type="String">Awards</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ledger_medals_letter</Data></Cell>
+	 <Cell><Data ss:Type="String">A</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">create</Data></Cell>
+	 <Cell><Data ss:Type="String">Create</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">randomize</Data></Cell>
+	 <Cell><Data ss:Type="String">Randomize</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">story_mode</Data></Cell>
+	 <Cell><Data ss:Type="String">Start Game</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">change_player</Data></Cell>
+	 <Cell><Data ss:Type="String">Change Player</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">options</Data></Cell>
+	 <Cell><Data ss:Type="String">Options</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">credits</Data></Cell>
+	 <Cell><Data ss:Type="String">Credits</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_menu</Data></Cell>
+	 <Cell><Data ss:Type="String">Main Menu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">resume_game</Data></Cell>
+	 <Cell><Data ss:Type="String">Resume Game</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">replay_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">Replay Intro</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">language</Data></Cell>
+	 <Cell><Data ss:Type="String">Language</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_en</Data></Cell>
+	 <Cell><Data ss:Type="String">English</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_fr</Data></Cell>
+	 <Cell><Data ss:Type="String">Français</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_de</Data></Cell>
+	 <Cell><Data ss:Type="String">Deutsch</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_nl</Data></Cell>
+	 <Cell><Data ss:Type="String">Nederlands</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_it</Data></Cell>
+	 <Cell><Data ss:Type="String">Italiano</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_es</Data></Cell>
+	 <Cell><Data ss:Type="String">Español</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_pt</Data></Cell>
+	 <Cell><Data ss:Type="String">Português</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ca</Data></Cell>
+	 <Cell><Data ss:Type="String">Català</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_mt</Data></Cell>
+	 <Cell><Data ss:Type="String">Malti</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_pl</Data></Cell>
+	 <Cell><Data ss:Type="String">Polski</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_cz</Data></Cell>
+	 <Cell><Data ss:Type="String">Čeština</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_hu</Data></Cell>
+	 <Cell><Data ss:Type="String">Magyar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ro</Data></Cell>
+	 <Cell><Data ss:Type="String">Română</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_hr</Data></Cell>
+	 <Cell><Data ss:Type="String">Hrvatski</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_sr</Data></Cell>
+	 <Cell><Data ss:Type="String">Српски</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_bg</Data></Cell>
+	 <Cell><Data ss:Type="String">български</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_da</Data></Cell>
+	 <Cell><Data ss:Type="String">Dansk</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_is</Data></Cell>
+	 <Cell><Data ss:Type="String">Íslenska</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_no</Data></Cell>
+	 <Cell><Data ss:Type="String">Norsk</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_sv</Data></Cell>
+	 <Cell><Data ss:Type="String">Svenska</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_fi</Data></Cell>
+	 <Cell><Data ss:Type="String">Suomi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ru</Data></Cell>
+	 <Cell><Data ss:Type="String">Русский</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_uk</Data></Cell>
+	 <Cell><Data ss:Type="String">українська</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_el</Data></Cell>
+	 <Cell><Data ss:Type="String">ελληνικά</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_tr</Data></Cell>
+	 <Cell><Data ss:Type="String">Türkçe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ar</Data></Cell>
+	 <Cell><Data ss:Type="String">Arabic (UNSUPPORTED RTL)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_hi</Data></Cell>
+	 <Cell><Data ss:Type="String">हिन्दी</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_bn</Data></Cell>
+	 <Cell><Data ss:Type="String">বাংলা</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_zhs</Data></Cell>
+	 <Cell><Data ss:Type="String"> 中文（简体）</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_zht</Data></Cell>
+	 <Cell><Data ss:Type="String"> 中文（繁體）</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ko</Data></Cell>
+	 <Cell><Data ss:Type="String">한국인</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ja</Data></Cell>
+	 <Cell><Data ss:Type="String">日本語</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_th</Data></Cell>
+	 <Cell><Data ss:Type="String">ไทย</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_vi</Data></Cell>
+	 <Cell><Data ss:Type="String">Tiếng Việt</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_id</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahasa Indonesia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ms</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahasa Melayu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_tl</Data></Cell>
+	 <Cell><Data ss:Type="String">Filipino</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">select_language</Data></Cell>
+	 <Cell><Data ss:Type="String">Select a Language</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">language_restart_needed</Data></Cell>
+	 <Cell><Data ss:Type="String">Language settings have been changed. Please restart the game for the changes to take full effect.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help</Data></Cell>
+	 <Cell><Data ss:Type="String">Help</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">high_scores</Data></Cell>
+	 <Cell><Data ss:Type="String">High Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quit</Data></Cell>
+	 <Cell><Data ss:Type="String">Save & Quit</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">use_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Use This Recipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">previous</Data></Cell>
+	 <Cell><Data ss:Type="String">Previous</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">next</Data></Cell>
+	 <Cell><Data ss:Type="String">Next</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">pause</Data></Cell>
+	 <Cell><Data ss:Type="String">Pause</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">go</Data></Cell>
+	 <Cell><Data ss:Type="String">Go</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">make_chocolate</Data></Cell>
+	 <Cell><Data ss:Type="String">Make Chocolate!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">make_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Make Coffee!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">configure</Data></Cell>
+	 <Cell><Data ss:Type="String">Change Recipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">load_creation</Data></Cell>
+	 <Cell><Data ss:Type="String">Load Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">save_creation</Data></Cell>
+	 <Cell><Data ss:Type="String">Save Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_to_book</Data></Cell>
+	 <Cell><Data ss:Type="String">Add to Book</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_saved</Data></Cell>
+	 <Cell><Data ss:Type="String">Your creation '%1%' has been successfully saved!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_saved_failed_duplicate</Data></Cell>
+	 <Cell><Data ss:Type="String">Your creation '%1%' is a duplicate of a saved creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">configure</Data></Cell>
+	 <Cell><Data ss:Type="String">Change Recipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">finished_quests</Data></Cell>
+	 <Cell><Data ss:Type="String">Include Completed Quests</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">newplayer</Data></Cell>
+	 <Cell><Data ss:Type="String">New Player</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">renameplayer</Data></Cell>
+	 <Cell><Data ss:Type="String">Rename Player</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">deleteplayer</Data></Cell>
+	 <Cell><Data ss:Type="String">Delete Player</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">enternameprompt</Data></Cell>
+	 <Cell><Data ss:Type="String">Please enter your name:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">default_name</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolatier</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">badname</Data></Cell>
+	 <Cell><Data ss:Type="String">The name you have entered is not valid. Please enter another name.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nameinuse</Data></Cell>
+	 <Cell><Data ss:Type="String">That name is already in use. Please choose a different name.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">difficulty_prompt</Data></Cell>
+	 <Cell><Data ss:Type="String">Please select a difficulty level:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">difficulty</Data></Cell>
+	 <Cell><Data ss:Type="String">Difficulty</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">difficulty_easy</Data></Cell>
+	 <Cell><Data ss:Type="String">Easy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">difficulty_medium</Data></Cell>
+	 <Cell><Data ss:Type="String">Medium</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">difficulty_hard</Data></Cell>
+	 <Cell><Data ss:Type="String">Hard</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">moregames</Data></Cell>
+	 <Cell><Data ss:Type="String">More Games</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">title_quests</Data></Cell>
+	 <Cell><Data ss:Type="String">Quests</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">title_recipes</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">title_inventory</Data></Cell>
+	 <Cell><Data ss:Type="String">Inventory</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">title_medals</Data></Cell>
+	 <Cell><Data ss:Type="String">Awards</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">title_history</Data></Cell>
+	 <Cell><Data ss:Type="String">History</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">title_kitchen</Data></Cell>
+	 <Cell><Data ss:Type="String">Test Kitchen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">title_marketing</Data></Cell>
+	 <Cell><Data ss:Type="String">Marketing</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history</Data></Cell>
+	 <Cell><Data ss:Type="String">History</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_characters</Data></Cell>
+	 <Cell><Data ss:Type="String">Characters</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">Ingredients</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ports</Data></Cell>
+	 <Cell><Data ss:Type="String">Ports</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_locked_title</Data></Cell>
+	 <Cell><Data ss:Type="String">????</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_locked_default_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not yet met this character.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_locked_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not yet discovered this ingredient.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_met_not_unlocked</Data></Cell>
+	 <Cell><Data ss:Type="String">You have met this character, but you do not know them well. Complete quests and special orders involving them to learn more about their history and preferences.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_no_selection</Data></Cell>
+	 <Cell><Data ss:Type="String">Select an entry from the list to view its details.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_likes</Data></Cell>
+	 <Cell><Data ss:Type="String">Likes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_dislikes</Data></Cell>
+	 <Cell><Data ss:Type="String">Dislikes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_none_discovered</Data></Cell>
+	 <Cell><Data ss:Type="String">None</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_unknown_preference</Data></Cell>
+	 <Cell><Data ss:Type="String">???</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_undiscovered_location</Data></Cell>
+	 <Cell><Data ss:Type="String">???</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_category_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Category</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_season_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Seasonality</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_price_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Price Range</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_locations_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Where to Find</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_season_year_round</Data></Cell>
+	 <Cell><Data ss:Type="String">Year-Round</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_season_format</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% to %2%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_price_format</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% - %2%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_price_format_seasonal</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% (Out of Season: %2%)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_date_early</Data></Cell>
+	 <Cell><Data ss:Type="String">Early %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_date_middle</Data></Cell>
+	 <Cell><Data ss:Type="String">Mid %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_date_late</Data></Cell>
+	 <Cell><Data ss:Type="String">Late %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_characters</Data></Cell>
+	 <Cell><Data ss:Type="String">Characters</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_buildings</Data></Cell>
+	 <Cell><Data ss:Type="String">Buildings</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_ingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">Ingredients</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">telegram_from</Data></Cell>
+	 <Cell><Data ss:Type="String">FROM: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">telegram_to</Data></Cell>
+	 <Cell><Data ss:Type="String">TO: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">telegram_where</Data></Cell>
+	 <Cell><Data ss:Type="String">LOCATION: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">GENERAL DIALOG TEXT</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">confirm_quit</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you sure you want to quit %gamename%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">confirm_delete</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you sure you want to delete the player %1%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sell_howmany</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll pay %2% a case for %1%. I see you have %3%. Enter the number you would like to sell below and click Sell.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">click_sell</Data></Cell>
+	 <Cell><Data ss:Type="String">Click to sell some.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">buy_howmany</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm selling %3% of %1% for %2% each. Enter the number of %3% you would like below and click Buy.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">click_buy</Data></Cell>
+	 <Cell><Data ss:Type="String">Click to purchase some.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kitchen_new_ingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">It looks like you have some ingredients we haven't seen before. We'll grab one sack of each so it will be available for use in our test kitchens.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">user_noslots</Data></Cell>
+	 <Cell><Data ss:Type="String">You do not currently have any spaces available in the recipe book for your own recipes.&lt;br&gt;&lt;br&gt;With your continued success, the Board of Directors will provide more spaces so you can create (and sell) your own inventions. Would you like to come inside anyway?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">user_allslotsused</Data></Cell>
+	 <Cell><Data ss:Type="String">Way to go - you have completed the entire recipe book!&lt;br&gt;&lt;br&gt;While you won't be able to add any more recipes, you are certainly welcome to poke around and experiment as much as you wish.&lt;br&gt;&lt;br&gt;Would you like to step inside now?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut16_configure_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Don't forget to click %configure% and prepare the factory to make %b02%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">game_paused</Data></Cell>
+	 <Cell><Data ss:Type="String">Machinery has been paused. Press OK to continue production.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">chocolate_start</Data></Cell>
+	 <Cell><Data ss:Type="String">You have 60 seconds to set our production rate.&lt;br&gt;&lt;br&gt;Aim and click to fire ingredients - match the full tray you see on the right.&lt;br&gt;&lt;br&gt;I'll speed the machines up as you succeed, and slow them down if you miss.&lt;br&gt;&lt;br&gt;Good luck!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">choco_first_missed</Data></Cell>
+	 <Cell><Data ss:Type="String">Uh-oh! Wasted ingredient!&lt;br&gt;&lt;br&gt;Use the full tray on the right as your guide.&lt;br&gt;&lt;br&gt;I'll keep track of each ingredient you waste up on the right.&lt;br&gt;Waste 8, and I'll be forced to halt production...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">coffee_start</Data></Cell>
+	 <Cell><Data ss:Type="String">Aim and fire ingredients to form rows of at least 3 ingredients on the moving conveyor belt.&lt;br&gt;&lt;br&gt;Matched ingredients will fill the coffee-making machinery on the right.&lt;br&gt;&lt;br&gt;Matches of more than 3 ingredients in a row earn bonus products.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">now_making</Data></Cell>
+	 <Cell><Data ss:Type="String">Now Making:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cases</Data></Cell>
+	 <Cell><Data ss:Type="String">Cases:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cases_per</Data></Cell>
+	 <Cell><Data ss:Type="String">per week</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">coffee_first_missed</Data></Cell>
+	 <Cell><Data ss:Type="String">Uh-oh! Wasted ingredient!&lt;br&gt;&lt;br&gt;Fire ingredients at blank squares on the grid to try to form lines of at least 3.&lt;br&gt;&lt;br&gt;I'll keep track of each ingredient you waste. Waste 8, and I'll be forced to halt production...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_gameover</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;Production Rate:&lt;/b&gt; %1% cases per week.&lt;/font&gt;&lt;br&gt;&lt;br&gt;As long as you have the needed ingredients in stock, we'll keep on making %1% cases each and every week.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_insufficient</Data></Cell>
+	 <Cell><Data ss:Type="String">You are missing the ingredients required to make this recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">stat_established_format</Data></Cell>
+	 <Cell><Data ss:Type="String">Established: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">stat_top_product_format</Data></Cell>
+	 <Cell><Data ss:Type="String">Top Product: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">stat_total_cases_format</Data></Cell>
+	 <Cell><Data ss:Type="String">Total Output: %1% Cases</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">weekly_consumption</Data></Cell>
+	 <Cell><Data ss:Type="String">Weekly Consumption</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">machinery_equipment</Data></Cell>
+	 <Cell><Data ss:Type="String">Machinery &amp; Equipment</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">machinery_installed</Data></Cell>
+	 <Cell><Data ss:Type="String">INSTALLED</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">machinery_buy</Data></Cell>
+	 <Cell><Data ss:Type="String">Buy (%1%)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">machinery_cost</Data></Cell>
+	 <Cell><Data ss:Type="String">%1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">prompt_buy_machinery</Data></Cell>
+	 <Cell><Data ss:Type="String">Install %1% machinery for %2%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">prompt_buy_recycler</Data></Cell>
+	 <Cell><Data ss:Type="String">Install Recycler unit for %1%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recycler</Data></Cell>
+	 <Cell><Data ss:Type="String">Recycler</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">stat_na</Data></Cell>
+	 <Cell><Data ss:Type="String">N/A</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gamble_options</Data></Cell>
+	 <Cell><Data ss:Type="String">Feeling lucky? Would you like to try a traditional slot machine? Or play hide and seek for money in spare boxes?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ante</Data></Cell>
+	 <Cell><Data ss:Type="String">Ante:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">your_bet</Data></Cell>
+	 <Cell><Data ss:Type="String">Your Bet</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bet_more</Data></Cell>
+	 <Cell><Data ss:Type="String">Bet More</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bet_less</Data></Cell>
+	 <Cell><Data ss:Type="String">Bet Less</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">you_won</Data></Cell>
+	 <Cell><Data ss:Type="String">You won:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">you_lost</Data></Cell>
+	 <Cell><Data ss:Type="String">You lost:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">player_wins</Data></Cell>
+	 <Cell><Data ss:Type="String">You got me this time! You win %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">char_wins</Data></Cell>
+	 <Cell><Data ss:Type="String">Looks like I win %2%. Better luck next time!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tie</Data></Cell>
+	 <Cell><Data ss:Type="String">It's a tie! I'll keep the %1%, and you keep the rest.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gamble_crate_yn</Data></Cell>
+	 <Cell><Data ss:Type="String">Feeling lucky, &lt;player&gt;? Would you care to try your hand at a simple game of chance?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gamble_crate_instructions</Data></Cell>
+	 <Cell><Data ss:Type="String">Raise or lower your bet and press %start%.&lt;br&gt;The more you wager, the more I'll place in these boxes.&lt;br&gt;Open boxes, and stop at any time to keep the money you've uncovered. But uncover a whammy, and I'll keep all the dough...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gamble_crate_first</Data></Cell>
+	 <Cell><Data ss:Type="String">OK, I've put more than %1% in these boxes. Open as many as you wish, but remember: uncover a whammy and the game ends.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">crates_ahead</Data></Cell>
+	 <Cell><Data ss:Type="String">There are still more boxes to open! Go ahead and open another one, or click %done% to bank your winnings...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">crates_behind</Data></Cell>
+	 <Cell><Data ss:Type="String">Stop now or open more boxes. The choice is yours!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">crates_even</Data></Cell>
+	 <Cell><Data ss:Type="String">You can avoid a loss by clicking %done%, or keep trying for more.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">crates_lost</Data></Cell>
+	 <Cell><Data ss:Type="String">Well, that's it. Once you uncover a whammy, the game's over. I'll keep your bet and wish you better luck next time...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">crates_welldone</Data></Cell>
+	 <Cell><Data ss:Type="String">Nicely done. It pays not to be too greedy!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">winnings</Data></Cell>
+	 <Cell><Data ss:Type="String">Click %done% to win:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">losings</Data></Cell>
+	 <Cell><Data ss:Type="String">Click %done% to keep:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">winnings_alt</Data></Cell>
+	 <Cell><Data ss:Type="String">or continue opening crates to try for more!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">slots_instructions</Data></Cell>
+	 <Cell><Data ss:Type="String">Give the slot machine a pull! Each pull will cost %1%... but you may hit the jackpot!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">slots_won_even</Data></Cell>
+	 <Cell><Data ss:Type="String">You broke even that time... another spin will cost %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">slots_won_jackpot</Data></Cell>
+	 <Cell><Data ss:Type="String">Jackpot! Your %2% bet just paid out %1%! Try again?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">slots_won</Data></Cell>
+	 <Cell><Data ss:Type="String">Well done! You won %1% for a %2% bet. Pull the arm for another try.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">slots_lost</Data></Cell>
+	 <Cell><Data ss:Type="String">Nothing. Give the slot machine another pull for %1% and see if your fortunes change.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_stalled</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;b&gt;One of your factories has stalled!&lt;/b&gt;&lt;br&gt;&lt;br&gt;You need to have enough ingredients on hand to keep the machinery running while you travel so they can continue to produce chocolates for you to sell. Roll your mouse over the Factory Status window below to find out where to buy the ingredients you need.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">DELIVERY TEXT</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_title</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Order for %3%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver %1% cases of %2% for %3% at %6% in %7%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED:&lt;br&gt;%1% cases of %2% for %3%.&lt;br&gt;Will pay %4%.&lt;br&gt;Required within %5% weeks or order will be cancelled.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">OTHER UI ELEMENTS BELOW</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dookie_pertick</Data></Cell>
+	 <Cell><Data ss:Type="String">Making %1% per week.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dookie_ticks</Data></Cell>
+	 <Cell><Data ss:Type="String">Enough ingredients for %1% weeks.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dookie_low</Data></Cell>
+	 <Cell><Data ss:Type="String">Running low on ingredients.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ing_inventory</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% %2% in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ing_inventory_single</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% %2% in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">prod_inventory</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% cases in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">prod_inventory_single</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% case in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ing_low</Data></Cell>
+	 <Cell><Data ss:Type="String">low on %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ing_out</Data></Cell>
+	 <Cell><Data ss:Type="String">out of %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lastseen</Data></Cell>
+	 <Cell><Data ss:Type="String">last seen in %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">product_never_seen</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not yet sold this product.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">price_range</Data></Cell>
+	 <Cell><Data ss:Type="String">Previously seen for: %1% to %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">product_lastseen</Data></Cell>
+	 <Cell><Data ss:Type="String">Last seen for %2% per case in %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ingredient_never_seen</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not yet priced this ingredient.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ingredient_lastseen</Data></Cell>
+	 <Cell><Data ss:Type="String">Last seen in %1% for %2% per %3%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_nomachinery</Data></Cell>
+	 <Cell><Data ss:Type="String">This factory is not equipped to make this type of product.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_config</Data></Cell>
+	 <Cell><Data ss:Type="String">This factory is configured to make %1% cases per week.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_noconfig</Data></Cell>
+	 <Cell><Data ss:Type="String">The %1% factory has not been configured for this product.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_noingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">To configure the factory for this recipe, you must have the required ingredients on hand.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_other</Data></Cell>
+	 <Cell><Data ss:Type="String">Your %1% factory will make %2% of these per week.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">click_phone</Data></Cell>
+	 <Cell><Data ss:Type="String">Click to telegraph a change order.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">user_blankslot</Data></Cell>
+	 <Cell><Data ss:Type="String">This space is now available! Visit the Secret Test Kitchen to create your own recipe!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_noslots</Data></Cell>
+	 <Cell><Data ss:Type="String">You do not currently have any spaces available in the recipe book for your own recipes.&lt;br&gt;&lt;br&gt;With your continued success, the Board of Directors will provide more spaces so you can create (and sell) your own inventions.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_unknown</Data></Cell>
+	 <Cell><Data ss:Type="String">You do not yet know this recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_time_single</Data></Cell>
+	 <Cell><Data ss:Type="String">This trip will take one week</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_time</Data></Cell>
+	 <Cell><Data ss:Type="String">This trip will take %1% weeks</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_cost</Data></Cell>
+	 <Cell><Data ss:Type="String">and cost %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_free</Data></Cell>
+	 <Cell><Data ss:Type="String">on your private plane.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_expensive</Data></Cell>
+	 <Cell><Data ss:Type="String">You can't afford this.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_here</Data></Cell>
+	 <Cell><Data ss:Type="String">You are here.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_locked</Data></Cell>
+	 <Cell><Data ss:Type="String">This port is not yet available.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">category_empty</Data></Cell>
+	 <Cell><Data ss:Type="String">No recipes in this category.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sfxlevel</Data></Cell>
+	 <Cell><Data ss:Type="String">Sound</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">musiclevel</Data></Cell>
+	 <Cell><Data ss:Type="String">Music</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ambientlevel</Data></Cell>
+	 <Cell><Data ss:Type="String">Ambient</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">fullscreen</Data></Cell>
+	 <Cell><Data ss:Type="String">Full Screen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">screenswitchfailed</Data></Cell>
+	 <Cell><Data ss:Type="String">Unable to switch screen modes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mutesound</Data></Cell>
+	 <Cell><Data ss:Type="String">Mute All Sound</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nowinventing</Data></Cell>
+	 <Cell><Data ss:Type="String">Now inventing...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kitchen_slots</Data></Cell>
+	 <Cell><Data ss:Type="String">Slots</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_buymachinery</Data></Cell>
+	 <Cell><Data ss:Type="String">To make this product, we'll have to equip the factory to make %1%. It will cost %2%, and you have %3%. Do you want to purchase the machinery now?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_expensivemachinery</Data></Cell>
+	 <Cell><Data ss:Type="String">To make this product, we'll have to equip the factory to make %1%. It will cost %2%, and you only have %3%. Come back when you have enough money, and we can get the new machinery set up here.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_instructions</Data></Cell>
+	 <Cell><Data ss:Type="String">Select the ingredients to use from the drawers. Click %invent_taste% and we'll give you some feedback on what you've got.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_create</Data></Cell>
+	 <Cell><Data ss:Type="String">Invent</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_design</Data></Cell>
+	 <Cell><Data ss:Type="String">Next Step</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_taste</Data></Cell>
+	 <Cell><Data ss:Type="String">Taste It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_commit</Data></Cell>
+	 <Cell><Data ss:Type="String">Add Recipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_noname</Data></Cell>
+	 <Cell><Data ss:Type="String">You should give your new recipe a name and a description before adding it permanently to your recipe book.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_name_inuse</Data></Cell>
+	 <Cell><Data ss:Type="String">There is already a recipe with that name. Why not choose another name so you don't confuse your customers?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you sure you want to add this recipe to our recipe book? Adding a recipe will permanently use up one of your available spaces.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taste_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Go Back</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">design_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Next Step</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">clear_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Start Over</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">save_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Add Recipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_name</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipe Name</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_name_default</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;i&gt;Name Your Recipe&lt;/i&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_description</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipe Description</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">recipe_description_default</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;i&gt;Describe your creation&lt;/i&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">numericSeparator</Data></Cell>
+	 <Cell><Data ss:Type="String">,</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">money_format</Data></Cell>
+	 <Cell><Data ss:Type="String">$%1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">date_format</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% %2%, %3%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">score_format</Data></Cell>
+	 <Cell><Data ss:Type="String">%1%/week</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">score_info_format</Data></Cell>
+	 <Cell><Data ss:Type="String">%1%: %2% in %3% weeks</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_1</Data></Cell>
+	 <Cell><Data ss:Type="String">January</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_2</Data></Cell>
+	 <Cell><Data ss:Type="String">February</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_3</Data></Cell>
+	 <Cell><Data ss:Type="String">March</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_4</Data></Cell>
+	 <Cell><Data ss:Type="String">April</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_5</Data></Cell>
+	 <Cell><Data ss:Type="String">May</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_6</Data></Cell>
+	 <Cell><Data ss:Type="String">June</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_7</Data></Cell>
+	 <Cell><Data ss:Type="String">July</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_8</Data></Cell>
+	 <Cell><Data ss:Type="String">August</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_9</Data></Cell>
+	 <Cell><Data ss:Type="String">September</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_10</Data></Cell>
+	 <Cell><Data ss:Type="String">October</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_11</Data></Cell>
+	 <Cell><Data ss:Type="String">November</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">month_12</Data></Cell>
+	 <Cell><Data ss:Type="String">December</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Rookie</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank_2</Data></Cell>
+	 <Cell><Data ss:Type="String">CEO Candidate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank_3</Data></Cell>
+	 <Cell><Data ss:Type="String">Interim CEO</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank_4</Data></Cell>
+	 <Cell><Data ss:Type="String">CEO</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank_5</Data></Cell>
+	 <Cell><Data ss:Type="String">Master Chocolatier</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">QUEST REQUIREMENTS AND REWARDS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quest_goals</Data></Cell>
+	 <Cell><Data ss:Type="String">Quest Goals:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">no_active_quests</Data></Cell>
+	 <Cell><Data ss:Type="String">You are not working on a particular quest. Ask around!&lt;br&gt;&lt;br&gt;Board members can also be good sources for ways to grow your business.&lt;br&gt;&lt;br&gt;Click %finished_quests% to review the quests you have already completed.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">award_rank</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive a promotion.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_medal</Data></Cell>
+	 <Cell><Data ss:Type="String">Must have: %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">award_medal</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive a medal: %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_ingredient</Data></Cell>
+	 <Cell><Data ss:Type="String">Have %1% sacks of %2% in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_ingredient_single</Data></Cell>
+	 <Cell><Data ss:Type="String">Have a sack of %1% in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">award_ingredient</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive %1% sacks of %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_product</Data></Cell>
+	 <Cell><Data ss:Type="String">Have %1% cases of %2% in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_product_single</Data></Cell>
+	 <Cell><Data ss:Type="String">Have a case of %1% in inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipe_invented</Data></Cell>
+	 <Cell><Data ss:Type="String">Invent a new recipe in your Secret Test Kitchen.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipe_made</Data></Cell>
+	 <Cell><Data ss:Type="String">Make at least %2% cases of %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipe_made_single</Data></Cell>
+	 <Cell><Data ss:Type="String">Make at least one case of %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipes_known</Data></Cell>
+	 <Cell><Data ss:Type="String">Know %1% recipes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipes_known_category</Data></Cell>
+	 <Cell><Data ss:Type="String">Know %1% recipes for %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipes_made</Data></Cell>
+	 <Cell><Data ss:Type="String">Manufacture %1% different recipes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipes_made_category</Data></Cell>
+	 <Cell><Data ss:Type="String">Manufacture %1% different recipes for %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_user_invent_make</Data></Cell>
+	 <Cell><Data ss:Type="String">Invent a new recipe and make at least %1% cases.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_user_invent_make_single</Data></Cell>
+	 <Cell><Data ss:Type="String">Invent a new recipe and make at least one case.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_date</Data></Cell>
+	 <Cell><Data ss:Type="String">Wait until %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_date</Data></Cell>
+	 <Cell><Data ss:Type="String">Complete all tasks before %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_weeks</Data></Cell>
+	 <Cell><Data ss:Type="String">You have %1% more weeks to complete all tasks.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_weeks_one</Data></Cell>
+	 <Cell><Data ss:Type="String">You have only one more week to complete all tasks.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_weeks_zero</Data></Cell>
+	 <Cell><Data ss:Type="String">You must complete these tasks this week.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_done</Data></Cell>
+	 <Cell><Data ss:Type="String">You have run out of time to complete these tasks.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">generic_quest_expired</Data></Cell>
+	 <Cell><Data ss:Type="String">You have run out of time to complete the tasks required.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">award_product</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive %1% cases of %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_min_money</Data></Cell>
+	 <Cell><Data ss:Type="String">Have at least %1% in cash.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_max_money</Data></Cell>
+	 <Cell><Data ss:Type="String">Have at most %1% in cash.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">award_money</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Learn the recipe for %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">award_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive the recipe for %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">award_machinery</Data></Cell>
+	 <Cell><Data ss:Type="String">Add the %1% machine to %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_person</Data></Cell>
+	 <Cell><Data ss:Type="String">Find %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_person_building</Data></Cell>
+	 <Cell><Data ss:Type="String">Talk to %1% at %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_person_port</Data></Cell>
+	 <Cell><Data ss:Type="String">Talk to %1% in %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_person_building_port</Data></Cell>
+	 <Cell><Data ss:Type="String">Talk to %1% at %2% in %3%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_person_travel</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% will track you down in your travels.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_shop_single</Data></Cell>
+	 <Cell><Data ss:Type="String">Take ownership of your first shop.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">require_shops</Data></Cell>
+	 <Cell><Data ss:Type="String">Take ownership of %1% shops.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">HIGH SCORES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">highscoreheader</Data></Cell>
+	 <Cell><Data ss:Type="String">High Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">localhighscores</Data></Cell>
+	 <Cell><Data ss:Type="String">Local High Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">globalhighscores</Data></Cell>
+	 <Cell><Data ss:Type="String">Global High Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">topplayers</Data></Cell>
+	 <Cell><Data ss:Type="String">Top Players</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">connectingtoserver</Data></Cell>
+	 <Cell><Data ss:Type="String">Connecting to server</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">globalhighscoreinfo</Data></Cell>
+	 <Cell><Data ss:Type="String">Global high scores allow you to compare your high scores against people across the globe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">eligible</Data></Cell>
+	 <Cell><Data ss:Type="String">Submit your name and score to the global list</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">eligibleasterisk</Data></Cell>
+	 <Cell><Data ss:Type="String">*Global score list maintained by PlayFirst: http://www.playfirst.com/privacypolicy.html  For privacy purposes, you should not use your full name as your player name.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">congratshighscore</Data></Cell>
+	 <Cell><Data ss:Type="String">Congratulations! You earned a new global high score!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">scorednq</Data></Cell>
+	 <Cell><Data ss:Type="String">Your score did not qualify for a new global high score.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yourrank</Data></Cell>
+	 <Cell><Data ss:Type="String">Your Rank: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">moreinfo</Data></Cell>
+	 <Cell><Data ss:Type="String">More Info</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">viewglobal</Data></Cell>
+	 <Cell><Data ss:Type="String">View Global High Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">viewlocal</Data></Cell>
+	 <Cell><Data ss:Type="String">View Local High Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">submit</Data></Cell>
+	 <Cell><Data ss:Type="String">Submit</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">highscorecompleteinfo</Data></Cell>
+	 <Cell><Data ss:Type="String">PlayFirst global high scores allow you to compare your scores with people across the globe. &lt;br&gt;&lt;br&gt;Log scores anonymously or personalize your high score listings by entering your PlayFirst user name and password. PlayFirst members are identified with a P1 icon. &lt;br&gt;&lt;br&gt;If you are not already a PlayFirst member, register for a free account by visiting http://www.playfirst.com. &lt;br&gt;&lt;br&gt;The PlayFirst privacy policy can be viewed by clicking this link: &lt;a id='privacypolicy'&gt;&lt;font size = &quot;18&quot; color '0000ff'&gt;&lt;u&gt;Privacy Policy&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">privacy</Data></Cell>
+	 <Cell><Data ss:Type="String">By submitting this form, you acknowledge that this information will be publicly available.  &lt;a id='privacybutton'&gt;&lt;font color '0000ff'&gt;&lt;u&gt;Privacy Policy&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">privacy_info</Data></Cell>
+	 <Cell><Data ss:Type="String">By submitting this form, you acknowledge that this information will be publicly available.  &lt;a id='privacybutton'&gt;&lt;font color '0000ff'&gt;&lt;u&gt;Privacy Info&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">privacy_anon</Data></Cell>
+	 <Cell><Data ss:Type="String">Please do not include any personal information such as your contact information when you submit your high score.  By submitting, the name you enter and your high score information is transmitted to PlayFirst, Inc.'s servers and will be available for others to see.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">submitglobal</Data></Cell>
+	 <Cell><Data ss:Type="String">Submit Global High Score</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">playerlabel</Data></Cell>
+	 <Cell><Data ss:Type="String">Player:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">scorelabel</Data></Cell>
+	 <Cell><Data ss:Type="String">Your Score:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yourpfaccount</Data></Cell>
+	 <Cell><Data ss:Type="String">Your PlayFirst Account</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">namelabel</Data></Cell>
+	 <Cell><Data ss:Type="String">Name:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">passwordlabel</Data></Cell>
+	 <Cell><Data ss:Type="String">Password:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rememberpfaccount</Data></Cell>
+	 <Cell><Data ss:Type="String">Remember My PlayFirst Account</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">HELP</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_general</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome Chocolatier!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_general_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to the world of Chocolatier!&lt;br&gt;&lt;br&gt;Generations ago, confectioner Marten Baumeister founded the chocolate company that bears his name, and for over a hundred years, the company has survived family squabbles, hostile competitors, and economic ups and downs.&lt;br&gt;&lt;br&gt;Today, in the twin shadows of the Great Depression and World War II, the company's factories have been converted for the war effort or lie unused, and the disappearance of her husband Sean has left Alex Tangye Fletcher unavailable to steer the company.&lt;br&gt;&lt;br&gt;Can you help them?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_map</Data></Cell>
+	 <Cell><Data ss:Type="String">The Map</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_map_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Your map shows an overview of your chocolate empire, indicating where you are, where you have been, and where you might be going soon.&lt;br&gt;&lt;br&gt;As you grow your business, you will take control of shops and factories, and there are even rumors of a secret test kitchen where you can invent your own recipes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_map_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">Steam rises from operational factories; stalled factories appear red.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_map_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">As your business expands, shops you own will be marked.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_map_locked</Data></Cell>
+	 <Cell><Data ss:Type="String">Ports remain locked until you have the proper credentials. You may even discover secret locations that weren't previously visible on the map!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_map_port</Data></Cell>
+	 <Cell><Data ss:Type="String">Dots mark available ports. Roll over a port icon for info on cost and length of travel, then click to travel there.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_port</Data></Cell>
+	 <Cell><Data ss:Type="String">Ports and Buildings</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_port_text</Data></Cell>
+	 <Cell><Data ss:Type="String">In every port, there are buildings, monuments, parks, and other public spaces full of interesting people.&lt;br&gt;&lt;br&gt;Buildings you can explore will pulse when you enter a port or roll over them. Click on a building or location to visit &#45;- you never know who you might meet! New ports will become available as you complete quests, build your business, and reach higher ranks.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Markets</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_market_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Vendors in markets and farms hawk the ingredients you need to manufacture your products. Purchases are transported automatically to the factories where they are needed. Some markets carry exclusive ingredients, and you'll buy specialty products directly from the farmers who grow them.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_market_buy</Data></Cell>
+	 <Cell><Data ss:Type="String">To purchase an ingredient, click on its sack then enter the quantity you desire into the calculator. When you are ready, click the &quot;%buy%&quot; button to complete your purchase.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_market_misc</Data></Cell>
+	 <Cell><Data ss:Type="String">Pay attention to the seasons, as some ingredients are very expensive when they're not in season. If you don't like the prices you see, haggling with the market owner may get you a lower price...but it may also make them angry, so be careful what you say!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Shops</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_shop_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Turn your products into cash at chocolate shops around the world. Vary the products you sell to keep customers interested and keep prices up, and for higher profits consider investing in shops and inventive confections of your own when the opportunity arises.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_shop_sell</Data></Cell>
+	 <Cell><Data ss:Type="String">To sell a product, click on its box and enter the quantity to sell into the calculator. When you are ready, click the &quot;%sell%&quot; button to complete the transaction. As a shortcut, click &quot;%sell_all%&quot; in the calculator to sell all of them at once. Click &quot;%sell_all%&quot; in the shop to sell everything you own.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_shop_misc</Data></Cell>
+	 <Cell><Data ss:Type="String">Some shopkeepers specialize in particular products. Haggling with the shop keeper may get you a better offer for the products they do buy... or it may not!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_chocolate</Data></Cell>
+	 <Cell><Data ss:Type="String">Making Chocolate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_chocolate_text1</Data></Cell>
+	 <Cell><Data ss:Type="String">In your chocolate factories, use the mouse to aim and fire ingredients from the injector into the floating trays.&lt;br&gt;&lt;br&gt;Fill the trays with ingredients to match the recipe shown in the machinery on the right of the factory screen.&lt;br&gt;&lt;br&gt;The machine will turn full trays into chocolates as they pass by.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_chocolate_text2</Data></Cell>
+	 <Cell><Data ss:Type="String">Ingredients that hit a tray snap into the correct slot, but miss 8 times and production will be halted.&lt;br&gt;&lt;br&gt;Ingredients with colored rings can give you a big production boost. Fill a tray with ingredients of the same color to get an instant bonus.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_chocolate_text3</Data></Cell>
+	 <Cell><Data ss:Type="String">You have 60 seconds to make as many products as you can. Once configured, the factory will continue making chocolates every week as long as you have enough ingredients on hand.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Making Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_coffee_text1</Data></Cell>
+	 <Cell><Data ss:Type="String">A wide conveyor belt carries ingredients slowly through your coffee factories. Use the mouse to aim and fire ingredients from the injector onto the conveyor.&lt;br&gt;&lt;br&gt;Make groups of at least three across or at least three down, and all the matching ingredients touching your groups of three will be carried into the coffee machinery.&lt;br&gt;&lt;br&gt;The machine produces coffee when it has enough ingredients, and you have 60 seconds to make as many products as possible.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_coffee_text2</Data></Cell>
+	 <Cell><Data ss:Type="String">Larger ingredient groups will give you instant product bonuses, so plan your shots carefully. Miss 8 shots and production will be halted.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_coffee_text3</Data></Cell>
+	 <Cell><Data ss:Type="String">Once configured, the factory will continue making coffee products every week as long as you have enough ingredients on hand.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_kitchen</Data></Cell>
+	 <Cell><Data ss:Type="String">Secret Test Kitchen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_kitchen_text</Data></Cell>
+	 <Cell><Data ss:Type="String">In the Secret Test Kitchen, you combine your ingredients in new and interesting ways to create combinations and recipes never seen before.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_kitchen_drawers</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring a sample of the ingredients you collect to your Secret Test Kitchen, where they will be kept in stock for your experiments. Small gray bottles hold places for ingredients you have yet to collect.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_kitchen_create</Data></Cell>
+	 <Cell><Data ss:Type="String">To create a recipe, select a product category from the options on the bulletin board, then select ingredients from your drawers, clicking to place ingredients on the plates. Click on a full plate to clear it.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_kitchen_next</Data></Cell>
+	 <Cell><Data ss:Type="String">Click &quot;%invent_taste%&quot; to get some feedback from Teddy, then make adjustments and click &quot;%design_recipe%&quot; when you're ready to move on to the next step.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_design</Data></Cell>
+	 <Cell><Data ss:Type="String">Product Design</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_design_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Once you have created the right combination of ingredients in your Secret Test Kitchen, it's important to market it properly.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_design_graphics</Data></Cell>
+	 <Cell><Data ss:Type="String">Using the large left and right arrows on each of the four image options, select the graphics you want to use for your product. Click on the small color swatch below the images to select a tint you like.&lt;br&gt;&lt;br&gt;Try hitting the &quot;%randomize%&quot; button to create a random look for your creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_design_add</Data></Cell>
+	 <Cell><Data ss:Type="String">Don't forget to name your recipe and enter a description for your recipe book, and when you're ready, click &quot;%save_recipe%&quot; to add your creation to your recipe book.&lt;br&gt;&lt;br&gt;Remember, once you add a recipe to your book you will not be able to edit or delete it, but don't worry, the directors of Baumeister Confections will give you plenty of opportunities to experiment with your own recipes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_quests</Data></Cell>
+	 <Cell><Data ss:Type="String">Quest Log</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_quests_text</Data></Cell>
+	 <Cell><Data ss:Type="String">You'll meet people around the world who may need your help securing ingredients, making products, developing markets, inventing new recipes, delivering goods, and maintaining relationships with friends and loved ones.&lt;br&gt;&lt;br&gt;Use the Quest Log to keep track of your past accomplishments and your current To Do list. Select a quest in the left column to see the details of the quest you have accepted, including a list of tasks you need to complete.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_quests_complete</Data></Cell>
+	 <Cell><Data ss:Type="String">A green light indicates a goal you have met.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_quests_incomplete</Data></Cell>
+	 <Cell><Data ss:Type="String">A darkened indicator light indicates a goal you have not yet met.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_quests_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">A blank indicator indicates a reminder without a specific goal.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_quests_ledger</Data></Cell>
+	 <Cell><Data ss:Type="String">Your selected quest goal appears in your ledger. The green indicator flashes when you have completed your goals.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_recipes</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipe Book</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_recipes_text</Data></Cell>
+	 <Cell><Data ss:Type="String">During your career as Chocolatier, you will collect, discover, and invent many new recipes to expand your product lines. Your Recipe Book organizes them all for you. Browse your recipes by selecting a category along the top, then select a product in the left panel to review it.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_recipes_missing</Data></Cell>
+	 <Cell><Data ss:Type="String">If you do not have all the ingredients required to make the chosen recipe, missing ingredients will be marked by a red X.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_recipes_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">Initially, the Creations category will be empty. As your career progresses, you may be given the opportunity to invent your own recipes to fill it.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_recipes_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">From inside your factory, you will use your recipe book to configure the factory's production.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">HISTORY MESSAGES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_game_welcome</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to %gametitle%!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_tick</Data></Cell>
+	 <Cell><Data ss:Type="String">A week passes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_tick_newyear</Data></Cell>
+	 <Cell><Data ss:Type="String">Happy new year!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_buy_ingredient</Data></Cell>
+	 <Cell><Data ss:Type="String">Bought &lt;b&gt;%%1% sacks of %2%&lt;/b&gt;% for %3% each.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_sell_product</Data></Cell>
+	 <Cell><Data ss:Type="String">Sold &lt;b&gt;%%1% cases of %2%&lt;/b&gt;% for %3% each.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_sell_product_first</Data></Cell>
+	 <Cell><Data ss:Type="String">Congratulations, you've sold your first &lt;/b&gt;%1%!&lt;b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_factory_set</Data></Cell>
+	 <Cell><Data ss:Type="String">You have set the production rate of &lt;b&gt;%1%&lt;/b&gt; at &lt;b&gt;%2% per week&lt;/b&gt; in %3%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_factory_stall</Data></Cell>
+	 <Cell><Data ss:Type="String">One of your factories has stalled!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_rank</Data></Cell>
+	 <Cell><Data ss:Type="String">Congratulations! You have achieved the rank of &lt;b&gt;%1%!&lt;/b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_award</Data></Cell>
+	 <Cell><Data ss:Type="String">Congratulations! You have been awarded the &lt;b&gt;%1%!&lt;/b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_depart</Data></Cell>
+	 <Cell><Data ss:Type="String">Departing from %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_arrive</Data></Cell>
+	 <Cell><Data ss:Type="String">Arriving at %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_accept</Data></Cell>
+	 <Cell><Data ss:Type="String">Accepted Quest: &lt;b&gt;%1%&lt;/b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_reject</Data></Cell>
+	 <Cell><Data ss:Type="String">Rejected Quest: &lt;b&gt;%1%&lt;/b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_complete</Data></Cell>
+	 <Cell><Data ss:Type="String">Completed Quest: &lt;b&gt;%1%&lt;/b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_defer</Data></Cell>
+	 <Cell><Data ss:Type="String">Deferred Quest: &lt;b&gt;%1%&lt;/b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_reward_money</Data></Cell>
+	 <Cell><Data ss:Type="String">You have received &lt;b&gt;%1%.&lt;/b&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_reward_port</Data></Cell>
+	 <Cell><Data ss:Type="String">The port of &lt;b&gt;%1%.&lt;/b&gt; is now available.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_reward_port_secret</Data></Cell>
+	 <Cell><Data ss:Type="String">The secret port of &lt;b&gt;%1%.&lt;/b&gt; is now revealed!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_reward_prod</Data></Cell>
+	 <Cell><Data ss:Type="String">You have received &lt;b&gt;%1% cases of %1%.&lt;/b&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_reward_recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">You have learned the recipe for &lt;b&gt;%1%.&lt;/b&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">msg_quest_reward_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">You are now the proud owner of &lt;b&gt;%1%.&lt;/b&gt; in %2%!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">INGREDIENT CATEGORIES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dairy</Data></Cell>
+	 <Cell><Data ss:Type="String">Dairy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">fruit</Data></Cell>
+	 <Cell><Data ss:Type="String">Fruits</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nut</Data></Cell>
+	 <Cell><Data ss:Type="String">Nuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">flavor</Data></Cell>
+	 <Cell><Data ss:Type="String">Flavors</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">special</Data></Cell>
+	 <Cell><Data ss:Type="String">Special</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">UNITS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sack_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">sack</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sack_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">sack</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bottle_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">bottle</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bottle_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">bottles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">box_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">box</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">box_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">boxes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">can_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">can</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">can_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">cans</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">carton_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">carton</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">carton_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">cartons</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">case_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">case</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">case_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">cases</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">crate_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">crate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">crate_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">crates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cup_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">cup</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cup_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">cups</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">jar_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">jar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">jar_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">jars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">INGREDIENTS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">abd_cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Côte D'Ivoirian Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Ethiopian Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">allspice</Data></Cell>
+	 <Cell><Data ss:Type="String">Allspice</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">almond</Data></Cell>
+	 <Cell><Data ss:Type="String">Almonds</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">amaretto</Data></Cell>
+	 <Cell><Data ss:Type="String">Amaretto</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">anise</Data></Cell>
+	 <Cell><Data ss:Type="String">Anise</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">apple</Data></Cell>
+	 <Cell><Data ss:Type="String">Apples</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Balinese Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Balinese Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">banana</Data></Cell>
+	 <Cell><Data ss:Type="String">Bananas</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bel_cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Honduran Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">blackberry</Data></Cell>
+	 <Cell><Data ss:Type="String">Blackberries</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">blueberry</Data></Cell>
+	 <Cell><Data ss:Type="String">Blueberries</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Colombian Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Colombian Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">brandy</Data></Cell>
+	 <Cell><Data ss:Type="String">Brandy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">butter</Data></Cell>
+	 <Cell><Data ss:Type="String">Butter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">caramel</Data></Cell>
+	 <Cell><Data ss:Type="String">Caramel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cardamom</Data></Cell>
+	 <Cell><Data ss:Type="String">Cardamom Pods</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cashew</Data></Cell>
+	 <Cell><Data ss:Type="String">Cashews</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cherry</Data></Cell>
+	 <Cell><Data ss:Type="String">Bing Cherries</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cinnamon</Data></Cell>
+	 <Cell><Data ss:Type="String">Cinnamon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">clove</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloves</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cocoa_butter</Data></Cell>
+	 <Cell><Data ss:Type="String">Cocoa Butter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">coconut</Data></Cell>
+	 <Cell><Data ss:Type="String">Coconuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cream</Data></Cell>
+	 <Cell><Data ss:Type="String">Cream</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">currant</Data></Cell>
+	 <Cell><Data ss:Type="String">Currants</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">date</Data></Cell>
+	 <Cell><Data ss:Type="String">Dates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Doualan Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">espresso</Data></Cell>
+	 <Cell><Data ss:Type="String">Espresso Beans</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">fig</Data></Cell>
+	 <Cell><Data ss:Type="String">Figs</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ginger</Data></Cell>
+	 <Cell><Data ss:Type="String">Ginger</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">grand_marnier</Data></Cell>
+	 <Cell><Data ss:Type="String">Grand Marnier</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">han_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Vietnamese Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Cuban Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hazelnut</Data></Cell>
+	 <Cell><Data ss:Type="String">Hazelnuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">honey</Data></Cell>
+	 <Cell><Data ss:Type="String">Honey</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kahlua</Data></Cell>
+	 <Cell><Data ss:Type="String">Kahlúa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Kona Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lavender</Data></Cell>
+	 <Cell><Data ss:Type="String">Lavender</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lemon</Data></Cell>
+	 <Cell><Data ss:Type="String">Lemons</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Peruvian Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lime</Data></Cell>
+	 <Cell><Data ss:Type="String">Wild Limes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lychee</Data></Cell>
+	 <Cell><Data ss:Type="String">Lychees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">macadamia</Data></Cell>
+	 <Cell><Data ss:Type="String">Macadamia Nuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Madagascan Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mango</Data></Cell>
+	 <Cell><Data ss:Type="String">Mango</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">maple</Data></Cell>
+	 <Cell><Data ss:Type="String">Maple Syrup</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">matcha</Data></Cell>
+	 <Cell><Data ss:Type="String">Matcha</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">milk</Data></Cell>
+	 <Cell><Data ss:Type="String">Milk</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mint</Data></Cell>
+	 <Cell><Data ss:Type="String">Mint</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nutmeg</Data></Cell>
+	 <Cell><Data ss:Type="String">Nutmeg</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">orange</Data></Cell>
+	 <Cell><Data ss:Type="String">Oranges</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">passionfruit</Data></Cell>
+	 <Cell><Data ss:Type="String">Passionfruit</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">peanut</Data></Cell>
+	 <Cell><Data ss:Type="String">Peanuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">pecan</Data></Cell>
+	 <Cell><Data ss:Type="String">Pecans</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">pepper</Data></Cell>
+	 <Cell><Data ss:Type="String">Cayenne Peppers</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">pistachio</Data></Cell>
+	 <Cell><Data ss:Type="String">Pistachios</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">pineapple</Data></Cell>
+	 <Cell><Data ss:Type="String">Pineapples</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">powder</Data></Cell>
+	 <Cell><Data ss:Type="String">Truffle Powder</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">pumpkin</Data></Cell>
+	 <Cell><Data ss:Type="String">Pumpkins</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">raisin</Data></Cell>
+	 <Cell><Data ss:Type="String">Raisins</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">raspberry</Data></Cell>
+	 <Cell><Data ss:Type="String">Raspberries</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rio_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Brazilian Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rose</Data></Cell>
+	 <Cell><Data ss:Type="String">Candied Rose Petals</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rum</Data></Cell>
+	 <Cell><Data ss:Type="String">Rum</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">saffron</Data></Cell>
+	 <Cell><Data ss:Type="String">Saffron</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">salt</Data></Cell>
+	 <Cell><Data ss:Type="String">Sea Salt</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sesame</Data></Cell>
+	 <Cell><Data ss:Type="String">Sesame Seeds</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">star_anise</Data></Cell>
+	 <Cell><Data ss:Type="String">Star Anise</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">strawberry</Data></Cell>
+	 <Cell><Data ss:Type="String">Strawberries</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sugar</Data></Cell>
+	 <Cell><Data ss:Type="String">Sugar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sumac</Data></Cell>
+	 <Cell><Data ss:Type="String">Sumac</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_coffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Moroccan Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tea</Data></Cell>
+	 <Cell><Data ss:Type="String">Black Tea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">toffee</Data></Cell>
+	 <Cell><Data ss:Type="String">Toffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">turmeric</Data></Cell>
+	 <Cell><Data ss:Type="String">Turmeric</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">vanilla</Data></Cell>
+	 <Cell><Data ss:Type="String">Vanilla</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">walnut</Data></Cell>
+	 <Cell><Data ss:Type="String">Walnuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wasabi</Data></Cell>
+	 <Cell><Data ss:Type="String">Wasabi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">whipped_cream</Data></Cell>
+	 <Cell><Data ss:Type="String">Whipped Cream</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">whiskey</Data></Cell>
+	 <Cell><Data ss:Type="String">Whiskey</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">PRODUCTS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_generic</Data></Cell>
+	 <Cell><Data ss:Type="String">Your Latest Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bar</Data></Cell>
+	 <Cell><Data ss:Type="String">Bars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">infusion</Data></Cell>
+	 <Cell><Data ss:Type="String">Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">truffle</Data></Cell>
+	 <Cell><Data ss:Type="String">Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">exotic</Data></Cell>
+	 <Cell><Data ss:Type="String">Exotics</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">beverage</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">blend</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee Blends</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">user</Data></Cell>
+	 <Cell><Data ss:Type="String">Creations</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b01</Data></Cell>
+	 <Cell><Data ss:Type="String">Basic Chocolate Bars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b01_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Straightforward, simple, timeless bars of pure cacao and sugar.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b02</Data></Cell>
+	 <Cell><Data ss:Type="String">Milk Chocolate Bars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b02_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Silky milk chocolate, slightly sweeter than our dark chocolate offerings.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b03</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Caramel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b03_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Fresh caramel combined with pure dark chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b04</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Peanuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b04_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Wonderful roasted peanuts surrounded by dark chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b05</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Hazelnuts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b05_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Hazelnuts offer a new twist to a classic chocolate bar.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b06</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Almonds</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b06_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A Baumeister Confections classic offering, chocolate surrounding fresh roasted almonds.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b07</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Orange</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b07_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Subtle orange-infused bars perfect anytime.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b08</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Lemon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b08_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Tart and sweet, chocolate with the essence of fresh lemons.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b09</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Raspberry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b09_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A taste of summer, chocolate bars made with fresh raspberries.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b10</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Mint</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b10_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Refreshing and delicious, pure chocolate infused with fresh mint.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b11</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Bars with Honey</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b11_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Kissed by nature's sweetener, these bars are truly one of a kind.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b12</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Reserve 66%% African Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">b12_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Only the finest cacaos from Cameroon are used in these specialty bars.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i01</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Chocolate Pecan Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i01_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Nutty pecan filling encased in the finest chocolate covering.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i02</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Chocolate Infusions w/Cherry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i02_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Tangy and sweet, these romantic chocolates make wonderful gifts.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i03</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Chocolate Infusions w/Ginger</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i03_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">The combination of dark chocolate and fresh ginger is sure to please.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i04</Data></Cell>
+	 <Cell><Data ss:Type="String">Spicy Dark Chocolate Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i04_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Mouth-watering chocolate with a tinge of pleasantly surprising spices.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i05</Data></Cell>
+	 <Cell><Data ss:Type="String">Milk Chocolate Infusions w/Blueberry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i05_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Fresh, seasonal blueberries comprise the ganache of these wonderful creations.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i06</Data></Cell>
+	 <Cell><Data ss:Type="String">Milk Chocolate Infusions w/Allspice</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i06_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Fragrant allspice is the secret to these delightfully romantic sweets.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i07</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Colombian Cacao Lime Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i07_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">The finest South American varietal cacao and fresh tart limes lend these chocolates an earthy, densely flavorful finish.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i08</Data></Cell>
+	 <Cell><Data ss:Type="String">Vanilla Cinnamon Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i08_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Vanilla and cinnamon - a magical combination!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i09</Data></Cell>
+	 <Cell><Data ss:Type="String">Mango Clove Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i09_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweet fresh mango mingles with spicy cloves in these irresistible confections.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i10</Data></Cell>
+	 <Cell><Data ss:Type="String">Specialty Cacao and Macadamia Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i10_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Enchanting macadamia nut ganache enrobed in dark chocolate crafted from Central American varietal cacao.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i11</Data></Cell>
+	 <Cell><Data ss:Type="String">Strawberry Anise Chocolate Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i11_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">An unlikely pairing you are unlikely to soon forget - fresh strawberries and anise.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i12</Data></Cell>
+	 <Cell><Data ss:Type="String">Blended Cacao Dark Chocolate Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">i12_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">These infusions utilize a special blend of cacaos from around the globe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t01</Data></Cell>
+	 <Cell><Data ss:Type="String">White Chocolate Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t01_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">An extra sweet modern confection!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t02</Data></Cell>
+	 <Cell><Data ss:Type="String">Hazelnut Milk Chocolate Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t02_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Smooth, luxurious milk chocolate surrounds a nutty hazelnut center.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t03</Data></Cell>
+	 <Cell><Data ss:Type="String">Honey Milk Chocolate Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t03_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A delightfully sweet combination of rich milk chocolate and fresh honey.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t04</Data></Cell>
+	 <Cell><Data ss:Type="String">Spicy Currant Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t04_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Surprisingly refreshing, Cayenne pepper and ground currants blended in a rich chocolate center.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t05</Data></Cell>
+	 <Cell><Data ss:Type="String">Lemon Raspberry Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t05_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Delectable chocolate truffles that erupt with sweet and sour goodness.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t06</Data></Cell>
+	 <Cell><Data ss:Type="String">Wasabi Cashew Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t06_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">The kick of wasabi blended with fresh-roasted cashew nougat.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t07</Data></Cell>
+	 <Cell><Data ss:Type="String">Cameroonian Dark Truffles w/Saffron</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t07_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Rich African cacao and exotic saffron make for a full-flavored chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t08</Data></Cell>
+	 <Cell><Data ss:Type="String">Peruvian Cacao Cardamom & Nutmeg Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t08_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Aromatic nutmeg and cardamom provide an otherworldly element to these wonderful chocolates.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t09</Data></Cell>
+	 <Cell><Data ss:Type="String">Sesame Ginger Colombian Cacao Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t09_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Roasted sesame seeds, candied ginger and the finest cacaos from Bogota join to create a sensational truffle.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t10</Data></Cell>
+	 <Cell><Data ss:Type="String">Blended Varietal Cacao Pumpkin Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t10_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweet spiced pumpkin and a combination of South American cacaos make for an incredibly yummy truffle.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t11</Data></Cell>
+	 <Cell><Data ss:Type="String">Specialty Cacao Espresso Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t11_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Espresso Beans intermingle with specialty cacaos to unleash a truffle with a potent kick.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t12</Data></Cell>
+	 <Cell><Data ss:Type="String">Blended Varietal Cacao Dark Truffles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">t12_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A melange of the world's finest cacaos are used to create a magical truffle.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e01</Data></Cell>
+	 <Cell><Data ss:Type="String">Salted Dark Chocolate Caramels</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e01_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Smooth caramel centers, enrobed in luscious dark chocolate, lightly sprinkled with sea salt.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e02</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Chocolate Dates w/Almonds</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e02_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Fresh dates, dipped in velvety dark chocolate, topped with a roasted almond.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e03</Data></Cell>
+	 <Cell><Data ss:Type="String">Lemon Lime Dark Chocolate Stars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e03_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Two great tastes - one sweet, one tart, combined and encased in dark chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e04</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Covered Candied Rose Petals</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e04_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate made from specialty cacaos encase delicate, candied rose petals.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e05</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Covered Salted Pistachios</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e05_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Fresh roasted, salted pistachios dipped in chocolate made from the finest varietal cacaos.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e06</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Chocolate Honey Butter Crunch</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e06_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Blended specialty cacaos cover a secret, crunchy concoction made with fresh butter and honey.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e07</Data></Cell>
+	 <Cell><Data ss:Type="String">Mint & Whiskey Liqueurs</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e07_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Start the evening off right with a refreshing chocolate made with Irish whiskey and fresh mint.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e08</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweet Chai Chocolate Stars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e08_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Impossible-to-resist lozenges containing a subtle, sweet chai tea filling.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e09</Data></Cell>
+	 <Cell><Data ss:Type="String">Peanut Butter Stars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e09_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Natural peanut butter surrounded by decadent chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e10</Data></Cell>
+	 <Cell><Data ss:Type="String">Orange Pecan Chocolate Stars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e10_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Fine chocolate egg shells filled with orange and pecan nougat.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e11</Data></Cell>
+	 <Cell><Data ss:Type="String">World's Finest Chocolate Covered Strawberries</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e11_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A secret blend of the finest cacaos covering deliciously sweet fresh strawberries.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e12</Data></Cell>
+	 <Cell><Data ss:Type="String">Blended Cacao Deep Chocolate w/Cashews</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">e12_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Made from a special blend of specialty cacaos, these chocolates are then topped with roasted cashews.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c01</Data></Cell>
+	 <Cell><Data ss:Type="String">Cup A Joe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c01_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Delicious fresh-roasted coffees from Kona.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c02</Data></Cell>
+	 <Cell><Data ss:Type="String">Café con Leche</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c02_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A Cuban delight.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c03</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Blend</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c03_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Our special blend of beans from around the world.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c04</Data></Cell>
+	 <Cell><Data ss:Type="String">Cinnamon Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c04_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A hint of spicy cinnamon - perfect for your morning brew!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c05</Data></Cell>
+	 <Cell><Data ss:Type="String">Mocha</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c05_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Kissed with chocolate essence, a wonderful combination in your cup.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c06</Data></Cell>
+	 <Cell><Data ss:Type="String">Irish Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c06_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">The perfect way to unwind.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c07</Data></Cell>
+	 <Cell><Data ss:Type="String">Arabian Bold</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c07_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">With a little extra kick, this blend is not for the weak of heart.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c08</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee w/Whipped Cream</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c08_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A classic recipe perfect for everyday enjoyment.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c09</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee w/Amaretto</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c09_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Subtle, sweet, superb!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c10</Data></Cell>
+	 <Cell><Data ss:Type="String">Breakfast Blend</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c10_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A hefty roast - perfect for that first cup in the morning.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c11</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee w/Nutmeg</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c11_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">A rich, dark and frothy brew.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c12</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee w/Mint</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">c12_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Just enough mint to make an interesting cup of joe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m01</Data></Cell>
+	 <Cell><Data ss:Type="String">Super Buzz</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m01_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Intensely roasted beans; a deep dark coffee drink.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m02</Data></Cell>
+	 <Cell><Data ss:Type="String">Super Mocha Blend</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m02_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Rich and creamy, this blend is certain to please!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m03</Data></Cell>
+	 <Cell><Data ss:Type="String">Hazelnut Infused Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m03_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Flavored with fresh roasted hazelnut essence, a wonderful winter treat.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m04</Data></Cell>
+	 <Cell><Data ss:Type="String">Spicy Blend</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m04_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">For those looking to spice up their daily routine.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m05</Data></Cell>
+	 <Cell><Data ss:Type="String">Winter Warmer</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m05_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Whole-roasted beans in our secret recipe for warming you up in wintertime.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m06</Data></Cell>
+	 <Cell><Data ss:Type="String">Coconut Milk Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m06_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Using an entire coconut, this tropical blend is smooth and delicious.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m07</Data></Cell>
+	 <Cell><Data ss:Type="String">Café Caribe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m07_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Ground coffee and ground spices are the secret behind this delightful blend.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m08</Data></Cell>
+	 <Cell><Data ss:Type="String">Pumpkin Pie Latte</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m08_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Perfect for fall, or anytime!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m09</Data></Cell>
+	 <Cell><Data ss:Type="String">Caramel Latte</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m09_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Like desert in a cup!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m10</Data></Cell>
+	 <Cell><Data ss:Type="String">Mediterranean Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m10_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Anise seeds lend this blend an exotic touch.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m11</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee Grog</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m11_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Rich and sweet, sure to please!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m12</Data></Cell>
+	 <Cell><Data ss:Type="String">Mexican Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">m12_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate, sugar, coffee - what could be better?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">PORT NAMES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">baghdad</Data></Cell>
+	 <Cell><Data ss:Type="String">Baghdad</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bali</Data></Cell>
+	 <Cell><Data ss:Type="String">Bali</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">belize</Data></Cell>
+	 <Cell><Data ss:Type="String">Xunantunich</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bogota</Data></Cell>
+	 <Cell><Data ss:Type="String">Bogotá</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bombay</Data></Cell>
+	 <Cell><Data ss:Type="String">Bombay</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">capetown</Data></Cell>
+	 <Cell><Data ss:Type="String">Cape Town</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">douala</Data></Cell>
+	 <Cell><Data ss:Type="String">Douala</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">falklands</Data></Cell>
+	 <Cell><Data ss:Type="String">Falkland Islands</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gobidesert</Data></Cell>
+	 <Cell><Data ss:Type="String">Gobi Desert</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">havana</Data></Cell>
+	 <Cell><Data ss:Type="String">Havana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">istanbul</Data></Cell>
+	 <Cell><Data ss:Type="String">Istanbul</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kona</Data></Cell>
+	 <Cell><Data ss:Type="String">Kona</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lasvegas</Data></Cell>
+	 <Cell><Data ss:Type="String">Las Vegas</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lima</Data></Cell>
+	 <Cell><Data ss:Type="String">Lima</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mahajanga</Data></Cell>
+	 <Cell><Data ss:Type="String">Mahajanga</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">reykjavik</Data></Cell>
+	 <Cell><Data ss:Type="String">Reykjavík</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">riodejaneiro</Data></Cell>
+	 <Cell><Data ss:Type="String">Rio de Janeiro</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sanfrancisco</Data></Cell>
+	 <Cell><Data ss:Type="String">San Francisco</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tangiers</Data></Cell>
+	 <Cell><Data ss:Type="String">Tangier</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo</Data></Cell>
+	 <Cell><Data ss:Type="String">Tokyo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">toronto</Data></Cell>
+	 <Cell><Data ss:Type="String">Toronto</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">uluru</Data></Cell>
+	 <Cell><Data ss:Type="String">Uluru</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wellington</Data></Cell>
+	 <Cell><Data ss:Type="String">Wellington</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zurich</Data></Cell>
+	 <Cell><Data ss:Type="String">Zürich</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">BUILDING NAMES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Al Rasheed Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Tigris River Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_tower</Data></Cell>
+	 <Cell><Data ss:Type="String">Abbasids Mosque</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_buildingreddoor</Data></Cell>
+	 <Cell><Data ss:Type="String">Al-Mansur Building</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Kintamani Plantation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Agung Shadows Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Mangku's Sweets</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_temple</Data></Cell>
+	 <Cell><Data ss:Type="String">Island Temple</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bel_ruins</Data></Cell>
+	 <Cell><Data ss:Type="String">Mayan Ruins</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bel_hut</Data></Cell>
+	 <Cell><Data ss:Type="String">Cambria's Place</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Mercado de San Alejo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Artesanías de Colombia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Foothills Plantation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_mountain</Data></Cell>
+	 <Cell><Data ss:Type="String">Andes Mountains</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_church</Data></Cell>
+	 <Cell><Data ss:Type="String">La Catederal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_customs</Data></Cell>
+	 <Cell><Data ss:Type="String">Custom House</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_hotel</Data></Cell>
+	 <Cell><Data ss:Type="String">El Dorado Suites</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Victoria & Alfred Waterfront Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Adderly Street Chocolate Shop</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">Cape Town Manufacturing, Ltd.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_mountain</Data></Cell>
+	 <Cell><Data ss:Type="String">Table Mountain</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_building3</Data></Cell>
+	 <Cell><Data ss:Type="String">Longshore Lodge</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Eko Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Capital Sweets</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Ndawara Plantation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_emptybuilding1</Data></Cell>
+	 <Cell><Data ss:Type="String">Bonanjo Hotel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_emptybuilding2</Data></Cell>
+	 <Cell><Data ss:Type="String">Pâtisserie Ambe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">fal_board</Data></Cell>
+	 <Cell><Data ss:Type="String">Boarding House</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gob_xxx</Data></Cell>
+	 <Cell><Data ss:Type="String">Nyama's Outpost</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gob_greatwall</Data></Cell>
+	 <Cell><Data ss:Type="String">Great Wall</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gob_building1</Data></Cell>
+	 <Cell><Data ss:Type="String">Jiayuguan Fortress</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Old Havana Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Vedado Chocolates and Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Havana Coffee Beans, Ltd.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_hotel</Data></Cell>
+	 <Cell><Data ss:Type="String">Hotel de Cuba</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_casino</Data></Cell>
+	 <Cell><Data ss:Type="String">Casino National</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Open Air Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Kailua Fine Goods</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Ka'awa Loa Plantation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_hut</Data></Cell>
+	 <Cell><Data ss:Type="String">Kamakahonu Beach Huts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">las_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Stan's Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">las_casino</Data></Cell>
+	 <Cell><Data ss:Type="String">Golden Dollar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">las_hotel</Data></Cell>
+	 <Cell><Data ss:Type="String">Hotel Paiute</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Mercado Aurora</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Miraflores Chocolates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Pucusana Plantation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_plaza</Data></Cell>
+	 <Cell><Data ss:Type="String">Plaza Mayor</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_church</Data></Cell>
+	 <Cell><Data ss:Type="String">Cathedral of Lima</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_mountain</Data></Cell>
+	 <Cell><Data ss:Type="String">Alpamayo Peak</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_redbuilding</Data></Cell>
+	 <Cell><Data ss:Type="String">Pizarro Place</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rey_inn</Data></Cell>
+	 <Cell><Data ss:Type="String">Old Compass Inn</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rey_kitchen</Data></Cell>
+	 <Cell><Data ss:Type="String">Secret Test Kitchen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rey_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Hlemmur Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rey_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Norðurljós Sweets & Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Market Street Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Union Square Chocolates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_bar</Data></Cell>
+	 <Cell><Data ss:Type="String">The Watering Hole</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">San Francisco Chocolate Makers</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_bchq</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections Building</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_alcatraz</Data></Cell>
+	 <Cell><Data ss:Type="String">Alcatraz</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Souk Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Morroco Fine Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_hotel</Data></Cell>
+	 <Cell><Data ss:Type="String">Hotel Tangiers</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_bar</Data></Cell>
+	 <Cell><Data ss:Type="String">The Lookout</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_port</Data></Cell>
+	 <Cell><Data ss:Type="String">Gibraltar Port</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Nakamise Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Nakamitsu Fine Coffees and Sweets</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">Honmei Industries</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_tower</Data></Cell>
+	 <Cell><Data ss:Type="String">Tokyo Tower</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_station</Data></Cell>
+	 <Cell><Data ss:Type="String">Tokyo Station</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_palace</Data></Cell>
+	 <Cell><Data ss:Type="String">Imperial Palace</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_mountain</Data></Cell>
+	 <Cell><Data ss:Type="String">Mount Fuji</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_shrine</Data></Cell>
+	 <Cell><Data ss:Type="String">Meiji Shrine</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Bigtown Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Wychwood Sweets</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">Ontario Manufacture</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_office</Data></Cell>
+	 <Cell><Data ss:Type="String">Waterfront Suites</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_hotel</Data></Cell>
+	 <Cell><Data ss:Type="String">Lake Huron Hotel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ulu_hut</Data></Cell>
+	 <Cell><Data ss:Type="String">Kowaki's Limes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ulu_hutright</Data></Cell>
+	 <Cell><Data ss:Type="String">Uluru Huts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ulu_rock</Data></Cell>
+	 <Cell><Data ss:Type="String">Ayers Rock</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Harbour Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Britannia Fine Goods</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">New Zealand Confectioners, Ltd.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_emptybld2</Data></Cell>
+	 <Cell><Data ss:Type="String">Seaside Offices</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Main Street Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Niederdorf Chocolates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_factory</Data></Cell>
+	 <Cell><Data ss:Type="String">Zürich Chocolate Works</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_station</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahnhof</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_tower</Data></Cell>
+	 <Cell><Data ss:Type="String">St. Peterskirche</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_river</Data></Cell>
+	 <Cell><Data ss:Type="String">River Limmat</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_mountain</Data></Cell>
+	 <Cell><Data ss:Type="String">Matterhorn</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_school</Data></Cell>
+	 <Cell><Data ss:Type="String">University of Zürich</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_lake</Data></Cell>
+	 <Cell><Data ss:Type="String">Lake Zürich</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_bank</Data></Cell>
+	 <Cell><Data ss:Type="String">Swiss National Bank</Data></Cell>
+	</Row>
+	<Row>
+ 	 <Cell></Cell>
+ 	 <Cell><Data ss:Type="String">CHARACTERS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_alex</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex Fletcher</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_sean</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean Fletcher</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_zach</Data></Cell>
+	 <Cell><Data ss:Type="String">Zachariah Tangye</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_loud</Data></Cell>
+	 <Cell><Data ss:Type="String">Loudon Tangye</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_jose</Data></Cell>
+	 <Cell><Data ss:Type="String">Joseph Tangye</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_elen</Data></Cell>
+	 <Cell><Data ss:Type="String">Elena Tangye</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_evan</Data></Cell>
+	 <Cell><Data ss:Type="String">Evangeline Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_jarr</Data></Cell>
+	 <Cell><Data ss:Type="String">Jarrah Tangye</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_rowe</Data></Cell>
+	 <Cell><Data ss:Type="String">Rowena Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_deit</Data></Cell>
+	 <Cell><Data ss:Type="String">Deiter Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_sara</Data></Cell>
+	 <Cell><Data ss:Type="String">Sara H. Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_tedd</Data></Cell>
+	 <Cell><Data ss:Type="String">Teddy Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_chas</Data></Cell>
+	 <Cell><Data ss:Type="String">Chas Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_whit</Data></Cell>
+	 <Cell><Data ss:Type="String">Whitney Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">main_feli</Data></Cell>
+	 <Cell><Data ss:Type="String">Felix Baumeister</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">evil_tyso</Data></Cell>
+	 <Cell><Data ss:Type="String">Tyson Starks</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">evil_tris</Data></Cell>
+	 <Cell><Data ss:Type="String">Tristan Moreno</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">evil_kath</Data></Cell>
+	 <Cell><Data ss:Type="String">Katherine Carpo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">evil_bian</Data></Cell>
+	 <Cell><Data ss:Type="String">Bianca Rabiti</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">evil_wolf</Data></Cell>
+	 <Cell><Data ss:Type="String">Wolf Fleischer</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">announcer</Data></Cell>
+	 <Cell><Data ss:Type="String">Rick Lafontaine</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Nyoman</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Trishna Didharma</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bal_xxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Santoso Devi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_bldg2keep</Data></Cell>
+	 <Cell><Data ss:Type="String">Salwa Tooma</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Shada Barzani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Abrahem Sa'eed</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_towerkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Zenab Sinjari</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_xxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Shatha Aboubakr</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bag_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Salwa Tooma</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bel_hutkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Cambria Equivel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_churchkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Susana Vanegas</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_customskeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Luis Balarin</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Antonio Monslave</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_mountainkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Pedro Barreda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_plantationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Jorge Gaitain</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bog_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Tránsito Landínez</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_factorykeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Alice van der Stel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Gavin Hotz</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_mountainkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Duduzile Nkosi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">cap_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Kefilwe Matebula</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_bldg1keep</Data></Cell>
+	 <Cell><Data ss:Type="String">Ernest Mimboe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Tomge Ndongo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_plantationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Guy Etame</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Henri Makongue</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Adele Salla</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">fal_xxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Edward Machray</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gob_xxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Nyama</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_casinokeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Condela Llinas</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_hotelkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Lolita de Guines</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Elián Alzua</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_plantationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Cheena Famosa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Armena Caraballa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_bldg2keep</Data></Cell>
+	 <Cell><Data ss:Type="String">Onaona Waipa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Hekili Pilipo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_plantationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Kalei Kamalaninui</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Leialoha Naea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kon_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Manuia Akamu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">las_casinokeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Zlata Ribar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">las_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Claudia Elquez</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_churchkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Ariana Ronceros</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Giuliana Zender</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_mountainkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Pedro Allavena</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_plazakeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Keylla Astengo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Yussell Parodi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lim_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">César Farje</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Voary Tsirebika</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_postofficekeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Jamal Vassanji</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Patrick Ratsimbazafy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_xxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Sahondra Befanonana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rey_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Halla Þorvaldsdóttir</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rey_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Bjarki Eiríksson</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rey_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Hjálmar Helguson</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_barkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Allison Pepper</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_factorykeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Ilya Bajanov</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Sharon Knowles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">san_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Helen McMurtry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_barkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Soumaya Parachou</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_hotelkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Jilali Abillou</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Magdalene Gelder</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_portkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Ilan Layani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Tyren Allie</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_factorykeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Hitoshi Akimoto</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Reiko Tsuneda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_mountainkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Thomas Hardy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_palacekeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Kenji Watanabe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Yoshi Kawai</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_stationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Daisuke Sato</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tok_towerkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Asako Yomura</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_bldg1keep</Data></Cell>
+	 <Cell><Data ss:Type="String">Valerie McGill</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_bldg2keep</Data></Cell>
+	 <Cell><Data ss:Type="String">Syd Birchmore</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_factorykeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Brooke Hudstone</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Abbey Gilbraith</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Kerrie Taylor</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Daniel Poisson</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tor_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Sheridan Munro</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ulu_hutkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Kowaki</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ulu_rockkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Douglas McInnes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_bldg1keep</Data></Cell>
+	 <Cell><Data ss:Type="String">Sissy Pickston</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Robyn Quinn</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Karolyne Radke</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Duncan Borthwick</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Jack Abbott</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wel_xxxxkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Robert Daley</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_bankkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Nino Bragger</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_factorykeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Endrit Rast</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_lakekeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Beate Lautens</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Verena Zubriggen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_mountainkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Ursel Hlasek</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_riverkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Gilles Zuelle</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_schoolkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Florian Amiel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Analiese Rausis</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_stationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Anselm Donders</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">zur_towerkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Liridona Gygax</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Shobha Mudaliar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_02</Data></Cell>
+	 <Cell><Data ss:Type="String">Surea Siqueira</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_03</Data></Cell>
+	 <Cell><Data ss:Type="String">Rahim Talib</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_04</Data></Cell>
+	 <Cell><Data ss:Type="String">Pamela Harrington</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_05</Data></Cell>
+	 <Cell><Data ss:Type="String">Mariama Nana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_06</Data></Cell>
+	 <Cell><Data ss:Type="String">Motochika Haneda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_07</Data></Cell>
+	 <Cell><Data ss:Type="String">Rufus Loddington</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_08</Data></Cell>
+	 <Cell><Data ss:Type="String">Yuriko Haneda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_09</Data></Cell>
+	 <Cell><Data ss:Type="String">François Moreau</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_10</Data></Cell>
+	 <Cell><Data ss:Type="String">Soraya Taheri</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_11</Data></Cell>
+	 <Cell><Data ss:Type="String">Agostina Calvino</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_12</Data></Cell>
+	 <Cell><Data ss:Type="String">David Golder</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_13</Data></Cell>
+	 <Cell><Data ss:Type="String">Bergit Sjöström</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_14</Data></Cell>
+	 <Cell><Data ss:Type="String">Eduardo Tavares</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_15</Data></Cell>
+	 <Cell><Data ss:Type="String">Gustav Maier</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_16</Data></Cell>
+	 <Cell><Data ss:Type="String">Agnessa Hadonov</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_17</Data></Cell>
+	 <Cell><Data ss:Type="String">Wally Hammersmith</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_18</Data></Cell>
+	 <Cell><Data ss:Type="String">Oscar Segura</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_19</Data></Cell>
+	 <Cell><Data ss:Type="String">Alfredo Gamata</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trav_20</Data></Cell>
+	 <Cell><Data ss:Type="String">Wu Xiuying</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">QUEST RESPONSES BELOW</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quest_accept</Data></Cell>
+	 <Cell><Data ss:Type="String">Accept</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">absolutely</Data></Cell>
+	 <Cell><Data ss:Type="String">Absolutely!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">agreed</Data></Cell>
+	 <Cell><Data ss:Type="String">Agreed</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">atyourservice</Data></Cell>
+	 <Cell><Data ss:Type="String">At Your Service</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">certainly</Data></Cell>
+	 <Cell><Data ss:Type="String">Certainly!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">consideritdone</Data></Cell>
+	 <Cell><Data ss:Type="String">Consider It Done</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">countmein</Data></Cell>
+	 <Cell><Data ss:Type="String">Count Me In</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">deal</Data></Cell>
+	 <Cell><Data ss:Type="String">Deal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">fair enough</Data></Cell>
+	 <Cell><Data ss:Type="String">Fair Enough</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">goodidea</Data></Cell>
+	 <Cell><Data ss:Type="String">Good Idea!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iagree</Data></Cell>
+	 <Cell><Data ss:Type="String">I Agree</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iam</Data></Cell>
+	 <Cell><Data ss:Type="String">I Am</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iwill</Data></Cell>
+	 <Cell><Data ss:Type="String">I Will</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iwould</Data></Cell>
+	 <Cell><Data ss:Type="String">I Would!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">idloveit</Data></Cell>
+	 <Cell><Data ss:Type="String">I'd Love It!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">illdoit</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Do It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">illtakeit</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Take It!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imin</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm In</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imonit</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm On It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imready</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Ready</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ifimust</Data></Cell>
+	 <Cell><Data ss:Type="String">If I Must</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">indeed</Data></Cell>
+	 <Cell><Data ss:Type="String">Indeed!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">itsadeal</Data></Cell>
+	 <Cell><Data ss:Type="String">It's a Deal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ofcourse</Data></Cell>
+	 <Cell><Data ss:Type="String">Of Course!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rightaway</Data></Cell>
+	 <Cell><Data ss:Type="String">Right Away</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">soundsgood</Data></Cell>
+	 <Cell><Data ss:Type="String">Sounds Good!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sure</Data></Cell>
+	 <Cell><Data ss:Type="String">Sure!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">whynot</Data></Cell>
+	 <Cell><Data ss:Type="String">Why Not?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quest_yes</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yesido</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes, I Do</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yesindeed</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes, Indeed!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yeslets</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes, Let's!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yesplease</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes Please</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yeswecan</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes, We Can</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yeswedo</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes, We Do</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youbet</Data></Cell>
+	 <Cell><Data ss:Type="String">You Bet!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youcancountonme</Data></Cell>
+	 <Cell><Data ss:Type="String">You Can Count on Me</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quest_defer</Data></Cell>
+	 <Cell><Data ss:Type="String">Ask Me Later</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">askmelater</Data></Cell>
+	 <Cell><Data ss:Type="String">Ask Me Later</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">anothertime</Data></Cell>
+	 <Cell><Data ss:Type="String">Another Time</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">inawhile</Data></Cell>
+	 <Cell><Data ss:Type="String">In a While</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">later</Data></Cell>
+	 <Cell><Data ss:Type="String">Later</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">laterperhaps</Data></Cell>
+	 <Cell><Data ss:Type="String">Later, Perhaps...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">maybelater</Data></Cell>
+	 <Cell><Data ss:Type="String">Maybe Later</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">notnow</Data></Cell>
+	 <Cell><Data ss:Type="String">Not Now</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">notrightnow</Data></Cell>
+	 <Cell><Data ss:Type="String">Not Right Now</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">quest_reject</Data></Cell>
+	 <Cell><Data ss:Type="String">No, Never</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">absolutelynot</Data></Cell>
+	 <Cell><Data ss:Type="String">Absolutely Not</Data></Cell>
+    </Row>
+	<Row>
+	 <Cell><Data ss:Type="String">forgetit</Data></Cell>
+	 <Cell><Data ss:Type="String">Forget It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">icantdothat</Data></Cell>
+	 <Cell><Data ss:Type="String">I Can't Do That</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">icanthelpyou</Data></Cell>
+	 <Cell><Data ss:Type="String">I Can't Help You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">illpass</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Pass</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imafraidnot</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Afraid Not</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imfinethanks</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Fine, Thanks</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">impossible</Data></Cell>
+	 <Cell><Data ss:Type="String">Impossible</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">never</Data></Cell>
+	 <Cell><Data ss:Type="String">Never!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nonever</Data></Cell>
+	 <Cell><Data ss:Type="String">No, Never</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nonotforme</Data></Cell>
+	 <Cell><Data ss:Type="String">No, Not For Me</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">noimtoobusy</Data></Cell>
+	 <Cell><Data ss:Type="String">No, I'm Too Busy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">noimgood</Data></Cell>
+	 <Cell><Data ss:Type="String">No, I'm Good</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nonever</Data></Cell>
+	 <Cell><Data ss:Type="String">No, Never</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nosorry</Data></Cell>
+	 <Cell><Data ss:Type="String">No, Sorry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nothankyou</Data></Cell>
+	 <Cell><Data ss:Type="String">No, Thank You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nothanks</Data></Cell>
+	 <Cell><Data ss:Type="String">No, Thanks</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">notachance</Data></Cell>
+	 <Cell><Data ss:Type="String">Not a Chance</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">notinterested</Data></Cell>
+	 <Cell><Data ss:Type="String">Not Interested</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">notreally</Data></Cell>
+	 <Cell><Data ss:Type="String">Not Really</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">regrettablyno</Data></Cell>
+	 <Cell><Data ss:Type="String">Regrettably, No</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">sorryicant</Data></Cell>
+	 <Cell><Data ss:Type="String">Sorry, I Can't</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imgood</Data></Cell>
+	 <Cell><Data ss:Type="String">I Know How to Play</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">takethem</Data></Cell>
+	 <Cell><Data ss:Type="String">Take Them!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">acknowledged</Data></Cell>
+	 <Cell><Data ss:Type="String">Acknowledged</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">allright</Data></Cell>
+	 <Cell><Data ss:Type="String">All Right</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">isee</Data></Cell>
+	 <Cell><Data ss:Type="String">I See</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iunderstand</Data></Cell>
+	 <Cell><Data ss:Type="String">I Understand</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">letsgo</Data></Cell>
+	 <Cell><Data ss:Type="String">Let's Go!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gotit</Data></Cell>
+	 <Cell><Data ss:Type="String">Got It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ihearyou</Data></Cell>
+	 <Cell><Data ss:Type="String">I Hear You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">loudandclear</Data></Cell>
+	 <Cell><Data ss:Type="String">Loud and Clear</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">makessensetome</Data></Cell>
+	 <Cell><Data ss:Type="String">Makes Sense to Me</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">understood</Data></Cell>
+	 <Cell><Data ss:Type="String">Understood</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">verywell</Data></Cell>
+	 <Cell><Data ss:Type="String">Very Well</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">willdo</Data></Cell>
+	 <Cell><Data ss:Type="String">Will Do</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youvegotit</Data></Cell>
+	 <Cell><Data ss:Type="String">You've Got It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">goon</Data></Cell>
+	 <Cell><Data ss:Type="String">Go On...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">details</Data></Cell>
+	 <Cell><Data ss:Type="String">I Need Details</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imlistening</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Listening</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">letshearit</Data></Cell>
+	 <Cell><Data ss:Type="String">Let's Hear It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">elaborate</Data></Cell>
+	 <Cell><Data ss:Type="String">Please Elaborate</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">onmyway</Data></Cell>
+	 <Cell><Data ss:Type="String">On My Way</Data></Cell>
+    </Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nicetomeetyou</Data></Cell>
+	 <Cell><Data ss:Type="String">Nice to Meet You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tellmemore</Data></Cell>
+	 <Cell><Data ss:Type="String">Tell Me More</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thankyou</Data></Cell>
+	 <Cell><Data ss:Type="String">Thank You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thanks</Data></Cell>
+	 <Cell><Data ss:Type="String">Thanks!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iappreciateit</Data></Cell>
+	 <Cell><Data ss:Type="String">I Appreciate It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gladtobeofservice</Data></Cell>
+	 <Cell><Data ss:Type="String">Glad to be of Service</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">happytohelp</Data></Cell>
+	 <Cell><Data ss:Type="String">Happy to Help</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mypleasure</Data></Cell>
+	 <Cell><Data ss:Type="String">My Pleasure!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">noproblem</Data></Cell>
+	 <Cell><Data ss:Type="String">No Problem</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yourewelcome</Data></Cell>
+	 <Cell><Data ss:Type="String">You're Welcome</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">goodtoseeyou</Data></Cell>
+	 <Cell><Data ss:Type="String">Good to See You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iamsorry</Data></Cell>
+	 <Cell><Data ss:Type="String">I Am Sorry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">metoo</Data></Cell>
+	 <Cell><Data ss:Type="String">Me Too!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">really</Data></Cell>
+	 <Cell><Data ss:Type="String">Really?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thatsunfortunate</Data></Cell>
+	 <Cell><Data ss:Type="String">That's Unfortunate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">understandable</Data></Cell>
+	 <Cell><Data ss:Type="String">Understandable</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youhavemysupport</Data></Cell>
+	 <Cell><Data ss:Type="String">You Have My Support</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">MEDALS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">no_medals</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not yet received any medals. Good luck in your attempt to become CEO of Baumeister Confections!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">new_medal</Data></Cell>
+	 <Cell><Data ss:Type="String">Congratulations! You've received a new award!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolate Historical Society's Up and Comer Cup</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_01_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Presented to a budding chocolatier who has arrived with a big splash on the chocolate making scene.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_02</Data></Cell>
+	 <Cell><Data ss:Type="String">Rowena Baumeister Memorial Plate of Distinction</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_02_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Conferred on those players who have made at least 8 different chocolate products.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_03</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee Roasters Association Medal of Innovation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_03_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Granted to those players who have furthered the world of fine coffees by manufacturing at least 10 different coffee products.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_04</Data></Cell>
+	 <Cell><Data ss:Type="String">Creative Confectioners Consortium Chalice</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_04_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Bestowed upon a confectioner whose own inventions have contributed to the appreciation of the finer things in life. Given to you for successfully marketing 3 of your own creations.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_05</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections Employee of the Year</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_05_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Offered to the individual who contributes above and beyond the call of duty to the corporate efforts. You were given this award for taking ownership of your 3rd shop.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_06</Data></Cell>
+	 <Cell><Data ss:Type="String">Confectioners Local Union #481 Certificate of Appreciation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_06_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Awarded to those chocolate makers who have assumed control of all 6 Baumeister Confections factories.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_07</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Foundation Lifetime Achievement Award</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_07_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">Presented to those confectioners who have achieved the ultimate rank of %rank_5%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_08</Data></Cell>
+	 <Cell><Data ss:Type="String">Rambling Rascals Trophy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_08_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">This plaque is granted to those chocolatiers who have managed to reach every single port in the world.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_09</Data></Cell>
+	 <Cell><Data ss:Type="String">Harold Würtzheimer Spirit of Invention Prize</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">medal_09_desc</Data></Cell>
+	 <Cell><Data ss:Type="String">This prize is awarded to those players who have, through discovery, invention, and hard work amassed the entire recipe book.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">MOVIE INTRO</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle01</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='26'&gt;&lt;b&gt;&lt;p align='center'&gt;A brief history of&#10;Baumeister Confections&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle02</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Over 100 years ago, Hieronymus Baumeister opened a small shop in&#10;Sydney Australia, to peddle his father Marten's chocolate inventions.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle03</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;A generation later, Baumeister Confections&#10;had become a household name worldwide.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle04</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;As the turn of the century approached, family&#10;squabbles nearly destroyed the company.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle05</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Sisters Evangeline and Rowena managed to reconcile&#10;and return the firm to it's former glory.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle06</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;But by the roaring 20's the chocolate&#10;empire had grown complacent.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle07</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Alex Tangye, spirited granddaughter of Evangeline, used secret&#10;ingredients and fresh recipes to turn things around.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle08</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;But now, the one-two punch of the Depression and the Second&#10;World War, has left the company splintered once again.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle09</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;[Wall Street Crash!]&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle10</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;It's great chocolate factories,&#10;converted or abandoned, sit idle.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle11</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;And Alex's husband Sean, disappeared&#10;during a dangerous wartime mission.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">FLASH_intro_subtitle12</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;As Alex sets off to search for Sean, she has no&#10;choice but to trust the fate of the company to an outsider.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	</Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>1073</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1098</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

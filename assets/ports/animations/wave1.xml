@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\wave1.xml" source=".\wave1*.png">
+  <img regx="68.000000" regy="23.000000" name="wave1.jpg" mask="wave1.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="26" regy="10" name="wave10001.png" w="52" h="21" x="0" y="0"/>
+    <frame regx="32" regy="9" name="wave10002.png" w="55" h="21" x="53" y="0"/>
+    <frame regx="37" regy="9" name="wave10003.png" w="57" h="21" x="109" y="0"/>
+    <frame regx="43" regy="8" name="wave10004.png" w="60" h="21" x="167" y="0"/>
+    <frame regx="48" regy="7" name="wave10005.png" w="61" h="20" x="0" y="22"/>
+    <frame regx="50" regy="6" name="wave10006.png" w="59" h="19" x="62" y="22"/>
+    <frame regx="52" regy="6" name="wave10007.png" w="56" h="19" x="122" y="22"/>
+    <frame regx="55" regy="6" name="wave10008.png" w="55" h="18" x="179" y="22"/>
+    <frame regx="57" regy="6" name="wave10009.png" w="55" h="18" x="0" y="43"/>
+    <frame regx="59" regy="7" name="wave10010.png" w="55" h="19" x="56" y="43"/>
+    <frame regx="61" regy="7" name="wave10011.png" w="54" h="18" x="112" y="43"/>
+    <frame regx="64" regy="7" name="wave10012.png" w="55" h="18" x="167" y="43"/>
+    <frame regx="64" regy="7" name="wave10013.png" w="49" h="18" x="0" y="63"/>
+    <frame regx="64" regy="7" name="wave10014.png" w="43" h="18" x="50" y="63"/>
+    <frame regx="-28" regy="22" name="wave10015.png" w="2" h="45" x="94" y="63"/>
+  </framelist>
+<script luascript="function DoAnim() delay(85) while true do frames { 01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,15,15,15,15,15,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,15,15,15,15,15,15,15,15,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,15,15,15,15,15,15,15,15, } end end"></script>
+</sequence>

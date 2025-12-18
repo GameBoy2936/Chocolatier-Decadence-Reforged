@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\startwinkle.xml" source=".\startwinkle*.png">
+  <img regx="16.000000" regy="16.000000" name="startwinkle.jpg" mask="startwinkle.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="14" regy="14" name="startwinkle0001.png" w="28" h="28" x="0" y="0"/>
+    <frame regx="14" regy="14" name="startwinkle0002.png" w="28" h="28" x="29" y="0"/>
+    <frame regx="13" regy="13" name="startwinkle0003.png" w="26" h="26" x="58" y="0"/>
+    <frame regx="13" regy="13" name="startwinkle0004.png" w="26" h="26" x="85" y="0"/>
+    <frame regx="14" regy="13" name="startwinkle0005.png" w="28" h="26" x="0" y="29"/>
+    <frame regx="14" regy="14" name="startwinkle0006.png" w="28" h="28" x="29" y="29"/>
+    <frame regx="13" regy="13" name="startwinkle0007.png" w="26" h="26" x="58" y="29"/>
+    <frame regx="13" regy="13" name="startwinkle0008.png" w="26" h="26" x="85" y="29"/>
+    <frame regx="13" regy="13" name="startwinkle0009.png" w="26" h="26" x="0" y="58"/>
+    <frame regx="14" regy="14" name="startwinkle0010.png" w="28" h="28" x="27" y="58"/>
+  </framelist>
+<script luascript="function DoAnim() delay(85) while true do frames { 01,02,03,04,05,06,07,08,09,10 } end end"></script>
+</sequence>

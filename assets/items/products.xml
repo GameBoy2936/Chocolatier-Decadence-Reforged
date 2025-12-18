@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <product>
+    <code>B01</code>
+    <category>bar</category>
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>B02</code>
+    <category>bar</category>
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <milk>1</milk>
+  </product>
+  <product>
+    <code>B03</code>
+    <category>bar</category>
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <caramel>1</caramel>
+  </product>
+  <product>
+    <code>B04</code>
+    <category>bar</category>
+  
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <peanut>1</peanut>
+  </product>
+  <product>
+    <code>B05</code>
+    <category>bar</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <hazelnut>1</hazelnut>
+  </product>
+  <product>
+    <code>B06</code>
+    <category>bar</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <almond>1</almond>
+  </product>
+  <product>
+    <code>B07</code>
+    <category>bar</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <orange>1</orange>
+  </product>
+  <product>
+    <code>B08</code>
+    <category>bar</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <lemon>1</lemon>
+  </product>
+  <product>
+    <code>B09</code>
+    <category>bar</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <raspberry>1</raspberry>
+  </product>
+  <product>
+    <code>B10</code>
+    <category>bar</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <mint>1</mint>
+  </product>
+  <product>
+    <code>B11</code>
+    <category>bar</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <honey>1</honey>
+  </product>
+  <product>
+    <code>B12</code>
+    <category>bar</category>
+    <dou_cacao>2</dou_cacao>
+    
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>I01</code>
+    <category>infusion</category>
+    
+    <cacao>2</cacao>
+    <pecan>1</pecan>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>I02</code>
+    <category>infusion</category>
+    
+    <cacao>2</cacao>
+    <sugar>1</sugar>
+    <cherry>1</cherry>
+  </product>
+  <product>
+    <code>I03</code>
+    <category>infusion</category>
+    
+    <cacao>2</cacao>
+    <sugar>1</sugar>
+    <ginger>1</ginger>
+  </product>
+  <product>
+    <code>I04</code>
+    <category>infusion</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <pepper>1</pepper>
+    <anise>1</anise>
+  </product>
+  <product>
+    <code>I05</code>
+    <category>infusion</category>
+    
+    <cacao>1</cacao>
+    <milk>1</milk>
+    <sugar>1</sugar>
+    <blueberry>1</blueberry>
+  </product>
+  <product>
+    <code>I06</code>
+    <category>infusion</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <milk>1</milk>
+    <allspice>1</allspice>
+  </product>
+  <product>
+    <code>I07</code>
+    <category>infusion</category>
+    
+    <bog_cacao>2</bog_cacao>
+    <sugar>1</sugar>
+    <lime>1</lime>
+  </product>
+  <product>
+    <code>I08</code>
+    <category>infusion</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <vanilla>1</vanilla>
+    <cinnamon>1</cinnamon>
+  </product>
+  <product>
+    <code>I09</code>
+    <category>infusion</category>
+    
+    <cacao>1</cacao>
+    <sugar>1</sugar>
+    <mango>1</mango>
+    <clove>1</clove>
+  </product>
+  <product>
+    <code>I10</code>
+    <category>infusion</category>
+    
+    <bog_cacao>1</bog_cacao>
+    <lim_cacao>1</lim_cacao>
+    <sugar>1</sugar>
+    <macadamia>1</macadamia>
+  </product> 
+	<product>
+    <code>I11</code>
+    <category>infusion</category>
+    
+    <lim_cacao>1</lim_cacao>
+    <sugar>1</sugar>
+    <strawberry>1</strawberry>
+    <anise>1</anise>
+  </product>
+  <product>
+    <code>I12</code>
+    <category>infusion</category>
+    
+    <dou_cacao>1</dou_cacao>
+    <lim_cacao>1</lim_cacao>
+    <bog_cacao>1</bog_cacao>
+    <bal_cacao>1</bal_cacao>
+  </product> 
+  <product>
+    <code>T01</code>
+    <category>truffle</category>
+    
+    <cacao>2</cacao>
+    <sugar>2</sugar>
+    <powder>1</powder>
+    <milk>1</milk>
+  </product>
+  <product>
+    <code>T02</code>
+    <category>truffle</category>
+    
+    <cacao>2</cacao>
+    <hazelnut>1</hazelnut>
+    <sugar>1</sugar>
+    <powder>1</powder>
+    <milk>1</milk>
+  </product>
+  <product>
+    <code>T03</code>
+    <category>truffle</category>
+    
+    <cacao>2</cacao>
+    <honey>1</honey>
+    <sugar>1</sugar>
+    <powder>1</powder>
+    <milk>1</milk>
+  </product>
+  <product>
+    <code>T04</code>
+    <category>truffle</category>
+    
+    <cacao>2</cacao>
+    <currant>1</currant>
+    <pepper>1</pepper>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T05</code>
+    <category>truffle</category>
+    
+    <cacao>2</cacao>
+    <lemon>1</lemon>
+    <raspberry>1</raspberry>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T06</code>
+    <category>truffle</category>
+    
+    <cacao>2</cacao>
+    <wasabi>1</wasabi>
+    <cashew>1</cashew>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T07</code>
+    <category>truffle</category>
+   
+    <dou_cacao>3</dou_cacao>
+    <saffron>1</saffron>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T08</code>
+    <category>truffle</category>
+    
+    <lim_cacao>2</lim_cacao>
+    <cardamom>1</cardamom>
+    <nutmeg>1</nutmeg>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T09</code>
+    <category>truffle</category>
+    
+    <bog_cacao>2</bog_cacao>
+    <ginger>1</ginger>
+    <sesame>1</sesame>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T10</code>
+    <category>truffle</category>
+    
+    <bog_cacao>1</bog_cacao>
+    <lim_cacao>1</lim_cacao>
+    <nutmeg>1</nutmeg>
+    <pumpkin>1</pumpkin>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T11</code>
+    <category>truffle</category>
+    
+    <dou_cacao>1</dou_cacao>
+    <bal_cacao>1</bal_cacao>
+    <lim_cacao>1</lim_cacao>
+    <espresso>1</espresso>
+    <powder>1</powder>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>T12</code>
+    <category>truffle</category>
+    
+    <dou_cacao>1</dou_cacao>
+    <bel_cacao>1</bel_cacao>
+    <lim_cacao>1</lim_cacao>
+    <bog_cacao>1</bog_cacao>
+    <bal_cacao>1</bal_cacao>
+    <powder>1</powder>
+  </product>
+  <product>
+    <code>E01</code>
+    <category>exotic</category>
+    
+    <cacao>2</cacao>
+    <sugar>1</sugar>
+    <caramel>1</caramel>
+    <salt>1</salt>
+  </product>
+  <product>
+    <code>E02</code>
+    <category>exotic</category>
+    
+    <cacao>2</cacao>
+    <sugar>1</sugar>
+    <date>1</date>
+    <almond>1</almond>
+  </product>
+  <product>
+    <code>E03</code>
+    <category>exotic</category>
+    
+    <cacao>2</cacao>
+    <sugar>1</sugar>
+    <lemon>1</lemon>
+    <lime>1</lime>
+  </product>
+  <product>
+    <code>E04</code>
+    <category>exotic</category>
+    
+    <lim_cacao>1</lim_cacao>
+    <dou_cacao>1</dou_cacao>
+    <sugar>2</sugar>
+    <rose>1</rose>
+  </product>
+  <product>
+    <code>E05</code>
+    <category>exotic</category>
+    
+    <bel_cacao>1</bel_cacao>
+    <bal_cacao>1</bal_cacao>
+    <sugar>1</sugar>
+    <salt>1</salt>
+    <pistachio>1</pistachio>
+  </product>
+   <product>
+    <code>E06</code>
+    <category>exotic</category>
+    
+    <lim_cacao>1</lim_cacao>
+    <bel_cacao>1</bel_cacao>
+    <sugar>1</sugar>
+    <honey>1</honey>
+    <butter>1</butter>
+  </product>
+  <product>
+    <code>E07</code>
+    <category>exotic</category>
+    
+    <dou_cacao>1</dou_cacao>
+    <bal_cacao>1</bal_cacao>
+    <sugar>1</sugar>
+    <mint>1</mint>
+    <whiskey>1</whiskey>
+  </product>
+   <product>
+    <code>E08</code>
+    <category>exotic</category>
+    
+    <dou_cacao>1</dou_cacao>
+    <sugar>1</sugar>
+    <cinnamon>1</cinnamon>
+    <tea>1</tea>
+    <milk>1</milk>
+  </product>
+   <product>
+    <code>E09</code>
+    <category>exotic</category>
+    
+    <lim_cacao>1</lim_cacao>
+    <bal_cacao>1</bal_cacao>
+    <bog_cacao>1</bog_cacao>
+    <sugar>1</sugar>
+    <peanut>1</peanut>
+  </product>
+   <product>
+    <code>E10</code>
+    <category>exotic</category>
+    
+    <bog_cacao>1</bog_cacao>
+    <dou_cacao>1</dou_cacao>
+    <pecan>1</pecan>
+    <sugar>1</sugar>
+    <orange>1</orange>
+  </product>  <product>
+    <code>E11</code>
+    <category>exotic</category>
+    
+    <dou_cacao>1</dou_cacao>
+    <bel_cacao>1</bel_cacao>
+    <lim_cacao>1</lim_cacao>
+    <bog_cacao>1</bog_cacao>
+    <strawberry>1</strawberry>
+  </product>
+  <product>
+    <code>E12</code>
+    <category>exotic</category>
+    
+    <dou_cacao>1</dou_cacao>
+    <bal_cacao>1</bal_cacao>
+    <lim_cacao>1</lim_cacao>
+    <sugar>1</sugar>
+    <cashew>1</cashew>
+  </product>
+   <product>
+    <code>C01</code>
+    <category>beverage</category>
+    
+    <kon_coffee>1</kon_coffee>
+    <sugar>1</sugar>
+    <cream>1</cream>
+  </product>
+  <product>
+    <code>C02</code>
+    <category>beverage</category>
+    
+    <hav_coffee>1</hav_coffee>
+    <sugar>1</sugar>
+    <milk>1</milk>
+  </product>
+  <product>
+    <code>C03</code>
+    <category>beverage</category>
+    
+    <kon_coffee>1</kon_coffee>
+    <hav_coffee>1</hav_coffee>
+    <tan_coffee>1</tan_coffee>
+  </product>
+  <product>
+    <code>C04</code>
+    <category>beverage</category>
+    
+    <tan_coffee>1</tan_coffee>
+    <sugar>1</sugar>
+    <cinnamon>1</cinnamon>
+  </product>
+  <product>
+    <code>C05</code>
+    <category>beverage</category>
+    
+    <kon_coffee>1</kon_coffee>
+    <cacao>1</cacao>
+    <milk>1</milk>
+  </product>
+  <product>
+    <code>C06</code>
+    <category>beverage</category>
+    
+    <hav_coffee>1</hav_coffee>
+    <cream>1</cream>
+    <whiskey>1</whiskey>
+  </product>
+  <product>
+    <code>C07</code>
+    <category>beverage</category>
+    
+    <tan_coffee>1</tan_coffee>
+    <sugar>1</sugar>
+    <kon_coffee>1</kon_coffee>
+  </product>
+  <product>
+    <code>C08</code>
+    <category>beverage</category>
+    
+    <kon_coffee>1</kon_coffee>
+    <sugar>1</sugar>
+    <whipped_cream>1</whipped_cream>
+  </product>
+  <product>
+    <code>C09</code>
+    <category>beverage</category>
+    
+    <sugar>1</sugar>
+    <amaretto>1</amaretto>
+    <bal_coffee>1</bal_coffee>
+  </product>
+  <product>
+    <code>C10</code>
+    <category>beverage</category>
+    <kon_coffee>1</kon_coffee>
+    <bal_coffee>1</bal_coffee>
+    <bog_coffee>1</bog_coffee>
+  </product>
+  <product>
+    <code>C11</code>
+    <category>beverage</category>
+    <tan_coffee>1</tan_coffee>
+    <hav_coffee>1</hav_coffee>
+    <nutmeg>1</nutmeg>
+  </product>
+  <product>
+    <code>C12</code>
+    <category>beverage</category>
+    
+    <bog_coffee>1</bog_coffee>
+    <tan_coffee>1</tan_coffee>
+    <mint>1</mint>
+  </product>
+  <product>
+    <code>M01</code>
+    <category>blend</category>
+    
+    <bal_coffee>1</bal_coffee>
+    <hav_coffee>1</hav_coffee>
+    <tan_coffee>1</tan_coffee>
+    <honey>1</honey>
+  </product>
+  <product>
+    <code>M02</code>
+    <category>blend</category>
+    
+    <sugar>1</sugar>
+    <cacao>1</cacao>
+    <kon_coffee>1</kon_coffee>
+    <cream>1</cream>
+  </product>
+  <product>
+    <code>M03</code>
+    <category>blend</category>
+    
+    <bog_coffee>1</bog_coffee>
+    <hav_coffee>1</hav_coffee>
+    <sugar>1</sugar>
+    <hazelnut>1</hazelnut>
+  </product>
+  <product>
+    <code>M04</code>
+    <category>blend</category>
+    
+    <tan_coffee>1</tan_coffee>
+    <sugar>1</sugar>
+    <anise>1</anise>
+    <pepper>1</pepper>
+  </product>
+  <product>
+    <code>M05</code>
+    <category>blend</category>
+    
+    <bal_coffee>1</bal_coffee>
+    <milk>1</milk>
+    <maple>1</maple>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>M06</code>
+    <category>blend</category>
+    
+    <tan_coffee>1</tan_coffee>
+    <hav_coffee>1</hav_coffee>
+    <milk>1</milk>
+    <coconut>1</coconut>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>M07</code>
+    <category>blend</category>
+    
+    <kon_coffee>1</kon_coffee>
+    <cinnamon>1</cinnamon>
+    <orange>1</orange>
+    <vanilla>1</vanilla>
+    <clove>1</clove>
+  </product>
+  <product>
+    <code>M08</code>
+    <category>blend</category>
+    
+    <tan_coffee>1</tan_coffee>
+    <vanilla>1</vanilla>
+    <cinnamon>1</cinnamon>
+    <milk>1</milk>
+    <pumpkin>1</pumpkin>
+  </product>
+  <product>
+    <code>M09</code>
+    <category>blend</category>
+    
+    <tan_coffee>1</tan_coffee>
+    <bog_coffee>1</bog_coffee>
+    <cream>1</cream>
+    <caramel>1</caramel>
+    <sugar>1</sugar>
+  </product>
+  <product>
+    <code>M10</code>
+    <category>blend</category>
+    
+    <bog_coffee>1</bog_coffee>
+    <sugar>1</sugar>
+    <cinnamon>1</cinnamon>
+    <cacao>1</cacao>
+    <anise>1</anise>
+  </product>
+  <product>
+    <code>M11</code>
+    <category>blend</category>
+    
+    <bal_coffee>1</bal_coffee>
+    <cream>1</cream>
+    <lemon>1</lemon>
+    <clove>1</clove>
+    <nutmeg>1</nutmeg>
+  </product>
+  <product>
+    <code>M12</code>
+    <category>blend</category>
+    
+    <bog_coffee>1</bog_coffee>
+    <lim_cacao>1</lim_cacao>
+    <cinnamon>1</cinnamon>
+    <milk>1</milk>
+    <nutmeg>1</nutmeg>
+  </product>
+  <product>
+  </product>
+</root>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\Playground Animation\port_new.xml" source=".\port_new_*.png">
+  <img regx="16.000000" regy="16.000000" name="port_new.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="8" regy="8" name="port_new_1.png" w="16" h="16" x="0" y="0"/>
+    <frame regx="6" regy="6" name="port_new_2.png" w="12" h="12" x="17" y="0"/>
+  </framelist>
+<script luascript="function DoAnim() delay(500) while true do frames { 1,2 } end end"></script>
+</sequence>

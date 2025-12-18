@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\tok_stacklights.xml" source=".\tok_stacklight*.png">
+  <img regx="42.000000" regy="24.000000" name="tok_stacklights.jpg" mask="tok_stacklights.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="42" regy="24" name="tok_stacklight_1.png" w="85" h="49" x="0" y="0"/>
+    <frame regx="39" regy="10" name="tok_stacklight_2.png" w="78" h="31" x="0" y="50"/>
+  </framelist>
+<script luascript="function DoAnim() delay(300) while true do frames { 1,2} end end"></script>
+</sequence>

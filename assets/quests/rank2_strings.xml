@@ -1,0 +1,1907 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Citizen Comrade</LastAuthor>
+  <Created>2006-10-04T22:28:33Z</Created>
+  <LastSaved>2009-01-12T00:53:41Z</LastSaved>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <Colors>
+   <Color>
+    <Index>0</Index>
+    <RGB>#010000</RGB>
+   </Color>
+   <Color>
+    <Index>2</Index>
+    <RGB>#993300</RGB>
+   </Color>
+   <Color>
+    <Index>3</Index>
+    <RGB>#FFFF00</RGB>
+   </Color>
+   <Color>
+    <Index>4</Index>
+    <RGB>#DDDDDD</RGB>
+   </Color>
+   <Color>
+    <Index>5</Index>
+    <RGB>#00FF00</RGB>
+   </Color>
+   <Color>
+    <Index>12</Index>
+    <RGB>#808000</RGB>
+   </Color>
+   <Color>
+    <Index>46</Index>
+    <RGB>#6666CC</RGB>
+   </Color>
+  </Colors>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11640</WindowHeight>
+  <WindowWidth>15480</WindowWidth>
+  <WindowTopX>360</WindowTopX>
+  <WindowTopY>300</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Worksheet ss:Name="strings">
+  <Table ss:ExpandedColumnCount="256" ss:ExpandedRowCount="1099" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="200.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_precoffee_hint_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm eager to show you these new machines in action - I just need a bit more time to iron out the kinks. Once you've built up the business and expanded your repertoire of chocolate offerings a bit, we'll be ready to introduce a whole new product line into the business - coffees!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Meeting Felix</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to South Africa, &lt;player&gt;. I'm hopeful that you will indeed be able to steer our company through these rough, modern waters.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_01_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">While the war was raging, I've been experimenting here with this old chocolate factory. You see, I love chocolate as much as the next guy, but my latest passion is coffee. It's my personal belief that coffee and coffee products represent a new frontier for our company.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_01_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I just need a bit more time to iron out the kinks of these coffee machines. You need to keep expanding your repertoire of chocolate offerings, and building up your business.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_02</Data></Cell>
+	 <Cell><Data ss:Type="String">Peanuts, At Last</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">In the meantime, would you do something for me?&lt;br&gt;&lt;br&gt;Grab some peanuts from the market here in Cape Town. Make [D|20|30|45] cases of %b04% and deliver them to %zur_schoolkeep% at %zur_school%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_02_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|20|30|45] cases of %b04% to %zur_schoolkeep% at %zur_school%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_02_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You have made my day, &lt;player&gt;. Do you know how hard it was to get a hold of peanuts during the war? These chocolates are simply delightful!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_02_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">My dear friend %main_feli% told me to expect something sweet - do you have any idea what he might have been talking about?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_02_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %b04% - %cacao%, %sugar% and %peanut% - and bring them to %zur_factory% in %zurich%. Once you've got [D|20|30|45] cases of the chocolates in your inventory, go see %zur_schoolkeep% at %zur_school%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_03</Data></Cell>
+	 <Cell><Data ss:Type="String">More %b04%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Do yourself a favor. Take another [D|30|45|60] cases of these delightful %b04% to %cap_mountainkeep% in %capetown%. You can find her up on %cap_mountain%. I know she'll love the chocolates, and she's usually up on all the latest news...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_03_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|30|45|60] cases of %b04% to %cap_mountainkeep% at %cap_mountain%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_03_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Delicious!&lt;br&gt;&lt;br&gt;Listen - I understand that %zur_marketkeep% has been stocking all kinds of new ingredients. I imagine you may just find some new, useful things on your next visit.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_03_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I like to help. But I like %b04%, too, and I heard that you might be bringing me [D|30|45|60] cases...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_03_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Have [D|30|45|60] cases of the %b04% in your inventory, and call on %cap_mountainkeep% at %cap_mountain% in %capetown%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_04</Data></Cell>
+	 <Cell><Data ss:Type="String">An Order for %b06%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you willing to take an order for me? I'm willing to pay you [D|$12,000|$20,000|$32,500] for [D|15|25|40] cases of %b06%. Are you interested? Because I've been hearing rumors that %almond% are available again somewhere, and I've got a craving...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_04_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|15|25|40] cases of %b06% to %zur_towerkeep% at %zur_tower% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_04_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wonderful! I need to give some gifts soon, and these will be absolutely perfect.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_04_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I placed an order for [D|15|25|40] cases of %b06% - how are they coming along?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_04_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Recall that %zur_towerkeep% at %zur_tower% in %zurich% has placed an order for [D|15|25|40] cases of %b06%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_05</Data></Cell>
+	 <Cell><Data ss:Type="String">Pre-Paid Order</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Listen, &lt;player&gt;. I'm willing to pay you in advance. I'll give you [D|$20,000|$25,000|$30,000] right now, if you agree to make [D|32|45|58] cases of %b08% and deliver them to %zur_mountainkeep% here at The %zur_mountain%. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_05_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|32|45|58] cases of %b08% to %zur_mountainkeep% at %zur_mountain%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_05_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">These %b08% are all for me? From Florian? He shouldn't have... but I am certainly glad that he did!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_05_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have a funny feeling that you're supposed to have something for me, &lt;player&gt;. Any idea what that could be about?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_05_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You took [D|$20,000|$25,000|$30,000] from %zur_schoolkeep%, and you promised to make [D|32|45|58] cases of %b08% and deliver them to %zur_mountainkeep% at %zur_mountain% in %zurich%. I would be concerned about your reputation, should you fail to meet this obligation, &lt;player&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_06</Data></Cell>
+	 <Cell><Data ss:Type="String">Too Much Sugar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_06_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hello, &lt;player&gt;, you're just the person I've been looking for. I happen to have a glut of %sugar% I'm trying to offload. I'd be willing to exchange [D|1000|1500|2000] sacks of %sugar% for a mere [D|18|32|46] cases of %b10%. Feel like making a deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_06_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|18|32|46] cases of %b10% to %cap_marketkeep% in %capetown%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_06_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Terrific - these %b10% are perfect!&lt;br&gt;&lt;br&gt;Here are your [D|1000|1500|2000] sacks of %sugar%, and I'm of course glad to sell you anything else you may need.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_06_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I've got plenty of ingredients for you to buy, but I'm holding those [D|1000|1500|2000] sacks of %sugar% to exchange for the [D|18|32|46] cases of %b10% you promised to deliver...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_06_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%cap_marketkeep% at %cap_market% in %capetown% is hanging onto [D|1000|1500|2000] cases of %sugar% for you - he'll hand over the %sugar% once you arrive with the [D|18|32|46] cases of %b10% you promised to deliver...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07</Data></Cell>
+	 <Cell><Data ss:Type="String">Honey Exchange</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Greetings. You must be &lt;player&gt;, that person Baumeister Confections took on board. Well, I have a proposal. I happen to have on hand 100 sacks of %honey% - an ingredient not easily had these days. I've been hearing good things about your prowess at turning ingredients into chocolates. I tell you what: I'll give you my 100 sacks of %honey%, if you agree to bring me [D|25|50|100] cases of %b11% at your earliest convenience. Deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07_hard_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Greetings. You must be &lt;player&gt;, that person Baumeister Confections took on board. Well, I have a proposal. I happen to have on hand 100 sacks of %honey% - an ingredient not easily had these days. I've been hearing good things about your prowess at turning ingredients into chocolates. I tell you what: I'll give you my 100 sacks of %honey%, if you agree to use all of that to bring me 100 cases of %b11% at your earliest convenience. Deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|25|50|100] cases of %b11% to %evil_bian% at %tan_bar% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07_rejected_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Good gracious, that is quite a bold move. You must be a bit intimidated of me. Well, we will meet again some day. And as I always say: you never know who you'll meet at %tan_bar%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, ha, &lt;player&gt;. It is true - you have quite a way with cacao. Thank you ever so much for those %b11%, and don't be a stranger... you never know whom you might meet here at %tan_bar%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Now wait a minute - the terms of our arrangement were quite straightforward. I gave you 100 sacks of %honey%, and you are to bring me [D|25|50|100] cases of %b11%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_07_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You took a delivery of %honey% from the bartender at %tan_bar% in %tangiers% - she is waiting for your return with the [D|25|50|100] cases of %b11% you promised in exchange...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_08</Data></Cell>
+	 <Cell><Data ss:Type="String">A New Ingredient?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_08_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It's good to meet you here, &lt;player&gt;. You can call me Ilan.&lt;br&gt;&lt;br&gt;So, we've been receiving some new shipments from Europe and have been stocking some new ingredients we've never sold here in town before all thanks to the post-war trade boom. I personally have to try a recipe that uses one of the new ingredients we're importing into %tangiers%, and I only need just [D|2|10|25] cases. Can we make a deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_08_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Terrific. If you head over to %tan_market%, you will find that %tan_marketkeep% is now stocking %raspberry%. Use them to make %b09%, and be sure to come back with the [D|2|10|25] cases you promised for me!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_08_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|2|10|25] cases of %b09% for %tan_portkeep% at %tan_port% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_08_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Tasty! &lt;br&gt;&lt;br&gt;Be in touch, &lt;player&gt;. Down here at the port, I tend to hear things every now and again - things that might prove of value to you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_08_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">If it wasn't for me, &lt;player&gt;, perhaps you may not have even known where to find %raspberry%. I fully expect the payment we agreed upon, [D|2|10|25] cases of %b09%. Where are they?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_08_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You owe %tan_portkeep% in %tangiers% [D|2|10|25] cases of %b09%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_09_wait_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I expect my first crop of Doualan Cacao to be ready this December, &lt;player&gt;. Be sure to come and see me at that time!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_09</Data></Cell>
+	 <Cell><Data ss:Type="String">Varietal Cacao</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_09_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I am pleased to report that I am ready to harvest a new crop of varietal cacao. I will sell some of my wonderful crops to you, if you are willing to take an order for me for [D|25|40|60] cases of %b12%. Do not worry, you will be well compensated for your efforts. Do you agree?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_09_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|25|40|60] cases of %b12% to %dou_plantationkeep% in %douala%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_09_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I've been waiting to taste what you have created from my cacao - delightful! As I promised, I am paying you [D|$40,000|$60,000|$85,000] - an amount I am sure will cover your costs, and then some!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_09_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I've been waiting to taste what you have created from my cacao - [D|25|40|60] cases of %b12%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_09_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You accepted an order for [D|25|40|60] cases of %b12%, which need to be delivered to %dou_plantationkeep% who you will find at %dou_plantation% in %douala%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_10</Data></Cell>
+	 <Cell><Data ss:Type="String">A Friendly Gesture</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_10_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you willing to do something for me? I'd like to place an order for [D|11|22|40] cases of %b07%, to be delivered to my friend %zur_schoolkeep% here at %zur_school%. I'll give you [D|$12,000|$20,000|$30,000] right now if you will accept the order...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_10_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Take [D|11|22|40] cases of %b07% to %zur_schoolkeep% on behalf of %zur_mountainkeep%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_10_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">From Ursel? For me? This gives me hope, &lt;player&gt;, I am certainly in your debt...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_10_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I've had this funny feeling that the next time I saw you, &lt;player&gt;, you would have something for me. Wishful thinking?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_10_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You were paid by %zur_mountainkeep% to deliver [D|11|22|40] cases of %b07% to %zur_schoolkeep% at %zur_school% in %zurich%. Honoring one's commitments is critical if one intends to succeed in business, my friend...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_11</Data></Cell>
+	 <Cell><Data ss:Type="String">A Craving for %b08%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_11_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">We have recently expanded our operations, and are going to be celebrating our success soon. I am looking for something sweet to serve during the event. Would you accept an order from me? If you bring [D|20|35|50] cases of %b08%, I will pay you [D|$15,000|$25,000|$32,500] - which is an excellent price, as I'm sure you will agree. Will you bring me the chocolates?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_11_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_bankkeep% placed an order for [D|20|35|50] case of %b08% for a party at the bank in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_11_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. I'm positive these will be the hit of the party. Here is the [D|$15,000|$25,000|$32,500] I promised you for the goods.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_11_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Our little party is fast approaching - how are my [D|20|35|50] cases of %b08% coming along?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_11_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_bankkeep% is getting nervous about the upcoming party at his bank in %zurich%. He is counting on you to deliver [D|20|35|50] cases of %b08% in time for the party...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_12</Data></Cell>
+	 <Cell><Data ss:Type="String">Simple Tastes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_12_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I am a man of simple tastes, &lt;player&gt;. I have had the pleasure of sampling your %b01%, and I would very much like to place a large order. If I promise to pay you [D|$5,000|$7,500|$10,000] - I guarantee a better price than you will find anywhere else - will you agree to bring me [D|40|60|80] cases?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_12_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_stationkeep% in %zurich% placed an order for [D|40|60|80] cases of %b01%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_12_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Thank you, &lt;player&gt;. Don't be a stranger. I am happy with your wares and will definitely be interested in placing orders with you in the future...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_12_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I was really hoping that you had been able to get my order together - [D|40|60|80] cases of %b01%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_12_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You are holding an order for %zur_stationkeep% in %zurich% - he's waiting for you to deliver [D|40|60|80] cases of your %b01%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee01_ugr_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'd very much like to get these coffee machines into operation, but first you really must fill the space we've given you in the recipe book by creating your own recipe in the Secret Test Kitchen.&lt;br&gt;&lt;br&gt;The rest of the Board and I will need to see some evidence of your creative abilities to seriously consider you for the position of %rank_4%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee01_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I understand that %main_feli% has finally got his coffee machines up and running - you should make your way to %cap_factory% and visit with him as soon as you are able.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee01</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee Beans</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, are you as excited as I am? I've been tinkering with these coffee machines for eons, and it's finally time to get them into operation!&lt;br&gt;&lt;br&gt;Are you willing to make a trip to Hawaii? I have a contact there who will supply us with the ingredients we need to make a marketable coffee.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee01_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Get what you need from the market in Hawaii, and bring the ingredients back to %main_feli%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee01_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %c01% - %kon_coffee%, %cream% and %sugar% - and bring them to %cap_factory% in %capetown%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee Beans Part 2</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent! Travel to Hawaii, and go see %kon_marketkeep% at the %kon_market%. Buy a bunch of %kon_coffee%, %cream% and %sugar% for our experiment, and come back and see me. I'll give you some cash for your trip and the ingredients. Bon voyage!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Get a hold of %kon_coffee% and %cream% from %kon_marketkeep% in Hawaii.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02_help_feli_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The machines are all set, my friend! All we need now is %kon_coffee%, %cream% and %sugar%, and we're off to the races!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hey, you must be &lt;player&gt;! Welcome to Hawaii!&lt;br&gt;&lt;br&gt;Now then, you're after %kon_coffee%, %cream% and %sugar%, eh? Expanding into coffee production, by any chance? Hawaii is the place for you, my friend. To show you what I mean, I am going to give you - free of charge - [D|75|60|45] sacks of %kon_coffee%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02b</Data></Cell>
+	 <Cell><Data ss:Type="String">Back to Felix</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02b_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The best %kon_coffee% comes straight from Kalei's place, the %kon_plantation%. It's just up the hill behind me, you can't miss it. The other stuff, the %cream% and %sugar%, you will find here in my shop.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02b_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Buy the ingredients for %c01% and take them back to %main_feli% at %cap_factory%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02b_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I am all set to make %c01% here, but you need to have the ingredients on hand: %sugar%, %cream% and %kon_coffee%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee02b_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring some %sugar%, %cream% and %kon_coffee% to %cap_factory% so you and Felix can make your foray into the coffee business!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee03</Data></Cell>
+	 <Cell><Data ss:Type="String">Making %c01%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, we've already received an order for [D|20|35|50] cases of our first coffee product - %c01% - from %zur_schoolkeep% in %zurich%. He's willing to share a new coffee recipe in exchange for these coffees.&lt;br&gt;&lt;br&gt;Time for you to check out my coffee machines. Click &quot;Make Coffee&quot; to crank them up!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee03_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Click &quot;Make Coffee&quot;, make at least [D|20|35|50] cases of %c01% and bring them to %zur_schoolkeep% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee03_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">So you have taken the plunge, and begun to manufacture coffee products? As I promised Felix, in exchange for [D|20|35|50] cases of your %c01%, I'd like to give you this recipe for %c05%, one of my favorite hot drinks.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee03_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I placed an order for [D|20|35|50] cases of %c01%. Where's my coffee?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee03_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|20|35|50] %c01% at your factory in %capetown% and take them to Zurich, deliver them to %zur_schoolkeep% at %zur_school% there.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_feli</Data></Cell>
+	 <Cell><Data ss:Type="String">The Endorsement of Felix</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_feli_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, you have successfully invented your own product, and you have launched our new line of Coffees. I am glad to see how well things are going for our company.&lt;br&gt;&lt;br&gt;As you and I both know, you need to earn the endorsements of myself and the other members of the Board of Directors in order to be named %rank_4% of the company.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_feli_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">As soon as you have been able to learn - and manufacture - [D|5|6|8] coffee recipes, as well as taken over at least one retail location, you will have earned my endorsement.&lt;br&gt;&lt;br&gt;Best of luck, &lt;player&gt;. I have no doubt that you will succeed.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_feli_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Manufacture at least [D|5|6|8] coffee recipes and own 1 shop, and Felix's endorsement will be yours.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_feli_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I am most pleased at your progress. You have earned my complete trust as well as my endorsement to become CEO of our company!&lt;br&gt;&lt;br&gt;Keep up the great work - I will be ready to send you to %tokyo% to meet with my brother very soon...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee04</Data></Cell>
+	 <Cell><Data ss:Type="String">An Order for %c05%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">One other thing: %zur_schoolkeep% was most pleased with our %c01%, and has placed an order for [D|75|100|125] cases of %c05%. He is willing to pay [D|$50,000|$62,500|$75,000] - would you like to fulfill the order now?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee04_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|75|100|125] cases of %c05% to %zur_schoolkeep% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee04_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Once again, I am not disappointed. You make great coffee, &lt;player&gt;!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee04_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I am pretty sure that I placed an order with Felix for [D|75|100|125] cases of %c05%. Where's my coffee?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee04_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You need to convey [D|75|100|125] cases of %c05% to %zur_schoolkeep% at %zur_school% in %zurich%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee05</Data></Cell>
+	 <Cell><Data ss:Type="String">Coffee for %tan_hotel%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">We like to keep quite a bit of coffee around for our guests here at the %tan_hotel%. I am willing to pay you a premium - [D|$80,000|$95,000|$110,000] - once you deliver [D|65|80|100] cases each of your %c01%, %c05% and %c07%. What do you think?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee05_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|65|80|100] cases each of %c01%, %c05% and %c07% to %tan_hotel%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee05_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I can smell the aroma of your wonderful coffees in our lobby already - thank you, &lt;player&gt;!&lt;br&gt;&lt;br&gt;Here is the [D|$80,000|$95,000|$110,000] I promised for your goods.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee05_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I can almost smell the aromas of those coffees I ordered. Almost, but not quite...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee05_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%tan_hotelkeep% at %tan_hotel% will pay you [D|$80,000|$95,000|$110,000] once you bring him [D|65|80|100] cases each of %c01%, %c05% and %c07%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee06</Data></Cell>
+	 <Cell><Data ss:Type="String">Hekili's Coffee</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee06_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hey, you're back. So the talk is true, you're really making coffee with Kalei's beans. Heard good things. You know, I've got customers asking for that kind of stuff all the time. Tell you what... you bring me some of what you're making, say [D|75|90|110] cases of the %c01% and the %c05%, and I'll make it worth your while. How's [D|$25,000|$30,000|$35,000] sound?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee06_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|75|90|110] cases each of %c01% and %c05% to %kon_market% in %kona%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee06_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wow! You do make excellent coffee! Kalei will be happy you're doing right by his beans. Here's the [D|$25,000|$30,000|$35,000], like we said. Let me know if you need anything else today with my ingredients inside.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee06_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Aloha. Need to restock? Just so you know, I still have that deal on the table for the finished [D|75|90|110] cases each of %c01% and %c05%, whenever you're ready.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee06_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Don't forget that you took an order for %kon_marketkeep% over at the %kon_market% in Hawaii - he's been trying to wait patiently to get his hands on [D|75|90|110] cases each of %c01% and %c02 soon.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee13</Data></Cell>
+	 <Cell><Data ss:Type="String">Havana de Cuba!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee13_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Namaste, &lt;player&gt;. It's good to make your acquaintance.&lt;br&gt;&lt;br&gt;So, I see you've expanded operations to include %beverage%. And in my opinion, the world's best coffee beans are found in %havana%, Cuba. I'd be willing to get you passage to Cuba and hand over a recipe for %c02% that uses those beans, if you're willing set aside some of your first batch for me. Do we have a deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee13_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. First, here's the recipe for %c02%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee13_extra02_1</Data></Cell>
+	 <Cell><Data ss:Type="String">When you get to %havana%, track down %hav_plantationkeep% at %hav_plantation%. You can buy the coffee beans you'll need from her.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee13_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Travel to %havana% and visit %hav_plantation% to buy some %hav_coffee%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee13_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You were sent by %trav_01%? Well, she has impeccable taste, so welcome! I raise the finest coffee beans in the country and my prices are fair.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee13_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">All you need to do is get yourself to %havana% and visit %hav_plantationkeep% at %hav_plantation%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee14</Data></Cell>
+	 <Cell><Data ss:Type="String">%c02% for Shobha</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee14_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Now, you didn't think Ms. Mudaliar did this all as a favor? I suggest you should repay her with [D|24|36|50] cases of the new %c02% recipe she gave you as soon as you can.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee14_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Have [D|24|36|50] cases of %c02% on hand for the next time you run into %trav_01%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee14_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wonderful - I knew I had picked the right person to introduce to my friends! Thank you for the %c02%! I'll be in touch again soon!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee14_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Have you not been to Cuba? Have you not met %hav_plantationkeep%? Have you not made me my [D|24|36|50] cases of %c02%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee14_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|24|36|50] cases of %c02% at your factory in %capetown% and have then on hand in case you run into %trav_01% as you journey.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee15</Data></Cell>
+	 <Cell><Data ss:Type="String">Trade for a Coffee Recipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee15_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm very pleased with the way things are going; I hope you are as well. I understand that %tan_portkeep% has a coffee recipe that may be quite valuable for us. I also know that he's a fan of %b12%. Would you take [D|34|54|74] cases to him, to see if he might cough up that recipe?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee15_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Visit %tan_portkeep% at %tan_port% with [D|34|54|74] cases of %b12% on hand.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee15_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">[D|34|54|74] cases of %b12%? I trust Felix had something to do with this? In which case it is my pleasure to give you a new coffee recipe: %c03%. And, of course, you can find the %tan_coffee% for this recipe at the market here in Tangiers.&lt;br&gt;&lt;br&gt;Stop by in a month or so, I hear all kinds of things down here at the port...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee15_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I do indeed have a coffee recipe I might be able to part with. In exchange for some fine chocolates, mind you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee15_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Does [D|34|54|74] cases of %b12% ring any bells? %tan_portkeep% in %tangiers% is holding onto a coffee recipe for you, which he'll exchange for the chocolates.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee16</Data></Cell>
+	 <Cell><Data ss:Type="String">A New Spice</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee16_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Good to see you back in %tangiers%, &lt;player&gt;. Listen, there will be some mighty fine %cinnamon% available here real soon. Now that's an ingredient used in loads of delicious coffee recipes. In fact, I've got one such recipe for you here. If I give it to you now, will you be willing to do something for me?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee16_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Swell. Bring [D|60|80|100] cases of %b03% to %tan_marketkeep% here in town. Once you do, you'll find that she is willing to sell you some of that fine spice I mentioned...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee16_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|60|80|100] cases of %b03% to %tan_marketkeep% at %tan_market% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee16_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">These %b03% are simply scrumptious! In exchange, I'd like to present you with [D|200|250|300] sacks of a wonderful spice I just got in stock - %cinnamon%. You won't find finer %cinnamon% anywhere in the world - be sure to come back if you need more for your creations...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee16_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Yes, it's true, I am expecting a new spice soon. And I'd be happy to offer it to you for sale, as soon as you show up with the [D|60|80|100] cases of %b03% %tan_portkeep% mentioned you would be making for me...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee16_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">In order to soften up %tan_marketkeep% into offering you a new spice, you need to bring her [D|60|80|100] cases of %b03%. I know that sounds like a lot, but believe me, it will be worth it for your future efforts.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17a_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">If I may offer some advice, &lt;player&gt;? I recommend you pay a visit to %cap_marketkeep% at %cap_market%. I understand he's expecting some new ingredients that may just help you in your coffee-making endeavors...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17a_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome, &lt;player&gt;. I am now stocking %whipped_cream%. It can be kind of pricey, but I recommend you pick some up; I have a feeling this ingredient will prove quite valuable...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17b</Data></Cell>
+	 <Cell><Data ss:Type="String">Using Whipped Cream</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17b_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I understand %whipped_cream% has recently become available. I have a recipe here that uses that very ingredient - %c08%. If you would be willing to take [D|28|40|55] cases to %zur_bankkeep% in %zurich%, he will pay you well for the goods. Deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17b_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|28|40|55] cases of %c08% to %zur_bankkeep% at %zur_bank% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17b_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%c08%? What an incredible luxury! Here is [D|$45,000|$60,000|$75,000] for [D|28|40|55] cases.&lt;br&gt;&lt;br&gt;Also, &lt;player&gt;, if you find your way to %tangiers% one day, I understand that there's a new spice - %nutmeg% - to be found in the market there...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17b_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I just received a telegram from %trav_11% and she said to expect not only you, &lt;player&gt;, but also some coffee products?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee17b_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_bankkeep% is waiting for you to arrive with [D|28|40|55] cases of %c08% - something about a deal you made with %trav_11%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiers</Data></Cell>
+	 <Cell><Data ss:Type="String">Ticket to Morocco</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiers_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I can get you to Morocco, &lt;player&gt;, where, I can assure you, you will find new ingredients and new contacts to help grow your business. Are you willing to do something for me in exchange for safe passage to Tangiers?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiers_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wonderful! All you need to do is to bring me [D|10|20|30] cases of %b05%. I'll track you down in a few weeks to collect the chocolates, and once you've handed them over, I will make sure that you've got a way to get to Tangiers.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiers_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|10|20|30] cases of %b05% for %trav_11%, who will find you in your travels.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiers_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent! I couldn't be more pleased with these %b05%, &lt;player&gt;. You will find your way to Tangiers shortly, and I will also give you [D|$5,000|$7,500|$10,000] for your troubles. Thanks!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiers_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm ready to keep my end of our bargain - and you?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiers_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|10|20|30] cases of %b05% and keep them on hand for the next time you run across %trav_09%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiersb</Data></Cell>
+	 <Cell><Data ss:Type="String">Orange Bars for Morocco</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiersb_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Listen. Since you'll be on your way there soon, are you willing to deliver [D|12|20|30] cases of %b07% to %tan_hotelkeep% there? He will pay you handsomely for the effort...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiersb_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Take [D|12|20|30] cases of %b07% to %tan_hotelkeep% at %tan_hotel% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiersb_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I had word of your arrival, and your chocolates! Scrumptious. Here's [D|$15,000|$22,500|$30,000], use it wisely!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiersb_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">My friend %trav_11% was recently in town, and she seemed to think you had agreed to bring [D|12|20|30] cases of %b07%. Believe me, I'm willing to offer more than you'll get from any shop for them!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tangiersb_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Buy %orange% from the market in %tangiers%, turn them into %b07% and bring [D|12|20|30] cases to %tan_hotelkeep% at %tan_hotel% in %tangiers% for a hefty profit.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I heard that %main_zach% is interested to meet with you. And, he has a coffee recipe he might be willing to offer in trade - you should look him up at %tan_shop% the next time you find yourself in %tangiers%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18</Data></Cell>
+	 <Cell><Data ss:Type="String">Preorder for %c07%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Greetings, &lt;player&gt;. I am not on the Board, but I am indeed a Tangye - Alexandra is my younger sister. Alex suggested that you and I might find it mutually beneficial to work together. To start, I have a recipe here that uses our very own %tan_coffee%. I am willing to hand you the recipe, and pay you [D|$10,000|$12,500|$15,000] in advance for an order of [D|40|55|75] cases. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I look forward to your delivery of the products, and to a long a prosperous relationship with you, &lt;player&gt;. Feel free to come inside to review my prices...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">You owe %main_zach% in %tangiers% [D|40|55|75] cases of %c07%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, &lt;player&gt;, it is wonderful to deal with someone who keeps their word.&lt;br&gt;&lt;br&gt;To show my appreciation, here is another recipe that takes advantage of our fine local coffee...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_extra02_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I think we should explore entering into a partnership for this shop. There would be many benefits for you. For starters, I'd always offer you premium prices for your wares. More importantly, I'd be able to start sourcing lucrative special orders on your behalf.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_extra03_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Special orders are highly profitable, custom deliveries. When a promising order comes in, I'll try to catch you in person if you're nearby - these initial offers are often time-sensitive. If you're traveling, or if the opportunity passes, I'll send the details along via telegram. You can accept or reject them as you see fit, but I assure you, special orders command the highest profit margins you will ever see.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I trusted you with a recipe, &lt;player&gt;. I also trust that the next time you darken my doorway, you will have the [D|40|55|75] cases of %c07% we agreed upon...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee18_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%main_zach% has been inquiring after your whereabouts, &lt;player&gt;. He is expecting you to show up with some [D|40|55|75] cases of %c07% you may have promised, in exchange for the recipe to the same?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Working With Zachariah</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I will incur some start-up costs to get the special orders system up and running. If you are willing to share these costs by bringing me some products, we'll be square and I'll be ready to enter into the partnership we discussed. Deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_01_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Splendid. While I don't carry chocolates in my shop, I love them all the same. First, bring me [D|100|150|200] cases of %b12%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_01_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|100|150|200] cases of %b12% to %main_zach% at %tan_shop% in %tangiers%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_01_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">A healthy partnership is based on trust. And, trust is built up over time by honoring one's commitments...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_01_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%main_zach% mentioned something about expecting you to bring him [D|100|150|200] cases of %b12% - do you know what he's referring to by any chance?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_02</Data></Cell>
+	 <Cell><Data ss:Type="String">Partnering With Zachariah</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">So far, so good. I've just about got everything in order. All you need to do now is bring me [D|100|150|200] cases of %c05% and [D|100|150|200] cases of your &lt;user2&gt;, and this shop will be at your service.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_02_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|100|150|200] cases of &lt;user2&gt; and [D|100|150|200] cases of %c05% to %main_zach% at %tan_shop% in %tangiers%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_02_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Most excellent! I'll take those products, and it is my pleasure to let you know that this shop is now yours. Not only will I always offer you great prices for your coffee products, but we are all set to start receiving special orders as well.&lt;br&gt;&lt;br&gt;From time to time, do try to stop by our shop when you're here - sometimes the most profitable opportunities are best discussed face-to-face.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_02_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll be able to tell you all the details, or I'll send telegrams if you can't find time to see me. If you accept, it will be up to you to deliver the specified number of cases of each product to the correct person and place within the allotted number of weeks.&lt;br&gt;&lt;br&gt;I am confident that fulfilling these orders will bring your business to the next level, as they say. Now then, shall we get started?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_02_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">A healthy partnership is based on trust. And, trust is built up over time by honoring one's commitments...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tanshop_02_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%main_zach% has a special orders system all wired up, and is anxious to get it functional. He is waiting at %tan_shop% in %tangiers% for you to appear with [D|100|150|200] cases each of your &lt;user2&gt; and %c05%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, you really need to speak with %kon_shopkeep% at %kon_shop% in %kona%. She's got a pretty tantalizing offer to discuss with you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Hawaiian Outlet</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, %main_zach% is a friend of mine, and I understand that things are going quite well with you with the shop in Morocco. I, too, am interested in forming a partnership. Are you willing to fulfill some orders for me, in exchange for my signing over this shop?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01_deferred_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I do hope you reconsider and come back soon - I think we'd make great partners, &lt;player&gt;, and owning shops is not only good for your business, but it's also good for your career!&lt;br&gt;&lt;br&gt;All the same, you are welcome to step inside...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Super. The first thing I'd like you to do for me is take [D|120|150|180] cases of your &lt;user1&gt; to Zach - he really enjoyed those chocolates last time!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|120|150|180] cases of &lt;user1&gt; to %main_zach% at %tan_shop% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hello, partner! My friend Leialoha, at Kona, mentioned that she had entrusted an order with you - do you know what she was speaking about?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_01_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You must bring [D|120|150|180] cases of your &lt;user1&gt; to %main_zach% at %tan_shop% in %tangiers% at your earliest convenience.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_02</Data></Cell>
+	 <Cell><Data ss:Type="String">Back to %kon_shop%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">How delightful! I am pleased to know that you and Leialoha are working together, and believe me, she will make another great partner for you, &lt;player&gt;. Go back to Hawaii and meet with her as soon as you are able.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_02_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Go back and see %kon_shopkeep% at %kon_shop% in %kona%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_03</Data></Cell>
+	 <Cell><Data ss:Type="String">A Favor for Leialoha</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Zach was most pleased with your delivery, and I thank you for that, &lt;player&gt;. Next, I'd like to ask you to bring [D|60|75|90] cases of %c01% and [D|60|75|90] cases of %c05% to my neighbor %kon_plantationkeep% here at %kon_plantation%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_03_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|60|75|90] cases each of %c01% and %c05% to %kon_plantationkeep% in %kona%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_03_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">My neighbor at %kon_shop% said she placed an order on my behalf - I am expecting [D|60|75|90] cases of %c05% and [D|60|75|90] cases of %c01%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_04</Data></Cell>
+	 <Cell><Data ss:Type="String">Back to %kon_shop% Again</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You really know how to work wonders with my beans, &lt;player&gt;!&lt;br&gt;&lt;br&gt;Stop by and see %kon_shopkeep% next door, she seems very excited about taking you on as a partner.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_04_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">See %kon_shopkeep% at %kon_shop% in %kona%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_05</Data></Cell>
+	 <Cell><Data ss:Type="String">Owning %kon_shop%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I knew this was going to work out swimmingly. Trust me, having an outpost here in Hawaii will be great for your business - we see a lot of tourists, especially tourists with disposable dollars for confections! There is one last thing I'll need you to do. Bring me [D|50|100|200] cases each of %b11%, %c07% and your &lt;user3&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_05_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|50|100|200] cases each of %b11%, %c07% and &lt;user3&gt; for %kon_shopkeep%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_05_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Perfect! I'll take the goods we agreed on, and this shop is now yours. I'll look forward to taking special orders for you soon, and, of course, I'll always offer you premium pricing here on all of your goods.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_05_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">We're going to have a great partnership, &lt;player&gt;, and I'm ready to start accepting orders on your behalf. I'm just waiting for you to deliver the [D|50|75|100] cases of %c07%, [D|50|75|100] cases of &lt;user3&gt; and [D|50|75|100] cases of %b11%. </Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">konshop_05_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%kon_shopkeep% at %kon_shop% in %kona% is waiting for you to deliver [D|50|75|100] cases of %c07%, [D|50|75|100] cases of &lt;user3&gt; and [D|50|75|100] cases of %b11%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee19_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">If I may offer some advice, &lt;player&gt;? I recommend you pay a visit to %hav_hotelkeep% at %hav_hotel% in Cuba. I heard that she's gotten her hands on some valuable recipes that take advantage of their local coffee beans...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee19</Data></Cell>
+	 <Cell><Data ss:Type="String">A Couple Cuban Coffee Recipes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee19_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I happen to have a couple of coffee recipes that use %hav_coffee% - the finest coffee in the world. I'll give you one now, if you agree to make and bring me [D|15|25|40] cases of the new recipe, as well as [D|15|25|40] cases of %c08%. On delivery, I'll hand over the second recipe. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee19_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|15|25|40] cases each of %c08% and %c11% to %hav_hotelkeep% in %havana%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee19_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wonderful! I'll grab my [D|30|50|80] cases, and here, &lt;player&gt;, is the second recipe I promised you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee19_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I still have that second recipe I mentioned. I'll hand it over, as soon as you have met your obligations, and delivered [D|15|25|40] cases each of %c08% and %c11%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee19_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%hav_hotelkeep% at the %hav_hotel% in %havana% is holding onto an extremely valuable recipe for you, &lt;player&gt;, waiting for you to show up with [D|15|25|40] cases of %c11% and [D|15|25|40] cases of %c08%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee20</Data></Cell>
+	 <Cell><Data ss:Type="String">A Glut Of %hav_coffee%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee20_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Listen, friend. I have just harvested a bumper crop of coffee beans here. There's not a whole lot I can do on the price, but I would be willing to trade [D|5000|6000|7500] sacks of these wonderful %hav_coffee% for [D|75|90|110] cases of %c03%. How does that sound to you?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee20_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Super. I'll set the beans aside for you here, and will be ready to hand them over once you bring me the goods. In the meantime, here is today's price...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee20_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Exchange [D|75|90|110] cases of %c03% for a load of coffee beans at %hav_plantation% in %havana%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee20_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Splendid. I'll take the %c03%, and hand over the beans. I'm glad this worked out so well for both of us!&lt;br&gt;&lt;br&gt;I can't imagine you need any more %hav_coffee% at this juncture, but it never hurts to review prices, right?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee20_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm sitting on [D|5000|6000|7500] sacks of %hav_coffee% here for you, &lt;player&gt;. How are my [D|75|90|110] cases of %c03% coming along?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee20_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%hav_plantationkeep% in %havana% waiting for you to deliver [D|75|90|110] cases of %c03% to trade her bumper crop of [D|5000|6000|7500] sacks of %hav_coffee% to you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21</Data></Cell>
+	 <Cell><Data ss:Type="String">Desert Salvage</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I've been following a strange story, &lt;player&gt; - a real journalist's hunch. There are rumors of a military transport plane that went down in the desert during the war. The wreck was never officially located, but the local Anangu, they know things the maps don't show. I heard the woman at the lime grove, %ulu_hutkeep%, might know about the cargo. Could be a massive once-in-a-lifetime opportunity, if the rumors are true. Interested?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It's a long shot, but if anyone can make a deal out there, it's you. She'll be expecting you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Speak with %ulu_hutkeep% at her hut in %uluru% about some salvaged cargo.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b</Data></Cell>
+	 <Cell><Data ss:Type="String">Desert Salvage, Part 2</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The journalist sent you. So you know about the wreckage. Yes, we found it a long time ago. The cargo is sacks of raw %cacao%, military supplies. It is useless to us like this. But processed, that's different. I will trade all of it for something my people can actually use. Do you want to listen about it?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring me [D|150|300|400] cases each of your %b01% and %b02%. It's simple, high-energy food we would be interested to try. Agree to this, and the [D|5,000|7,500|10,000] sacks of %cacao% is yours.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_hard_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring me 400 cases each of your %b01% and %b02%. It's simple, high-energy food we would be interested to try. We would also like 200 cases of %i07%, as we would like to taste what's made out of our own fruit. Agree to this, and the 10,000 sacks of %cacao% is yours.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|150|300|400] cases each of %b01% and %b02% to %ulu_hutkeep% at %ulu_hut% in %uluru%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_hard_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|150|300|400] cases each of %b01% and %b02% and 200 cases of %i07% to %ulu_hutkeep% at %ulu_hut% in %uluru%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">This is a good trade. These will last a long time - for a chocolatier like you, it is useful. Here is the [D|5,000|7,500|10,000] sacks of cacao from the wreck. Take all of it; we have no more.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have the cacao. Where are the bars you promised?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_hard_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have the cacao. Where are the bars and infusions you promised?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Don't forget about your deal with %ulu_hutkeep% - you need to bring her [D|150|300|400] cases each of %b01% and %b02%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee21b_hard_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Don't forget about your deal with %ulu_hutkeep% - you need to bring her [D|150|300|400] cases each of %b01% and %b02%, as well as 200 cases of %i07%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee22</Data></Cell>
+	 <Cell><Data ss:Type="String">A Large Coffee Order</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee22_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Would you be willing to fulfill a large order for me? It's [D|210|255|300] cases of product all together, but you'll receive [D|$100,000|$115,000|$125,000] for your trouble and the products. Time is of the essence, though, I won't be able to offer this to you another time. Will you do it?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee22_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Great. You need to take [D|70|85|100] cases each of %c02%, %c03% and %c06% to %cap_mountainkeep% here at %cap_mountain%. She'll pay you the [D|$100,000|$115,000|$125,000] once you deliver the goods.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee22_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|70|85|100] cases each of %c02%, %c03% and %c06% to %cap_mountain%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee22_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have been so looking forward to these coffees, &lt;player&gt;. The moon is full this week, and we'll be seeing a slew of hikers up here.&lt;br&gt;&lt;br&gt;Thanks again, and here is the fee I promised %cap_shopkeep% - [D|$100,000|$115,000|$125,000].</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee22_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I hope you still intend to fulfill the order I placed with %cap_shopkeep% - she assured me you would bring [D|70|85|100] cases each of %c02%, %c03% and %c06%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee22_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You took an order from %cap_shopkeep% and promised to bring [D|70|85|100] cases each of %c02%, %c03% and %c06% to %cap_mountainkeep% in %capetown%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee23</Data></Cell>
+	 <Cell><Data ss:Type="String">An Order for %c09%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee23_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hello again, &lt;player&gt;. I see you have acquired the recipe for %c09%. I've got over a hundred sacks of %amaretto% here you could use. Would you be willing to complete an order for some of those products?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee23_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. Here are 160 sacks of %amaretto%. %trav_07% will be staying here in town at the %cap_building3% for the next few months. If you can bring him [D|80|95|110] cases of %c09% before he leaves, he'll pay for the products. You can sell the remaining products for a profit.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee23_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|80|95|110] cases of %c09% to %trav_07% at %cap_building3% in %capetown%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee23_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Felix assured me that I wouldn't be disappointed - how right he was! Thank you so much - here is [D|$50,000|$57,500|$65,000] for those %c09%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee23_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I won't be here long, and I'm prepared to pay handsomely for [D|80|95|110] cases of %c09% I ordered from %main_feli%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_coffee23_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You accepted an order to deliver [D|80|95|110] cases of %c09% to %trav_07% who is staying at the %cap_building3% in %capetown%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_reyk_prompt</Data></Cell>
+	 <Cell><Data ss:Type="String">Some Exciting News</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_reyk_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, make sure you go visit %main_feli% in %capetown% at your earliest convenience. He has some exciting news to share with you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_reyk_prompt_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Make your way to %cap_factory% to speak with %main_feli%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_reyk</Data></Cell>
+	 <Cell><Data ss:Type="String">Getting Creative</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_reyk_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I have spoken with some of the other members of the Board. We are impressed with how you have managed things so far. However, before we will be able to completely put our trust in you, we're going to need to see some evidence of your creative abilities as well.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_reyk_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">We've been building a Secret Test Kitchen, in Iceland, far away from the watchful eyes of our competitors. This is where you will have the chance to invent your own recipes to bring to market.&lt;br&gt;&lt;br&gt;Go to Iceland now. My nephew Teddy will welcome you, grab one sack each of whatever ingredients you are carrying, and explain more...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_reyk_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Gather a variety of ingredients, travel to %reykjavik% and meet %main_tedd% at the %rey_kitchen%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tedd_welcome</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to Iceland!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tedd_welcome_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Uncle Felix speaks quite highly of you, &lt;player&gt;. We have a sophisticated operation here, where you are able to create your own recipes. We offer feedback on the marketability of your inventions, and you can name and design your products.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tedd_welcome_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Once your recipes are entered into the corporate recipe book, you will be free to manufacture - and of course sell - your own creations. With success you'll be given the chance to create more recipes...and stay on track to earn the Board's endorsement as CEO.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">new_ingredients_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, it seems that things are finally getting back to normal after the war. I've been seeing new ingredients in stock in markets all over the world...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, you need to be sure to get to the Secret Test Kitchen and invent a recipe soon.&lt;br&gt;&lt;br&gt;You simply won't be able to progress up the corporate ladder without successfully creating and marketing your own creations!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Marketing Your First Creation!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hello, &lt;player&gt; - I'm Rick, Alex's assistant. I'll keep you posted from time to time with messages from Alex and the other board members. Alex is doing OK. She hasn't learned much about Sean, but that woman just will not give up!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_01_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Thanks, &lt;player&gt;. You too. In any event, congratulations on the invention of your first recipe! Make sure that you see %zur_shopkeep% in %zurich% as soon as you've been able to manufacture some of those &lt;user1&gt;. She's been known to pay top dollar to be the first to offer a new recipe at her shop.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_01_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Once you have at least [D|10|15|25] cases of your &lt;user1&gt; on hand, go see %zur_shopkeep% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_01_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You have created your own products - &lt;user1&gt;! Absolutely delicious! I sure hope that they appreciate you at that company of yours!&lt;br&gt;&lt;br&gt;I am going to give you [D|$10,000|$15,000|$25,000] for the first [D|10|15|25] cases; step inside and I'll figure out my offer for the rest of your wares...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_01_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">A little birdie told me that you had invented a new recipe, something called &lt;user1&gt;? I promise I will give you the best deal imaginable on the first [D|10|15|25] cases you bring me...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex in Australia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, Alex would like a word with you. She'll be waiting for you at %ulu_rock% in the secret port of %uluru%. Please go find her there as soon as you can...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Track down Alex at %ulu_rock% in %uluru%, Australia.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm glad you made it, &lt;player&gt;. This place... it's a long way from anywhere. My trip wasn't a waste, though. I spoke with a man who served near Sean's base. He didn't give me an answer, but I can say it's the first real lead I've had to help believe Sean is still alive.&lt;br&gt;&lt;br&gt;But that's my burden. On to yours - the Board is very impressed with how well your &lt;user1&gt; is performing. As a result, we've awarded you another space in the recipe book.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">That soldier, %ulu_rockkeep%, manages the pastoral station out here, and you'll find him around here. He's... difficult. A man of his time. You might want to talk to him yourself, see if he remembers anything else.&lt;br&gt;&lt;br&gt;While I was here, I also met the woman who runs the lime grove and her hut, %ulu_hutkeep%. She's a young Anangu woman - very shrewd. Her %lime% are incredible. I've secured us a supply source, and this is now the only place in the world you can acquire them. You might though just need to get on her good side first.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02_extra02_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Otherwise, back to business. You need to be sure to use that new space in your recipe book. Your creations are a critical part of proving to the Board that you're capable of becoming our %rank_4%. I have to follow this lead on that German defector now.&lt;br&gt;&lt;br&gt;Keep up the great work, &lt;player&gt;. I'll be in touch.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_ulu_hut</Data></Cell>
+	 <Cell><Data ss:Type="String">Earning Trust</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_ulu_hut_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The city woman, Alex, said you might come. Another chocolatier. You want my %lime%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_ulu_hut_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">This is my business. My land. I don't trade with just anyone. I need to know the quality of your work. Bring me [D|50|75|100] cases of your best, purest chocolate - the %b12%. If you are serious about your craft, you'll know where to find the right cacao for it. Then we can talk about the %lime%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_ulu_hut_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|50|75|100] cases of %b12% to Kowaki at her hut in %uluru%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_ulu_hut_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm still waiting to see your work. My %lime% aren't going anywhere.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_ulu_hut_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You actually did it. You brought them all this way, you take your craft seriously. That's... unexpected.&lt;br&gt;&lt;br&gt;Alright. You kept your word. You can buy my %lime%. Just know that the price is the price - I don't play games.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02b_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">This is just a friendly reminder, &lt;player&gt;, that in order to impress the Board, you will need to not only invent recipes, but to actually go ahead and make and sell your own creations...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02b</Data></Cell>
+	 <Cell><Data ss:Type="String">One More Space!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_02b_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, Alexandra and the other members of the board have noticed how well your creations are doing in the market, and so they have decided to award you another space in the recipe book. Way to go!&lt;br&gt;&lt;br&gt;Remember to use the spaces as soon as you earn them - marketing your creations is one key way to prove yourself and progress towards earning the endorsements of the board members.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_03</Data></Cell>
+	 <Cell><Data ss:Type="String">Yet Another Space!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, good news. I have a message from Alexandra. She and the rest of the board are excited about how well you have been doing with your launch of Infusions. They have awarded you another space in the Recipe Book. Be sure to visit the Secret Test Kitchen soon - successfully creating and marketing your own recipes is very important if you hope to become %rank_4% someday.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You are off to a great start, &lt;player&gt;. If you continue to show your talents, you'll be allowed to create your own recipes before you know it!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">These days, to be truly respected at the chocolate game, you're going to need to show some success with creating your own recipes...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You are doing quite well so far, &lt;player&gt;, and I wish you continued success!&lt;br&gt;&lt;br&gt;There's only so far you'll be able to go, however, without showing you've got some abilities to create your own recipes that do well for the company. Personally, I really want to see you come up with recipes at some point that I'd gladly put on front display here at %zur_shop%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_tease_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You're with Baumeister Confections, are you not? Is there any truth to what I heard? That the company has been working on building a secret test kitchen somewhere up north?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_tease_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I can understand wanting to keep trade secrets under wraps, but... Iceland? That's a little extreme, don't you think?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_tease_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You should be thinking about the kinds of ingredients you would like to combine in your own recipes. I hear good things about you from my contacts, &lt;player&gt;, and I think the BC Board is going to be willing to take a chance on you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">to_open_bali</Data></Cell>
+	 <Cell><Data ss:Type="String">A Message From Alex</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">to_open_bali_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I have heard from Alexandra. She needs to speak with you right away. She will wait for you at the %hav_hotel% - please go see her there at your earliest convenience.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">to_open_bali_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Find Alexandra at the %hav_hotel% in Cuba.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_bali</Data></Cell>
+	 <Cell><Data ss:Type="String">Ticket to Indonesia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_bali_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I could not be more pleased with your progress. My search is proceeding apace - I fear that we are dealing with some pretty shady characters. Do be careful about whom you decide to trust.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">open_bali_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">In any event, my travels have taken me to Bali, Indonesia. Sean and I spent quite a bit of time in Indonesia, you know. And you, too, will now be able to visit this port. Find %bal_plantation% - the owner is a fan of quality confections. Be sure to see him when you're able to make the trip.&lt;br&gt;&lt;br&gt;I'll be in touch soon.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bali_01</Data></Cell>
+	 <Cell><Data ss:Type="String">%bal_plantation%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bali_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to Indonesia, where we cultivate some of the world's finest specialty ingredients. Your reputation precedes you, &lt;player&gt;. I have heard tell of some of your creations: &lt;user1&gt; and &lt;user2&gt;. If you were to bring me just [D|10|30|50] cases of each of those delights, I will not only make our wonderful cacao and coffee beans available to you, but also hand over a couple of recipes that take advantage of the same. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bali_01_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|10|30|50] cases each of your &lt;user1&gt; and &lt;user2&gt; to %bal_xxxkeep% in Bali.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bali_01_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, your confections are even more delightful than I was led to believe! You are now welcome here anytime - I am proud to offer you the finest cacao and coffee beans in the world. And, as promised, here are a couple of Coffee recipes that utilize my wonderful beans...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bali_01_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'd be happy to sell you my wares, and I assure you they will be good for your business, my friend. However, we first must settle our earlier arrangement: you promised to bring me [D|10|30|50] cases of each of your &lt;user1&gt; and &lt;user2&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bali_01_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%bal_cacao% is used in some of the finest chocolates I've ever tasted. It will be made available to you, so long as you honor your word and deliver [D|10|30|50] cases each of your &lt;user1&gt; and &lt;user2&gt; to %bal_xxxkeep% in %bali%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tokyo_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have no regrets about endorsing you, &lt;player&gt;, and I am looking forward to sending you off to meet my brother and fellow board member, Deiter Baumeister.&lt;br&gt;&lt;br&gt;You just need to keep producing a variety of coffees - the more success we can show with these products, the better off you'll be...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tokyo</Data></Cell>
+	 <Cell><Data ss:Type="String">Meeting Deiter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tokyo_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, it's time for you to go visit my brother Deiter in %tokyo%. He was not too wild about my coffee idea, but seeing the success you've had with these products, I think he's come around! He's got a pretty nice factory over there, and I believe he's all set to manufacture Infusions...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tokyo_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Visit %main_deit% at %tok_factory% in %tokyo%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to Tokyo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hello, &lt;player&gt;, and welcome to Japan. We have a fantastic factory here, setup to manufacture Infusions. You'll notice that if you're able to make complete trays with ingredients all of the same color, you'll earn a significant production bonus. To get you going, here is a recipe for %i01%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_02</Data></Cell>
+	 <Cell><Data ss:Type="String">Very Curious</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">And, it seems that %evil_bian% over in %tangiers% is very interested in getting her hands on some of our %i01%. She'll pay $20,000 for 32 cases - will you make them for her?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_02_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Splendid. I'm not sure why she's so interested in our wares, but her money is as good as anyone else's.&lt;br&gt;&lt;br&gt;Take those 32 cases to her at %tan_bar% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_02_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver 32 cases of %i01% to %evil_bian% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_02_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">So what I heard is indeed true - you are proficient with Infusions as well. You're doing quite well over there for Baumeister Confections - I hope they are treating you with the respect you deserve, &lt;player&gt;?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tokyo_02_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I spoke with Deiter, who seemed to think you'd be willing to bring me 32 cases of %i01%. I'm more than willing to pay for the chocolates...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_deiter</Data></Cell>
+	 <Cell><Data ss:Type="String">Deiter's Endorsement</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_deiter_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I am willing to consider your candidacy to become our CEO, but I am a man who likes specific goals. If you are able to learn [D|at least 9|at least 10|all 12] Infusions recipes, and are able to take ownership of a second retail location, I will be convinced that you have the skills to lead our company.&lt;br&gt;&lt;br&gt;Incidentally, if you look around, you should be able to find the %pecan% you'll need for that recipe I gave you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_deiter_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Earn Deiter's Endorsement by learning [D|9|10|all 12] recipes for Infusions and owning 2 shops.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_deiter_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You have done it! You have earned my endorsement, &lt;player&gt;, by showing me your ability to accumulate recipes for infusions. Way to go!&lt;br&gt;&lt;br&gt;There is still plenty of work to be done, but you are making excellent progress, and I have no doubt you will succeed.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_sanfrancisco_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You definitely want to take ownership of as many shops as you can, &lt;player&gt; - this is an important part of what the Board will be looking at as they make their endorsement decisions.&lt;br&gt;&lt;br&gt;Have you spoken with %kon_shopkeep% in Hawaii? I heard she was looking for a partner not too long ago... </Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_sanfrancisco</Data></Cell>
+	 <Cell><Data ss:Type="String">Making Evangeline's Acquaintance</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_sanfrancisco_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Things are moving along nicely, &lt;player&gt;. It is time for you to meet another board member. I have secured passage for you to %sanfrancisco%. You need to go meet with a woman who was responsible for the early success of our company - my eldest sister, Evangeline.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_sanfrancisco_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Go see %main_evan% at %san_bchq% in %sanfrancisco%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_30</Data></Cell>
+	 <Cell><Data ss:Type="String">Fruity Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_30_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, we are constantly offering official tours of the tower, and I need party favors. I have heard wonderful things about a couple of products of yours: %b09% and %c04%. If you promise to bring me [D|45|55|75] cases of each of these products, I will not only pay you well, but also present you with a pair of wonderful infusions recipes that utilize fresh fruit. Can I count on you?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_30_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I can't wait! I am sure you will appreciate the infusions recipes I have for you, and here's a hint for later: The fruits you will need can now be found at the %tan_market% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_30_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|45|55|75] cases each of your %b09% and %c04% to %tok_towerkeep% at %tok_tower% in %tokyo%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_30_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I knew I would not be disappointed, &lt;player&gt;. Thank you kindly. As promised, here is [D|$50,000|$65,000|$80,000] as well as a couple of recipes for fruity infusions...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_30_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I placed an order for [D|45|55|75] cases each of two separate items: %b09% and %c04% - you need some more time to complete my order?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_30_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%tok_towerkeep% at %tok_tower% is eagerly expecting delivery of [D|45|55|75] cases each of %b09% and %c04%. I understand she's got some fantastic recipes she will offer in exchange for your delivery...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_31</Data></Cell>
+	 <Cell><Data ss:Type="String">An Order for Fruity Infusions</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_31_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">As I say, we often host official events here at the tower - in fact I could use [D|45|55|75] cases each of the infusions recipes I gave you. Are you up for fulfilling another order? I can offer to pay you [D|$100,000|$125,000|$150,000] for the chocolates...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_31_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|45|55|75] cases each of %i02% and %i05% to %tok_towerkeep% at %tok_tower%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_31_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, you have once again pleased me very much. Here is the [D|$100,000|$125,000|$150,000] I offered. Do stop by from time to time - as I say, we host many events here, and go through vast quantities of goodies!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_31_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I ordered [D|45|55|75] cases each of two separate items: %i02% and %i05%. I hope you will be delivering my order soon...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_31_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%tok_towerkeep% at %tok_tower% is awaiting delivery of [D|45|55|75] cases each of %i02% and %i05%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_32</Data></Cell>
+	 <Cell><Data ss:Type="String">%i05%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_32_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, did I hear correctly that you recently acquired a recipe for %i05%? I simply adore blueberries! However though, I'm going on vacation to India. If you will make [D|26|42|58] cases for me, in about a month and a half's time, I'll find you, and I will have came up with a new infusion recipe for you that I think will be a neat addition to your recipe book. What do you think?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_32_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|26|40|55] cases of %i05% and have them ready for %trav_03%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_32_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I am so thrilled! Your %i05% look delicious! I was indeed able to procure a recipe for you in return - here it is!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_32_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Now, then, while I'm here, let me share you something. My travels have inspired me to introduce some new spices to %bal_marketkeep% over at %bali%, which he's now importing into his market. Now, he's stocking some brand new South Asian spices I think will come in great handy for your own creations...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_32_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wait, you don't have my [D|26|40|55] cases of %i05%? I was really hoping you'd have them ready by now...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_32_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_03% is antsy to receive his [D|26|40|55] cases of %i05%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_33</Data></Cell>
+	 <Cell><Data ss:Type="String">%i04%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_33_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I managed to get a hold of 100 sacks each of %pepper% and %anise%. And, I just so happen to have on hand an infusions recipe that uses these spices. If I gave you the recipe as well as the ingredients right now, &lt;player&gt;, would you be willing to deliver [D|your first 75|your first 85|all 100] cases of the product to me?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_33_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. Here are the ingredients and the recipe. I will be waiting for you in %douala% - you'll find me at the %dou_emptybuilding1% there.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_33_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Take [D|75|85|100] cases of %i04% to %trav_02% who is waiting for you at %dou_emptybuilding1% in %douala%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_33_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Marvelous. Thank you for tracking me down here, and for bringing the %i04%. I will certainly see you again out and about. Meanwhile, I hope the recipe serves you well in your future endeavors!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_33_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Do you not recall the terms of our deal? I gave you 100 sacks each of %pepper% and %anise%, as well as the recipe for %i04%. You were to bring me [D|your first 75|your first 85|all 100] cases of %i04%. If you need more spices, they can be found here in %douala%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_33_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_02% is waiting for you at %dou_emptybuilding1% in %douala%, Cameroon. Surea handed you several sacks of spices, as well as a recipe, and she is eager for you to hold up your end of the deal, and deliver [D|75|85|100] cases of %i04%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_34</Data></Cell>
+	 <Cell><Data ss:Type="String">Infusions Exchange</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_34_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Here's an offer you won't want to refuse - a chance to get 2 new infusions recipes. I'll give you the recipe for %i06% right now. All you need to do is deliver [D|50|65|80] cases as my gift to my friend %tok_stationkeep% here at %tok_station%. In exchange for those chocolates, he'll hand over the recipe for %i08%. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_34_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|50|65|80] cases of %i06% to %tok_stationkeep% at %tok_station%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_34_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">A gift from %tok_shopkeep%? How wonderful. He must have known I'd give you this recipe for %i08% in return.&lt;br&gt;&lt;br&gt;Also, note that the %vanilla% you will need for this is now available in %douala%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_34_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It is somewhat unusual for %tok_shopkeep% to not think of me at this time of year - did he mention nothing to you about a gift of some kind?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_34_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">In exchange for the recipe for %i08%, you should be delivering [D|50|65|80] cases of %i06% to %tok_stationkeep% at %tok_station% in Japan.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_35</Data></Cell>
+	 <Cell><Data ss:Type="String">Cacao in Tokyo?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_35_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">By the way, &lt;player&gt;, we've got an unusual situation: %tok_marketkeep% over at %tok_market% has gotten her hands on [D|10000|15000|20000] sacks of %cacao% she's not going to be able to sell here. If you were to bring her [D|31|63|97] cases of %i08% within 2 months, she will give you all that wonderful %cacao% in exchange. After [D|11|10|9] weeks, however, she will sell the %cacao% to be done with it. Feel up for the challenge?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_35_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Within [D|11|10|9] weeks, bring [D|31|63|97] cases of %i08% to %tok_marketkeep% at %tok_market% in %tokyo%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_35_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Your infusions look delicious, &lt;player&gt;. I am glad to get all of this cacao into such capable hands! Anything else I can help you with today?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_35_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The time is ticking - do you have those %i08%? I'll hold onto the %cacao% for you, but not for much longer...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_35_expired_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It looks like your time ran out, &lt;player&gt;. That %cacao% had to be sold, and %tok_marketkeep% had to get on with her business.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_36_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have some news you may be interested in, &lt;player&gt;. First, I heard a rumor that a new ingredient, %mango%, is available in %douala%. Second, be sure to visit with %tan_portkeep% at %tan_port% in %tangiers% - you won't be disappointed...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_36</Data></Cell>
+	 <Cell><Data ss:Type="String">Off to %bogota%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_36_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand you have been having good success with your infusions business. I have a friend named %bog_churchkeep% in South America who has a couple of fantastic infusions recipes she might be willing to barter for. For [D|$10,000|$50,000|$100,000], I would be willing to secure passage for you, as well as make an introduction. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_36_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. Make your way to %bogota%, and do give my best to Susana.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_36_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Go meet %bog_churchkeep% at %bog_church% in %bogota%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_37</Data></Cell>
+	 <Cell><Data ss:Type="String">A Recipe from Susana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_37_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, Kenji was correct - I have infusions recipes to share.&lt;br&gt;&lt;br&gt;I have heard amazing stories about your &lt;user2&gt;. First, bring me [D|25|40|55] cases of those, and I'll share my first recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_37_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Trade [D|25|40|55] cases of your &lt;user2&gt; with %bog_churchkeep% in %bogota% for an infusions recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_37_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent - these are even better than I had been led to believe! Here is a recipe I mentioned, for refreshing %i07%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_37_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have that infusion recipe for you right here - but you do not have my [D|25|40|55] cases of &lt;user2&gt;...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_37_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You can get a new recipe from %bog_churchkeep% at %bog_church% in %bogota% as soon as you bring her [D|25|40|55] cases of &lt;user2&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_38</Data></Cell>
+	 <Cell><Data ss:Type="String">%i07%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_38_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Now then, most of the ingredients you need for this recipe can be found here in %bogota%. If you will bring me [D|45|60|75] cases, I'll hand over a second recipe. Will this work for you?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_38_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [D|45|60|75] cases of %i07% and bring them to %bog_churchkeep% in %bogota%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_38_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Stupendous! Here is another infusions recipe that takes advantage of our marvelous local cacao - %i10%. You'll be able to pick up %macadamia% in Hawaii. I hope the product serves your business well in the months to come!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_38_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I've got another recipe for you. You just need to show up with what we discussed - [D|45|60|75] cases of %i07%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_38_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You can get a new recipe from %bog_churchkeep% at %bog_church% in %bogota% as soon as you bring her [D|45|60|75] cases of %i07%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_39_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have some news you may be interested in, &lt;player&gt;. First, I heard a rumor that a new ingredient, %mango%, is available in %douala%. Second, be sure to visit with %tan_portkeep% at %tan_port% in %tangiers% - you won't be disappointed...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_39</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweet and Spicy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_39_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Good tidings, &lt;player&gt;. %tan_market% has recently begun stocking %clove% here in town, and I think that you have heard there are wonderful %mango% to be had in Cameroon? I have been saving an infusion recipe for you, since it offers a unique combination of those two very ingredients. I'll give you the recipe, you bring me [D|40|60|80] cases, and I'll hand over yet another valuable recipe. Deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_39_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|40|60|80] cases of %i09% to %tan_portkeep% at %tan_port% in %tangiers%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_39_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You, &lt;player&gt;, are a gifted chocolatier. Here is the recipe I mentioned. It may be a while before you can get a hold of all of these specialty cacaos, but it will be worth your wait...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_39_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have that infusion recipe for you, &lt;player&gt;, but I need to receive those [D|40|60|80] cases of %i09% we agreed upon.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_39_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|40|60|80] cases of %i09% to %tan_portkeep% at %tan_port% in %tangiers%, and he will reward you with a new recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_40</Data></Cell>
+	 <Cell><Data ss:Type="String">Gambling, Anyone?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_40_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, what if I told you that I've just come from a special place, a magical place, a place not on your map, where fortunes are won and lost? Would you do something for me if I can get you to such a place? I'll make it worth your while...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_40_extra</Data></Cell>
+	 <Cell><Data ss:Type="String">Terrific. You won't be disappointed. The place is %lasvegas%, Nevada. There are riches to be had there, but do be careful: I nearly lost my kimono. All I would like you to do for me is to get me [D|100|150|200] sacks of %strawberry% sold at the market there. I'll find you in a couple of months, and I'll have a recipe on hand to trade for those berries...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_40_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Have [D|100|150|200] sacks of %strawberry% on hand for %trav_08% who will find you in your travels.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_40_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Strawberries! Nectar of the gods! Here is a recipe that makes use of that perfect fruit: %i11%. See you before long!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_40_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm holding a recipe for you - are you still planning to travel to %lasvegas% to get a hold of those %strawberry% for me?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_40_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_08% is trying to find you, &lt;player&gt;. You need to have [D|100|150|200] sacks of %strawberry% on hand to trade her a recipe...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_opt_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Deal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_opt_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I couldn't help but notice that you've got %b03% on hand. I happen to have a craving for those chocolates right now. If you'll give me [D|25|35|50] cases, I'll pay you [D|$10,000|$13,500|$18,000] - an extraordinary price for those chocolates, I'm sure you agree. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_opt_01_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Awesome! I'm so glad I ran into you today!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_evan</Data></Cell>
+	 <Cell><Data ss:Type="String">Earning Evangeline's Endorsement</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_evan_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome, &lt;player&gt;. I am so glad to see our old company back in the black, as it were. You know, I personally have always been partial to truffles. I have no doubt that you will earn my endorsement, but I want to make sure you can handle their ins and outs. When you've been able to collect all 12 recipes for Truffles, as well as taken ownership of a 3rd shop, you will have earned my nod.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_evan_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Earn Evangeline's endorsement by collecting all 12 recipes for Truffles and taking ownership of a 3rd shop.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_evan_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Congratulations! You've earned my trust, and my endorsement. More importantly, while there remain some endorsements for you to earn, we are most pleased with all you have accomplished, and so are pleased to promote you to %rank_3% of Baumeister Confections.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_evan_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">We are also pleased to offer you not one, but two spaces in the Recipe Book for you to use for your own creations.&lt;br&gt;&lt;br&gt;But before you think about using up those valuable spaces now, you should make your way back to %toronto% as soon as you can and see Joseph - you are ready to tackle some new product types!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_50</Data></Cell>
+	 <Cell><Data ss:Type="String">Truffles Introduction</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_50_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%san_factory% here in town is already set up to make truffles - my nephew Chas is running things over there, and he has even implemented that newfangled Recycler that was developed in %zurich%.&lt;br&gt;&lt;br&gt;Now then, here is a recipe for %t01%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_50_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring me [D|a case|10 cases|50 cases] from your first batch of %t01%, and we'll take things from there.&lt;br&gt;&lt;br&gt;By the way, you'll now find the %powder% you need for truffles everywhere %cacao% is sold. I know this may feel like an exam to you, &lt;player&gt;, but this is how you'll gain my trust for claiming such a position in our company. I look forward to seeing you soon with the %t01%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_50_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|a case|10 cases|50 cases] of %t01% to Evangeline at %san_bchq%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_50_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Good work.&lt;br&gt;&lt;br&gt;Now you need to listen carefully. First, here are the handful of truffles recipes I promised you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_50_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You've got a lot of work to do, &lt;player&gt;. I need to see that you've made some truffles before we can go much further...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_50_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Don't forget what your commitments are, &lt;player&gt;. You are due to bring [D|a case|10 cases|50 cases] of your %t01% to %main_evan% at %san_bchq% over in %sanfrancisco%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51</Data></Cell>
+	 <Cell><Data ss:Type="String">Truffles for the Board</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Here's the deal. Each of the other members of the Board of Directors - some of whom you've met, some of whom you haven't - is holding a truffle recipe for you. What you need to do is to present each member with [D|a case|10 cases|50 cases] of truffles to exchange for their recipe. The tricky part is that you need to figure out which recipe goes with which board member.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Each of the ingredients you will need to make each of the 5 truffles recipes are available at a market somewhere. You can also now travel to %toronto% and %wellington%, where you will meet the remaining members of the board - Whitney and Joseph. Alex has returned to %zurich% for a short time - you can find her at %zur_school% to make the exchange for her recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51_extra02_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Each board member will let you know - and give you a new recipe - when you show up with the correct type of truffle in your inventory. When you've accomplished this with the other 5 board members, I myself will hand you the final truffle recipe.&lt;br&gt;&lt;br&gt;Good luck!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Exchange [D|a case|10 cases|50 cases] of truffles for a new truffle recipe with each and every member of the BC Board of Directors.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_01_hint_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm after a 'delightfully sweet combination' in my truffles, &lt;player&gt;. Bring me a case of those, and my truffle recipe will be yours.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Felix's Truffle Recipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You've got my number, &lt;player&gt;. The %t03% are my personal favorite. Here, in exchange, is a recipe for %t11% - must be the %espresso% that tickles my fancy!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_02_hint_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I've got a recipe for you, all right, as soon as you bring me what I'm looking for. Shouldn't be too hard to figure out what kind of truffles I am after these days...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_02</Data></Cell>
+	 <Cell><Data ss:Type="String">A Truffle Recipe from Deiter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, %t06%, now there's a truffle I can get excited about! Perhaps it's my years in Japan, but I just feel %wasabi% goes with just about anything these days. Well done, &lt;player&gt;, and here's my contribution to your truffle recipes assortment.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_03_hint_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It is true, indeed, I am holding onto a truffle recipe for you. It is also true I am looking for you to have a particular truffle on hand, before I am willing to hand over the recipe I have for you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_03</Data></Cell>
+	 <Cell><Data ss:Type="String">Joseph's Truffle Contribution</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">There's just something about fresh roasted %hazelnut% that brings back such warm memories of my early years in the business.&lt;br&gt;&lt;br&gt;I'll also always be partial to %pumpkin% - I recall the day Alex first had me taste her %pumpkin% recipe. Yes, I was skeptical, but I became convinced! In any event, I hope this recipe brings us all much success!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_04_hint_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Howdy, &lt;player&gt;. This factory is just about ready, and I'm looking forward to working with you to expand our business into Exotics.&lt;br&gt;&lt;br&gt;In the meantime, I'll look forward to handing over a recipe for %t07%, once you've brought me something both sweet and sour...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_04</Data></Cell>
+	 <Cell><Data ss:Type="String">Whitney's Truffle Exchange</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You've got just what I've been hankering for - %t05%! Here's a recipe in exchange, for %t07%. I look forward to working with you soon!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_05_hint_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I won't be here long, &lt;player&gt;, I needed to do a bit of research. I'll be off to %lima% soon. In the meantime, I'll be waiting for you here, holding onto a truffle recipe I'll give you as soon as you arrive with the kind of truffle I'm looking for on hand.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_05</Data></Cell>
+	 <Cell><Data ss:Type="String">Truffles For Alex</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">meta_truf_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%t04%! I just love those spicy treats! Here's a recipe for %t08% - I am off to %lima% myself, chasing down a solid lead to locate Sean. You, too, &lt;player&gt;, will now be able to travel to %lima% to get a hold of the %lim_cacao% needed for this recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You have completed a major task for us, &lt;player&gt;. Here is the recipe to complete the Truffles page of your Recipe Book. Excellent work!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Keep it up, &lt;player&gt;. As I say, to my mind, truffles really are one of the cornerstones of our business...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_51_done_hint_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, you should get over to %sanfrancisco% and see Evangeline - I hear she's been wondering when you will be around to visit again.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_tease_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You know, &lt;player&gt;, I've always been an admirer of Baumeister Confections. I've even spoken with Evangeline from time to time about selling this shop. Some day, perhaps...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01</Data></Cell>
+	 <Cell><Data ss:Type="String">Cuban Retail</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">There is but one thing left for you to do in order to garner my endorsement, &lt;player&gt;. I've been speaking with %hav_shopkeep%, and she is interested in transferring ownership of %hav_shop% in %havana% to you. You'll need to bring her a significant quantity of chocolates in order to seal the deal. Once you've done this, my endorsement will be yours. Are you ready for the challenge?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I admire your pluck, &lt;player&gt;! You remind me of myself in my younger years.&lt;br&gt;&lt;br&gt;If you haven't made your fourth creation yet, I personally would recommend a truffle, but really, the choice is yours. You'll need to bring [D|100|150|200] cases of that creation, along with [D|100|150|200] cases each of %t07%, %t08% and %t10% to %hav_shop% in %havana%. Upon delivery of these goods, the shop will be yours.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|400|600|800] cases total - [D|100|150|200] cases each of 3 types of Truffles as well as your latest creation - to %hav_shopkeep% in %havana%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have always been a fan of Evangeline's - any friend of hers is a friend of mine. It is my pleasure to not only pay you [D|$100,000|$150,000|$200,000], but also hand over this shop in exchange for all of the wonderful confections you have brought me. I look forward to taking special orders on your behalf, &lt;player&gt;, and to a long and prosperous partnership.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01_extra03_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You should make your way back to see Evangeline as soon as you can - I think she'll have some good news for you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm eager to seal the deal for our partnership, &lt;player&gt;, I'm just expecting delivery of [D|100|150|200] cases each of %t07%, %t08%, %t10% and your latest creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hav_shop_01_hint_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You need to deliver [D|100|150|200] cases each of %t07%, %t08%, %t10% and your latest creation to %hav_shopkeep% at %hav_shop% in %havana%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_exp01</Data></Cell>
+	 <Cell><Data ss:Type="String">Easy Money</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_exp01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Pssst, &lt;player&gt;! How'd you like to make an easy [D|$60,000|$75,000|$90,000]? I'm going to be doing some work in %douala% for the next couple of months. I'll be staying at the %dou_emptybuilding1%. If you show up before I leave with [D|60|75|90] cases of %c05%, I'll pay you the outrageous sum of [D|$60,000|$75,000|$90,000] for your troubles. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_exp01_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|60|75|90] cases of %c05% to %trav_11% at %dou_emptybuilding1% in %douala% within a couple of months.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_exp01_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I knew you'd come through for me! Here is the [D|$60 grand|$75 grand|$90 grand] I promised you for those cases of %c05%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_exp01_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">My time here is limited, &lt;player&gt; - do you have those [D|60|75|90] cases of %c05% for me?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_exp01_expired_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_11% completed her stint in %douala%, so your %c05% are no longer needed there.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_story_ulu_rockkeep_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Another one from that chocolate company. The missus, Alex, she was just here. I told her everything I know, not that it was much.&lt;br&gt;&lt;br&gt;Look, I wasn't in Fletcher's squadron. All I recall is the mission was a bloody shambles from the get-go. and the liaison officer, that German fella... he put my teeth on edge. The kind of bloke who enjoyed having the boot on the other foot, you know? Funny how that happens. Now, if that's all, I've got stock to move.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_story_ulu_rockkeep_2_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You doing business with the girl at the lime camp? Watch yourself. I try to look out for 'em, teach 'em proper work ethic, but she's got a stubborn streak a mile wide. Won't listen to reason.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_story_tok_mountainkeep_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections? I'll be damned. Small world. I knew a pilot in the 8th Air Force, good man named %main_sean%. He married into that family, if I recall. Talked about his wife Alex all the time and said her letters were the only thing sweeter than the chocolates she sent him.&lt;br&gt;&lt;br&gt;Haven't heard from him since '45. We all just assumed... well, you know. War's a messy business. A lot of good men didn't make it home.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_story_lim_churchkeep_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Many people come here to find some peace and comfort. Lately I saw an American woman - brown hair, tan skin in particular, but she looked quite distressed. She lit a candle and prayed for a man called Sean, her husband. I pray she will find that person she seeks for.</Data></Cell>
+	</Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

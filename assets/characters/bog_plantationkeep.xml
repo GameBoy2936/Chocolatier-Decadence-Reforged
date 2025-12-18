@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\bog_plantationkeep.xml" source=".\bog_plantationkeep*.png">
+  <img regx="86.000000" regy="134.000000" name="bog_plantationkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="86" regy="105" name="bog_plantationkeep.png" w="168" h="266" x="0" y="0"/>
+    <frame regx="35" regy="65" name="bog_plantationkeep_displeased.png" w="72" h="77" x="173" y="0"/>
+    <frame regx="35" regy="65" name="bog_plantationkeep_neutral.png" w="72" h="77" x="246" y="0"/>
+    <frame regx="35" regy="65" name="bog_plantationkeep_pleased.png" w="72" h="77" x="319" y="0"/>
+  </framelist>
+</sequence>

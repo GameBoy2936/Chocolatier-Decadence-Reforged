@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\Playground Animation\las_pelicana.xml" source=".\las_pelicana*.png">
+  <img regx="64.000000" regy="46.000000" name="las_pelicana.jpg" mask="las_pelicana.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="64" regy="46" name="las_pelicana_01.png" w="128" h="92" x="0" y="0"/>
+    <frame regx="64" regy="46" name="las_pelicana_02.png" w="8" h="5" x="0" y="93"/>
+  </framelist>
+<script luascript="function DoAnim() delay(600) while true do frames { 01,01,01,02 } end end"></script>
+</sequence>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\fal_cloudfront.xml" source=".\optimize/fal_c*.png">
+  <img regx="400.000000" regy="120.000000" name="fal_cloudfront.jpg" mask="fal_cloudfront.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="400" regy="120" name="fal_cloudfront.png" w="800" h="240" x="0" y="0"/>
+  </framelist>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_chas.xml" source=".\main_chas*.png">
+  <img regx="86.000000" regy="130.000000" name="main_chas.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="86" regy="109" name="main_chas.png" w="172" h="268" x="0" y="0"/>
+    <frame regx="42" regy="107" name="main_chas_displeased.png" w="69" h="97" x="173" y="0"/>
+    <frame regx="42" regy="107" name="main_chas_neutral.png" w="69" h="97" x="243" y="0"/>
+    <frame regx="42" regy="107" name="main_chas_pleased.png" w="69" h="97" x="313" y="0"/>
+  </framelist>
+</sequence>

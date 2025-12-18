@@ -1,0 +1,95 @@
+<b><font size='30'>Big Splash Games</font></b>
+
+<b><font size='20'>Original Game Design</font></b>
+Jon Blossom
+Stephen Lewis
+Michael Thornton Wyman
+
+<b><font size='20'>Producer</font></b>
+Michael Thornton Wyman
+
+<b><font size='20'>Art Direction               Programming</font></b>
+Stephen Lewis                          Jon Blossom  
+
+<b><font size='20'>Additional Art Production</font></b>
+Nikitova LLC
+Barbara Pollak
+
+<b><font size='20'>Audio and Music</font></b>
+SomaTone Interactive Audio
+
+<b><font size='20'>Opening Animation by Red i Studios</font></b>
+Jenny Martin
+Sean Jones
+Chip Harris (Sound and Music) 
+Bob Wood (Voice Over)
+
+
+<b><font size='30'>PlayFirst</font></b>
+
+<b><font size='20'>Creative Director</font></b>
+Kenny Shea Dinkin
+
+<b><font size='20'>Director of Production</font></b>
+Craig Bocks
+
+<b><font size='20'>Senior Producer</font></b>
+Aaron Norstad
+
+<b><font size='20'>Producer</font></b>
+Vicki Resendez
+
+<b><font size='20'>Design Manager</font></b>
+Michael McCormick
+
+<b><font size='20'>Design Consultant</font></b>
+Nicolas Carroll
+
+<b><font size='20'>Quality Assurance Manager</font></b>
+Christopher Dunn
+
+<b><font size='20'>Quality Assurance</font></b>
+Cesar Lemus (Team Lead)
+Guy Romhild (Project Lead)
+Amy Jeschke
+Brian DeGraf
+Adam Gourdin
+Victor Kunkel
+Adrian Guerrero
+Ryan Medina
+P. Tseren Sodbinow
+
+<b><font size='20'>Marketing</font></b>
+Anne Marie Edwards
+Devin Grayson
+Sean Denny
+
+<b><font size='20'>Playground Game Engine</font></b>
+Tim Mensch 
+Brad Edelman
+Jim Brooks
+
+<b><font size='20'>Special Thanks</font></b>
+Bernie Habermeier
+Joshua Dudley
+Ron Barry
+David Parks
+Peter Grandmaison
+Maria Waters
+Todd Wong
+Brad Simon
+Hung Chang
+
+
+<b><font size='30'>Community</font></b>
+
+<b><font size='20'>Game Modification (Lua 5.0 and XML)</font></b>
+Michael "GameBoy2936" Lane
+
+<b><font size='20'>Art</font></b>
+Elene
+
+[This game was built using the Playground SDK™.]
+
+[Copyright © 2009 PlayFirst, Inc.]
+[All Rights Reserved]

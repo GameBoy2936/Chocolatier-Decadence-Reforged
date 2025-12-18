@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\tor_factorykeep.xml" source=".\tor_factorykeep*.png">
+  <img regx="90.000000" regy="130.000000" name="tor_factorykeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="76" regy="109" name="tor_factorykeep.png" w="168" h="268" x="0" y="0"/>
+    <frame regx="21" regy="81" name="tor_factorykeep_displeased.png" w="59" h="79" x="164" y="0"/>
+    <frame regx="21" regy="81" name="tor_factorykeep_neutral.png" w="59" h="79" x="224" y="0"/>
+    <frame regx="21" regy="81" name="tor_factorykeep_pleased.png" w="59" h="79" x="284" y="0"/>
+  </framelist>
+</sequence>

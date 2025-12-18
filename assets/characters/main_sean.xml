@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_sean.xml" source=".\main_sean*.png">
+  <img regx="87.000000" regy="134.000000" name="main_sean.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="83" regy="104" name="main_sean.png" w="164" h="270" x="0" y="0"/>
+    <frame regx="30" regy="88" name="main_sean_displeased.png" w="73" h="80" x="168" y="0"/>
+    <frame regx="30" regy="88" name="main_sean_neutral.png" w="73" h="80" x="242" y="0"/>
+    <frame regx="30" regy="88" name="main_sean_pleased.png" w="73" h="80" x="316" y="0"/>
+  </framelist>
+</sequence>

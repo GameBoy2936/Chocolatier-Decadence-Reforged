@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\Playground Animation\port_locked.xml" source=".\port_locked_*.png">
+  <img regx="17.000000" regy="18.000000" name="port_locked.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="8" regy="10" name="port_locked_1.png" w="17" h="20" x="0" y="0"/>
+    <frame regx="11" regy="14" name="port_locked_2.png" w="23" h="28" x="0" y="21"/>
+  </framelist>
+<script luascript="function DoAnim() delay(500) while true do frames { 1,2 } end end"></script>
+</sequence>

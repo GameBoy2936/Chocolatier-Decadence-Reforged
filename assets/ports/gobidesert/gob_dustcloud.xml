@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\gob_dustcloud.xml" source=".\optimize/gob*.png">
+  <img regx="400.000000" regy="70.000000" name="gob_dustcloud.jpg" mask="gob_dustcloud.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="400" regy="70" name="gob_dustcloud.png" w="800" h="140" x="0" y="0"/>
+  </framelist>
+</sequence>

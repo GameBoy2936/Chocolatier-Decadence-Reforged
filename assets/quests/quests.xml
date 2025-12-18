@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <file>tutorial.lua</file>
+  <file>rank2.lua</file>
+  <file>rank3.lua</file>
+  <file>rank4.lua</file>
+  <file>other.lua</file>
+</root>

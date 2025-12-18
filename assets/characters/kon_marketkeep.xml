@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\kon_marketkeep.xml" source=".\kon_marketkeep*.png">
+  <img regx="83.000000" regy="128.000000" name="kon_marketkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="79" regy="110" name="kon_marketkeep.png" w="158" h="256" x="0" y="0"/>
+    <frame regx="16" regy="94" name="kon_marketkeep_displeased.png" w="86" h="103" x="159" y="0"/>
+    <frame regx="16" regy="94" name="kon_marketkeep_neutral.png" w="86" h="103" x="246" y="0"/>
+    <frame regx="16" regy="94" name="kon_marketkeep_pleased.png" w="86" h="103" x="333" y="0"/>
+  </framelist>
+</sequence>

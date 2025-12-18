@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_zach.xml" source=".\main_zach*.png">
+  <img regx="79.000000" regy="124.000000" name="main_zach.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="66" regy="108" name="main_zach.png" w="148" h="240" x="0" y="0"/>
+    <frame regx="4" regy="106" name="main_zach_displeased.png" w="66" h="69" x="143" y="0"/>
+    <frame regx="4" regy="97" name="main_zach_neutral.png" w="45" h="60" x="210" y="0"/>
+    <frame regx="4" regy="97" name="main_zach_pleased.png" w="45" h="60" x="0" y="231"/>
+  </framelist>
+</sequence>

@@ -1,0 +1,48 @@
+--[[---------------------------------------------------------------------------
+	Chocolatier Three Port Data: Mahajanga, Madagascar
+	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
+--]]---------------------------------------------------------------------------
+
+CreatePort("mahajanga")
+mahajanga.cadikey = "douala"
+mahajanga.mapx = 492
+mahajanga.mapy = 216
+mahajanga.hemisphere = "south"
+mahajanga.region = "africa"
+mahajanga.culture = "western"
+mahajanga.hidden = true
+mahajanga.locked = true
+
+--LOCATIONS-----------------------------
+CreateBuilding("mah_market", mahajanga, Market)
+mah_market.inventory = { vanilla, cacao, clove, sugar, coconut, mango, pepper, cinnamon, espresso, banana, lychee, peanut }
+mah_market.labely = 250
+mah_market.x = 741
+mah_market.y = 428
+
+---
+
+CreateBuilding("mah_plantation", mahajanga, Farm)
+mah_plantation.inventory = { mah_cacao }
+mah_plantation.x = 177
+mah_plantation.y = 116.5
+
+---
+
+CreateBuilding("mah_shop", mahajanga, Shop)
+mah_shop.x = 328
+mah_shop.y = 157
+
+---
+
+CreateBuilding("mah_postoffice", mahajanga)
+mah_postoffice.x = 500
+mah_postoffice.y = 191
+
+---
+
+EmptyBuilding("mah_hotel", mahajanga)
+mah_hotel.x = 88
+mah_hotel.y = 221
+
+---

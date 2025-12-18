@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Users\Micha\Documents\My Games\Chocolatier Decadence by Design\assets\characters\main_elen.xml" source=".\main_elen*.png">
+  <img regx="100.000000" regy="100.000000" name="main_elen.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+    <frame regx="88" regy="124" name="main_elen" w="164" h="258" x="0" y="0"/>
+    <frame regx="27" regy="67" name="main_elen_displeased.png" w="55" h="72" x="0" y="0"/>
+    <frame regx="27" regy="67" name="main_elen_neutral.png" w="55" h="72" x="0" y="0"/>
+    <frame regx="27" regy="67" name="main_elen_pleased.png" w="55" h="72" x="0" y="0"/>
+  </framelist>
+</sequence>

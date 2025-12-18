@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\kon_shopkeep.xml" source=".\kon_shopkeep*.png">
+  <img regx="86.000000" regy="125.000000" name="kon_shopkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="86" regy="113" name="kon_shopkeep.png" w="172" h="258" x="0" y="0"/>
+    <frame regx="18" regy="79" name="kon_shopkeep_displeased.png" w="52" h="65" x="173" y="0"/>
+    <frame regx="18" regy="79" name="kon_shopkeep_neutral.png" w="52" h="65" x="226" y="0"/>
+    <frame regx="18" regy="79" name="kon_shopkeep_pleased.png" w="52" h="65" x="279" y="0"/>
+  </framelist>
+</sequence>

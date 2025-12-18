@@ -1,0 +1,16 @@
+# Hindi (Devanagari) Spacing Fixes
+
+# Aggressively pull the next character back into the "Short I" curve
+# Try values between -0.6em and -0.9em until the top bar connects perfectly.
+# (Assuming the natural width is roughly 0.6em, -0.6em makes it 0 width. 
+#  Going lower, like -0.7em, forces an overlap).
+U+093F -0.65em
+
+# Ensure the dot (Anusvara) sits exactly on top of the previous char
+# Subtracting 1.0em usually centers it over the previous character 
+# (assuming the previous char was about 1em wide).
+U+0902 -1.0em
+
+# Clean up other marks
+U+093C -0.6em # Nukta
+U+094D -0.6em # Virama

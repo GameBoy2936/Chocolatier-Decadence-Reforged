@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\car2.xml" source=".\car2*.png">
+  <img regx="63.000000" regy="57.000000" name="car2.jpg" mask="car2.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="16" regy="18" name="car2_0001.png" w="33" h="37" x="0" y="0"/>
+    <frame regx="19" regy="18" name="car2_0002.png" w="39" h="37" x="34" y="0"/>
+    <frame regx="27" regy="18" name="car2_0004.png" w="54" h="38" x="74" y="0"/>
+    <frame regx="36" regy="18" name="car2_0007.png" w="71" h="37" x="129" y="0"/>
+    <frame regx="43" regy="16" name="car2_0017.png" w="86" h="28" x="0" y="39"/>
+    <frame regx="35" regy="17" name="car2_0027.png" w="71" h="36" x="87" y="39"/>
+    <frame regx="26" regy="18" name="car2_0030.png" w="53" h="37" x="159" y="39"/>
+    <frame regx="19" regy="19" name="car2_0032.png" w="40" h="38" x="213" y="39"/>
+    <frame regx="16" regy="19" name="car2_0033.png" w="33" h="38" x="0" y="78"/>
+    <frame regx="20" regy="19" name="car2_0034.png" w="39" h="38" x="34" y="78"/>
+    <frame regx="27" regy="18" name="car2_0036.png" w="53" h="37" x="74" y="78"/>
+    <frame regx="35" regy="17" name="car2_0039.png" w="71" h="36" x="128" y="78"/>
+    <frame regx="43" regy="16" name="car2_0049.png" w="86" h="28" x="0" y="117"/>
+    <frame regx="34" regy="18" name="car2_0059.png" w="71" h="37" x="87" y="117"/>
+    <frame regx="26" regy="18" name="car2_0062.png" w="54" h="38" x="159" y="117"/>
+    <frame regx="19" regy="18" name="car2_0064.png" w="40" h="37" x="214" y="117"/>
+  </framelist>
+</sequence>

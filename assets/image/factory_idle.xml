@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="factory_idle.xml" source="port_factory_idle*.png">
+  <img regx="16.000000" regy="16.000000" name="factory_idle.png" w="0.000000" h="0.000000"/>
+  <framelist>
+  <frame regx="16" regy="16" name="port_factory_idle_1.png" w="32" h="32" x="0" y="0"/>
+    <frame regx="16" regy="16" name="port_factory_idle_2.png" w="32" h="32" x="32" y="0"/>
+  </framelist>
+  <script luascript="function DoAnim() delay(250) while true do frames { 1,2 } end end"></script>
+</sequence>

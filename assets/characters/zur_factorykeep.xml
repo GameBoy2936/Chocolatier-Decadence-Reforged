@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\zur_factorykeep.xml" source=".\zur_factorykeep*.png">
+  <img regx="86.000000" regy="124.000000" name="zur_factorykeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="93" regy="109" name="zur_factorykeep.png" w="178" h="250" x="0" y="0"/>
+    <frame regx="50" regy="76" name="zur_factorykeep_displeased.png" w="79" h="106" x="173" y="0"/>
+    <frame regx="50" regy="76" name="zur_factorykeep_neutral.png" w="79" h="106" x="253" y="0"/>
+    <frame regx="50" regy="77" name="zur_factorykeep_pleased.png" w="79" h="107" x="333" y="0"/>
+  </framelist>
+</sequence>

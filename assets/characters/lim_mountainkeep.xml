@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\lim_mountainkeep.xml" source=".\lim_mountainkeep*.png">
+  <img regx="86.000000" regy="129.000000" name="lim_mountainkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="86" regy="110" name="lim_mountainkeep.png" w="168" h="266" x="0" y="0"/>
+    <frame regx="17" regy="77" name="lim_mountainkeep_displeased.png" w="65" h="79" x="173" y="0"/>
+    <frame regx="17" regy="77" name="lim_mountainkeep_neutral.png" w="65" h="79" x="239" y="0"/>
+    <frame regx="17" regy="77" name="lim_mountainkeep_pleased.png" w="64" h="79" x="305" y="0"/>
+  </framelist>
+</sequence>

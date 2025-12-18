@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_alex.xml" source=".\main_alex*.png">
+  <img regx="83.000000" regy="124.000000" name="main_alex.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="70" regy="105" name="main_alex.png" w="160" h="240" x="0" y="0"/>
+    <frame regx="17" regy="75" name="main_alex_displeased.png" w="51" h="61" x="152" y="0"/>
+    <frame regx="17" regy="75" name="main_alex_neutral.png" w="51" h="61" x="204" y="0"/>
+    <frame regx="17" regy="75" name="main_alex_pleased.png" w="51" h="61" x="0" y="231"/>
+  </framelist>
+</sequence>

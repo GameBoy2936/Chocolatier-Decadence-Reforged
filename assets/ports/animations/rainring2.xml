@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\rainring.xml" source=".\rainring*.png">
+  <img regx="50.000000" regy="25.000000" name="rainring.jpg" mask="rainring.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="12" regy="4" name="rainring_0001.png" w="25" h="8" x="0" y="0"/>
+    <frame regx="14" regy="5" name="rainring_0002.png" w="30" h="10" x="26" y="0"/>
+    <frame regx="17" regy="6" name="rainring_0003.png" w="35" h="11" x="57" y="0"/>
+    <frame regx="19" regy="6" name="rainring_0004.png" w="39" h="12" x="93" y="0"/>
+    <frame regx="21" regy="7" name="rainring_0005.png" w="43" h="14" x="133" y="0"/>
+    <frame regx="23" regy="8" name="rainring_0006.png" w="48" h="15" x="177" y="0"/>
+    <frame regx="25" regy="8" name="rainring_0007.png" w="52" h="16" x="0" y="16"/>
+    <frame regx="28" regy="9" name="rainring_0008.png" w="57" h="18" x="53" y="16"/>
+    <frame regx="30" regy="9" name="rainring_0009.png" w="61" h="18" x="111" y="16"/>
+    <frame regx="32" regy="10" name="rainring_0010.png" w="66" h="20" x="173" y="16"/>
+    <frame regx="34" regy="11" name="rainring_0011.png" w="70" h="22" x="0" y="37"/>
+    <frame regx="37" regy="11" name="rainring_0012.png" w="75" h="22" x="71" y="37"/>
+    <frame regx="39" regy="12" name="rainring_0013.png" w="79" h="24" x="147" y="37"/>
+    <frame regx="41" regy="13" name="rainring_0014.png" w="83" h="25" x="0" y="62"/>
+  </framelist>
+<script luascript="function DoAnim() delay(127) while true do frames { 01,02,03,04,05,06,07,08,09,10,11,12,13,14,01,02,03,04,05,06,07,08,09,10,11,12,13,14,14,14,14,14,14 } end end"></script>
+</sequence>

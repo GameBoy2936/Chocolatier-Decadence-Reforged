@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\Playground Animation\las_stans.xml" source=".\las_stans*.png">
+  <img regx="52.000000" regy="92.000000" name="las_stans.jpg" mask="las_stans.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="52" regy="92" name="las_stans_01.png" w="105" h="185" x="0" y="0"/>
+    <frame regx="51" regy="92" name="las_stans_02.png" w="1" h="2" x="106" y="0"/>
+  </framelist>
+<script luascript="function DoAnim() delay(250) while true do frames { 01,02 } end end"></script>
+</sequence>

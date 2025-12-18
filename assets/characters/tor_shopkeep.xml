@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\tor_shopkeep.xml" source=".\tor_shopkeep*.png">
+  <img regx="82.000000" regy="124.000000" name="tor_shopkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="80" regy="115" name="tor_shopkeep.png" w="162" h="260" x="0" y="0"/>
+    <frame regx="37" regy="88" name="tor_shopkeep_displeased.png" w="65" h="80" x="162" y="0"/>
+    <frame regx="34" regy="88" name="tor_shopkeep_neutral.png" w="62" h="80" x="228" y="0"/>
+    <frame regx="35" regy="88" name="tor_shopkeep_pleased.png" w="63" h="81" x="291" y="0"/>
+  </framelist>
+</sequence>

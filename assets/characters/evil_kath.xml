@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\evil_kath.xml" source=".\evil_kath*.png">
+  <img regx="86.000000" regy="122.000000" name="evil_kath.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="89" regy="117" name="evil_kath.png" w="172" h="254" x="0" y="0"/>
+    <frame regx="31" regy="89" name="evil_kath_displeased.png" w="61" h="86" x="173" y="0"/>
+    <frame regx="31" regy="89" name="evil_kath_neutral.png" w="61" h="86" x="235" y="0"/>
+    <frame regx="31" regy="89" name="evil_kath_pleased.png" w="61" h="86" x="297" y="0"/>
+  </framelist>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\bal_shopkeep.xml" source=".\bal_shopkeep*.png">
+  <img regx="83.000000" regy="133.000000" name="bal_shopkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="82" regy="105" name="bal_shopkeep.png" w="166" h="270" x="0" y="0"/>
+    <frame regx="5" regy="84" name="bal_shopkeep_displeased.png" w="56" h="136" x="166" y="0"/>
+    <frame regx="5" regy="84" name="bal_shopkeep_neutral.png" w="56" h="136" x="223" y="0"/>
+    <frame regx="5" regy="84" name="bal_shopkeep_pleased.png" w="57" h="136" x="280" y="0"/>
+  </framelist>
+</sequence>

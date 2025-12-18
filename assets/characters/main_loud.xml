@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_loud.xml" source=".\main_loud*.png">
+  <img regx="86.000000" regy="128.000000" name="main_loud.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="86" regy="100" name="main_loud.png" w="172" h="242" x="0" y="0"/>
+    <frame regx="31" regy="89" name="main_loud_displeased.png" w="79" h="95" x="173" y="0"/>
+    <frame regx="31" regy="86" name="main_loud_neutral.png" w="50" h="89" x="253" y="0"/>
+    <frame regx="33" regy="92" name="main_loud_pleased.png" w="51" h="101" x="304" y="0"/>
+  </framelist>
+</sequence>

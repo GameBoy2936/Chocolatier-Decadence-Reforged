@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\tok_lanternglow.xml" source=".\tok_lanternglow*.png">
+  <img regx="50.000000" regy="29.000000" name="tok_lanternglow.jpg" mask="tok_lanternglow.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="50" regy="29" name="tok_lanternglow1.png" w="100" h="59" x="0" y="0"/>
+    <frame regx="50" regy="29" name="tok_lanternglow2.png" w="100" h="59" x="0" y="60"/>
+  </framelist>
+<script luascript="function DoAnim() while true do frames { 1,2 } end end"></script>
+</sequence>

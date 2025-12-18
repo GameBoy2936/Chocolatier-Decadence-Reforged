@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\Playground Animation\las_star.xml" source=".\las_star*.png">
+  <img regx="101.000000" regy="100.000000" name="las_star.jpg" mask="las_star.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="97" regy="96" name="las_star_01.png" w="194" h="193" x="0" y="0"/>
+    <frame regx="89" regy="82" name="las_star_02.png" w="173" h="172" x="195" y="0"/>
+    <frame regx="84" regy="85" name="las_star_03.png" w="171" h="172" x="0" y="194"/>
+  </framelist>
+<script luascript="function DoAnim() delay(100) while true do frames { 01,01,01,01,01,02,03,01,02,03,01,02,03,01,01,01,01,03,02,01,03,02,01,03,02 } end end"></script>
+</sequence>

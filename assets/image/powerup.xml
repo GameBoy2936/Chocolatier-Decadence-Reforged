@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Chocolatier\FreshChocolatierCVS\Art Proto\Anim Tool\powerup.xml" source=".\powerup_*">
+  <img regx="75.000000" regy="75.000000" name="powerup.png" w="0.000000" h="0.000000"/>
+  <framelist>
+  <frame regx="75" regy="75" name="powerup_001.png" w="150" h="150" x="0" y="0"/>
+    <frame regx="75" regy="75" name="powerup_002.png" w="150" h="150" x="150" y="0"/>
+    <frame regx="75" regy="75" name="powerup_003.png" w="150" h="150" x="300" y="0"/>
+    <frame regx="75" regy="75" name="powerup_004.png" w="150" h="150" x="450" y="0"/>
+    <frame regx="75" regy="75" name="powerup_005.png" w="150" h="150" x="600" y="0"/>
+    <frame regx="75" regy="75" name="powerup_006.png" w="150" h="150" x="750" y="0"/>
+    <frame regx="75" regy="75" name="powerup_007.png" w="150" h="150" x="0" y="150"/>
+    <frame regx="75" regy="75" name="powerup_008.png" w="150" h="150" x="150" y="150"/>
+    <frame regx="75" regy="75" name="powerup_009.png" w="150" h="150" x="300" y="150"/>
+    <frame regx="75" regy="75" name="powerup_010.png" w="150" h="150" x="450" y="150"/>
+    <frame regx="75" regy="75" name="blank.png" w="150" h="150" x="600" y="150"/>
+  </framelist>
+<script luascript="function DoAnim() delay(100) frames { 1,2,3,4,5,6,7,8,9,10,11 } end"></script>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_deit.xml" source=".\main_deit*.png">
+  <img regx="83.000000" regy="123.000000" name="main_deit.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="73" regy="115" name="main_deit.png" w="166" h="260" x="0" y="0"/>
+    <frame regx="34" regy="81" name="main_deit_displeased.png" w="54" h="100" x="157" y="0"/>
+    <frame regx="34" regy="81" name="main_deit_neutral.png" w="54" h="100" x="222" y="0"/>
+    <frame regx="34" regy="81" name="main_deit_pleased.png" w="54" h="100" x="287" y="0"/>
+  </framelist>
+</sequence>

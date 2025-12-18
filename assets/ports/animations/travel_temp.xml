@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="E:\bigsplash\c3\temp\travel_temp.xml" source=".\travel_temp/travel_temp*.png">
+  <img regx="32.000000" regy="32.000000" name="travel_temp.jpg" mask="travel_temp.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="32" regy="32" name="travel_temp1.png" w="64" h="64" x="0" y="0"/>
+    <frame regx="32" regy="32" name="travel_temp2.png" w="64" h="64" x="65" y="0"/>
+    <frame regx="32" regy="32" name="travel_temp3.png" w="64" h="64" x="130" y="0"/>
+    <frame regx="32" regy="32" name="travel_temp4.png" w="64" h="64" x="0" y="65"/>
+    <frame regx="32" regy="32" name="travel_temp5.png" w="64" h="64" x="65" y="65"/>
+    <frame regx="31" regy="32" name="travel_temp6.png" w="63" h="64" x="130" y="65"/>
+    <frame regx="32" regy="32" name="travel_temp7.png" w="64" h="64" x="0" y="130"/>
+    <frame regx="32" regy="32" name="travel_temp8.png" w="64" h="64" x="65" y="130"/>
+  </framelist>
+</sequence>

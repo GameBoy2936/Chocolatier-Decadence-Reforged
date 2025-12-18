@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_tedd.xml" source=".\main_tedd*.png">
+  <img regx="86.000000" regy="120.000000" name="main_tedd.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="88" regy="118" name="main_tedd.png" w="168" h="252" x="0" y="0"/>
+    <frame regx="30" regy="118" name="main_tedd_displeased.png" w="60" h="86" x="168" y="0"/>
+    <frame regx="30" regy="118" name="main_tedd_neutral.png" w="60" h="86" x="229" y="0"/>
+    <frame regx="30" regy="118" name="main_tedd_pleased.png" w="60" h="86" x="290" y="0"/>
+  </framelist>
+</sequence>

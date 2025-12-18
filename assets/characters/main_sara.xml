@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\main_sara.xml" source=".\main_sara*.png">
+  <img regx="87.000000" regy="128.000000" name="main_sara.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="83" regy="110" name="main_sara.png" w="166" h="252" x="0" y="0"/>
+    <frame regx="29" regy="88" name="main_sara_displeased.png" w="57" h="77" x="167" y="0"/>
+    <frame regx="29" regy="88" name="main_sara_neutral.png" w="57" h="77" x="225" y="0"/>
+    <frame regx="29" regy="88" name="main_sara_pleased.png" w="57" h="77" x="283" y="0"/>
+  </framelist>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\evil_wolf.xml" source=".\evil_wolf*.png">
+  <img regx="88.000000" regy="129.000000" name="evil_wolf.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="78" regy="109" name="evil_wolf.png" w="158" h="268" x="0" y="0"/>
+    <frame regx="51" regy="92" name="evil_wolf_displeased.png" w="108" h="92" x="157" y="0"/>
+    <frame regx="51" regy="92" name="evil_wolf_neutral.png" w="108" h="92" x="266" y="0"/>
+    <frame regx="51" regy="92" name="evil_wolf_pleased.png" w="108" h="92" x="375" y="0"/>
+  </framelist>
+</sequence>

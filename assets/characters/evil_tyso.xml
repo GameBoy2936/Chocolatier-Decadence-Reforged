@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\evil_tyso.xml" source=".\evil_tyso*.png">
+  <img regx="86.000000" regy="128.000000" name="evil_tyso.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="86" regy="110" name="evil_tyso.png" w="172" h="262" x="0" y="0"/>
+    <frame regx="58" regy="97" name="evil_tyso_displeased.png" w="96" h="124" x="173" y="0"/>
+    <frame regx="58" regy="97" name="evil_tyso_neutral.png" w="96" h="124" x="270" y="0"/>
+    <frame regx="58" regy="102" name="evil_tyso_pleased.png" w="96" h="191" x="367" y="0"/>
+  </framelist>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\tok_towerlights.xml" source=".\tok_towerlights*.png">
+  <img regx="20.000000" regy="73.000000" name="tok_towerlights.jpg" mask="tok_towerlights.mask.png" w="0.000000" h="0.000000"/>
+  <framelist>  
+  <frame regx="20" regy="73" name="tok_towerlights1.png" w="40" h="147" x="0" y="0"/>
+    <frame regx="20" regy="70" name="tok_towerlights2.png" w="40" h="144" x="41" y="0"/>
+    <frame regx="20" regy="73" name="tok_towerlights3.png" w="40" h="147" x="82" y="0"/>
+  </framelist>
+<script luascript="function DoAnim() delay(200) while true do frames { 1,1,2,3 } end end"></script>
+</sequence>
