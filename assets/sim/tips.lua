@@ -446,8 +446,7 @@ function Tips.GetPriceModifier(itemCode, portName)
              if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.2 end
         elseif holiday == "halloween" then
              if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.2 end
-        end
-    end
+		end
 
 	-- 2. Active Tips
 	-- We iterate active tips for random events (fire, strike, bumper crop).
