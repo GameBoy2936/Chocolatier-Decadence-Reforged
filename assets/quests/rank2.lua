@@ -1371,7 +1371,7 @@ CreateQuest
 	defer_length = "medium",
 	reject = "none",
 	priority = 99,
-	onaccept = {AwardText("rank2_40_extra"), AwardUnlockPort("lasvegas"), AwardUnlockIngredient("strawberry"), AwardUnlockIngredient("raisin")},
+	onaccept = {AwardText("rank2_40_extra01"), AwardUnlockPort("lasvegas"), AwardUnlockIngredient("strawberry"), AwardUnlockIngredient("raisin")},
 	goals = {RequireRelativeTime(10, false), RequireItem("strawberry", 100), HintPerson("trav_08", "_travelers")},
 	goals_medium = {RequireRelativeTime(9, false), RequireItem("strawberry", 150), HintPerson("trav_08", "_travelers")},
 	goals_hard = {RequireRelativeTime(8, false), RequireItem("strawberry", 200), HintPerson("trav_08", "_travelers")},

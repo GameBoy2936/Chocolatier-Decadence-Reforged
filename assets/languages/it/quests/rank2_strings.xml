@@ -1638,7 +1638,7 @@
 	 <Cell><Data ss:Type="String">&lt;player&gt;, what if I told you that I've just come from a special place, a magical place, a place not on your map, where fortunes are won and lost? Would you do something for me if I can get you to such a place? I'll make it worth your while...</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">rank2_40_extra</Data></Cell>
+	 <Cell><Data ss:Type="String">rank2_40_extra01_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Terrific. You won't be disappointed. The place is %lasvegas%, Nevada. There are riches to be had there, but do be careful: I nearly lost my kimono. All I would like you to do for me is to get me [D|100|150|200] sacks of %strawberry% sold at the market there. I'll find you in a couple of months, and I'll have a recipe on hand to trade for those berries...</Data></Cell>
 	</Row>
 	<Row>
