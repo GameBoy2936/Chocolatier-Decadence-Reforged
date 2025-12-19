@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Citizen Comrade</LastAuthor>
+  <Created>2006-10-04T22:28:33Z</Created>
+  <LastSaved>2009-01-12T00:53:41Z</LastSaved>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <Colors>
+   <Color>
+    <Index>0</Index>
+    <RGB>#010000</RGB>
+   </Color>
+   <Color>
+    <Index>2</Index>
+    <RGB>#993300</RGB>
+   </Color>
+   <Color>
+    <Index>3</Index>
+    <RGB>#FFFF00</RGB>
+   </Color>
+   <Color>
+    <Index>4</Index>
+    <RGB>#DDDDDD</RGB>
+   </Color>
+   <Color>
+    <Index>5</Index>
+    <RGB>#00FF00</RGB>
+   </Color>
+   <Color>
+    <Index>12</Index>
+    <RGB>#808000</RGB>
+   </Color>
+   <Color>
+    <Index>46</Index>
+    <RGB>#6666CC</RGB>
+   </Color>
+  </Colors>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11640</WindowHeight>
+  <WindowWidth>15480</WindowWidth>
+  <WindowTopX>360</WindowTopX>
+  <WindowTopY>300</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Worksheet ss:Name="strings">
+  <Table ss:ExpandedColumnCount="256" ss:ExpandedRowCount="1099" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="200.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_announcer_text</Data></Cell>
+	 <Cell><Data ss:Type="String">As Alex Fletcher's loyal and dependable assistant, Rick Lafontaine serves as the primary liaison between you and the Baumeister Confections Board of Directors. Originally from Montréal, the young, bright and resourceful business graduate was personally hired by Alex for his sharp mind and unwavering belief in her mission. Outside of his duties ensuring vital messages and directives are delivered promptly as you travel the world and build your chocolatier career, he also remains a devoted fan of the Montréal Canadiens hockey team and is always happy to see a fellow professional succeeding.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bag_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Abrahem Sa'eed is the proprietor of %bag_shop%. Though his family has a history in trade, his father was a respected bookbinder, instilling in Abrahem a love for history and craftsmanship. He inherited the shop from an uncle and transformed it into a place that honors the rich traditions of Arabian coffee. Being a quiet and thoughtful man, Abrahem values authenticity and can share the story behind every bean he sells, or every recipe he brews. He sees you as a fellow craftsperson and business associate in your partnership, respecting dedication to quality above all else.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bal_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Nyoman grew up in a small village inland from Bali’s southern coast, where his family cultivated cloves, coffee, and tropical fruit on a modest plot of land. He speaks softly but with an easy humor, is quick to tease regular customers, and greets newcomers with a knowing nod, as if he’s already guessed what they’ve come for. He also considers himself an amateur gamelan musician, playing metallophones at temple festivals and gatherings. Friends describe him as patient, observant, and unwilling to rush a decision.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bal_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Trishna Didharma runs %bal_shop%, a shop founded by her grandfather, a beloved community mangku (or a priest). For her, the shop is not a business, but a duty to continue his legacy of providing small joys and sweets for local offerings. She is a patient and warm presence in her village, deeply connected to its spiritual and family life. Trishna's relationship with you is a personal one - she values kindness and respect for her home over any business transaction.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bel_hutkeep_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A respected Mopan Maya guide with deep roots in the Cayo District of Belize, Cambria Equivel operates from the ancient site of Xunantunich. Possessing an unparalleled knowledge of the remote highlands and a network of contacts among its isolated communities, she is the only person with the skills to locate Sean Fletcher. She has proposed a daring, long-range expedition to rescue him, but has made it clear that such a dangerous journey will require significant funding to succeed.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bel_hutkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A respected Mopan Maya guide with deep roots in the Cayo District of Belize, Cambria Equivel is the woman whose deep connections to the remote highland tribes made Sean Fletcher's rescue possible. Proving her unparalleled expertise, she led a perilous three-month expedition across the Guatemalan border and deep into the Honduran highlands to find him. After bringing Sean back safely to Xunantunich, she has now entered into a partnership with Baumeister Confections, commercializing the unique %bel_cacao% that Sean learned to cultivate during his long exile.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bog_plantationkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Jorge Gaitain runs the %bog_plantation% on the outskirts of Bogotá, growing both cacao and coffee. He took over the property from an uncle in the early 1940s after working there as a teenager and has a reputation for knowing his crops down to the smallest detail. Outside of harvest season, he spends more time in the city visiting family and playing dominoes with friends. He is skeptical of large companies promising to "modernize" agriculture, believing such changes are usually designed to benefit buyers, not the people who actually work the land.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bog_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">An impeccable eye for quality and design is what sets Tránsito Landínez apart. Having built her business from a small market stall through sheer will and undeniable taste, she now runs %bog_shop%, a shop featuring curated handicrafts alongside fine confections. Confident, flirtatious and charismatic, she has since become a fixture in the bohemian circles of La Candelaria. She views you as a potential collaborator, unimpressed by reputation alone, but is quick to embrace any supplier who shares her passion for true artistry and exceptional quality.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_cap_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A young Xhosa woman from a village in the Eastern Cape, Kefilwe Matebula came to Cape Town to find work and support her family. She spent years working diligently for the previous owner of the Adderley Street shop, an elderly English woman who, upon her passing, unexpectedly left the business to Kefilwe. Navigating this new and often difficult position requires great care, and she is known for her optimism, sense of support (a quality known as Ubuntu), and unshakeable resilience. She finds great pride in her own community and loves to participate in her church's choir.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_dou_shopkeep_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Henri Makongue is a well-traveled intellectual and the proprietor of %dou_shop%. Having studied in Paris before World War II, he returned to Cameroon with a Pan-African vision of building internationally respected, African-owned businesses. His shop is sophisticated and modern, reflecting his belief that economic independence is the key to a strong future.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_dou_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Henri Makongue is a well-traveled intellectual and the proprietor of %dou_shop%. Having studied in Paris before World War II, he returned to Cameroon with a Pan-African vision of building internationally respected, African-owned businesses. His shop is sophisticated and modern, reflecting his belief that economic independence is the key to a strong future. Baumeister Confections has partnered with Henri, creating a mutual exchange of knowledge and high-quality goods, which now gives him more time and opportunities to pursue his dream.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_bian_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A sophisticated Italian socialite from Bologna, Bianca Rabiti is a common sight as a bartender at %tan_bar%, a chic bar overlooking the Mediterranean in the International Zone of Tangier. She seems to be a valuable, if unpredictable, source of society gossip and has much interest in your own wares, but her true allegiances remain as hidden as her intentions.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_bian_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A sophisticated Italian socialite from Bologna and a consummate opportunist, Bianca Rabiti leverages her position as a bartender at %tan_bar% in Tangier to operate as an amoral information broker. Her connections to Schokolade Weltreich are purely transactional - she rather trades secrets, gossip and influence for status, pleasure, and most importantly, first access to the world's most exclusive confections. While her help can be invaluable, it is never free.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_kath_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Katherine Carpo is a sharp business analyst with close ties to Schokolade Weltreich. She operates with a cold efficiency and appears to be a formidible, if inscrutable, rival in the marketplace.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_kath_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Initially a key analyst for Schokolade Weltreich, Katherine Carpo operated with a detached pragmatism that made her a formidable rival. However, she grew disillusioned with the company's destructive greed and the personal cruelty of Wolf Fleischer's vendetta. In an act of defiance, she chose to betray her former employers, driven by a genuine admiration for your own business skills and a desire to align herself with a more honorable enterprise. Her intelligence and crucial information proved vital in the final effort to locate and rescue Sean Fletcher.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_tyso_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A businessman with clear ties to Schokolade Weltreich, Tyson Starks is frequently encountered in your travels. He displays an often dismissive attitude towards Baumeister Confections, and his intentions seem focused on disrupting your operations. His specific role within the rival company, however, remains a mystery.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_tyso_text</Data></Cell>
+	 <Cell><Data ss:Type="String">As Wolf Fleischer's right-hand man, Tyson Starks is chief lieutenant and corporate enforcer of the German-based chocolate-making rival Schokolade Weltreich. As a self-made man from Cleveland, Ohio, he resents the inherited legacy of Baumeister Confections and takes a clear professional satisfaction in executing the plans designed to undermine the company. Unlike Wolf's deep-seated personal vendetta, Tyson's motivations are rooted in pure ambition and a desire for profit.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_wolf_locked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Whispers among veterans and intelligence circles speak of a German defector whose name is linked to the disappearance of Allied pilots. His motives, and his current whereabouts, remain unknown.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_wolf_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A sharp and calculating European consultant with ties to rival confectioners, Wolf Fleischer presents himself as a man who understands the harsh realities of post-war business. He is a former military liaison officer with a keen interest in the affairs of Baumeister Confections, though the full extent of his involvement remains unclear.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_evil_wolf_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The calculating mind behind Schokolade Weltreich's most aggressive tactics, Wolf Fleischer's animosity toward the Baumeisters is a bitter family legacy. Viewing Baumeister Confections as the architects of his own colleagues' past failures from the 1920s, he used his position as a German defector and Allied liaison officer during the war to enact a personal revenge. It was Fleischer who captured Sean Fletcher, orchestrating his disappearance not to kill him, but to inflict years of psychological torment on Alex and destabilize the company he has always considered his sworn enemy.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_hav_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Elián Alzua is the no-nonsense fixture of the %hav_market%. A transplant from the tobacco fields of Western Cuba, he retains the rural habit of rolling his own unrefined cigarillos, which he smokes incessantly while overseeing his inventory in the humid open-air hall. He has zero patience for the romanticized view of Cuba held by tourists or the corporate polish of the Baumeisters. He lives a frugal life in the city, sending nearly all his earnings back to the countryside to support his widowed sister and her children.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_hav_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A lifelong admirer of Baumeister Confections, Armena Caraballa's connection to the company is deeply personal, stemming from her close friendship with Evangeline Baumeister herself. Her charm and discretion have made %hav_shop% a popular meeting place in the bustling Vedado district. She sees you as the new guardian of her friend's legacy and is a warm and incredibly valuable ally once she sees that you respect the company's history.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_kon_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born and raised in a family of fishermen, Hekili Pilipo is a well-known face at %kona%'s %kon_market% and a pioneering big-wave surfer, known among locals for his laid-back, youthful fearlessness on the winter swells. Among his market, he is tourist-savvy and knows he's selling the island fantasy, but he's authentic about quality and doesn't take the corporate side too seriously. In his spare time, he can be found surfing the gentle morning waves at dawn, spending time at home with his dog, or working as a master craftsman.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_kon_plantationkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born into a long line of coffee farmers, Kalei Kamalaninui is the humble proprietor of the %kon_plantation%. His life is tied to the volcanic soil he farms, and he is known for his humility, generosity, and pride in his homegrown %kon_coffee%. He believes that caring for the land is the only way to produce world-class goods and, in return, expects his customers to show the same respect.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_kon_shopkeep_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Leialoha Naea grew up on the western side of Hawaii Island, in a family that straddled both the fishing trade and small-scale farming. By her twenties, she'd spent time in Honolulu and San Francisco, working in specialty shops that catered to travelers, before returning home to open %kon_shop% in Kona. She is direct in business, but she has a warmth that comes through in small gestures - remembering a customer's favorite blend, or making introductions between two traders who might help each other.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_kon_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Leialoha Naea grew up on the western side of Hawaii Island, in a family that straddled both the fishing trade and small-scale farming. By her twenties, she'd spent time in Honolulu and San Francisco, working in specialty shops that catered to travelers, before returning home to open %kon_shop% in Kona. She is direct in business, but has a warmth that comes through in small gestures - remembering a customer's favorite blend, or making introductions between two traders who might help each other. Now partnered with Baumeister Confections, Leialoha is expanding her business with you to cater to the island's growing tourist trade.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_lim_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">For Yussell Parodi, the son of Italian immigrants that fled Italy during World War I, running the respectable %lim_shop% is a job that provides a secure life, but it is not necessarily the one he dreams of. Despite being diligent and capable, his true passion is cooking the rustic Italian food his grandmother taught him. Yussell is always polite and competent, but reserves his real enthusiasm for conversations about family and food, holding on to his dream of one day opening a small trattoria. Every day, he can at least try his best and work towards his goals.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_alex_text</Data></Cell>
+	 <Cell><Data ss:Type="String">%main_alex% (née Tangye) is the determined and innovative granddaughter of the company's matriarch, %main_evan%. In the 1920s, it was Alex's adventurous spirit that saved the company from complacency by seeking out secret ingredients and pioneering new recipes. Now, with her husband %main_sean% missing after World War II, she has entrusted the fate of the company to you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_chas_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Dieter and Sara's son and twin brother of Whitney. After spending his youth away from the family business, he has since reconnected and now helps manage logistics and supplier relationships for Baumeister Confections in the Americas, particularly at %san_factory%. He maintains a laid-back, youthful attitude, happy to remain unmistakably himself as life goes on.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_deit_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The brother of Evangeline and Felix, and another veteran member of the Board. Dieter has always been on the front lines of production, from overseeing cacao operations in Costa Rica in the 1920s to his current post in %tokyo%, where he manages the factory responsible for producing %infusion%. He is a practical and experienced leader, has a good sense of humor (especially about his children), and is known for his exacting standards and desire to accomplish his to-dos and goals.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_elen_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The devoted wife of %main_jose% and mother to Alexandra, Zachariah, and Loudon, Elena Tangye (née Pearson) has always been the quiet strength behind the Tangye branch of the family, famously orchestrating the reconciliation between her husband and daughter during the Roaring Twenties. Currently, she serves as the Director of Hospitality for the company's Canadian operations. Operating out of the %tor_hotel%, she manages accommodations for international partners and oversees the company's charitable foundation. When not charming business associates, Elena is an avid knitter, a patron of the Toronto Symphony Orchestra, and a devotee of detective novels.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_evan_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The matriarch of the Baumeister family, Evangeline was the driving force behind the company's first great revival. After a long and bitter feud with her sister Rowena, who destroyed many of the family recipes under the influence of a cruel husband, Evangeline helped reunite the family and restore Baumeister Confections to its former glory. Now in her golden years, she's a respected woman on the Board of Directors. She has a sharp mind, a deep love for the family legacy, and is a staunch advocate for her granddaughter, Alex.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_feli_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A senior member of the Board of Directors, Felix is a respected, if traditional, voice in the company. Since the war, he has developed a fervent passion for coffee, believing it to be the key to the company's future success. He oversees operations at %cap_factory%, where you first began to explore this new venture with him.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_jose_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex's father and a member of the Board of Directors. Though he once fell under the influence of undesirable competitors, a decision that nearly severed his bond with a young Alex, he now fully supports Baumeister Confections' new direction. He operates in Toronto, Canada, where he guides you in developing the company's line of %blend%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_loud_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex and Zachariah's younger brother. Unlike his siblings, Loudon tried to get invested in the chocolate business at a young age, but he found little interest, preferring a life as a freelance photographer instead. You may run into him during your travels.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_sara_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sarah Hoffenpepper Baumeister is a spirited traveler and Dieter's loving wife for 30+ years. She is a sharp-witted businesswoman who ran a successful chocolate shop in San José, Costa Rica, with her husband for many years. Though she is mostly retired, she still keeps a keen eye on the market, sourcing new locations, ingredients, and business opportunities. She is sharp-witted and appreciates efficiency and a care for detail.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_sean_locked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean is still lost after his wartime mission somewhere...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_sean_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean Fletcher is an American pilot who was shot down and presumed dead during World War II. He was secretly held captive by %evil_wolf% in a German Prisoner-of-War (POW) camp, and later lived among a remote tribe in Central America. Thanks to your efforts, he has been found alive and is now reunited with his true love once more. During his time with the tribe, Sean learned traditional cacao cultivation and has now partnered with %bel_hutkeep% to bring the unique new %bel_cacao% to the world market.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_tedd_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Theodore "Teddy" Baumeister is the eccentric and talented eldest son of Deiter and Sara Baumeister, who runs the %rey_kitchen% in %reykjavik%, Iceland. He is your go-to expert for tasting new creations, offering his opinionated but helpful feedback on your ingredient combinations. His palate and gifted knowledge of food science are two of the company's most valuable assets.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_whit_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Quirky, clever, and the twin sister of Chas, Whitney is at the forefront of the company's most ambitious projects and is the second-youngest member of the Board of Directors. From her factory in %wellington%, New Zealand, she oversees the production of %exotic% - the most complex and luxurious confections in the company's portfolio. She has a love for creativity and a silly but genuine relationship with her older brother, Teddy.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_zach_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">As Alex Fletcher's older brother, Zachariah Tangye has often felt himself in his sister's shadow. With a background in business management and economics, running %tan_shop% in the freewheeling International Zone of Tangier is his opportunity to prove his own talented business acumen. Though he may lack Alex's innovative spark, he is fiercely loyal to the family and proud to play a crucial role in the company's renewed success.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_zach_text</Data></Cell>
+	 <Cell><Data ss:Type="String">As Alex Fletcher's older brother, Zachariah Tangye has often felt himself in his sister's shadow. With a background in business management and economics, running %tan_shop% in the freewheeling International Zone of Tangier is his opportunity to prove his own talented business acumen. Though he may lack Alex's innovative spark, he is fiercely loyal to the family and proud to play a crucial role in the company's renewed success. As your first partner, he helped launch your career as a chocolatier. He has also developed the "Special Orders" system, using the latest advancements in telegraph technology.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_rey_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The earnest and ambitious proprietor of %rey_shop% ("Northern Lights"), Bjarki Eiríksson is a proud citizen of the newly independent Republic of Iceland. He became a close friend of Teddy Baumeister during the construction of the Secret Test Kitchen, bonding over a shared passion for flavor. While he admires Teddy's wild innovations, Bjarki is a craftsman at heart, believing in the perfection of classic recipes made with quality local ingredients. He is one of your most appreciative partners.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_san_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The history of Baumeister Confections is a story Helen has known all her life. As the niece of one of the company's very first shop partners, Walinda McMurtry, she views her role as proprietor of %san_shop% as a legacy to uphold. She is professional, elegant, and a traditionalist, believing that a classic recipe and a sterling reputation are the most valuable assets a business can have. Helen has been a longtime advocate for Alex Fletcher with her corporate and personal missions throughout all the years.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tok_mountainkeep_met_not_unlocked_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A friendly American pilot with the U.S. Army Air Forces, Thomas Hardy is stationed in Japan as part of the post-war occupation. He was a squadron mate and close friend of Sean Fletcher's during the war and holds fond memories of their time flying together. He speaks of Sean with great respect but tragically believes he was lost during their final mission.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tok_mountainkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A friendly American pilot with the U.S. Army Air Forces and former squadron mate of Sean Fletcher, Thomas Hardy is stationed in Japan as part of the post-war occupation. He is the eyewitness whose testimony provided the first concrete evidence that Sean may have survived. Despite his official report being suppressed by their liaison officer, Wolf Fleischer, Hardy maintained his account of seeing his good friend Sean's parachute open. His information gave Alex the crucial lead she needed, directly implicating Fleischer and turning her search into a targeted investigation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tor_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born in Hamilton and having moved to Toronto at 18 years of age, Abbey is a clerk at the bustling %tor_market%, though one gets the sense she might prefer a quieter line of work. For being somebody who's young and naturally shy, she tends to the counters with a quiet diligence, handling the invoices for the market's owner day in and day out. While she often seems flustered by loud and aggressive waterfront traders, she knows the inventory better than anyone. She seems particularly awed by the international clientele that the new chocolate factories have brought to her door.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tor_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">After vowing she would never get stuck in the quiet life of her small Ontario town, Kerrie Taylor worked her way through a series of city jobs before finally saving enough to open Wychwood Sweets. Her shop is a direct reflection of her personality: stylish, witty, and always looking for what's next. Having a low tolerance for the classics, she's most excited by innovative, novel creations that will get her well-connected customers talking. She expects her suppliers, including you, to keep things interesting.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_02_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A lifelong enthusiast of Baumeister Confections, Surea Siqueira spent her formative years working in a popular chocolate shop in Cayenne. Having learned the trade from the ground up, she is now traveling the world on a mission of her own: to study the supply chains and business practices of the world's best confectioners. Her ultimate goal is to return home to Brazil and establish her own chain of high-end pâtisseries.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_03_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Rahim Talib is an economics student from Lahore, currently completing his graduate studies in London. As part of the first generation of young professionals of a newly independent Pakistan, he is deeply patriotic and driven by a desire to contribute to his nation's development. He is a thoughtful and observant young man who often spends his time in cafés, studying trade reports and writing letters home. His travels are focused on his education, though he hopes to see more of the world before returning to begin his career in public service.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_04_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Pamela Harrington is a freelance journalist from Boston, Massachusetts, whose assignments take her to every corner of the globe. With a friendly demeanor and a genuine curiosity, she has a knack for getting people to open up to her. Though she has covered everything from post-war reconstruction efforts to local cultural festivals, she is always most interested in the personal stories of the people she meets along the way.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_07_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A charismatic and ambitious oilman from Houston, Texas, Rufus Loddington is a key player in the booming post-war energy sector. Having built his fortune on shrewd investments and bold risks, he now travels the globe negotiating drilling rights and securing contracts. He is a man who enjoys the fruits of his labor, and has a reputation as a tough but fair negotiator with a larger-than-life personality.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_11_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A well-known Italian socialite with friends in nearly every major port, Agostina Calvino travels to maintain her extensive network of contacts, often for charitable causes. She is charming, witty, and an expert at navigating social situations. She is always impeccably dressed and has a remarkable memory for names and faces.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_ulu_hutkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A young Anangu woman and the proprietor of her self-titled lime outpost, Kowaki is watchful and direct in her dealings. She has built her business on a foundation of self-sufficiency, using a professional and guarded manner as a clear shield. She knows the true value of the native ingredients she harvests from her land and expects those she trades with to be serious and respectful. Trust is not something she gives easily, and it is clear she is a survivor who operates entirely on her own terms.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_ulu_rockkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A former stockman and WWII veteran, Douglas McInnes is now the manager of a remote pastoral lease near %ulu_rock%. He's a gruff, no-nonsense man who knows the land in a practical sense - waterholes and tracks - but has little patience for anything else. A product of the White Australia Policy, his views on the local Anangu are deeply paternalistic - he sees 'looking after them' as part of his job, a duty that often comes across as condescending and dismissive.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_wel_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The proprietor of %wel_shop% in %wellington%, Karolyne Radke is one of Baumeister Confections' most crucial and unconventional retail partners. The middle child of German immigrants - a geologist father and a botanist's assistant mother - Karolyne was born and raised in New Zealand, inheriting her parents' analytical mind but none of their quiet reservation. Possessing a restless intellect and an innate impatience for inefficiency (which would be diagnosed as ADHD today), she thrives on the novelty and challenge presented by the company's %exotic% product line. In her leisure time, Karolyne is an avid tramper, finding a rare sense of peace in the strenuous solitude of the hills surrounding %wellington%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_shop% has been a Zürich institution for years, run by the dependable Analiese Rausis. As a firm believer in time-honored Swiss quality, she was the first to recognize the potential in your new enterprise, becoming your very first retail partner. She values consistency and tradition, always offering a warm welcome and a fair price to the chocolatiers she trusts. Having watched your business grow from the very beginning, Analiese expects nothing less than best for anything bearing the Baumeister name, with her shop remaining your most reliable port of call in Europe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_allspice_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Allspice is the dried, unripe berry of the Pimenta dioica tree, native to the Greater Antilles, southern Mexico, and Central America. It was given its name in the 17th century by the English, who thought it combined the flavors of cinnamon, nutmeg, and cloves. The spice is a key ingredient in Caribbean cuisine, most notably in jerk seasoning.&lt;br&gt;&lt;br&gt;Its complex, warm, and aromatic profile makes it a versatile spice in confectionery. When paired with chocolate, allspice introduces a medley of warm, woody notes that can add a comforting, autumnal feel to infusions and truffles, bridging the gap between sweet and spicy.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_almond_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to the Middle East, the almond is one of the earliest domesticated tree nuts. References to almonds appear in texts dating back thousands of years, and they were a prominent ingredient in the breads served to Egyptian pharaohs. Their journey to Europe was along the Silk Road.&lt;br&gt;&lt;br&gt;Almonds possess a mild, buttery flavor and a firm, crunchy texture that holds up well when enrobed in chocolate. When ground into a fine paste with sugar, they form marzipan or almond paste, a classic confectionery filling. The nut's subtle flavor allows it to pair well with both milk and dark chocolate without overpowering the cacao's nuances.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_anise_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Anise, or aniseed, is a flowering plant in the celery family native to the eastern Mediterranean region and Southwest Asia. Its flavor and aroma come from its essential oil, anethole, which gives it a characteristic licorice-like taste. It is one of the oldest-known cultivated spices, used by ancient Romans to flavor cakes served at the end of feasts to aid digestion.&lt;br&gt;&lt;br&gt;In chocolate making, its strong, distinctive flavor is used sparingly but effectively. The sweet, aromatic, and slightly spicy notes of anise create a bold contrast with dark chocolate, resulting in a sophisticated and memorable confection often found in European specialty shops.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_amaretto_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Amaretto is a sweet, almond-flavored Italian liqueur. Its name is a diminutive of the Italian word "amaro," meaning "bitter," indicating its flavor origins from the bitter almond. Despite its prominent almond taste, it is often made from a base of apricot pits or peach stones, which contain the same compound that gives almonds their characteristic flavor. With its distinct, sweet, and nutty profile, amaretto is a classic choice for pairing with both coffee and chocolate, lending a flavor reminiscent of marzipan to any confection it is added to.</Data></Cell>
+	</Row>
+<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_apple_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Originating from the mountains of Central Asia, the apple is one of the most widely cultivated tree fruits in the world. As a fruit that traveled along the Silk Road, it holds a significant place in the mythology and culture of many societies. This global cultivation continues today, with nations like New Zealand recognized as one of the world's primary growers, exporting a wide variety of crisp, high-quality apples.&lt;br&gt;&lt;br&gt;In confectionery, the apple's key contribution is often its tartness, which provides a bright, acidic contrast to the sweetness of milk chocolate and caramel. When cooked, its flavor mellows and deepens, making it a classic partner for warm spices like cinnamon and nutmeg, evoking a comforting, autumnal feel in any confection.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_bal_cacao_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Grown in the volcanic soil of the Kintamani highlands in Bali and on other Indonesian islands like Lombok and Java, this cacao is a unique hybrid with Criollo heritage. Its flavor profile is highly distinctive, often featuring notes of sweet fruit and a subtle, smoky finish attributed to the local drying techniques. You were introduced to this bean by %bal_xxxkeep%, the proprietor of the %bal_plantation%, who only grants access to those who demonstrate exceptional creative skill. It is prized for use in exotic confections where its unique character can shine.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_bal_coffee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Balinese coffee, primarily Arabica, is grown in the Kintamani highlands alongside citrus fruits, which can subtly influence its flavor profile. The most distinctive feature of Balinese coffee production is the traditional processing method known as "giling basah," or wet-hulling. This process, unique to Indonesia, results in a coffee with a heavy body, muted acidity, and a smooth, syrupy mouthfeel. It often carries earthy and sometimes spicy or chocolatey notes, making it a bold and distinctive component in coffee blends.&lt;br&gt;&lt;br&gt;You were introduced to this bean by %bal_xxxkeep%, the proprietor of the %bal_plantation%, who only grants access to those who demonstrate exceptional creative skill.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_banana_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Originating in Southeast Asia, the banana is botanically a berry and was one of the world's first cultivated fruits. The familiar yellow Cavendish banana became the dominant variety for global export in the mid-20th century due to its resilience to disease and transport, with large-scale plantations in Central and South America supplying much of the world's demand. The banana's creamy texture and distinct, tropical sweetness is a cornerstone of comfort desserts, pairing exceptionally well with the rich notes of caramel and nuts. When used in a ganache or filling, it imparts a smooth, luscious quality that complements both milk and dark chocolate.&lt;br&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_bel_cacao_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A unique varietal cultivated by remote Maya tribes deep in the highlands of Central America, and brought to the global market through a partnership with %bel_hutkeep% in %belize%, Belize.&lt;br&gt;&lt;br&gt;During his time in exile, %main_sean% learned the traditional methods of cultivating these beans, which are noted for their earthy, slightly smoky flavor profile and intense, bitter and deep lingering finish. %bel_cacao% is considered a rare and exotic ingredient, perfect for creating bold, premium confections.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_blackberry_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The blackberry is an edible fruit produced by many species in the Rubus genus, a member of the rose family. It has a long history of being foraged from the wild across temperate regions of the Northern Hemisphere, with evidence of its consumption by humans dating back thousands of years. Technically an aggregate fruit, it is composed of many small "drupelets," each containing a single seed.&lt;br&gt;&lt;br&gt;Blackberries have a deep, complex flavor that is both sweet and tart, with earthy and sometimes wine-like notes. This robust profile allows them to stand up to the intensity of dark chocolate, where their natural acidity cuts through the richness of the cacao. Their dark purple juice also creates visually striking and richly flavored ganaches.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_blueberry_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to North America, blueberries are one of the few fruits that are naturally blue in color. For centuries, they were a staple food for Native American tribes, who gathered the wild berries for consumption, preservation, and medicinal use. The commercial cultivation of blueberries is a relatively recent development, only beginning in the early 20th century.&lt;br&gt;&lt;br&gt;Blueberries have a mild, gentle sweetness with just a hint of tartness, making them a less assertive fruit than their berry relatives. This subtlety allows them to pair beautifully with the creamy notes of white and milk chocolate, adding a delicate fruity layer without overpowering the confection. Their flavor often intensifies when cooked, making them ideal for infused fillings.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_bog_cacao_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sourced from the foothills of the Andes near %bogota%, this Colombian cacao is a Nacional varietal. It is known for its complex and aromatic qualities, often presenting delicate floral and nutty notes with very little bitterness. The beans from the %bog_plantation%, managed by %bog_plantationkeep%, are particularly sought after for their use in high-quality infusions, where their subtle flavors can be carefully paired with complementary spices and fruits.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_bog_coffee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Colombia is one of the world's largest producers of coffee, with its Arabica beans being a global benchmark for quality. Grown in the high altitudes of the Andes, the beans develop a classic, well-balanced profile. Colombian coffee is prized for its bright acidity, medium body, and nutty undertones. It is often described as a "clean" and consistent cup, making it a reliable and high-quality choice for a wide range of coffee products, from a simple cup a joe to more complex, flavored blends.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_brandy_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Brandy is a spirit produced by distilling wine or a fermented mash of other fruits. The term comes from the Dutch "brandewijn," meaning "burnt wine." While fruit brandies are common, the most famous varieties, such as Cognac and Armagnac, are made from grapes and aged in wooden casks. This aging process imparts complex aromas and flavors of fruit, oak, and spice. When paired with chocolate, brandy's warmth and sophisticated fruit notes complement the cacao, making it a traditional and highly regarded choice for filling liqueur-filled chocolates and truffles.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_butter_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Butter is a dairy product made from the fat and protein components of churned cream. It has been used as a food for millennia, dating back to the earliest domestication of animals. In confectionery, butter is a versatile workhorse. It adds richness and a smooth mouthfeel to caramels and toffees, and its high fat content is crucial for the texture of many baked goods. It can also be used in certain ganaches to provide a softer set and a distinct, rich dairy flavor that complements both milk and dark chocolate.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_cacao_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The seed of the Theobroma cacao tree, whose name translates to "food of the gods," this is the heart and soul of all chocolate. Originating in Mesoamerica, it was consumed for centuries by the Mayans and Aztecs as a bitter, spiced beverage.&lt;br&gt;&lt;br&gt;After its introduction to Europe in the 16th century, the addition of sugar made it a popular drink among the aristocracy. The key innovations of the 19th century—the separation of cocoa solids and cocoa butter, and the "Dutch process" for reducing acidity—paved the way for the creation of solid eating chocolate. As master chocolatiers know, different regions yield beans with distinct flavor profiles, a fact central to the creation of high-quality varietal chocolates.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_caramel_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Caramel is a confection created by heating any of a variety of sugars until they undergo a process known as caramelization. At temperatures around 170°C (340°F), the sugar molecules break down and re-form into compounds with a characteristic rich brown color and deep, nutty flavor. The process must be carefully controlled to prevent burning.&lt;br&gt;&lt;br&gt;Soft caramels, used as fillings, are made by adding milk or cream, butter, and vanilla after the sugar has caramelized. The combination of sweet, slightly burnt sugar notes and a soft, chewy texture makes caramel one of the most popular and classic partners for chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_cardamom_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Known as the "Queen of Spices," cardamom is a pungent, aromatic spice native to the Indian subcontinent. It belongs to the ginger family and has been a prized commodity in the spice trade for thousands of years. It was used extensively in ancient Rome and is a key ingredient in both savory and sweet dishes across the Middle East, India, and Scandinavia, most notably in chai tea blends and Nordic pastries. In confectionery, cardamom's complex flavor - a mix of minty, citrusy, and smoky notes - offers a sophisticated and exotic counterpoint to the richness of dark chocolate.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_cashew_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to northeastern Brazil, the cashew is the seed of the cashew apple. The nut itself grows in a kidney-shaped shell that contains caustic, allergenic resins, requiring careful roasting or steaming before it can be safely handled and consumed. This complex processing contributes to its relative cost compared to other nuts.&lt;br&gt;&lt;br&gt;Cashews are prized for their soft, buttery texture and mild, sweet flavor. Their inherent creaminess makes them a versatile ingredient in confections, pairing well with both milk and dark chocolate, and they are often used to create a rich, smooth nougat or praline filling.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_cherry_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The sweet cherry, of which the Bing variety is a famous cultivar, originated in the region between the Black and Caspian Seas. Cherries have been enjoyed for centuries, cultivated by the ancient Greeks and Romans, who spread them throughout their empire. They are a member of the rose family, a relative of almonds, peaches, and plums.&lt;br&gt;&lt;br&gt;The classic pairing of cherry and chocolate is a cornerstone of confectionery, most famously in the Black Forest gâteau and the cherry cordial. The fruit's bright tartness and deep, sweet flavor provide a perfect contrast to the bitterness of dark chocolate, creating a rich and romantic combination ideal for infusions and truffles.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_cinnamon_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Cinnamon is a spice obtained from the inner bark of several tree species from the genus Cinnamomum. It is one of the oldest spices known to humanity, mentioned in ancient Egyptian texts and the Old Testament. For centuries, Arab traders controlled the cinnamon trade, keeping its source in Sri Lanka a closely guarded secret to maintain their monopoly and its exorbitant price.&lt;br&gt;&lt;br&gt;Its warm, sweet, and aromatic flavor is a staple in baking and confectionery worldwide. Cinnamon's comforting spice notes pair exceptionally well with both milk and dark chocolate, and it is a fundamental ingredient in many spiced coffee blends, where its familiar warmth adds a sense of cozy indulgence.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_clove_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloves are the aromatic flower buds of a tree in the myrtle family, native to the Maluku Islands in Indonesia, historically known as the "Spice Islands." The spice trade in cloves was dominated by the Dutch for centuries, and their value was once so high that they were literally worth their weight in gold. The name comes from the Old French "clou," meaning nail, due to the bud's shape.&lt;br&gt;&lt;br&gt;Cloves have a very intense, pungent, and sweet flavor, and a little goes a long way in confectionery. Their warm, medicinal notes can add a powerful and exotic dimension to dark chocolate infusions and spicy coffee blends, often used in concert with other "warm" spices like cinnamon and nutmeg to create complex, autumnal flavor profiles.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_cocoa_butter_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Cocoa butter is the natural, pale-yellow vegetable fat extracted from the cacao bean. It is one of the two primary components of chocolate liquor, the other being cocoa solids. Cocoa butter is unique among fats for its sharp and stable melting point, which is just below human body temperature. This specific property is what gives solid chocolate its signature "melt-in-your-mouth" quality and firm snap. It is the sole fat used in high-quality chocolate, and it is the primary ingredient, along with sugar and milk solids, in the creation of white chocolate, which contains no cocoa solids at all.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_coconut_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The coconut is the fruit of the coconut palm, often called the "tree of life" for its incredible versatility. Native to the tropical regions of the Indo-Pacific, every part of the coconut has been used by coastal and island cultures for millennia, providing food, fuel, and building materials.&lt;br&gt;&lt;br&gt;To harvest the fruit, workers climb the tall palm tree, cut off the ripe coconuts, and bring them down to the ground. Once the outer layer is removed, the coconut shell is cracked open, revealing the white, fleshy meat and the refreshing coconut water. Coconut trees take about six to ten years to produce fruit, but once established, they can yield up to 50 coconuts per year. The dried, shredded flesh provides a distinct chewy texture, while its creamy notes complement both milk and dark chocolate varieties.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_cream_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Cream is a dairy product composed of the higher-fat layer skimmed from the top of milk before homogenization. In many countries, it is graded according to its total butterfat content. Cream is absolutely fundamental to the creation of ganache, the smooth and luscious filling at the center of most chocolate truffles. When heated and combined with chopped chocolate, the fat in the cream forms a stable emulsion with the cocoa solids and cocoa butter, resulting in the silky, melt-in-your-mouth texture that is the hallmark of a high-quality truffle.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_currant_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The redcurrant is a member of the genus Ribes, native to parts of Western Europe. These small, jewel-like berries grow in drooping clusters and have a translucent skin. Due to their high levels of pectin, they have traditionally been a key ingredient in jams, jellies, and sauces in European cuisine, particularly in France, Germany, and Britain, where their sharp flavor is prized. The redcurrant's defining characteristic is its bright, sharp acidity. Its intensely tart flavor provides a powerful "zing" that acts as a dramatic counterpoint to the sweetness of chocolate, particularly white and milk varieties. It is often used to create a vibrant, palate-cleansing element in rich ganaches and fillings.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_date_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The fruit of the date palm tree, dates are one of the oldest cultivated fruits in the world, with their history tracing back to Mesopotamia and ancient Egypt. For millennia, they have been a staple food in the Middle East and North Africa, prized for their high sugar content, which provided a vital source of energy and allowed them to be dried and stored for long periods.&lt;br&gt;&lt;br&gt;Dates possess an intense, honeyed sweetness with deep notes of caramel and a soft, chewy texture. This natural sweetness makes them a perfect partner for the bitterness of high-cacao dark chocolate. Often paired with nuts like almonds or pistachios, dates can provide both the sweet and textural core of a truly decadent exotic confection.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_dou_cacao_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Cultivated at the %dou_plantation% in Cameroon, this Trinitario varietal is known for its robust, classic "chocolatey" base flavor with a strong, earthy finish.&lt;br&gt;&lt;br&gt;Your primary supplier for this bean is %dou_plantationkeep%, a passionate farmer who weathered significant hardship during the post-war period to bring his crop back to the global market. Its reliable, low-acidity and full-bodied profile makes it an excellent base for dark chocolates and confections where a powerful and straightforward cacao flavor is desired.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_espresso_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Espresso is not a type of bean, but rather a method of brewing coffee that originated in Italy in the early 20th century. It involves forcing a small amount of nearly boiling water under high pressure through finely-ground coffee beans.&lt;br&gt;&lt;br&gt;The beans used for espresso are typically a blend of Arabica and Robusta, and are often roasted to a darker level than beans intended for other brewing methods. This process results in a concentrated coffee with a viscous, syrupy body, a rich flavor, and a layer of reddish-brown foam on top known as "crema." Its intense flavor is essential for creating powerful coffee-flavored truffles&lt;br&gt;and confections.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_fig_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to the Mediterranean and western Asia, the fig is another fruit with a rich ancient history, cultivated by the Sumerians, Egyptians, and Greeks. It holds a place of prominence in many religions and cultures and is unique in that its flowers bloom internally, within the fruit itself. Figs can be eaten fresh or dried, a preservation method that concentrates their sweetness.&lt;br&gt;&lt;br&gt;Figs have a unique flavor that is earthy, mildly sweet, and honey-like, with a jammy texture punctuated by the slight crunch of its numerous tiny seeds. This sophisticated, earthy sweetness pairs exceptionally well with the complex, fruity notes of dark chocolate, creating an elegant, Mediterranean-inspired confection.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_ginger_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Ginger is a flowering plant whose rhizome, or root, is widely used as a spice and a folk medicine. Originating in Maritime Southeast Asia, it was one of the first spices to be exported from the region, arriving in Europe with the spice trade. Its pungent, spicy, and warming "heat" provides a vibrant contrast to the deep flavor of dark chocolate. Candied ginger, where the root is boiled in sugar syrup, is a popular confection in its own right. In infusions and truffles, it adds a zesty, aromatic kick that cuts through the richness of the cacao.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_grand_marnier_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Grand Marnier is a renowned French brand of orange-flavored liqueur. Its signature product, Cordon Rouge, was created in 1880 by Louis-Alexandre Marnier Lapostolle.&lt;br&gt;&lt;br&gt;The liqueur is a unique blend of Cognac brandy, distilled essence of bitter orange, and sugar. This combination results in a spirit with a complex flavor profile that is both sweet and intensely aromatic, with the deep warmth of aged brandy and the bright, fragrant bitterness of orange peel. It is considered one of the classic pairings for dark chocolate, as the orange and brandy notes both enhance and contrast with the flavor of the cacao.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_hav_coffee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Cuban coffee cultivation has a long history, with beans being grown in the Sierra Maestra mountains for centuries. The beans are typically of the Arabica varietal, producing a coffee that is characteristically strong, dark-roasted, and full-bodied, yet surprisingly smooth with low acidity. It is famously prepared as a "café cubano" (part of your recipe book, named "%c02%"), a shot of espresso whipped with a generous amount of sugar to create a thick, sweet foam known as "espumita." This bold flavor profile makes it an excellent base for rich and sweet coffee confections.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_hazelnut_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Hazelnuts, also known as filberts, have been harvested from the wild since ancient times. Evidence of their consumption dates back to the Mesolithic era in Europe. They are particularly associated with Italian confectionery, especially from the Piedmont region, where they are a key component of gianduja—a smooth paste of roasted ground hazelnuts, cocoa, and sugar. This paste was famously invented in Turin during the Napoleonic era as a way to stretch a limited supply of expensive cocoa.&lt;br&gt;&lt;br&gt;The distinct, rich, and slightly sweet flavor of roasted hazelnuts makes them a perfect partner for milk chocolate, creating a classic, luxurious combination.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_honey_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Honey is a sweet, gooey food substance produced by bees and some related insects. As one of the earliest sweeteners used by humans, with evidence of its collection depicted in cave paintings from 8,000 years ago, it was considered a food of the gods in many ancient cultures. Its flavor and color vary dramatically depending on the nectar source, ranging from light and floral to dark and robust.&lt;br&gt;&lt;br&gt;In confectionery, honey is valued not only for its sweetness but also for its ability to retain moisture, which helps keep ganaches and fillings smooth and soft. Its unique floral or earthy notes can add a layer of complexity to a finished chocolate.&lt;br&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_kahlua_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Kahlúa is a popular coffee-flavored liqueur that originated in Veracruz, Mexico, in 1936. The name is said to mean "House of the Acolhua people" in the Veracruz Nahuatl language. It is crafted from a base of rum, sugar, and 100%% Arabica coffee beans. The resulting liqueur is sweet and viscous, with a rich and dominant coffee flavor complemented by notes of roasted chestnut and sweet butter.&lt;br&gt;&lt;br&gt;Its natural affinity for coffee and sweet flavors makes it an extremely popular ingredient for both coffee-based beverages and for adding a smooth, sweet coffee kick to chocolate ganaches and fillings.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_kon_coffee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Grown on the slopes of the Hualalai and Mauna Loa volcanoes in Hawaii, Kona coffee is one of the most renowned and sought-after coffees in the world. The unique microclimate - a combination of sunny mornings, cloudy afternoons, and mild nights - creates ideal growing conditions.&lt;br&gt;&lt;br&gt;Sourced for Baumeister Confections from the %kon_plantation%, these beans are of the Typica varietal, known for producing a coffee that is smooth and full-bodied with a complex aroma and a delicate, often slightly sweet and nutty finish with very low acidity.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_lavender_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to the Mediterranean region, lavender is an aromatic herb from the mint family, prized since antiquity. The ancient Romans used it to scent their baths, laundry, and homes, its name deriving from the Latin word "lavare," meaning "to wash." While it is most famous for its use in perfumes and essential oils, particularly from the Provence region of France, its culinary use has a long history in European cuisine.&lt;br&gt;&lt;br&gt;Lavender imparts a sweet, intensely floral flavor with hints of lemon and citrus. It is a powerful ingredient that must be used with a delicate touch to avoid an overpowering, soapy taste. When balanced correctly, it adds a sophisticated, herbaceous, and exotic note, creating a unique and memorable aromatic experience.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_lemon_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Believed to have originated in Northeast India or China, the lemon is a hybrid citrus fruit known for its high concentration of citric acid. It was introduced to Europe via the Mediterranean by Arab traders around the 1st century AD.&lt;br&gt;&lt;br&gt;Valued for centuries for its culinary and medicinal properties, its zest contains potent aromatic oils that provide a bright, intense flavor. In chocolate making, the sharp acidity of lemon juice and the fragrance of its peel provide a classic contrast, cutting through the richness of cocoa butter to create a refreshing and balanced confection.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_lim_cacao_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Peru is considered a cradle of cacao, home to a vast genetic diversity of beans, including rare and highly sought-after white Porcelana beans. The cacao cultivated near the coastal region of %lima% benefits from the unique desert climate, producing beans with a distinct flavor profile.&lt;br&gt;&lt;br&gt;The varietal from the %lim_plantation% is noted for its bright, fruity acidity and subtle nutty undertones. It has very little bitterness, making it ideal for crafting high-end truffles and exotics where the complex and delicate nuances of the cacao are the star of the show.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_lime_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Unlike common Persian or Key limes, the "Wild Limes" prized by top confectioners often refer to native Australian citrus species. Varieties like the Desert Lime (Citrus glauca) and the iconic Finger Lime (Citrus australasica) have been a source of food and medicine for Indigenous Australians for thousands of years.&lt;br&gt;&lt;br&gt;The Finger Lime is particularly notable for its unique vesicles, often called "citrus caviar," which provide a burst of intense, aromatic lime flavor. This potency makes Australian limes a sought-after ingredient for creating high-end chocolates with a uniquely sharp and complex citrus finish that cannot be replicated by other varieties.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_lychee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The lychee is a subtropical fruit native to the provinces of Guangdong and Fujian in southeastern China, where its cultivation has been documented for thousands of years. It was considered a great delicacy of the Chinese Imperial Court, famously transported at great expense to the capital for the emperor's favorite concubine. The fruit is known for its rough, reddish-pink skin which is peeled away to reveal a sweet, translucent white flesh.&lt;br&gt;&lt;br&gt;Lychee possesses a unique and delicate flavor profile that is sweet, floral, and perfumed, with notes often compared to rose or grape. Its subtle nature makes it a sophisticated choice for confectionery, pairing best with the creamy sweetness of white chocolate which allows its exotic, floral aroma to shine through without being overpowered.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_macadamia_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The macadamia is a genus of trees indigenous to Australia, making it one of the few major commercial food crops native to the continent. Its shell is notoriously difficult to crack, a fact that delayed its commercial viability until efficient processing methods were developed in the mid-20th century. Subsequently, Hawaii became a major producer, establishing the macadamia nut as a globally recognized luxury product.&lt;br&gt;&lt;br&gt;With a high fat content, the macadamia has a rich, buttery flavor and a smooth, creamy texture that is softer than most nuts. Its delicate, subtle sweetness makes it an ideal partner for white or milk chocolate, which complements its luxurious profile without overwhelming its unique taste.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_mango_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to South Asia, the mango has been cultivated for over 4,000 years and is deeply intertwined with the culture and religion of the region, where it is often called the "king of fruits." A member of the same botanical family as cashews and pistachios, it is celebrated for its incredible diversity, with hundreds of varieties grown in tropical climates around the globe.&lt;br&gt;&lt;br&gt;The mango's flavor is a luscious tropical sweetness balanced by a slight tartness and complex, sometimes resinous notes. This bold profile allows it to stand up to the intensity of dark chocolate, creating a vibrant pairing. It is also often combined with spices like cloves or chili, where its fruity sweetness provides a perfect counterpoint to the warmth of the spice.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_maple_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Maple syrup is a sweetener made from the circulated fluid, or sap, of maple trees. It is a uniquely North American product and quintessentially Canadian, first collected and processed by the Indigenous peoples of the region long before the arrival of European colonists.&lt;br&gt;&lt;br&gt;The process involves tapping trees, collecting the watery sap, and boiling it down to concentrate the sugars and develop its characteristic rich flavor. It takes approximately 40 gallons of sap to produce a single gallon of syrup. Its distinct, earthy, and slightly woody sweetness makes it a premium flavoring for truffles and specialty coffee blends.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_matcha_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Matcha is a finely ground powder of specially grown and processed green tea leaves, traditionally used in East Asia. The green tea plants for matcha are shade-grown for about three weeks before harvest, a process that increases their chlorophyll and theanine content, resulting in its vibrant green color and unique flavor. The leaves are then stone-ground into a delicate powder, which is central to the traditional Japanese tea ceremony.&lt;br&gt;&lt;br&gt;With a complex flavor that is grassy, vegetal, and slightly sweet with an umami finish, matcha has become a popular ingredient in modern global confectionery. It pairs exceptionally well with the creamy sweetness of white chocolate, which balances matcha's earthy notes and allows its striking green color to create visually stunning confections.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_milk_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A foundational dairy product, milk provides both fat and protein. While milk has been consumed for millennia, its successful incorporation into solid chocolate is a relatively recent innovation of the 19th century.&lt;br&gt;&lt;br&gt;The breakthrough occurred in Switzerland in 1875, when Daniel Peter combined cacao with Henri Nestlé's invention of condensed milk. This process allowed the moisture content to be reduced enough to blend smoothly with cocoa butter, creating the milder, creamier, and sweeter confection that would become known as milk chocolate, vastly expanding the appeal and market for confectionery worldwide.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_mint_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Mint encompasses a large family of aromatic herbs, with spearmint and peppermint being the most common in culinary use. It has been used for millennia, with dried mint leaves found in Egyptian pyramids dating back to 1,000 BC.&lt;br&gt;&lt;br&gt;The combination of mint and chocolate gained widespread popularity in the 20th century, particularly in Europe and North America. The key to this pairing is menthol, the organic compound responsible for mint's characteristic cooling sensation. This "cool" feeling provides a refreshing contrast to the rich, melting sensation of chocolate, creating a popular after-dinner confection intended to cleanse the palate.&lt;br&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_orange_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The sweet orange, a hybrid of ancient citrus species from Southeast Asia, has become one of the world's most widely cultivated fruits. It spread along trade routes to Europe, where it became a symbol of wealth and status, famously grown in the ornate orangeries of aristocratic estates like Versailles.&lt;br&gt;&lt;br&gt;The pairing of orange and chocolate is a timeless classic. The aromatic oils in the orange peel, rather than the juice, are the key to this combination, providing a sweet, floral citrus note that perfectly complements the deep flavor of cacao. This is often achieved by infusing chocolate with orange oil or by using candied orange peel.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_nutmeg_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Nutmeg is the seed of the Myristica fragrans tree, an evergreen native to the Banda Islands of Indonesia, also known as the Spice Islands. For centuries, the Dutch held a brutal monopoly on the nutmeg trade, making the spice incredibly valuable and rare in Europe. It is unique in that it produces two separate spices: nutmeg from its seed, and mace from the seed's reddish outer covering.&lt;br&gt;&lt;br&gt;With its warm, sweet, and nutty flavor, nutmeg is a classic "warm" spice, often used alongside cinnamon and cloves. It pairs well with milk chocolate and cream-based fillings, adding a comforting, aromatic quality perfect for holiday-themed confections and spiced coffees.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_passionfruit_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to southern Brazil, Paraguay, and northern Argentina, the passionfruit is the fruit of a species of passion flower. Its name was given by 16th-century Spanish Catholic missionaries who saw Christian symbols in the flower's unique structure, representing the Passion of Christ. It is now cultivated in tropical and subtropical areas worldwide, with Australia being a notable producer.&lt;br&gt;&lt;br&gt;The fruit's pulp is highly aromatic and possesses an intense tartness that is its defining culinary characteristic. In confectionery, this sharp, tropical acidity is prized for its ability to cut through the richness of cream and chocolate, providing a powerful and vibrant flavor burst that can brighten and balance ganaches and fillings.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_peanut_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Despite being called a nut, the peanut is technically a legume, native to South America. It was widely cultivated by the Aztecs and Incas.&lt;br&gt;&lt;br&gt;While peanuts have been used in various savory cuisines for centuries, their pairing with chocolate is a distinctly American innovation from the early 20th century. The salty, savory, and robust roasted flavor of peanuts provides a powerful contrast to the sweetness of milk or dark chocolate. This combination became immensely popular and is now a cornerstone of the mass-market candy bar industry, celebrated for its satisfying blend of sweet,&lt;br&gt;salty, and textural crunch.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_pecan_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The pecan is a species of hickory native to the southern United States and northern Mexico. The name is of Algonquian origin, referring to any nut requiring a stone to crack. It was a vital food source for Native American tribes long before it was commercialized.&lt;br&gt;&lt;br&gt;Pecans have a rich, buttery flavor that is sweeter and more delicate than that of the related walnut. They are a cornerstone of Southern American baking, most famously in pecan pie. In chocolate making, they are often paired with caramel or toffee, where their distinctive flavor and satisfying crunch complement the sweet, chewy elements of the confection.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_pepper_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The Cayenne pepper is a moderately hot chili pepper believed to have originated in the region of Cayenne, French Guiana. Like all chili peppers, it is a fruit of the Capsicum genus, and it was a key part of the Columbian Exchange, spreading rapidly into cuisines across the globe after being introduced to Europe. It is typically dried and ground into a fine powder to be used as a spice.&lt;br&gt;&lt;br&gt;The pairing of chili and chocolate has ancient roots in Mesoamerican cultures, which consumed cacao as a spicy, unsweetened beverage. The active component, capsaicin, provides a slow-building warmth that contrasts with the cool, melting sensation&lt;br&gt;of chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_pineapple_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A tropical fruit native to South America, the pineapple was a symbol of hospitality, wealth, and status in colonial Europe and America. Due to its rarity and the expense of importing it, a host who could present a fresh pineapple at a feast was displaying significant prestige. In the 20th century, Hawaii became a global center for pineapple cultivation and canning, making the fruit accessible worldwide. Pineapple has a distinctive tangy and sweet flavor with a fibrous texture. Its bright acidity provides a tropical counterpoint to rich chocolate, while dried or candied pineapple offers a chewy textural element.&lt;br&gt;&lt;br&gt;</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_pistachio_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to Central Asia and the Middle East, pistachios are one of the oldest flowering nut trees, with archaeological evidence suggesting their consumption as early as 6750 BC. They are recognizable by their beige shells and distinctively green and purple kernels.&lt;br&gt;&lt;br&t;Pistachios possess a unique flavor that is mild, slightly sweet, and has a distinct resinous or piney note. Their vibrant green color makes them visually appealing in confectionery, and they are famously used in nougat, baklava, and ice cream. When paired with chocolate, their subtle flavor works best with white or milk chocolate, which allows their delicate taste and color to stand out.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_powder_text</Data></Cell>
+	 <Cell><Data ss:Type="String">%powder% is not a single ingredient, but a finely ground, unsweetened blend of high-quality cocoa solids. Its primary function is to provide the traditional, velvety outer coating for chocolate truffles. This coating serves two purposes: it prevents the delicate ganache centers from melting on contact with one's fingers, and its intense, slightly bitter flavor provides the initial taste that gives way to the sweeter, richer filling within. A light, even dusting of this powder is the signature finishing touch that defines a classic truffle.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_pumpkin_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A member of the squash family, the pumpkin is native to North America and is one of the oldest domesticated plants, used for thousands of years. It was one of the "Three Sisters" of agriculture for many Native American tribes, grown alongside corn and beans. After its introduction to Europe, it became a global staple, but it remains most famously associated with North American autumn holidays.&lt;br&gt;&lt;br&gt;When cooked, pumpkin has a mild, earthy sweetness. Its true power in confectionery is unlocked when it is paired with its traditional companion spices: cinnamon, nutmeg, cloves, and ginger. This iconic "pumpkin spice" blend creates a warm, aromatic, and comforting flavor that is a perfect match for creamy white or milk chocolate truffle fillings.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_raspberry_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A member of the rose family, the raspberry is an aggregate fruit native to Europe and northern Asia. Historical records suggest it was gathered by early humans and first cultivated by the Romans. Its popularity grew in the Middle Ages, where it was prized in European gardens.&lt;br&gt;&lt;br&gt;The raspberry's appeal in confectionery lies in its distinct flavor profile, a complex balance of sweetness and a characteristic tartness. This bright acidity provides an excellent counterpoint to the creamy sweetness of white chocolate and the rich, deep notes of dark chocolate, making it a versatile ingredient for ganaches, fillings, and infusions.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_raisin_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Raisins are grapes that have been dried in the sun or through an industrial process. This practice dates back to ancient times, with records showing their consumption by the Egyptians, Greeks, and Romans, who valued them for their sweetness and long shelf-life. The drying process removes most of the water content, concentrating the sugars and flavors within the fruit. Raisins are a humble but classic ingredient as they provide a dense, chewy texture and a burst of concentrated, tangy sweetness, and are a cornerstone of "fruit and nut" combinations, offering a familiar and satisfying textural element.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_rose_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The use of edible roses in cuisine dates back thousands of years, with a particularly strong tradition in Middle Eastern and Persian cultures where rosewater is a staple flavoring. Candying, the process of preserving flowers in a sugar syrup, transforms the delicate petals into a sweet, crystalline confection. This was historically a luxury, a way to capture the fleeting essence of the flower. Your primary contact for this delicate ingredient is %zur_marketkeep% in %zurich%, who sources them from specialty artisans.&lt;br&gt;&lt;br&gt;Candied rose petals provide a subtle crunch and a sweet, perfumed, and distinctly floral flavor. They create a romantic and luxurious confection, pairing beautifully with both dark and white chocolate to form the centerpiece of a truly exotic treat.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_rum_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Rum is a distilled alcoholic beverage made from sugarcane byproducts, such as molasses, or directly from sugarcane juice, through a process of fermentation and distillation. Its origins are deeply tied to the Caribbean in the 17th century, where it became a major commodity in the colonial trade. The spirit's flavor profile can range from light and crisp to dark and richly sweet, often with notes of vanilla, caramel, and tropical fruit. Its inherent sweetness and molasses base make it a natural partner for dark chocolate, and it is a classic ingredient in bonbons and holiday fruitcakes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_saffron_text</Data></Cell>
+	 <Cell><Data ss:Type="String">By weight, saffron is the world's most expensive spice. It consists of the vibrant crimson stigmas of the saffron crocus, which must be painstakingly harvested by hand. Each flower produces only three stigmas, originating from the female reproductive part, and it takes thousands of flowers to produce a single ounce of the spice. It has been traded and used for over four millennia, prized for its golden hue, unique flavor, and medicinal properties.&lt;br&gt;&lt;br&gt;Saffron imparts a subtly bitter, hay-like, and floral flavor to foods. In confectionery, it is a luxury ingredient used to create exotic and visually stunning chocolates, where its flavor provides a complex and aromatic counterpoint to the sweetness of the chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_salt_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The practice of harvesting salt by evaporating sea water is an ancient one, critical to the development of civilizations for its role in food preservation and as a valuable trade commodity. Unlike refined table salt, sea salt often retains trace minerals from its source, which can contribute to a more complex flavor and a variety of crystal textures, such as the delicate flakes of Fleur de Sel. A sprinkle of coarse sea salt is not just a garnish but a key flavor component. It acts as a counterpoint to sweetness, enhancing the deep notes of caramel and dark chocolate by creating the beloved "sweet and salty" flavor profile.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_sesame_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sesame is one of the oldest oilseed crops known to humanity, with its cultivation dating back over 3,000 years. It was highly valued in ancient civilizations from Babylon to China for its oil, flavor, and purported medicinal properties.&lt;br&gt;&lt;br&gt;When toasted, sesame seeds develop a powerful, nutty, and slightly earthy flavor. They are a staple in many cuisines around the world, used to make tahini in the Middle East and as a garnish in East Asia. In confectionery, their strong, savory-nutty flavor provides a unique and sophisticated contrast to the sweetness of chocolate, particularly dark chocolate, and is often paired with other Asian flavors like ginger or wasabi.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_star_anise_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Star anise is the star-shaped fruit of a small evergreen tree native to southern China and Vietnam. Despite its name and similar flavor, it is not botanically related to anise. It is a cornerstone ingredient in Chinese cuisine, particularly as a component of five-spice powder, and is also the dominant flavor in the Vietnamese noodle soup, pho.&lt;br&gt;&lt;br&gt;Like anise, its flavor comes from the compound anethole, but star anise is considered more pungent, warmer, and spicier. Its potent, licorice-like flavor is a bold choice in confectionery, adding a distinctively warm and aromatic spice note to dark chocolate infusions and complex coffee blends, where its exotic character can be fully appreciated.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_strawberry_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The modern garden strawberry is a hybrid fruit, first bred in Brittany, France, in the 1750s by crossing a North American species with a Chilean species. Like the raspberry and cherry, it is a member of the rose family, a connection hinted at by its fragrant, floral aroma. The strawberry has since become one of the most popular berries in the world, synonymous with summer.&lt;br&gt;&lt;br&gt;The strawberry's flavor is a perfect balance of bright, fruity sweetness and a gentle tartness. This profile makes it a quintessential partner for chocolate of all kinds. The fresh acidity cuts through the richness of the cocoa butter, creating a classic, romantic pairing that is beloved in everything from simple chocolate-dipped fruit to sophisticated ganaches.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_sugar_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sugar, primarily sucrose, is a crystalline carbohydrate derived mainly from sugarcane and sugar beets. Once a rare and expensive luxury known as "white gold," its cultivation drove global trade and exploration for centuries. The industrialization of its refining process in the 19th century transformed it into a widely available staple.&lt;br&gt;&lt;br&gt;In confectionery, sugar is essential for balancing the inherent bitterness of cacao, and its crystallization properties are critical in determining the final texture of chocolates and candies, from the smooth snap of a bar to the chewy center of a caramel.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_sumac_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sumac is a reddish-purple powder made from the dried and ground berries of the wild sumac bush. It has been a staple spice in Middle Eastern and Mediterranean cuisine for thousands of years, used by the ancient Romans as a source of tartness long before lemons were widely available in Europe. It is a key ingredient in the spice blend za'atar. The flavor of sumac is its most prized quality: it is tangy, bright, and lemony, but without the harsh acidity of citrus juice. This unique, fruity tartness provides a surprising and exotic counterpoint to the sweetness of chocolate, cutting through the richness of dark cacao to add a zesty, unexpected kick.&lt;br&gt;</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_tan_coffee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">While Morocco is more famous for its mint tea, it has a long-standing coffee culture centered around its bustling cafés. The beans, typically imported from coffee-growing regions and then roasted locally, are prepared in the Turkish style - finely ground and brewed in a cezve. Moroccan coffee is often spiced with a blend of "ras el hanout" spices, which can include cinnamon, cardamom, and nutmeg. The coffee sourced for Baumeister Confections in Tangier reflects this tradition, offering a robust flavor with a uniquely spicy and aromatic character.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_tea_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Originating in China, black tea is made from the leaves of the Camellia sinensis plant. It is more oxidized than other tea types like green or oolong, a process which gives it a darker color and a more robust, malty flavor. Its journey to the West, particularly to Britain, made it a global commodity that influenced major historical events and shaped entire economies.&lt;br&gt;&lt;br&gt;The flavor of black tea can range from malty and earthy to floral and fruity, depending on its origin. The tannins in the tea provide a pleasant astringency that balances the creamy richness of a chocolate ganache. It is a classic choice for infusions, imparting a sophisticated, aromatic character to high-end truffles and exotics.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_toffee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Toffee is a confection made by caramelizing sugar or molasses along with butter, and occasionally flour. The mixture is heated to a high temperature, known in confectionery as the "hard crack" stage (149 to 154 °C or 300 to 310 °F), before being cooled to solidify. This results in a hard, brittle candy with a rich, buttery flavor. When broken into chips and mixed into chocolate, toffee provides a delightful textural contrast with its signature crunch and a sweet, buttery flavor that complements the chocolate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_turmeric_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A member of the ginger family, turmeric is a rhizome native to the Indian subcontinent and Southeast Asia. It has been a cornerstone of Ayurvedic medicine for thousands of years and is the spice that gives curry powder its characteristic golden-yellow color. Its role as a dye and a spice made it a valuable commodity in ancient trade.&lt;br&gt;&lt;br&gt;Turmeric has a warm, bitter, and earthy flavor with a peppery, mustard-like aroma. Its distinct earthiness adds an unexpected savory depth that can balance the sweetness of white chocolate or create a complex, wellness-inspired flavor profile in exotic confections, often paired with other spices like ginger and cardamom.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_vanilla_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Vanilla is the fruit of an orchid, the only member of its vast family to produce an edible product. It is native to Mexico, where it was first cultivated by the Totonac people. The Aztecs later acquired it and used it to flavor their cacao-based drink, "xocolatl." For centuries, all attempts to cultivate the plant outside of Mexico failed due to its symbiotic relationship with a specific local species of bee.&lt;br&gt;&lt;br&gt;Far from being a "plain" flavor, true vanilla is incredibly complex, with hundreds of aromatic compounds. In chocolate, it acts as a flavor enhancer, mellowing the bitterness of the cacao and rounding out the overall taste, adding a creamy, floral background note that is fundamental to modern confectionery.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_walnut_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The English walnut, also known as the Persian walnut, originated in the mountainous regions of Central Asia. It was traded along the Silk Road and highly prized by ancient civilizations, with its cultivation spreading throughout Asia and Europe. The state of California is now one of the world's primary commercial growers and exporters of walnuts.&lt;br&gt;&lt;br&gt;Walnuts have a distinctive, robust flavor that is earthy and rich, with a characteristic slight bitterness from their papery skin. This tannic quality provides a perfect counterbalance to very sweet confections like fudge, caramel, and brownies, where the nut's assertive flavor and crunchy texture prevent the final product from being one-dimensionally sweet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_wasabi_text</Data></Cell>
+	 <Cell><Data ss:Type="String">True wasabi is derived from the rhizome of the Wasabia japonica plant, a member of the same family as mustard and horseradish. It is notoriously difficult to cultivate, as it grows naturally along the beds of mountain streams in Japan. Due to its rarity and high price, most "wasabi" served outside of Japan is actually a mixture of horseradish, mustard, and green food coloring.&lt;br&gt;&lt;br&gt;Its pairing with chocolate is a bold, modern invention. Wasabi provides a sharp, pungent heat that is felt more in the nasal passages than on the tongue, and which dissipates quickly. This provides a shocking but exhilarating contrast to the sweetness of chocolate, creating a memorable and daring confection for adventurous palates.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_whipped_cream_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Whipped cream is created by aerating heavy cream, often with a whisk or mixer, until it becomes light and fluffy. The agitation incorporates air bubbles into the liquid, and the fat globules in the cream stick together to form a stiff lattice that traps the air. Often sweetened with sugar and flavored with vanilla, it is a popular topping for desserts and beverages. Its light texture and rich dairy flavor make it an ideal topping for mochas and other specialty coffee drinks, adding a layer of creamy indulgence that contrasts with the bitterness of the coffee.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_whiskey_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Whiskey is a type of distilled alcoholic beverage made from a fermented grain mash, with varieties including bourbon, rye, scotch, and Irish whiskey. The spirit is almost always aged in wooden casks, which gives it a distinctive range of flavors, often including notes of oak, vanilla, caramel, and smoke.&lt;br&gt;&lt;br&gt;The pairing of whiskey and chocolate is a modern favorite among connoisseurs. The smoky, complex, and often peaty notes of a good whiskey provide a powerful and sophisticated contrast to the sweetness of chocolate, making it a popular choice for filling high-end truffles and bonbons aimed at an adult palate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_zurich_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A major European financial hub, Zürich is the starting point of your journey. Its central location and bustling markets make it a key location for acquiring a wide variety of ingredients. The Zürich Chocolate Works is the first factory you will operate.</Data></Cell>
+	</Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>1073</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1098</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

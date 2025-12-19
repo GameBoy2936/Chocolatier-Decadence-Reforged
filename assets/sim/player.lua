@@ -788,9 +788,9 @@ function Player:RecalculatePricesForCurrentPort()
 					-- Apply ingredient cost multiplier
 					local cost_multiplier = 1.0
 					if Player.difficulty == 2 then -- Medium
-						cost_multiplier = 1.20 -- Ingredients are 20% more expensive
+						cost_multiplier = 1.15 -- Ingredients are 15% more expensive
 					elseif Player.difficulty == 3 then -- Hard
-						cost_multiplier = 1.40 -- Ingredients are 40% more expensive
+						cost_multiplier = 1.30 -- Ingredients are 30% more expensive
 					end
 					
 					if cost_multiplier > 1.0 then
@@ -1068,18 +1068,14 @@ end
 -- Q3: The Heat (Hemisphere Dependent)
 -- Q4: The Golden Quarter
 local HolidayCalendar = {
-	{ name = "resolutions",	startWeek = 1,  endWeek = 3 },   -- Dieting (Negative)
 	{ name = "lunar_new_year", startWeek = 4,  endWeek = 5 },   -- (Positive)
 	{ name = "valentine",	  startWeek = 6,  endWeek = 6 },   -- (Positive)
 	{ name = "carnival",	   startWeek = 8,  endWeek = 8 },   -- (Positive)
 	{ name = "lent",		   startWeek = 8,  endWeek = 13 },  -- Fasting (Negative)
 	{ name = "easter",		 startWeek = 14, endWeek = 15 },  -- (Positive)
-	{ name = "dog_days_n",	 startWeek = 27, endWeek = 34, hemisphere="north" }, -- Summer Slump North (Negative)
-	{ name = "dog_days_s",	 startWeek = 1,  endWeek = 8,  hemisphere="south" }, -- Summer Slump South (Negative)
 	{ name = "ramadan",		startWeek = 35, endWeek = 38 },  -- Fasting (Negative)
 	{ name = "eid_ul_fitr",	startWeek = 39, endWeek = 39 },  -- Feasting (Positive)
 	{ name = "halloween",	  startWeek = 43, endWeek = 44 },  -- (Positive)
-	{ name = "di_de_muertos",  startWeek = 44, endWeek = 44 },  -- (Positive)
 	{ name = "diwali",		 startWeek = 45, endWeek = 45 },  -- (Positive)
 	{ name = "thanksgiving",   startWeek = 47, endWeek = 47 },  -- (Positive)
 	{ name = "christmas",	  startWeek = 50, endWeek = 52 },  -- (Positive)
@@ -1115,10 +1111,6 @@ function Player:GetActiveHolidayForPort(portName)
 	local hols = self.currentHolidays
 	if not hols then return nil end
 
-	-- Hemisphere Checks
-	if hols.dog_days_n and hemisphere == "north" then return "dog_days_n" end
-	if hols.dog_days_s and hemisphere == "south" then return "dog_days_s" end
-
 	-- Culture-Specific Overrides
 	if hols.eid_ul_fitr and culture == "muslim" then return "eid_ul_fitr" end
 	if hols.ramadan and culture == "muslim" then return "ramadan" end
@@ -1130,7 +1122,6 @@ function Player:GetActiveHolidayForPort(portName)
 	
 	if hols.diwali and culture == "hindu" then return "diwali" end
 	
-	if hols.di_de_muertos and culture == "latin" then return "di_de_muertos" end
 	if hols.carnival and culture == "latin" then return "carnival" end
 	
 	if hols.thanksgiving and culture == "north_american" then return "thanksgiving" end
@@ -1141,14 +1132,11 @@ function Player:GetActiveHolidayForPort(portName)
 	if hols.easter and culture ~= "muslim" and culture ~= "east_asian" and culture ~= "hindu" then return "easter" end
 	
 	-- Broad Cultural Events
-	if hols.resolutions and (culture == "western" or culture == "north_american" or culture == "european" or culture == "latin" or culture == "commonwealth") then return "resolutions" end
 	if hols.lent and (culture == "western" or culture == "north_american" or culture == "european" or culture == "latin") then return "lent" end
 	
-	-- Halloween is treated as secular, but Latin America gets Day of the Dead instead
-	if hols.halloween and culture ~= "latin" then return "halloween" end 
-	
-	-- Valentine is treated as a global secular event
+	-- Valentine and Halloween are treated as a global event
 	if hols.valentine then return "valentine" end
+	if hols.halloween then return "halloween" end
 
 	return nil
 end

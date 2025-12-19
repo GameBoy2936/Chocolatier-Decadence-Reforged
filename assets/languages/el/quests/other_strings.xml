@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Citizen Comrade</LastAuthor>
+  <Created>2006-10-04T22:28:33Z</Created>
+  <LastSaved>2009-01-12T00:53:41Z</LastSaved>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <Colors>
+   <Color>
+    <Index>0</Index>
+    <RGB>#010000</RGB>
+   </Color>
+   <Color>
+    <Index>2</Index>
+    <RGB>#993300</RGB>
+   </Color>
+   <Color>
+    <Index>3</Index>
+    <RGB>#FFFF00</RGB>
+   </Color>
+   <Color>
+    <Index>4</Index>
+    <RGB>#DDDDDD</RGB>
+   </Color>
+   <Color>
+    <Index>5</Index>
+    <RGB>#00FF00</RGB>
+   </Color>
+   <Color>
+    <Index>12</Index>
+    <RGB>#808000</RGB>
+   </Color>
+   <Color>
+    <Index>46</Index>
+    <RGB>#6666CC</RGB>
+   </Color>
+  </Colors>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11640</WindowHeight>
+  <WindowWidth>15480</WindowWidth>
+  <WindowTopX>360</WindowTopX>
+  <WindowTopY>300</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Worksheet ss:Name="strings">
+  <Table ss:ExpandedColumnCount="256" ss:ExpandedRowCount="1099" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="200.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
+	<Row>
+	 <Cell><Data ss:Type="String">$</Data></Cell>
+	 <Cell><Data ss:Type="String">NOMONEY QUESTS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney</Data></Cell>
+	 <Cell><Data ss:Type="String">A Reasonable Loan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, it looks like you've gotten yourself into a pickle. I'm always here to help an entrepreneur in need. I am willing to loan you the sum of $5,000 for a few weeks. But I will expect to be repaid with interest. I'll find you in a month or so, at which time you will owe me [D|$7,500|$8,500|$10,000]. Do we have a deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Make sure you have [D|$7,500|$8,500|$10,000] on hand to repay %las_casinokeep%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000], and I expect to be paid. I'll be seeing you around...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney_incomplete_2</Data></Cell>
+	 <Cell><Data ss:Type="String">This is a friendly reminder - you owe me [D|$7,500|$8,500|$10,000]. I'll be seeing you around...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney_incomplete_3</Data></Cell>
+	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000]. If I were you, I'd get the dough together…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney_incomplete_4</Data></Cell>
+	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000]. I'll find you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I appreciate when customers meet their obligations. I'll take that [D|$7,500|$8,500|$10,000] that you owe me. It has been a pleasure doing business with you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney2</Data></Cell>
+	 <Cell><Data ss:Type="String">A Second Loan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney2_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hello again, &lt;player&gt;. Have you gotten yourself into another pinch? As I said, I'm always here when someone is in need. But this time, my fees have increased. I will loan you another $5,000. But, you will need to repay me [D|$10,000|$12,500|$15,000]. Please don't fret, I will find you. Do we have a deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney2_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Have [D|$10,000|$12,500|$15,000] ready to repay %las_casinokeep%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney2_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">This is a friendly reminder - you owe me [D|$10,000|$12,500|$15,000]. I'll be seeing you around...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney2_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll take that [D|$10,000|$12,500|$15,000] now. The pleasure has been mine. See you around, friend...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney3</Data></Cell>
+	 <Cell><Data ss:Type="String">Yet Another Loan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney3_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Well, hello again, &lt;player&gt;. Another pickle, I see? Of course I'm able to help. I'll loan you another $5,000. And again, you will owe me [D|$10,000|$12,500|$15,000]. Be forewarned, though. From here on out, my rates will not be so favorable for you. Deal?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney3_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Have [D|$10,000|$12,500|$15,000] ready to repay %las_casinokeep%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney3_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$10,000|$12,500|$15,000]. If I were you, I'd get the dough together…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney3_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Listen, &lt;player&gt;. I'm going to take that [D|$10,000|$12,500|$15,000] that you owe me.&lt;br&gt;&lt;br&gt;You should do a better job minding your finances. I'll be willing to loan you money again, of course, but my interest rate is going up. Way up. Good luck...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney4</Data></Cell>
+	 <Cell><Data ss:Type="String">Money Trouble</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney4_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I am afraid your credit is not great, my friend. I am happy to help you once again, but as I warned you - my interest rate has gone up. I will loan you another $5,000, but you must repay me [D|$20,000|$22,500|$25,000]. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney4_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Get the [D|$20,000|$22,500|$25,000] together to repay %las_casinokeep%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney4_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$20,000|$22,500|$25,000]. I'll find you...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney4_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hello there, &lt;player&gt;. Allow me to take that [D|$20,000|$22,500|$25,000] we agreed to earlier. Thank you for doing business with me.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney5</Data></Cell>
+	 <Cell><Data ss:Type="String">Bank Bailout</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nomoney5_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Listen. I realize that the only way I can hope to see any return on my loan is to help you out once again. I am not happy about this, but here's another $2,500 to help you get back on your feet…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gambling</Data></Cell>
+	 <Cell><Data ss:Type="String">Opening the Machines</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gambling_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">We've got some great slot machines in here, &lt;player&gt;, but this is an exclusive casino. If you'd be willing to bring me [D|35|60|85] cases of your &lt;user1&gt;, I could see my way to getting you on our list…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gambling_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Grease the wheels by giving [D|35|60|85] cases of &lt;user1&gt; to %hav_casinokeep% at %hav_casino% in %havana%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gambling_incomplete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Lots of winners in there, &lt;player&gt;. But you can't win if you don’t play, and you can't play if you don't bring me the [D|35|60|85] cases of &lt;user1&gt; we discussed.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gambling_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Okay, friend. You have honored your end of the deal, and I will honor mine. From this day forward, you are welcome to gamble here any time.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">airplane</Data></Cell>
+	 <Cell><Data ss:Type="String">Corporate Airplane</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">airplane_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I'm sure you are aware of how high travel costs have gotten. The bad news is that this trend is likely to continue. The good news is that I am here to offer you a Corporate Airplane. For an investment of [D|$500,000|$850,000|$1,500,000], you'll be able to fly direct from any port to any port, and all of your future travel costs will be zero. This certainly makes a difference as you fly in and out of secret ports. And this is not even considering the bump to your style and grace. What do you say?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">airplane_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Making arrangements to travel first class, all the time!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">airplane_deferred_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand. Now may not be the right time to buy an airplane. Don't worry, the airplane is not going anywhere. I'll be sure to find you again after a few months, and I'll be willing to make the same offer another time. And I think you'll agree that as time goes on, doing something about those escalating travel costs will make more and more sense...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">airplane_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. I am convinced that you will be pleased with your purchase. Your Corporate Airplane will be ready for take off for your next journey.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">telegraph</Data></Cell>
+	 <Cell><Data ss:Type="String">Remote Control</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">telegraph_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I want to tell you about a pretty nifty gizmo - the Remote Telegraph. Once hooked up, you will be able to reconfigure your factories without needing to travel there. You can re-set factories to any product they have previously produced, by clicking on the appropriate status window below. Believe me, this is well worth the price tag of [D|$100,000|$175,000|$250,000] - you'll save that much in travel costs before too long, and how can we put a price tag on convenience? Shall I wire it up for you?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">telegraph_deferred_1</Data></Cell>
+	 <Cell><Data ss:Type="String">No problem. You don't want to spend that kind of cash right now. I understand. I'll be around in a few months to see if you haven't perhaps changed your mind.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">telegraph_complete_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Good choice. I'll wire it up for you right away.&lt;br&gt;&lt;br&gt;Just click on any of the factory status windows, and you'll be able to revert production at any factory to manufacture any product that has been previously made there. Good stuff!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, the Board wants to make sure that you keep an ear out for any opportunities to take ownership of retail locations. One benefit you might not know about is the ability to accept special orders - they are a fantastic way to bump up your margins.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You should really do what you can to take ownership of some retail locations, &lt;player&gt;. It's a surefire way to maximize your profits, and therefore a worthwhile investment.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">If you have a chance to partner with a shop owner, &lt;player&gt;, I highly recommend it. Accepting Special Orders is a fantastic way to boost profits, especially if you can catch the offers in person.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Orders, which you can start fulfilling once you own a shop or two, are a great way to earn a lot of money for your confections.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Be sure to touch base with shop keepers around the globe: you never know who might be interested in partnering with you and Baumeister Confections.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Things seem to be going well, &lt;player&gt;. I highly recommend doing all you can to see about taking ownership of a shop or two - it's a great way to grow your business.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_06_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">To take things to the next level, and really impress the Baumeister Confections Board of Directors, you're going to need to make steps towards owning some shops.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_tease_07_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Without taking ownership of a shop, &lt;player&gt;, you'll never be able to accept those highly profitable Special Orders…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">shop_owned_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm glad to see that you were able to work something out with Zach at %tan_shop%, &lt;player&gt;. I'm confident that you will find special orders to be a terrific boost to your business.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I wonder how Alex is faring, poor thing…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It's so nice to see people passionate about sweets again, don't you think?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I heard a rumor that you were considering expanding your offerings to include some new product lines, is that true?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections, eh? Do you really think you can salvage that old company?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections? I thought I heard that they had converted all their factories to manufacture munitions for the war effort…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">From what I have been told, to truly earn the respect of chocolatiers, one must prove one's ability by successfully creating and marketing one's own recipes…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_06_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You don't know anything about a Secret Test Kitchen, where Baumeister Confections is working on developing new recipes, do you?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_06e_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, do you have any idea where all these new Baumeister Confections recipes are coming from?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_07_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand that the market has responded quite favorably to your own creations - congratulations, &lt;player&gt;!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_08_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Listen, if you ever have a chance to visit %havana%, Cuba, be sure to check out the %hav_casino% there. Their slot machines can be a lot of fun!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_09_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Now that you're %rank_2%, you'll be able to haggle at shops and markets. Be careful, though - if you say the right thing haggling can result in better prices, but you can also insult merchants and cause their prices to move the wrong way, too.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_10_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It can be a smart move to haggle at markets, &lt;player&gt;, as long as you've got a sense of whom you're haggling with and a good idea about his or her current prices.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_tease_11_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Haggling is tricky, but buying low and selling high is the secret to success in the confections business, &lt;player&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">So Alex feels like she's making progress with her search. Bless her heart, I hope she's not just hearing what she wants to hear.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You're now partners with %main_zach%, eh? That must certainly be good for business!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You seem to be off to a great start as %rank_2% of Baumiester Confections, &lt;player&gt;. I wish you nothing but success as you continue to grow the company.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand you've made your way to Indonesia, correct? There's quite a bit of Baumeister Confections history there, you know…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Have you tried your hand at the slot machines at %hav_casino% in %havana%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You are doing amazingly well, &lt;player&gt;. Just the other day a friend was singing your praises. I take it your &lt;user2&gt; products are earning a healthy profit?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_06_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It seems that certain combinations of ingredients command higher profits than others, doesn't it?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2b_tease_07_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Is it my imagination, or has the cost of travel increased recently?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wow, you are really doing an amazing job, &lt;player&gt;. I've seen your wares literally all over the world!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I must say, I was skeptical when I heard about your efforts to turn the company around, but it seems like you are well on your way to success.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">What do you think, &lt;player&gt;? Do you think Sean is still alive? Well, if anyone will be able to get to the bottom of it, Alex will.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_tease_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It's wonderful to see your own creations performing so well in the marketplace, isn't it?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_tease_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It sure looks like things are going well for you, &lt;player&gt;. It must be satisfying to be able to provide people with luxuries like coffee and chocolates.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_tease_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%rank_3%? Not too shabby, &lt;player&gt;. Baumeister Confections was a great company in its day, and it looks like you're well on your way to restoring it to its former glory!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Wow, you are really doing a stunningly good job, &lt;player&gt;. I've been seeing your products in shops all over the world.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%rank_4% of Baumeister Confections! Way to go, &lt;player&gt;!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It makes me very happy, &lt;player&gt;, to see that things are going so well for you. Couldn't happen to a nicer person!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_tease_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I imagine it must be quite challenging to keep multiple factories operational. But I guess that's why you are the %rank_4%, and I am not!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_tease_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">There certainly seems to be a lot to juggle to run a multi-national corporation, but you seem to be handling it all in stride, &lt;player&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_tease_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You have been successful by consistently creating high quality chocolates and coffees, managing your costs, building solid relationships and taking advantage of opportunities to expand. Kudos!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tan_shop_owned_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome back to your shop, &lt;player&gt;. It is always a pleasure to see you again…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">dou_shop_own_tease_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You're quite an impressive chocolate maker, &lt;player&gt;. I've been hearing about you the past couple of years, and I'm going to be keeping an eye on you. No time soon, but some day, I may be interested in discussing a partnership with you for my shop here.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">travel_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Is it my imagination, &lt;player&gt;, or has the cost of travel gone up lately? Must be hard on someone who travels as much as you do…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">travel_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Inflation is surely upon us, eh &lt;player&gt;. It seems like every few months it costs more to get from one port to another…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">travel_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I can't believe what it is costing to get around these days. A lot of companies seem to be investing in corporate aircraft - I tell you, I can certainly see why!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">travel_tease_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">These travel costs are getting out of hand. There must be something one could do to try to contain the outlay of capital required just to get from place to place these days.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">travel_tease_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">For someone in your position, I would highly recommend investing in a corporate jet, to help offset the increasing costs of travel.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_tease_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm not sure if you realize this, &lt;player&gt;, but ingredients do not last forever. If you are storing an ingredient that you are not using, it will expire and disappear from your inventory over time…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_tease_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">As long as you are using an ingredient at one of your factories, it will not expire. After a number of weeks of not using it, however, the ingredient will expire and be removed from your inventory.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">expire_tease_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Unused ingredients don't last and last - they will expire over time and be removed from your inventory...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">itsover_alex_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It isn't possible for me to thank you enough times for all that you have done for me, &lt;player&gt;!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">itsover_bc_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, we could not have imagined a better CEO for our little family company - you have made us proud!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">itsover_evil_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">What can I say, &lt;player&gt;? You have gottn the best of us once again. It's so rare to see someone gifted at both the creative and the business side of things. Hats off to you, indeed.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_00_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I can't blame Alex - I would probably be doing the same thing myself if I were in her situation - but does she really think she's going to be able to find her husband? It's been quite some time…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_01_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I represent a rival chocolate maker - Schokolade Weltreich - perhaps you have heard of us? I understand you're making a good name for yourself in this business, but in terms of Alex and her personal problems, why are you poking your nose into business that's got nothing to do with you?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_02_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hey, &lt;player&gt;. I ran into Alex not too long ago. She sure seemed to be in a big hurry - maybe she's following a solid lead…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_03_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I just hope Alex isn't getting in over her head - when the military wants to conceal information, they certainly have the ways and means to do so…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_04_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You should be more careful, &lt;player&gt;. It's fine if you want to build up their confections empire, but here's some advice: keep yourself clear of this whole Sean and Alex story - it's none of your concern, and it will do you no good to worry about it anyhow...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_05_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Now I can't vouch for whether or not it's true, but I met someone who told me they had met someone who flew with Sean Fletcher in the war. This person saw Sean's plane go down, but he also claims that he saw Sean's parachute open…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_06_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You know, it was unusual, but not unheard of, for Germans to hold enemy pilots in secret camps towards the end of the war.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plot_points_07_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, some news from Alex. She was in a rush and I don't have any details, but I understand that she has discovered legitimate evidence that Sean is indeed still alive…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">evan_endorsed_rank2_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Keep up the great work, &lt;player&gt;!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">itsover_evan_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Who could have ever imagined the success you've had with our little company, &lt;player&gt;.&lt;br&gt;&lt;br&gt;You have made me so, so proud!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_boardspew_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%rank_4%! I never doubted you, &lt;player&gt;! Keep making me proud…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank2_bianspew_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You never know whom you'll cross paths with here at %tan_bar%, &lt;player&gt;…</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_bianspew_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean Fletcher? Well, I hear all kinds of things here at %tan_bar%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank4_bianspew_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Certainly seems like things are coming to a head with Alex and her little plans, eh, &lt;player&gt;?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank5_bianspew_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">All's well that end's well, as they say. No hard feelings, right, &lt;player&gt;?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">whit_premeta_spew_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You're doing swell, &lt;player&gt;, and I very much look forward to working with you soon to launch our line of Exotics.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">jose_endorsed_spew_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Your efforts have made our Blends business a huge success, &lt;player&gt;. I have no doubt you will earn the remaining endorsements and that you will be our %rank_4% in no time flat!</Data></Cell>
+	</Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>11</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>20</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

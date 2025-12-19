@@ -391,39 +391,39 @@ function Tips.GetPriceModifier(itemCode, portName)
     
     if holiday then
         -- NEGATIVE / DEFLATIONARY EVENTS
-        if holiday == "resolutions" then
-            -- People avoiding sweets
-            if item.category and (item.category.factory == "chocolate" or item.category.name == "sugar") then 
-                finalModifier = finalModifier * 0.8 
-            end
+        -- if holiday == "resolutions" then
+        --     -- People avoiding sweets
+        --     if item.category and (item.category.factory == "chocolate" or item.category.name == "sugar") then 
+        --         finalModifier = finalModifier * 0.8 
+        --     end
 
         elseif holiday == "lent" then
             -- Giving up luxuries (Alcohol, Chocolate, Sweets)
             local luxury = { rum=true, whiskey=true, brandy=true, kahlua=true, amaretto=true, grand_marnier=true }
             if luxury[item.name] or (item.category and item.category.factory == "chocolate") then
-                finalModifier = finalModifier * 0.85
+                finalModifier = finalModifier * 0.9
             end
 
         elseif holiday == "ramadan" then
             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 0.8 end
 
-        elseif holiday == "dog_days_n" or holiday == "dog_days_s" then
-            -- Summer Heat Check
-            -- We only apply this if the port matches the hemisphere of the heatwave
-            local isHeatwave = false
-            if holiday == "dog_days_n" and port.hemisphere == "north" then isHeatwave = true end
-            if holiday == "dog_days_s" and port.hemisphere == "south" then isHeatwave = true end
-            
-            if isHeatwave then
-                -- Chocolate melts/is heavy. Demand drops.
-                if item.category and item.category.factory == "chocolate" then
-                    finalModifier = finalModifier * 0.75
-                end
-                -- Fruit and Drinks are refreshing. Demand rises.
-                if item.category and (item.category.name == "fruit" or item.category.name == "beverage") then
-                    finalModifier = finalModifier * 1.15
-                end
-            end
+        -- elseif holiday == "dog_days_n" or holiday == "dog_days_s" then
+        --     -- Summer Heat Check
+        --     -- We only apply this if the port matches the hemisphere of the heatwave
+        --     local isHeatwave = false
+        --     if holiday == "dog_days_n" and port.hemisphere == "north" then isHeatwave = true end
+        --     if holiday == "dog_days_s" and port.hemisphere == "south" then isHeatwave = true end
+        --     
+        --     if isHeatwave then
+        --         -- Chocolate melts/is heavy. Demand drops.
+        --         if item.category and item.category.factory == "chocolate" then
+        --             finalModifier = finalModifier * 0.75
+        --         end
+        --         -- Fruit and Drinks are refreshing. Demand rises.
+        --         if item.category and (item.category.name == "fruit" or item.category.name == "beverage") then
+        --             finalModifier = finalModifier * 1.15
+        --         end
+        --     end
 
         -- POSITIVE / INFLATIONARY EVENTS
         elseif holiday == "eid_ul_fitr" then
@@ -439,11 +439,13 @@ function Tips.GetPriceModifier(itemCode, portName)
             local bake = { pumpkin=true, pecan=true, cinnamon=true, nutmeg=true, clove=true, currant=true }
             if bake[item.name] then finalModifier = finalModifier * 1.5 end
         elseif holiday == "valentine" then
-             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.3 end
+             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.2 end
         elseif holiday == "christmas" then
-             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.4 end
-        elseif holiday == "easter" then
              if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.3 end
+        elseif holiday == "easter" then
+             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.2 end
+        elseif holiday == "halloween" then
+             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.2 end
         end
     end
 

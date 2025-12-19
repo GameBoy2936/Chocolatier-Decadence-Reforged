@@ -99,7 +99,7 @@ MakeDialog
 }
 
 -- Until they've made basic bars, don't let them re-configure the factory
-if not _AllQuests["tut_04"]:IsComplete() then EnableWindow("configure", false) end
+-- if not _AllQuests["tut_04"]:IsComplete() then EnableWindow("configure", false) end -- RULE TURNED OFF
 
 UpdateDisplay()
 OpenBuilding("ui_factory", factory)

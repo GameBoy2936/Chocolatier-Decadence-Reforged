@@ -258,12 +258,20 @@
 	 <Cell><Data ss:Type="String">Italiano</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">lang_es</Data></Cell>
-	 <Cell><Data ss:Type="String">Español</Data></Cell>
+	 <Cell><Data ss:Type="String">lang_es_eu</Data></Cell>
+	 <Cell><Data ss:Type="String">Español (latinoamerica)</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">lang_pt</Data></Cell>
-	 <Cell><Data ss:Type="String">Português</Data></Cell>
+	 <Cell><Data ss:Type="String">lang_es_lt</Data></Cell>
+	 <Cell><Data ss:Type="String">Español (españa)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_pt_eu</Data></Cell>
+	 <Cell><Data ss:Type="String">Português (Portugal)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_pt_br</Data></Cell>
+	 <Cell><Data ss:Type="String">Português (Brasil)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ca</Data></Cell>
