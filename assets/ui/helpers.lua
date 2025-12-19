@@ -620,6 +620,16 @@ end
 --------------------------------------------------------------------------------------------------
 -- Building set-ups
 
+function OpenBuilding(window, building)
+	if gCurrentBuilding then
+		Center(window)
+	else
+		gCurrentBuilding = building
+		CenterFadeIn(window)
+	end
+end
+
+
 function DialogTransition()
 	if type(gDialogTable.transition) == "function" then
 		EnableWindow("background", false)
@@ -631,7 +641,6 @@ function DialogTransition()
 	end
 end
 
--- Base wrapper for the C++ Transition engine
 function DoTransition(style, t)
 	if type(t) == "table" then
 		t.window = t[1]
@@ -639,54 +648,21 @@ function DoTransition(style, t)
 		t = { window=tostring(t) }
 	end
 	t[1] = tostring(style)
-    
-    -- Apply default timing if not specified
-    if not t.time then t.time = kUIAnimTime end
-    
 	Transition(t)
 end
 
--- Standard Alpha Fade In
-function FadeIn(t) 
-    DoTransition("fadein", t) 
-end
+function FadeIn(t) DoTransition("fadein", t) end
+function CenterFadeIn(t) DoTransition("center_fadein", t) end
+function Center(t) DoTransition("center", t) end
+function FadeOut(t) DoTransition("fadeout", t) end
+function ZoomIn(t) DoTransition("zoomin", t) end
 
--- Standard Alpha Fade Out
-function FadeOut(t) 
-    DoTransition("fadeout", t) 
-end
-
--- "Pop In" Effect: Centers the window and scales it up (Zoom)
--- This feels much more modern than a simple fade.
-function CenterFadeIn(t)
-    if type(t) ~= "table" then t = { window=tostring(t) } end
-    
-    -- 1. Force the window to the center instantly (time=0)
-    DoTransition("center", { window=t.window, time=0 })
-    
-    -- 2. Trigger the Zoom In effect
-    -- "zoomin" is defined in Transitions.h/cpp and handles scaling + fading
-    DoTransition("zoomin", t) 
-end
-
--- Legacy support for just centering without animation
-function Center(t) 
-    DoTransition("center", t) 
-end
-
--- Specific transition for the "Zoom" effect (can be used manually)
-function ZoomIn(t) 
-    DoTransition("zoomin", t) 
-end
-
--- Slide transition (Good for side panels like Ledger)
 function SwipeFromLeft(t)
 	if type(t) ~= "table" then t = { window=tostring(t) } end
 	t.startx = t.startx or -500
 	DoTransition("swipe", t)
 end
 
--- Legacy "Swirl" effect (kept for compatibility with original cutscenes)
 function SwirlIn(t)
 	if type(t) ~= "table" then t = { window=tostring(t) } end
 	t.path = t.path or { {-500,300},{-200,0},{150,0},{300,25},{500,100},{200,100},{150,50} }
@@ -695,44 +671,19 @@ function SwirlIn(t)
 	Transition(t)
 end
 
--- The Standard "Close Dialog" function
--- Updated to lock input and close faster than it opened.
 function FadeCloseWindow(name, value)
 	local v = value
-    
-    -- Lock input immediately so user can't double-click close
 	gButtonsDisabled = true
-    
-	Transition { 
-        "fadeout", 
-        window=name, 
-        time=kUIExitTime, -- Faster exit
-        alpha=0,          -- Target alpha (invisible)
-        onend=function() 
-            gButtonsDisabled=nil 
-            CloseWindow(v) 
-        end 
-    }
+	Transition { "fadeout", window=name, alpha=1, onend=function() gButtonsDisabled=nil CloseWindow(v) end }
 end
 
--- Helper to force-close everything in case of UI stack errors
 function CloseAllModals()
     DebugOut("UI", "Closing all modal windows to force UI reload.")
+    -- The TWindowManager keeps a stack of modal windows. We can get the top one
+    -- and pop it until no more are left.
     local topWindow = GetTopModalWindow()
     while topWindow and topWindow:GetName() ~= "screen" do
         PopModal(topWindow:GetID())
         topWindow = GetTopModalWindow()
     end
-end
-
-function OpenBuilding(window, building)
-	if gCurrentBuilding then
-        -- If we are already inside a building context (e.g. swapping tabs),
-        -- just center the new window instantly without a long animation.
-		Center(window)
-	else
-		gCurrentBuilding = building
-        -- Use our new "Pop In" effect for entering buildings
-		CenterFadeIn(window)
-	end
 end
