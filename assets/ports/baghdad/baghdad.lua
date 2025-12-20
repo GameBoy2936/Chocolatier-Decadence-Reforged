@@ -13,7 +13,7 @@ baghdad.locked = true
 
 --LOCATIONS
 CreateBuilding("bag_market", baghdad, Market)
-bag_market.inventory = { anise, sugar, milk, cardamom, espresso, pistachio, saffron, allspice, cinnamon, sumac, nutmeg, clove, fig, turmeric }
+bag_market.inventory = { anise, sugar, milk, cardamom, espresso, pistachio, saffron, allspice, cinnamon, sumac, nutmeg, clove, fig, pomegranate }
 bag_market.x = 247
 bag_market.y = 298
 bag_market.layer = 890

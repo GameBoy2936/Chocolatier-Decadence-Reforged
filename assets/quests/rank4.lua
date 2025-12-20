@@ -40,7 +40,7 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	require = {RequireQuestComplete("rank4_kath_bribe_prep"), RequireQuestComplete("rank4_kath_bribe_intro"), RequireMinRank(4), RequireVariableEqual("gameover", 3), RequirePort("baghdad")},
-	priority = 20,
+	priority = 21,
 	onaccept = {AwardRemoveCharacter("evil_kath","_travelers"), AwardUnlockPort("falklands")},
 	goals = { RequireItem("b12", 25), RequireItem("c10", 25), RequireItem("i12", 25), RequireItem("t11", 25), RequireItem("m07", 25), RequireItem("e12", 25), HintPerson("evil_kath", "fal_board", "falklands")},
 	goals_medium = { RequireItem("b12", 100), RequireItem("c10", 100), RequireItem("i12", 100), RequireItem("t11", 100), RequireItem("m07", 100), RequireItem("e12", 100), HintPerson("evil_kath", "fal_board", "falklands")},

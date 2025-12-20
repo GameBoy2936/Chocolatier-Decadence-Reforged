@@ -13,7 +13,7 @@ toronto.locked = true
 
 --LOCATIONS
 CreateBuilding("tor_market", toronto, Market)
-tor_market.inventory = { maple, whiskey, sugar, milk, cream, pecan, raspberry, blueberry, butter, cashew, espresso, honey, walnut, toffee, apple, blackberry }
+tor_market.inventory = { maple, whiskey, sugar, milk, cream, pecan, raspberry, blueberry, butter, chestnut, espresso, honey, walnut, toffee, apple, blackberry }
 tor_market.x = 457
 tor_market.y = 218.5
 tor_market.layer = 900

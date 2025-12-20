@@ -67,7 +67,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_bal_marketkeep_text</Data></Cell>
-	 <Cell><Data ss:Type="String">Nyoman grew up in a small village inland from Bali’s southern coast, where his family cultivated cloves, coffee, and tropical fruit on a modest plot of land. He speaks softly but with an easy humor, is quick to tease regular customers, and greets newcomers with a knowing nod, as if he’s already guessed what they’ve come for. He also considers himself an amateur gamelan musician, playing metallophones at temple festivals and gatherings. Friends describe him as patient, observant, and unwilling to rush a decision.</Data></Cell>
+	 <Cell><Data ss:Type="String">Nyoman grew up in a small village inland from Bali's southern coast, where his family cultivated cloves, coffee, and tropical fruit on a modest plot of land. He speaks softly but with an easy humor, is quick to tease regular customers, and greets newcomers with a knowing nod, as if he's already guessed what they've come for. He also considers himself an amateur gamelan musician, playing metallophones at temple festivals and gatherings. Friends describe him as patient, observant, and unwilling to rush a decision.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_bal_shopkeep_text</Data></Cell>
@@ -162,6 +162,14 @@
 	 <Cell><Data ss:Type="String">Leialoha Naea grew up on the western side of Hawaii Island, in a family that straddled both the fishing trade and small-scale farming. By her twenties, she'd spent time in Honolulu and San Francisco, working in specialty shops that catered to travelers, before returning home to open %kon_shop% in Kona. She is direct in business, but has a warmth that comes through in small gestures - remembering a customer's favorite blend, or making introductions between two traders who might help each other. Now partnered with Baumeister Confections, Leialoha is expanding her business with you to cater to the island's growing tourist trade.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_lim_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born in a small village in the Ancash highlands and having moved to Lima shortly after the war ended, Yolanda Quispe and her family traded the mountain air for a stall at the %lim_market% in hopes that the city's trade boom would provide a more secure future. Yolanda is the primary face of the family business, spending her long days meticulously hand-sorting beans and ensuring every sack of %lim_cacao% is presented with care. Deeply devoted to her family, she is a diligent worker who views her role as a vital contribution to her father's legacy. She is often seen quietly stitching traditional embroidery between customers, a small way of keeping the customs of her home village alive amidst the urban rush.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_lim_plazakeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Keylla is a prominent figure in Lima's urban social circles, often found holding court at the elegant cafés surrounding the %lim_plaza%. Born into an affluent family with deep roots in Italian-Peruvian maritime trade, she was educated in Switzerland before returning to Peru as the war drew to a close. Her role makes her the gatekeeper for the city's elite, and she prides herself on knowing exactly which way the political and economic winds are blowing.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_lim_shopkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">For Yussell Parodi, the son of Italian immigrants that fled Italy during World War I, running the respectable %lim_shop% is a job that provides a secure life, but it is not necessarily the one he dreams of. Despite being diligent and capable, his true passion is cooking the rustic Italian food his grandmother taught him. Yussell is always polite and competent, but reserves his real enthusiasm for conversations about family and food, holding on to his dream of one day opening a small trattoria. Every day, he can at least try his best and work towards his goals.</Data></Cell>
 	</Row>
@@ -230,6 +238,10 @@
 	 <Cell><Data ss:Type="String">The earnest and ambitious proprietor of %rey_shop% ("Northern Lights"), Bjarki Eiríksson is a proud citizen of the newly independent Republic of Iceland. He became a close friend of Teddy Baumeister during the construction of the Secret Test Kitchen, bonding over a shared passion for flavor. While he admires Teddy's wild innovations, Bjarki is a craftsman at heart, believing in the perfection of classic recipes made with quality local ingredients. He is one of your most appreciative partners.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_san_barkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The granddaughter of Jeremiah Pepper, Allison grew up scrubbing tables at The Watering Hole before eventually taking over the tap. She grew up hearing stories of Evangeline Baumeister's early challenges and tribulations, and intimately knows all of the family's turbulent history from behind the bar. Allison is known for having a sharp wit and a memory like a steel trap, never forgetting a face or a favorite drink. As a massive fan of the new bebop jazz scene, she often closes the bar early on weekends to catch live sets at clubs in the Fillmore, sometimes dragging reluctant patrons along with her.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_san_shopkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">The history of Baumeister Confections is a story Helen has known all her life. As the niece of one of the company's very first shop partners, Walinda McMurtry, she views her role as proprietor of %san_shop% as a legacy to uphold. She is professional, elegant, and a traditionalist, believing that a classic recipe and a sterling reputation are the most valuable assets a business can have. Helen has been a longtime advocate for Alex Fletcher with her corporate and personal missions throughout all the years.</Data></Cell>
 	</Row>
@@ -280,6 +292,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_wel_shopkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">The proprietor of %wel_shop% in %wellington%, Karolyne Radke is one of Baumeister Confections' most crucial and unconventional retail partners. The middle child of German immigrants - a geologist father and a botanist's assistant mother - Karolyne was born and raised in New Zealand, inheriting her parents' analytical mind but none of their quiet reservation. Possessing a restless intellect and an innate impatience for inefficiency (which would be diagnosed as ADHD today), she thrives on the novelty and challenge presented by the company's %exotic% product line. In her leisure time, Karolyne is an avid tramper, finding a rare sense of peace in the strenuous solitude of the hills surrounding %wellington%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_factorykeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Endrit is the brilliant, high-energy chief engineer of the %zur_factory%. His family sought refuge in Switzerland from Albania when he was a child, a displacement that fueled his obsession with mechanics - if he could understand how things worked, he could fix them. He is fiercely loyal to the Baumeister brand, largely because they were the first to look past his refugee status and see his engineering genius. Though he attempts to project a serious, corporate demeanor, his passion often betrays him. He is known to speak at breakneck speed when discussing new machinery, and is also eager to learn the art of chocolate crafting, incapable of sitting idle.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_zur_shopkeep_text</Data></Cell>
@@ -347,7 +363,7 @@
 	</Row>
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_cacao_text</Data></Cell>
-	 <Cell><Data ss:Type="String">The seed of the Theobroma cacao tree, whose name translates to "food of the gods," this is the heart and soul of all chocolate. Originating in Mesoamerica, it was consumed for centuries by the Mayans and Aztecs as a bitter, spiced beverage.&lt;br&gt;&lt;br&gt;After its introduction to Europe in the 16th century, the addition of sugar made it a popular drink among the aristocracy. The key innovations of the 19th century—the separation of cocoa solids and cocoa butter, and the "Dutch process" for reducing acidity—paved the way for the creation of solid eating chocolate. As master chocolatiers know, different regions yield beans with distinct flavor profiles, a fact central to the creation of high-quality varietal chocolates.</Data></Cell>
+	 <Cell><Data ss:Type="String">The seed of the Theobroma cacao tree, whose name translates to "food of the gods," this is the heart and soul of all chocolate. Originating in Mesoamerica, it was consumed for centuries by the Mayans and Aztecs as a bitter, spiced beverage.&lt;br&gt;&lt;br&gt;After its introduction to Europe in the 16th century, the addition of sugar made it a popular drink among the aristocracy. The key innovations of the 19th century - the separation of cocoa solids and cocoa butter, and the "Dutch process" for reducing acidity - paved the way for the creation of solid eating chocolate. As master chocolatiers know, different regions yield beans with distinct flavor profiles, a fact central to the creation of high-quality varietal chocolates.</Data></Cell>
 	</Row>
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_caramel_text</Data></Cell>
@@ -364,6 +380,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_cherry_text</Data></Cell>
 	 <Cell><Data ss:Type="String">The sweet cherry, of which the Bing variety is a famous cultivar, originated in the region between the Black and Caspian Seas. Cherries have been enjoyed for centuries, cultivated by the ancient Greeks and Romans, who spread them throughout their empire. They are a member of the rose family, a relative of almonds, peaches, and plums.&lt;br&gt;&lt;br&gt;The classic pairing of cherry and chocolate is a cornerstone of confectionery, most famously in the Black Forest gâteau and the cherry cordial. The fruit's bright tartness and deep, sweet flavor provide a perfect contrast to the bitterness of dark chocolate, creating a rich and romantic combination ideal for infusions and truffles.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_chestnut_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The fruit of the Castanea sativa tree, the sweet chestnut has been a staple of European diets for millennia, often serving as a primary source of carbohydrates in mountainous regions long before the introduction of the potato. Unlike most other nuts, chestnuts have a high water and starch content and a low oil content, requiring them to be cooked—usually roasted or boiled—to make them palatable and to reveal their delicate, sweet flavor.&lt;br&gt;&lt;br&gt;In the world of fine confectionery, the chestnut reaches its zenith as the marron glacé. This labor-intensive process involves candying the nut in sugar syrup over several days to create a tender, translucent treat. When paired with chocolate, the chestnut offers a soft, floury texture and a subtle, earthy sweetness that bridges the gap between savory and sweet, making it a favorite for winter seasonal pralines.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_cinnamon_text</Data></Cell>
@@ -419,7 +439,11 @@
 	</Row>
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_hazelnut_text</Data></Cell>
-	 <Cell><Data ss:Type="String">Hazelnuts, also known as filberts, have been harvested from the wild since ancient times. Evidence of their consumption dates back to the Mesolithic era in Europe. They are particularly associated with Italian confectionery, especially from the Piedmont region, where they are a key component of gianduja—a smooth paste of roasted ground hazelnuts, cocoa, and sugar. This paste was famously invented in Turin during the Napoleonic era as a way to stretch a limited supply of expensive cocoa.&lt;br&gt;&lt;br&gt;The distinct, rich, and slightly sweet flavor of roasted hazelnuts makes them a perfect partner for milk chocolate, creating a classic, luxurious combination.</Data></Cell>
+	 <Cell><Data ss:Type="String">Hazelnuts, also known as filberts, have been harvested from the wild since ancient times. Evidence of their consumption dates back to the Mesolithic era in Europe. They are particularly associated with Italian confectionery, especially from the Piedmont region, where they are a key component of gianduja - a smooth paste of roasted ground hazelnuts, cocoa, and sugar. This paste was famously invented in Turin during the Napoleonic era as a way to stretch a limited supply of expensive cocoa.&lt;br&gt;&lt;br&gt;The distinct, rich, and slightly sweet flavor of roasted hazelnuts makes them a perfect partner for milk chocolate, creating a classic, luxurious combination.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_hibiscus_text</Data></Cell>
+	 <Cell><Data ss:Type="String">While the Hibiscus genus contains hundreds of species, it is the Hibiscus sabdariffa (often known as Roselle) that is culinarily significant. Thriving in tropical and subtropical regions, the plant is harvested not for its petals, but for its calyces—the cup-like structures that support the flower. These have been harvested for centuries across Africa, Asia, and the Caribbean to create tart, deep-red beverages known variously as Karkade, Sorrel, or Agua de Jamaica.&lt;br&gt;&lt;br&gt;When dried and used in confectionery, hibiscus imparts a brilliant crimson color and a sharp, tangy flavor profile strikingly similar to cranberries but with a distinct floral finish. It is particularly effective in infusions, where its natural acidity adds a sophisticated "zing" that balances the sugar and fat of milk chocolate, or adds a bright top note to earthy, single-origin dark chocolates.</Data></Cell>
 	</Row>
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_honey_text</Data></Cell>
@@ -508,6 +532,10 @@
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_pistachio_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Native to Central Asia and the Middle East, pistachios are one of the oldest flowering nut trees, with archaeological evidence suggesting their consumption as early as 6750 BC. They are recognizable by their beige shells and distinctively green and purple kernels.&lt;br&gt;&lt;br&t;Pistachios possess a unique flavor that is mild, slightly sweet, and has a distinct resinous or piney note. Their vibrant green color makes them visually appealing in confectionery, and they are famously used in nougat, baklava, and ice cream. When paired with chocolate, their subtle flavor works best with white or milk chocolate, which allows their delicate taste and color to stand out.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_pomegranate_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to the region extending from modern-day Iran to northern India, the pomegranate (Punica granatum) has been cultivated and naturalized over the whole Mediterranean region since ancient times. It features prominently in Greek mythology and ancient texts as a symbol of prosperity and fertility, prized for its ability to thrive in hot, dry climates while producing fruit with a thick, leathery skin that protects the precious cargo inside.&lt;br&gt;&lt;br&gt;The edible parts of the fruit are the arils—hundreds of jewel-like seeds encased in a juicy, ruby-red pulp. In modern chocolaterie, pomegranates are valued for their intense tartness and complex tannic qualities. Whether used as a reduction in a ganache or as dried arils for texture, they provide a bright, acidic burst that cuts through the richness of dark chocolate, cleansing the palate and highlighting the fruit notes in the cacao itself.</Data></Cell>
 	</Row>
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_powder_text</Data></Cell>

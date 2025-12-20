@@ -20,7 +20,7 @@ bel_ruins.layer = 970
 --
 --
 CreateBuilding("bel_hut", belize, Market)
-bel_hut.inventory = {bel_cacao }
+bel_hut.inventory = {sugar, bel_cacao, hibiscus }
 bel_hut.x = 697
 bel_hut.y = 311
 bel_hut.layer = 950

@@ -2002,6 +2002,14 @@
 	 <Cell><Data ss:Type="String">Bing Cherries</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">chestnut</Data></Cell>
+	 <Cell><Data ss:Type="String">Chestnuts</Data></Cell>
+	</Row>
+	<Row>
+     <Cell><Data ss:Type="String">chili</Data></Cell>
+     <Cell><Data ss:Type="String">Chili Peppers</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">cinnamon</Data></Cell>
 	 <Cell><Data ss:Type="String">Cinnamon</Data></Cell>
 	</Row>
@@ -2064,6 +2072,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">hazelnut</Data></Cell>
 	 <Cell><Data ss:Type="String">Hazelnuts</Data></Cell>
+	</Row>
+	<Row>
+     <Cell><Data ss:Type="String">hibiscus</Data></Cell>
+     <Cell><Data ss:Type="String">Hibiscus Petals</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">honey</Data></Cell>
@@ -2158,6 +2170,10 @@
 	 <Cell><Data ss:Type="String">Pineapples</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">pomegranate</Data></Cell>
+	 <Cell><Data ss:Type="String">Pomegranate</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">powder</Data></Cell>
 	 <Cell><Data ss:Type="String">Truffle Powder</Data></Cell>
 	</Row>
@@ -2179,7 +2195,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rose</Data></Cell>
-	 <Cell><Data ss:Type="String">Candied Rose Petals</Data></Cell>
+	 <Cell><Data ss:Type="String">Rose Petals</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rum</Data></Cell>
@@ -2863,7 +2879,7 @@
 	</Row>
 	<Row>
 	 <Cell></Cell>
-	 <Cell><Data ss:Type="String">PORT NAMES</Data></Cell>
+	 <Cell><Data ss:Type="String">PORT NAMES AND REGIONS</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">baghdad</Data></Cell>
@@ -2960,6 +2976,38 @@
 	<Row>
 	 <Cell><Data ss:Type="String">zurich</Data></Cell>
 	 <Cell><Data ss:Type="String">Zürich</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_africa</Data></Cell>
+	 <Cell><Data ss:Type="String">Africa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_asia</Data></Cell>
+	 <Cell><Data ss:Type="String">Asia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_caribbean</Data></Cell>
+	 <Cell><Data ss:Type="String">Caribbean</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_europe</Data></Cell>
+	 <Cell><Data ss:Type="String">Europe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_middle_east</Data></Cell>
+	 <Cell><Data ss:Type="String">The Middle East</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_oceania</Data></Cell>
+	 <Cell><Data ss:Type="String">Oceania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_north_america</Data></Cell>
+	 <Cell><Data ss:Type="String">North America</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_south_america</Data></Cell>
+	 <Cell><Data ss:Type="String">South America</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>
@@ -3595,7 +3643,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lim_marketkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Giuliana Zender</Data></Cell>
+	 <Cell><Data ss:Type="String">Yolanda Quispe</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lim_mountainkeep</Data></Cell>

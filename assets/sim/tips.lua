@@ -25,12 +25,30 @@ Tips =
 ------------------------------------------------------------------------------
 -- Helpers
 
+-- CACHE OPTIMIZATION:
+-- We store the results of string existence checks here. 
+-- If a key is missing (returns #####), we mark it false so we don't ask the C++ engine again.
+-- This prevents the "Missing string for label..." error spam in the debug log.
+local _TipKeyCache = {}
+
+local function CachedStringExists(key)
+    if _TipKeyCache[key] ~= nil then
+        return _TipKeyCache[key]
+    end
+
+    local text = GetString(key)
+    local exists = (text ~= "#####")
+    _TipKeyCache[key] = exists
+    return exists
+end
+
 local function GetRandomEventKey(baseKey)
 	local count = 1
-	while GetString(baseKey .. "_" .. (count + 1)) ~= "#####" do
+    -- Use cached check for the loop to prevent spamming the log with failures
+	while CachedStringExists(baseKey .. "_" .. (count + 1)) do
 		count = count + 1
 	end
-	if count == 1 and GetString(baseKey .. "_1") == "#####" then return baseKey end
+	if count == 1 and not CachedStringExists(baseKey .. "_1") then return baseKey end
 	
 	local randomIndex = RandRange(1, count)
 	return baseKey .. "_" .. randomIndex
@@ -390,42 +408,13 @@ function Tips.GetPriceModifier(itemCode, portName)
     local holiday = Player:GetActiveHolidayForPort(portName)
     
     if holiday then
-        -- NEGATIVE / DEFLATIONARY EVENTS
-        -- if holiday == "resolutions" then
-        --     -- People avoiding sweets
-        --     if item.category and (item.category.factory == "chocolate" or item.category.name == "sugar") then 
-        --         finalModifier = finalModifier * 0.8 
-        --     end
-
-        elseif holiday == "lent" then
-            -- Giving up luxuries (Alcohol, Chocolate, Sweets)
+        if holiday == "lent" then
             local luxury = { rum=true, whiskey=true, brandy=true, kahlua=true, amaretto=true, grand_marnier=true }
             if luxury[item.name] or (item.category and item.category.factory == "chocolate") then
                 finalModifier = finalModifier * 0.9
             end
-
         elseif holiday == "ramadan" then
             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 0.8 end
-
-        -- elseif holiday == "dog_days_n" or holiday == "dog_days_s" then
-        --     -- Summer Heat Check
-        --     -- We only apply this if the port matches the hemisphere of the heatwave
-        --     local isHeatwave = false
-        --     if holiday == "dog_days_n" and port.hemisphere == "north" then isHeatwave = true end
-        --     if holiday == "dog_days_s" and port.hemisphere == "south" then isHeatwave = true end
-        --     
-        --     if isHeatwave then
-        --         -- Chocolate melts/is heavy. Demand drops.
-        --         if item.category and item.category.factory == "chocolate" then
-        --             finalModifier = finalModifier * 0.75
-        --         end
-        --         -- Fruit and Drinks are refreshing. Demand rises.
-        --         if item.category and (item.category.name == "fruit" or item.category.name == "beverage") then
-        --             finalModifier = finalModifier * 1.15
-        --         end
-        --     end
-
-        -- POSITIVE / INFLATIONARY EVENTS
         elseif holiday == "eid_ul_fitr" then
             if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.5 end
         elseif holiday == "lunar_new_year" then
@@ -447,12 +436,11 @@ function Tips.GetPriceModifier(itemCode, portName)
         elseif holiday == "halloween" then
              if item.category and item.category.factory == "chocolate" then finalModifier = finalModifier * 1.2 end
 		end
+    end
 
 	-- 2. Active Tips
-	-- We iterate active tips for random events (fire, strike, bumper crop).
 	if Player.activeTips then
 		for _, tip in ipairs(Player.activeTips) do
-			-- Ignore seasonal tips here, they are handled by block #1 above.
 			if not tip.seasonal_key then
 				if tip.port == portName then
 					local tipApplied = false
@@ -464,7 +452,6 @@ function Tips.GetPriceModifier(itemCode, portName)
 					if tipApplied then
 						local tipType = tip.type
 						
-						-- Deception logic: Check if the tip was inverted by a lying character
 						if tip.inverted then
 							if tipType == "up" then tipType = "down"
 							elseif tipType == "down" then tipType = "up"
@@ -478,7 +465,6 @@ function Tips.GetPriceModifier(itemCode, portName)
 				end
 			end
 			
-			-- Fallback for global seasonal tips that aren't caught by the culture system
 			if tip.seasonal_key and item.category and item.category.factory == "chocolate" then
 				finalModifier = finalModifier * Tips.seasonalModifier
 			end
@@ -491,34 +477,22 @@ end
 ------------------------------------------------------------------------------
 -- Character Announcement Logic
 
--- This function determines if a specific character in a specific building
--- is allowed to announce a given tip, making the world feel more logical.
 function Tips.CanCharacterAnnounceTip(character, building, tip)
 	if not character or not building or not tip then return false end
 
-	-- Evil Character Deception
 	if Tips.evilCharacters[character.name] then
-		-- A "good" tip is one that benefits the player (product price up, ingredient price down).
 		local isGoodTip = (tip.type == "up" and (tip.item and _AllProducts[tip.item] or tip.category)) or
 						  (tip.type == "down" and (tip.item and _AllIngredients[tip.item] or tip.port_wide))
 		
 		if isGoodTip then
 			tip.inverted = true
-			DebugOut("TIP", "DECEPTION! " .. character.name .. " is inverting a good tip.")
 		end
 	end
 
-	-- Universal Exception: Any character can announce a tip about their own port.
-	if building.port and tip.port == building.port.name then
-		return true
-	end
+	if building.port and tip.port == building.port.name then return true end
 
-	-- Rule 1: Excluded Buildings
-	if building.type == "casino" or building.type == "kitchen" then
-		return false
-	end
+	if building.type == "casino" or building.type == "kitchen" then return false end
 
-	-- Rule 2: Market Keepers
 	if building.type == "market" or building.type == "farm" then
 		local isBasicMarket = true
 		local basicCommodities = { sugar=true, milk=true, cacao=true }
@@ -529,7 +503,7 @@ function Tips.CanCharacterAnnounceTip(character, building, tip)
 			end
 		end
 		if isBasicMarket and (tip.item and _AllProducts[tip.item] or tip.category) then
-			return false -- Basic markets cannot give product or category tips.
+			return false
 		end
 
 		if tip.item and _AllIngredients[tip.item] then
@@ -552,7 +526,6 @@ function Tips.CanCharacterAnnounceTip(character, building, tip)
 		end
 	end
 
-	-- Rule 3: Shop Keepers
 	if building.type == "shop" then
 		if tip.category then
 			return building.buys[tip.category] or false
@@ -563,7 +536,6 @@ function Tips.CanCharacterAnnounceTip(character, building, tip)
 		end
 	end
 
-	-- Rule 4: Global Announcers (Travelers, Main Characters)
 	local global_keywords = {"factorykeep", "bankkeep", "stationkeep", "barkeep", "portkeep", "hotelkeep", "announcer", "evil", "main"}
 	for _, keyword in ipairs(global_keywords) do
 		if string.find(character.name, keyword) then return true end
@@ -588,10 +560,11 @@ function Tips.GetDynamicTipString(tip, character)
 	local port = _AllPorts[tip.port]
 	if not port then return "An interesting rumor is going around..." end
 
-	-- 1. Determine Keys
-	local finalKey = tip.key 
+    -- FIXED: Remove the random suffix (e.g. "_1") from the stored key
+    -- before we start trying to build new keys.
 	local baseEventKey = string.gsub(tip.key, "_%d+$", "")
-	local keys_to_try = {}
+	
+    local keys_to_try = {}
 	
 	-- Helper to add character-specific variations
 	local function AddKeys(base)
@@ -601,14 +574,18 @@ function Tips.GetDynamicTipString(tip, character)
 		table.insert(keys_to_try, base)
 	end
 	
-	-- Build key list based on specificity
 	if tip.item then
+        -- Try: ev_prod_priceup_trav_05_b01_wellington
 		if character then
 			table.insert(keys_to_try, baseEventKey .. "_" .. character.name .. "_" .. tip.item .. "_" .. port.name)
+            -- Try: ev_prod_priceup_trav_05_b01
 			table.insert(keys_to_try, baseEventKey .. "_" .. character.name .. "_" .. tip.item)
 		end
+        -- Try: ev_prod_priceup_b01_wellington
 		table.insert(keys_to_try, baseEventKey .. "_" .. tip.item .. "_" .. port.name)
+        -- Try: ev_prod_priceup_b01
 		table.insert(keys_to_try, baseEventKey .. "_" .. tip.item)
+        
 	elseif tip.category then
 		if character then
 			table.insert(keys_to_try, baseEventKey .. "_" .. character.name .. "_" .. tip.category .. "_" .. port.name)
@@ -623,15 +600,18 @@ function Tips.GetDynamicTipString(tip, character)
 		table.insert(keys_to_try, baseEventKey .. "_" .. port.name)
 	end
 	
+    -- Fallbacks: Character specific, then Generic
 	if character then
 		table.insert(keys_to_try, baseEventKey .. "_" .. character.name)
 	end
+    table.insert(keys_to_try, baseEventKey)
 
-	-- 2. Select Key
+	local finalKey = baseEventKey -- Default fallback
 	for _, key in ipairs(keys_to_try) do
-		if GetString(key .. "_1") ~= "#####" then
+		-- OPTIMIZED: Use cached check to prevent log spam on missing variations
+		if CachedStringExists(key .. "_1") then
 			local count = 1
-			while GetString(key .. "_" .. (count + 1)) ~= "#####" do
+			while CachedStringExists(key .. "_" .. (count + 1)) do
 				count = count + 1
 			end
 			local randomIndex = RandRange(1, count)
@@ -640,7 +620,6 @@ function Tips.GetDynamicTipString(tip, character)
 		end
 	end
 
-	-- 3. Gather Parameters
 	local itemName = "all ingredients"
 	local item = _AllIngredients[tip.item] or _AllProducts[tip.item]
 	local category = _AllCategories[tip.category]
@@ -648,7 +627,6 @@ function Tips.GetDynamicTipString(tip, character)
 	if item then itemName = item:GetName()
 	elseif category then itemName = GetString(category.name) end
 	
-	-- Resolve %3% (Building) and %4% (Keeper) and %5% (Region)
 	local buildingName = ""
 	local keeperName = ""
 	local regionName = ""
@@ -659,10 +637,8 @@ function Tips.GetDynamicTipString(tip, character)
 		regionName = GetString("region_" .. port.region) 
 	end
 
-	-- %6% = Duration/Weeks Remaining
 	local weeksRemaining = (tip.endTime or Player.time) - Player.time
 	
-	-- 4. Format String
 	local finalString = GetText(finalKey, 
 		itemName, 
 		GetString(port.name), 

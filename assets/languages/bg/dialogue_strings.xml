@@ -275,7 +275,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_welcome_ulu_hutkeep_5</Data></Cell>
-	 <Cell><Data ss:Type="String">The land provides. What will you take?</Data></Cell>
+	 <Cell><Data ss:Type="String">Our Country provides. What will you take?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_welcome_ulu_hutkeep_6</Data></Cell>
@@ -1111,7 +1111,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_intro_ulu_hutkeep_5</Data></Cell>
-	 <Cell><Data ss:Type="String">You think you know a better price for this land's fruit?</Data></Cell>
+	 <Cell><Data ss:Type="String">You think you know a better price for this Country's fruit?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_intro_zur_marketkeep_1</Data></Cell>
@@ -1303,7 +1303,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_response_bad_ulu_hutkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You come onto my land and insult my work? See if you find these %lime% anywhere else.</Data></Cell>
+	 <Cell><Data ss:Type="String">You come onto our Country and insult my work? See if you find these %lime% anywhere else.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_response_bad_ulu_hutkeep_2</Data></Cell>
@@ -1563,7 +1563,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_response_good_ulu_hutkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">...Fine. The land was generous this week. I can be too. This once.</Data></Cell>
+	 <Cell><Data ss:Type="String">...Fine. The Country was generous this week. I can be too. This once.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_response_good_ulu_hutkeep_2</Data></Cell>
@@ -1795,7 +1795,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_response_neutral_ulu_hutkeep_4</Data></Cell>
-	 <Cell><Data ss:Type="String">The land doesn't "haggle", and I do not either.</Data></Cell>
+	 <Cell><Data ss:Type="String">The Anangu Country peoples do not "haggle".</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_haggle_response_neutral_ulu_hutkeep_5</Data></Cell>
@@ -4095,7 +4095,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ev_ing_pricedown_ulu_hutkeep_lime_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The land was generous, and I have more %lime% than I can store. The price is good for you today. Stock up.</Data></Cell>
+	 <Cell><Data ss:Type="String">The Country was generous, and I have more %lime% than I can store. The price is good for you today. Stock up.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ev_ing_pricedown_ulu_hutkeep_lime_2</Data></Cell>

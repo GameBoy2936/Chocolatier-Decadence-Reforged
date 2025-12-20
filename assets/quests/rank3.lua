@@ -6,7 +6,7 @@
 CreateQuest
 {
 	name = "meta_joseph_prompt",
-	starter = {"main_evan", "main_feli", "main_deit", "main_loud", "main_sara", "main_chas", "main_zach", "main_whit", "zur_factorykeep", "kon_shopkeep", "hav_shopkeep"},
+	starter = {"main_elen", "main_evan", "main_feli", "main_deit", "main_loud", "main_sara", "main_chas", "main_zach", "main_whit", "zur_factorykeep", "kon_shopkeep", "hav_shopkeep"},
 	ender = "main_jose",
 	accept = "ok",
 	defer = "notnow",

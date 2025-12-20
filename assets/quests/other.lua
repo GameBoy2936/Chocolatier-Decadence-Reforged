@@ -174,7 +174,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_tease_01",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -188,7 +188,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_tease_02",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -202,7 +202,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_tease_03",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -216,7 +216,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_tease_04",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -230,7 +230,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_tease_05",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -244,7 +244,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_tease_06",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -258,7 +258,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_tease_07",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -272,7 +272,7 @@ CreateQuest
 CreateQuest
 {
 	name = "shop_owned_00",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -297,7 +297,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_00",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -311,7 +311,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_01",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -324,7 +324,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_02",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -337,7 +337,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_03",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -351,7 +351,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_04",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -365,7 +365,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_05",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -378,7 +378,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_06",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -403,7 +403,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_07",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -416,7 +416,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_08",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -430,7 +430,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_09",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -443,7 +443,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_10",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -456,7 +456,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_tease_11",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -469,7 +469,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_00",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -481,7 +481,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_01",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -494,7 +494,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_02",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -507,7 +507,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_03",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -521,7 +521,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_04",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -535,7 +535,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_05",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -547,7 +547,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_06",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -560,7 +560,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2b_tease_07",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -573,7 +573,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank3_tease_00",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -586,7 +586,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank3_tease_01",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -599,7 +599,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank3_tease_02",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -612,7 +612,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank3_tease_03",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -625,7 +625,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank3_tease_04",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -638,7 +638,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank3_tease_05",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -651,7 +651,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank4_tease_00",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -664,7 +664,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank4_tease_01",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -677,7 +677,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank4_tease_02",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -690,7 +690,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank4_tease_03",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -703,7 +703,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank4_tease_04",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -716,7 +716,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank4_tease_05",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -872,7 +872,7 @@ CreateQuest
 CreateQuest
 {
 	name = "plot_points_03",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "mah_shopkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_elen", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",

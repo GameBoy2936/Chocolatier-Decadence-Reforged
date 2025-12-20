@@ -209,6 +209,18 @@
     <price_high_notinseason>2000</price_high_notinseason>
   </ingredient>
   <ingredient>
+    <name>chestnut</name>
+    <code>CHS</code>
+    <category>nut</category>
+    <locked>true</locked>
+    <season_start>41</season_start>
+    <season_end>53</season_end>
+    <price_low>142</price_low>
+    <price_high>267</price_high>
+    <price_low_notinseason>651</price_low_notinseason>
+    <price_high_notinseason>1025</price_high_notinseason>
+    </ingredient>
+  <ingredient>
     <name>clove</name>
     <code>CLV</code>
     <category>flavor</category>
@@ -405,6 +417,18 @@
     <price_high_notinseason>20</price_high_notinseason>
   </ingredient>
   <ingredient>
+    <name>hibiscus</name>
+    <code>HIB</code>
+    <category>flavor</category>
+    <locked>true</locked>
+    <season_start>10</season_start>
+    <season_end>36</season_end>
+    <price_low>442</price_low>
+    <price_high>635</price_high>
+    <price_low_notinseason>1180</price_low_notinseason>
+    <price_high_notinseason>1525</price_high_notinseason>
+  </ingredient>
+  <ingredient>
     <name>honey</name>
     <code>HNY</code>
     <category>sugar</category>
@@ -519,12 +543,12 @@
     <code>MAT</code>
     <category>flavor</category>
     <locked>true</locked>
-    <season_start>1</season_start>
-    <season_end>52</season_end>
-    <price_low>1494</price_low>
-    <price_high>1911</price_high>
-    <price_low_notinseason>2</price_low_notinseason>
-    <price_high_notinseason>20</price_high_notinseason>
+    <season_start>15</season_start>
+    <season_end>23</season_end>
+    <price_low>900</price_low>
+    <price_high>1494</price_high>
+    <price_low_notinseason>1911</price_low_notinseason>
+    <price_high_notinseason>2330</price_high_notinseason>
   </ingredient>
   <ingredient>
     <name>milk</name>
@@ -571,12 +595,12 @@
     <unit_singular>bottle</unit_singular>
     <unit_plural>bottles</unit_plural>
     <locked>true</locked>
-    <season_start>1</season_start>
-    <season_end>52</season_end>
-    <price_low>2050</price_low>
-    <price_high>2678</price_high>
-    <price_low_notinseason>2</price_low_notinseason>
-    <price_high_notinseason>20</price_high_notinseason>
+    <season_start>5</season_start>
+    <season_end>12</season_end>
+    <price_low>1125</price_low>
+    <price_high>1675</price_high>
+	<price_low_notinseason>2050</price_low_notinseason>
+	<price_high_notinseason>2678</price_high_notinseason>
   </ingredient>
   <ingredient>
     <name>nutmeg</name>
@@ -687,6 +711,18 @@
     <price_high_notinseason>1022</price_high_notinseason>
   </ingredient>
   <ingredient>
+    <name>pomegranate</name>
+    <code>POM</code>
+    <category>fruit</category>
+    <locked>true</locked>
+    <season_start>40</season_start>
+    <season_end>7</season_end>
+    <price_low>380</price_low>
+    <price_high>526</price_high>
+    <price_low_notinseason>942</price_low_notinseason>
+    <price_high_notinseason>1411</price_high_notinseason>
+  </ingredient>
+  <ingredient>
     <name>powder</name>
     <code>POW</code>
     <category>special</category>
@@ -701,7 +737,7 @@
   <ingredient>
     <name>raisin</name>
     <code>RAI</code>
-    <category>nut</category>
+    <category>fruit</category>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>

@@ -159,8 +159,6 @@ end
 
 --------------------------------------------------------------------------------------------------
 -- NEW ROBUST STRING SYSTEM
--- (Rest of the file remains unchanged from your previous versions)
--- GetText() for parameters, GetString() for simple lookups only
 
 local bsgLoadStringFile = bsgLoadStringFile
 local bsgGetString = bsgGetString
@@ -172,6 +170,9 @@ local _baseStringCache = {}
 
 -- Get base string without parameters (internal use)
 local function GetBaseString(key)
+    -- Optimization: Skip cache check for nil keys
+    if key == nil then return nil end
+
 	if _baseStringCache[key] then
 		return _baseStringCache[key]
 	end
@@ -239,7 +240,8 @@ end
 -- Process named placeholders
 local function ProcessNamedPlaceholders(text)
 	return string.gsub(text, "%%([^%%%d%.%$,;:!%?%s].-)%%", function(a)
-		if string.match(a, "^[%a_][%w_]*$") then
+        -- LUA 5.0 FIX: Use string.find instead of string.match
+		if string.find(a, "^[%a_][%w_]*$") then
 			local subtext = GetBaseString(a)
 			if subtext then
 				return subtext
@@ -254,9 +256,10 @@ end
 
 -- NEW: GetText - Use this for any string with parameters
 function GetText(key, ...)
-    if type(key) == "number" then 
-        return tostring(key) 
-    end
+    -- SAFETY CHECK: Numeric Trap
+    if type(key) == "number" then return tostring(key) end
+    -- LUA 5.0 FIX: Use string.find instead of string.match
+    if type(key) == "string" and string.find(key, "^%d+$") then return key end
 	
 	-- Build cache key
 	local cacheKey = key
@@ -292,6 +295,12 @@ end
 
 -- Override GetString to be safe
 function GetString(key, ...)
+    -- SAFETY CHECK: Numeric Trap
+    if type(key) == "number" then return tostring(key) end
+    -- LUA 5.0 FIX: Use string.find instead of string.match
+    if type(key) == "string" and string.find(key, "^%d+$") then return key end
+    if key == nil then return "" end
+
 	-- Redirect to GetText if parameters are provided
 	if arg and arg.n > 0 then
 		return GetText(key, unpack(arg))

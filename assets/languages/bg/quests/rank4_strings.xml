@@ -62,7 +62,7 @@
 	 <Cell><Data ss:Type="String">Have you heard the news? Sean is alive! Keep an eye out for Alexandra, she's trying to track you down...</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">rank4_kath_bribe_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">rank4_kath_bribe_intro_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">&lt;player&gt;, Sean is alive! I have definitive proof, but we're dealing with some shady characters. I know she has been quite dismissive of you and your work with us in the past, but in fact, %evil_kath% communicated to me that she is deserting Schokolade Weltreich and betraying her co-workers to help us find my husband. Kath has fled to the %falklands% in hiding, and that is where you will find her. Now, if you listen closely to me for a second...</Data></Cell>
 	</Row>
 	<Row>
@@ -71,7 +71,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring %main_kath% [D|25|100|250] cases each of %b12%, %c10%, %i12%, %t11%, %m07% and %e12% at the %falklands%. Don't get me wrong, that is a long list of confections, but the sooner we get them to Kath, the better. She'll need to use those to help her escape from that toxic company of hers. Ready, &lt;player&gt;?</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring %evil_kath% [D|25|100|250] cases each of %b12%, %c10%, %i12%, %t11%, %m07% and %e12% at the %falklands%. Don't get me wrong, that is a long list of confections, but the sooner we get them to Kath, the better. She'll need to use those to help her escape from that toxic company of hers. Ready, &lt;player&gt;?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_summary</Data></Cell>
@@ -82,7 +82,7 @@
 	 <Cell><Data ss:Type="String">&lt;player&gt;, this has been a long time coming. To be honest with you, I have always admired your business acumen, as well as your abilities in the test kitchen. What can I say, you're impressive. I've spent too much time under Schokolade Weltreich, and I've been blind to just how much wanton greed and defamation of other companies meant to them. All I can do now is apologize, and try to make it up to you all now.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">rank4_kath_bribe_extra02_1</Data></Cell>
+	 <Cell><Data ss:Type="String">rank4_kath_bribe_extra01_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Now, I don't mean to offend you and what you've done, but I want you to get out of here before that snake of a man called %evil_wolf% sees that you and Alex came here.&lt;br&gt;&lt;br&gt;You need to go see %bel_hutkeep% at %belize%. She'll be able to tell you where to find Sean.</Data></Cell>
 	</Row>
 	<Row>
