@@ -1,5 +1,5 @@
 # CHOCOLATIER: DECADENCE REFORGED
-## Version 0.2 (BETA)
+## Version 0.3 (BETA)
 ## Created by: Michael Lane
 
 INTRODUCTION
@@ -60,8 +60,8 @@ KEY FEATURES
      to comment on the weather, your rank, or active events.
 
 4. EXPANDED CONTENT
-   - 17 New Ingredients: Apples, Bananas, Blackberries, Brandy, Figs,
-     Lavender, Lychees, Matcha, Passionfruit, Pineapples, Raisins, Rum,
+   - 20 New Ingredients: Apples, Bananas, Blackberries, Brandy, Chestnuts, Hibiscus Petals, Figs,
+     Lavender, Lychees, Matcha, Passionfruit, Pineapples, Pomegranate, Raisins, Rum,
      Star Anise, Sumac, Toffee, Turmeric, and Walnuts.
    - 4 New Characters: Elena Tangye, Douglas McInnes,
      Halla Þorvaldsdóttir, and Bjarki Eiríksson.
@@ -80,7 +80,7 @@ KEY FEATURES
      Switching the language requires a game restart.
    - Includes a custom tool (.ttf to .mvec converter) for modders to 
      add their own fonts.
-   - English (native language), French, German, Dutch, Italian, Spanish, Portuguese, Catalan, Maltese, Polish, Czech, Hungarian, Romanian, Croatian, Serbian, Bulgarian, Danish, Icelandic, Norwegian, Swedish, Finnish, Russian, Ukrainian, Greek, Turkish, Hindi, Bengali, Chinese (Simplified), Chinese (Traditional), Korean, Japanese, Thai, Vietnamese, Indonesian, Malay and Filipino will be supported. Any translation efforts would be greatly appreciated. The Playground SDK is incompatible with displaying fonts such as Arabic right-to-left instead of left-to-right.
+   - English (native language), French, German, Dutch, Italian, Spanish (Europe), Spanish (Latin America), Portuguese (Portugal), Portuguese (Brazil), Catalan, Maltese, Polish, Czech, Hungarian, Romanian, Croatian, Serbian, Bulgarian, Danish, Icelandic, Norwegian, Swedish, Finnish, Russian, Ukrainian, Greek, Turkish, Chinese (Simplified), Chinese (Traditional), Korean, Japanese, Thai, Vietnamese, Indonesian, Malay and Filipino will be supported. Any translation efforts would be greatly appreciated. The Playground SDK is incompatible with displaying fonts such as Arabic right-to-left instead of left-to-right.
 
 ------------------------------------------------------------------------
 FOR MODDERS: DEVELOPER TOOLS
