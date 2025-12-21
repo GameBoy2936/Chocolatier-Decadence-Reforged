@@ -104,7 +104,7 @@ CreateQuest
 	onaccept = {AwardPlaceCharacter("bel_hutkeep", "bel_ruins")},
 	goals = {HintPerson("bel_hutkeep", "bel_ruins", "belize")},
 	require = {RequireQuestComplete("rank4_sean_ransom_02")},
-	oncomplete = {IncrementVariable("gameover"), AwardText("rank4_sean_thanks_text01", "main_sean"), AwardText("rank4_sean_thanks_text02", "main_sean"), AwardText("rank4_sean_thanks_text03", "main_sean"), AwardHappiness("main_sean", 100), AwardText("rank4_sean_thanks_text04", "main_sean"), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardRemoveCharacter("trav_03", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_hut"), AwardUnblockBuilding("bel_hut"), AwardUnlockIngredient("bel_cacao"), AwardPlaceCharacter("main_sean", "zur_mountain"), AwardEnableOrderForChar("main_sean"), AwardEnableOrderForChar("bel_hutkeep"), AwardEnableOrderForBuilding("bel_ruins"), AwardEnableOrderForBuilding("bel_hut"), AwardUnlockCharacter("main_sean"), AwardUnlockCharacter("bel_hutkeep")},
+	oncomplete = {IncrementVariable("gameover"), AwardText("rank4_sean_thanks_text01", _AllCharacters["main_sean"]), AwardText("rank4_sean_thanks_text02", _AllCharacters["main_sean"]), AwardText("rank4_sean_thanks_text03", _AllCharacters["main_sean"]), AwardHappiness("main_sean", 100), AwardText("rank4_sean_thanks_text04", _AllCharacters["main_sean"]), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardRemoveCharacter("trav_03", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_hut"), AwardUnblockBuilding("bel_hut"), AwardUnlockIngredient("bel_cacao"), AwardUnlockIngredient("hibiscus"), AwardPlaceCharacter("main_sean", "zur_mountain"), AwardEnableOrderForChar("main_sean"), AwardEnableOrderForChar("bel_hutkeep"), AwardEnableOrderForBuilding("bel_ruins"), AwardEnableOrderForBuilding("bel_hut"), AwardUnlockCharacter("main_sean"), AwardUnlockCharacter("bel_hutkeep")},
 }
 
 CreateQuest
@@ -135,11 +135,11 @@ CreateQuest
 	reject = "none",
 	require = {RequireQuestComplete("final_quest")},
 	goals = {RequireItem("user7", 200), RequireItem("user8", 200), RequireItem("user9", 200), RequireItem("user10", 200), RequireItem("user11", 200), RequireItem("user12", 200), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
-	goals = {RequireItem("user7", 500), RequireItem("user8", 500), RequireItem("user9", 500), RequireItem("user10", 500), RequireItem("user11", 500), RequireItem("user12", 500), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
-	goals = {RequireItem("user7", 1000), RequireItem("user8", 1000), RequireItem("user9", 1000), RequireItem("user10", 1000), RequireItem("user11", 1000), RequireItem("user12", 1000), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
+	goals_medium = {RequireItem("user7", 500), RequireItem("user8", 500), RequireItem("user9", 500), RequireItem("user10", 500), RequireItem("user11", 500), RequireItem("user12", 500), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
+	goals_hard = {RequireItem("user7", 1000), RequireItem("user8", 1000), RequireItem("user9", 1000), RequireItem("user10", 1000), RequireItem("user11", 1000), RequireItem("user12", 1000), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
 	oncomplete = {AwardItem("user7", -200), AwardItem("user8", -200), AwardItem("user9", -200), AwardItem("user10", -200), AwardItem("user11", -200), AwardItem("user12", -200), AwardDelayQuest("rank5_promo", 5), AwardEnableOrderForChar("main_evan")},
-	oncomplete = {AwardItem("user7", -500), AwardItem("user8", -500), AwardItem("user9", -500), AwardItem("user10", -500), AwardItem("user11", -500), AwardItem("user12", -500), AwardDelayQuest("rank5_promo", 5), AwardEnableOrderForChar("main_evan")},
-	oncomplete = {AwardItem("user7", -1000), AwardItem("user8", -1000), AwardItem("user9", -1000), AwardItem("user10", -1000), AwardItem("user11", -1000), AwardItem("user12", -1000), AwardDelayQuest("rank5_promo", 5), AwardEnableOrderForChar("main_evan")},
+	oncomplete_medium = {AwardItem("user7", -500), AwardItem("user8", -500), AwardItem("user9", -500), AwardItem("user10", -500), AwardItem("user11", -500), AwardItem("user12", -500), AwardDelayQuest("rank5_promo", 5), AwardEnableOrderForChar("main_evan")},
+	oncomplete_hard = {AwardItem("user7", -1000), AwardItem("user8", -1000), AwardItem("user9", -1000), AwardItem("user10", -1000), AwardItem("user11", -1000), AwardItem("user12", -1000), AwardDelayQuest("rank5_promo", 5), AwardEnableOrderForChar("main_evan")},
 }
 
 CreateQuest
@@ -149,7 +149,7 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	automcomplete = true,
+	autocomplete = true,
 	visible = false,
 	onaccept ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardText("rank5_promo_extra01"), AwardMoney(10000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers"), AwardCustomSlot(12)},
 	onaccept_medium ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardText("rank5_promo_extra01"), AwardMoney(25000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers"), AwardCustomSlot(12)},

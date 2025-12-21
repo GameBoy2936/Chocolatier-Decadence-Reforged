@@ -101,9 +101,9 @@ CreateQuest
 	goals = {RequireItem("e01", 1), HintPerson("main_jose", "tor_office", "toronto")},
 	goals_medium = {RequireItem("e01", 10), HintPerson("main_jose", "tor_office", "toronto")},
 	goals_hard = {RequireItem("e01", 25), HintPerson("main_jose", "tor_office", "toronto")},
-	oncomplete = {AwardItem("e01", -1)},
-	oncomplete_medium = {AwardItem("e01", -10)},
-	oncomplete_hard = {AwardItem("e01", -25)},
+	oncomplete = {AwardItem("e01", -1), AwardUnlockIngredient("sumac")},
+	oncomplete_medium = {AwardItem("e01", -10), AwardUnlockIngredient("sumac")},
+	oncomplete_hard = {AwardItem("e01", -25), AwardUnlockIngredient("sumac")},
 	require = { RequireQuestActive("meta_whitney")},
 }
 
@@ -301,7 +301,7 @@ CreateQuest
 	defer = "maybelater",
 	reject = "none",
 	priority = 900,
-	onaccept = {AwardUnlockIngredient("sumac"), AwardText("rank3_11_extra01"), AwardUnlockIngredient("amaretto"), AwardUnlockPort("baghdad"), AwardBlockBuilding("bag_shop"), AwardRecipe("m08"), AwardDialog("recipes")},
+	onaccept = {AwardUnlockIngredient("pomegranate"), AwardText("rank3_11_extra01"), AwardUnlockIngredient("amaretto"), AwardUnlockPort("baghdad"), AwardBlockBuilding("bag_shop"), AwardRecipe("m08"), AwardDialog("recipes")},
 	goals = { RequireItem("m08", 50), RequireItem("c09", 50), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
 	goals_medium = { RequireItem("m08", 85), RequireItem("c09", 85), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
 	goals_hard = { RequireItem("m08", 130), RequireItem("c09", 130), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},

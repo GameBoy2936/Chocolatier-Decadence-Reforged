@@ -1065,7 +1065,7 @@ CreateQuest
 	require = {RequireRecipesMade(6, "beverage"), RequireQuestComplete("meta_feli"), RequireBuildingOwned("tan_shop")},
 	require_medium = {RequireRecipesMade(7, "beverage"), RequireQuestComplete("meta_feli"), RequireBuildingOwned("tan_shop")},
 	require_hard = {RequireRecipesMade(8, "beverage"), RequireQuestComplete("meta_feli"), RequireBuildingOwned("tan_shop")},
-	onaccept = {AwardUnlockPort("tokyo"), AwardUnlockIngredient("wasabi"), AwardUnlockIngredient("matcha"), AwardUnlockIngredient("pecan"), AwardUnlockIngredient("ginger")},
+	onaccept = {AwardUnlockPort("tokyo"), AwardUnlockIngredient("chestnut"), AwardUnlockIngredient("wasabi"), AwardUnlockIngredient("matcha"), AwardUnlockIngredient("pecan"), AwardUnlockIngredient("ginger")},
 	goals = { HintPerson("main_deit", "tok_factory", "tokyo")},
 	oncomplete = {AwardOfferQuest("tokyo_01"), AwardUnlockCharacter("main_deit")},	
 }

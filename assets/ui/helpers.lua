@@ -510,8 +510,8 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 
     -- WEIGHTING CONFIGURATION
     local W_QUEST = 50
-    local W_ITEM  = 30
     local W_CHAR  = 25
+    local W_ITEM  = 20
     local W_TIP   = 15
     local W_VISIT = 10
     local W_BASE  = 1

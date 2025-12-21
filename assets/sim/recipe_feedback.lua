@@ -102,7 +102,7 @@ ChocolateEvaluators =
 	{ requires = { "toffee", "almond" }, score = 30, feedback = "taster_feedback_toffee_nut" },
 	{ requires = { "passionfruit", "mango" }, score = 30, feedback = "taster_feedback_tropical_fruit" },
 	{ requires = { "pineapple", "coconut" }, score = 30, feedback = "taster_feedback_tropical_fruit" },
-	{ requires = { "mango" }, ratios = { { "cacao", ">", 0.5 }, { "dairy", "==", 0 } }, score = 30, feedback = "taster_feedback_mango_darkchoc" },
+	{ requires = { "mango" }, ratios = { { "cacao", "=>", 0.5 }, { "dairy", "==", 0 } }, score = 30, feedback = "taster_feedback_mango_darkchoc" },
     { requires = { "star_anise", "cinnamon", "clove" }, score = 30, feedback = "taster_feedback_fivespice" },
     { requires = { "whiskey", "cherry" }, categories = { "truffle" }, score = 30, feedback = "taster_feedback_whiskey_cherry" },
     { requires = { "mint", "lime" }, ratios = { { "sugar", ">", 0.15 } }, forbids = { "dairy" }, score = 30, feedback = "taster_feedback_mojito" },
