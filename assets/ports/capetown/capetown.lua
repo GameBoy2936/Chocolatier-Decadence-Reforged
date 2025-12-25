@@ -8,6 +8,7 @@ capetown.mapx = 426
 capetown.mapy = 270
 capetown.hemisphere="south"
 capetown.region="africa"
+capetown.country = "south_africa"
 capetown.culture = "western"
 capetown.locked = true
 

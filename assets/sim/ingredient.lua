@@ -73,19 +73,19 @@ end
 
 function Ingredient:Create(t)
 	if not t then
-		-- TODO: Generic error
+		DebugOut("ERROR", "Ingredient:Create called with nil definition table.")
 	elseif not t.name then
-		-- TODO: WARN: No Name given
+		DebugOut("ERROR", "Ingredient:Create called without a name.")
 	elseif _AllIngredients[t.name] then
-		-- TODO: WARN: Duplicate ingredient
+		DebugOut("ERROR", "Ingredient:Create detected duplicate ingredient name: '" .. t.name .. "'. Ignoring.")
 	elseif not t.code then
-		-- TODO: WARN: No Code given
+		DebugOut("ERROR", "Ingredient:Create called without a code for '" .. t.name .. "'.")
 	elseif _IngredientCodes[t.code] then
-		-- TODO: WARN: Duplicate code
+		DebugOut("ERROR", "Ingredient:Create detected duplicate ingredient code: '" .. t.code .. "' (already used by " .. _IngredientCodes[t.code].name .. ").")
 	elseif _G[t.name] then
-		-- TODO: WARN: Variable with this name already exists
+		DebugOut("ERROR", "Ingredient:Create detected global variable collision for '" .. t.name .. "'.")
 	else
-        DebugOut("LOAD", "Created ingredient: " .. t.name)
+		DebugOut("LOAD", "Created ingredient: " .. t.name)
 		
 		setmetatable(t, self) self.__index = self
 		_AllIngredients[t.name] = t
@@ -95,6 +95,9 @@ function Ingredient:Create(t)
 		table.insert(_IngredientOrder, t)
 		_IngredientCategories[t.category] = _IngredientCategories[t.category] or {}
 		table.insert(_IngredientCategories[t.category], t)
+		
+		-- If XML provided <unit_type>, it's in 't'. If not, default to "unit_sack".
+		t.unit_type = t.unit_type or "unit_sack"
 		
 		-- Certain values parsed from XML should be numbers
 		t.price_low = tonumber(t.price_low)
@@ -181,15 +184,17 @@ end
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
+function Ingredient:GetUnitName(count)
+    return GetLocalizedUnit(self.unit_type, count)
+end
+
 function Ingredient:RolloverContents(strings)
-	-- Unit vocab information
-    local unit_string = self.unit_plural or "sacks"
-    if self:GetInventory() == 1 then
-        unit_string = self.unit_singular or "sack"
-    end
-	
-	-- Inventory information
-	local inventory = GetText("ing_inventory", tostring(self:GetInventory()), unit_string)
+    local invCount = self:GetInventory()
+    
+    local unit_string = self:GetUnitName(invCount)
+    
+    -- Inventory information
+    local inventory = GetText("ing_inventory", tostring(invCount), unit_string)
 
 	-- "High/Low" price information
 	local priceRange = nil
@@ -199,9 +204,10 @@ function Ingredient:RolloverContents(strings)
 	
 	-- "Last seen" information
 	local lastSeen = GetString("ingredient_never_seen")
-	if Player.lastSeenPort[self.name] then
-		lastSeen = GetText("ingredient_lastseen", GetText(Player.lastSeenPort[self.name]), Dollars(Player.lastSeenPrice[self.name]), (self.unit_singular or "sack"))
-	end
+    if Player.lastSeenPort[self.name] then
+        local singular_unit = self:GetUnitName(1) 
+        lastSeen = GetText("ingredient_lastseen", GetText(Player.lastSeenPort[self.name]), Dollars(Player.lastSeenPrice[self.name]), singular_unit)
+    end
 	
 	local text = {}
 	table.insert(text, TightText { x=64,y=0, label="#<b> "..self:GetName().."</b>", })

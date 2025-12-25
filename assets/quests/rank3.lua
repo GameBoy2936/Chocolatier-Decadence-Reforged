@@ -101,9 +101,9 @@ CreateQuest
 	goals = {RequireItem("e01", 1), HintPerson("main_jose", "tor_office", "toronto")},
 	goals_medium = {RequireItem("e01", 10), HintPerson("main_jose", "tor_office", "toronto")},
 	goals_hard = {RequireItem("e01", 25), HintPerson("main_jose", "tor_office", "toronto")},
-	oncomplete = {AwardItem("e01", -1), AwardUnlockIngredient("sumac")},
-	oncomplete_medium = {AwardItem("e01", -10), AwardUnlockIngredient("sumac")},
-	oncomplete_hard = {AwardItem("e01", -25), AwardUnlockIngredient("sumac")},
+	oncomplete = {AwardItem("e01", -1)},
+	oncomplete_medium = {AwardItem("e01", -10)},
+	oncomplete_hard = {AwardItem("e01", -25)},
 	require = { RequireQuestActive("meta_whitney")},
 }
 
@@ -295,20 +295,20 @@ CreateQuest
 CreateQuest
 {
 	name = "rank3_11",
-	starter = "trav_06",
+	starter = "trav_09",
 	ender = "bag_shopkeep",
 	accept = "iwould",
 	defer = "maybelater",
 	reject = "none",
 	priority = 900,
-	onaccept = {AwardUnlockIngredient("pomegranate"), AwardText("rank3_11_extra01"), AwardUnlockIngredient("amaretto"), AwardUnlockPort("baghdad"), AwardBlockBuilding("bag_shop"), AwardRecipe("m08"), AwardDialog("recipes")},
-	goals = { RequireItem("m08", 50), RequireItem("c09", 50), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
-	goals_medium = { RequireItem("m08", 85), RequireItem("c09", 85), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
-	goals_hard = { RequireItem("m08", 130), RequireItem("c09", 130), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
-	oncomplete = {IncrementVariable("rank3_work"), AwardItem("m08", -50), AwardItem("c09", -50), AwardRecipe("m09"), AwardDialog("recipes"), AwardUnblockBuilding("bag_shop"), AwardOfferQuest("rank3_12"), AwardUnlockCharacter("bag_marketkeep")},
-	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("m08", -85), AwardItem("c09", -85), AwardRecipe("m09"), AwardDialog("recipes"), AwardUnblockBuilding("bag_shop"), AwardOfferQuest("rank3_12"), AwardUnlockCharacter("bag_marketkeep")},
-	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("m08", -130), AwardItem("c09", -130), AwardRecipe("m09"), AwardDialog("recipes"), AwardUnblockBuilding("bag_shop"), AwardOfferQuest("rank3_12"), AwardUnlockCharacter("bag_marketkeep")},
-	require = {RequireNoOffers(2), RequireRecipesKnown(6, "user"), RequireQuestComplete("rank3_01"), RequireRecipesKnown(36), RequireMinRank(3), RequireRecipe("m01"), RequireRecipe("e01"), RequireRecipe("c09"),  RequirePort("lasvegas"), RequireCharHasNoActiveOrder("trav_06")},
+	onaccept = {AwardUnlockIngredient("pomegranate"), AwardText("rank3_11_extra01"), AwardUnlockIngredient("amaretto"), AwardUnlockPort("baghdad"), AwardBlockBuilding("bag_shop"), AwardRecipe("m08"), AwardDialog("recipes"), AwardUnlockCharacter("trav_09")},
+	goals = { RequireItem("m08", 50), RequireItem("c12", 50), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
+	goals_medium = { RequireItem("m08", 85), RequireItem("c12", 85), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
+	goals_hard = { RequireItem("m08", 130), RequireItem("c12", 130), HintPerson("bag_shopkeep", "bag_shop", "baghdad")},
+	oncomplete = {IncrementVariable("rank3_work"), AwardItem("m08", -50), AwardItem("c12", -50), AwardRecipe("m09"), AwardDialog("recipes"), AwardUnblockBuilding("bag_shop"), AwardOfferQuest("rank3_12"), AwardUnlockCharacter("bag_marketkeep")},
+	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("m08", -85), AwardItem("c12", -85), AwardRecipe("m09"), AwardDialog("recipes"), AwardUnblockBuilding("bag_shop"), AwardOfferQuest("rank3_12"), AwardUnlockCharacter("bag_marketkeep")},
+	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("m08", -130), AwardItem("c12", -130), AwardRecipe("m09"), AwardDialog("recipes"), AwardUnblockBuilding("bag_shop"), AwardOfferQuest("rank3_12"), AwardUnlockCharacter("bag_marketkeep")},
+	require = {RequireNoOffers(2), RequireRecipesKnown(6, "user"), RequireQuestComplete("rank3_01"), RequireRecipesKnown(36), RequireMinRank(3), RequireRecipe("m01"), RequireRecipe("e01"), RequireRecipe("c12"),  RequirePort("lasvegas"), RequireCharHasNoActiveOrder("trav_09")},
 }
 
 CreateQuest

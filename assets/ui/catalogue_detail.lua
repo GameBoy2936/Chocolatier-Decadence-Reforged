@@ -79,13 +79,11 @@ local function SetDynamicIngredientText(textKey)
 
     local function Ceil(x) return Floor(x + 0.99999) end
 
-    local font_sizes_to_check = {16, 15, 14, 13}
+    local font_sizes_to_check = {16, 15, 14, 13, 12}
     local chars_per_line_map = {
-        [16] = 48, [15] = 52, [14] = 56, [13] = 60
+        [16] = 48, [15] = 52, [14] = 56, [13] = 60, [12] = 64
     }
-    local line_thresholds = {
-        [16] = 14, [15] = 15, [14] = 16, [13] = 17
-    }
+	local line_thresholds = { [16] = 22, [15] = 24, [14] = 26, [13] = 29, [12] = 999 }
     
     local segments = {}
     local current_pos = 1
@@ -120,52 +118,48 @@ local function SetDynamicIngredientText(textKey)
     SetLabel("catalogue_description_text", formatted_text)
 end
 
--- HELPER FUNCTION FOR DYNAMIC FONT SIZING (PORTS)
+-- HELPER: Dynamic Font Sizing for Ports (Right Column)
 local function SetDynamicPortText(textKey)
-    local text = GetReplacedString(textKey)
-    if text == "#####" then text = "" end
+	local text = GetReplacedString(textKey)
+	if text == "#####" then text = "" end
 
-    local function Ceil(x) return Floor(x + 0.99999) end
+	local function Ceil(x) return Floor(x + 0.99999) end
 
-    local font_sizes_to_check = {16, 14, 12}
-    local chars_per_line_map = {
-        [16] = 50, [14] = 58, [12] = 68,
-    }
-    local line_thresholds = {
-        [16] = 3, [14] = 4, [12] = 999,
-    }
-    
-    local segments = {}
-    local current_pos = 1
-    if text then
-        local start_pos, end_pos = string.find(text, "<br>", current_pos, true)
-        while start_pos do
-            table.insert(segments, string.sub(text, current_pos, start_pos - 1))
-            current_pos = end_pos + 1
-            start_pos, end_pos = string.find(text, "<br>", current_pos, true)
-        end
-        table.insert(segments, string.sub(text, current_pos))
-    end
-    if table.getn(segments) == 0 then segments = { text or "" } end
+	local font_sizes_to_check = {14, 13, 12}
+	local chars_per_line_map = { [14] = 40, [13] = 50, [12] = 60 }
+	local line_thresholds = { [14] = 26, [13] = 29, [12] = 999 }
+	
+	local segments = {}
+	local current_pos = 1
+	if text then
+		local start_pos, end_pos = string.find(text, "<br>", current_pos, true)
+		while start_pos do
+			table.insert(segments, string.sub(text, current_pos, start_pos - 1))
+			current_pos = end_pos + 1
+			start_pos, end_pos = string.find(text, "<br>", current_pos, true)
+		end
+		table.insert(segments, string.sub(text, current_pos))
+	end
+	if table.getn(segments) == 0 then segments = { text or "" } end
 
-    local final_font_size = 12
-    for _, current_font_size in ipairs(font_sizes_to_check) do
-        local chars_per_line = chars_per_line_map[current_font_size]
-        local line_threshold = line_thresholds[current_font_size]
-        
-        local total_lines = table.getn(segments) - 1
-        for _, segment in ipairs(segments) do
-            total_lines = total_lines + Ceil(string.len(segment) / chars_per_line)
-        end
+	local final_font_size = 12
+	for _, current_font_size in ipairs(font_sizes_to_check) do
+		local chars_per_line = chars_per_line_map[current_font_size]
+		local line_threshold = line_thresholds[current_font_size]
+		
+		local total_lines = table.getn(segments) - 1
+		for _, segment in ipairs(segments) do
+			total_lines = total_lines + Ceil(string.len(segment) / chars_per_line)
+		end
 
-        if total_lines <= line_threshold then
-            final_font_size = current_font_size
-            break 
-        end
-    end
-    
-    local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
-    SetLabel("catalogue_description_text", formatted_text)
+		if total_lines <= line_threshold then
+			final_font_size = current_font_size
+			break 
+		end
+	end
+	
+	local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
+	SetLabel("catalogue_description_text", formatted_text)
 end
 
 -- HELPER: Converts a week number (1-52) into a descriptive date string.
@@ -184,6 +178,123 @@ local function ConvertWeekToDateString(week)
     else
         return GetString("catalogue_date_middle", month_name)
     end
+end
+
+-- Determine which holidays a port celebrates based on its culture tag.
+local function GetCelebratedHolidays(port)
+	local culture = port.culture or "western"
+	local portName = port.name
+	local holidays = {}
+
+	-- 1. Muslim Holidays
+	if culture == "muslim" then
+		table.insert(holidays, "ramadan")
+		table.insert(holidays, "eid_ul_fitr")
+	end
+
+	-- 2. Lunar New Year (East Asian + San Francisco)
+	if culture == "east_asian" or portName == "sanfrancisco" then
+		table.insert(holidays, "lunar_new_year")
+	end
+
+	-- 3. Hindu Holidays
+	if culture == "hindu" then
+		table.insert(holidays, "diwali")
+	end
+
+	-- 4. Latin Holidays
+	if culture == "latin" then
+		table.insert(holidays, "carnival")
+	end
+
+	-- 5. North American Holidays
+	if culture == "north_american" then
+		table.insert(holidays, "thanksgiving")
+	end
+
+	-- 6. Christian/Western Standard (Christmas, Easter, Lent)
+	if culture ~= "muslim" and culture ~= "east_asian" and culture ~= "hindu" then
+		table.insert(holidays, "christmas")
+		table.insert(holidays, "easter")
+	end
+
+	-- 7. Lent (Western, NA, European, Latin)
+	if culture == "western" or culture == "north_american" or culture == "european" or culture == "latin" then
+		table.insert(holidays, "lent")
+	end
+
+	-- 8. Global Holidays (Everyone gets these)
+	table.insert(holidays, "valentine")
+	table.insert(holidays, "halloween")
+
+	return holidays
+end
+
+-- HELPER: Gather Buildings, Ingredients and Characters for a Port
+local function GatherPortData(port)
+	local data = { buildings = {}, ingredients = {}, characters = {} }
+	local ing_seen = {}
+	local char_seen = {}
+    local bldg_seen = {}
+
+	if port.buildings then
+		for _, building in ipairs(port.buildings) do
+            
+            -- 1. Buildings (Locations)
+            -- Filter out special/invisible buildings and check if visited
+            if building.type ~= "special" and not bldg_seen[building.name] then
+                if gDevForceReveal or Player.buildingsVisited[building.name] then
+                    table.insert(data.buildings, building)
+                    bldg_seen[building.name] = true
+                end
+            end
+
+			-- 2. Ingredients (from Markets/Farms)
+			if building.inventory and (building.type == "market" or building.type == "farm") then
+				for _, ing in ipairs(building.inventory) do
+					if not ing_seen[ing.name] then
+						-- Check discovery status
+						local locs = Player.catalogue.discoveredIngredientLocations[ing.name]
+						if gDevForceReveal or (locs and locs[port.name]) then
+							table.insert(data.ingredients, ing)
+							ing_seen[ing.name] = true
+						end
+					end
+				end
+			end
+
+			-- 3. Characters (Residents)
+			local charList = building:GetCharacterList()
+			if charList then
+				for _, char in ipairs(charList) do
+					if not char_seen[char.name] then
+                        -- FILTER: Exclude Empty/Generic Characters
+                        local isEmptyChar = false
+                        if _EmptyCharacters then
+                            for _, emptyName in ipairs(_EmptyCharacters) do
+                                if char.name == emptyName then isEmptyChar = true; break; end
+                            end
+                        end
+
+                        if not isEmptyChar then
+						    local charData = Player.catalogue.unlockedCharacters[char.name]
+						    if gDevForceReveal or (charData and charData.met) then
+							    table.insert(data.characters, char)
+							    char_seen[char.name] = true
+						    end
+                        end
+					end
+				end
+			end
+		end
+	end
+	
+	-- Sort for consistency
+    table.sort(data.buildings, function(a,b) return GetString(a.name) < GetString(b.name) end)
+	table.sort(data.ingredients, function(a,b) return a.name < b.name end)
+	table.sort(data.characters, function(a,b) return a.name < b.name end)
+	
+	return data
 end
 
 -------------------------------------------------------------------------------
@@ -219,7 +330,7 @@ if gCatalogueCategory == "characters" and selection then
         local nameLabel = GetString(char.name)
         
         table.insert(contents, Text { x = 24, y = 19, w = 406, h = 44, label = "#" .. nameLabel, font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-        table.insert(contents, Text { x = 192, y = 69, w = 248, h = 200, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
+        table.insert(contents, Text { x = 192, y = 69, w = 248, h = 300, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
         
         local function buildPreferenceString(masterList, discoveredList)
             -- If Dev Reveal is active, show everything
@@ -273,7 +384,7 @@ if gCatalogueCategory == "characters" and selection then
         table.insert(contents, CharWindow { x = portrait_x, y = portrait_y, w = portrait_w, h = portrait_h, name = char.name, scale = portrait_scale })
         
         table.insert(contents, Text { x = 24, y = 19, w = 406, h = 44, label = "#" .. GetString(char.name), font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 200, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
+        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 300, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
 
         -- Likes Header
         table.insert(contents, Text { x = 192, y = 250, w = 238, h = 20, label = "#<b>"..GetString("catalogue_likes").."</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
@@ -306,7 +417,7 @@ if gCatalogueCategory == "characters" and selection then
         end
         
         table.insert(contents, Text { x = 24, y = 19, w = 406, h = 44, label ="#"..GetString"catalogue_locked_title", font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 200, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
+        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 300, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
     end
 
 elseif gCatalogueCategory == "ingredients" and selection then
@@ -322,7 +433,7 @@ elseif gCatalogueCategory == "ingredients" and selection then
         table.insert(contents, Text { x = 105, y = 15, w = 306, h = 54, label = "#"..nameLabel, font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
         
         -- Column 1: Description
-        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 280, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
+        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 400, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
 
         -- Column 2: Structured Data
         local data_y = 110
@@ -411,89 +522,160 @@ elseif gCatalogueCategory == "ingredients" and selection then
         -- STATE 1: LOCKED INGREDIENT VIEW
         table.insert(contents, BitmapTint { x=35, y=25, image="items/"..ing.name.."_big", tint=Color(0,0,0,255) })
         table.insert(contents, Text { x = 55, y = 25, w = 406, h = 44, label ="#"..GetString"catalogue_locked_title", font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 157, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
+        table.insert(contents, Text { x = 192, y = 69, w = 238, h = 400, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
     end
 	
 elseif gCatalogueCategory == "ports" and selection then
-    local port = selection
+	local port = selection
 
-    -- Define the offset values to perfectly align the overlay.
-    local overlay_x_offset = -462
-    local overlay_y_offset = -392
+	if Player.catalogue.unlockedPorts[port.name] or gDevForceReveal then
+		-- STATE 2: UNLOCKED PORT VIEW
+		
+		-- 1. OVERLAY IMAGE (Backdrop)
+		table.insert(contents, Bitmap { 
+			x = kCenter - 4, y = kCenter - 4, 
+			w = 457, h = 484,
+			image = "image/catalogue_overlay_ports_" .. port.name .. ".png" 
+		})
+		
+		-- 2. TITLE (Top Center)
+		table.insert(contents, Text { x = 24, y = 10, w = 406, h = 40, label = "#" .. GetString(port.name), font = { labelFontName, 28, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
+		
+		-- 3. LEFT COLUMN: PASSPORT DATA
+		local left_col_x = 24
+		local left_col_w = 170
+		local sub_header_font = { labelFontName, 16, BlackColor }
+		local info_font = { uiFontName, 12, BlackColor }
+		local tiny_font = { uiFontName, 12, BlackColor } -- New smaller font for lists
+		local passport_y = 50
+		
+		-- Flag and Country/Region
+		local countryKey = port.country or "unknown"
+		table.insert(contents, Bitmap { x = left_col_x, y = passport_y, w = 40, h = 25, image = "image/flag_" .. countryKey })
+		
+		local locationStr = GetString("country_" .. countryKey)
+		if port.region then locationStr = locationStr .. "<br>" .. GetString("region_" .. port.region) end
+		table.insert(contents, Text { x = left_col_x + 45, y = passport_y, w = 125, h = 40, label = "#" .. locationStr, font = info_font, flags = kVAlignTop + kHAlignLeft })
+		
+		passport_y = passport_y + 35
+		
+		-- Hemisphere and Culture
+		local hemiStr = GetString("hemisphere_" .. (port.hemisphere or "north"))
+		local cultStr = GetString("culture_" .. (port.culture or "western"))
+		table.insert(contents, Text { x = left_col_x, y = passport_y, w = 200, h = 30, label = "#" .. hemiStr .. " / " .. cultStr, font = info_font, flags = kVAlignTop + kHAlignLeft })
+		
+		passport_y = passport_y + 20
+		
+		-- 4. LEFT COLUMN LOWER: HOLIDAYS, BUILDINGS, INGREDIENTS & RESIDENTS
+		local portData = GatherPortData(port)
+		local data_y = passport_y -- Start slightly below passport info
+		local sub_col_w = Floor(left_col_w / 2)
+		local row_height = 12 -- Tight spacing for lists
+		
+		-- Observed Holidays (Moved to dynamic flow)
+		local holidays = GetCelebratedHolidays(port)
+		if table.getn(holidays) > 0 then
+			table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_holidays_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
+			data_y = data_y + 20
+			
+			local h_names = {}
+			for _, h_key in ipairs(holidays) do
+				table.insert(h_names, GetString("holiday_" .. h_key))
+			end
+			local holidayStr = table.concat(h_names, ", ")
+			
+			-- Estimate height based on length (simple heuristic)
+			local est_height = 25
+			if string.len(holidayStr) > 25 then est_height = 25 end
+			if string.len(holidayStr) > 50 then est_height = 25 end
 
-    -- Layer 1: Your new custom overlay
-    table.insert(contents, Bitmap { 
-        x = overlay_x_offset, y = overlay_y_offset, 
-        w = 457, h = 384, -- The container size remains the same
-        image = "image/catalogue_overlay_ports_" .. port.name .. ".png" 
-    })
-    
-    -- Layer 2: All the text and UI elements
-    
-    -- Header with the Port Name
-    table.insert(contents, Text { x = 24, y = 10, w = 406, h = 44, label = "#" .. GetString(port.name), font = { labelFontName, 28, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-    
-    -- The main description text box
-    table.insert(contents, Text { x = 24, y = 60, w = 410, h = 80, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
+			table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = est_height, label = "#" .. holidayStr, font = info_font, flags = kVAlignTop + kHAlignLeft })
+			data_y = data_y + est_height + 10 -- Padding
+		end
+		
+		-- Key Buildings
+		if table.getn(portData.buildings) > 0 then
+			table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_buildings_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
+			data_y = data_y + 20
+			
+			for i, bldg in ipairs(portData.buildings) do
+				local col_offset = Mod(i-1, 2) * sub_col_w
+				local row_offset = Floor((i-1)/2) * row_height
+				
+				table.insert(contents, Text { 
+					x = left_col_x + col_offset, 
+					y = data_y + row_offset, 
+					w = sub_col_w - 2, 
+					h = row_height, 
+					label = "#" .. GetString(bldg.name), 
+					font = tiny_font, 
+					flags = kVAlignTop + kHAlignLeft 
+				})
+			end
+			
+			-- Advance data_y based on number of rows used
+			local total_rows = Floor((table.getn(portData.buildings) + 1) / 2)
+			data_y = data_y + (total_rows * row_height) + 10 -- Add padding
+		end
+		
+		-- Local Ingredients
+		if table.getn(portData.ingredients) > 0 then
+			table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_ingredients_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
+			data_y = data_y + 20
+			
+			for i, ing in ipairs(portData.ingredients) do
+				local col_offset = Mod(i-1, 2) * sub_col_w
+				local row_offset = Floor((i-1)/2) * row_height
+				
+				table.insert(contents, Text { 
+					x = left_col_x + col_offset, 
+					y = data_y + row_offset, 
+					w = sub_col_w - 2, 
+					h = row_height, 
+					label = "#" .. GetString(ing.name), 
+					font = tiny_font, 
+					flags = kVAlignTop + kHAlignLeft 
+				})
+			end
+			
+			-- Advance data_y based on number of rows used
+			local total_rows = Floor((table.getn(portData.ingredients) + 1) / 2)
+			data_y = data_y + (total_rows * row_height) + 10 -- Add padding
+		end
 
-    -- --- Sub-Lists ---
-    local sub_y = 150
-    local sub_x = 24
-    local sub_w = 195
-    local sub_h = 220
-    local sub_font = { uiFontName, 12, BlackColor }
-    local sub_header_font = { labelFontName, 14, BlackColor }
+		-- Key Residents
+		if table.getn(portData.characters) > 0 then
+			table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_residents_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
+			data_y = data_y + 20
+			
+			for i, char in ipairs(portData.characters) do
+				local col_offset = Mod(i-1, 2) * sub_col_w
+				local row_offset = Floor((i-1)/2) * row_height
+				
+				table.insert(contents, Text { 
+					x = left_col_x + col_offset, 
+					y = data_y + row_offset, 
+					w = sub_col_w - 2, 
+					h = row_height, 
+					label = "#" .. GetString(char.name), 
+					font = tiny_font, 
+					flags = kVAlignTop + kHAlignLeft 
+				})
+			end
+		end
 
-    -- Column 1: Notable Locations & Residents
-    table.insert(contents, Text { x = sub_x, y = sub_y, w = sub_w, h = 20, label = "#<b>Locations</b>", font = sub_header_font })
-    local locations_text = {}
-    if port.buildings then
-        for _, building in ipairs(port.buildings) do
-            if building.type ~= "special" then
-                if Player.catalogue.discoveredBuildings[building.name] or gDevForceReveal then
-                    table.insert(locations_text, GetString(building.name))
-                else
-                    table.insert(locations_text, GetString("catalogue_undiscovered_location"))
-                end
-            end
-        end
-    end
-    table.insert(contents, Text { x = sub_x, y = sub_y + 20, w = sub_w, h = 90, label = "#" .. table.concat(locations_text, "<br>"), font = sub_font, flags=kVAlignTop+kHAlignLeft })
-    
-    table.insert(contents, Text { x = sub_x, y = sub_y + 120, w = sub_w, h = 20, label = "#<b>Residents</b>", font = sub_header_font })
-    local residents_text = {}
-    if port.buildings then
-        for _, building in ipairs(port.buildings) do
-            if building.type ~= "special" and building.characters and building.characters[1] and table.getn(building.characters[1]) > 0 then
-                local charName = building.characters[1][1]
-                if (Player.catalogue.unlockedCharacters[charName] and Player.catalogue.unlockedCharacters[charName].met) or gDevForceReveal then
-                    table.insert(residents_text, GetString(charName))
-                else
-                    table.insert(residents_text, GetString("catalogue_undiscovered_location"))
-                end
-            end
-        end
-    end
-    table.insert(contents, Text { x = sub_x, y = sub_y + 140, w = sub_w, h = 90, label = "#" .. table.concat(residents_text, "<br>"), font = sub_font, flags=kVAlignTop+kHAlignLeft })
+		-- 5. RIGHT COLUMN: DESCRIPTION (Extensive Text)
+		local right_col_x = 210
+		local right_col_w = 230
+		local right_col_h = 420
+		
+		table.insert(contents, Text { x = right_col_x, y = 55, w = right_col_w, h = right_col_h, name = "catalogue_description_text", flags = kVAlignTop + kHAlignLeft })
 
-    -- Column 2: Local Ingredients
-    sub_x = 238
-    table.insert(contents, Text { x = sub_x, y = sub_y, w = sub_w, h = 20, label = "#<b>Ingredients</b>", font = sub_header_font })
-    local ingredients_text = {}
-    if port.buildings then
-        for _, building in ipairs(port.buildings) do
-            if building.inventory then
-                for _, ing in ipairs(building.inventory) do
-                    if Player.catalogue.unlockedIngredients[ing.name] or gDevForceReveal then
-                        table.insert(ingredients_text, GetString(ing.name))
-                    else
-                        table.insert(ingredients_text, GetString("catalogue_undiscovered_location"))
-                    end
-                end
-            end
-        end
-    end
-    table.insert(contents, Text { x = sub_x, y = sub_y + 20, w = sub_w, h = sub_h, label = "#" .. table.concat(ingredients_text, "<br>"), font = sub_font, flags=kVAlignTop+kHAlignLeft })
+	else
+		-- STATE 1: LOCKED PORT VIEW
+		table.insert(contents, Text { x = 24, y = 19, w = 406, h = 44, label ="#"..GetString"catalogue_locked_title", font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
+		table.insert(contents, Text { x = 192, y = 69, w = 238, h = 157, name = "catalogue_description_text", flags=kVAlignTop+kHAlignLeft })
+	end
 
 else
     -- NO SELECTION VIEW

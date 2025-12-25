@@ -102,7 +102,6 @@ Player =
 	charHappiness = {},				-- Character happiness levels
 	charHappinessTime = {},			-- Last time character happiness was set
 	
-	-- HOLIDAY SYSTEM STATE
 	currentHolidays = {},		   -- Table of currently active holidays { holidayName = true }
 	holidayAnnouncements = {},	  -- Tracks the last year a holiday was announced { holidayName = year }
 	

@@ -7,8 +7,11 @@
 
 local reg_scale = 0.75
 
+local blueberry = _AllIngredients["blueberry"]
+local unit_string = blueberry:GetUnitName(2)
+
 local ask = Dollars(blueberry.price_high)
-ask = "#"..GetString("buy_howmany", blueberry:GetName(), ask)
+ask = "#"..GetText("buy_howmany", blueberry:GetName(), ask, unit_string)
 
 MakeDialog
 {
@@ -34,6 +37,7 @@ MakeDialog
 			Text { x=4*reg_scale,y=0, w=114*reg_scale,h=kMax, label="0", flags=kVAlignCenter+kHAlignRight, font= {uiFontName,18*reg_scale,WhiteColor} },
 		},
 		
+		-- Keypad Buttons (Round)
 		Bitmap { x=7*reg_scale,y=86*reg_scale, image=C3SmallRoundButtonStyle.graphics[1], scale=reg_scale,
 			Text { x=0,y=0,w=kMax,h=kMax, label="#C", font={roundButtonFont[1], roundButtonFont[2]*reg_scale, roundButtonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
 		Bitmap { x=23*reg_scale,y=132*reg_scale, image=C3SmallRoundButtonStyle.graphics[1], scale=reg_scale,
@@ -57,11 +61,21 @@ MakeDialog
 		Bitmap { x=163*reg_scale,y=169*reg_scale, image=C3SmallRoundButtonStyle.graphics[1], scale=reg_scale,
 			Text { x=0,y=0,w=kMax,h=kMax, label="#0", font={roundButtonFont[1], roundButtonFont[2]*reg_scale, roundButtonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
 
-		Bitmap { x=232*reg_scale,y=132*reg_scale, image=C3SmallRoundButtonStyle.graphics[1], scale=reg_scale,
-			Text { x=0,y=0,w=kMax,h=kMax, label="#+10", font={roundButtonFont[1], roundButtonFont[2]*reg_scale, roundButtonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
-		Bitmap { x=280*reg_scale,y=132*reg_scale, image=C3SmallRoundButtonStyle.graphics[1], scale=reg_scale,
-			Text { x=0,y=0,w=kMax,h=kMax, label="#+100", font={roundButtonFont[1], roundButtonFont[2]*reg_scale, roundButtonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
+		-- Increment Buttons (Rectangular, Vertical Layout)
+		-- Matched to ui/ui_buysell.lua layout (x=251, y starts at 134, increments of 25)
+		Bitmap { x=251*reg_scale, y=134*reg_scale, image=C3ButtonStyle.graphics[1], scale=0.6*reg_scale,
+			Text { x=0,y=0,w=kMax,h=kMax, label="#+1", font={buttonFont[1], buttonFont[2]*reg_scale, buttonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
+			
+		Bitmap { x=251*reg_scale, y=159*reg_scale, image=C3ButtonStyle.graphics[1], scale=0.6*reg_scale,
+			Text { x=0,y=0,w=kMax,h=kMax, label="#+10", font={buttonFont[1], buttonFont[2]*reg_scale, buttonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
+			
+		Bitmap { x=251*reg_scale, y=184*reg_scale, image=C3ButtonStyle.graphics[1], scale=0.6*reg_scale,
+			Text { x=0,y=0,w=kMax,h=kMax, label="#+100", font={buttonFont[1], buttonFont[2]*reg_scale, buttonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
+			
+		Bitmap { x=251*reg_scale, y=209*reg_scale, image=C3ButtonStyle.graphics[1], scale=0.6*reg_scale,
+			Text { x=0,y=0,w=kMax,h=kMax, label="#+1000", font={buttonFont[1], buttonFont[2]*reg_scale, buttonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
 
+		-- Action Buttons
 		Bitmap { x=137*reg_scale,y=228*reg_scale, image=C3LargeRoundButtonStyle.graphics[1], scale=reg_scale,
 			Text { x=0,y=0,w=kMax,h=kMax, label="#"..GetString("buy"), font={buttonFont[1], buttonFont[2]*reg_scale, buttonFont[3]}, flags=kVAlignCenter+kHAlignCenter }, },
 

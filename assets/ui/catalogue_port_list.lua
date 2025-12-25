@@ -1,27 +1,27 @@
 --[[---------------------------------------------------------------------------
-    Chocolatier Three: Catalogue Port List Panel
-    Copyright (c) 2025 Michael Lane and Google Gemini AI.
+	Chocolatier Three: Catalogue Port List Panel
+	Copyright (c) 2025 Michael Lane and Google Gemini AI.
 --]]---------------------------------------------------------------------------
 
 -- Helper function for Lua 5.0 compatible modulo
 local function Mod(a, n)
-    if n == 0 then return a end
-    return a - (n * Floor(a / n))
+	if n == 0 then return a end
+	return a - (n * Floor(a / n))
 end
 
 -- This function is called when a port in the list is clicked.
 local function SelectPort(port)
-    -- We only allow selection of ports that have been unlocked.
-    if port and Player.catalogue.unlockedPorts[port.name] then
-        if gCatalogueSelection ~= port then
-            gCatalogueSelection = port
-            DebugOut("UI", "Catalogue selection changed to: " .. port.name)
-            
-            -- Redraw both panels to update the selection highlight and the detail view
-            FillWindow("catalogue_list", "ui/catalogue_port_list.lua")
-            FillWindow("catalogue_detail", "ui/catalogue_detail.lua")
-        end
-    end
+	-- We only allow selection of ports that have been unlocked.
+	if port and Player.catalogue.unlockedPorts[port.name] then
+		if gCatalogueSelection ~= port then
+			gCatalogueSelection = port
+			DebugOut("UI", "Catalogue selection changed to: " .. port.name)
+			
+			-- Redraw both panels to update the selection highlight and the detail view
+			FillWindow("catalogue_list", "ui/catalogue_port_list.lua")
+			FillWindow("catalogue_detail", "ui/catalogue_detail.lua")
+		end
+	end
 end
 
 -------------------------------------------------------------------------------
@@ -30,8 +30,8 @@ end
 -- Gather all ports from the global table into a list we can sort.
 local portList = {}
 for name, port in pairs(_AllPorts) do
-    -- We will include all ports, even hidden ones, to show them as locked entries.
-    table.insert(portList, port)
+	-- We will include all ports, even hidden ones, to show them as locked entries.
+	table.insert(portList, port)
 end
 
 -- Sort the list alphabetically by the port's display name.
@@ -42,12 +42,17 @@ table.sort(portList, function(a, b) return GetString(a.name) < GetString(b.name)
 
 local contents = {}
 local layout = {
-    x_start = 0, y_start = 0,
-    x_spacing = 75, y_spacing = 75,
-    items_per_row = 4,
-    rows_per_page = 4,
+	x_start = 0, y_start = 0,
+	x_spacing = 65, y_spacing = 80,
+	items_per_row = 4,
+	rows_per_page = 5,
 }
 layout.items_per_page = layout.items_per_row * layout.rows_per_page
+
+-- Define the scale for the thumbnails here.
+-- 1.0 is original size. 0.5 is half size.
+-- Since the container window is 64x64, adjust this based on your source PNG size.
+local thumbScale = 0.70
 
 -- Make the layout accessible to the parent container for scrolling logic.
 gCatalogueLayout = layout
@@ -57,49 +62,51 @@ local items_drawn_this_page = 0
 
 -- Build the UI for the visible page of ports.
 for i = gCatalogueTopIndex, gCatalogueTopIndex + layout.items_per_page - 1 do
-    local port = portList[i]
-    if port then
-        local tempPort = port
-        local isUnlocked = Player.catalogue.unlockedPorts[port.name]
+	local port = portList[i]
+	if port then
+		local tempPort = port
+		local isUnlocked = Player.catalogue.unlockedPorts[port.name]
 
-        local label = isUnlocked and GetString(port.name) or GetString("catalogue_locked_title")
-        -- NOTE: We will need to create these new thumbnail assets.
-        local imagePath = "image/catalogue_thumb_" .. port.name .. ".png"
-        
-        local portDisplay
-        if isUnlocked then
-            -- UNLOCKED: Display the full-color port thumbnail.
-            portDisplay = Bitmap { image = imagePath }
-        else
-            -- LOCKED: Display the icon tinted black as a silhouette.
-            portDisplay = BitmapTint { image = imagePath, tint = Color(0, 0, 0, 255) }
-        end
+		local label = isUnlocked and GetString(port.name) or GetString("catalogue_locked_title")
+		local imagePath = "image/catalogue_thumb_" .. port.name .. ".png"
+		
+		local portDisplay
+		if isUnlocked then
+			-- UNLOCKED: Display the full-color port thumbnail.
+			-- Added scale parameter here
+			portDisplay = Bitmap { image = imagePath, scale = thumbScale }
+		else
+			-- LOCKED: Display the icon tinted black as a silhouette.
+			-- Added scale parameter here
+			portDisplay = BitmapTint { image = imagePath, tint = Color(0, 0, 0, 255), scale = thumbScale }
+		end
 
-        -- Create the button. The background changes if the item is selected.
-        table.insert(contents,
-            Button { x = x, y = y, w = 95, h = 95, graphics = {},
-                command = function() SoundEvent("cadi/ui_click.ogg"); SelectPort(tempPort) end,
-                
-                Bitmap { x = 0, y = 0, image = (gCatalogueSelection == tempPort) and "image/button_recipes_selected" or "image/button_recipes_up" },
-                
-                -- Container for the port thumbnail image.
-                Window { x = 15, y = 15, w = 64, h = 64,
-                    portDisplay,
-                },
+		-- Create the button. The background changes if the item is selected.
+		table.insert(contents,
+			Button { x = x, y = y, w = 95, h = 95, graphics = {},
+				command = function() SoundEvent("cadi/ui_click.ogg"); SelectPort(tempPort) end,
+				
+				Bitmap { x = 0, y = 0, image = (gCatalogueSelection == tempPort) and "image/button_recipes_selected" or "image/button_recipes_up" },
+				
+				-- Container for the port thumbnail image.
+				-- Center the scaled image inside the 64x64 window if necessary by adjusting x/y here
+				Window { x = 15, y = 15, w = 74, h = 74,
+					portDisplay,
+				},
 
-                -- Text label for the port name below the thumbnail.
-                Text { x = 0, y = 70, w = 95, h = 20, label = "#"..label, font = { uiFontName, 12, BlackColor }, flags = kVAlignCenter + kHAlignCenter }
-            }
-        )
+				-- Text label for the port name below the thumbnail.
+				Text { x = 2, y = 80, w = 95, h = 20, label = "#"..label, font = { uiFontName, 12, BlackColor }, flags = kVAlignCenter + kHAlignCenter }
+			}
+		)
 
-        -- Update grid position for the next item.
-        items_drawn_this_page = items_drawn_this_page + 1
-        x = x + layout.x_spacing
-        if Mod(items_drawn_this_page, layout.items_per_row) == 0 then
-            x = layout.x_start
-            y = y + layout.y_spacing
-        end
-    end
+		-- Update grid position for the next item.
+		items_drawn_this_page = items_drawn_this_page + 1
+		x = x + layout.x_spacing
+		if Mod(items_drawn_this_page, layout.items_per_row) == 0 then
+			x = layout.x_start
+			y = y + layout.y_spacing
+		end
+	end
 end
 
 -------------------------------------------------------------------------------

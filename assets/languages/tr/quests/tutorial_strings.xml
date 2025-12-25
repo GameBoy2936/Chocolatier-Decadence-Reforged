@@ -95,7 +95,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">So, let's get started!&lt;br&gt;&lt;br&gt;Here are 100 sacks each of %sugar% and %cacao%. Go see Endrit over at %zur_factory% to turn these ingredients into chocolates…</Data></Cell>
+	 <Cell><Data ss:Type="String">So, let's get started!&lt;br&gt;&lt;br&gt;Here are 100 sacks each of %sugar% and %cacao%. Go see Endrit over at %zur_factory% to turn these ingredients into chocolates...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_03_summary</Data></Cell>
@@ -103,7 +103,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_03_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You are looking for %zur_factory%? It's the red brick factory in the middle of town…</Data></Cell>
+	 <Cell><Data ss:Type="String">You are looking for %zur_factory%? It's the red brick factory in the middle of town...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04</Data></Cell>
@@ -123,7 +123,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Your %b01% look delicious!&lt;br&gt;&lt;br&gt;All products and ingredients appear in your inventory. You can mouse over items for more information…</Data></Cell>
+	 <Cell><Data ss:Type="String">Your %b01% look delicious!&lt;br&gt;&lt;br&gt;All products and ingredients appear in your inventory. You can mouse over items for more information...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_hint_1</Data></Cell>
@@ -143,7 +143,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Speaking of ingredients, in order to keep making %b01% we'll need more %sugar% and %cacao% soon. You're going to need some money!&lt;br&gt;&lt;br&gt;Visit %zur_shop% to turn your chocolates into cash…</Data></Cell>
+	 <Cell><Data ss:Type="String">Speaking of ingredients, in order to keep making %b01% we'll need more %sugar% and %cacao% soon. You're going to need some money!&lt;br&gt;&lt;br&gt;Visit %zur_shop% to turn your chocolates into cash...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_summary</Data></Cell>
@@ -171,7 +171,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_06_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The only place I know of in town where you'll be able to sell your chocolates is %zur_shop%. Click %sell_all% inside the shop to turn a profit on your creations…</Data></Cell>
+	 <Cell><Data ss:Type="String">The only place I know of in town where you'll be able to sell your chocolates is %zur_shop%. Click %sell_all% inside the shop to turn a profit on your creations...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_07</Data></Cell>
@@ -211,7 +211,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_09_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% to buy ingredients. You'll find the market just to the right of the chocolate factory…</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% to buy ingredients. You'll find the market just to the right of the chocolate factory...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10</Data></Cell>
@@ -235,7 +235,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% where you'll find the %sugar% you need. The market is just to the right of the chocolate factory…</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% where you'll find the %sugar% you need. The market is just to the right of the chocolate factory...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11</Data></Cell>
@@ -251,7 +251,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand you're after %cacao%. You need to click on the &quot;Map&quot; button on the left, and then click on the port of %douala% to travel there…</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand you're after %cacao%. You need to click on the &quot;Map&quot; button on the left, and then click on the port of %douala% to travel there...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11_helpb_offer_1</Data></Cell>
@@ -319,7 +319,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I think you're starting to get the hang of things, &lt;player&gt;, which is good, because I need to leave soon.&lt;br&gt;&lt;br&gt;Next make your way back over to %zur_market% - Verena has a new ingredient you can use to make a new recipe, something that's always good for business…</Data></Cell>
+	 <Cell><Data ss:Type="String">I think you're starting to get the hang of things, &lt;player&gt;, which is good, because I need to leave soon.&lt;br&gt;&lt;br&gt;Next make your way back over to %zur_market% - Verena has a new ingredient you can use to make a new recipe, something that's always good for business...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14_summary</Data></Cell>
@@ -327,7 +327,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, make your way back over to %zur_market% - %zur_marketkeep% has some new ingredients you'll be able to use to make a new recipe…</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, make your way back over to %zur_market% - %zur_marketkeep% has some new ingredients you'll be able to use to make a new recipe...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15</Data></Cell>
@@ -359,7 +359,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;Change Recipe&quot;, select %b02%, and make as many as you can. More complicated recipes mean higher profits!&lt;br&gt;&lt;br&gt;Keep trying until you've set production to at least [D|10|20|30] cases…</Data></Cell>
+	 <Cell><Data ss:Type="String">Click &quot;Change Recipe&quot;, select %b02%, and make as many as you can. More complicated recipes mean higher profits!&lt;br&gt;&lt;br&gt;Keep trying until you've set production to at least [D|10|20|30] cases...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_summary</Data></Cell>
@@ -371,7 +371,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're supposed to have at least [D|10|20|30] cases of your new recipe - %b02% - on hand. As long as you have %milk%, %sugar%, and %cacao% in your inventory, you can visit the factory in %zurich% to make more of the bars…</Data></Cell>
+	 <Cell><Data ss:Type="String">You're supposed to have at least [D|10|20|30] cases of your new recipe - %b02% - on hand. As long as you have %milk%, %sugar%, and %cacao% in your inventory, you can visit the factory in %zurich% to make more of the bars...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b</Data></Cell>
@@ -459,11 +459,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're well on your way, &lt;player&gt;. As long as you've got the needed ingredients in your inventory, your factory will crank out chocolates as you travel.&lt;br&gt;&lt;br&gt;I hear that Alex will be ready to make a move as soon as you've accumulated $10,000…</Data></Cell>
+	 <Cell><Data ss:Type="String">You're well on your way, &lt;player&gt;. As long as you've got the needed ingredients in your inventory, your factory will crank out chocolates as you travel.&lt;br&gt;&lt;br&gt;I hear that Alex will be ready to make a move as soon as you've accumulated $10,000...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Alex is waiting to speak with you, &lt;player&gt;. She is anxious to be on her way. Please go see her in Zurich at the %zur_station% as soon as you can…</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex is waiting to speak with you, &lt;player&gt;. She is anxious to be on her way. Please go see her in Zurich at the %zur_station% as soon as you can...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over</Data></Cell>
@@ -519,11 +519,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_zur_towerkeep_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're working with Endrit over at the factory, aren't you? He tries to act all business-like, but don't let him fool you. He was practically bouncing off the walls with excitement when Alex told him they were firing up the machines again.&lt;br&gt;&lt;br&gt;We grew up in the same neighborhood, you know. He's always been obsessed with how things work his whole life since his family seeked refuge from Albania…</Data></Cell>
+	 <Cell><Data ss:Type="String">You're working with Endrit over at the factory, aren't you? He tries to act all business-like, but don't let him fool you. He was practically bouncing off the walls with excitement when Alex told him they were firing up the machines again.&lt;br&gt;&lt;br&gt;We grew up in the same neighborhood, you know. He's always been obsessed with how things work his whole life since his family seeked refuge from Albania...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_alex_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Sean was flying for the Americans, and his plane was lost on a 'secret mission' towards the end of the war. The authorities have been no help, so I have no choice but to try to find out what happened to him. I simply refuse to believe that he's dead. I know that I can count on you to turn things around in my absence…</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean was flying for the Americans, and his plane was lost on a 'secret mission' towards the end of the war. The authorities have been no help, so I have no choice but to try to find out what happened to him. I simply refuse to believe that he's dead. I know that I can count on you to turn things around in my absence...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_alex_02_offer_1</Data></Cell>
@@ -535,11 +535,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_byealex_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Well, there she goes. I sure hope Alexandra knows what she's doing…</Data></Cell>
+	 <Cell><Data ss:Type="String">Well, there she goes. I sure hope Alexandra knows what she's doing...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut_byealex_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Well, there she goes. I sure hope Alexandra knows what she's doing…</Data></Cell>
+	 <Cell><Data ss:Type="String">Well, there she goes. I sure hope Alexandra knows what she's doing...</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

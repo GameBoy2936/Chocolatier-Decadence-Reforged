@@ -26,7 +26,10 @@ local function NewIngredientCheck(char)
 	
 	if table.getn(newIngredients) > 0 then
         DebugOut("KITCHEN", "New ingredients detected for lab pantry: " .. table.concat(newIngredients, ", "))
-		DisplayDialog { "ui/ui_character_generic.lua", char=char, text="#"..GetString("kitchen_new_ingredients") }
+		
+		local text = GetRandomString("kitchen_new_ingredients")
+		DisplayDialog { "ui/ui_character_generic.lua", char=char, text="#"..text }
+		
 		for _,name in ipairs(newIngredients) do
 			Player:AddIngredient(name, -1, true)
 			Player.labIngredients[name] = true
@@ -43,7 +46,8 @@ local _InventRecipe =
 		NewIngredientCheck(char)
 		local category = _AllCategories["user"]
 		if category and table.getn(category.products) >= Player.customSlots then
-			DisplayDialog { "ui/ui_character_generic.lua", char=char, building=building, text="#"..GetString("user_noslots") }
+			local text = GetRandomString("user_noslots")
+			DisplayDialog { "ui/ui_character_generic.lua", char=char, building=building, text="#"..text }
 		else
 			DisplayDialog { "ui/ui_kitchen.lua", char=char, building=building }
 		end
@@ -66,10 +70,12 @@ function Kitchen:EnterBuilding(char, somethingHappened)
 	if category and table.getn(category.products) >= Player.customSlots then
 		if table.getn(category.products) == 12 then
             DebugOut("KITCHEN", "Player has filled all 12 custom recipe slots.")
-			yn = DisplayDialog { "ui/ui_character_yesno.lua", char=char, building=self, text="#"..GetString("user_allslotsused") }
+			local text = GetRandomString("user_allslotsused")
+			yn = DisplayDialog { "ui/ui_character_yesno.lua", char=char, building=self, text="#"..text }
 		else
             DebugOut("KITCHEN", "Player has no available custom recipe slots.")
-			yn = DisplayDialog { "ui/ui_character_yesno.lua", char=char, building=self, text="#"..GetString("user_noslots") }
+			local text = GetRandomString("user_noslots")
+			yn = DisplayDialog { "ui/ui_character_yesno.lua", char=char, building=self, text="#"..text }
 		end
 	end
 	if yn == "yes" then

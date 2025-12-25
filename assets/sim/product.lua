@@ -17,6 +17,7 @@ Product =
 	price_high = nil,				-- High price
 	cost_low = nil,					-- Low cost (sum of low costs of ingredients)
 	cost_high = nil,				-- High cost (sum of high costs of ingredients)
+    unit_type = "unit_case",
 
 	-- Appearance
 	appearance = nil,				-- Null if product image has the same name as the product (default for system products)
@@ -137,13 +138,13 @@ end
 
 function Product:Create(t)
 	if not t then
-		-- TODO: Generic error
+		DebugOut("ERROR", "Product:Create called with nil definition table.")
 	elseif not t.code then
-		-- TODO: WARN: No Code given
+		DebugOut("ERROR", "Product:Create called without a code.")
 	elseif not t.category then
-		-- TODO: WARN: No Category given
---	elseif _AllProducts[t.code] then
---		-- TODO: WARN: Duplicate code
+		DebugOut("ERROR", "Product:Create called without a category for '" .. (t.code or "unknown") .. "'.")
+	elseif _AllProducts[t.code] then
+		DebugOut("ERROR", "Product:Create detected duplicate product code: '" .. t.code .. "'. Ignoring.")
 	else
 		t.code = string.lower(t.code)
 --		DebugOut("PRODUCT:"..tostring(t.code))
@@ -154,6 +155,9 @@ function Product:Create(t)
 		setmetatable(t, self) self.__index = self
 		_AllProducts[t.code] = t
 		if t.code then _G[t.code] = t end
+
+		-- Defaults to "unit_case" if not specified in XML.
+		t.unit_type = t.unit_type or "unit_case"
 		
 		-- Recipe is parsed from XML as <ingredient name> = <number>, should be just a list of ingredients. Convert it.
 		t.counts = t.recipe
@@ -317,6 +321,12 @@ function Product:GetAppearance(x,y,scale)
 		appearance = Bitmap { x=x,y=y, image="items/"..self.code, scale=scale }
 	end
 	return appearance
+end
+
+function Product:GetUnitName(count)
+	-- Default to "unit_case" if not specified (Products are almost always cases)
+	local type = self.unit_type or "unit_case"
+	return GetLocalizedUnit(type, count)
 end
 
 function Product:RolloverContents(strings)

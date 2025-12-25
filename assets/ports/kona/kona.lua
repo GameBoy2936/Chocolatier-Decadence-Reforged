@@ -8,6 +8,7 @@ kona.mapx = 40
 kona.mapy = 185
 kona.hemisphere="north"
 kona.region="oceania"
+kona.country = "usa"
 kona.culture = "western"
 kona.locked = true
 

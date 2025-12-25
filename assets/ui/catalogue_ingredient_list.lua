@@ -32,9 +32,9 @@ local ingredientList = _IngredientOrder
 local contents = {}
 local layout = {
     x_start = 1, y_start = 7,
-    x_spacing = 44, y_spacing = 52,
+    x_spacing = 44, y_spacing = 50,
     items_per_row = 6,
-    rows_per_page = 6,
+    rows_per_page = 8,
 }
 layout.items_per_page = layout.items_per_row * layout.rows_per_page
 

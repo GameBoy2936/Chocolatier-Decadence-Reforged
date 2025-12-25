@@ -116,24 +116,24 @@ MakeDialog
         x=1000, y=9, name="catalogue", fit=true,
         Bitmap
         {
-            x=4, y=16, image="image/popup_back_recipes",
+            x=4, y=16, image="image/popup_back_catalogue",
             
-            Window { name="catalogue_list", x=16, y=91, w=289, h=384 },
-            Window { name="catalogue_detail", x=311, y=98, w=457, h=384 },
+            Window { name="catalogue_list", x=16, y=91, w=289, h=484 },
+            Window { name="catalogue_detail", x=311, y=98, w=457, h=484 },
             
             Button { x=5, y=12, name="prev_cat_page", command=PrevCategoryPage, graphics={"image/button_arrow_left_up","image/button_arrow_left_down","image/button_arrow_left_over"}, scale=0.75 },
             Group(categoryTabs),
             Button { x=748, y=12, name="next_cat_page", command=NextCategoryPage, graphics={"image/button_arrow_right_up","image/button_arrow_right_down","image/button_arrow_right_over"}, scale=0.75 },
 
             SetStyle(C3ButtonStyle),
-            Button { x=150, y=420, name="catalogue_scrollUp", command=ScrollUp, graphics={"image/button_arrow_up_up","image/button_arrow_up_down","image/button_arrow_up_over"}, scale=0.75 },
-            Button { x=210, y=420, name="catalogue_scrollDown", command=ScrollDown, graphics={"image/button_arrow_down_up","image/button_arrow_down_down","image/button_arrow_down_over"}, scale=0.75 },
+            Button { x=150, y=510, name="catalogue_scrollUp", command=ScrollUp, graphics={"image/button_arrow_up_up","image/button_arrow_up_down","image/button_arrow_up_over"}, scale=0.75 },
+            Button { x=210, y=510, name="catalogue_scrollDown", command=ScrollDown, graphics={"image/button_arrow_down_up","image/button_arrow_down_down","image/button_arrow_down_over"}, scale=0.75 },
         },
         Bitmap { image="image/popup_nameplate", x=228, y=0,
             Text { x=34, y=10, w=270, h=38, label="#"..GetString"ledger_catalogue", font=nameplateFont, flags=kVAlignCenter+kHAlignCenter },
         },
         SetStyle(C3RoundButtonStyle),
-        Button { x=734, y=416, name="ok", label="ok", default=true, cancel=true, command=function() FadeCloseWindow("catalogue", "ok") end },
+        Button { x=734, y=502, name="ok", label="ok", default=true, cancel=true, command=function() FadeCloseWindow("catalogue", "ok") end },
     },
 }
 

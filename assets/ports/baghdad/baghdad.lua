@@ -8,6 +8,7 @@ baghdad.mapx = 484
 baghdad.mapy = 90
 baghdad.hemisphere = "north"
 baghdad.region = "middle_east"
+baghdad.country = "iraq"
 baghdad.culture = "muslim"
 baghdad.locked = true
 

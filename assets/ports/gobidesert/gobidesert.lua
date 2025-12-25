@@ -11,6 +11,7 @@ gobidesert.mapy = 90
 gobidesert.popupX = 370
 gobidesert.hemisphere="north"
 gobidesert.region="asia"
+gobidesert.country = "mongolia"
 gobidesert.culture = "east_asian"
 gobidesert.hidden = true
 

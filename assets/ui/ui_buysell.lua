@@ -100,12 +100,16 @@ local buysell
 local ask = Dollars(price)
 if buy then
 	buysell = "buy"
-    -- Use dynamic unit names for the buy prompt
-    local unit_plural = item.unit_plural or "sacks"
-	ask = "#"..GetText("buy_howmany", item:GetName(), ask, unit_plural)
+    -- We don't know the quantity yet (it's "How many X do you want?"), 
+    -- so we usually default to Plural (2) or Generic for the prompt.
+    local unit_name = item:GetUnitName(2) 
+	ask = "#"..GetText("buy_howmany", item:GetName(), ask, unit_name)
 else
 	buysell = "sell"
-	ask = "#"..GetText("sell_howmany", item:GetName(), ask, tostring(item:GetInventory()))
+    -- Here we know the exact inventory count, so we can pluralize correctly.
+    local invCount = item:GetInventory()
+    local unit_name = item:GetUnitName(invCount)
+	ask = "#"..GetText("sell_howmany", item:GetName(), ask, tostring(invCount) .. " " .. unit_name)
 end
 
 -- TODO: Number buttons

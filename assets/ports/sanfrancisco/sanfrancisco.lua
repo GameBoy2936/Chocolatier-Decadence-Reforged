@@ -10,6 +10,7 @@ sanfrancisco.mapy = 115 - 15
 sanfrancisco.align = "left"
 sanfrancisco.hemisphere = "north"
 sanfrancisco.region = "north_america"
+sanfrancisco.country = "usa"
 sanfrancisco.culture = "north_american"
 sanfrancisco.locked = true
 
@@ -168,26 +169,26 @@ san_cloud3.frequency = 100
 --car far L to R
 CreateSprite("san_car1",sanfrancisco)
 san_car1.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3","ports/animations/car4"}
-san_car1.time=3000
+san_car1.time=7000
 san_car1.frequency = 100
 san_car1.motion='loop'
 san_car1.layer=865
 san_car1.scaleFar=0.3
 san_car1.scaleNear=0.3
-san_car1.path= {{585,215},{585,215},{824,215},{824,215}}
+san_car1.path= {{107,215},{107,215},{346,215},{585,215},{824,215},{824,215}}
 san_car1.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask","ports/animations/car4_colormask",}
 san_car1.tints = { Color(150,0,0,255), Color(0,150,0,255), Color(0,0,150,255),Color(150,150,0,255),Color(150,0,150,255),Color(0,150,150,255), }
 --
 --car far R to L
 CreateSprite("san_car2",sanfrancisco)
 san_car2.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3","ports/animations/car4"}
-san_car2.time=3000
+san_car2.time=7000
 san_car2.frequency = 100
 san_car2.motion='loop'
 san_car2.layer=864
 san_car2.scaleFar=0.28
 san_car2.scaleNear=0.28
-san_car2.path= {{824,210},{824,210},{585,210},{585,210}}
+san_car2.path= {{824,210},{824,210},{585,210},{585,210},{346,215},{107,215},{107,215}}
 san_car2.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask","ports/animations/car4_colormask",}
 san_car2.tints = { Color(150,0,0,255), Color(0,150,0,255), Color(0,0,150,255),Color(150,150,0,255),Color(150,0,150,255),Color(0,150,150,255), }
 --

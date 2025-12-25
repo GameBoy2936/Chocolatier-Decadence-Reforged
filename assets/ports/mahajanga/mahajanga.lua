@@ -9,6 +9,7 @@
 -- mahajanga.mapy = 216
 -- mahajanga.hemisphere = "south"
 -- mahajanga.region = "africa"
+-- mahajanga.country = "madagascar"
 -- mahajanga.culture = "western"
 -- mahajanga.hidden = true
 -- mahajanga.locked = true

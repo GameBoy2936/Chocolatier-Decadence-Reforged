@@ -5,7 +5,7 @@
 
 require("sim/recipe_feedback.lua")
 
-local function GetRandomFeedbackString(feedbackData)
+local function GetRandomFeedbackString(feedbackData, ...)
     local baseKey
     local weights
 
@@ -22,7 +22,11 @@ local function GetRandomFeedbackString(feedbackData)
     while GetReplacedString(baseKey .. "_" .. (count + 1)) ~= "#####" do
         count = count + 1
     end
-    if count == 1 and GetReplacedString(baseKey .. "_1") == "#####" then return GetReplacedString(baseKey) end
+    -- If only the base key exists (no _1), usage of GetReplacedString handles it,
+    -- but we check _1 to be safe for our loop logic.
+    if count == 1 and GetReplacedString(baseKey .. "_1") == "#####" then 
+        return GetReplacedString(baseKey, unpack(arg or {})) 
+    end
     
     local randomIndex = 1
     if weights and table.getn(weights) == count then
@@ -44,7 +48,8 @@ local function GetRandomFeedbackString(feedbackData)
         randomIndex = RandRange(1, count)
     end
     
-    return GetReplacedString(baseKey .. "_" .. randomIndex)
+    -- Pass the optional arguments (like product name) to GetReplacedString
+    return GetReplacedString(baseKey .. "_" .. randomIndex, unpack(arg or {}))
 end
 
 function BuildCustomProduct(codeTable, appearance)
@@ -352,8 +357,10 @@ function EvaluatePlayerRecipe(productCategory, ingredients, slotCount)
 	
 	local feedback
 	if existingProduct then
-		if existingProduct:IsKnown() then feedback = GetReplacedString("taster_feedback_tasteslike_known", existingProduct:GetName())
-		else feedback = GetReplacedString("taster_feedback_tasteslike_unknown", existingProduct:GetName())
+		if existingProduct:IsKnown() then 
+            feedback = GetRandomFeedbackString("taster_feedback_tasteslike_known", existingProduct:GetName())
+		else 
+            feedback = GetRandomFeedbackString("taster_feedback_tasteslike_unknown", existingProduct:GetName())
 		end
 		points = 50
 	else
@@ -379,25 +386,24 @@ function EvaluatePlayerRecipe(productCategory, ingredients, slotCount)
 	elseif points > 300 then points = 300
 	end
 
---DebugOut("Calculating markup - productCategory:"..tostring(productCategory))
---DebugOut("Normal category markup:"..tostring(productCategory.markup))
+	-- DebugOut("Calculating markup - productCategory:"..tostring(productCategory))
+	-- DebugOut("Normal category markup:"..tostring(productCategory.markup))
 	local markup = productCategory.markup or 1
 	markup = markup * points / 100
 
---DebugOut("This recipe markup: "..tostring(markup))
-
+	-- DebugOut("This recipe markup: "..tostring(markup))
 
 	-- Determine how far off we are from the maximum category markup
---	local response = markup / productCategory.markup
+	-- local response = markup / productCategory.markup
 
---DebugOut("Ingredient pricing: "..tostring(lowPrice).." - "..tostring(highPrice))
+	-- DebugOut("Ingredient pricing: "..tostring(lowPrice).." - "..tostring(highPrice))
 
 	lowPrice = Floor(lowPrice * markup + .5)
 	if lowPrice < 1 then lowPrice = 1 end
 	highPrice = Floor(highPrice * markup + .5)
 	if highPrice < 1 then highPrice = 1 end
 
---DebugOut("Recipe pricing: "..tostring(lowPrice).." - "..tostring(highPrice))
+	-- DebugOut("Recipe pricing: "..tostring(lowPrice).." - "..tostring(highPrice))
     DebugOut("RECIPE", "Evaluation complete. Final score: " .. points .. ". Feedback keys: " .. table.concat(hints, ", "))
 
     if feedback and string.find(feedback, "<player>") then

@@ -8,6 +8,7 @@ bogota.mapx = 210
 bogota.mapy = 175
 bogota.hemisphere = "north"
 bogota.region = "south_america"
+bogota.country = "colombia"
 bogota.culture = "latin"
 bogota.locked = true
 

@@ -54,10 +54,10 @@ end)
 
 local contents = {}
 local layout = {
-    x_start = 12, y_start = 0,
+    x_start = 12, y_start = 2,
     x_spacing = 66, y_spacing = 92,
     items_per_row = 4,
-    rows_per_page = 4,
+    rows_per_page = 5,
 }
 layout.items_per_page = layout.items_per_row * layout.rows_per_page
 

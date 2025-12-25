@@ -83,7 +83,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_incomplete_3</Data></Cell>
-	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000]. If I were you, I'd get the dough together…</Data></Cell>
+	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000]. If I were you, I'd get the dough together...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_incomplete_4</Data></Cell>
@@ -127,7 +127,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney3_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$10,000|$12,500|$15,000]. If I were you, I'd get the dough together…</Data></Cell>
+	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$10,000|$12,500|$15,000]. If I were you, I'd get the dough together...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney3_complete_1</Data></Cell>
@@ -159,7 +159,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney5_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Listen. I realize that the only way I can hope to see any return on my loan is to help you out once again. I am not happy about this, but here's another $2,500 to help you get back on your feet…</Data></Cell>
+	 <Cell><Data ss:Type="String">Listen. I realize that the only way I can hope to see any return on my loan is to help you out once again. I am not happy about this, but here's another $2,500 to help you get back on your feet...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling</Data></Cell>
@@ -167,7 +167,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">We've got some great slot machines in here, &lt;player&gt;, but this is an exclusive casino. If you'd be willing to bring me [D|35|60|85] cases of your &lt;user1&gt;, I could see my way to getting you on our list…</Data></Cell>
+	 <Cell><Data ss:Type="String">We've got some great slot machines in here, &lt;player&gt;, but this is an exclusive casino. If you'd be willing to bring me [D|35|60|85] cases of your &lt;user1&gt;, I could see my way to getting you on our list...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling_summary</Data></Cell>
@@ -247,7 +247,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Without taking ownership of a shop, &lt;player&gt;, you'll never be able to accept those highly profitable Special Orders…</Data></Cell>
+	 <Cell><Data ss:Type="String">Without taking ownership of a shop, &lt;player&gt;, you'll never be able to accept those highly profitable Special Orders...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_owned_00_offer_1</Data></Cell>
@@ -255,7 +255,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I wonder how Alex is faring, poor thing…</Data></Cell>
+	 <Cell><Data ss:Type="String">I wonder how Alex is faring, poor thing...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_01_offer_1</Data></Cell>
@@ -271,11 +271,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Baumeister Confections? I thought I heard that they had converted all their factories to manufacture munitions for the war effort…</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections? I thought I heard that they had converted all their factories to manufacture munitions for the war effort...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">From what I have been told, to truly earn the respect of chocolatiers, one must prove one's ability by successfully creating and marketing one's own recipes…</Data></Cell>
+	 <Cell><Data ss:Type="String">From what I have been told, to truly earn the respect of chocolatiers, one must prove one's ability by successfully creating and marketing one's own recipes...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_06_offer_1</Data></Cell>
@@ -319,7 +319,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand you've made your way to Indonesia, correct? There's quite a bit of Baumeister Confections history there, you know…</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand you've made your way to Indonesia, correct? There's quite a bit of Baumeister Confections history there, you know...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_04_offer_1</Data></Cell>
@@ -387,7 +387,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tan_shop_owned_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome back to your shop, &lt;player&gt;. It is always a pleasure to see you again…</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome back to your shop, &lt;player&gt;. It is always a pleasure to see you again...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">dou_shop_own_tease_offer_1</Data></Cell>
@@ -395,11 +395,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Is it my imagination, &lt;player&gt;, or has the cost of travel gone up lately? Must be hard on someone who travels as much as you do…</Data></Cell>
+	 <Cell><Data ss:Type="String">Is it my imagination, &lt;player&gt;, or has the cost of travel gone up lately? Must be hard on someone who travels as much as you do...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Inflation is surely upon us, eh &lt;player&gt;. It seems like every few months it costs more to get from one port to another…</Data></Cell>
+	 <Cell><Data ss:Type="String">Inflation is surely upon us, eh &lt;player&gt;. It seems like every few months it costs more to get from one port to another...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_02_offer_1</Data></Cell>
@@ -415,7 +415,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">expire_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm not sure if you realize this, &lt;player&gt;, but ingredients do not last forever. If you are storing an ingredient that you are not using, it will expire and disappear from your inventory over time…</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm not sure if you realize this, &lt;player&gt;, but ingredients do not last forever. If you are storing an ingredient that you are not using, it will expire and disappear from your inventory over time...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">expire_tease_01_offer_1</Data></Cell>
@@ -439,7 +439,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I can't blame Alex - I would probably be doing the same thing myself if I were in her situation - but does she really think she's going to be able to find her husband? It's been quite some time…</Data></Cell>
+	 <Cell><Data ss:Type="String">I can't blame Alex - I would probably be doing the same thing myself if I were in her situation - but does she really think she's going to be able to find her husband? It's been quite some time...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_01_offer_1</Data></Cell>
@@ -447,11 +447,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Hey, &lt;player&gt;. I ran into Alex not too long ago. She sure seemed to be in a big hurry - maybe she's following a solid lead…</Data></Cell>
+	 <Cell><Data ss:Type="String">Hey, &lt;player&gt;. I ran into Alex not too long ago. She sure seemed to be in a big hurry - maybe she's following a solid lead...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I just hope Alex isn't getting in over her head - when the military wants to conceal information, they certainly have the ways and means to do so…</Data></Cell>
+	 <Cell><Data ss:Type="String">I just hope Alex isn't getting in over her head - when the military wants to conceal information, they certainly have the ways and means to do so...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_04_offer_1</Data></Cell>
@@ -459,7 +459,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now I can't vouch for whether or not it's true, but I met someone who told me they had met someone who flew with Sean Fletcher in the war. This person saw Sean's plane go down, but he also claims that he saw Sean's parachute open…</Data></Cell>
+	 <Cell><Data ss:Type="String">Now I can't vouch for whether or not it's true, but I met someone who told me they had met someone who flew with Sean Fletcher in the war. This person saw Sean's plane go down, but he also claims that he saw Sean's parachute open...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_06_offer_1</Data></Cell>
@@ -467,7 +467,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, some news from Alex. She was in a rush and I don't have any details, but I understand that she has discovered legitimate evidence that Sean is indeed still alive…</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, some news from Alex. She was in a rush and I don't have any details, but I understand that she has discovered legitimate evidence that Sean is indeed still alive...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">evan_endorsed_rank2_offer_1</Data></Cell>
@@ -479,11 +479,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_boardspew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%rank_4%! I never doubted you, &lt;player&gt;! Keep making me proud…</Data></Cell>
+	 <Cell><Data ss:Type="String">%rank_4%! I never doubted you, &lt;player&gt;! Keep making me proud...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_bianspew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You never know whom you'll cross paths with here at %tan_bar%, &lt;player&gt;…</Data></Cell>
+	 <Cell><Data ss:Type="String">You never know whom you'll cross paths with here at %tan_bar%, &lt;player&gt;...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_bianspew_offer_1</Data></Cell>

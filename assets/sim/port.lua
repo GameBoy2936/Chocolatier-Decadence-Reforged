@@ -17,6 +17,7 @@ Port =
 	
 	hemisphere = nil,		-- Hemisphere in order to determine seasonal patterns, "north" or "south"
 	region = nil,    		-- Area in the world, e.g., "europe", "north_america"
+	country = nil,    		-- Country of the port, e.g., "switzerland", "indonesia"
 	culture = "western",	-- Cultural zone for holiday observance (western, muslim, east_asian, etc.)
 }
 

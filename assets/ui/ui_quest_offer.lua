@@ -13,6 +13,12 @@ if char then
     Player:MeetCharacter(char)
 end
 
+local building = gDialogTable.building
+if building and not Player.buildingsVisited[building.name] then
+	DebugOut("PLAYER", "First visit to generic building: " .. building.name)
+	Player.buildingsVisited[building.name] = true
+end
+
 local name = nil
 local happiness = nil
 if char then

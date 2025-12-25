@@ -8,6 +8,7 @@ toronto.mapx = 212
 toronto.mapy = 83
 toronto.hemisphere = "north"
 toronto.region = "north_america"
+toronto.country = "canada"
 toronto.culture = "north_american"
 toronto.locked = true
 

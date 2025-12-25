@@ -195,7 +195,6 @@ local function UpdateBowlAndSlotVisibility()
     end
 end
 
--- MOD: Command for the '+' button
 function AddIngredientSlot()
 	local category = _AllCategories[targetCategory]
 	-- Ensure we are comparing numbers, not strings
@@ -206,7 +205,6 @@ function AddIngredientSlot()
 	end
 end
 
--- MOD: Command for the '-' button
 function RemoveIngredientSlot()
 	local category = _AllCategories[targetCategory]
 	-- Ensure we are comparing numbers, not strings
@@ -398,7 +396,7 @@ function TasteIt()
 	end
 	
 	if not allFull then
-		SetLabel("feedback", GetString("taster_fillslots"))
+		SetDynamicFeedbackText(GetRandomString("taster_fillslots"))
 	else
         DebugOut("RECIPE", "Player clicked 'Taste It'.")
 		local productCategory = _AllCategories[targetCategory]
@@ -495,7 +493,7 @@ local function ConfirmRecipeCreation()
 	productDescription = GetLabel("product_desc")
 	
 	if productName == "" or productName == defaultProductName or productDescription == "" or productDescription == defaultProductDescription then
-		DisplayDialog { "ui/ui_generic.lua", text="invent_noname" }
+		DisplayDialog { "ui/ui_generic.lua", text="#"..GetRandomString("invent_noname") }
 	else
 		-- See if any product exists with this same name
 		local nameOk = true
@@ -511,10 +509,13 @@ local function ConfirmRecipeCreation()
 		end
 		
 		if nameOk then
-			local yn = DisplayDialog { "ui/ui_generic_yn.lua", text="invent_confirm" }
+			local text = GetRandomString("invent_confirm")
+			local yn = DisplayDialog { "ui/ui_generic_yn.lua", text="#"..text }
 			if yn == "yes" then DoRecipeCreation() end
 		else
-			DisplayDialog { "ui/ui_generic.lua", text="invent_name_inuse" }
+            -- Pass the productName as a parameter for %1% substitution
+			local text = GetRandomString("invent_name_inuse", productName)
+			DisplayDialog { "ui/ui_generic.lua", text="#"..text }
 		end
 	end
 end
@@ -813,4 +814,11 @@ if not openDrawer then ToggleDrawer("cacao") end
 UpdateRecipeButtons()
 
 CreateMode()
+
+local building = gDialogTable.building
+if building and not Player.buildingsVisited[building.name] then
+	DebugOut("PLAYER", "First visit to Secret Test Kitchen: " .. building.name)
+	Player.buildingsVisited[building.name] = true
+end
+
 OpenBuilding("kitchen", gDialogTable.building)

@@ -11,6 +11,7 @@ wellington.popupX = 526
 wellington.popupY = 310
 wellington.hemisphere="south"
 wellington.region="oceania"
+wellington.country = "new_zealand"
 wellington.culture = "western"
 wellington.locked = true
 

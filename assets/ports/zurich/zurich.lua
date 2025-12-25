@@ -8,6 +8,7 @@ zurich.mapx = 400
 zurich.mapy = 55 - 5
 zurich.hemisphere = "north"
 zurich.region = "europe"
+zurich.country = "switzerland"
 zurich.culture = "european"
 
 --Begin Clickable Locations===================

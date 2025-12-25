@@ -1,20 +1,34 @@
-# CHOCOLATIER: DECADENCE REFORGED
-## Version 0.3 (BETA)
-## Created by: Michael Lane
+========================================================================
+CHOCOLATIER: DECADENCE BY DESIGN REFORGED
+Version 1.0
+Release Date: December 25, 2025
+Created by: Michael Lane
+========================================================================
 
 INTRODUCTION
 ------------
-This is a comprehensive overhaul of "Chocolatier: Decadence by Design." 
-It is a total conversion that adds new systems, a dynamic economy,
-a lore encyclopedia, new characters, ingredients, and full multi-language support.
+"Decadence by Design Reforged" is a massive total conversion mod for
+the classic business simulation game "Chocolatier: Decadence by Design."
+This is the definitive way to experience the Baumeister saga in 2025.
+
+Born from a project to restore cut content, this mod evolved into a 
+complete engine overhaul. By decrypting the Playground SDK engine, 
+I have implemented features that were previously impossible: a dynamic 
+living economy, procedural quest generation, a comprehensive in-game 
+encyclopedia, and support for non-Latin languages.
 
 This mod is fully decrypted and open-source. The scripts are provided 
 in raw Lua, allowing you to learn from them or modify them further.
 
-⚠️ IMPORTANT: SAVE GAME WARNING ⚠️
-This mod fundamentally changes the game's data structure. 
-DO NOT load save files from the original game. You must start a new
-game, or your save files may get corrupted or experience side effects.
+------------------------------------------------------------------------
+⚠️  WARNING: SAVE GAMES  ⚠️
+------------------------------------------------------------------------
+This mod fundamentally rewrites the game's save data structure to support 
+Difficulty Modes and the Catalogue.
+
+DO NOT LOAD OLD SAVES.
+Focus on starting a NEW GAME. Loading a save file from the vanilla game 
+will result in corrupted data or logic errors.
 
 ------------------------------------------------------------------------
 INSTALLATION INSTRUCTIONS
@@ -32,6 +46,9 @@ INSTALLATION INSTRUCTIONS
    The game will load this folder in runtime.
 
 4. If asked to overwrite files, click YES.
+
+5. Launch the game!
+   If you see the "Reforged" logo on the title screen, it is working.
 
 ------------------------------------------------------------------------
 KEY FEATURES
@@ -52,25 +69,32 @@ KEY FEATURES
 
 3. OVERHAULED QUESTS & ORDERS
    - Special Orders Rebuilt: Orders are no longer random telegrams. 
-     You can visit shops to request orders in person. Each shop has its 
-     own order generation timer.
-   - New Story Beats: New quests have been added, including a new 
-     trust-building arc with Kowaki in Uluru.
+     You can visit shops to review orders early in person, or even catch
+	 the recipient face-to-face to accept it while you are there.
+	 Each shop has its own order generation timer.
+   - New Story Beats: New quests and storylines have been added, including
+     a new trust-building arc with Kowaki in Uluru, a more meaningful
+	 storyline of Sean Fletcher involving various characters
+	 not used in the base game, and various changes to existing ones.
    - Smart Dialogue: Characters now use context-aware dialogue algorithms 
-     to comment on the weather, your rank, or active events.
+     to comment on your actions, your current quests, or certain events.
 
 4. EXPANDED CONTENT
-   - 20 New Ingredients: Apples, Bananas, Blackberries, Brandy, Chestnuts, Hibiscus Petals, Figs,
-     Lavender, Lychees, Matcha, Passionfruit, Pineapples, Pomegranate, Raisins, Rum,
-     Star Anise, Sumac, Toffee, Turmeric, and Walnuts.
+   - 20 New Ingredients: Apples, Bananas, Blackberries, Brandy, Chestnuts,
+     Figs, Hibiscus Petals, Lavender, Lychees, Matcha, Passionfruit,
+	 Pineapples, Pomegranate, Raisins, Rum, Star Anise, Sumac, Toffee,
+	 Turmeric, and Walnuts. A few base game recipes have been altered
+	 to involve some of these ingredients.
    - 4 New Characters: Elena Tangye, Douglas McInnes,
-     Halla Þorvaldsdóttir, and Bjarki Eiríksson.
+     Patrick Ratsimbazafy (Mahajanga in a future release if we get art comms?),
+	 Halla Þorvaldsdóttir, and Bjarki Eiríksson.
    - HD Art: Base game ingredients have been AI-upscaled for clarity.
-   - Product categories now support multiple pages of recipes.
+   - Product categories now support multiple pages of recipes and product
+     lines, which allows for further modding going forward.
 
 5. SECRET TEST KITCHEN 2.0
    - No character limit on recipe descriptions.
-   - Add or remove ingredient slots dynamically.
+   - Recipe slots are now dynamic: Create recipes with 2 to 6 ingredients.
    - Expanded color palette for product tinting.
    - Granular feedback system: Teddy Baumeister now gives specific, multi-part 
      advice on your creations.
@@ -80,7 +104,17 @@ KEY FEATURES
      Switching the language requires a game restart.
    - Includes a custom tool (.ttf to .mvec converter) for modders to 
      add their own fonts.
-   - English (native language), French, German, Dutch, Italian, Spanish (Europe), Spanish (Latin America), Portuguese (Portugal), Portuguese (Brazil), Catalan, Maltese, Polish, Czech, Hungarian, Romanian, Croatian, Serbian, Bulgarian, Danish, Icelandic, Norwegian, Swedish, Finnish, Russian, Ukrainian, Greek, Turkish, Chinese (Simplified), Chinese (Traditional), Korean, Japanese, Thai, Vietnamese, Indonesian, Malay and Filipino will be supported. Any translation efforts would be greatly appreciated. The Playground SDK is incompatible with displaying fonts such as Arabic right-to-left instead of left-to-right.
+   - English (native language), French, German, Dutch, Italian,
+     Spanish (European), Spanish (Latin American), Portuguese (European),
+	 Portuguese (Brazilian), Catalan, Maltese, Polish, Czech, Hungarian,
+	 Romanian, Croatian, Serbian, Bulgarian, Danish, Icelandic, Norwegian,
+	 Swedish, Finnish, Russian, Ukrainian, Greek, Turkish,
+	 Chinese (Simplified), Chinese (Traditional), Korean, Japanese,
+	 Thai, Vietnamese, Indonesian, Malay and Filipino will be supported.
+	 
+	 Any translation efforts would be greatly appreciated. The Playground SDK
+	 is incompatible with displaying fonts such as Arabic right-to-left
+	 instead of left-to-right.
 
 ------------------------------------------------------------------------
 FOR MODDERS: DEVELOPER TOOLS
@@ -130,9 +164,16 @@ PERMISSIONS & CREDITS
    You may NOT sell this mod, put it behind a paywall, or use it for 
    any commercial purpose. This mod must remain free for the community.
 
-I give a genuine, heartfelt thanks to everybody in the Chocolatier gaming community that keeps this cherished game series alive every day.
+I give a genuine, heartfelt thanks to everybody in the Chocolatier gaming community
+that keeps this cherished game series alive every day.
 
 ------------------------------------------------------------------------
+
+Wiki & Documentation:
+https://the-chocolatier-series.fandom.com/
+
+Official Discord:
+https://discord.gg/ef3TPaVsmq
 
 This mod is free. If you'd like to support my work on preserving and 
 expanding the Chocolatier series, you can buy me a coffee here:

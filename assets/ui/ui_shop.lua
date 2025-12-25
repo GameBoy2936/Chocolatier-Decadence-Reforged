@@ -8,10 +8,14 @@ require("ui/helpers.lua")
 local shop = gDialogTable.shop
 local port = shop.port
 local char = gDialogTable.char
-local isFirstVisit = not Player.buildingsVisited[shop.name]
 
 if char then
     Player:MeetCharacter(char)
+end
+
+if not Player.buildingsVisited[shop.name] then
+	DebugOut("PLAYER", "First visit to shop: " .. shop.name)
+	Player.buildingsVisited[shop.name] = true
 end
 
 char:MakeNeutral()

@@ -8,6 +8,7 @@ douala.mapx = 404
 douala.mapy = 155
 douala.hemisphere="north"
 douala.region="africa"
+douala.country = "cameroon"
 douala.culture = "western"
 douala.locked = true
 

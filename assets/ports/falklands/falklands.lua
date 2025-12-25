@@ -10,6 +10,7 @@ falklands.mapx = 244
 falklands.mapy = 345
 falklands.hemisphere = "south"
 falklands.region = "south_america"
+falklands.country = "uk"
 falklands.culture = "western"
 falklands.hidden = true
 

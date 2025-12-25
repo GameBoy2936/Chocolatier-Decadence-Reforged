@@ -543,15 +543,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee13_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Namaste, &lt;player&gt;. It's good to make your acquaintance.&lt;br&gt;&lt;br&gt;So, I see you've expanded operations to include %beverage%. And in my opinion, the world's best coffee beans are found in %havana%, Cuba. I'd be willing to get you passage to Cuba and hand over a recipe for %c02% that uses those beans, if you're willing set aside some of your first batch for me. Do we have a deal?</Data></Cell>
+	 <Cell><Data ss:Type="String">Namaste, &lt;player&gt;. It's good to make your acquaintance.&lt;br&gt;&lt;br&gt;I have been studying the coffee trade in the Caribbean. The best beans are in %havana%, but you won't find them by talking to the owners in the city. You need to go to the source. I know the woman who actually runs the plantation there. Her name is Chinemerem, but she goes by Cheena. If I give you an introduction, and a recipe for %c02%, will you go see her?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee13_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent. First, here's the recipe for %c02%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. First, here's the recipe for %c02%. It is a local favorite.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee13_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">When you get to %havana%, track down %hav_plantationkeep% at %hav_plantation%. You can buy the coffee beans you'll need from her.</Data></Cell>
+	 <Cell><Data ss:Type="String">When you get to %havana%, track down %hav_plantationkeep% at %hav_plantation%. You can buy the coffee beans you'll need from her. Do not waste her time - she works harder than anyone I know.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee13_summary</Data></Cell>
@@ -559,7 +559,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee13_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You were sent by %trav_01%? Well, she has impeccable taste, so welcome! I raise the finest coffee beans in the country and my prices are fair.</Data></Cell>
+	 <Cell><Data ss:Type="String">You come from Shobha? She is a good woman. She asks questions because she wants to learn, not because she wants to take.&lt;br&gt;&lt;br&gt;I am Chinemerem Famosa. The merchants call me "Cheena" because it is faster for their tongues, but the trees know me by my true name. I manage this land. If you want the best beans in the Sierra Maestra, you are speaking to the right person.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee13_hint_1</Data></Cell>
@@ -571,7 +571,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee14_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now, you didn't think Ms. Mudaliar did this all as a favor? I suggest you should repay her with [D|24|36|50] cases of the new %c02% recipe she gave you as soon as you can.</Data></Cell>
+	 <Cell><Data ss:Type="String">Now wait a second, &lt;player&gt;. Before you buy our %hav_coffee% and rush off to your factories... Shobha mentioned that she misses the taste of a proper morning coffee. She spends too much time in libraries and not enough time enjoying life, I think.&lt;br&gt;&lt;br&gt;Make a batch of %c02% - [D|24|36|50] cases. Take them to her. It will warm her spirit. Can you do this small kindness?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee14_summary</Data></Cell>
@@ -579,7 +579,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee14_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Wonderful - I knew I had picked the right person to introduce to my friends! Thank you for the %c02%! I'll be in touch again soon!</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, you have returned. And you brought the %c02%! Cheena is a woman of her word, isn't she? Thank you, &lt;player&gt;. I'll be in touch again soon!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee14_incomplete_1</Data></Cell>
@@ -943,15 +943,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee20</Data></Cell>
-	 <Cell><Data ss:Type="String">A Glut Of %hav_coffee%</Data></Cell>
+	 <Cell><Data ss:Type="String">Abundance of the Earth</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee20_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Listen, friend. I have just harvested a bumper crop of coffee beans here. There's not a whole lot I can do on the price, but I would be willing to trade [D|5000|6000|7500] sacks of these wonderful %hav_coffee% for [D|75|90|110] cases of %c03%. How does that sound to you?</Data></Cell>
+	 <Cell><Data ss:Type="String">The earth has been overly generous this season, &lt;player&gt;. We have a bumper crop - more beans than the warehouses in the city can hold! I do not wish to see this blessing go to waste.&lt;br&gt;&lt;br&gt;I know you make a '%c03%' that unites beans from all over the world. If you bring me [D|75|90|110] cases to share with my people here, I will trade you [D|5000|6000|7500] sacks of raw coffee. It is a trade of abundance for abundance.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee20_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Super. I'll set the beans aside for you here, and will be ready to hand them over once you bring me the goods. In the meantime, here is today's price...</Data></Cell>
+	 <Cell><Data ss:Type="String">Great. I will keep the sacks dry and safe for you here, and will be ready to hand them over once you bring me the goods. Don't take too long. In the meantime, here is today's price...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee20_summary</Data></Cell>
@@ -963,7 +963,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee20_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm sitting on [D|5000|6000|7500] sacks of %hav_coffee% here for you, &lt;player&gt;. How are my [D|75|90|110] cases of %c03% coming along?</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm sitting on [D|5000|6000|7500] sacks of %hav_coffee% here for you, &lt;player&gt;. How are the [D|75|90|110] cases of %c03% coming along?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_coffee20_hint_1</Data></Cell>
@@ -1175,7 +1175,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_02_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">That soldier, %ulu_rockkeep%, manages the pastoral station out here, and you'll find him around here. He's... difficult. A man of his time. You might want to talk to him yourself, see if he remembers anything else.&lt;br&gt;&lt;br&gt;While I was here, I also met the woman who runs the lime grove and her hut, %ulu_hutkeep%. She's a young Anangu woman - very shrewd. Her %lime% are incredible. I've secured us a supply source, and this is now the only place in the world you can acquire them. You might though just need to get on her good side first.</Data></Cell>
+	 <Cell><Data ss:Type="String">That soldier, %ulu_rockkeep%, manages the pastoral station out here, and you'll find him around here. He's... difficult. A man of his time. You might want to talk to him yourself, see if he remembers anything else. While I was here, I also met the woman who runs the lime grove and her hut, %ulu_hutkeep%. She's a young Anangu woman - very shrewd. Her %lime% are incredible. I've secured us a supply source, and this is now the only place in the world you can acquire them. You might though just need to get on her good side first.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_02_extra02_1</Data></Cell>
@@ -1191,7 +1191,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_ulu_hut_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">This is my business. My land. I don't trade with just anyone. I need to know the quality of your work. Bring me [D|50|75|100] cases of your best, purest chocolate - the %b12%. If you are serious about your craft, you'll know where to find the right cacao for it. Then we can talk about the %lime%.</Data></Cell>
+	 <Cell><Data ss:Type="String">This is my business, on our Country. We don't trade with just anyone. I need to know the quality of your work. Bring me [D|50|75|100] cases of your best, purest chocolate - the %b12%. If you are serious about your craft, you'll know where to find the right cacao for it. Then we can talk about the %lime%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_ulu_hut_summary</Data></Cell>
@@ -1203,7 +1203,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_ulu_hut_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You actually did it. You brought them all this way, you take your craft seriously. That's... unexpected.&lt;br&gt;&lt;br&gt;Alright. You kept your word. You can buy my %lime%. Just know that the price is the price - I don't play games.</Data></Cell>
+	 <Cell><Data ss:Type="String">You actually did it. You brought them all this way, you take your craft seriously. That's... unexpected.&lt;br&gt;&lt;br&gt;Alright. You kept your word. You can buy my %lime%. But understand: I am selling you the fruit of this land. If you waste it or treat it cheaply, we are finished.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_02b_prompt_offer_1</Data></Cell>

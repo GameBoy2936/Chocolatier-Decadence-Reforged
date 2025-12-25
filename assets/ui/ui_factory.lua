@@ -11,6 +11,11 @@ if char then
     Player:MeetCharacter(char)
 end
 
+if not Player.buildingsVisited[factory.name] then
+	DebugOut("PLAYER", "First visit to factory: " .. factory.name)
+	Player.buildingsVisited[factory.name] = true
+end
+
 local name = char.name
 
 local info = Player.factories[factory.name]

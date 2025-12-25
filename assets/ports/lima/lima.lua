@@ -8,6 +8,7 @@ lima.mapx = 200
 lima.mapy = 218
 lima.hemisphere = "south"
 lima.region = "south_america"
+lima.country = "peru"
 lima.culture = "latin"
 lima.locked = true
 

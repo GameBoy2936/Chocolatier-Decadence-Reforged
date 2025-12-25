@@ -58,6 +58,302 @@
    <Column ss:AutoFitWidth="0" ss:Width="200.25"/>
    <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
 	<Row>
+	 <Cell><Data ss:Type="String">region_africa</Data></Cell>
+	 <Cell><Data ss:Type="String">Africa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_asia</Data></Cell>
+	 <Cell><Data ss:Type="String">Asia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_caribbean</Data></Cell>
+	 <Cell><Data ss:Type="String">The Caribbean</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_central_america</Data></Cell>
+	 <Cell><Data ss:Type="String">Central America</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_europe</Data></Cell>
+	 <Cell><Data ss:Type="String">Europe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_middle_east</Data></Cell>
+	 <Cell><Data ss:Type="String">The Middle East</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_oceania</Data></Cell>
+	 <Cell><Data ss:Type="String">Oceania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_north_america</Data></Cell>
+	 <Cell><Data ss:Type="String">North America</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">region_south_america</Data></Cell>
+	 <Cell><Data ss:Type="String">South America</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hemisphere_north</Data></Cell>
+	 <Cell><Data ss:Type="String">Northern Hemisphere</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hemisphere_south</Data></Cell>
+	 <Cell><Data ss:Type="String">Southern Hemisphere</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_african</Data></Cell>
+	 <Cell><Data ss:Type="String">African</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_east_asian</Data></Cell>
+	 <Cell><Data ss:Type="String">East Asian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_european</Data></Cell>
+	 <Cell><Data ss:Type="String">European</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_hindu</Data></Cell>
+	 <Cell><Data ss:Type="String">Hindu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_latin</Data></Cell>
+	 <Cell><Data ss:Type="String">Latin American</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_muslim</Data></Cell>
+	 <Cell><Data ss:Type="String">Islamic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_nordic</Data></Cell>
+	 <Cell><Data ss:Type="String">Nordic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_north_american</Data></Cell>
+	 <Cell><Data ss:Type="String">North American</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_polynesian</Data></Cell>
+	 <Cell><Data ss:Type="String">Polynesian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_slavic</Data></Cell>
+	 <Cell><Data ss:Type="String">Slavic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_western</Data></Cell>
+	 <Cell><Data ss:Type="String">Western</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_canada</Data></Cell>
+	 <Cell><Data ss:Type="String">Canada</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_usa</Data></Cell>
+	 <Cell><Data ss:Type="String">United States</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_mexico</Data></Cell>
+	 <Cell><Data ss:Type="String">Mexico</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_belize</Data></Cell>
+	 <Cell><Data ss:Type="String">Belize</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_costa_rica</Data></Cell>
+	 <Cell><Data ss:Type="String">Costa Rica</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_cuba</Data></Cell>
+	 <Cell><Data ss:Type="String">Cuba</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_colombia</Data></Cell>
+	 <Cell><Data ss:Type="String">Colombia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_ecuador</Data></Cell>
+	 <Cell><Data ss:Type="String">Ecuador</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_peru</Data></Cell>
+	 <Cell><Data ss:Type="String">Peru</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_brazil</Data></Cell>
+	 <Cell><Data ss:Type="String">Brazil</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_argentina</Data></Cell>
+	 <Cell><Data ss:Type="String">Argentina</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_iceland</Data></Cell>
+	 <Cell><Data ss:Type="String">Iceland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uk</Data></Cell>
+	 <Cell><Data ss:Type="String">United Kingdom</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_france</Data></Cell>
+	 <Cell><Data ss:Type="String">France</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_germany</Data></Cell>
+	 <Cell><Data ss:Type="String">Germany</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_switzerland</Data></Cell>
+	 <Cell><Data ss:Type="String">Switzerland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_russia</Data></Cell>
+	 <Cell><Data ss:Type="String">Russia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_turkey</Data></Cell>
+	 <Cell><Data ss:Type="String">Turkey</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_iraq</Data></Cell>
+	 <Cell><Data ss:Type="String">Iraq</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_egypt</Data></Cell>
+	 <Cell><Data ss:Type="String">Egypt</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_morocco</Data></Cell>
+	 <Cell><Data ss:Type="String">Morocco</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_cameroon</Data></Cell>
+	 <Cell><Data ss:Type="String">Cameroon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_south_africa</Data></Cell>
+	 <Cell><Data ss:Type="String">South Africa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_madagascar</Data></Cell>
+	 <Cell><Data ss:Type="String">Madagascar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_india</Data></Cell>
+	 <Cell><Data ss:Type="String">India</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_mongolia</Data></Cell>
+	 <Cell><Data ss:Type="String">Mongolia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_indonesia</Data></Cell>
+	 <Cell><Data ss:Type="String">Indonesia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_china</Data></Cell>
+	 <Cell><Data ss:Type="String">China</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_japan</Data></Cell>
+	 <Cell><Data ss:Type="String">Japan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_australia</Data></Cell>
+	 <Cell><Data ss:Type="String">Australia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_new_zealand</Data></Cell>
+	 <Cell><Data ss:Type="String">New Zealand</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_fiji</Data></Cell>
+	 <Cell><Data ss:Type="String">Fiji</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_unknown</Data></Cell>
+	 <Cell><Data ss:Type="String">Unknown</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_lunar_new_year</Data></Cell>
+	 <Cell><Data ss:Type="String">Lunar New Year</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_hanukkah</Data></Cell>
+	 <Cell><Data ss:Type="String">Hanukkah</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_valentine</Data></Cell>
+	 <Cell><Data ss:Type="String">Valentine's Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_carnival</Data></Cell>
+	 <Cell><Data ss:Type="String">Carnival</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_lent</Data></Cell>
+	 <Cell><Data ss:Type="String">Lent</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_easter</Data></Cell>
+	 <Cell><Data ss:Type="String">Easter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_cinco_de_mayo</Data></Cell>
+	 <Cell><Data ss:Type="String">Cinco de Mayo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_cherry_blossom</Data></Cell>
+	 <Cell><Data ss:Type="String">Cherry Blossom Festival</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_bastille</Data></Cell>
+	 <Cell><Data ss:Type="String">Bastille Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_independence_usa</Data></Cell>
+	 <Cell><Data ss:Type="String">Independence Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_holi</Data></Cell>
+	 <Cell><Data ss:Type="String">Holi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_ramadan</Data></Cell>
+	 <Cell><Data ss:Type="String">Ramadan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_eid_ul_fitr</Data></Cell>
+	 <Cell><Data ss:Type="String">Eid al-Fitr</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_oktoberfest</Data></Cell>
+	 <Cell><Data ss:Type="String">Oktoberfest</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_dia_de_muertos</Data></Cell>
+	 <Cell><Data ss:Type="String">Day of the Dead</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_halloween</Data></Cell>
+	 <Cell><Data ss:Type="String">Halloween</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_diwali</Data></Cell>
+	 <Cell><Data ss:Type="String">Diwali</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_thanksgiving</Data></Cell>
+	 <Cell><Data ss:Type="String">Thanksgiving</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_christmas</Data></Cell>
+	 <Cell><Data ss:Type="String">Christmas</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_announcer_text</Data></Cell>
 	 <Cell><Data ss:Type="String">As Alex Fletcher's loyal and dependable assistant, Rick Lafontaine serves as the primary liaison between you and the Baumeister Confections Board of Directors. Originally from Montréal, the young, bright and resourceful business graduate was personally hired by Alex for his sharp mind and unwavering belief in her mission. Outside of his duties ensuring vital messages and directives are delivered promptly as you travel the world and build your chocolatier career, he also remains a devoted fan of the Montréal Canadiens hockey team and is always happy to see a fellow professional succeeding.</Data></Cell>
 	</Row>
@@ -140,6 +436,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_hav_marketkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Elián Alzua is the no-nonsense fixture of the %hav_market%. A transplant from the tobacco fields of Western Cuba, he retains the rural habit of rolling his own unrefined cigarillos, which he smokes incessantly while overseeing his inventory in the humid open-air hall. He has zero patience for the romanticized view of Cuba held by tourists or the corporate polish of the Baumeisters. He lives a frugal life in the city, sending nearly all his earnings back to the countryside to support his widowed sister and her children.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_hav_plantationkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Known to the local merchants simply as 'La Famosa,' Chinemerem 'Cheena' Famosa is the formidable Mayora (forewoman) of the Havana Coffee Beans estate. A descendant of Igbo people brought to the island in the previous century, she has worked the red soil of the Sierra Maestra her entire life. While she does not hold the deed to the land - that belongs to an absentee landlord in the city - everyone knows that Cheena is the true authority on the plantation. She manages the harvest, negotiates with the haulers, and ensures the quality of the beans with an uncompromising eye. She has little patience for tourists, but deep respect for those who understand the labor behind the luxury.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_hav_shopkeep_text</Data></Cell>
@@ -383,7 +683,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_chestnut_text</Data></Cell>
-	 <Cell><Data ss:Type="String">The fruit of the Castanea sativa tree, the sweet chestnut has been a staple of European diets for millennia, often serving as a primary source of carbohydrates in mountainous regions long before the introduction of the potato. Unlike most other nuts, chestnuts have a high water and starch content and a low oil content, requiring them to be cooked—usually roasted or boiled—to make them palatable and to reveal their delicate, sweet flavor.&lt;br&gt;&lt;br&gt;In the world of fine confectionery, the chestnut reaches its zenith as the marron glacé. This labor-intensive process involves candying the nut in sugar syrup over several days to create a tender, translucent treat. When paired with chocolate, the chestnut offers a soft, floury texture and a subtle, earthy sweetness that bridges the gap between savory and sweet, making it a favorite for winter seasonal pralines.</Data></Cell>
+	 <Cell><Data ss:Type="String">The fruit of the Castanea sativa tree, the sweet chestnut has been a staple of European diets for millennia, often serving as a primary source of carbohydrates in mountainous regions long before the introduction of the potato. Unlike most other nuts, chestnuts have a high water and starch content and a low oil content, requiring them to be cooked - usually roasted or boiled - to make them palatable and to reveal their delicate, sweet flavor.&lt;br&gt;&lt;br&gt;In the world of fine confectionery, the chestnut reaches its zenith as the marron glacé. This labor-intensive process involves candying the nut in sugar syrup over several days to create a tender, translucent treat. When paired with chocolate, the chestnut offers a soft, floury texture and a subtle, earthy sweetness that bridges the gap between savory and sweet, making it a favorite for winter seasonal pralines.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_cinnamon_text</Data></Cell>
@@ -443,7 +743,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_hibiscus_text</Data></Cell>
-	 <Cell><Data ss:Type="String">While the Hibiscus genus contains hundreds of species, it is the Hibiscus sabdariffa (often known as Roselle) that is culinarily significant. Thriving in tropical and subtropical regions, the plant is harvested not for its petals, but for its calyces—the cup-like structures that support the flower. These have been harvested for centuries across Africa, Asia, and the Caribbean to create tart, deep-red beverages known variously as Karkade, Sorrel, or Agua de Jamaica.&lt;br&gt;&lt;br&gt;When dried and used in confectionery, hibiscus imparts a brilliant crimson color and a sharp, tangy flavor profile strikingly similar to cranberries but with a distinct floral finish. It is particularly effective in infusions, where its natural acidity adds a sophisticated "zing" that balances the sugar and fat of milk chocolate, or adds a bright top note to earthy, single-origin dark chocolates.</Data></Cell>
+	 <Cell><Data ss:Type="String">While the Hibiscus genus contains hundreds of species, it is the Hibiscus sabdariffa (often known as Roselle) that is culinarily significant. Thriving in tropical and subtropical regions, the plant is harvested not for its petals, but for its calyces - the cup-like structures that support the flower. These have been harvested for centuries across Africa, Asia, and the Caribbean to create tart, deep-red beverages known variously as Karkade, Sorrel, or Agua de Jamaica.&lt;br&gt;&lt;br&gt;When dried and used in confectionery, hibiscus imparts a brilliant crimson color and a sharp, tangy flavor profile strikingly similar to cranberries but with a distinct floral finish. It is particularly effective in infusions, where its natural acidity adds a sophisticated "zing" that balances the sugar and fat of milk chocolate, or adds a bright top note to earthy, single-origin dark chocolates.</Data></Cell>
 	</Row>
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_honey_text</Data></Cell>
@@ -535,7 +835,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_pomegranate_text</Data></Cell>
-	 <Cell><Data ss:Type="String">Native to the region extending from modern-day Iran to northern India, the pomegranate (Punica granatum) has been cultivated and naturalized over the whole Mediterranean region since ancient times. It features prominently in Greek mythology and ancient texts as a symbol of prosperity and fertility, prized for its ability to thrive in hot, dry climates while producing fruit with a thick, leathery skin that protects the precious cargo inside.&lt;br&gt;&lt;br&gt;The edible parts of the fruit are the arils—hundreds of jewel-like seeds encased in a juicy, ruby-red pulp. In modern chocolaterie, pomegranates are valued for their intense tartness and complex tannic qualities. Whether used as a reduction in a ganache or as dried arils for texture, they provide a bright, acidic burst that cuts through the richness of dark chocolate, cleansing the palate and highlighting the fruit notes in the cacao itself.</Data></Cell>
+	 <Cell><Data ss:Type="String">Native to the region extending from modern-day Iran to northern India, the pomegranate (Punica granatum) has been cultivated and naturalized over the whole Mediterranean region since ancient times. It features prominently in Greek mythology and ancient texts as a symbol of prosperity and fertility, prized for its ability to thrive in hot, dry climates while producing fruit with a thick, leathery skin that protects the precious cargo inside.&lt;br&gt;&lt;br&gt;The edible parts of the fruit are the arils - hundreds of jewel-like seeds encased in a juicy, ruby-red pulp. In modern chocolaterie, pomegranates are valued for their intense tartness and complex tannic qualities. Whether used as a reduction in a ganache or as dried arils for texture, they provide a bright, acidic burst that cuts through the richness of dark chocolate, cleansing the palate and highlighting the fruit notes in the cacao itself.</Data></Cell>
 	</Row>
     <Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_powder_text</Data></Cell>
@@ -626,8 +926,84 @@
 	 <Cell><Data ss:Type="String">Whiskey is a type of distilled alcoholic beverage made from a fermented grain mash, with varieties including bourbon, rye, scotch, and Irish whiskey. The spirit is almost always aged in wooden casks, which gives it a distinctive range of flavors, often including notes of oak, vanilla, caramel, and smoke.&lt;br&gt;&lt;br&gt;The pairing of whiskey and chocolate is a modern favorite among connoisseurs. The smoky, complex, and often peaty notes of a good whiskey provide a powerful and sophisticated contrast to the sweetness of chocolate, making it a popular choice for filling high-end truffles and bonbons aimed at an adult palate.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_baghdad_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sandwiched between the Tigris and Euphrates rivers, Baghdad serves as the capital of the Kingdom of Iraq. Once the center of the Islamic Golden Age, the city is currently undergoing a period of modernization, with new bridges spanning the river and oil revenues beginning to reshape the urban landscape. Despite this growth, the city preserves its historic character in the labyrinthine alleyways of the souqs, the dry desert heat, the call to prayer, and the enduring presence of traditional Maqaha (coffeehouses) where citizens gather to socialize and discuss politics.&lt;br&gt;&lt;br&gt;For the traveling merchant, Baghdad is a hub of flavors central to the Middle East. The Al Rasheed Market offers access to regional specialties, including cardamom and pomegranates. Coffee culture here is paramount. Abrahem Sa'eed operates Tigris River Coffees, a shop dedicated to the serious appreciation of the brew. The city's location makes it a vital waypoint for ingredients traveling overland between Asia and the Mediterranean.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_bali_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Dominated by the brooding silhouette of Mount Agung, Bali is an island of dramatic contrasts as the westernmost of the Lesser Sunda Islands, located between Java and Lombok. While its terraced rice paddies and Hindu temples suggest a timeless serenity, the island is currently navigating a turbulent period of political transition following the departure of the Japanese and the return of Dutch administration. Despite the uncertain atmosphere, the rhythm of daily life continues in the 'banjars' (community councils), and the island remains a place of profound spiritual devotion and artistic heritage.&lt;br&gt;&lt;br&gt;For the confectioner, Bali is a treasure trove of intense flavors grown in the nutrient-rich volcanic soil. The Kintamani highlands provide a cool climate perfect for cultivating distinct citrus-noted coffee and rare hybrid cacao. Santoso Devi operates the Kintamani Plantation, offering these goods to those who respect the land. Down in the markets of Denpasar, Nyoman trades in the island's famous spices, including cloves and nutmeg, essential for exotic recipes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_belize_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Deep in the Cayo District of British Honduras, Xunantunich's name means "Maiden of the Rock", referencing a ghostly figure said to inhabit the site. Dominated by the massive El Castillo pyramid, this location served as a Maya civic ceremonial centre to the Belize Valley region in the Late and Terminal Classic periods (c. 700 to 900 AD). Now, it is far removed from the colonial commerce of Belize City, existing in a quiet pocket of the rainforest where the local Mopan and Yucatec Maya people maintain a deep connection to the land.&lt;br&gt;&lt;br&gt;This remote archaeological site serves as the base of operations for Cambria Equivel, a guide whose knowledge of the highlands is unmatched. It was here that Sean Fletcher was eventually located, having survived his wartime exile by learning from the local tribes and discovering the age-old cultivation techniques. The region is now the exclusive source for a rare, rediscovered varietal of Honduran Cacao, grown using traditional shade-farming methods that give the beans a distinct, earthy intensity found nowhere else.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_bogota_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Perched on a high plateau in the Andes Mountains at approximately 2,640 meters above sea level, Bogotá is a city of cool, misty weather and intellectual intensity, often called the 'Athens of South America.' The urban landscape is currently in a state of flux, with colonial tile-roofed houses in La Candelaria giving way to broad avenues and modernist structures. The atmosphere is politically charged with social unrest as the city prepares for major Pan-American conferences, yet daily life is still anchored by the rhythm of the church bells from La Catedral and the bustling street life of the Carrera Séptima.&lt;br&gt;&lt;br&gt;Just outside the urban sprawl, the altitude provides perfect conditions for agriculture. Jorge Gaitain operates the Foothills Plantation here, cultivating premium mild coffee beans and fine flavor Nacional cacao that thrive in the mist. Inside the city, Tránsito Landínez has built Artesanías de Colombia into a trendy destination, curating a mix of local handicrafts and high-quality sweet goods that appeals to the city's fashionable set.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_capetown_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Resting in the shadow of Table Mountain, Cape Town is historically known as the 'Tavern of the Seas' for its role as a vital resupply stop for ships rounding the continent. The city is currently undergoing a massive transformation with the recent completion of the Duncan Dock and the Foreshore land reclamation project, significantly expanding the harbor's capacity for post-war trade. The notorious south-easterly wind, known locally as the 'Cape Doctor', regularly scours the city clean, clearing the air of industrial smog.&lt;br&gt;&lt;br&gt;However, the beauty of the Cape is shadowed by a tense political climate. While the harbor bustles with post-war optimism, whispers of a hardening stance on segregation are circulating in the city. The political opposition is gaining traction with talk of a new policy they call 'apartheid,' casting a shadow of uncertainty over the future of vibrant, multicultural neighborhoods like District Six. Despite these looming divisions, Baumeister Confections has a significant footprint here. Felix Baumeister personally oversees the company's ambitious Coffee initiative, taking advantage of the city's unique position between the Atlantic and Indian Oceans to experiment with global bean varieties. The Victoria & Alfred basin continues to serve as the logistical heart for goods entering and leaving the southern tip of the continent.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_douala_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Situated on the banks of the Wouri River estuary, Douala is the largest city and economic capital of Cameroon. Currently administered as a United Nations Trust Territory under French control, the city is a steamy, bustling port where European colonial infrastructure clashes with the vibrant, chaotic energy of local trade. The climate is equatorial and intensely humid, often shrouded in heavy clouds, but the port remains the vital artery for exporting the rich natural resources of the African interior to a world hungry for resources.&lt;br&gt;&lt;br&gt;For a chocolatier, Douala is synonymous with cacao. The volcanic soil near Mount Cameroon provides the ideal environment for growing the robust Trinitario beans that form the backbone of many dark chocolate recipes. Guy Etame operates the Ndawara Plantation just outside the city, working to bring his crop back to full capacity after the disruptions of the war. In the city center, Henri Makongue runs Capital Sweets, representing a new generation of African entrepreneurs connecting local ingredients with international business.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_falklands_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Buffeted by the relentless westerlies of the South Atlantic, the Falkland Islands are a remote and windswept outpost of the British Empire. The capital, Stanley, feels like a village on the edge of the world, with colorful tin-roofed houses huddled against the gray sea. While the islands served as a strategic coaling station and naval base during the war, they have since returned to a quiet rhythm of life dominated by sheep farming and peat cutting. It is a place where news travels slowly and strangers are noticed immediately.&lt;br&gt;&lt;br&gt;This isolation is exactly what makes the islands valuable to those wishing to remain unseen. The Boarding House in Stanley, run by the discreet locals, has become an unlikely refuge for Katherine Carpo as she navigates her defection from Schokolade Weltreich. While the islands offer little in the way of native confectionery ingredients, the chill in the air ensures a steady appreciation for warm beverages and rich chocolates among the hardy population.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_gobidesert_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Stretching across the border region of northern China and southern Mongolia, the Gobi is a rain-shadow desert characterized by scorching days, freezing nights, and vast expanses of rocky terrain rather than just shifting sands. The region is anchored by the imposing silhouette of the Jiayuguan Fortress, the historic western terminus of the Great Wall. For centuries, this was the final outpost of imperial civilization, marking the gateway to the Silk Road. In this post-war era, trade here remains sparse and difficult, reliant on springs, oases, and ancient caravan routes that have survived the rise and fall of empires.&lt;br&gt;&lt;br&gt;Amidst this desolation, life finds a way. Far from the political shifts of the region, life here continues as it has for generations, centered around the yurt and the herd. While the environment is harsh, it is the exclusive source for high-quality dates in the Baumeister network. These fruits, resilient enough to thrive in the arid climate, develop a concentrated, caramel-like sweetness that is prized by confectioners for adding depth to exotic recipes. Nyama's Outpost serves as a crucial waystation for travelers brave enough to cross the basin.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_havana_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Often called the 'Paris of the Caribbean,' Havana was founded by the Spanish in the 16th century. It is now a city of intoxicating contradictions, where Spanish colonial elegance meets the neon-lit decadence of American tourism. In this post-war era, the city has become a playground for the wealthy and the wayward, fueled by the booming sugar trade and a nightlife that never sleeps. The Malecon seawall teems with vintage automobiles and the rhythm of rumba, masking an undercurrent of political maneuvering and shadow economies.&lt;br&gt;&lt;br&gt;For a business magnate, Havana offers unparalleled access to the world's finest sugarcane and heavy, aromatic coffee beans grown in the Sierra Maestra. Armena Caraballa, a close friend of Evangeline Baumeister herself, operates her shop in the upscale Vedado district, catering to a clientele that demands nothing but the highest quality. The local Casino National also offers a unique opportunity for those feeling lucky enough to gamble their earnings on a spin of the reels.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_kona_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Located on the leeward coast of the Island of Hawai'i, Kona is defined by the gentle slopes of the Hualalai and Mauna Loa volcanoes. Historically, the community was established by King Kamehameha I to be his seat of government when he was chief of Kona before he consolidated rule of the archipelago in 1795, designating Kona as the first capital of the Kingdom of Hawai'i. Now, as a Territory of the United States, the islands are currently in a period of transition, emerging from the strict martial law of the war years. The local society is rebuilding around the spirit of 'laulima' (many hands working together), rejecting the industrial rush of the mainland in favor of a life dictated by the coffee harvest and the tides.&lt;br&gt;&lt;br&gt;For Baumeister Confections, Kona is a vital partner in the Pacific. The region is famous for its unique weather pattern - sunny mornings and cloud-covered afternoons - which creates a natural greenhouse for its crops. The mineral-rich volcanic soil produces the world-renowned Kona Coffee, cultivated with traditional care by Kalei Kamalaninui at the Ka'awa Loa Plantation. The district is also the primary source for rich, buttery Macadamia nuts, an ingredient that is quickly becoming a favorite in American households.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_lasvegas_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Rising from the arid floor of the Mojave Desert, Las Vegas is a glittering anomaly fueled by the construction of the nearby Hoover Dam and the legalization of gambling in Nevada. What was recently a dusty railroad stopover is currently exploding into a neon-lit destination for entertainment and vice. The dusty Highway 91, now known as 'The Strip,' is seeing the construction of lavish hotel-casinos like the Flamingo, funded by a mix of legitimate investors and organized crime figures seeking to launder vast sums of cash. It is a city that operates 24 hours a day, divorced from the natural rhythms of the outside world.&lt;br&gt;&lt;br&gt;While not a traditional agricultural hub, Las Vegas is a magnet for luxury goods and high-end spirits required to fuel its nightlife. It serves as a key acquisition point for ingredients like Amaretto and Whiskey. For the shrewd businessperson, the city offers high-risk, high-reward opportunities that simply do not exist in the conservative markets of Europe or the East Coast.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_lima_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Founded by Francisco Pizarro in 1535 and known historically as the 'City of Kings,' Lima sits on the arid Pacific coast, flanked by the valleys of the Chillón, Rímac, and Lurín rivers. It is a city defined by its colonial legacy, visible in the ornate balconies of the Plaza Mayor, and its unique climate - for much of the year, a thick coastal fog known as 'la garúa' blankets the city, shielding it from the tropical sun. Currently, Lima is experiencing a profound demographic shift, as migrants from the Andes descend to the capital in search of post-war opportunity, expanding the city's boundaries into the surrounding desert. The city is continuing to expand, with new avenues connecting the port of Callao to the upscale residential districts of Miraflores and San Isidro.&lt;br&gt;&lt;br&gt;For Baumeister Confections, Lima is the gateway to the Amazonian interior and the source of some of the world's most genetically diverse cacao and ingredients like tart passionfruit, both of which are essential for creating complex flavor profiles in high-end confections.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_reykjavik_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Located on the southern shore of Faxaflói bay, Reykjavík ('Smoky Bay') is the capital of the newly independent Republic of Iceland, having severed its final ties with the Danish crown in 1944. It is a city of clean lines and colorful corrugated iron rooftops, heated by the geothermal steam that rises from the ground - a natural resource that keeps the air remarkably free of the soot and smog found in other European capitals. The harbor is the heart of the city, supporting a fishing fleet that braves the rough North Atlantic waters.&lt;br&gt;&lt;br&gt;This isolation and peaceful atmosphere made it the perfect location for Baumeister Confections to establish its Secret Test Kitchen. Far from the prying eyes of corporate spies, you and Teddy Baumeister can experiment together with creating your own recipes. Meanwhile, the Hlemmur Market is a convenient place to stock up on pantry essentials, berries, sugar and dairy before going back abroad to the rest of the world.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_sanfrancisco_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Situated on the tip of a peninsula between the Pacific Ocean and the San Francisco Bay, this bustling metropolis serves as the cultural and financial heart of the American West. The city is currently experiencing a massive post-war boom, with returning GIs and a surging maritime industry transforming its neighborhoods. Its geography is defined by its steep rolling hills, the iconic Golden Gate Bridge (completed just a decade ago), and the lingering, atmospheric fog known locally in modern times as 'Karl'.&lt;br&gt;&lt;br&gt;San Francisco is the ancestral home and global headquarters of Baumeister Confections. From the main offices near Union Square, Evangeline Baumeister oversees the company's worldwide logistics. The city's port is one of the busiest in the world, acting as the primary entry point for goods from the Pacific Rim. Meanwhile, San Francisco Chocolate Makers (originally nicknamed the Brickhouse Square), recovering from wartime rationing, is famous for producing the company's signature Truffles. It remains the sentimental and administrative core of the business, blending Old World tradition with American industrial ambition.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_tangiers_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Located on the Maghreb coast at the western entrance to the Strait of Gibraltar, Tangier currently operates as a geopolitical anomaly known as the 'International Zone.' Governed jointly by several foreign powers rather than a single nation, the city operates within its own laws and has developed a reputation as a center for espionage, smuggling, and unrestricted commerce. This lack of standard regulation draws a mix of diplomats, businessmen, and opportunists to its cafés and markets, creating a distinct economic environment separate from the rest of Morocco.&lt;br&gt;&lt;br&gt;It is a city of two hearts: the winding, ancient Medina with its kasbah walls, and the Ville Nouvelle, a modern European district of boulevards and cafes where business is conducted in a dozen different languages. In the souks, the air is thick with the scent of spices like cinnamon, saffron, and the ubiquitous mint used for tea. Zachariah Tangye operates his independent shop here, Morocco Fine Coffees, taking advantage of the zone's loose tax laws to maximize profits on coffee products.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_tokyo_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Sprawling across the Kantō Plain on the eastern coast of Honshu, Tokyo is currently a city in the midst of profound reconstruction under Allied occupation. The metropolis is rebuilding at a feverish pace, with wooden structures and new concrete buildings rising from the ashes of the war. It is a place of stark contrasts, where ancient Shintō shrines stand quietly just blocks away from the noise of construction crews and the bustle of the black markets. The citizens are demonstrating remarkable resilience, embracing a new era of peace and industry.&lt;br&gt;&lt;br&gt;For the confectioner, Tokyo represents the cutting edge of precision and efficiency. The Honmei Industries factory, overseen by Dieter Baumeister, is a marvel of modern engineering, capable of producing complex Infusions with exacting standards. The local market is sophisticated and demanding, valuing presentation and subtle flavor profiles - such as matcha, ginger and wasabi - that are rarely appreciated in the West.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_toronto_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Located on the northwestern shore of Lake Ontario, Toronto is the industrial and financial engine of Canada. Historically known as "Toronto the Good" for its conservative Victorian morality, the city is currently shedding that quiet reputation as a post-war manufacturing boom attracts a wave of new immigrants. The city is defined by its grid of brick Victorian houses, the distinct ravines that cut through the urban sprawl, and the constant hum of industry along the waterfront, where goods from the Great Lakes are processed and shipped.&lt;br&gt;&lt;br&gt;Toronto serves as the headquarters for Joseph Tangye's operations and the center for the company's new Coffee Blends division. The region's access to high-quality dairy from the surrounding Ontario farmlands makes it the perfect location for sourcing fresh milk, cream, and butter. Meanwhile, the vast forests to the north provide the maple syrup that has become a staple of the local trade, as well as a wide variety of berries, apples, and nuts. Elena, Joseph's wife, also has made Canada her home, managing the company's hospitality and charitable efforts in North America.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_uluru_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Located in the "Red Centre" of the Northern Territory, Uluru (known to maps of this era as Ayers Rock) is a massive sandstone monolith rising abruptly from the flat spinifex plains, measuring 348 m (1,142 ft) high. It is a place of profound spiritual significance to the local Pitjantjatjara people (part of the Anangu), where the area around the rock formation is home to an abundance of springs, waterholes, rock caves and ancient paintings. It is said from local Tjukurpa (Dreamtime) myths that the rock was formed by two ancestral boys playing in the mud after rain, their slide marks still visible as deep gullies on its southern face.&lt;br&gt;&lt;br&gt;However, the surrounding land currently is managed as part of a remote pastoral lease. The isolation here is absolute - the nearest major town, Alice Springs, is days away by rough track, and the heat can be merciless to the unprepared. This rugged landscape is the home of Kowaki, an Anangu woman who harvests the region's unique native flora. She operates a small hut near the rock, trading in Wild Limes - specifically the drought-resistant Desert Lime. These small fruits possess an intense, sharp citrus flavor that is distinct from any commercial variety. Nearby, World War II veteran Douglas McInnes manages the livestock station, representing the encroachment of the cattle industry on this ancient landscape.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_port_wellington_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Perched on the southwestern tip of the North Island, Wellington is the capital of New Zealand and the world's southernmost capital city. It is defined by its rugged topography and the notoriously relentless 'Roaring Forties' winds that funnel through the Cook Strait. The architecture here is distinct - mostly timber Victorian villas clinging to the hillsides - adapted to flex during the region's frequent seismic tremors. The harbor is a focal point of local life, recently evidenced by the dramatic grounding of the liner Wanganella on the Barrett Reef just outside the entrance, a stark reminder of the rugged geography here.&lt;br&gt;&lt;br&gt;Whitney Baumeister oversees the production of Exotics in this remote but spirited city. Far from the scrutiny of European competitors, the New Zealand Confectioners, Ltd. factory utilizes the country's world-class dairy and the adventurous spirit of the locals to push the boundaries of flavor. The port serves as a vital link for ingredients arriving from the Pacific and Australia before they are refined into luxury goods.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_port_zurich_text</Data></Cell>
-	 <Cell><Data ss:Type="String">A major European financial hub, Zürich is the starting point of your journey. Its central location and bustling markets make it a key location for acquiring a wide variety of ingredients. The Zürich Chocolate Works is the first factory you will operate.</Data></Cell>
+	 <Cell><Data ss:Type="String">Located at the north-western tip of the Zürichsee (Lake Zürich) where the Limmat river flows out, Zürich is the largest city in Switzerland and a global center for banking and finance. Having emerged from the Second World War physically unscathed due to Swiss neutrality, the city currently stands as a vital economic engine for the reconstruction of Europe. While neighbors rebuild from rubble, Zürich's infrastructure remains pristine, making it a primary hub for international trade and diplomatic commerce. Its skyline is defined by the twin towers of the Grossmünster and the clock face of St. Peter's Church - the largest in Europe.&lt;br&gt;&lt;br&gt;While famous for the secrecy of its banks along the Bahnhofstrasse, Zürich is equally renowned for its centuries-old confectionery tradition. The cobbled streets of the medieval Niederdorf district are lined with artisanal shops, where master chocolatiers have refined the 'conching' process to produce the smooth, melting texture that Swiss chocolate is famous for. For Baumeister Confections, this city serves as the operational beachhead for rebuilding the company, housing the historic Zürich Chocolate Works and serving as a central rail hub for continental distribution.</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

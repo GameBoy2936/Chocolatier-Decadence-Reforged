@@ -14,6 +14,11 @@ if char then
     Player:MeetCharacter(char)
 end
 
+if building and not Player.buildingsVisited[building.name] then
+	DebugOut("PLAYER", "First visit to casino: " .. building.name)
+	Player.buildingsVisited[building.name] = true
+end
+
 local text = gDialogTable.text or "gamble_options"
 
 -------------------------------------------------------------------------------

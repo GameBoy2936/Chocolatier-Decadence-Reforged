@@ -9,6 +9,7 @@ reykjavik.mapy = 34
 reykjavik.align = "left"
 reykjavik.hemisphere = "north"
 reykjavik.region = "europe"
+reykjavik.country = "iceland"
 reykjavik.culture = "european"
 reykjavik.hidden = true
 

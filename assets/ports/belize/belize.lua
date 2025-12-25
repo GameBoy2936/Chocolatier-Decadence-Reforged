@@ -8,7 +8,8 @@ belize.mapx = 179
 belize.mapy = 146
 belize.align = "left"
 belize.hemisphere="north"
-belize.region="caribbean"
+belize.region="centralamerica"
+belize.country = "belize"
 belize.culture = "latin"
 belize.hidden = true
 

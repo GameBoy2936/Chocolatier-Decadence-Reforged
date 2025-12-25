@@ -255,7 +255,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_welcome_ulu_hutkeep_first_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Please respect my produce, and I will respect you. What do you need?</Data></Cell>
+	 <Cell><Data ss:Type="String">Then let us begin. Treat this harvest with respect, and we will have no problems. What do you need?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_welcome_ulu_hutkeep_1</Data></Cell>
@@ -3207,23 +3207,59 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_expired_ulu_hutkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The time has passed. I don't need the %2% anymore. As always, you wealthy people break your promises.</Data></Cell>
+	 <Cell><Data ss:Type="String">The time has passed. I don't need the %2% anymore. As always, you city people break your promises.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_expired_wel_shopkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Too late. The deadline has passed. We both lost a significant profit because you couldn't manage your time. Kinda lame, isn't it?</Data></Cell>
+	 <Cell><Data ss:Type="String">Time's up, &lt;player&gt;. We both lost a significant profit because you couldn't manage your schedule. Kinda lame, isn't it?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_expired_wel_shopkeep_2</Data></Cell>
-	 <Cell><Data ss:Type="String">You missed the window. I had to tell a very wealthy, very angry client that my "brilliant" supplier couldn't handle a simple deadline. So, thanks for that.</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">delivery_expired_wel_shopkeep_3</Data></Cell>
-	 <Cell><Data ss:Type="String">And the opportunity is gone. Vanished. That client has already found another supplier. This reflects very poorly on you, &lt;player&gt;...</Data></Cell>
+	 <Cell><Data ss:Type="String">You missed the window. I had to tell a very wealthy, very angry client that my 'brilliant' supplier couldn't handle a simple deadline. So, thanks for that.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_expired_zur_marketkeep_1</Data></Cell>
 	 <Cell><Data ss:Type="String">So much time has passed... I'm afraid the window for sending my gift of %2% has closed. It cannot be helped, I suppose. A missed opportunity for a kindness.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kitchen_new_ingredients_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It looks like you have some ingredients we haven't seen before. We'll grab one sack of each so it will be available for use in our test kitchens.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">user_noslots_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You do not currently have any spaces available in the recipe book for your own recipes.&lt;br&gt;&lt;br&gt;With your continued success, the Board of Directors will provide more spaces so you can create, and of course sell, your own inventions. Would you like to come inside anyway?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">user_allslotsused_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Way to go! You have completed the entire recipe book!&lt;br&gt;&lt;br&gt;While you won't be able to add any more recipes, you are certainly welcome to poke around and experiment as much as you wish.&lt;br&gt;&lt;br&gt;Would you like to step inside now?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_instructions_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Select the ingredients to use from the drawers. Click %invent_taste% and we'll give you some feedback on what you've got.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_noname_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You should give your new recipe a name and a description before adding it permanently to your recipe book.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_noname_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Hold on, you forgot the marketing! Fill in the name and description fields before we file this.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_name_inuse_1</Data></Cell>
+	 <Cell><Data ss:Type="String">There is already a recipe with that name. Why not choose another name so you don't confuse your customers?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_name_inuse_2</Data></Cell>
+	 <Cell><Data ss:Type="String">We already have a "%1%" in the recipe book. You need a fresh name for a fresh creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_confirm_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you sure you want to add this recipe to our recipe book? Adding a recipe will permanently use up one of your available spaces.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">invent_confirm_2</Data></Cell>
+	 <Cell><Data ss:Type="String">This looks excellent. Are you ready to commit this to the recipe book? It will consume one of your custom slots permanently.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_fillslots_1</Data></Cell>
@@ -3236,6 +3272,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">taster_fillslots_3</Data></Cell>
 	 <Cell><Data ss:Type="String">Don't be lazy, &lt;player&gt;! You'll need to fill all bowls with ingredients so I can taste and give you the feedback you need.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_fillslots_4</Data></Cell>
+	 <Cell><Data ss:Type="String">I can't taste air, &lt;player&gt;. Fill all the slots or use the (-) button to reduce the recipe size.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_cacao_1</Data></Cell>
@@ -3314,11 +3354,19 @@
 	 <Cell><Data ss:Type="String">Please, &lt;player&gt;. I need something nice to taste. Give me something different!</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">taster_feedback_default</Data></Cell>
+	 <Cell><Data ss:Type="String">taster_feedback_repetition_5</Data></Cell>
+	 <Cell><Data ss:Type="String">My palate has perfect recall, &lt;player&gt;. The answer is still the same as it was ten seconds ago, don't you know?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_repetition_6</Data></Cell>
+	 <Cell><Data ss:Type="String">Unless you swap something out, stop asking me to taste the exact same thing.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_default_1</Data></Cell>
 	 <Cell><Data ss:Type="String">This combination works for me! Click %invent_design% to design, name and describe your creation!</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">taster_feedback_default_noslots</Data></Cell>
+	 <Cell><Data ss:Type="String">taster_feedback_default_noslots_1</Data></Cell>
 	 <Cell><Data ss:Type="String">This combination works for me! But you'll need an additional space in our recipe book to actually create one of these.</Data></Cell>
 	</Row>
 	<Row>
@@ -3338,6 +3386,22 @@
 	 <Cell><Data ss:Type="String">You may have forgot about it, but you already have this recipe named %1% that uses these ingredients together.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_known_5</Data></Cell>
+	 <Cell><Data ss:Type="String">My taste buds are having déjà vu. You've already got this exact combination written down as %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_known_6</Data></Cell>
+	 <Cell><Data ss:Type="String">Tasty? Yes. Original? No. You already know this one as %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_known_7</Data></Cell>
+	 <Cell><Data ss:Type="String">We've been there, done that, and printed the label. That's just your %1% recipe again. Try something new.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_known_8</Data></Cell>
+	 <Cell><Data ss:Type="String">You're repeating yourself, &lt;player&gt;. This is exactly the same as your %1%.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_unknown_1</Data></Cell>
 	 <Cell><Data ss:Type="String">I once saw a recipe for a product like this somewhere else. You might want to ask around and see if someone already knows it.</Data></Cell>
 	</Row>
@@ -3352,6 +3416,14 @@
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_unknown_4</Data></Cell>
 	 <Cell><Data ss:Type="String">Don't get me wrong, this tastes great. But I have a hunch someone might have already got a recipe for us. You may want to ask around and do some favors and see where that takes you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_unknown_5</Data></Cell>
+	 <Cell><Data ss:Type="String">It's technically competent, sure. But I'm pretty sure I tasted this exact thing last year. Someone may have a recipe for us out there.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">taster_feedback_tasteslike_unknown_6</Data></Cell>
+	 <Cell><Data ss:Type="String">I've seen this recipe out in the wild before. We need something that screams 'Baumeister,' not 'Generic Store Brand'.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_affogato_1</Data></Cell>
@@ -4478,20 +4550,152 @@
 	 <Cell><Data ss:Type="String">I have arranged for %3% in %2% to be flooded with products just like your %1%. You will find your wares are... less than welcome.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lunar_new_year_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The Lunar New Year is upon us! Everyone is buying sweets to ensure a sweet year ahead.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lunar_new_year_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Red envelopes and red boxes of chocolates are everywhere right now. It is a very lucky time for business, &lt;player&gt;.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lunar_new_year_tokyo_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Though we have our own traditions, the influence of the Lunar festival is strong here. Gifts are being exchanged everywhere.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lunar_new_year_sanfrancisco_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Down in Chinatown, the firecrackers are scaring away bad spirits, and the families are buying up candies. It's a busy week!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_carnival_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The music is playing and the streets are full in Latin American ports! Everyone wants to indulge before the fasting begins.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_carnival_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Carnival is here! The people have no interest in saving money today - they only want pleasure and sweets.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_carnival_rio_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Look at the energy in the streets! Rio is alive. Sell your chocolates now, my friend, while passions are high!</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">ev_season_valentine_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Valentine's Day is fast approaching. Romantics around the world are giving chocolate prices a boost!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_valentine_3</Data></Cell>
+	 <Cell><Data ss:Type="String">Love is in the air! Or maybe that is just the smell of profit. Boxes of chocolates are flying off the shelves.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_valentine_hav_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, romance! The couples strolling on the Malecón want something sweet to share. Truffles are the perfect gift for a lover, no?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_valentine_wel_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ugh, the mushy cards, the panic-buying... I love the sales figures, but the sentimentality makes me nauseous. Just bring me the heart-shaped stuff, okay? We're not in love, haha... right?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lent_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It is the season of Lent. Everyone is giving up their vices, and sadly, chocolate is often the first to go.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lent_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Business is slow. The pious are fasting and abstaining from luxuries. We must tighten our belts until Easter.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lent_havana_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The parties are over and the churches are full. Not many people are buying chocolates right now, I am afraid.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_lent_zurich_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Zürich is quiet. The people are observing the fast. Prices for luxury goods will be low for a few weeks.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ev_season_easter_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Easter is just around the corner, and the bunny is driving up demand for your chocolates!</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">ev_season_easter_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Lent is finally over! The fasting ends today, and everyone is starving for sugar. Prices are up!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_easter_san_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Easter's coming around again, huh? Well... Evangeline always loved Easter Sunday in the park. We need plenty of bunnies and eggs to keep the tradition alive, I'm sure. Please, share us everything you have!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_ramadan_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It is the holy month of Ramadan. These days are for fasting, not for eating. Trade will be very quiet until the sun goes down in Islamic countries.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_ramadan_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Muslims are observing Ramadan. Chocolate sales will be down until the Eid celebration begins.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_ramadan_baghdad_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The city sleeps during the day. We focus on prayer and discipline now. Save your stock for the feast to come.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_ramadan_bag_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I am closed during the daylight hours for the holy month. We can do business, but do not expect me to taste your wares until sunset.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_diwali_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The Festival of Lights has arrived in Hindu cultures across the world! Every home needs sweets to welcome the prosperity of the new year.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_diwali_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Diwali is a victory of light over darkness. And what better way to celebrate victory than with a box of fine chocolates?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_diwali_bombay_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Look at the lamps lighting up %bombay%! Everyone is exchanging gifts of mithai and chocolate. It is a profitable time.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">ev_season_halloween_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Trick-or-Treaters need more treats! Halloween will be here before you know it. Chocolate prices will be up across the board!</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">ev_season_halloween_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Autumn is here, and the spooky season drives sales. Everyone wants pumpkin flavors and dark treats.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_halloween_bag_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I hear in the West you give candy to children to ward off spirits? That really is a strange custom. But if you have the sweets and the coffees, I have the customers.</Data></Cell>
+	</Row>
+    <Row>
+     <Cell><Data ss:Type="String">ev_season_halloween_san_shopkeep_1</Data></Cell>
+     <Cell><Data ss:Type="String">The neighborhood kids are already planning their costumes. We need to be ready with plenty of bars, or we'll be the house that gets egged!</Data></Cell>
+    </Row>
+    <Row>
+     <Cell><Data ss:Type="String">ev_season_halloween_tor_factorykeep_1</Data></Cell>
+     <Cell><Data ss:Type="String">It's getting chilly out there! Perfect weather for pumpkin spice and caramel apples. Let's make sure the factory is cranking out the fall flavors.</Data></Cell>
+    </Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_thanksgiving_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It's Thanksgiving time. People are traveling home and they want comforting treats to share with their families.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_thanksgiving_2</Data></Cell>
+	 <Cell><Data ss:Type="String">The harvest is in and the turkeys are in the oven. Demand for coffee and chocolate desserts is high!</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">ev_season_christmas_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Sales of chocolate gifts will be pushing up prices through the year-end holiday season.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_christmas_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Merry Christmas, &lt;player&gt;! Shelves are emptying faster than they can possibly stock them. People will pay anything for a gift.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_christmas_rey_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Gleðileg jól! The days are dark and cold, so we light candles and eat chocolate to keep our spirits warm. It is the best time of year.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_christmas_tok_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The American soldiers have made this 'Christmas' holiday very popular in the city. Everyone wants to exchange gifts now. It is a new tradition, but good for business.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ev_season_christmas_wel_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">It's a sweltering summer Christmas down here, &lt;player&gt;. I need chocolates that won't melt the second you step outside. Also, tourists are buying everything in sight. It's glorious chaos.</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

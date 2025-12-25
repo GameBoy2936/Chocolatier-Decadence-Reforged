@@ -8,6 +8,7 @@ tangiers.mapx = 370
 tangiers.mapy = 84
 tangiers.hemisphere = "north"
 tangiers.region = "middle_east"
+tangiers.country = "morocco"
 tangiers.culture = "muslim"
 tangiers.cadikey = "morocco"
 tangiers.locked = true

@@ -1,6 +1,7 @@
 --[[---------------------------------------------------------------------------
 	Chocolatier Three: Slot Machine
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
+	MODIFIED (c) 2025 Michael Lane and Google Gemini AI.
 --]]---------------------------------------------------------------------------
 
 local bet = gDialogTable.bet or 100
@@ -8,25 +9,61 @@ local bet = gDialogTable.bet or 100
 -------------------------------------------------------------------------------
 -- Calculate odds of winning...
 
--- Odds of winning a "simple" 1x payout: 20%
-local simpleWin = 20
--- Odds of winning the "basic" 2.5x payout: 20%
-local basicWin = simpleWin + 20
--- Odds of winning the "jackpot" 8x payout: 10%
-local jackpotWin = basicWin + 10
--- So overall, the game is even
--- 0.2 x 1 + 0.2 x 2.5 + 0.1 x 8 + .5 x -1 = 1
+-- MODIFICATION: Rebalanced odds based on Difficulty.
+-- Original game had a Net EV of +0.5 (Gross 1.5), which was a money printer.
+-- Payouts are fixed: 1x (Simple), 2.5x (Basic), 8x (Jackpot).
 
--- However, lower-value slots are looser:
-local looseness = 1
-if bet < 1000 then looseFactor = 1.05
-elseif bet < 10000 then looseFactor = 1.025
-elseif bet < 100000 then looseFactor = 1.01
+local simpleWin, basicWin, jackpotWin
+
+if Player.difficulty == 3 then -- Hard Mode
+	-- House Edge: ~20% (Gross Return 0.80)
+	-- The casino is predatory. Gambling is a losing strategy.
+	simpleWin = 15		-- 15% * 1.0 = 0.15
+	basicWin = 25		-- 10% * 2.5 = 0.25
+	jackpotWin = 30		-- 05% * 8.0 = 0.40
+						-- Total     = 0.80
+						
+elseif Player.difficulty == 2 then -- Medium Mode
+	-- House Edge: ~2.5% (Gross Return 0.975)
+	-- Fair casino odds. You might win in the short term, but lose long term.
+	simpleWin = 20		-- 20% * 1.0 = 0.20
+	basicWin = 35		-- 15% * 2.5 = 0.375
+	jackpotWin = 40		-- 05% * 8.0 = 0.40
+						-- Total     = 0.975
+
+else -- Easy Mode
+	-- Player Edge: ~7% (Gross Return 1.07)
+	-- Generous, but not the broken 150% of the original game.
+	simpleWin = 25		-- 25% * 1.0 = 0.25
+	basicWin = 45		-- 20% * 2.5 = 0.50
+	jackpotWin = 49		-- 04% * 8.0 = 0.32
+						-- Total     = 1.07
 end
 
+-- However, lower-value slots are looser:
+-- (Fixed original bug where 'looseFactor' was calculated but 'looseness' was used)
+local looseness = 1.0
+
+if Player.difficulty == 3 then
+	-- Hard Mode: High rollers get TIGHTER slots. The house protects its bankroll.
+	if bet > 100000 then looseness = 0.95
+	elseif bet > 10000 then looseness = 0.98
+	end
+else
+	-- Easy/Medium: Small bets are slightly looser to encourage play.
+	if bet < 1000 then looseness = 1.05
+	elseif bet < 10000 then looseness = 1.025
+	elseif bet < 100000 then looseness = 1.01
+	end
+end
+
+-- Apply the modifier
 simpleWin = simpleWin * looseness
 basicWin = basicWin * looseness
 jackpotWin = jackpotWin * looseness
+
+-- Debug output to verify odds during testing
+DebugOut("GAMBLE", "Slot Odds Configured. Simple: "..simpleWin.."%, Basic: "..(basicWin-simpleWin).."%, Jackpot: "..(jackpotWin-basicWin).."%")
 
 -------------------------------------------------------------------------------
 
@@ -55,6 +92,10 @@ local function PullLever()
 	-- Randomize
 	-- Roll to determine whether the player wins... and what...
 	local r = RandRange(1,100)
+	
+	-- Debug the roll
+	-- DebugOut("GAMBLE", "Spin Roll: " .. r)
+	
 	if r <= simpleWin then
 		-- Three in a row: even payout
 		payout = 1

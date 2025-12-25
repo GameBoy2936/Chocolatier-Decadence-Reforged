@@ -9,6 +9,7 @@ uluru.mapy = 275
 uluru.popupX = 441
 uluru.hemisphere="south"
 uluru.region="oceania"
+uluru.country = "australia"
 uluru.culture = "western"
 uluru.hidden = true
 

@@ -4,6 +4,7 @@
     <name>allspice</name>
     <code>ALL</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -16,6 +17,7 @@
     <name>almond</name>
     <code>ALM</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -28,8 +30,7 @@
     <name>amaretto</name>
     <code>AMA</code>
     <category>flavor</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_bottle</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -42,6 +43,7 @@
     <name>apple</name>
     <code>APL</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>37</season_start>
     <season_end>46</season_end>
@@ -54,6 +56,7 @@
     <name>anise</name>
     <code>ANS</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -66,6 +69,7 @@
     <name>bal_cacao</name>
     <code>BAC</code>
     <category>cacao</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -78,6 +82,7 @@
     <name>bal_coffee</name>
     <code>BAF</code>
     <category>coffee</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -90,6 +95,7 @@
     <name>banana</name>
     <code>BAN</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -102,6 +108,7 @@
     <name>bel_cacao</name>
     <code>BEC</code>
     <category>cacao</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -114,6 +121,7 @@
     <name>blackberry</name>
     <code>BLK</code>
     <category>fruit</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>25</season_start>
     <season_end>38</season_end>
@@ -126,6 +134,7 @@
     <name>blueberry</name>
     <code>BLB</code>
     <category>fruit</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>20</season_start>
     <season_end>40</season_end>
@@ -138,6 +147,7 @@
     <name>bog_cacao</name>
     <code>BOC</code>
     <category>cacao</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -150,6 +160,7 @@
     <name>bog_coffee</name>
     <code>BOF</code>
     <category>coffee</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -162,8 +173,7 @@
     <name>brandy</name>
     <code>BRA</code>
     <category>flavor</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_bottle</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -176,6 +186,7 @@
     <name>butter</name>
     <code>BUT</code>
     <category>dairy</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -188,6 +199,7 @@
     <name>cacao</name>
     <code>CAC</code>
     <category>cacao</category>
+    <unit_type>unit_sack</unit_type>
     <locked>false</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -200,6 +212,7 @@
     <name>cherry</name>
     <code>CHR</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>22</season_start>
     <season_end>35</season_end>
@@ -212,6 +225,7 @@
     <name>chestnut</name>
     <code>CHS</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>41</season_start>
     <season_end>53</season_end>
@@ -224,6 +238,7 @@
     <name>clove</name>
     <code>CLV</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -236,6 +251,7 @@
     <name>cinnamon</name>
     <code>CNM</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -248,6 +264,7 @@
     <name>coconut</name>
     <code>COC</code>
     <category>fruit</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -260,6 +277,7 @@
     <name>cardamom</name>
     <code>CRD</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -272,8 +290,7 @@
     <name>cream</name>
     <code>CRE</code>
     <category>dairy</category>
-    <unit_singular>carton</unit_singular>
-    <unit_plural>cartons</unit_plural>
+    <unit_type>unit_carton</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -286,6 +303,7 @@
     <name>caramel</name>
     <code>CRM</code>
     <category>sugar</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -298,6 +316,7 @@
     <name>cashew</name>
     <code>CSH</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -310,6 +329,7 @@
     <name>currant</name>
     <code>CUR</code>
     <category>fruit</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -322,6 +342,7 @@
     <name>date</name>
     <code>DAT</code>
     <category>fruit</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -334,6 +355,7 @@
     <name>dou_cacao</name>
     <code>DOC</code>
     <category>cacao</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -346,6 +368,7 @@
     <name>espresso</name>
     <code>ESP</code>
     <category>coffee</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -358,6 +381,7 @@
     <name>fig</name>
     <code>FIG</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>30</season_start>
     <season_end>44</season_end>
@@ -370,8 +394,7 @@
     <name>grand_marnier</name>
     <code>GMA</code>
     <category>flavor</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_bottle</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -384,6 +407,7 @@
     <name>ginger</name>
     <code>GNG</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -396,6 +420,7 @@
     <name>hav_coffee</name>
     <code>HAF</code>
     <category>coffee</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -408,6 +433,7 @@
     <name>hazelnut</name>
     <code>HAZ</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -420,6 +446,7 @@
     <name>hibiscus</name>
     <code>HIB</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>10</season_start>
     <season_end>36</season_end>
@@ -432,6 +459,7 @@
     <name>honey</name>
     <code>HNY</code>
     <category>sugar</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -444,8 +472,7 @@
     <name>kahlua</name>
     <code>KHL</code>
     <category>flavor</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_bottle</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -458,6 +485,7 @@
     <name>kon_coffee</name>
     <code>KOF</code>
     <category>coffee</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -470,6 +498,7 @@
     <name>lavender</name>
     <code>LAV</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>23</season_start>
     <season_end>36</season_end>
@@ -482,6 +511,7 @@
     <name>lemon</name>
     <code>LEM</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>44</season_start>
     <season_end>15</season_end>
@@ -494,6 +524,7 @@
     <name>lim_cacao</name>
     <code>LIC</code>
     <category>cacao</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -506,6 +537,7 @@
     <name>lime</name>
     <code>LIM</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>38</season_start>
     <season_end>9</season_end>
@@ -518,6 +550,7 @@
     <name>lychee</name>
     <code>LYC</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>24</season_start>
     <season_end>33</season_end>
@@ -530,6 +563,7 @@
     <name>macadamia</name>
     <code>MAC</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -542,6 +576,7 @@
     <name>matcha</name>
     <code>MAT</code>
     <category>flavor</category>
+    <unit_type>unit_can</unit_type>
     <locked>true</locked>
     <season_start>15</season_start>
     <season_end>23</season_end>
@@ -554,8 +589,7 @@
     <name>milk</name>
     <code>MLK</code>
     <category>dairy</category>
-    <unit_singular>carton</unit_singular>
-    <unit_plural>cartons</unit_plural>
+    <unit_type>unit_carton</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -568,6 +602,7 @@
     <name>mango</name>
     <code>MNG</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>10</season_start>
     <season_end>39</season_end>
@@ -580,6 +615,7 @@
     <name>mint</name>
     <code>MNT</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -592,8 +628,7 @@
     <name>maple</name>
     <code>MPL</code>
     <category>sugar</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_bottle</unit_type>
     <locked>true</locked>
     <season_start>5</season_start>
     <season_end>12</season_end>
@@ -606,6 +641,7 @@
     <name>nutmeg</name>
     <code>NMG</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -618,6 +654,7 @@
     <name>orange</name>
     <code>ORN</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>7</season_start>
     <season_end>42</season_end>
@@ -630,6 +667,7 @@
     <name>passionfruit</name>
     <code>PAF</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>5</season_start>
     <season_end>27</season_end>
@@ -642,6 +680,7 @@
     <name>pecan</name>
     <code>PEC</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>34</season_start>
     <season_end>45</season_end>
@@ -654,6 +693,7 @@
     <name>pistachio</name>
     <code>PIS</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -666,6 +706,7 @@
     <name>pepper</name>
     <code>PEP</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -678,6 +719,7 @@
     <name>pumpkin</name>
     <code>PMP</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>35</season_start>
     <season_end>11</season_end>
@@ -690,6 +732,7 @@
     <name>peanut</name>
     <code>PNT</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -702,6 +745,7 @@
     <name>pineapple</name>
     <code>PNP</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>10</season_start>
     <season_end>39</season_end>
@@ -714,6 +758,7 @@
     <name>pomegranate</name>
     <code>POM</code>
     <category>fruit</category>
+    <unit_type>unit_crate</unit_type>
     <locked>true</locked>
     <season_start>40</season_start>
     <season_end>7</season_end>
@@ -726,6 +771,7 @@
     <name>powder</name>
     <code>POW</code>
     <category>special</category>
+    <unit_type>unit_can</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -738,6 +784,7 @@
     <name>raisin</name>
     <code>RAI</code>
     <category>fruit</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -750,6 +797,7 @@
     <name>raspberry</name>
     <code>RSP</code>
     <category>fruit</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>18</season_start>
     <season_end>48</season_end>
@@ -762,6 +810,7 @@
     <name>rose</name>
     <code>ROS</code>
     <category>flavor</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -774,8 +823,7 @@
     <name>rum</name>
     <code>RUM</code>
     <category>flavor</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_bottle</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -788,6 +836,7 @@
     <name>saffron</name>
     <code>SFN</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -800,6 +849,7 @@
     <name>salt</name>
     <code>SLT</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -812,6 +862,7 @@
     <name>sesame</name>
     <code>SES</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -824,6 +875,7 @@
     <name>star_anise</name>
     <code>STA</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>40</season_start>
     <season_end>4</season_end>
@@ -836,6 +888,7 @@
     <name>strawberry</name>
     <code>SBR</code>
     <category>fruit</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>20</season_start>
     <season_end>28</season_end>
@@ -848,6 +901,7 @@
     <name>sugar</name>
     <code>SUG</code>
     <category>sugar</category>
+    <unit_type>unit_sack</unit_type>
     <locked>false</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -860,6 +914,7 @@
     <name>sumac</name>
     <code>SUM</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>27</season_start>
     <season_end>40</season_end>
@@ -872,6 +927,7 @@
     <name>tan_coffee</name>
     <code>TAF</code>
     <category>coffee</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -884,6 +940,7 @@
     <name>tea</name>
     <code>TEA</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -896,6 +953,7 @@
     <name>toffee</name>
     <code>TOF</code>
     <category>sugar</category>
+    <unit_type>unit_box</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -908,6 +966,7 @@
     <name>turmeric</name>
     <code>TUR</code>
     <category>flavor</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -920,6 +979,7 @@
     <name>vanilla</name>
     <code>VAN</code>
     <category>flavor</category>
+    <unit_type>unit_bundle</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -932,6 +992,7 @@
     <name>walnut</name>
     <code>WAL</code>
     <category>nut</category>
+    <unit_type>unit_sack</unit_type>
     <locked>true</locked>
     <season_start>36</season_start>
     <season_end>48</season_end>
@@ -944,6 +1005,7 @@
     <name>wasabi</name>
     <code>WAS</code>
     <category>flavor</category>
+    <unit_type>unit_jar</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -956,8 +1018,7 @@
     <name>whipped_cream</name>
     <code>WHI</code>
     <category>dairy</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_can</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>
@@ -970,8 +1031,7 @@
     <name>whiskey</name>
     <code>WSK</code>
     <category>flavor</category>
-    <unit_singular>bottle</unit_singular>
-    <unit_plural>bottles</unit_plural>
+    <unit_type>unit_bottle</unit_type>
     <locked>true</locked>
     <season_start>1</season_start>
     <season_end>52</season_end>

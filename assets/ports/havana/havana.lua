@@ -8,6 +8,7 @@ havana.mapx = 195
 havana.mapy = 129
 havana.hemisphere="north"
 havana.region="caribbean"
+havana.country = "cuba"
 havana.culture = "latin"
 havana.locked = true
 

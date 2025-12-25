@@ -184,7 +184,7 @@
     <lim_cacao>1</lim_cacao>
     <sugar>1</sugar>
     <strawberry>1</strawberry>
-    <anise>1</anise>
+    <sumac>1</sumac>
   </product>
   <product>
     <code>I12</code>
@@ -415,11 +415,11 @@
     <code>E11</code>
     <category>exotic</category>
     
-    <dou_cacao>1</dou_cacao>
+    <lychee>1</lychee>
     <bel_cacao>1</bel_cacao>
     <lim_cacao>1</lim_cacao>
     <bog_cacao>1</bog_cacao>
-    <strawberry>1</strawberry>
+    <pomegranate>1</pomegranate>
   </product>
   <product>
     <code>E12</code>
@@ -558,7 +558,7 @@
     
     <tan_coffee>1</tan_coffee>
     <sugar>1</sugar>
-    <turmeric>1</turmeric>
+    <ginger>1</ginger>
     <pepper>1</pepper>
   </product>
   <product>
@@ -585,10 +585,10 @@
     <category>blend</category>
     
     <kon_coffee>1</kon_coffee>
-    <cinnamon>1</cinnamon>
+    <rum>1</rum>
     <orange>1</orange>
     <vanilla>1</vanilla>
-    <clove>1</clove>
+    <allspice>1</allspice>
   </product>
   <product>
     <code>M08</code>
@@ -616,7 +616,7 @@
     
     <bog_coffee>1</bog_coffee>
     <sugar>1</sugar>
-    <cinnamon>1</cinnamon>
+    <fig>1</fig>
     <cacao>1</cacao>
     <anise>1</anise>
   </product>
@@ -626,9 +626,9 @@
     
     <bal_coffee>1</bal_coffee>
     <cream>1</cream>
-    <sumac>1</sumac>
+    <tan_coffee>1</tan_coffee>
+    <cardamom>1</cardamom>
     <clove>1</clove>
-    <nutmeg>1</nutmeg>
   </product>
   <product>
     <code>M12</code>

@@ -9,6 +9,7 @@ tokyo.mapy = 118
 tokyo.popupX = 439
 tokyo.hemisphere = "north"
 tokyo.region = "asia"
+tokyo.country = "japan"
 tokyo.culture = "east_asian"
 tokyo.locked = true
 

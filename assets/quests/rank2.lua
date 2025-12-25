@@ -258,12 +258,12 @@ CreateQuest
 CreateQuest
 {
 	name = "new_ingredients",
-	starter = "trav_09",
+	starter = "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11",
 	accept = "ok",
 	defer = "none",
 	reject = "none",
 	visible = false,
-	onaccept = {AwardUnlockIngredient("anise"), AwardUnlockIngredient("currant"), AwardUnlockIngredient("pepper"), AwardUnlockCharacter("trav_09")},
+	onaccept = {AwardUnlockIngredient("anise"), AwardUnlockIngredient("currant"), AwardUnlockIngredient("pepper")},
 	require = { RequireMinRank(2), RequireVariableMoreThan("lab", 3)}, 
 }
 
@@ -1137,7 +1137,7 @@ CreateQuest
 	require = {RequireRecipesKnown(10, "infusion"), RequireRecipesMade(6, "infusion"), RequireRecipesKnown(3, "user"), RequireBuildingOwned("kon_shop"), RequireVariableMoreThan("endorsed", 1)},
 	require_medium = {RequireRecipesKnown(10, "infusion"), RequireRecipesMade(7, "infusion"), RequireRecipesKnown(3, "user"), RequireBuildingOwned("kon_shop"), RequireVariableMoreThan("endorsed", 1)},
 	require_hard = {RequireRecipesKnown(12, "infusion"), RequireRecipesMade(8, "infusion"), RequireRecipesKnown(3, "user"), RequireBuildingOwned("kon_shop"), RequireVariableMoreThan("endorsed", 1)},
-	onaccept = {AwardUnlockPort("sanfrancisco")},
+	onaccept = {AwardUnlockPort("sanfrancisco"), AwardUnlockIngredient("raisin")},
 	goals = { HintPerson("main_evan", "san_bchq", "sanfrancisco")},
 }
 
@@ -1371,13 +1371,13 @@ CreateQuest
 	defer_length = "medium",
 	reject = "none",
 	priority = 99,
-	onaccept = {AwardText("rank2_40_extra01"), AwardUnlockPort("lasvegas"), AwardUnlockIngredient("strawberry"), AwardUnlockIngredient("raisin")},
+	onaccept = {AwardText("rank2_40_extra01"), AwardUnlockPort("lasvegas"), AwardUnlockIngredient("strawberry")},
 	goals = {RequireRelativeTime(10, false), RequireItem("strawberry", 100), HintPerson("trav_08", "_travelers")},
 	goals_medium = {RequireRelativeTime(9, false), RequireItem("strawberry", 150), HintPerson("trav_08", "_travelers")},
 	goals_hard = {RequireRelativeTime(8, false), RequireItem("strawberry", 200), HintPerson("trav_08", "_travelers")},
-	oncomplete = {AwardItem("strawberry", - 100), AwardRecipe("i11"), AwardDialog("recipes"), AwardUnlockCharacter("trav_08"), AwardUnlockCharacter("las_casinokeep"), AwardDiscoverPreference("trav_08", "like", "strawberry")},
-	oncomplete_medium = {AwardItem("strawberry", - 150), AwardRecipe("i11"), AwardDialog("recipes"), AwardUnlockCharacter("trav_08"), AwardUnlockCharacter("las_casinokeep"), AwardDiscoverPreference("trav_08", "like", "strawberry")},
-	oncomplete_hard = {AwardItem("strawberry", - 200), AwardRecipe("i11"), AwardDialog("recipes"), AwardUnlockCharacter("trav_08"), AwardUnlockCharacter("las_casinokeep"), AwardDiscoverPreference("trav_08", "like", "strawberry")},
+	oncomplete = {AwardItem("strawberry", - 100), AwardRecipe("i11"), AwardDialog("recipes"), AwardUnlockCharacter("trav_08"), AwardUnlockCharacter("las_casinokeep"), AwardDiscoverPreference("trav_08", "like", "strawberry"), AwardUnlockIngredient("sumac")},
+	oncomplete_medium = {AwardItem("strawberry", - 150), AwardRecipe("i11"), AwardDialog("recipes"), AwardUnlockCharacter("trav_08"), AwardUnlockCharacter("las_casinokeep"), AwardDiscoverPreference("trav_08", "like", "strawberry"), AwardUnlockIngredient("sumac")},
+	oncomplete_hard = {AwardItem("strawberry", - 200), AwardRecipe("i11"), AwardDialog("recipes"), AwardUnlockCharacter("trav_08"), AwardUnlockCharacter("las_casinokeep"), AwardDiscoverPreference("trav_08", "like", "strawberry"), AwardUnlockIngredient("sumac")},
 	require = {RequirePort("havana"), RequirePort("tangiers"), RequirePort("kona"), RequireMinRank(2), RequireRecipe("i01"), RequireRecipe("user2"), RequireRecipesKnown(4, "infusion"), RequireCharHasNoActiveOrder("trav_08")},
 }
 

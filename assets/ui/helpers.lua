@@ -332,6 +332,125 @@ function GetReplacedString(key, ...)
 	return GetTextReplaced(key, unpack(arg or {}))
 end
 
+-- Selects a random variation of a string key (e.g., "key_1", "key_2")
+-- and performs standard substitutions like <player>.
+function GetRandomString(baseKey, ...)
+	local count = 1
+	-- Check for existence of _2, _3, etc.
+	while GetString(baseKey .. "_" .. (count + 1)) ~= "#####" do
+		count = count + 1
+	end
+	
+	local finalKey = baseKey
+	if count > 1 or GetString(baseKey .. "_1") ~= "#####" then
+		-- Pick a random variation if they exist
+		local index = RandRange(1, count)
+		finalKey = baseKey .. "_" .. index
+	end
+	
+	-- Retrieve the text, passing along any extra parameters for %1%, %2% etc.
+    -- We use unpack(arg) to pass the variable arguments down to GetString/GetText
+	local text = GetString(finalKey, unpack(arg or {}))
+	
+	-- Handle <player> substitution globally
+	if text and string.find(text, "<player>") then
+		text = string.gsub(text, "<player>", Player.name or "Chocolatier")
+	end
+	
+	return text
+end
+
+function GetPluralSuffix(count, lang)
+    -- FIX: math.abs is not available. Handle negative numbers manually.
+    if count < 0 then count = -count end
+    
+    lang = lang or "en"
+
+    -- 1. ASIAN LANGUAGES (CJK)
+    -- Typically don't use plural forms for nouns, or use a single counter.
+    if lang == "ja" or lang == "zhs" or lang == "zht" or lang == "ko" then
+        return "_other" -- Use the generic form (e.g., "sack(s)")
+    end
+
+    -- 2. POLISH (Pl)
+    -- 1: one (worek)
+    -- 2,3,4 (excluding 12,13,14): few (worki)
+    -- Everything else: many (worków)
+    if lang == "pl" then
+        if count == 1 then
+            return "_1" -- One
+        end
+        
+        local rem10 = Mod(count, 10)
+        local rem100 = Mod(count, 100)
+        
+        if (rem10 >= 2 and rem10 <= 4) and (rem100 < 12 or rem100 > 14) then
+            return "_2" -- Few
+        else
+            return "_5" -- Many
+        end
+    end
+
+    -- 3. RUSSIAN (Ru) / UKRAINIAN (Uk)
+    -- Very similar to Polish logic
+    if lang == "ru" or lang == "uk" then
+        local rem10 = Mod(count, 10)
+        local rem100 = Mod(count, 100)
+
+        if rem10 == 1 and rem100 ~= 11 then
+            return "_1" -- One
+        elseif (rem10 >= 2 and rem10 <= 4) and (rem100 < 12 or rem100 > 14) then
+            return "_2" -- Few
+        else
+            return "_5" -- Many
+        end
+    end
+
+    -- 4. FRENCH (Fr)
+    -- 0 and 1 are singular.
+    if lang == "fr" then
+        if count <= 1 then return "_1" end
+        return "_2"
+    end
+
+    -- 5. CZECH (Cz)
+    -- 1: one
+    -- 2,3,4: few
+    -- 5+: many
+    if lang == "cz" then
+        if count == 1 then return "_1" end
+        if count >= 2 and count <= 4 then return "_2" end
+        return "_5"
+    end
+
+    -- DEFAULT (English, German, Spanish, Italian, etc.)
+    -- 1 is singular, everything else (including 0) is plural.
+    if count == 1 then
+        return "_1"
+    else
+        return "_2"
+    end
+end
+
+-- Wrapper to get the localized unit string directly
+function GetLocalizedUnit(baseKey, count)
+    local lang = Player.options.language or "en"
+    local suffix = GetPluralSuffix(count, lang)
+    
+    -- Try to find the specific pluralization
+    local key = baseKey .. suffix
+    local str = GetString(key)
+    
+    -- Fallback: If "unit_sack_5" is missing for Polish, try "unit_sack_2", then "unit_sack_other"
+    if str == "#####" then
+        if GetString(baseKey .. "_2") ~= "#####" then return GetString(baseKey .. "_2") end
+        if GetString(baseKey .. "_other") ~= "#####" then return GetString(baseKey .. "_other") end
+        return GetString(baseKey .. "_1") -- Ultimate fallback
+    end
+    
+    return str
+end
+
 --------------------------------------------------------------------------------------------------
 -- Additional Helper Functions
 

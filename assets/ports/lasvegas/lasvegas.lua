@@ -9,6 +9,7 @@ lasvegas.mapx = 135 + 5
 lasvegas.mapy = 115 - 5
 lasvegas.hemisphere = "north"
 lasvegas.region = "north_america"
+lasvegas.country = "usa"
 lasvegas.culture = "north_american"
 lasvegas.hidden = true
 

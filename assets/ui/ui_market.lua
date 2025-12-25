@@ -14,6 +14,11 @@ if char then
     Player:MeetCharacter(char)
 end
 
+if not Player.buildingsVisited[market.name] then
+	DebugOut("PLAYER", "First visit to market: " .. market.name)
+	Player.buildingsVisited[market.name] = true
+end
+
 char:MakeNeutral()
 local name = char.name
 

@@ -9,6 +9,7 @@ bali.mapy = 218
 bali.popupX = 398
 bali.hemisphere = "south"
 bali.region = "asia"
+bali.country = "indonesia"
 bali.culture = "hindu"
 bali.hidden = true
 

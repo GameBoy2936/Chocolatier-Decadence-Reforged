@@ -331,7 +331,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">My friend Evangeline gave me a head's up that you would be calling to visit, but she said something about truffles and coffee blends you'd have for me?</Data></Cell>
+	 <Cell><Data ss:Type="String">My friend Evangeline gave me a heads up that you would be calling to visit, but she said something about truffles and coffee blends you'd have for me?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_hint_1</Data></Cell>
@@ -435,19 +435,19 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I have just come from %baghdad%, &lt;player&gt;, what a wonderful city! There's a wonderful coffee shop there, and I understand the proprietor, %bag_shopkeep%, may be looking for a partner. If I were to provide a recipe and an introduction, would you be willing to make some products and call on Mr. Sa'eed?</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, &lt;player&gt;! I have just returned from %baghdad%, and my head is still spinning from the aromas! I spent hours at Tigris River Coffees, run by a man named %bag_shopkeep%. He reminds me of the old maître d's back in Paris - stern, but with a deep love for the bean. He is looking to modernize, but he fears losing his soul. I told him I know an expert who can bridge that gap. Will you help me prove it?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Smart move! I will give you a recipe now for %m08%. Bring [D|50|85|130] cases of these, as well as [D|50|85|130] cases of %c09% - you'll find %amaretto% in %lasvegas% - to %bag_shop% in %baghdad%. Safe travels! </Data></Cell>
+	 <Cell><Data ss:Type="String">Magnifique. We must show him respect for the past and vision for the future. Bring him [D|50|85|130] cases of %c12% - the mint is a flavor he will respect. But to shock him a little, bring [D|50|85|130] cases of %m08% as well. He needs to see what the modern world is drinking!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Take [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c09% to %bag_shop% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Take [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c12% to %bag_shop% in %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome to %bag_shop%, &lt;player&gt;. I am pleased to make your acquaintance, and look forward to a long and fruitful partnership. In exchange for the example products you have brought, I am pleased to present another recipe for a blend - %m09%. And do feel free to step inside and review my current prices...</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to %bag_shop%, &lt;player&gt;. I am pleased to make your acquaintance, and look forward to a long and fruitful partnership. I heard that François sent you, too. He talks much, that Frenchman, but he has good taste. This pumpkin is very strange to my palate, but I can't stop drinking it. Perhaps François was right that we must evolve.&lt;br&gt;&lt;br&gt;Here is a recipe for %m09% - something sweet for the new generation. And do feel free to step inside and review my current prices.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_incomplete_1</Data></Cell>
@@ -455,7 +455,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have been given instructions by %trav_06% to deliver [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c09% to %bag_shopkeep%, who you will find at %bag_shop% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_09% wants you to impress the owner of %bag_shop%. Deliver [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c12% to %bag_shopkeep% in %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12</Data></Cell>
@@ -463,11 +463,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now then, I have been looking for someone to team up with here at my shop. If you are willing to do a couple of things for me, I would be eager to take you on as a partner. Are you interested?</Data></Cell>
+	 <Cell><Data ss:Type="String">I am willing to discuss a partnership, yes. But in %baghdad%, the community comes first. The Imam, %bag_towerkeep%, is a man of great wisdom and influence. He does not touch alcohol, of course, but he has a well-known weakness for caramel. If you can win his favor with this recipe, you will have mine. Will you make this delivery?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent. First, take [D|200|280|440] cases of %m09% - the recipe I myself just gave to you - to my colleague %bag_towerkeep% at %bag_tower% here in town. He will exchange the goods for another recipe, and provide further instructions.</Data></Cell>
+	 <Cell><Data ss:Type="String">Good. Take [D|200|280|440] cases of %m09% - the recipe I just gave you - to the %bag_tower%. He will appreciate the caramel. Speak with him, and he will guide you further.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_summary</Data></Cell>
@@ -475,15 +475,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I think you will make a great partner for my friend Abrahem, &lt;player&gt;. Here is another valuable recipe - for %m11%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Abrahem sent you? Peace be upon you.&lt;br&gt;&lt;br&gt;Ah, the aroma of caramel... he knows my weakness well. It is a good gift. To run a shop in our city, one must understand our flavors, not just European ones. Now, here... take this recipe for %m11%. It is a traditional spiced brew, heavy with cardamom and cloves.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">My colleague %bag_shopkeep% led me to believe that you would be arriving with [D|200|280|440] cases of %m09% for me...</Data></Cell>
+	 <Cell><Data ss:Type="String">Abrahem mentioned a delivery for the mosque. I am expecting [D|200|280|440] cases of %m09%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have been given instructions by %trav_07% to deliver [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c09% to %bag_shopkeep%, who you will find at %bag_shop% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">%bag_shopkeep% wants you to win the favor of the Imam. Deliver [D|200|280|440] cases of %m09% to %bag_towerkeep% at the %bag_tower% in %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13</Data></Cell>
@@ -491,7 +491,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">All you have to do is bring [D|200|300|460] cases of those %m11%, as well as [D|50|80|130] cases each of your &lt;user4&gt;, &lt;user5&gt;, and &lt;user6&gt; to %bag_shop% and Abrahem will be willing to sign the shop over to your control.</Data></Cell>
+	 <Cell><Data ss:Type="String">To be a partner in this city, you must bring gifts and understand our soul. Take the recipe I have given you. Go now, brew [D|200|300|460] cases of that %m11%, and present them to Abrahem at his shop. Show him also [D|50|80|130] cases each of your own &lt;user4&gt;, &lt;user5&gt;, and &lt;user6&gt;. If you can master our flavors alongside your own, he will surely sign the deed.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_summary</Data></Cell>
@@ -499,11 +499,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, your creations are delicious. It is my pleasure to hand over the keys to this shop - we are partners now, and you will always be offered the very best prices for your coffee creations here. I look forward to doing much business together!</Data></Cell>
+	 <Cell><Data ss:Type="String">This... by the will of Allah, this takes me back to my childhood. You have captured the soul of %baghdad% in this cup, &lt;player&gt;. Your own creations, too, are magnificent.&lt;br&gt;&lt;br&gt;It is my pleasure to hand over the keys to this shop - we are partners now, and you will always be offered the very best prices for your coffee creations here. I look forward to doing much business together.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am eager to take you on as my partner, but there were certain products I was waiting to receive from you, &lt;player&gt;...</Data></Cell>
+	 <Cell><Data ss:Type="String">I am eager to take you on as my partner, but I am waiting to taste the %m11%. And do not forget the samples of your own creations we discussed.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_hint_1</Data></Cell>

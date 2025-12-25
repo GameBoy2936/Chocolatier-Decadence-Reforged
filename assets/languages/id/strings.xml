@@ -654,16 +654,20 @@
 	 <Cell><Data ss:Type="String">Late %1%</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">catalogue_port_characters</Data></Cell>
-	 <Cell><Data ss:Type="String">Characters</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">catalogue_port_buildings</Data></Cell>
+	 <Cell><Data ss:Type="String">catalogue_buildings_label</Data></Cell>
 	 <Cell><Data ss:Type="String">Buildings</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">catalogue_port_ingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">catalogue_residents_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Residents</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredients_label</Data></Cell>
 	 <Cell><Data ss:Type="String">Ingredients</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_holidays_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Holidays</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">telegram_from</Data></Cell>
@@ -704,18 +708,6 @@
 	<Row>
 	 <Cell><Data ss:Type="String">click_buy</Data></Cell>
 	 <Cell><Data ss:Type="String">Click to purchase some.</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">kitchen_new_ingredients</Data></Cell>
-	 <Cell><Data ss:Type="String">It looks like you have some ingredients we haven't seen before. We'll grab one sack of each so it will be available for use in our test kitchens.</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">user_noslots</Data></Cell>
-	 <Cell><Data ss:Type="String">You do not currently have any spaces available in the recipe book for your own recipes.&lt;br&gt;&lt;br&gt;With your continued success, the Board of Directors will provide more spaces so you can create (and sell) your own inventions. Would you like to come inside anyway?</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">user_allslotsused</Data></Cell>
-	 <Cell><Data ss:Type="String">Way to go - you have completed the entire recipe book!&lt;br&gt;&lt;br&gt;While you won't be able to add any more recipes, you are certainly welcome to poke around and experiment as much as you wish.&lt;br&gt;&lt;br&gt;Would you like to step inside now?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut16_configure_hint</Data></Cell>
@@ -1838,76 +1830,84 @@
 	 <Cell><Data ss:Type="String">UNITS</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">sack_singular</Data></Cell>
-	 <Cell><Data ss:Type="String">sack</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">sack_plural</Data></Cell>
-	 <Cell><Data ss:Type="String">sack</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">bottle_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_bottle_1</Data></Cell>
 	 <Cell><Data ss:Type="String">bottle</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">bottle_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_bottle_2</Data></Cell>
 	 <Cell><Data ss:Type="String">bottles</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">box_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_box_1</Data></Cell>
 	 <Cell><Data ss:Type="String">box</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">box_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_box_2</Data></Cell>
 	 <Cell><Data ss:Type="String">boxes</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">can_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_bundle_1</Data></Cell>
+	 <Cell><Data ss:Type="String">bundle</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_bundle_2</Data></Cell>
+	 <Cell><Data ss:Type="String">bundles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_can_1</Data></Cell>
 	 <Cell><Data ss:Type="String">can</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">can_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_can_2</Data></Cell>
 	 <Cell><Data ss:Type="String">cans</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">carton_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_carton_1</Data></Cell>
 	 <Cell><Data ss:Type="String">carton</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">carton_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_carton_2</Data></Cell>
 	 <Cell><Data ss:Type="String">cartons</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">case_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_case_1</Data></Cell>
 	 <Cell><Data ss:Type="String">case</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">case_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_case_2</Data></Cell>
 	 <Cell><Data ss:Type="String">cases</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">crate_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_crate_1</Data></Cell>
 	 <Cell><Data ss:Type="String">crate</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">crate_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_crate_2</Data></Cell>
 	 <Cell><Data ss:Type="String">crates</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">cup_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_cup_1</Data></Cell>
 	 <Cell><Data ss:Type="String">cup</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">cup_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_cup_2</Data></Cell>
 	 <Cell><Data ss:Type="String">cups</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">jar_singular</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_jar_1</Data></Cell>
 	 <Cell><Data ss:Type="String">jar</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">jar_plural</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_jar_2</Data></Cell>
 	 <Cell><Data ss:Type="String">jars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_sack_1</Data></Cell>
+	 <Cell><Data ss:Type="String">sack</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_sack_2</Data></Cell>
+	 <Cell><Data ss:Type="String">sacks</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>
@@ -2479,11 +2479,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">i11</Data></Cell>
-	 <Cell><Data ss:Type="String">Strawberry Anise Chocolate Infusions</Data></Cell>
+	 <Cell><Data ss:Type="String">Strawberry Sumac Chocolate Infusions</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">i11_desc</Data></Cell>
-	 <Cell><Data ss:Type="String">An unlikely pairing you are unlikely to soon forget - fresh strawberries and anise.</Data></Cell>
+	 <Cell><Data ss:Type="String">A wild pairing you are unlikely to soon forget - fresh strawberries and tart sumac.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">i12</Data></Cell>
@@ -2671,11 +2671,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">e11</Data></Cell>
-	 <Cell><Data ss:Type="String">World's Finest Chocolate Covered Strawberries</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Chocolate Pomegranate Lychee Stars</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">e11_desc</Data></Cell>
-	 <Cell><Data ss:Type="String">A secret blend of the finest cacaos covering deliciously sweet fresh strawberries.</Data></Cell>
+	 <Cell><Data ss:Type="String">A secret blend of the finest cacaos covering a bright, tart and delicious fruit ganache.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">e12</Data></Cell>
@@ -2859,15 +2859,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m10_desc</Data></Cell>
-	 <Cell><Data ss:Type="String">Anise seeds lend this blend an exotic touch.</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweet figs lend this blend an exotic touch.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m11</Data></Cell>
-	 <Cell><Data ss:Type="String">Coffee Grog</Data></Cell>
+	 <Cell><Data ss:Type="String">Arabian Spiced Coffee</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m11_desc</Data></Cell>
-	 <Cell><Data ss:Type="String">Rich and sweet, sure to please!</Data></Cell>
+	 <Cell><Data ss:Type="String">A rich, aromatic brew punctuated by heavy spices, inspired by the coffee houses of Iraq.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m12</Data></Cell>
@@ -2976,38 +2976,6 @@
 	<Row>
 	 <Cell><Data ss:Type="String">zurich</Data></Cell>
 	 <Cell><Data ss:Type="String">Zürich</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_africa</Data></Cell>
-	 <Cell><Data ss:Type="String">Africa</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_asia</Data></Cell>
-	 <Cell><Data ss:Type="String">Asia</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_caribbean</Data></Cell>
-	 <Cell><Data ss:Type="String">Caribbean</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_europe</Data></Cell>
-	 <Cell><Data ss:Type="String">Europe</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_middle_east</Data></Cell>
-	 <Cell><Data ss:Type="String">The Middle East</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_oceania</Data></Cell>
-	 <Cell><Data ss:Type="String">Oceania</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_north_america</Data></Cell>
-	 <Cell><Data ss:Type="String">North America</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">region_south_america</Data></Cell>
-	 <Cell><Data ss:Type="String">South America</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>

@@ -12,6 +12,12 @@ if char then
     Player:MeetCharacter(char)
 end
 
+local building = gDialogTable.building
+if building and not Player.buildingsVisited[building.name] then
+	DebugOut("PLAYER", "First visit to generic building: " .. building.name)
+	Player.buildingsVisited[building.name] = true
+end
+
 local text = gDialogTable.text or ""
 if string.sub(text, 1, 1) == "#" then
     text = string.sub(text, 2)
