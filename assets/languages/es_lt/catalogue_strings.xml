@@ -57,6 +57,8 @@
    x:FullRows="1">
    <Column ss:AutoFitWidth="0" ss:Width="200.25"/>
    <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
+	
+	<!-- Regions -->
 	<Row>
 	 <Cell><Data ss:Type="String">region_africa</Data></Cell>
 	 <Cell><Data ss:Type="String">Africa</Data></Cell>
@@ -101,9 +103,19 @@
 	 <Cell><Data ss:Type="String">hemisphere_south</Data></Cell>
 	 <Cell><Data ss:Type="String">Southern Hemisphere</Data></Cell>
 	</Row>
+	
+	<!-- Cultures -->
+	<Row>
+	 <Cell><Data ss:Type="String">culture_aboriginal</Data></Cell>
+	 <Cell><Data ss:Type="String">Aboriginal Australian</Data></Cell>
+	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">culture_african</Data></Cell>
 	 <Cell><Data ss:Type="String">African</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_celtic</Data></Cell>
+	 <Cell><Data ss:Type="String">Celtic</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">culture_east_asian</Data></Cell>
@@ -114,8 +126,20 @@
 	 <Cell><Data ss:Type="String">European</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">culture_himalayan</Data></Cell>
+	 <Cell><Data ss:Type="String">Himalayan</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">culture_hindu</Data></Cell>
 	 <Cell><Data ss:Type="String">Hindu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_indigenous_americas</Data></Cell>
+	 <Cell><Data ss:Type="String">Indigenous American</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_jewish</Data></Cell>
+	 <Cell><Data ss:Type="String">Jewish</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">culture_latin</Data></Cell>
@@ -124,6 +148,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">culture_muslim</Data></Cell>
 	 <Cell><Data ss:Type="String">Islamic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_melanesian</Data></Cell>
+	 <Cell><Data ss:Type="String">Melanesian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">culture_nordic</Data></Cell>
@@ -138,152 +166,1126 @@
 	 <Cell><Data ss:Type="String">Polynesian</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">culture_shamanic</Data></Cell>
+	 <Cell><Data ss:Type="String">Shamanic</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">culture_slavic</Data></Cell>
 	 <Cell><Data ss:Type="String">Slavic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">culture_se_asian</Data></Cell>
+	 <Cell><Data ss:Type="String">Southeast Asian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">culture_western</Data></Cell>
 	 <Cell><Data ss:Type="String">Western</Data></Cell>
 	</Row>
+	
+	<!-- North America, Central America & Caribbean -->
 	<Row>
 	 <Cell><Data ss:Type="String">country_canada</Data></Cell>
 	 <Cell><Data ss:Type="String">Canada</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_canada_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Canadian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_usa</Data></Cell>
 	 <Cell><Data ss:Type="String">United States</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_usa_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">American</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_mexico</Data></Cell>
 	 <Cell><Data ss:Type="String">Mexico</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_mexico_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Mexican</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_belize</Data></Cell>
 	 <Cell><Data ss:Type="String">Belize</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_belize_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Belizean</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_guatemala</Data></Cell>
+	 <Cell><Data ss:Type="String">Guatemala</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_guatemala_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Guatemalan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_honduras</Data></Cell>
+	 <Cell><Data ss:Type="String">Honduras</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_honduras_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Honduran</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_el_salvador</Data></Cell>
+	 <Cell><Data ss:Type="String">El Salvador</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_el_salvador_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Salvadoran</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_nicaragua</Data></Cell>
+	 <Cell><Data ss:Type="String">Nicaragua</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_nicaragua_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Nicaraguan</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_costa_rica</Data></Cell>
 	 <Cell><Data ss:Type="String">Costa Rica</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_costa_rica_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Costa Rican</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_panama</Data></Cell>
+	 <Cell><Data ss:Type="String">Panama</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_panama_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Panamanian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_cuba</Data></Cell>
 	 <Cell><Data ss:Type="String">Cuba</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_cuba_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Cuban</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bahamas</Data></Cell>
+	 <Cell><Data ss:Type="String">The Bahamas</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bahamas_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahamian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_haiti</Data></Cell>
+	 <Cell><Data ss:Type="String">Haiti</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_haiti_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Haitian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_dominican_republic</Data></Cell>
+	 <Cell><Data ss:Type="String">Dominican Republic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_dominican_republic_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Dominican</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_puerto_rico</Data></Cell>
+	 <Cell><Data ss:Type="String">Puerto Rico</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_puerto_rico_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Puerto Rican</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_jamaica</Data></Cell>
+	 <Cell><Data ss:Type="String">Jamaica</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_jamaica_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Jamaican</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_barbados</Data></Cell>
+	 <Cell><Data ss:Type="String">Barbados</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_barbados_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Barbadian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_trinidad</Data></Cell>
+	 <Cell><Data ss:Type="String">Trinidad and Tobago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_trinidad_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Trinidadian</Data></Cell>
+	</Row>
+
+	<!-- South America -->
+	<Row>
 	 <Cell><Data ss:Type="String">country_colombia</Data></Cell>
 	 <Cell><Data ss:Type="String">Colombia</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">country_ecuador</Data></Cell>
-	 <Cell><Data ss:Type="String">Ecuador</Data></Cell>
+	 <Cell><Data ss:Type="String">country_colombia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Colombian</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">country_peru</Data></Cell>
-	 <Cell><Data ss:Type="String">Peru</Data></Cell>
+	 <Cell><Data ss:Type="String">country_venezuela</Data></Cell>
+	 <Cell><Data ss:Type="String">Venezuela</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_venezuela_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Venezuelan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_guyana</Data></Cell>
+	 <Cell><Data ss:Type="String">British Guiana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_guyana_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Guianese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_suriname</Data></Cell>
+	 <Cell><Data ss:Type="String">Suriname</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_suriname_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Surinamese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_french_guiana</Data></Cell>
+	 <Cell><Data ss:Type="String">French Guiana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_french_guiana_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">French Guianan</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_brazil</Data></Cell>
 	 <Cell><Data ss:Type="String">Brazil</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_brazil_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Brazilian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_ecuador</Data></Cell>
+	 <Cell><Data ss:Type="String">Ecuador</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_ecuador_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Ecuadorian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_peru</Data></Cell>
+	 <Cell><Data ss:Type="String">Peru</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_peru_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Peruvian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bolivia</Data></Cell>
+	 <Cell><Data ss:Type="String">Bolivia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bolivia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Bolivian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_paraguay</Data></Cell>
+	 <Cell><Data ss:Type="String">Paraguay</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_paraguay_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Paraguayan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uruguay</Data></Cell>
+	 <Cell><Data ss:Type="String">Uruguay</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uruguay_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Uruguayan</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_argentina</Data></Cell>
 	 <Cell><Data ss:Type="String">Argentina</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">country_iceland</Data></Cell>
-	 <Cell><Data ss:Type="String">Iceland</Data></Cell>
+	 <Cell><Data ss:Type="String">country_argentina_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Argentinian</Data></Cell>
 	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_chile</Data></Cell>
+	 <Cell><Data ss:Type="String">Chile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_chile_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Chilean</Data></Cell>
+	</Row>
+
+	<!-- Europe -->
 	<Row>
 	 <Cell><Data ss:Type="String">country_uk</Data></Cell>
 	 <Cell><Data ss:Type="String">United Kingdom</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uk_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">British</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_ireland</Data></Cell>
+	 <Cell><Data ss:Type="String">Ireland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_ireland_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Irish</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_france</Data></Cell>
 	 <Cell><Data ss:Type="String">France</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_france_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">French</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_monaco</Data></Cell>
+	 <Cell><Data ss:Type="String">Monaco</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_monaco_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Monégasque</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_belgium</Data></Cell>
+	 <Cell><Data ss:Type="String">Belgium</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_belgium_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Belgian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_netherlands</Data></Cell>
+	 <Cell><Data ss:Type="String">Netherlands</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_netherlands_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Dutch</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_luxembourg</Data></Cell>
+	 <Cell><Data ss:Type="String">Luxembourg</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_luxembourg_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Luxembourgish</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_germany</Data></Cell>
 	 <Cell><Data ss:Type="String">Germany</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_germany_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">German</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_switzerland</Data></Cell>
 	 <Cell><Data ss:Type="String">Switzerland</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_switzerland_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Swiss</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_liechtenstein</Data></Cell>
+	 <Cell><Data ss:Type="String">Liechtenstein</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_liechtenstein_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Liechtensteiner</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_austria</Data></Cell>
+	 <Cell><Data ss:Type="String">Austria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_austria_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Austrian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_italy</Data></Cell>
+	 <Cell><Data ss:Type="String">Italy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_italy_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Italian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_san_marino</Data></Cell>
+	 <Cell><Data ss:Type="String">San Marino</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_san_marino_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Sammarinese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_vatican</Data></Cell>
+	 <Cell><Data ss:Type="String">Vatican City</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_vatican_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Vatican</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_malta</Data></Cell>
+	 <Cell><Data ss:Type="String">Malta</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_malta_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Maltese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_andorra</Data></Cell>
+	 <Cell><Data ss:Type="String">Andorra</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_andorra_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Andorran</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_spain</Data></Cell>
+	 <Cell><Data ss:Type="String">Spain</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_spain_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Spanish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_portugal</Data></Cell>
+	 <Cell><Data ss:Type="String">Portugal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_portugal_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Portuguese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_iceland</Data></Cell>
+	 <Cell><Data ss:Type="String">Iceland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_iceland_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Icelandic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_denmark</Data></Cell>
+	 <Cell><Data ss:Type="String">Denmark</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_denmark_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Danish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_norway</Data></Cell>
+	 <Cell><Data ss:Type="String">Norway</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_norway_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Norwegian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sweden</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweden</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sweden_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Swedish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_finland</Data></Cell>
+	 <Cell><Data ss:Type="String">Finland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_finland_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Finnish</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_russia</Data></Cell>
 	 <Cell><Data ss:Type="String">Russia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_russia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Russian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_poland</Data></Cell>
+	 <Cell><Data ss:Type="String">Poland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_poland_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Polish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_csa</Data></Cell>
+	 <Cell><Data ss:Type="String">Czechoslovakia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_csa_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Czechoslovakian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_hungary</Data></Cell>
+	 <Cell><Data ss:Type="String">Hungary</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_hungary_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Hungarian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_yugoslavia</Data></Cell>
+	 <Cell><Data ss:Type="String">Yugoslavia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_yugoslavia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Yugoslav</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_romania</Data></Cell>
+	 <Cell><Data ss:Type="String">Romania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_romania_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Romanian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bulgaria</Data></Cell>
+	 <Cell><Data ss:Type="String">Bulgaria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bulgaria_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Bulgarian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_albania</Data></Cell>
+	 <Cell><Data ss:Type="String">Albania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_albania_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Albanian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_greece</Data></Cell>
+	 <Cell><Data ss:Type="String">Greece</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_greece_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Greek</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_cyprus</Data></Cell>
+	 <Cell><Data ss:Type="String">Cyprus</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_cyprus_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Cypriot</Data></Cell>
+	</Row>
+
+	<!-- Middle East -->
+	<Row>
+	 <Cell><Data ss:Type="String">country_georgia</Data></Cell>
+	 <Cell><Data ss:Type="String">Georgia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_georgia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Georgian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_armenia</Data></Cell>
+	 <Cell><Data ss:Type="String">Armenia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_armenia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Armenian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_azerbaijan</Data></Cell>
+	 <Cell><Data ss:Type="String">Azerbaijan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_azerbaijan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Azerbaijani</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_turkey</Data></Cell>
 	 <Cell><Data ss:Type="String">Turkey</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_turkey_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Turkish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_israel</Data></Cell>
+	 <Cell><Data ss:Type="String">Israel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_israel_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Israeli</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_syria</Data></Cell>
+	 <Cell><Data ss:Type="String">Syria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_syria_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Syrian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_lebanon</Data></Cell>
+	 <Cell><Data ss:Type="String">Lebanon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_lebanon_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Lebanese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_jordan</Data></Cell>
+	 <Cell><Data ss:Type="String">Jordan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_jordan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Jordanian</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_iraq</Data></Cell>
 	 <Cell><Data ss:Type="String">Iraq</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_iraq_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Iraqi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_iran</Data></Cell>
+	 <Cell><Data ss:Type="String">Iran</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_iran_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Iranian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_saudi_arabia</Data></Cell>
+	 <Cell><Data ss:Type="String">Saudi Arabia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_saudi_arabia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Saudi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kuwait</Data></Cell>
+	 <Cell><Data ss:Type="String">Kuwait</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kuwait_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Kuwaiti</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bahrain</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahrain</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bahrain_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahraini</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_qatar</Data></Cell>
+	 <Cell><Data ss:Type="String">Qatar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_qatar_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Qatari</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uae</Data></Cell>
+	 <Cell><Data ss:Type="String">United Arab Emirates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uae_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Emirati</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_oman</Data></Cell>
+	 <Cell><Data ss:Type="String">Oman</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_oman_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Omani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_yemen</Data></Cell>
+	 <Cell><Data ss:Type="String">Yemen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_yemen_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Yemeni</Data></Cell>
+	</Row>
+
+	<!-- Africa -->
+	<Row>
 	 <Cell><Data ss:Type="String">country_egypt</Data></Cell>
 	 <Cell><Data ss:Type="String">Egypt</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_egypt_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Egyptian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_libya</Data></Cell>
+	 <Cell><Data ss:Type="String">Libya</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_libya_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Libyan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tunisia</Data></Cell>
+	 <Cell><Data ss:Type="String">Tunisia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tunisia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Tunisian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_algeria</Data></Cell>
+	 <Cell><Data ss:Type="String">Algeria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_algeria_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Algerian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_morocco</Data></Cell>
 	 <Cell><Data ss:Type="String">Morocco</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_morocco_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Moroccan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_burkina_faso</Data></Cell>
+	 <Cell><Data ss:Type="String">Burkina Faso</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_burkina_faso_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Burkinabé</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_liberia</Data></Cell>
+	 <Cell><Data ss:Type="String">Liberia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_liberia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Liberian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_gold_coast</Data></Cell>
+	 <Cell><Data ss:Type="String">Ghana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_gold_coast_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Ghanaian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_nigeria</Data></Cell>
+	 <Cell><Data ss:Type="String">Nigeria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_nigeria_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Nigerian</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_cameroon</Data></Cell>
 	 <Cell><Data ss:Type="String">Cameroon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_cameroon_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Cameroonian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sudan</Data></Cell>
+	 <Cell><Data ss:Type="String">Sudan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sudan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Sudanese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_ethiopia</Data></Cell>
+	 <Cell><Data ss:Type="String">Ethiopia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_ethiopia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Ethiopian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kenya</Data></Cell>
+	 <Cell><Data ss:Type="String">Kenya</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kenya_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Kenyan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uganda</Data></Cell>
+	 <Cell><Data ss:Type="String">Uganda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uganda_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Ugandan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tanzania</Data></Cell>
+	 <Cell><Data ss:Type="String">Tanzania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tanzania_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Tanzanian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_south_africa</Data></Cell>
 	 <Cell><Data ss:Type="String">South Africa</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_south_africa_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">South African</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_madagascar</Data></Cell>
 	 <Cell><Data ss:Type="String">Madagascar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_madagascar_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Malagasy</Data></Cell>
+	</Row>
+
+	<!-- Asia -->
+	<Row>
+	 <Cell><Data ss:Type="String">country_kazakhstan</Data></Cell>
+	 <Cell><Data ss:Type="String">Kazakhstan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kazakhstan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Kazakhstani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kyrgyzstan</Data></Cell>
+	 <Cell><Data ss:Type="String">Kyrgyzstan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kyrgyzstan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Kyrgyzstani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_uzbekistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Uzbekistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_kazakhstan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Uzbekistani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_turkmenistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Turkmenistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_turkmenistan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Turkmenistani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tajikistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Tajikistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tajikistan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Tajikistani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_afghanistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Afghanistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_afghanistan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Afghan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_pakistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Pakistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_pakistan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Pakistani</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_india</Data></Cell>
 	 <Cell><Data ss:Type="String">India</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">country_mongolia</Data></Cell>
-	 <Cell><Data ss:Type="String">Mongolia</Data></Cell>
+	 <Cell><Data ss:Type="String">country_india_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Indian</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">country_indonesia</Data></Cell>
-	 <Cell><Data ss:Type="String">Indonesia</Data></Cell>
+	 <Cell><Data ss:Type="String">country_bangladesh</Data></Cell>
+	 <Cell><Data ss:Type="String">Bangladesh</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bangladesh_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Bangladeshi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sri_lanka</Data></Cell>
+	 <Cell><Data ss:Type="String">Sri Lanka</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sri_lanka_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Sri Lankan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_nepal</Data></Cell>
+	 <Cell><Data ss:Type="String">Nepal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_nepal_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Nepalese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sikkim</Data></Cell>
+	 <Cell><Data ss:Type="String">Sikkim</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_sikkim_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Sikkimese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bhutan</Data></Cell>
+	 <Cell><Data ss:Type="String">Bhutan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_bhutan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Bhutanese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tibet</Data></Cell>
+	 <Cell><Data ss:Type="String">Tibet</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tibet_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Tibetan</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_china</Data></Cell>
 	 <Cell><Data ss:Type="String">China</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_china_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Chinese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_hong_kong</Data></Cell>
+	 <Cell><Data ss:Type="String">Hong Kong</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_hong_kong_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Hong Konger</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_macau</Data></Cell>
+	 <Cell><Data ss:Type="String">Macau</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_macau_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Macanese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_mongolia</Data></Cell>
+	 <Cell><Data ss:Type="String">Mongolia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_mongolia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Mongolian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_korea</Data></Cell>
+	 <Cell><Data ss:Type="String">Korea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_korea_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Korean</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_japan</Data></Cell>
 	 <Cell><Data ss:Type="String">Japan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_japan_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Japanese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_burma</Data></Cell>
+	 <Cell><Data ss:Type="String">Burma</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_burma_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Burmese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_thailand</Data></Cell>
+	 <Cell><Data ss:Type="String">Thailand</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_thailand_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Thai</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_cambodia</Data></Cell>
+	 <Cell><Data ss:Type="String">Cambodia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_cambodia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Cambodian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_laos</Data></Cell>
+	 <Cell><Data ss:Type="String">Laos</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_laos_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Laotian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_vietnam</Data></Cell>
+	 <Cell><Data ss:Type="String">Vietnam</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_vietnam_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Vietnamese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_malaya</Data></Cell>
+	 <Cell><Data ss:Type="String">Malaya</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_malaya_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Malayan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_singapore</Data></Cell>
+	 <Cell><Data ss:Type="String">Singapore</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_singapore_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Singaporean</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_indonesia</Data></Cell>
+	 <Cell><Data ss:Type="String">Indonesia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_indonesia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Indonesian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_brunei</Data></Cell>
+	 <Cell><Data ss:Type="String">Brunei</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_brunei_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Bruneian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_philippines</Data></Cell>
+	 <Cell><Data ss:Type="String">Philippines</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_philippines_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Filipino</Data></Cell>
+	</Row>
+
+	<!-- Oceania -->
+	<Row>
+	 <Cell><Data ss:Type="String">country_papua_new_guinea</Data></Cell>
+	 <Cell><Data ss:Type="String">Papua New Guinea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_papua_new_guinea_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Papua New Guinean</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_australia</Data></Cell>
 	 <Cell><Data ss:Type="String">Australia</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_australia_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Australian</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">country_new_zealand</Data></Cell>
 	 <Cell><Data ss:Type="String">New Zealand</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_new_zealand_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">New Zealander</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">country_fiji</Data></Cell>
 	 <Cell><Data ss:Type="String">Fiji</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">country_fiji_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Fijian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tonga</Data></Cell>
+	 <Cell><Data ss:Type="String">Tonga</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_tonga_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Tongan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_samoa</Data></Cell>
+	 <Cell><Data ss:Type="String">Samoa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">country_samoa_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Samoan</Data></Cell>
+	</Row>
+
+	<!-- Generic -->
+	<Row>
 	 <Cell><Data ss:Type="String">country_unknown</Data></Cell>
 	 <Cell><Data ss:Type="String">Unknown</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">holiday_lunar_new_year</Data></Cell>
-	 <Cell><Data ss:Type="String">Lunar New Year</Data></Cell>
+	 <Cell><Data ss:Type="String">country_unknown_adj</Data></Cell>
+	 <Cell><Data ss:Type="String">Unknown</Data></Cell>
+	</Row>
+
+	<!-- HOLIDAYS -->
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_new_year</Data></Cell>
+	 <Cell><Data ss:Type="String">New Year's Day</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">holiday_hanukkah</Data></Cell>
-	 <Cell><Data ss:Type="String">Hanukkah</Data></Cell>
+	 <Cell><Data ss:Type="String">holiday_lunar_new_year</Data></Cell>
+	 <Cell><Data ss:Type="String">Lunar New Year</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">holiday_valentine</Data></Cell>
@@ -298,48 +1300,92 @@
 	 <Cell><Data ss:Type="String">Lent</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">holiday_easter</Data></Cell>
-	 <Cell><Data ss:Type="String">Easter</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">holiday_cinco_de_mayo</Data></Cell>
-	 <Cell><Data ss:Type="String">Cinco de Mayo</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">holiday_cherry_blossom</Data></Cell>
-	 <Cell><Data ss:Type="String">Cherry Blossom Festival</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">holiday_bastille</Data></Cell>
-	 <Cell><Data ss:Type="String">Bastille Day</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">holiday_independence_usa</Data></Cell>
-	 <Cell><Data ss:Type="String">Independence Day</Data></Cell>
+	 <Cell><Data ss:Type="String">holiday_st_patrick</Data></Cell>
+	 <Cell><Data ss:Type="String">St. Patrick's Day</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">holiday_holi</Data></Cell>
 	 <Cell><Data ss:Type="String">Holi</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">holiday_ramadan</Data></Cell>
-	 <Cell><Data ss:Type="String">Ramadan</Data></Cell>
+	 <Cell><Data ss:Type="String">holiday_nowruz</Data></Cell>
+	 <Cell><Data ss:Type="String">Nowruz</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">holiday_eid_ul_fitr</Data></Cell>
-	 <Cell><Data ss:Type="String">Eid al-Fitr</Data></Cell>
+	 <Cell><Data ss:Type="String">holiday_easter</Data></Cell>
+	 <Cell><Data ss:Type="String">Easter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_cherry_blossom</Data></Cell>
+	 <Cell><Data ss:Type="String">Cherry Blossom Festival</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_passover</Data></Cell>
+	 <Cell><Data ss:Type="String">Passover</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_may_day</Data></Cell>
+	 <Cell><Data ss:Type="String">May Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_cinco_de_mayo</Data></Cell>
+	 <Cell><Data ss:Type="String">Cinco de Mayo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_ve_day</Data></Cell>
+	 <Cell><Data ss:Type="String">VE Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_mothers_day</Data></Cell>
+	 <Cell><Data ss:Type="String">Mother's Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_midsummer</Data></Cell>
+	 <Cell><Data ss:Type="String">Midsummer</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_dominion_day</Data></Cell>
+	 <Cell><Data ss:Type="String">Dominion Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_independence_usa</Data></Cell>
+	 <Cell><Data ss:Type="String">Independence Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_bastille</Data></Cell>
+	 <Cell><Data ss:Type="String">Bastille Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_obon</Data></Cell>
+	 <Cell><Data ss:Type="String">Obon Festival</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_mid_autumn</Data></Cell>
+	 <Cell><Data ss:Type="String">Mid-Autumn Festival</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_rosh_hashanah</Data></Cell>
+	 <Cell><Data ss:Type="String">Rosh Hashanah</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_yom_kippur</Data></Cell>
+	 <Cell><Data ss:Type="String">Yom Kippur</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">holiday_oktoberfest</Data></Cell>
 	 <Cell><Data ss:Type="String">Oktoberfest</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">holiday_halloween</Data></Cell>
+	 <Cell><Data ss:Type="String">Halloween</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">holiday_dia_de_muertos</Data></Cell>
 	 <Cell><Data ss:Type="String">Day of the Dead</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">holiday_halloween</Data></Cell>
-	 <Cell><Data ss:Type="String">Halloween</Data></Cell>
+	 <Cell><Data ss:Type="String">holiday_remembrance</Data></Cell>
+	 <Cell><Data ss:Type="String">Remembrance Day</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">holiday_diwali</Data></Cell>
@@ -350,12 +1396,143 @@
 	 <Cell><Data ss:Type="String">Thanksgiving</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">holiday_hanukkah</Data></Cell>
+	 <Cell><Data ss:Type="String">Hanukkah</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">holiday_christmas</Data></Cell>
 	 <Cell><Data ss:Type="String">Christmas</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">holiday_boxing_day</Data></Cell>
+	 <Cell><Data ss:Type="String">Boxing Day</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_new_years_eve</Data></Cell>
+	 <Cell><Data ss:Type="String">New Year's Eve</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_ramadan</Data></Cell>
+	 <Cell><Data ss:Type="String">Ramadan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">holiday_eid_ul_fitr</Data></Cell>
+	 <Cell><Data ss:Type="String">Eid al-Fitr</Data></Cell>
+	</Row>
+
+	<!-- Genders -->
+	<Row>
+	 <Cell><Data ss:Type="String">gender_male</Data></Cell>
+	 <Cell><Data ss:Type="String">Male</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gender_female</Data></Cell>
+	 <Cell><Data ss:Type="String">Female</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">gender_nonbinary</Data></Cell>
+	 <Cell><Data ss:Type="String">Non-Binary</Data></Cell>
+	</Row>
+
+	<!-- Religions -->
+	<Row>
+	 <Cell><Data ss:Type="String">religion_christian</Data></Cell>
+	 <Cell><Data ss:Type="String">Christian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_jewish</Data></Cell>
+	 <Cell><Data ss:Type="String">Jewish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_muslim</Data></Cell>
+	 <Cell><Data ss:Type="String">Muslim</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_hindu</Data></Cell>
+	 <Cell><Data ss:Type="String">Hindu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_buddhist</Data></Cell>
+	 <Cell><Data ss:Type="String">Buddhist</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_confucian</Data></Cell>
+	 <Cell><Data ss:Type="String">Confucianist</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_taoist</Data></Cell>
+	 <Cell><Data ss:Type="String">Taoist</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_zoroastrian</Data></Cell>
+	 <Cell><Data ss:Type="String">Zoroastrian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_shinto</Data></Cell>
+	 <Cell><Data ss:Type="String">Shinto</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_sikh</Data></Cell>
+	 <Cell><Data ss:Type="String">Sikh</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_jain</Data></Cell>
+	 <Cell><Data ss:Type="String">Jain</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">religion_bahai</Data></Cell>
+	 <Cell><Data ss:Type="String">Baháʼí</Data></Cell>
+	</Row>
+
+	<!-- Diets and Preferences -->
+	<Row>
+	 <Cell><Data ss:Type="String">diet_alcohol_free</Data></Cell>
+	 <Cell><Data ss:Type="String">Alcohol-Free</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_halal</Data></Cell>
+	 <Cell><Data ss:Type="String">Halal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_kosher</Data></Cell>
+	 <Cell><Data ss:Type="String">Kosher</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_lactose_free</Data></Cell>
+	 <Cell><Data ss:Type="String">Lactose-Free</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_no_beef</Data></Cell>
+	 <Cell><Data ss:Type="String">No Beef</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_no_lamb</Data></Cell>
+	 <Cell><Data ss:Type="String">No Lamb</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_no_pork</Data></Cell>
+	 <Cell><Data ss:Type="String">No Pork</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_no_poultry</Data></Cell>
+	 <Cell><Data ss:Type="String">No Poultry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">diet_no_seafood</Data></Cell>
+	 <Cell><Data ss:Type="String">No Seafood</Data></Cell>
+	</Row>
+	
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_announcer_text</Data></Cell>
 	 <Cell><Data ss:Type="String">As Alex Fletcher's loyal and dependable assistant, Rick Lafontaine serves as the primary liaison between you and the Baumeister Confections Board of Directors. Originally from Montréal, the young, bright and resourceful business graduate was personally hired by Alex for his sharp mind and unwavering belief in her mission. Outside of his duties ensuring vital messages and directives are delivered promptly as you travel the world and build your chocolatier career, he also remains a devoted fan of the Montréal Canadiens hockey team and is always happy to see a fellow professional succeeding.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_announcer_gameover_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Following your promotion to Master Chocolatier and the return of the Fletchers to Zürich, Rick has been officially named your Chief of Staff at the Baumeister Building. He handled the massive logistical undertaking of your ISAC application with a level of precision that earned him a rare nod of approval from Evangeline herself. He no longer just delivers messages; he manages the day-to-day bureaucracy of the global empire, allowing you to focus on the test kitchen and trade routes. He recently managed to return to Montréal for a home game and a visit to his family - his first in years - and returned to San Francisco with a renewed energy. He remains your most loyal ally in the corporate office.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_bag_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Originally from the rugged Kurdish highlands of the north, Shada Barzani manages the dry-goods sector of the Al Rasheed Market. Carrying a surname that commands both respect and caution in political circles, she moved to the capital following the unrest of the mid-1930s to support her younger siblings. She runs her corner of the market with the focused sternness overseeing the trade of Iraq's finest sumac, saffron, and cardamom.&lt;br&gt;&lt;br&gt;Shada is a woman of quiet, observant piety and has a low tolerance for 'city talk' and flattery, preferring the direct, honest negotiations of a serious buyer. At home in the Alwiyah district, she keeps the memory of the north alive through a small balcony garden of hardy mountain herbs and by hosting weekly 'estekans' (tea sessions) for the displaced families of her childhood village.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_bag_shopkeep_text</Data></Cell>
@@ -386,8 +1563,24 @@
 	 <Cell><Data ss:Type="String">An impeccable eye for quality and design is what sets Tránsito Landínez apart. Having built her business from a small market stall through sheer will and undeniable taste, she now runs %bog_shop%, a shop featuring curated handicrafts alongside fine confections. Confident, flirtatious and charismatic, she has since become a fixture in the bohemian circles of La Candelaria. She views you as a potential collaborator, unimpressed by reputation alone, but is quick to embrace any supplier who shares her passion for true artistry and exceptional quality.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_cap_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Gavin Hotz is a seasoned fixture of the Victoria and Alfred Waterfront Market, operating as logistics manager and head dry-goods broker. His Lithuanian Jewish grandfather immigrated to South Africa in the late 19th century and married into the local Cape Coloured community - this intersecting heritage has given Gavin an expansive local network and an innate ability to connect with merchants from all walks of life.&lt;br&gt;&lt;br&gt;Gavin has a sharp, astute mind and takes on everything with meticulous precision, but at the end of the day, he also genuinely loves people - the last thing he wants is for a negotiation to become a metaphorical battlefield. While he may be jolly on the surface who hosts his famous Sunday braiis (barbecues) amongst friends and family, Gavin has a contemplative and mentally gifted side to him, considering himself a professional backgammon player in his spare time.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_cap_shopkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">A young Xhosa woman from a village in the Eastern Cape, Kefilwe Matebula came to Cape Town to find work and support her family. She spent years working diligently for the previous owner of the Adderley Street shop, an elderly English woman who, upon her passing, unexpectedly left the business to Kefilwe. Navigating this new and often difficult position requires great care, and she is known for her optimism, sense of support (a quality known as Ubuntu), and unshakeable resilience. She finds great pride in her own community and loves to participate in her church's choir.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_dou_bldg1keep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born and raised in Douala's Akwa district, Ernest is a young man whose life has been dictated by the rhythm of the estuary. After years spent working as a deckhand and later a freight checker at the docks, he possesses a thorough, practical knowledge of how goods move through the port. He is a quiet and unassuming presence, often found taking a break from the midday sun in the entryways of the city's larger buildings. Ernest is a pragmatist who values directness and has a keen eye for the quality of cargo coming off the ships. He maintains a small collection of vintage maritime maps and spends his Sundays fishing on the Wouri River, enjoying the solitude away from the constant noise of the industrial waterfront.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_dou_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Tomge has operated her stall at the Eko Market for over twenty years, establishing herself as a sharp judge of cacao and spice quality. She is an efficient, direct trader who can estimate the weight of a burlap sack just by looking at the tension of the twine. She has little patience for indecisive buyers or those who don't understand the labor behind the harvest, preferring the bluntness of professional merchants. She is a respected figure in her community, often mediating disputes between younger vendors. While she projects a tough exterior to navigate the daily chaos of the docks, she is known to be a fair negotiator for those who approach her with a clear plan and a respectful tone.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_dou_plantationkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born and raised in the rural outskirts of Douala, Guy is the head grower at the Ndawara Plantation. He's spent the better part of his life navigating the seasonal cycles of the cacao harvest, surviving the economic shifts of the colonial era and the disruptions of the war through sheer persistence. Guy is known for his communal nature and a deep, practical knowledge of the volcanic soil he works every day.&lt;br&gt;&lt;br&gt;Ironically compared against his own personality, he'd rather prefer the quiet of the plantation at sunrise to the noise of the city markets. Guy is a devoted family man who spends his few hours of leisure teaching his grandchildren how to identify the calls of the local birds, finding a quiet pride in watching the next generation grow alongside the trees he planted decades ago.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_dou_shopkeep_met_not_unlocked_text</Data></Cell>
@@ -478,6 +1671,10 @@
 	 <Cell><Data ss:Type="String">%main_alex% (née Tangye) is the determined and innovative granddaughter of the company's matriarch, %main_evan%. In the 1920s, it was Alex's adventurous spirit that saved the company from complacency by seeking out secret ingredients and pioneering new recipes. Now, with her husband %main_sean% missing after World War II, she has entrusted the fate of the company to you.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_main_alex_gameover_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Following the successful extraction of Sean from British Honduras, Alexandra Fletcher (née Tangye) may retain her seat on the Board, but her focus has shifted entirely to her husband's recovery in their Zürich residence. The physical and mental toll of the search has left her exhausted but vindicated.&lt;br&gt;&lt;br&gt;Having entrusted the company to you during the crisis, she has chosen to make that arrangement permanent, stepping back into an advisory role on the Board. She and Sean now split their time between the Swiss estate and San Francisco, finally focusing on the quiet life they were denied by the war. Alex is eternally grateful for all you have done for her husband, Baumeister Confections, and the promises you have succeeded to deliver (and continue to deliver) on.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_main_chas_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Dieter and Sara's son and twin brother of Whitney. After spending his youth away from the family business, he has since reconnected and now helps manage logistics and supplier relationships for Baumeister Confections in the Americas, particularly at %san_factory%. He maintains a laid-back, youthful attitude, happy to remain unmistakably himself as life goes on.</Data></Cell>
 	</Row>
@@ -538,6 +1735,10 @@
 	 <Cell><Data ss:Type="String">The earnest and ambitious proprietor of %rey_shop% ("Northern Lights"), Bjarki Eiríksson is a proud citizen of the newly independent Republic of Iceland. He became a close friend of Teddy Baumeister during the construction of the Secret Test Kitchen, bonding over a shared passion for flavor. While he admires Teddy's wild innovations, Bjarki is a craftsman at heart, believing in the perfection of classic recipes made with quality local ingredients. He is one of your most appreciative partners.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_rey_xxxxkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Hjálmar grew up in a small fishing village on the Snæfellsnes Peninsula called Grundarfjörður, before moving to Reykjavík during the war years. Having spent the better part of two decades working on deep-sea trawlers, he possesses a permanent squint and a deep appreciation for dry land and geothermal heat. He is a man of few expectations, preferring a quiet corner in a warm building over the unpredictable winds of the harbor.&lt;br&gt;&lt;br&gt;Hjálmar is observant and speaks with a dry, blunt honesty that foreign traders sometimes mistake for rudeness. In his spare time, he is a dedicated chess player, often found studying the moves of international grandmasters on a worn wooden board he carved himself. He has a distinct fondness for the tart, wild berries that grow in the Icelandic summers.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_san_barkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">The granddaughter of Jeremiah Pepper, Allison grew up scrubbing tables at The Watering Hole before eventually taking over the tap. She grew up hearing stories of Evangeline Baumeister's early challenges and tribulations, and intimately knows all of the family's turbulent history from behind the bar. Allison is known for having a sharp wit and a memory like a steel trap, never forgetting a face or a favorite drink. As a massive fan of the new bebop jazz scene, she often closes the bar early on weekends to catch live sets at clubs in the Fillmore, sometimes dragging reluctant patrons along with her.</Data></Cell>
 	</Row>
@@ -553,6 +1754,11 @@
 	 <Cell><Data ss:Type="String">catalogue_character_tok_mountainkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">A friendly American pilot with the U.S. Army Air Forces and former squadron mate of Sean Fletcher, Thomas Hardy is stationed in Japan as part of the post-war occupation. He is the eyewitness whose testimony provided the first concrete evidence that Sean may have survived. Despite his official report being suppressed by their liaison officer, Wolf Fleischer, Hardy maintained his account of seeing his good friend Sean's parachute open. His information gave Alex the crucial lead she needed, directly implicating Fleischer and turning her search into a targeted investigation.</Data></Cell>
 	</Row>
+	<!-- Valerie McGill's got no connection to Toronto in Reforged, due to her blank slate status from the base game -->
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tor_bldg1keep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Valerie operates a textile design studio in Glasgow's West End, a splash of vibrant color against the soot-stained sandstone of the industrial city. Born into a family of Clyde shipbuilders, she broke with tradition to pursue fashion and the arts, securing contracts to design interiors for luxury liners. Sharp-tongued and fiercely protective of her designs, she is a woman of exacting taste who believes that beauty is a necessity and a luxury at the same time.&lt;br&gt;&lt;br&gt;Notably, she detests the 'muddy' taste of roasted coffee beans, finding them abrasive. She is constantly searching for a supplier who can use modern blending machinery to create something more refined - frothy, aromatic teas and floral infusions - without the grit of the bean.</Data></Cell>
+	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_tor_marketkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Born in Hamilton and having moved to Toronto at 18 years of age, Abbey is a clerk at the bustling %tor_market%, though one gets the sense she might prefer a quieter line of work. For being somebody who's young and naturally shy, she tends to the counters with a quiet diligence, handling the invoices for the market's owner day in and day out. While she often seems flustered by loud and aggressive waterfront traders, she knows the inventory better than anyone. She seems particularly awed by the international clientele that the new chocolate factories have brought to her door.</Data></Cell>
@@ -560,6 +1766,26 @@
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_tor_shopkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">After vowing she would never get stuck in the quiet life of her small Ontario town, Kerrie Taylor worked her way through a series of city jobs before finally saving enough to open Wychwood Sweets. Her shop is a direct reflection of her personality: stylish, witty, and always looking for what's next. Having a low tolerance for the classics, she's most excited by innovative, novel creations that will get her well-connected customers talking. She expects her suppliers, including you, to keep things interesting.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tok_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born in the bustling merchant district of Asakusa, Reiko is the proprietor of the Tsuneda Dry Goods stall at the Nakamise Market. A survivor of both the Great Kantō Earthquake and the firebombings of 1945, she possesses a pluck characteristic of the "Edokko" (true Tokyoites). She took over the family business in the 1920s and has run it with an iron fist ever since.&lt;br&gt;&lt;br&gt;A traditionalist who refuses to adopt Western dress, she runs her stall with exactitude and discipline, selling Japan's finest matcha, wasabi, ginger and other local produce. While she serves the occupying forces and foreign traders with a bow, she reserves her genuine warmth for those who show genuine respect for the ingredients. She lives with her daughter-in-law and grandchildren, and has a deep love for haiku poetry and the stray cats that patrol her alleyway.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tok_palacekeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Born into a family with deep roots in international diplomacy, Kenji Watanabe serves as an administrative liaison at the Imperial Palace, and spent much of his youth traveling with his father, which allowed him to build a staggering network of contacts across Europe and South America. He's a man who understands that in the post-war world, a well-placed introduction is often more valuable than gold.&lt;br&gt;&lt;br&gt;Kenji is composed and articulate, rarely losing his cool even when dealing with the high pressures of the current occupation. He maintains a close, long-standing friendship with %bog_churchkeep% in %bogota% and is a big believer in the idea that trade and shared culture are the best ways to ensure lasting peace. He's a professional through and through, but he has a genuine curiosity about the art of the confection and loves seeing how different cultures approach flavor.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tok_stationkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A fixture of Tokyo Station since the Taishō era, Daisuke Sato has spent nearly his entire life within the rhythmic pulse of Japan's railway system. Having witnessed the devastating firebombings of 1945 that destroyed the station's iconic domes, he now serves as a senior logistics coordinator, helping to manage the chaotic influx of reconstruction materials and returning soldiers. Daisuke is a man of immense patience and observation; he often remarks that you can tell everything about a person's character by how they treat a station porter during a delay.&lt;br&gt;&lt;br&gt;While he takes great pride in the modernization of the rails, he remains a traditionalist at heart, often found during his breaks enjoying a simple cup of green tea while watching the sunset over the rising concrete of the new Tokyo.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tok_shopkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Yoshi is the quiet, diligent owner of Nakamitsu Fine Coffees and Sweets. Originally from Osaka, he moved to Tokyo to apprentice under a master roaster before the war interrupted his studies. He reopened the shop in 1946, salvaging what equipment he could to bring the kissaten (coffee shop) culture back to the city. He is a perfectionist who believes that a cup of coffee is only as good as the silence enjoyed while drinking it. While he finds the occupying soldiers boisterous, he appreciates their thirst for strong blends and pays top dollar for imported beans. When not tending the counter, he is an avid baseball fan, following the revival of the local leagues with quiet intensity.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_tok_towerkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Asako Yomura represents the ambitious, forward-facing spirit of post-war Tokyo. Growing up in a conservative household in the suburbs, the industrial shift of the 1940s gave her a chance to break away from tradition and find her own path. She now assists with operations and tourism at the %tok_tower%, a role she treats with a mix of professional pride and a bit of playful defiance toward those who think she's too young for the job. Asako is sharp, well-spoken, and has a keen interest in Western fashion and architecture. She doesn't have much patience for 'the way things used to be' and is constantly pushing for more modern, bold ideas in everything from city planning to the confections sold in her district.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_trav_02_text</Data></Cell>
@@ -574,12 +1800,28 @@
 	 <Cell><Data ss:Type="String">Pamela Harrington is a freelance journalist from Boston, Massachusetts, whose assignments take her to every corner of the globe. With a friendly demeanor and a genuine curiosity, she has a knack for getting people to open up to her. Though she has covered everything from post-war reconstruction efforts to local cultural festivals, she is always most interested in the personal stories of the people she meets along the way.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_06_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Motochika Haneda is a young man whose spirit is as restless as the sea in his native Kobe. Coming from a city long defined by its international outlook, he spent the war years working as a junior technician - an experience that, rather than hardening him, fueled a lifelong interest with the chemistry of manufacturing and the potential of modern science. Motochika is a firm believer in the 'New Japan,' favoring democratic ideals and global cooperation over the rigid, stifling traditions of his elders. He is often found buried in translated philosophy texts or scribbling diagrams for improved industrial processes.&lt;br&gt;&lt;br&gt;While he possesses a brilliant mind for innovation and a genuine curiosity for foreign cultures, he is notoriously absent-minded in daily life, often relying on his sister Yuriko to handle the logistics of their global travels.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_trav_07_text</Data></Cell>
 	 <Cell><Data ss:Type="String">A charismatic and ambitious oilman from Houston, Texas, Rufus Loddington is a key player in the booming post-war energy sector. Having built his fortune on shrewd investments and bold risks, he now travels the globe negotiating drilling rights and securing contracts. He is a man who enjoys the fruits of his labor, and has a reputation as a tough but fair negotiator with a larger-than-life personality.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_08_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Yuriko spent her childhood in Kobe's Kitano district, where foreign consulates and western-style houses were a natural part of her neighborhood's skyline. In the wake of the war, she was among the first in her circle to embrace the new political freedoms and business opportunities available to women, largely because she realized that her family's pre-war status would no longer provide for them.&lt;br&gt;&lt;br&gt;She serves as the pragmatic engine for the Haneda siblings, managing the ledgers and navigating the red tape of international travel while her brother Motochika is lost in his diagrams. Yuriko is known for a blunt, no-nonsense approach to trade that often catches older, more conservative merchants off guard. While she projects an image of pure efficiency, she is secretly a sentimentalist who spends her limited free time searching foreign ports for rare American jazz records.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_10_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Soraya Taheri is a woman who has seen the veneer of civilization peel away more times than she cares to count. Hailing from a prominent, secular-minded family in Karaj (the outskirts of Tehran), she spent the war years watching the Allies occupy her country as if it were nothing more than a convenient supply line. That experience left her with a deep, pervasive cynicism regarding 'great causes' and the people who claim to lead them.&lt;br&gt;&lt;br&gt;She travels to escape the stagnation of her home, where the old power structures are struggling to hold on. Soraya is highly educated, speaks three languages, and possesses a sharp, biting wit that she uses to keep people at arm's length..</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_trav_11_text</Data></Cell>
 	 <Cell><Data ss:Type="String">A well-known Italian socialite with friends in nearly every major port, Agostina Calvino travels to maintain her extensive network of contacts, often for charitable causes. She is charming, witty, and an expert at navigating social situations. She is always impeccably dressed and has a remarkable memory for names and faces.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_trav_16_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Agnessa Hadonova is a veteran of the Moscow trade circles who has long understood that in business, as in life, sentimentality is a luxury few can afford. Those who encountered her in the 1920s remember her as the 'tough cookie' who kept the persistent Cyrus Rush at arm's length, before some gifts finally won her love over.&lt;br&gt;&lt;br&gt;Twenty years later, her sharp tongue is still intact, now backed by the steely endurance of a woman who navigated the brutal rationing of wartime Russia. She hasn't softened with age, though she still speaks of 'dear' Cyrus with a playful, patronizing fondness that suggests she enjoyed the chase more than she ever intended to be caught. Now, Agnessa travels to re-establish the trade connections that were severed by the war, navigating the new Soviet bureaucracy with the same blunt efficiency she used to manage her suitors.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_ulu_hutkeep_text</Data></Cell>
@@ -594,12 +1836,44 @@
 	 <Cell><Data ss:Type="String">The proprietor of %wel_shop% in %wellington%, Karolyne Radke is one of Baumeister Confections' most crucial and unconventional retail partners. The middle child of German immigrants - a geologist father and a botanist's assistant mother - Karolyne was born and raised in New Zealand, inheriting her parents' analytical mind but none of their quiet reservation. Possessing a restless intellect and an innate impatience for inefficiency (which would be diagnosed as ADHD today), she thrives on the novelty and challenge presented by the company's %exotic% product line. In her leisure time, Karolyne is an avid tramper, finding a rare sense of peace in the strenuous solitude of the hills surrounding %wellington%.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_bankkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Nino is the quintessential Swiss banker, albeit by subtracting the stereotypical 'stuffiness' and 'cold hard analytical' personalities from the equation. While he is meticulous with numbers and possesses a sharp mind for interest rates, he is a warm, jolly man who genuinely enjoys the success of his clients. He views himself as a partner in your growth rather than just a lender, often offering a supportive word or a bit of local economic gossip over a desk that is surprisingly cluttered with family photos.&lt;br&gt;&lt;br&gt;He grew up in a small village in the Appenzell region and never lost his appreciation for the hard work of local tradespeople, but being a rich man today comes with many benefits. He always has an appreciation for the finer things in life and will always look for the latest innovations in food design.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_zur_factorykeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Endrit is the brilliant, high-energy chief engineer of the %zur_factory%. His family sought refuge in Switzerland from Albania when he was a child, a displacement that fueled his obsession with mechanics - if he could understand how things worked, he could fix them. He is fiercely loyal to the Baumeister brand, largely because they were the first to look past his refugee status and see his engineering genius. Though he attempts to project a serious, corporate demeanor, his passion often betrays him. He is known to speak at breakneck speed when discussing new machinery, and is also eager to learn the art of chocolate crafting, incapable of sitting idle.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_marketkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Verena Zubriggen is widely considered the heart of the Main Street Market, having operated her stall there for longer than most Zürich residents can remember. While she possesses the sharp eye of someone who survived the leanest years of wartime rationing, she is defined by a deep, motherly kindness that makes her a confidante to half the city. She offers quiet advice, a listening ear, and the occasional extra scoop of sugar to those she knows are struggling.&lt;br&gt;&lt;br&gt;Verena maintains an impressive network of global contacts, including a long-standing friendship with Tomge Ndongo in Douala, whom she still corresponds with regularly. She treats Alex Fletcher with a protective, maternal affection and sees your arrival as a much-needed sign of hope for the family. To Verena, a business deal is a bond of trust, and she values a kind heart just as much as a fair price.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_mountainkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Ursel lives in the high-altitude village of Zermatt, where the air is crisp and the pace of life is dictated by the seasons of the mountain. While her neighbors are focused on the growing ski-tourism trade, Ursel finds her joy in the rugged beauty of the peaks and the letters she receives from Florian Amiel in the city. She is a gentle soul with a surprisingly hardy constitution, often hiking the trails around the Matterhorn to find a quiet place to read. She views the chocolates Florian sends her not just as treats, but as a physical connection to the life he is building at the university. Ursel is kind-hearted and observant, possessing a deep love for her mountain home and a quiet longing for the day she and Florian no longer have to rely on couriers to share a sweet moment.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_riverkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Gilles Zuelle has spent a fair bit of his life on the water, currently operating a small fleet of transport barges on the River Limmat. He is a practical, observant man who knows the city's geography by the rhythm of its currents and the heights of its bridges. Gilles is a man of few words, preferring the steady hum of a boat engine to the noise of city politics, but he is a vital link in the city's logistics. He has a rugged exterior and a dry wit, but is known to be incredibly reliable. He enjoys the simple pleasure of a strong cup of coffee while watching the morning mist rise off the lake, and he respects anyone who works as hard as he does.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_schoolkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">A bright-eyed student of philosophy at the University of Zürich, Florian represents the optimistic youth of a Europe finally at peace. He is often found buried in books at the university library, though his mind is frequently miles away in the Alps. Florian is a romantic at heart, possessing a gentle soul and a tendency to spend his meager tutoring earnings on fine confections to send to his sweetheart, Ursel Hlasek.&lt;br&gt;&lt;br&gt;He views chocolate as a bridge between his studious city life and the rugged beauty of the mountains where his heart truly resides. He is friendly, quick to smile, and possesses a genuine curiosity about the global trade routes you manage, and often needs caffeine kicks from Baumeister Confections and letters from Felix Baumeister (who he's great longtime friends with) to keep him going through long days of study.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_zur_shopkeep_text</Data></Cell>
 	 <Cell><Data ss:Type="String">%zur_shop% has been a Zürich institution for years, run by the dependable Analiese Rausis. As a firm believer in time-honored Swiss quality, she was the first to recognize the potential in your new enterprise, becoming your very first retail partner. She values consistency and tradition, always offering a warm welcome and a fair price to the chocolatiers she trusts. Having watched your business grow from the very beginning, Analiese expects nothing less than best for anything bearing the Baumeister name, with her shop remaining your most reliable port of call in Europe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_stationkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">If the Swiss railway network had a physical embodiment, it would be Anselm Donders. With a mustache that is as precisely groomed as the train schedules he oversees, Anselm treats the Zürich Bahnhof like his own private kingdom. He is a man of rigid habit and absolute punctuality; to Anselm, a train arriving thirty seconds late is a personal affront and a sign of civilizational decay. He is a veteran of the rail industry who can identify a locomotive by the sound of its whistle alone. Despite his loud, gruff and authoritative exterior, he is known to be quite kind to lost travelers like Alex Fletcher. Donders is well known for being a man of simple tastes and pays handsomely for all the classics.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_character_zur_towerkeep_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Liridona is a composed and observant woman who serves as a lay administrator and choir coordinator at St. Peterskirche. A gifted illustrator by trade, she spent the war years documenting the city's architectural details, finding peace in the permanence of stone and stained glass. She is a woman of deep faith, but her spirituality is expressed more through her appreciation for sacred music and liturgical art than through rigid dogma.&lt;br&gt;&lt;br&gt;Her friendship with %zur_factorykeep% dates back to his family's arrival in Zürich - Liridona was one of the few who looked past their refugee status, bonded by a mutual, if different, appreciation for structure and harmony. Liridona is a sophisticated presence in the city, often found sketching along the banks of the Limmat, and she possesses a keen eye for quality that makes her a subtle but influential judge of the confections that move through the city's markets.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_add_coffee_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Ethiopia is the botanical birthplace of Coffea arabica, and the beans harvested here are unlike any others on earth. Often growing wild or in 'garden' environments rather than organized plantations, these heirloom varietals are processed naturally, with the fruit drying on the bean. This imparts a wild, fermented complexity to the final product.&lt;br&gt;&lt;br&gt;These beans are the 'high notes' of a blend. They are light-bodied but intensely flavorful, known for tea-like characteristics and vibrant notes of blueberry, jasmine, and citrus. A master blender uses Ethiopian beans sparingly to add a sparkling, floral aroma to a mixture, transforming a standard cup of coffee into an exotic bouquet.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_allspice_text</Data></Cell>
@@ -617,7 +1891,7 @@
 	 <Cell><Data ss:Type="String">catalogue_ingredient_amaretto_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Amaretto is a sweet, almond-flavored Italian liqueur. Its name is a diminutive of the Italian word "amaro," meaning "bitter," indicating its flavor origins from the bitter almond. Despite its prominent almond taste, it is often made from a base of apricot pits or peach stones, which contain the same compound that gives almonds their characteristic flavor. With its distinct, sweet, and nutty profile, amaretto is a classic choice for pairing with both coffee and chocolate, lending a flavor reminiscent of marzipan to any confection it is added to.</Data></Cell>
 	</Row>
-<Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_apple_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Originating from the mountains of Central Asia, the apple is one of the most widely cultivated tree fruits in the world. As a fruit that traveled along the Silk Road, it holds a significant place in the mythology and culture of many societies. This global cultivation continues today, with nations like New Zealand recognized as one of the world's primary growers, exporting a wide variety of crisp, high-quality apples.&lt;br&gt;&lt;br&gt;In confectionery, the apple's key contribution is often its tartness, which provides a bright, acidic contrast to the sweetness of milk chocolate and caramel. When cooked, its flavor mellows and deepens, making it a classic partner for warm spices like cinnamon and nutmeg, evoking a comforting, autumnal feel in any confection.</Data></Cell>
 	</Row>
@@ -780,6 +2054,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_macadamia_text</Data></Cell>
 	 <Cell><Data ss:Type="String">The macadamia is a genus of trees indigenous to Australia, making it one of the few major commercial food crops native to the continent. Its shell is notoriously difficult to crack, a fact that delayed its commercial viability until efficient processing methods were developed in the mid-20th century. Subsequently, Hawaii became a major producer, establishing the macadamia nut as a globally recognized luxury product.&lt;br&gt;&lt;br&gt;With a high fat content, the macadamia has a rich, buttery flavor and a smooth, creamy texture that is softer than most nuts. Its delicate, subtle sweetness makes it an ideal partner for white or milk chocolate, which complements its luxurious profile without overwhelming its unique taste.</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">catalogue_ingredient_mah_cacao_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Hailing from the Sambirano Valley, Madagascan cacao is perhaps the most instantly recognizable variety in the world. The beans are characterized by an intense, red-berry acidity that makes the mouth water. They possess a vibrant, tart profile with clear notes of raspberry, cranberry, and cherry. Unlike other beans, there is very little 'earthiness' here - instead, the flavor is clean, bright, and incredibly energetic.&lt;br&gt;&lt;br&gt;Madagascan beans are used sparingly by the Baumeister family to add a sparkling top-note to chocolate blends. They are essential for recipes that feature tart fruits or summer berries, as the natural acidity of the bean amplifies the freshness of the ingredients.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_ingredient_mango_text</Data></Cell>
@@ -1004,6 +2282,30 @@
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_port_zurich_text</Data></Cell>
 	 <Cell><Data ss:Type="String">Located at the north-western tip of the Zürichsee (Lake Zürich) where the Limmat river flows out, Zürich is the largest city in Switzerland and a global center for banking and finance. Having emerged from the Second World War physically unscathed due to Swiss neutrality, the city currently stands as a vital economic engine for the reconstruction of Europe. While neighbors rebuild from rubble, Zürich's infrastructure remains pristine, making it a primary hub for international trade and diplomatic commerce. Its skyline is defined by the twin towers of the Grossmünster and the clock face of St. Peter's Church - the largest in Europe.&lt;br&gt;&lt;br&gt;While famous for the secrecy of its banks along the Bahnhofstrasse, Zürich is equally renowned for its centuries-old confectionery tradition. The cobbled streets of the medieval Niederdorf district are lined with artisanal shops, where master chocolatiers have refined the 'conching' process to produce the smooth, melting texture that Swiss chocolate is famous for. For Baumeister Confections, this city serves as the operational beachhead for rebuilding the company, housing the historic Zürich Chocolate Works and serving as a central rail hub for continental distribution.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_baumeister_1_title</Data></Cell>
+	 <Cell><Data ss:Type="String">The Baumeister Archive: 1815 - 1879</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_baumeister_1_text</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='26' color='#993300'&gt;&lt;b&gt;The Origins of Baumeister Confections&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font size='16'&gt;&lt;i&gt;Compiled by the Historical Archival Division of Baumeister Confections, 1946.&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font size='20' color='#6666CC'&gt;&lt;b&gt;Part I: The Bavarian Alchemist (Circa 1815)&lt;/b&gt;&lt;/font&gt;&lt;br&gt;The empire that spans the globe today did not begin in a boardroom or a grand factory, but in a cramped, soot-stained apothecary in Augsburg, Bavaria. &lt;b&gt;Marten Baumeister&lt;/b&gt; was not necessarily a businessman - he was more of a botanist and a dreamer. In the winters of the 1810s, Marten became fascinated by the bitter, gritty cacao arriving in Europe from the Americas.&lt;br&gt;&lt;br&gt;While other European confectioners were focused on creating brittle, sugary candies, Marten imagined a smoother, more medicinal luxury. He spent his days hawking his early wares from a small wooden cart in the Bavarian town squares. He relentlessly experimented with stone-grinding cacao beans and cutting the bitter tannins with rich Alpine dairy, local honey, and dried mountain herbs.&lt;br&gt;&lt;br&gt;&lt;i&gt;&quot;Cacao is a crude, difficult material - dry as dust and bitter as a bad memory,&quot;&lt;/i&gt; Marten wrote in an 1819 journal entry. &lt;i&gt;&quot;Most men give up before they have even started. But if you show it the proper heat and treat it with the patience of a chemist, the fat of our valley’s milk will finally tame the fire of the bean. It is a slow, back-breaking transformation, but the result is an honest luxury that warms the soul as much as the stomach.&quot;&lt;/i&gt;&lt;br&gt;&lt;br&gt;Despite his genius for flavor, Marten lacked a head for commerce. He routinely gave away his finest creations to sick neighbors and struggled against the rigid local bakers' guilds. When he passed away in the late 1820s, he left behind little money, but bequeathed his two sons - Marten Jr. and Hieronymus - a treasure trove of leather-bound notebooks filled with revolutionary recipes.&lt;br&gt;&lt;br&gt;&lt;font size='20' color='#6666CC'&gt;&lt;b&gt;Part II: The Sydney Dream (1838)&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Marten's younger son, &lt;b&gt;Hieronymus Baumeister&lt;/b&gt;, possessed his father's palate but was blessed with a fierce, restless ambition. Realizing that the rigid trade laws of Bavaria would forever stifle his father's legacy, a young Hieronymus packed his share of the notebooks, boarded a merchant vessel, and sailed for the booming colonial port of Sydney, Australia.&lt;br&gt;&lt;br&gt;Sydney in the 1830s was a rough, sun-baked maritime hub, a world away from the snows of Augsburg. But Hieronymus saw what others did not: a port uniquely positioned to source raw sugar from the Pacific islands and exotic spices from the East Indies. Over 100 years ago, he opened the very first official &lt;i&gt;Baumeister Confections&lt;/i&gt; shop in The Rocks district of Sydney, explicitly to peddle his father Marten's chocolate inventions.&lt;br&gt;&lt;br&gt;The shop was a sensation. British officers, wealthy merchants, and sailors alike had never tasted anything like the smooth, rich bars Hieronymus produced. It was here in Sydney that Hieronymus met and married an ambitious shipping clerk named Matilda, whose logistical brilliance helped export Baumeister chocolates across the Pacific.&lt;br&gt;&lt;br&gt;&lt;font size='20' color='#6666CC'&gt;&lt;b&gt;Part III: The Golden Gate &amp; The Heirs (1852 - 1875)&lt;/b&gt;&lt;/font&gt;&lt;br&gt;When word of the California Gold Rush reached Australia, Hieronymus and Matilda saw their ultimate opportunity. In 1852, they relocated the company's headquarters to the rapidly expanding city of San Francisco. It was here that they built the legendary Brickhouse Square factory, transforming Baumeister Confections from a successful colonial outpost into a global industrial powerhouse.&lt;br&gt;&lt;br&gt;It was in the bustling halls of the San Francisco estate that the next generation was raised. The four Baumeister siblings were practically born on the factory floor, each inheriting a different facet of their father's empire:&lt;br&gt;• &lt;b&gt;Evangeline&lt;/b&gt;, the eldest, inherited her mother's steely logistical mind and deeply revered her father's sense of duty to the craft. To Evangeline, the family recipes were a sacred trust and brought honor to her family name.&lt;br&gt;• &lt;b&gt;Rowena&lt;/b&gt;, the second daughter, was gifted with a natural charm and a taste for the finer things. However, she viewed the company less as a craft to be protected and more as a source of limitless social standing and wealth.&lt;br&gt;• &lt;b&gt;Dieter&lt;/b&gt; was a thoughtful, quiet soul who preferred studying global cultures over the noise of the factory, eventually establishing the deep international trade ties, such as Istanbul in (what was back then) the Ottoman Empire.&lt;br&gt;• &lt;b&gt;Felix&lt;/b&gt;, the youngest, was a gentle, nature-loving boy whose only desire was family harmony. For most of his life, he had absolutely zero interest in machinery or industry - preferring the quiet serenity of nature over the roar of a factory floor. His sudden, manic obsession with coffee mechanics would come decades later, surprising everyone.&lt;br&gt;&lt;br&gt;&lt;font size='20' color='#6666CC'&gt;&lt;b&gt;Part IV: The Unfinished Exotic &amp; The Shadow (1876 - 1879)&lt;/b&gt;&lt;/font&gt;&lt;br&gt;By his twilight years, Hieronymus had become obsessed with a culinary frontier he called &quot;Exotics.&quot; He spent his final months locked in his private kitchen, trying to perfect a visionary recipe that bridged the gap between spicy, tart, and sweet: &lt;i&gt;Lemon Ginger Milk Chocolate Swirls&lt;/i&gt;.&lt;br&gt;&lt;br&gt;Tragically, Hieronymus passed away in 1879 before the recipe could be finalized. The loss of the patriarch sent shockwaves through the company. Evangeline, though fully capable of leadership and deeply in love with an ambitious man from Hong Kong named Jarrah Tangye, found her authority constantly challenged by her younger sister Rowena, who demanded equal (if not bigger) control over the corporate ledgers to help fund her lavish lifestyle.&lt;br&gt;&lt;br&gt;In the midst of this grief, a charismatic, manipulative Mexican investor named &lt;b&gt;Esteban Grimaldo&lt;/b&gt; began courting Rowena. Evangeline saw through Grimaldo's charm immediately, recognizing him as a parasite looking to drain the company's coffers. To eliminate Evangeline as a threat, Grimaldo orchestrated a cruel deception that drove a wedge between Evangeline and Jarrah, shattering their romance and forcing Jarrah to flee back to his hometown in despair.&lt;br&gt;&lt;br&gt;With her sister heartbroken and isolated, Rowena, blinded by flattery and manipulated into resenting her family, married Grimaldo. As the decade turned to 1880, his poison took root. Under his influence, Rowena would begin the catastrophic mismanagement of Baumeister Confections, seizing control of the family's 64 priceless recipes and scattering them across the globe, bringing the upstart empire into jeopardy.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_letter_alex_sean_1_title</Data></Cell>
+	 <Cell><Data ss:Type="String">Letter: Alex Fletcher (Zürich) to Sean</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_letter_alex_sean_1_text</Data></Cell>
+	 <Cell><Data ss:Type="String">My dearest Sean,&lt;br&gt;&lt;br&gt;It is late, and the Zürich office is finally quiet. The Board was relentless today. Felix wants to talk about African coffee routes, Dieter is philosophizing about factory efficiency, and my father… well, he is trying his best. But the weight of this company has never felt heavier.&lt;br&gt;&lt;br&gt;They expect me to lead our post-war recovery. They want me to smile, to shake hands, to rebuild. But how can I rebuild an empire when my own world is in pieces?&lt;br&gt;&lt;br&gt;The military brass told me again today that I need to move on. They said your plane went down, that the mission was classified, and that I need to accept the inevitable. But I know you, Sean Fletcher. You are far too stubborn to just fade away into some jungle. I feel it in my very soul - you are still out there.&lt;br&gt;&lt;br&gt;I made a decision today that would probably give Grandmother Evangeline a heart attack. I hired an outsider. Someone to take over the day-to-day operations of the company. It is a massive gamble, but I see a spark in them. They remind me of myself back in '25, when we first fought my father to save this business.&lt;br&gt;&lt;br&gt;I have to trust them to keep the factories running, because tomorrow, I am leaving. I have secured a diplomatic passport and I have a whisper of a lead in Australia. I don't care how far I have to travel, who I have to bribe, or what shadows I have to step into.&lt;br&gt;&lt;br&gt;Hold on, my love. Wherever you are, just hold on. I am coming.&lt;br&gt;&lt;br&gt;Yours always,&lt;br&gt;Alex</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_letter_hardy_sean_title</Data></Cell>
+	 <Cell><Data ss:Type="String">Letter: Thomas Hardy to Sean Fletcher</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_letter_hardy_sean_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Fletcher, you old son of a gun.&lt;br&gt;&lt;br&gt;I'm sitting at a desk in Tokyo right now, and I still can't quite believe I'm writing this. The chocolatier who's delivering this just gave me the news, and I nearly knocked over my coffee. You're alive.&lt;br&gt;&lt;br&gt;I knew it. I knew it the day your B-24 took that flak. I saw your silk open before you hit the tree line, clear as day. I filed the report the second my boots hit the tarmac, but that snake of a liaison officer, Fleischer, buried it. He told the brass it was just combat stress and shut me down. I spent the last year half-thinking I was losing my mind, but I never stopped believing you made it out.&lt;br&gt;&lt;br&gt;Then again, if you could walk away laughing from that busted landing gear incident back in '43, I figured no jungle in the world could keep you down forever.&lt;br&gt;&lt;br&gt;I hear you're finally back in Switzerland with Alex. Give her my absolute best. I remember how her letters - and those care packages of Baumeister chocolates - were the only things that kept you going on the airstrip. It sounds like she fought just as hard to find you as you did to survive.&lt;br&gt;&lt;br&gt;We missed you in the 8th, buddy. Take all the time you need to heal up. When you're ready, the first round is on me.&lt;br&gt;&lt;br&gt;Your wingman,&lt;br&gt;Tom Hardy</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

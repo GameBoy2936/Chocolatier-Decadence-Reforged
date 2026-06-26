@@ -24,7 +24,7 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	onaccept = {AwardText("meta_joseph_extra01"), AwardText("meta_joseph_extra02"), AwardUnblockBuilding("tor_factory"), AwardBuildingOwned("tor_factory"), AwardDelayQuest("rank3_05", 20), AwardOfferQuest("off_to_whitney"), AwardUnlockIngredient("apple"), AwardUnlockIngredient("blackberry"), AwardUnlockIngredient("walnut"), AwardUnlockCharacter("main_jose")},
+	onaccept = {AwardText("meta_joseph_extra01"), AwardText("meta_joseph_extra02"), AwardUnblockBuilding("tor_factory"), AwardBuildingOwned("tor_factory"), AwardDelayQuest("rank3_05", 20), AwardOfferQuest("off_to_whitney"), AwardUnlockIngredient("apple"), AwardUnlockIngredient("blackberry"), AwardUnlockIngredient("walnut"), AwardUnlockIngredient("wafer"), AwardUnlockCharacter("main_jose")},
 	goals = {RequireRecipesKnown(11, "blend"), RequireMinMoney(3000000), HintPerson("main_jose", "tor_office", "toronto")},
 	goals_medium = {RequireRecipesKnown(11, "blend"), RequireMinMoney(4500000), HintPerson("main_jose", "tor_office", "toronto")},
 	goals_hard = {RequireRecipesKnown(11, "blend"), RequireMinMoney(7500000), HintPerson("main_jose", "tor_office", "toronto")},
@@ -53,7 +53,7 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	onaccept = {AwardRecipe("m01"), AwardDialog("recipes"), AwardText("off_to_whitney_extra01")},
+	onaccept = {AwardRecipe("m01"), AwardDialog("recipes"), AwardText("off_to_whitney_extra01"), AwardUnlockIngredient("earl_grey")},
 	goals = {RequireItem("m01", 1), HintPerson("main_whit", "wel_factory", "wellington")},
 	goals_medium = {RequireItem("m01", 10), HintPerson("main_whit", "wel_factory", "wellington")},
 	goals_hard = {RequireItem("m01", 25), HintPerson("main_whit", "wel_factory", "wellington")},
@@ -117,12 +117,13 @@ CreateQuest
 	reject = "none",
 	onaccept = {AwardText("rank3_04_extra01"), AwardRecipe("m02"), AwardRecipe("m03"), AwardDialog("recipes")},
 	goals = {RequireItem("m01", 20), RequireItem("m02", 20), RequireItem("m03", 20), HintPerson("main_feli", "cap_factory", "capetown")},
-	goals = {RequireItem("m01", 50), RequireItem("m02", 50), RequireItem("m03", 50), HintPerson("main_feli", "cap_factory", "capetown")},
-	goals = {RequireItem("m01", 100), RequireItem("m02", 100), RequireItem("m03", 100), HintPerson("main_feli", "cap_factory", "capetown")},
+	goals_medium = {RequireItem("m01", 50), RequireItem("m02", 50), RequireItem("m03", 50), HintPerson("main_feli", "cap_factory", "capetown")},
+	goals_hard = {RequireItem("m01", 100), RequireItem("m02", 100), RequireItem("m03", 100), HintPerson("main_feli", "cap_factory", "capetown")},
 	oncomplete = {IncrementVariable("rank3_work"), AwardItem("m01", -2), AwardItem("m02", -2), AwardItem("m03", -2), AwardRecipe("m04"), AwardUnlockIngredient("maple"), AwardRecipe("m05"), AwardDialog("recipes")},
 	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("m01", -5), AwardItem("m02", -5), AwardItem("m03", -5), AwardRecipe("m04"), AwardUnlockIngredient("maple"), AwardRecipe("m05"), AwardDialog("recipes")},
 	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("m01", -10), AwardItem("m02", -10), AwardItem("m03", -10), AwardRecipe("m04"), AwardUnlockIngredient("maple"), AwardRecipe("m05"), AwardDialog("recipes")},
 	require = {RequireQuestComplete("off_to_whitney")},
+	priority = 50,
 }
 
 CreateQuest
@@ -133,9 +134,9 @@ CreateQuest
 	accept = "loudandclear",
 	defer = "maybelater",
 	reject = "none",
-	goals = {RequireItem("t06", 60), HintPerson("lim_plazakeep", "lim_plaza", "lima")},
-	goals_medium = {RequireItem("t06", 90), HintPerson("lim_plazakeep", "lim_plaza", "lima")},
-	goals_hard = {RequireItem("t06", 150), HintPerson("lim_plazakeep", "lim_plaza", "lima")},
+	goals = {RequireItem("t06", 60), HintPerson("lim_plazakeep")},
+	goals_medium = {RequireItem("t06", 90), HintPerson("lim_plazakeep")},
+	goals_hard = {RequireItem("t06", 150), HintPerson("lim_plazakeep")},
 	oncomplete = {IncrementVariable("rank3_work"), AwardItem("t06", -60), AwardOfferQuest("rank3_02")},
 	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("t06", -90), AwardOfferQuest("rank3_02")},
 	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("t06", -150), AwardOfferQuest("rank3_02")},
@@ -153,9 +154,9 @@ CreateQuest
 	goals = {RequireItem("e03", 50), HintPerson("lim_plazakeep", "lim_plaza", "lima")},
 	goals_medium = {RequireItem("e03", 75), HintPerson("lim_plazakeep", "lim_plaza", "lima")},
 	goals_hard = {RequireItem("e03", 125), HintPerson("lim_plazakeep", "lim_plaza", "lima")},
-	oncomplete = {IncrementVariable("rank3_work"), AwardItem("e03", -50), AwardRecipe("e02"), AwardDialog("recipes"), AwardText("rank3_02_extra02"), AwardDelayQuest("rank3_03", 17), AwardUnlockIngredient("toffee"), AwardUnlockCharacter("lim_plazakeep")},
-	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("e03", -75), AwardRecipe("e02"), AwardDialog("recipes"), AwardText("rank3_02_extra02"), AwardDelayQuest("rank3_03", 17), AwardUnlockIngredient("toffee"), AwardUnlockCharacter("lim_plazakeep")},
-	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("e03", -125), AwardRecipe("e02"), AwardDialog("recipes"), AwardText("rank3_02_extra02"), AwardDelayQuest("rank3_03", 17), AwardUnlockIngredient("toffee"), AwardUnlockCharacter("lim_plazakeep")},
+	oncomplete = {IncrementVariable("rank3_work"), AwardItem("e03", -50), AwardRecipe("e02"), AwardDialog("recipes"), AwardText("rank3_02_extra02"), AwardDelayQuest("rank3_03", 17), AwardUnlockIngredient("toffee"), AwardUnlockIngredient("tamarind"), AwardUnlockCharacter("lim_plazakeep")},
+	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("e03", -75), AwardRecipe("e02"), AwardDialog("recipes"), AwardText("rank3_02_extra02"), AwardDelayQuest("rank3_03", 17), AwardUnlockIngredient("toffee"), AwardUnlockIngredient("tamarind"), AwardUnlockCharacter("lim_plazakeep")},
+	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("e03", -125), AwardRecipe("e02"), AwardDialog("recipes"), AwardText("rank3_02_extra02"), AwardDelayQuest("rank3_03", 17), AwardUnlockIngredient("toffee"), AwardUnlockIngredient("tamarind"), AwardUnlockCharacter("lim_plazakeep")},
 	require = {RequireQuestComplete("rank3_01")},
 }
 
@@ -166,7 +167,7 @@ CreateQuest
 	accept = "imin",
 	defer = "maybelater",
 	reject = "none",
-	onaccept = {AwardText("rank3_03_extra01"), AwardUnlockPort("gobidesert"), AwardUnlockIngredient("date"), AwardRemoveCharacter("trav_05", "_travelers"), AwardPlaceCharacter("trav_05", "lim_plaza")},
+	onaccept = {AwardText("rank3_03_extra01"), AwardUnlockPort("gobidesert"), AwardUnlockIngredient("date"), AwardUnlockIngredient("peach"), AwardRemoveCharacter("trav_05", "_travelers"), AwardPlaceCharacter("trav_05", "lim_plaza")},
 	goals = {RequireItem("e02", 50), HintPerson("trav_05", "lim_plaza", "lima")},
 	goals_medium = {RequireItem("e02", 75), HintPerson("trav_05", "lim_plaza", "lima")},
 	goals_hard = {RequireItem("e02", 125), HintPerson("trav_05", "lim_plaza", "lima")},
@@ -189,9 +190,9 @@ CreateQuest
 	goals = {RequireRelativeTime(12,false), RequireItem("user4", 35), RequireItem("user5", 35), HintPerson("trav_06", "_travelers")},
 	goals_medium = {RequireRelativeTime(12,false), RequireItem("user4", 60), RequireItem("user5", 60), HintPerson("trav_06", "_travelers")},
 	goals_hard = {RequireRelativeTime(12,false), RequireItem("user4", 100), RequireItem("user5", 100), HintPerson("trav_06", "_travelers")},
-	oncomplete = {IncrementVariable("rank3_work"), AwardItem("user4", -35), AwardItem("user5", -35), AwardRecipe("e04"), AwardRecipe("m06"), AwardDialog("recipes"), AwardText("rank3_05_extra02"), AwardUnlockIngredient("coconut"), AwardUnlockIngredient("rose"), AwardUnlockCharacter("trav_06")},
-	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("user4", -60), AwardItem("user5", -60), AwardRecipe("e04"), AwardRecipe("m06"), AwardDialog("recipes"), AwardText("rank3_05_extra02"), AwardUnlockIngredient("coconut"), AwardUnlockIngredient("rose"), AwardUnlockCharacter("trav_06")},
-	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("user4", -100), AwardItem("user5", -100), AwardRecipe("e04"), AwardRecipe("m06"), AwardDialog("recipes"), AwardText("rank3_05_extra02"), AwardUnlockIngredient("coconut"), AwardUnlockIngredient("rose"), AwardUnlockCharacter("trav_06")},
+	oncomplete = {IncrementVariable("rank3_work"), AwardItem("user4", -35), AwardItem("user5", -35), AwardRecipe("e04"), AwardRecipe("m06"), AwardDialog("recipes"), AwardText("rank3_05_extra02"), AwardUnlockIngredient("coconut"), AwardUnlockIngredient("jasmine"), AwardUnlockIngredient("rose"), AwardUnlockCharacter("trav_06")},
+	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("user4", -60), AwardItem("user5", -60), AwardRecipe("e04"), AwardRecipe("m06"), AwardDialog("recipes"), AwardText("rank3_05_extra02"), AwardUnlockIngredient("coconut"), AwardUnlockIngredient("jasmine"), AwardUnlockIngredient("rose"), AwardUnlockCharacter("trav_06")},
+	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("user4", -100), AwardItem("user5", -100), AwardRecipe("e04"), AwardRecipe("m06"), AwardDialog("recipes"), AwardText("rank3_05_extra02"), AwardUnlockIngredient("coconut"), AwardUnlockIngredient("jasmine"), AwardUnlockIngredient("rose"), AwardUnlockCharacter("trav_06")},
 	require = {RequireQuestComplete("off_to_whitney"), RequireRecipe("m01"), RequireRecipe("e01"), RequireRecipe("user4"), RequireRecipe("user5"), RequireCharHasNoActiveOrder("trav_06")},
 }
 
@@ -203,7 +204,7 @@ CreateQuest
 	accept = "absolutely",
 	defer = "noimtoobusy",
 	reject = "none",
-	onaccept = {AwardText("rank3_06_extra01"), AwardRecipe("m10"), AwardDialog("recipes"), AwardText("rank3_06_extra02"), AwardUnlockIngredient("sesame")},
+	onaccept = {AwardText("rank3_06_extra01"), AwardRecipe("m10"), AwardDialog("recipes"), AwardText("rank3_06_extra02"), AwardUnlockIngredient("sesame"), AwardUnlockIngredient("rooibos")},
 	goals = { RequireItem("m10", 25), RequireItem("t09", 65), HintPerson("bog_mountainkeep", "bog_mountain", "bogota")},
 	goals_medium = { RequireItem("m10", 40), RequireItem("t09", 100), HintPerson("bog_mountainkeep", "bog_mountain", "bogota")},
 	goals_hard = { RequireItem("m10", 60), RequireItem("t09", 150), HintPerson("bog_mountainkeep", "bog_mountain", "bogota")},
@@ -270,9 +271,9 @@ CreateQuest
 	goals = { RequireItem("e07", 78), HintPerson("dou_shopkeep", "dou_shop", "douala")},
 	goals_medium = { RequireItem("e07", 116), HintPerson("dou_shopkeep", "dou_shop", "douala")},
 	goals_hard = { RequireItem("e07", 172), HintPerson("dou_shopkeep", "dou_shop", "douala")},
-	oncomplete = {IncrementVariable("rank3_work"), AwardItem("e07", -78), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10")},
-	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("e07", -110), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10")},
-	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("e07", -175), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10")},
+	oncomplete = {IncrementVariable("rank3_work"), AwardItem("e07", -78), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
+	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("e07", -110), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
+	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("e07", -175), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
 	require = {RequireVariableEqual("rank3_09_ready", 5), RequireMinMoney(80000)},
 }
 
@@ -415,6 +416,46 @@ CreateQuest
 	reject = "none",
 	require = {RequireMinRank(2), RequirePort("bali")},
 	onaccept = {AwardUnlockCharacter("main_elen")},
+	priority = 1,
+	visible = false,
+	autoComplete = true,
+}
+
+CreateQuest
+{
+	name = "rank3_story_main_jose_1",
+	starter = "main_jose",
+	accept = "ok",
+	defer = "none",
+	reject = "none",
+	require = {RequireQuestComplete("rank3_01"), RequireQuestComplete("rank3_04")},
+	priority = 1,
+	visible = false,
+	autoComplete = true,
+}
+
+CreateQuest
+{
+	name = "rank3_story_main_whit_1",
+	starter = "main_whit",
+	accept = "ok",
+	defer = "none",
+	reject = "none",
+	require = {RequireQuestComplete("rank3_03"), RequireQuestComplete("ugr_04")},
+	priority = 1,
+	visible = false,
+	autoComplete = true,
+}
+
+CreateQuest
+{
+	name = "rank3_story_tor_shopkeep_1",
+	starter = "tor_shopkeep",
+	accept = "ok",
+	defer = "none",
+	reject = "none",
+	require = {RequireMinRank(2), RequireQuestComplete("back_to_joseph")},
+	onaccept = {AwardUnlockCharacter("tor_shopkeep")},
 	priority = 1,
 	visible = false,
 	autoComplete = true,

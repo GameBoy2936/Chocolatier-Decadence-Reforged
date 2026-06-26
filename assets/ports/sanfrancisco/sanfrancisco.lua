@@ -16,7 +16,7 @@ sanfrancisco.locked = true
 
 --LOCATIONS
 CreateBuilding("san_market", sanfrancisco, Market)
-san_market.inventory = { sugar, milk, almond, raspberry, mint, cherry, blueberry, kahlua, espresso, pistachio, fig, walnut, salt, raisin }
+san_market.inventory = { almond, blueberry, cherry, espresso, fig, kahlua, marshmallow, milk, pear, pistachio, plum, raisin, raspberry, salt, sugar, walnut }
 san_market.x = 683.5
 san_market.y = 133.5
 san_market.layer = 860

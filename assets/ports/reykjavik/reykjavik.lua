@@ -23,7 +23,7 @@ CreateBuilding("rey_market", reykjavik, Market)
 rey_market.x = 274
 rey_market.y = 220
 rey_market.layer = 902
-rey_market.inventory = { sugar, milk, cream, butter, blueberry, blackberry, raspberry, salt, honey, brandy }
+rey_market.inventory = { blackberry, blueberry, brandy, butter, cranberry, cream, honey, milk, oat, rhubarb, salt, sugar }
 
 CreateBuilding("rey_shop", reykjavik, Shop)
 rey_shop.x = 80

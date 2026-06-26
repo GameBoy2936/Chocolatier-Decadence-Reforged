@@ -91,11 +91,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Oh yes, the American? I know exactly where he is - he is with a remote tribe deep in the highlands. I can fetch him for you, but it will not be cheap. If you are willing and able to pay me [D|$1,000,000|$10,000,000|$50,000,000] up front to cover all of my expenses, I can guarantee you that I will deliver Sean to you here.</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh yes, the American? I know exactly where he is - he is with a remote tribe deep in the highlands. I can fetch him for you, but it will not be cheap. If you are willing and able to pay me [D|$1,000,000|$10,000,000|$25,000,000] up front to cover all of my expenses, I can guarantee you that I will deliver Sean to you here.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_morecash_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to come back when you've got enough cash to pay me - I need [D|$1,000,000|$10,000,000|$50,000,000] up front to cover all of my costs to free Sean and bring him back to you here.</Data></Cell>
+	 <Cell><Data ss:Type="String">You need to come back when you've got enough cash to pay me - I need [D|$1,000,000|$10,000,000|$25,000,000] up front to cover all of my costs to free Sean and bring him back to you here.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_02</Data></Cell>
@@ -103,7 +103,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I see you have the cash. Shall I take my [D|$1,000,000|$10,000,000|$50,000,000] fee now, and guarantee Sean's safe return?</Data></Cell>
+	 <Cell><Data ss:Type="String">I see you have the cash. Shall I take my [D|$1,000,000|$10,000,000|$25,000,000] fee now, and guarantee Sean's safe return?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_02_extra01_1</Data></Cell>
@@ -195,10 +195,14 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_promo_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I am here on behalf of the Board of Directors, and I have some wonderful news. Your candidacy has been approved! That's right, you are now a %rank_5%! Congratulations!!&lt;br&gt;&lt;br&gt;You may continue to work to grow the business if you wish, and of course special orders will also help bump up our profits over time.</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I am here on behalf of the Board of Directors, and I have some wonderful news. Your candidacy has been approved! That's right, you are now a %rank_5%! Congratulations!!&lt;br&gt;&lt;br&gt;Now, I do have various news for you. Listen in for a second...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_promo_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">First things first, after all the successful work with your inventions with Teddy, I know how much you've enjoyed your time in the Secret Test Kitchen. The Board of Directors is more than happy to add new pages to the book, and they've awarded you not one, not two, but twelve new spaces in the recipe book! They're all for your own use, whenever you want.&lt;br&gt;&lt;br&gt;You may continue to work to grow the business as you wish, and of course, special orders will also help bump up our profits over time.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank5_promo_extra02_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Speaking of profits, I don't know if you realized this, but the award of %rank_5% comes with a significant cash bonus - I am most pleased to credit your account with the [D|$10,000,000|$25,000,000|$100,000,000] we received for you having earned this distinction.&lt;br&gt;&lt;br&gt;My hat is off to you, &lt;player&gt;, you truly are a %rank_5%!</Data></Cell>
 	</Row>
 	<Row>
@@ -231,7 +235,19 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_2_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It's amazing news that %main_sean% is alive and accounted for, but I know he's missing out on hearing from his coworkers again from WWII. And he'd love to receive that letter you've got on hand from %tok_mountainkeep%. You can find Sean at the %zur_mountain% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">It's amazing news that %main_sean% is alive and accounted for, but I know he's missing out on hearing from his coworkers again from WWII. He would love to receive that letter you've got on hand from %tok_mountainkeep%. You can find Sean at the %zur_mountain% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Being back in %zurich% is... a heck of an adjustment, &lt;player&gt;. Sometimes the sound of the streetcars outside my window sounds like the engines of my old B-24, and for a second, I'm back in the cockpit. But then I smell the chocolate from the kitchen, and I remember the humidity of the Belizean highlands. Let me share you a story...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">When Fleischer left me for dead, I thought my flight plan had finally reached the end of the line. But then I met this fella, Tzin - a Mopan Maya elder with a heart of gold. He didn't care about my uniform; he just saw a man whose engine had sputtered out. &lt;br&gt;&lt;br&gt;The cacao groves were a pretty interesting sight, &lt;player&gt;. They grow the cacao under these massive 'Mother of Cacao' trees, and Tzin said the cacao beans are like kids that need the forest's protection to keep them safe and strong. Without that shade, the whole crop goes down in flames.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_extra02_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The Mopan don't just eat the stuff - they treat it with real reverence. Tzin had me grinding beans on a stone metate until my arms felt like lead. Then, he'd pour the liquid from way up high, back and forth, until it had a thick, frothy head on it. He told me that froth was the 'soul' of the drink.&lt;br&gt;&lt;br&gt;I think one day, to enter a new recipe or two into the market that respects such tradition would really win some hearts over. I bet Alex would love to meet the Mayas halfway with something pretty special.</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

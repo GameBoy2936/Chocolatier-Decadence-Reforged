@@ -254,6 +254,106 @@
 	 <Cell><Data ss:Type="String">I'm glad to see that you were able to work something out with Zach at %tan_shop%, &lt;player&gt;. I'm confident that you will find special orders to be a terrific boost to your business.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">new_ingredients_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, it seems that things are finally getting back to normal after the war. I've been seeing new ingredients in stock in markets all over the world...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, you need to be sure to get to the Secret Test Kitchen and invent a recipe soon.&lt;br&gt;&lt;br&gt;You simply won't be able to progress up the corporate ladder without successfully creating and marketing your own creations!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">You know, &lt;player&gt;, the word on the street is that the most successful chocolatiers are the ones who aren't afraid to experiment. Maybe it's time you paid a visit to that Secret Test Kitchen I've heard rumors about?</Data></Cell>
+	</Row>
+	<Row>
+	<Cell><Data ss:Type="String">ugr_prompt_offer_3</Data></Cell>
+	<Cell><Data ss:Type="String">I'm curious to see what you'll cook up once you get some time in the Secret Test Kitchen. Don't keep the company waiting too long - you won't be able to progress much further until you've designed and marketed a creation of your own.</Data></Cell>
+	</Row>
+	<Row>
+	<Cell><Data ss:Type="String">ugr_prompt_offer_4</Data></Cell>
+	<Cell><Data ss:Type="String">Are you still making only the old family recipes? Don't get me wrong, they're classics, but a real CEO needs to show some initiative...</Data></Cell>
+	</Row>
+	<Row>
+	<Cell><Data ss:Type="String">ugr_prompt_offer_5</Data></Cell>
+	<Cell><Data ss:Type="String">Don't let those spaces in the recipe book stay empty for too long, &lt;player&gt;. A chocolatier needs a signature creation to call their own.&lt;br&gt;&lt;br&gt;See if you can pay a visit to Teddy over at Reykjavík when you have the chance to do so.</Data></Cell>
+	</Row>
+	<Row>
+	<Cell><Data ss:Type="String">ugr_prompt_offer_6</Data></Cell>
+	<Cell><Data ss:Type="String">Listen, &lt;player&gt;. If you want to climb the corporate ladder, you have to prove you can lead the market. Make tracks for the Secret Test Kitchen and get to work on a new recipe.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_7</Data></Cell>
+	 <Cell><Data ss:Type="String">People are always asking me what's new from Baumeister Confections. If you head up to Iceland and use that Test Kitchen, I'm sure you could invent an absolute bestseller.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_8</Data></Cell>
+	 <Cell><Data ss:Type="String">It's a shame to leave those blank spaces in your recipe book, don't you think? An ambitious chocolatier like you should be taking a trip to the Test Kitchen to invent something entirely your own.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_9</Data></Cell>
+	 <Cell><Data ss:Type="String">You clearly have a talent for this business, &lt;player&gt;. Why not take it to the next level?&lt;br&gt;&lt;br&gt;A trip to the Secret Test Kitchen in Iceland might be exactly what you need to further impress the Board.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_announcer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Hey, &lt;player&gt;. Just a heads up from the corporate side - the Board is getting a little restless. They want to see what you can do on your own. You really need to get up to the Secret Test Kitchen in Reykjavík and fill that empty recipe slot before they start second-guessing your potential.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_announcer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I'm looking at the latest memos from the Board, and they are specifically asking for updates on your R&amp;D progress. Please get to the Secret Test Kitchen whenever you can to come up with a brand new addition to the recipe book.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_evil_bian_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Everyone in my circles is whispering that you're just a factory manager, not a true artisan. If you want to impress the right people, you simply must launch your next signature confection. Chop chop!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_evil_tyso_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Still relying on the Baumeisters' dusty old recipe book, &lt;player&gt;? How uninspired. If you don't come up with an original creation soon, you'll never survive in this market. Not that I'd complain.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_evil_wolf_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I hear the Baumeister Board is waiting for you to demonstrate some actual talent in their little 'test kitchen'. I won't hold my breath.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_hav_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You want to impress the people in charge? Stop selling their old ideas and make your own. Heard they built a kitchen for you up north.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_kon_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Aloha, &lt;player&gt;! My customers are always asking for something new and exciting. When are you going to head up to that Test Kitchen of yours and invent a signature treat for us?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_chas_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You know, &lt;player&gt;, I've always believed that the best things in life are the things you make with your own two hands. You should take a break from the spreadsheets, head up to Iceland, and just... create something. For the joy of it. It'll be good for your soul. And it'll keep the Board off your back, too.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_deit_1</Data></Cell>
+	 <Cell><Data ss:Type="String">There is a thorough beauty in creating something entirely your own, &lt;player&gt;. I suggest you make the trip to Iceland in order for you and Teddy to collaborate on something new to add to your recipe book.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_feli_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I love a good classic as much as the next man, &lt;player&gt;, but the post-war palate is changing! You simply must travel to Iceland and spend some time with my nephew Teddy. Get up there and invent something that will knock the Board's socks off.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_jose_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Our family recipes have kept this company afloat for decades, &lt;player&gt;, but Alex insists we need modern creations to survive. Prove to me that her faith in your 'innovation' isn't misplaced. Get to the Test Kitchen and invent something.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_jose_2</Data></Cell>
+	 <Cell><Data ss:Type="String">I was, by very nature, skeptical of Alex's 'creative freedom' initiative at first, &lt;player&gt;, but the results are hard to argue with. Don't prove me right by letting your imagination stall.&lt;br&gt;&lt;br&gt;I recommend making your way to the Secret Test Kitchen to market a new creation, which can then be added to your recipe book.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_sara_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You've got a good head for logistics, but that's only half the job. If you want to sit in the CEO's chair, you need to understand flavor creation. Book a flight to Iceland and get a new product to market.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_whit_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you allergic to the Test Kitchen or something? It's highly inefficient to let a perfectly good recipe slot sit empty. Get to Iceland, mix some things up, and give my brother Teddy something to do! It's not rocket science.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ugr_prompt_offer_rey_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Velkominn! You know, your friend Teddy is just up the road at the Test Kitchen, pacing the floor. He's got all that equipment warmed up and no one to cook with! You should go invent something so I have something new to sell.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_00_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">I wonder how Alex is faring, poor thing...</Data></Cell>
 	</Row>
@@ -384,10 +484,6 @@
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_tease_05_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">You have been successful by consistently creating high quality chocolates and coffees, managing your costs, building solid relationships and taking advantage of opportunities to expand. Kudos!</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">tan_shop_owned_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome back to your shop, &lt;player&gt;. It is always a pleasure to see you again...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">dou_shop_own_tease_offer_1</Data></Cell>

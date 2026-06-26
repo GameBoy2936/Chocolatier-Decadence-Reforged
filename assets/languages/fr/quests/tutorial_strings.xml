@@ -63,483 +63,643 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_01</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome Aboard</Data></Cell>
+	 <Cell><Data ss:Type="String">Bienvenue à bord</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For most people, World War II is finally over. Not for me. Until my husband Sean is accounted for, the war rages on.&lt;br&gt;&lt;br&gt;I won't mince words, &lt;player&gt; - Baumeister Confections is in shambles. And I simply can't focus on chocolate right now - I need someone else to manage the company.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour la plupart des gens, la Seconde Guerre mondiale est enfin terminée. Pas pour moi. Tant que je n'aurai pas retrouvé mon mari Sean, la guerre continue.&lt;br&gt;&lt;br&gt;Je ne vais pas mâcher mes mots, &lt;player&gt; : Baumeister Confections est en ruines. Et je ne peux tout simplement pas me concentrer sur le chocolat en ce moment, j'ai besoin de quelqu'un pour diriger l'entreprise.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_02</Data></Cell>
-	 <Cell><Data ss:Type="String">Proving Yourself</Data></Cell>
+	 <Cell><Data ss:Type="String">Faites vos preuves</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For starters, I was wondering if you have any chocolate-making and business experience already under your belt. Would you like me to show you the ropes, perhaps?&lt;br&gt;&lt;br&gt;If so, you need to show me you can make chocolates - and money. Once you have made at least [D|$10,000|$15,000|$25,000], I'll make you %rank_2% and start introducing you to the Board of Directors. What do you think?</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour commencer, je me demandais si vous aviez déjà de l'expérience dans la fabrication de chocolat et la gestion d'entreprise. Souhaitez-vous que je vous montre les ficelles du métier ?&lt;br&gt;&lt;br&gt;Si c'est le cas, vous devez me prouver que vous savez faire du chocolat... et de l'argent. Une fois que vous aurez amassé au moins[D|10 000 $|15 000 $|25 000 $], je vous nommerai %rank_2% et vous présenterai au conseil d'administration. Qu'en dites-vous ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_02_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">See %main_alex% in %zurich% once you've made some %b03% and have at least [D|$10,000|$15,000|$25,000] on hand.</Data></Cell>
+	 <Cell><Data ss:Type="String">Allez voir %main_alex% à %zurich% une fois que vous aurez produit des %b03% et que vous aurez au moins[D|10 000 $|15 000 $|25 000 $] en poche.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_02_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I need to be confident in your abilities to run our business, &lt;player&gt;. Come back and see me as soon as you've made 3 recipes and have at least [D|$10,000|$15,000|$25,000] on hand.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai besoin d'avoir confiance en vos capacités à diriger notre entreprise, &lt;player&gt;. Revenez me voir dès que vous aurez réalisé 3 recettes et que vous aurez au moins[D|10 000 $|15 000 $|25 000 $] en poche.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_02_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Alex has bigger fish to fry, &lt;player&gt;. She is antsy to hand over the reins so that she can search for Sean. She is waiting for you to learn 3 recipes and show up with at least [D|$10,000|$15,000|$25,000] on hand.</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex a d'autres chats à fouetter, &lt;player&gt;. Elle a hâte de céder les rênes pour partir à la recherche de Sean. Elle attend que vous appreniez 3 recettes et que vous vous présentiez avec au moins[D|10 000 $|15 000 $|25 000 $] en poche.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_03</Data></Cell>
-	 <Cell><Data ss:Type="String">Meeting %zur_factorykeep%</Data></Cell>
+	 <Cell><Data ss:Type="String">Rencontrer %zur_factorykeep%</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">So, let's get started!&lt;br&gt;&lt;br&gt;Here are 100 sacks each of %sugar% and %cacao%. Go see Endrit over at %zur_factory% to turn these ingredients into chocolates...</Data></Cell>
+	 <Cell><Data ss:Type="String">Alors, commençons !&lt;br&gt;&lt;br&gt;Voici 100 sacs de %sugar% et 100 de %cacao%. Allez voir Endrit à la fabrique %zur_factory% pour transformer ces ingrédients en chocolats...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_03_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Introduce yourself to %zur_factorykeep% over at %zur_factory%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Présentez-vous à %zur_factorykeep% à %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_03_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You are looking for %zur_factory%? It's the red brick factory in the middle of town...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous cherchez %zur_factory% ? C'est l'usine en briques rouges au centre de la ville...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_03_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, Endrit ! Un garçon brillant. Il dirige %zur_factory% dans la fabrique en briques près du canal. Il s'occupera bien de vous.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_03_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Si vous avez l'intention de remplir mes rayons, vous devrez d'abord visiter la chocolaterie. C'est le grand bâtiment industriel au centre de la ville.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04</Data></Cell>
-	 <Cell><Data ss:Type="String">Making Candy</Data></Cell>
+	 <Cell><Data ss:Type="String">Fabriquer du chocolat</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I feel for what Alex is going through, &lt;player&gt;, but boy am I excited to get these machines working again!&lt;br&gt;&lt;br&gt;Click &quot;Make Chocolates&quot; and make at least [D|5|20|40] cases of %b01%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je compatis à ce que traverse Alex, &lt;player&gt;, mais bon sang, que je suis impatient de remettre ces machines en marche !&lt;br&gt;&lt;br&gt;Cliquez sur "Fabriquer du chocolat" et produisez au moins[D|5|20|40] caisses de %b01%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;%make_chocolate%&quot;&lt;br&gt;Make at least [D|5|20|40] cases of %b01%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Cliquez sur "%make_chocolate%"&lt;br&gt;Produisez au moins [D|5|20|40] caisses de %b01%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Remember, you need to make at least [D|5|20|40] cases of %b01%. Ready to try again? Just click &quot;%make_chocolate%&quot; and be sure to make at least [D|5|20|40] cases of %b01%...</Data></Cell>
+	 <Cell><Data ss:Type="String">N'oubliez pas, vous devez produire au moins [D|5|20|40] caisses de %b01%. Prêt à réessayer ? Cliquez simplement sur "%make_chocolate%" et assurez-vous de produire au moins [D|5|20|40] caisses de %b01%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Your %b01% look delicious!&lt;br&gt;&lt;br&gt;All products and ingredients appear in your inventory. You can mouse over items for more information...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vos %b01% ont l'air délicieuses !&lt;br&gt;&lt;br&gt;Tous les produits et ingrédients apparaissent dans votre inventaire. Vous pouvez survoler les éléments avec la souris pour plus d'informations...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Remember to make at least [D|5|20|40] cases of %b01%.</Data></Cell>
+	 <Cell><Data ss:Type="String">N'oubliez pas de produire au moins[D|5|20|40] caisses de %b01%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're going to need to make at least [D|5|20|40] cases of %b01%. The only place you can do that is at the red brick chocolate factory here in the middle of town - %zur_factory%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous allez devoir produire au moins[D|5|20|40] caisses de %b01%. Le seul endroit où vous pouvez le faire est la chocolaterie en briques rouges ici, au centre-ville : %zur_factory%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_04_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez vos ingrédients, n'est-ce pas ? Parfait. Traversez le pont jusqu'à %zur_factory%. Endrit fait les cent pas depuis ce matin en attendant que vous démarriez ces machines ! Il a besoin que vous produisiez [D|5|20|40] caisses de %b01%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_04_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">J'attends avec impatience votre première fournée de %b01% ! Vous devrez vous rendre à %zur_factory%, juste de l'autre côté de l'eau, pour les fabriquer. Ne me faites pas trop attendre, s'il vous plaît.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05</Data></Cell>
-	 <Cell><Data ss:Type="String">Making Money</Data></Cell>
+	 <Cell><Data ss:Type="String">Gagner de l'argent</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">As you travel you can track how many products we're making in the status window below. Inventory levels for each ingredient we're using are shown with color-coded bars - green means we've got plenty, yellow means we're running low, and red means production will soon be stalled.  </Data></Cell>
+	 <Cell><Data ss:Type="String">Pendant vos voyages, vous pouvez suivre le nombre de produits que nous fabriquons dans la fenêtre d'état ci-dessous. Le niveau des stocks pour chaque ingrédient est indiqué par des barres de couleur : vert signifie que nous en avons beaucoup, jaune que les stocks sont faibles, et rouge que la production va bientôt s'arrêter.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Speaking of ingredients, in order to keep making %b01% we'll need more %sugar% and %cacao% soon. You're going to need some money!&lt;br&gt;&lt;br&gt;Visit %zur_shop% to turn your chocolates into cash...</Data></Cell>
+	 <Cell><Data ss:Type="String">En parlant d'ingrédients, pour continuer à produire des %b01%, nous aurons bientôt besoin de plus de %sugar% et de %cacao%. Vous allez avoir besoin d'argent !&lt;br&gt;&lt;br&gt;Visitez %zur_shop% pour convertir vos chocolats en espèces...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Sell your chocolates to %zur_shopkeep% at %zur_shop%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vendez vos chocolats à %zur_shopkeep% à %zur_shop%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're trying to find %zur_shop%? It's the red building on the west side of the canal...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous cherchez %zur_shop% ? C'est le bâtiment rouge sur la rive ouest du canal...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Maintenant que vous avez fabriqué des marchandises, il est temps de les liquider pour obtenir de l'argent, non ? Apportez ces %b01% à Analiese à %zur_shop% : vous trouverez sa boutique de l'autre côté du canal, après le pont.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh, vos %b01% sentent divinement bon ! Vous devriez les apporter directement à Analiese à %zur_shop%. Elle est juste de l'autre côté du canal, et je sais qu'elle paie un prix très juste pour un travail de qualité.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_schoolkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous ne pouvez pas manger toutes ces %b01% vous-même. Enfin, je comprends tout à fait l'envie ! Mais sérieusement, vous devez les apporter à Analiese à %zur_shop% pour en tirer profit.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_06</Data></Cell>
-	 <Cell><Data ss:Type="String">Selling Chocolates</Data></Cell>
+	 <Cell><Data ss:Type="String">Vendre des chocolats</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_06_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome, &lt;player&gt;. Step inside to review my prices.&lt;br&gt;&lt;br&gt;Once inside, click &quot;%sell_all%&quot; - I'll take your products and you'll get the cash!</Data></Cell>
+	 <Cell><Data ss:Type="String">Bienvenue, &lt;player&gt;. Entrez pour consulter mes prix.&lt;br&gt;&lt;br&gt;Une fois à l'intérieur, cliquez sur "%sell_all%" : je prendrai vos produits et vous recevrez l'argent !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_06_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;%sell_all%&quot; to sell your chocolates to %zur_shopkeep%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Cliquez sur "%sell_all%" pour vendre vos chocolats à %zur_shopkeep%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_06_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Remember, you need to click %sell_all% inside the shop to sell me your chocolates - you'll see the money you earned show up in your account.</Data></Cell>
+	 <Cell><Data ss:Type="String">N'oubliez pas, vous devez cliquer sur %sell_all% dans la boutique pour me vendre vos chocolats : vous verrez l'argent gagné s'ajouter à votre compte.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_06_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The only place I know of in town where you'll be able to sell your chocolates is %zur_shop%. Click %sell_all% inside the shop to turn a profit on your creations...</Data></Cell>
+	 <Cell><Data ss:Type="String">Le seul endroit en ville que je connaisse où vous pourrez vendre vos chocolats est %zur_shop%. Cliquez sur %sell_all% dans la boutique pour tirer profit de vos créations...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_07</Data></Cell>
-	 <Cell><Data ss:Type="String">Back to Alex</Data></Cell>
+	 <Cell><Data ss:Type="String">Retour vers Alex</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Thank you for stopping by, &lt;player&gt;. It is always my pleasure to offer the best prices for quality chocolates!&lt;br&gt;&lt;br&gt;Now, go back and speak with Alex - you can find her at the %zur_station%, the main rail station here in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Merci de votre visite, &lt;player&gt;. C'est toujours un plaisir d'offrir les meilleurs prix pour des chocolats de qualité !&lt;br&gt;&lt;br&gt;Maintenant, retournez parler à Alex : vous la trouverez à la gare %zur_station%, la gare principale ici à %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_07_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Speak with Alex at the %zur_station%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Allez parler à Alex à %zur_station%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_07_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Alex would like to speak with you, &lt;player&gt;. She's preparing for her journey at the main train station here in %zurich%, %zur_station%. That's the building you'll find just in front of %zur_tower% church.</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex aimerait vous parler, &lt;player&gt;. Elle prépare son voyage à la gare principale de %zurich%, %zur_station%. C'est le bâtiment situé juste en face de l'église %zur_tower%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_07_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Comme je l'ai dit plus tôt, ce fut un plaisir de faire affaire avec vous, &lt;player&gt;. Je crois que Mme Fletcher vous attend toujours à %zur_station%. Vous feriez mieux de retourner la voir pour lui faire part de notre fructueuse transaction !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_08</Data></Cell>
-	 <Cell><Data ss:Type="String">Restocking Ingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">Réapprovisionner les ingrédients</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_08_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Well done, &lt;player&gt;. You've made some chocolates, and you've made some money. With the factory now operational, I suspect you'll be needing ingredients soon. It's time to restock your inventory of %cacao% and %sugar%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bien joué, &lt;player&gt;. Vous avez fabriqué des chocolats et vous avez gagné de l'argent. L'usine étant désormais opérationnelle, je suppose que vous aurez bientôt besoin d'ingrédients. Il est temps de réapprovisionner votre stock de %cacao% et de %sugar%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_09</Data></Cell>
-	 <Cell><Data ss:Type="String">Sugar First</Data></Cell>
+	 <Cell><Data ss:Type="String">Le sucre d'abord</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_09_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm going to give you $5,000. Show me you're ready to take over by [D|doubling|tripling|quintupling] my investment. Now, go see %zur_marketkeep% here at %zur_market% about buying some of what you need.&lt;br&gt;&lt;br&gt;By the way, you can keep track of all of your to-do's with the Quest Log window.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je vais vous donner 5 000 $. Montrez-moi que vous êtes prêt à prendre la relève en[D|doublant|triplant|quintuplant] mon investissement. Maintenant, allez voir %zur_marketkeep% ici à %zur_market% pour acheter ce dont vous avez besoin.&lt;br&gt;&lt;br&gt;Au fait, vous pouvez suivre toutes vos tâches dans la fenêtre du Journal des Quêtes.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_09_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Purchase %sugar% from %zur_market% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Achetez du %sugar% à %zur_market% à %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_09_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% to buy ingredients. You'll find the market just to the right of the chocolate factory...</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_market% est le seul endroit que je connaisse ici à %zurich% pour acheter des ingrédients. Vous trouverez le marché juste à droite de la chocolaterie...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_09_help_offer_main_alex_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne vous ai pas donné ce capital pour rien, &lt;player&gt;. Allez voir Verena à %zur_market% et achetez du %sugar% pour que nous puissions faire tourner l'usine.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_09_help_offer_zur_towerkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai entendu dire qu'Endrit criait presque dans son usine à cause des machines vides. Vous feriez mieux de vous procurer ces sacs de %sugar% à %zur_market% avant qu'il ne perde la tête !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10</Data></Cell>
-	 <Cell><Data ss:Type="String">Plenty of Sugar</Data></Cell>
+	 <Cell><Data ss:Type="String">Plein de sucre</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Good day to you. &lt;player&gt;, isn't it? You must be the one working for the Baumeisters. As far as I'm aware, Alex surely is putting so much on her shoulders. I sincerely hope she doesn't wind up disappointed in the end.&lt;br&gt;&lt;br&gt;Now then, I heard you're looking for %sugar%. We had so little for so long, but it feels good to have shelves that aren't bare. Please buy what you need - at least 200 sacks.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bonjour. &lt;player&gt;, n'est-ce pas ? Vous devez être la personne qui travaille pour les Baumeister. Pour autant que je sache, Alex prend vraiment beaucoup de choses sur ses épaules. J'espère sincèrement qu'elle ne finira pas déçue.&lt;br&gt;&lt;br&gt;Bien, j'ai entendu dire que vous cherchiez du %sugar%. Nous en avons eu si peu pendant si longtemps, mais ça fait du bien de voir des étagères bien remplies. Achetez ce dont vous avez besoin : au moins 200 sacs.</Data></Cell>
 	</Row>
 	<Row>
      <Cell><Data ss:Type="String">market_welcome_tut_10_zur_marketkeep_1</Data></Cell>
-     <Cell><Data ss:Type="String">If you look below, &lt;player&gt;, you'll see the sack of %sugar%. Click that to proceed to purchasing some.</Data></Cell>
+     <Cell><Data ss:Type="String">Si vous regardez ci-dessous, &lt;player&gt;, vous verrez le sac de sucre. Cliquez dessus pour procéder à l'achat.</Data></Cell>
+	</Row>
+	<Row>
+     <Cell><Data ss:Type="String">market_thanks_tut_10_zur_marketkeep_sugar_1</Data></Cell>
+     <Cell><Data ss:Type="String">Bien joué, &lt;player&gt;. Je suis ravie de vous servir.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">market_thanks_tut_10_zur_marketkeep_sugar_insufficient_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Pas encore tout à fait. Il vous manque %1% sacs de sucre.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Click on %sugar% and then buy enough so that you've got at least 200 sacks on hand.</Data></Cell>
+	 <Cell><Data ss:Type="String">Cliquez sur %sugar% et achetez-en assez pour avoir au moins 200 sacs en stock.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I don't think you bought enough %sugar%. You'll not feel secure until you have at least 200 sacks in your inventory. Trust me on this.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne pense pas que vous ayez acheté assez de %sugar%. Vous ne serez pas serein tant que vous n'en aurez pas au moins 200 sacs en stock. Croyez-moi.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% where you'll find the %sugar% you need. The market is just to the right of the chocolate factory...</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_market% est le seul endroit ici à %zurich% où vous trouverez le %sugar% dont vous avez besoin. Le marché se trouve juste à droite de la chocolaterie...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_10_help_offer_main_alex_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne vous ai pas donné ce capital pour rien, &lt;player&gt;. Allez voir Verena à %zur_market% et achetez au moins 200 sacs de %sugar% pour que nous puissions faire tourner l'usine.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_10_help_offer_zur_towerkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai entendu dire qu'Endrit criait presque dans son usine à cause des machines vides. Vous feriez mieux de vous procurer ces sacs de %sugar% à %zur_market% avant qu'il ne perde la tête !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11</Data></Cell>
-	 <Cell><Data ss:Type="String">Douala for Cacao</Data></Cell>
+	 <Cell><Data ss:Type="String">Douala pour le cacao</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">In terms of %cacao%, it doesn't grow on European soil. For that, you'll need to travel to Africa. Particularly, to %douala%, Cameroon. If you look at your ledger, press the &quot;Map&quot; button to book a flight there. I have a dear friend there, %dou_marketkeep%, and she'll fix you up with what you need. Tell her that Verena sent you.</Data></Cell>
+	 <Cell><Data ss:Type="String">En ce qui concerne le %cacao%, il ne pousse pas sur le sol européen. Pour cela, vous devrez vous rendre en Afrique. Plus précisément à %douala%, au Cameroun. Si vous regardez votre registre, appuyez sur le bouton "Carte" pour réserver un vol. J'y ai une amie très chère, %dou_marketkeep%, qui vous fournira ce dont vous avez besoin. Dites-lui que vous venez de la part de Verena.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;Map&quot; to travel to %douala% and purchase %cacao% at %dou_market%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Cliquez sur "Carte" pour voyager jusqu'à %douala% et acheter du %cacao% à %dou_market%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand you're after %cacao%. You need to click on the &quot;Map&quot; button on the left, and then click on the port of %douala% to travel there...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je crois comprendre que vous cherchez du %cacao%. Vous devez cliquer sur le bouton "Carte" sur la gauche, puis sur le port de %douala% pour vous y rendre...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11_helpb_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You looking to buy some %cacao%? See %dou_marketkeep% over at %dou_market%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous cherchez à acheter du %cacao% ? Allez voir %dou_marketkeep% à %dou_market%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_11_helpb_offer_dou_bldg1keep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez l'air perdu. Si vous êtes descendu de l'avion à la recherche de %cacao%, vous devez vous diriger vers le tumulte de %dou_market%. Cherchez Tomge. Elle gère son stand d'une main de maître, alors préparez votre argent.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_11_helpb_offer_dou_plantationkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Bienvenue à la plantation, mon ami.&lt;br&gt;&lt;br&gt;Je suis peut-être un cultivateur de cacao, mais je ne suis pas vraiment le mieux placé pour vous aider. Ma propre récolte n'est pas encore prête à être commercialisée. Tomge à %dou_market% aura les sacs de %cacao% qu'il vous faut. Je pense que cela fera l'affaire.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_11_helpb_offer_dou_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, une visite de Baumeister Confections. Bienvenue à Douala. Si c'est du %cacao% qu'il vous faut, vous devez aller voir Tomge à %dou_market%. C'est juste au bout de la rue...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_12</Data></Cell>
-	 <Cell><Data ss:Type="String">Cacao for Sale</Data></Cell>
+	 <Cell><Data ss:Type="String">Cacao à vendre</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_12_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Ah, so you are the one Verena wrote to me about! It is good to finally put a face to the name.&lt;br&gt;&lt;br&gt;She mentioned you would need 200 sacks to get started, is that right? Let's get you all sorted.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, c'est donc de vous dont Verena m'a parlé dans sa lettre ! C'est agréable de pouvoir enfin mettre un visage sur un nom.&lt;br&gt;&lt;br&gt;Elle a mentionné que vous auriez besoin de 200 sacs pour commencer, c'est exact ? Allons vous préparer tout ça.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_12_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Purchase enough %cacao% so that you've got at least 200 sacks on hand.</Data></Cell>
+	 <Cell><Data ss:Type="String">Achetez assez de %cacao% pour avoir au moins 200 sacs en stock.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_welcome_tut_12_dou_marketkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Everything is here for you. The cacao is in the large sack, just to the bottom left. Click on it when you are ready.</Data></Cell>
+	 <Cell><Data ss:Type="String">Tout est là pour vous. Le cacao est dans le grand sac, juste en bas à gauche. Cliquez dessus quand vous serez prêt.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_thanks_tut_12_dou_marketkeep_sugar_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%sugar%? Ha! You came all this way for %sugar%? My friend, you could have gotten that cheaper in %zurich%!</Data></Cell>
+	 <Cell><Data ss:Type="String">Du sucre ? Ha ! Vous avez fait tout ce chemin pour du sucre ? Mon ami, vous auriez pu l'avoir moins cher à %zurich% !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_thanks_tut_12_dou_marketkeep_cacao_insufficient_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Good start, &lt;player&gt;, but you're not quite there yet. You need %1% more sacks of %cacao%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bon début, &lt;player&gt;, mais vous n'y êtes pas encore. Il vous manque %1% sacs de %cacao%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_thanks_tut_12_dou_marketkeep_cacao_insufficient_lowfunds_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Oh, is that all the money you got on hand? You should've cranked out some %b01% as you flew over here. Head to %dou_shop% across the road and %dou_shopkeep% can fix you up.</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh, c'est tout l'argent qu'il vous reste ? Vous auriez dû produire quelques %b01% pendant votre vol vers ici. Allez à %dou_shop% de l'autre côté de la rue, %dou_shopkeep% pourra vous arranger ça.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_thanks_tut_12_dou_marketkeep_cacao_1</Data></Cell>
-	 <Cell><Data ss:Type="String">There you go, &lt;player&gt;! It's a pleasure doing business.</Data></Cell>
+	 <Cell><Data ss:Type="String">Et voilà, &lt;player&gt; ! C'est un plaisir de faire affaire avec vous.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_12_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Careful now, you are still a bit short on %cacao%! Your factories will need more to remain in operation. Verena's message said you need 200 sacks of them to get started properly.</Data></Cell>
+	 <Cell><Data ss:Type="String">Attention, vous manquez encore un peu de %cacao% ! Vos usines en auront besoin de plus pour continuer à tourner. Le message de Verena disait qu'il vous fallait 200 sacs pour bien commencer.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_12_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to have at least 200 sacks of %cacao% in your inventory, isn't that right?&lt;br&gt;&lt;br&gt;The only place that I've heard of %cacao% for sale lately is at %dou_market% in %douala%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous devez avoir au moins 200 sacs de %cacao% dans votre inventaire, n'est-ce pas ?&lt;br&gt;&lt;br&gt;Le seul endroit où j'ai entendu dire qu'on vendait du %cacao% récemment est à %dou_market% à %douala%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_12_help_offer_dou_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis ravi de proposer vos %b01% dans ma boutique. Je peux très certainement vous aider, si vous cherchez plus de liquidités pour financer votre investissement en %cacao% à %dou_market%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_13</Data></Cell>
-	 <Cell><Data ss:Type="String">Back to Alex</Data></Cell>
+	 <Cell><Data ss:Type="String">Retour vers Alex</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_13_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The %cacao% should now be secure and ready to transport back to Switzerland. Now you need to fly back to %zurich% and see Alex.&lt;br&gt;&lt;br&gt;She sounds familiar. Alex is from Baumeister Confections, isn't she? Finding her lost husband, didn't I hear? From my experience of working here as a woman, we all must have strong spirits to survive and thrive in this world. Alex's must be made of iron. I find her spirit, you know, so admirable. Please send my thoughts to her.</Data></Cell>
+	 <Cell><Data ss:Type="String">Le %cacao% devrait maintenant être sécurisé et prêt à être transporté en Suisse. Vous devez maintenant rentrer à %zurich% pour voir Alex.&lt;br&gt;&lt;br&gt;Elle me dit quelque chose. Alex est de Baumeister Confections, non ? Elle recherche son mari disparu, c'est bien ce que j'ai entendu ? D'après mon expérience de femme travaillant ici, nous devons toutes avoir une volonté de fer pour survivre et prospérer dans ce monde, et je trouve la détermination d'Alex très admirable. Veuillez lui transmettre mes amitiés.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_13_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Travel back to %zurich% to speak with Alex at the %zur_station%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Retournez à %zurich% pour parler à Alex à %zur_station%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_13_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Alex would like to see you, &lt;player&gt;. She's still at the main train station in %zurich%, %zur_station%. That's the building just in front of %zur_tower% church.</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex aimerait vous voir, &lt;player&gt;. Elle est toujours à la gare principale de %zurich%, %zur_station%. C'est le bâtiment juste devant l'église %zur_tower%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_13_help_offer_dou_bldg1keep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Le prochain vol à destination de l'Europe part bientôt, &lt;player&gt;. Vous avez votre %cacao%. Je vous suggère de retourner à %zurich% pour rassurer Alex.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_13_help_offer_dou_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Votre transaction est terminée, &lt;player&gt;. L'humidité d'ici vous fera fondre si vous n'y êtes pas habitué, j'en suis sûre !&lt;br&gt;&lt;br&gt;Vous feriez mieux de ramener ces fèves à votre patronne en Suisse. Elle vous attend à la gare, n'est-ce pas ?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_13_help_offer_dou_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Une négociation réussie au marché, je présume ? Je vous souhaite un bon vol de retour vers la Suisse. Je crois que Mme Fletcher vous attend à la gare principale de %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14</Data></Cell>
-	 <Cell><Data ss:Type="String">A New Recipe</Data></Cell>
+	 <Cell><Data ss:Type="String">Une nouvelle recette</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I think you're starting to get the hang of things, &lt;player&gt;, which is good, because I need to leave soon.&lt;br&gt;&lt;br&gt;Next make your way back over to %zur_market% - Verena has a new ingredient you can use to make a new recipe, something that's always good for business...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je crois que vous commencez à prendre le coup de main, &lt;player&gt;, et c'est une bonne chose car je vais bientôt devoir partir.&lt;br&gt;&lt;br&gt;Ensuite, retournez à %zur_market%. Verena a un nouvel ingrédient que vous pourrez utiliser pour créer une nouvelle recette, ce qui est toujours bon pour les affaires...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Visit %zur_market% and see if Verena's got any new ingredients for sale.</Data></Cell>
+	 <Cell><Data ss:Type="String">Rendez-vous à %zur_market% pour voir si Verena a de nouveaux ingrédients à vendre.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, make your way back over to %zur_market% - %zur_marketkeep% has some new ingredients you'll be able to use to make a new recipe...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, retournez à %zur_market%. %zur_marketkeep% a de nouveaux ingrédients que vous pourrez utiliser pour une nouvelle recette...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_14_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Mes clients sont toujours à la recherche de nouveautés, &lt;player&gt;. Si j'étais vous, j'irais voir Verena à %zur_market%. C'est toujours elle qui reçoit les meilleurs nouveaux ingrédients en premier.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15</Data></Cell>
-	 <Cell><Data ss:Type="String">Milk Chocolate</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolat au lait</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Word travels fast! I assume you're here to purchase some of my %milk%, which just arrived? I trust you'll put it to good use.</Data></Cell>
+	 <Cell><Data ss:Type="String">Les nouvelles vont vite ! Je suppose que vous êtes ici pour m'acheter du %milk%, qui vient tout juste d'arriver ? Je suis sûre que vous en ferez bon usage.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring the ingredients to make %b02% - %milk%, %sugar% and %cacao% - to %zur_factory%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez les ingrédients pour préparer des %b02% (%milk%, %sugar% et %cacao%) à %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand Alex would like us to manufacture some %b02%. You'll need to make sure you've got %cacao%, %sugar% and %milk% on hand to do so!</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai cru comprendre qu'Alex aimerait que nous fabriquions des %b02%. Vous devrez vous assurer d'avoir du %cacao%, du %sugar% et du %milk% en stock pour le faire !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand you'd like to manufacture some %b02%. You'll need to make sure you've got %cacao%, %sugar% and %milk% on hand to do so!</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai cru comprendre que vous aimeriez fabriquer des %b02%. Vous devrez vous assurer d'avoir du %cacao%, du %sugar% et du %milk% en stock pour le faire !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">As soon as you have %milk%, %sugar%, and %cacao% in your inventory, visit the factory here in %zurich% to make a new recipe - %b02%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Dès que vous aurez du %milk%, du %sugar% et du %cacao% dans votre inventaire, visitez l'usine ici à %zurich% pour préparer une nouvelle recette : les %b02%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_15_help_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai cru comprendre que vous aimeriez fabriquer des %b02%. Vous devrez vous assurer d'avoir du %cacao%, du %sugar% et du %milk% en stock pour le faire !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16</Data></Cell>
-	 <Cell><Data ss:Type="String">Making %b02%</Data></Cell>
+	 <Cell><Data ss:Type="String">Fabriquer des %b02%</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;Change Recipe&quot;, select %b02%, and make as many as you can. More complicated recipes mean higher profits!&lt;br&gt;&lt;br&gt;Keep trying until you've set production to at least [D|10|20|30] cases...</Data></Cell>
+	 <Cell><Data ss:Type="String">Cliquez sur "Changer de recette", sélectionnez %b02% et fabriquez-en autant que vous le pouvez. Les recettes plus complexes rapportent de plus gros profits !&lt;br&gt;&lt;br&gt;Continuez à essayer jusqu'à ce que vous ayez réglé la production sur au moins [D|10|20|30] caisses...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Make at least [D|10|20|30] cases of %b02%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Produisez au moins [D|10|20|30] caisses de %b02%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Make sure that you have the needed ingredients (%sugar%, %cacao% and %milk%) in inventory, select %b02%, and make at least [D|10|20|30] cases.</Data></Cell>
+	 <Cell><Data ss:Type="String">Assurez-vous d'avoir les ingrédients nécessaires (%sugar%, %cacao% et %milk%) en stock, sélectionnez %b02% et produisez-en au moins[D|10|20|30] caisses.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're supposed to have at least [D|10|20|30] cases of your new recipe - %b02% - on hand. As long as you have %milk%, %sugar%, and %cacao% in your inventory, you can visit the factory in %zurich% to make more of the bars...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes censé avoir au moins[D|10|20|30] caisses de votre nouvelle recette (%b02%) en stock. Tant que vous avez du %milk%, du %sugar% et du %cacao% dans votre inventaire, vous pouvez visiter l'usine de %zurich% pour fabriquer d'autres tablettes...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b</Data></Cell>
-	 <Cell><Data ss:Type="String">Bartering with Milk Chocolate</Data></Cell>
+	 <Cell><Data ss:Type="String">Troquer avec du chocolat au lait</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Nice work, &lt;player&gt;.&lt;br&gt;&lt;br&gt;Take [D|10|20|30] cases of those %b02% to %zur_towerkeep% at %zur_tower% here in town. I trust that you will find her quite generous...</Data></Cell>
+	 <Cell><Data ss:Type="String">Beau travail, &lt;player&gt;.&lt;br&gt;&lt;br&gt;Apportez [D|10|20|30] caisses de ces %b02% à %zur_towerkeep% à %zur_tower% ici, en ville. Je suis sûre que vous la trouverez très généreuse...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|10|20|30] cases of your %b02% to %zur_towerkeep% at %zur_tower%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|10|20|30] caisses de vos %b02% à %zur_towerkeep% à %zur_tower%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">How delightful! I am going to take [D|10|20|30] cases of your %b02%, give you [D|$3,000|$6,500|$10,000], as well as 200 sacks of %caramel% in return.</Data></Cell>
+	 <Cell><Data ss:Type="String">Quel délice ! Je vais vous prendre[D|10|20|30] caisses de vos %b02% et vous donner[D|3 000 $|6 500 $|10 000 $], ainsi que 200 sacs de %caramel% en échange.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">My friend %zur_factorykeep% informed me that you'd be bringing [D|10|20|30] cases of %b02% to me one day - is my lucky day going to come soon?</Data></Cell>
+	 <Cell><Data ss:Type="String">Mon ami %zur_factorykeep% m'a informé que vous m'apporteriez un jour [D|10|20|30] caisses de %b02%... Mon jour de chance va-t-il bientôt arriver ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to have at least [D|10|20|30] cases of %b02% on hand. Once you do, go see %zur_towerkeep% - you'll find her at %zur_tower% - just look for the clock tower...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous devez avoir au moins[D|10|20|30] caisses de %b02% en stock. Une fois que ce sera fait, allez voir %zur_towerkeep%. Vous la trouverez à %zur_tower% : cherchez simplement la tour de l'horloge...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_towerkeep% est probablement en train de s'occuper de ses affaires à %zur_tower%. Vous feriez mieux de vous dépêcher avec ces %b02% : c'est une femme très occupée !</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_factorykeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Liridona a tellement l'œil pour l'harmonie, &lt;player&gt;, que ce soit dans ses croquis ou dans l'équilibre de %b02% parfaites. Vous la trouverez à %zur_tower%.&lt;br&gt;&lt;br&gt;Ne la faites pas attendre. C'est l'une de mes premières amies dans cette ville, et elle garde quelque chose de très pratique pour nous !</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Notre chère Liridona vous attend à %zur_tower%. Je l'ai vue dessiner près de la Limmat tout à l'heure, et elle disait à quel point elle avait hâte de goûter vos %b02%. Elle a un palais très raffiné, alors assurez-vous que ces[D|10|20|30] caisses soient parfaites !</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">L'opinion de Liridona a beaucoup de poids dans le milieu de la confiserie à Zurich. Lui apporter ces[D|10|20|30] caisses de %b02% à %zur_tower% serait une décision commerciale très judicieuse, &lt;player&gt;.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17</Data></Cell>
-	 <Cell><Data ss:Type="String">Caramel Bars</Data></Cell>
+	 <Cell><Data ss:Type="String">Tablettes au caramel</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I want you to go back and see %zur_factorykeep%. As long as you have %caramel%, %sugar% and %cacao% in stock, you'll be able to make %b03%.&lt;br&gt;&lt;br&gt;And I hear that Endrit has a new gizmo at the factory that he's eager to show you...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je veux que vous retourniez voir %zur_factorykeep%. Tant que vous aurez du %caramel%, du %sugar% et du %cacao% en stock, vous pourrez fabriquer des %b03%.&lt;br&gt;&lt;br&gt;Et j'ai entendu dire qu'Endrit avait un nouveau gadget à l'usine qu'il a hâte de vous montrer...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring the ingredients for %b03% to %zur_factory%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez les ingrédients pour des %b03% à %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">We need the ingredients for %b03%  - %cacao%, %sugar% and %caramel%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Il nous faut les ingrédients pour les %b03% : du %cacao%, du %sugar% et du %caramel%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %b03%  - %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Procurez-vous les ingrédients pour les %b03% (%cacao%, %sugar% et %caramel%) et apportez-les à %zur_factory% à %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand you're ready to work on your 3rd chocolate recipe! The only place you can do that is at the red brick chocolate factory in the middle of %zurich% - %zur_factory%. If you need %cacao%, you'll need to get yourself to %douala% - everything else can be found at the market in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai cru comprendre que vous étiez prêt à vous attaquer à votre 3e recette de chocolat ! Le seul endroit où vous pouvez faire ça est la chocolaterie en briques rouges au centre de %zurich% : %zur_factory%. Si vous avez besoin de %cacao%, vous devrez vous rendre à %douala%. Tout le reste se trouve au marché de %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_17_help_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">On dit que vous devez vous procurer les ingrédients pour les %b03% (%cacao%, %sugar% et %caramel%) et les apporter à %zur_factory% à %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_17_help_offer_3</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous allez vous faire un joli pactole avec les %b03%, ça c'est sûr. Vous devez avoir du %sugar%, du %cacao% et du %caramel% dans votre inventaire. Ensuite, allez à %zur_factory%, cliquez sur "Changer de recette" pour choisir les %b03% et lancez la production !</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_17_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Êtes-vous prêt à tenter une recette plus complexe, &lt;player&gt; ? En plus de votre %cacao% et de votre %sugar%, vous aurez besoin de mon %caramel% frais, si vous en voulez encore. Prenez ce dont vous avez besoin et apportez tout ça à Endrit à %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18</Data></Cell>
-	 <Cell><Data ss:Type="String">Recycling!</Data></Cell>
+	 <Cell><Data ss:Type="String">Recyclage !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have on hand everything we need to make %b03%!&lt;br&gt;&lt;br&gt;Click &quot;Change Recipe&quot;, select %b03%, and make as many as you can!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez sous la main tout ce qu'il nous faut pour préparer des %b03% !&lt;br&gt;&lt;br&gt;Cliquez sur "Changer de recette", sélectionnez les %b03% et fabriquez-en autant que possible !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Also, some good news, &lt;player&gt;. I've just wired up a Recycler for our machines. If you don't want to use what's in your gun, simply fire the ingredient at the Recycler - no more unnecessary waste!</Data></Cell>
+	 <Cell><Data ss:Type="String">Et j'ai une bonne nouvelle, &lt;player&gt;. Je viens tout juste d'installer un Recycleur sur nos machines. Si vous ne voulez pas utiliser ce qui se trouve dans votre canon, tirez simplement l'ingrédient dans le Recycleur : fini le gaspillage inutile !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;Change Recipe&quot;, select %b03%, and make as many as you can!</Data></Cell>
+	 <Cell><Data ss:Type="String">Cliquez sur "Changer de recette", sélectionnez les %b03% et fabriquez-en autant que possible !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to make some %b03%. The required ingredients are %cacao%, %sugar% and %caramel%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous devez fabriquer des %b03%. Les ingrédients requis sont le %cacao%, le %sugar% et le %caramel%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %b03%  - %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Procurez-vous les ingrédients pour les %b03% (%cacao%, %sugar% et %caramel%) et apportez-les à %zur_factory% à %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Word is you need to get a hold of the ingredients for %b03%: %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai cru comprendre que vous étiez prêt à vous attaquer à votre 3e recette de chocolat ! Le seul endroit où vous pouvez faire ça est la chocolaterie en briques rouges au centre de %zurich% : %zur_factory%. Si vous avez besoin de %cacao%, vous devrez vous rendre à %douala%. Tout le reste se trouve au marché de %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_18_help_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">On dit que vous devez vous procurer les ingrédients pour les %b03% (%cacao%, %sugar% et %caramel%) et les apporter à %zur_factory% à %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_18_help_offer_3</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous allez vous faire un joli pactole avec les %b03%, ça c'est sûr. Vous devez avoir du %sugar%, du %cacao% et du %caramel% dans votre inventaire. Ensuite, allez à %zur_factory%, cliquez sur "Changer de recette" pour choisir les %b03% et lancez la production !</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_18_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Êtes-vous prêt à tenter une recette plus complexe, &lt;player&gt; ? En plus de votre %cacao% et de votre %sugar%, vous aurez besoin de mon %caramel% frais, si vous en voulez encore. Prenez ce dont vous avez besoin et apportez tout ça à Endrit à %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_19_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You'll make a pretty penny with %b03%, that's for sure. You need to have %sugar%, %cacao% and %caramel% in your inventory. Then, go to %zur_factory%, &quot;Change Recipe&quot; to %b03% and make some product!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous allez vous faire un joli pactole avec les %b03%, ça c'est sûr. Vous devez avoir du %sugar%, du %cacao% et du %caramel% dans votre inventaire. Ensuite, allez à %zur_factory%, cliquez sur "Changer de recette" pour choisir les %b03% et lancez la production !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_19_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You now know how to make 3 chocolate recipes. You can travel, buy ingredients and sell your products at a profit.&lt;br&gt;&lt;br&gt;Once you've built your cash on hand to at least $10,000, Alex will be ready to hand you the reins to the company. Good luck!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous savez maintenant comment réaliser 3 recettes de chocolat. Vous pouvez voyager, acheter des ingrédients et vendre vos produits avec un bénéfice.&lt;br&gt;&lt;br&gt;Une fois que vous aurez accumulé au moins 10 000 $ en liquide, Alex sera prête à vous céder les rênes de l'entreprise. Bonne chance !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're well on your way, &lt;player&gt;. As long as you've got the needed ingredients in your inventory, your factory will crank out chocolates as you travel.&lt;br&gt;&lt;br&gt;I hear that Alex will be ready to make a move as soon as you've accumulated $10,000...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes sur la bonne voie, &lt;player&gt;. Tant que vous aurez les ingrédients nécessaires dans votre inventaire, votre usine continuera de produire des chocolats pendant que vous voyagez.&lt;br&gt;&lt;br&gt;J'ai entendu dire qu'Alex sera prête à passer à l'action dès que vous aurez accumulé[D|10 000 $|15 000 $|25 000 $]...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_over_prompt_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai gardé un œil attentif sur vos registres, &lt;player&gt;. Vous faites des progrès constants ! Continuez à approvisionner vos usines pendant que vous voyagez, et continuez à vendre à Analiese.&lt;br&gt;&lt;br&gt;Dès que vos comptes atteindront la barre des[D|10 000 $|15 000 $|25 000 $], Mme Fletcher aura enfin l'esprit tranquille pour entamer ses recherches.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_over_prompt_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex est incroyablement impatiente de commencer à chercher Sean, &lt;player&gt;. Vous avez vraiment un bon fond pour l'aider ainsi.&lt;br&gt;&lt;br&gt;Si vous gardez mes ingrédients en stock dans votre inventaire, votre usine travaillera pour vous pendant que vous voyagez. Constituez-vous ce coussin de[D|10 000 $|15 000 $|25 000 $] pour qu'elle puisse enfin apaiser ses craintes et s'en aller.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Alex is waiting to speak with you, &lt;player&gt;. She is anxious to be on her way. Please go see her in Zurich at the %zur_station% as soon as you can...</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex vous attend pour vous parler, &lt;player&gt;. Elle a hâte de se mettre en route. Allez la voir à Zurich, à %zur_station%, dès que possible...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez réussi, &lt;player&gt; ! Vous avez prouvé que vous aviez les épaules pour diriger Baumeister Confections et générer des profits.&lt;br&gt;&lt;br&gt;Alex a fait ses valises et vous attend à %zur_station%. Allez-y dès que vous le pourrez pour qu'elle puisse enfin partir !</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Mme Fletcher a laissé des instructions très claires : elle vous attend à %zur_station%. Vous feriez mieux de vous y rendre pour qu'elle puisse officialiser votre nouveau rôle.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez fait un travail merveilleux, mon enfant. Vous avez offert à Alex exactement la sécurité dont elle avait besoin.&lt;br&gt;&lt;br&gt;Rendez-vous à %zur_station%. Ses valises sont prêtes et elle attend de vous faire ses adieux.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez prouvé que vous étiez un véritable entrepreneur, &lt;player&gt;. Alex vous attend à %zur_station% pour finaliser votre nomination. Ne la faites pas attendre !</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_towerkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Il y a une merveilleuse symétrie dans ce que vous avez accompli ici, &lt;player&gt;. Un magnifique départ pour une nouvelle ère chez Baumeister Confections, n'est-ce pas ?&lt;br&gt;&lt;br&gt;J'ai vu Alex regarder les rails près de %zur_station% tout à l'heure. Vous devriez aller la soulager de son fardeau et la laisser commencer son voyage pour retrouver son mari.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over</Data></Cell>
-	 <Cell><Data ss:Type="String">You Are Ready</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes prêt</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut</Data></Cell>
-	 <Cell><Data ss:Type="String">You Are Ready</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes prêt</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, you've done it. You have shown your prowess at making chocolates, and making money. Now I simply must go. Ready or not, the company is in your hands. As I promised, you are now one of Baumeister Confections' %rank_2%s.</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, vous avez réussi. Vous avez démontré vos talents pour fabriquer des chocolats et gagner de l'argent. Maintenant, je dois vraiment y aller. Prêt ou non, l'entreprise est entre vos mains. Comme je vous l'avais promis, vous possédez désormais le grade de %rank_2% chez Baumeister Confections.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I genuinely understand, &lt;player&gt;. I do like your moxie! But I won't lie; it's not easy for me to just hand the reins over like this to someone I barely know. I am counting on you to prove that you're doing what's right in my absence.&lt;br&gt;&lt;br&gt;The company is in your hands. As I promised, you are now one of Baumeister Confections' %rank_2%s. I've saved [D|$20,000|$25,000|$30,000] in my bank balance to get you started.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je vous comprends tout à fait, &lt;player&gt;. J'aime votre audace ! Mais je ne vais pas vous mentir : il n'est pas facile pour moi de céder les rênes comme ça à quelqu'un que je connais à peine. Je compte sur vous pour prouver que vous ferez les bons choix en mon absence.&lt;br&gt;&lt;br&gt;Prêt ou non, l'entreprise est entre vos mains. Comme promis, vous possédez désormais le grade de %rank_2% chez Baumeister Confections. J'ai gardé[D|20 000 $|25 000 $|30 000 $] sur mon compte en banque pour vous aider à démarrer.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">There are 5 other members of the Baumeister Confections Board of Directors. You are going to need to work with each of them, one by one, to convince them that you are capable of being our CEO. Some you find easier to work with than others, but they are all good people.</Data></Cell>
+	 <Cell><Data ss:Type="String">Il y a 5 autres membres au conseil d'administration de Baumeister Confections. Vous allez devoir collaborer avec chacun d'eux, l'un après l'autre, pour les convaincre que vous êtes capable de devenir notre PDG. Certains seront plus faciles à vivre que d'autres, mais ce sont tous des gens bien.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_extra03_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am off to launch my search for Sean. I'll be in touch as I can, and you should also keep an eye out on your travels for my assistant, %announcer%. If necessary, the rest of the board and I will be able to get messages to you through Rick.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je m'en vais commencer mes recherches pour retrouver Sean. Je vous donnerai de mes nouvelles dès que possible, et vous devriez également garder l'œil ouvert lors de vos voyages pour trouver mon assistant, %announcer%. Si nécessaire, le reste du conseil et moi-même pourrons vous faire passer des messages par l'intermédiaire de Rick.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_extra04_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Right now you need to go see my uncle Felix Baumeister in %capetown%. I think he's the best board member to begin with. Also, I understand that he's been working on some secret projects that may have significant impact on our business.&lt;br&gt;&lt;br&gt;I know you can do it, &lt;player&gt; - good luck!</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour l'instant, vous devez aller voir mon oncle Felix Baumeister à %capetown%. Je pense qu'il est le meilleur membre du conseil pour commencer. J'ai également cru comprendre qu'il travaillait sur des projets secrets qui pourraient avoir un impact important sur nos affaires.&lt;br&gt;&lt;br&gt;Je sais que vous en êtes capable, &lt;player&gt;. Bonne chance !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Track down Felix Baumeister in %capetown%, South Africa.</Data></Cell>
+	 <Cell><Data ss:Type="String">Retrouvez Felix Baumeister à %capetown%, en Afrique du Sud.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Track down Felix Baumeister in %capetown%, South Africa.</Data></Cell>
+	 <Cell><Data ss:Type="String">Retrouvez Felix Baumeister à %capetown%, en Afrique du Sud.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">If you're interested in speaking with %main_feli%, you need to go see him at %cap_factory% in %capetown%, South Africa.</Data></Cell>
+	 <Cell><Data ss:Type="String">Si vous voulez parler à %main_feli%, vous devez aller le voir à %cap_factory% à %capetown%, en Afrique du Sud.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">If you're interested in speaking with %main_feli%, you need to go see him at %cap_factory% in %capetown%, South Africa.</Data></Cell>
+	 <Cell><Data ss:Type="String">Si vous voulez parler à %main_feli%, vous devez aller le voir à %cap_factory% à %capetown%, en Afrique du Sud.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_cap_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">If you are trying to find Felix, head over to %cap_factory%, behind the %cap_shop%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Si vous cherchez Felix, rendez-vous à %cap_factory%, derrière %cap_shop%.</Data></Cell>
 	</Row>
    	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut_cap_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">If you are trying to find Felix, head over to %cap_factory%, behind the %cap_shop%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Si vous cherchez Felix, rendez-vous à %cap_factory%, derrière %cap_shop%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_zur_towerkeep_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're working with Endrit over at the factory, aren't you? He tries to act all business-like, but don't let him fool you. He was practically bouncing off the walls with excitement when Alex told him they were firing up the machines again.&lt;br&gt;&lt;br&gt;We grew up in the same neighborhood, you know. He's always been obsessed with how things work his whole life since his family seeked refuge from Albania...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous travaillez avec Endrit à l'usine, n'est-ce pas ? Il essaie de garder un ton très professionnel, mais ne vous laissez pas avoir. Il sautait presque de joie quand Alex lui a annoncé qu'ils relançaient les machines.&lt;br&gt;&lt;br&gt;Nous avons grandi dans le même quartier, vous savez. Il a toujours été obsédé par le fonctionnement des choses, depuis que sa famille a fui l'Albanie pour trouver refuge ici...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_alex_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Sean was flying for the Americans, and his plane was lost on a 'secret mission' towards the end of the war. The authorities have been no help, so I have no choice but to try to find out what happened to him. I simply refuse to believe that he's dead. I know that I can count on you to turn things around in my absence...</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean volait pour les Américains, et son avion a été perdu lors d'une « mission secrète » vers la fin de la guerre. Les autorités ne m'ont été d'aucune aide, je n'ai donc pas d'autre choix que d'essayer de découvrir ce qui lui est arrivé. Je refuse tout simplement de croire qu'il est mort. Je sais que je peux compter sur vous pour redresser la barre en mon absence...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_alex_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I just won't be able to rest until I know for sure what has happened to Sean - one way or the other. In the meantime, I know that I can count on you to turn things around in my absence.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne pourrai tout simplement pas trouver le repos tant que je ne saurai pas avec certitude ce qui est arrivé à Sean... d'une manière ou d'une autre. En attendant, je sais que je peux compter sur vous pour redresser la barre en mon absence.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">dou_plantationkeep_hint_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Pretty soon now, &lt;player&gt;, I'll be harvesting my first crop of specialty cacao. Sure it will be a bit more expensive than your ordinary cacao, but worth every penny. And, if you've got recipes that call for %dou_cacao%, nothing else will do!</Data></Cell>
+	 <Cell><Data ss:Type="String">Très bientôt, &lt;player&gt;, je récolterai ma première culture de cacao de spécialité. Il sera certes un peu plus cher que le cacao ordinaire, mais il vaudra chaque centime. Et, si vous avez des recettes qui nécessitent du %dou_cacao%, rien d'autre ne fera l'affaire !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_byealex_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Well, there she goes. I sure hope Alexandra knows what she's doing...</Data></Cell>
+	 <Cell><Data ss:Type="String">Eh bien, elle est partie. J'espère vraiment qu'Alexandra sait ce qu'elle fait...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut_byealex_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Well, there she goes. I sure hope Alexandra knows what she's doing...</Data></Cell>
+	 <Cell><Data ss:Type="String">Eh bien, elle est partie. J'espère vraiment qu'Alexandra sait ce qu'elle fait...</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

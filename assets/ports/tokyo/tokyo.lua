@@ -58,11 +58,11 @@ CreateBuilding("tok_market", tokyo, Market)
 tok_market.x = 555
 tok_market.y = 328
 tok_market.layer = 940
-tok_market.inventory = { wasabi, sugar, milk, cherry, clove, orange, lemon, salt, ginger, mint, tea, pumpkin, matcha, strawberry }
+tok_market.inventory = { cherry, chestnut, ginger, lemon, lychee, matcha, mint, milk, orange, salt, sesame, star_anise, sugar, tea, wasabi, yuzu }
 --
 --
 CreateBuilding("tok_shop", tokyo, Shop)
-tok_shop.x = 205.5
+tok_shop.x = 204.5
 tok_shop.y = 305.5
 tok_shop.labely = 305
 tok_shop.layer = 950

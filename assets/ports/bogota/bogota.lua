@@ -14,7 +14,7 @@ bogota.locked = true
 
 --LOCATIONS
 CreateBuilding("bog_market", bogota, Market)
-bog_market.inventory = {allspice, sugar, cashew, butter, saffron, clove, espresso, pecan, pumpkin, cacao, powder, hazelnut }
+bog_market.inventory = { allspice, banana, butter, cacao, cashew, clove, espresso, guava, hazelnut, pecan, powder, pumpkin, saffron, sugar }
 bog_market.x = 105
 bog_market.y = 290.5
 bog_market.layer = 930

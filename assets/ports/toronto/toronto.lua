@@ -14,21 +14,10 @@ toronto.locked = true
 
 --LOCATIONS
 CreateBuilding("tor_market", toronto, Market)
-tor_market.inventory = { maple, whiskey, sugar, milk, cream, pecan, raspberry, blueberry, butter, chestnut, espresso, honey, walnut, toffee, apple, blackberry }
+tor_market.inventory = { apple, blackberry, blueberry, butter, cream, espresso, honey, maple, milk, oat, peanut, raspberry, sugar, toffee, walnut, whiskey }
 tor_market.x = 457
 tor_market.y = 218.5
 tor_market.layer = 900
-
--- Abbey Gilbraith, early 20s or late 10s
-tor_marketkeep.likes = {
-    categories = { bar=true },
-    products = { m08=true, b02=true },
-    ingredients = { vanilla=true, toffee=true, blueberry=true, milk=true }
-}
-tor_marketkeep.dislikes = {
-    ingredients = { raspberry=true, blackberry=true, mango=true },
-    products = { e07=true }
-}
 --
 --
 CreateBuilding("tor_shop", toronto, Shop)

@@ -40,7 +40,7 @@ wel_fartree.layer = 920
 --
 --
 CreateBuilding("wel_market", wellington, Market)
-wel_market.inventory = {sugar, milk, mint, salt, pumpkin, espresso, butter, raspberry, strawberry, vanilla, whiskey, currant, cherry, pistachio, apple, honey }
+wel_market.inventory = { apple, butter, cherry, earl_grey, espresso, honey, milk, mint, oat, pistachio, raspberry, salt, strawberry, sugar, vanilla, whiskey }
 wel_market.x = 693
 wel_market.y = 264
 wel_market.layer = 930

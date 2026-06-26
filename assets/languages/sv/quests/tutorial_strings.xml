@@ -106,6 +106,14 @@
 	 <Cell><Data ss:Type="String">You are looking for %zur_factory%? It's the red brick factory in the middle of town...</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tut_03_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, Endrit! A brilliant boy, that one. He's running the %zur_factory% over at the brick factory by the canal. He'll look after you properly.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_03_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">If you intend to fill my shelves, you'll need to visit the Chocolate Works first. It's the large industrial building in the center of town.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tut_04</Data></Cell>
 	 <Cell><Data ss:Type="String">Making Candy</Data></Cell>
 	</Row>
@@ -134,12 +142,20 @@
 	 <Cell><Data ss:Type="String">You're going to need to make at least [D|5|20|40] cases of %b01%. The only place you can do that is at the red brick chocolate factory here in the middle of town - %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tut_04_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You have your ingredients, yes? Good. Head right over the bridge to the %zur_factory%. Endrit has been pacing all morning waiting for you to start those machines! He needs you to make [D|5|20|40] cases of %b01%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_04_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm eagerly awaiting your first batch of %b01%! You'll need to head to the %zur_factory% just across the water to manufacture them. Please don't keep me waiting too long.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tut_05</Data></Cell>
 	 <Cell><Data ss:Type="String">Making Money</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">As you travel you can track how many products we're making in the status window below. Inventory levels for each ingredient we're using are shown with color-coded bars - green means we've got plenty, yellow means we're running low, and red means production will soon be stalled.  </Data></Cell>
+	 <Cell><Data ss:Type="String">As you travel you can track how many products we're making in the status window below. Inventory levels for each ingredient we're using are shown with color-coded bars - green means we've got plenty, yellow means we're running low, and red means production will soon be stalled.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_extra01_1</Data></Cell>
@@ -152,6 +168,18 @@
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">You're trying to find %zur_shop%? It's the red building on the west side of the canal...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Now that you have manufactured some goods, it is time to liquidate it into cash, yes? Run those %b01% over to Analiese at %zur_shop% - you will find her shop on the opposite side of the canal, over the bridge.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh, your %b01% smell absolutely heavenly! You should take those straight to Analiese at %zur_shop%. Shes just across the canal, and I know she pays very fairly for quality work.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_schoolkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You can't eat all those %b01% yourself. Like, I totally get the urge! But really, you need to take them to Analiese at the %zur_shop% and turn a profit.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_06</Data></Cell>
@@ -190,6 +218,10 @@
 	 <Cell><Data ss:Type="String">Alex would like to speak with you, &lt;player&gt;. She's preparing for her journey at the main train station here in %zurich%, %zur_station%. That's the building you'll find just in front of %zur_tower% church.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tut_07_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">As I said earlier, it has been an pleasure doing business with you, &lt;player&gt;. I believe Mrs. Fletcher is still waiting for you at the %zur_station%. You'd best return to her so she knows of our successful transaction!</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tut_08</Data></Cell>
 	 <Cell><Data ss:Type="String">Restocking Ingredients</Data></Cell>
 	</Row>
@@ -214,6 +246,14 @@
 	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% to buy ingredients. You'll find the market just to the right of the chocolate factory...</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tut_09_help_offer_main_alex_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I gave you that capital for a reason, &lt;player&gt;. Go see Verena at the %zur_market% and secure some %sugar% so we can keep the factory running.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_09_help_offer_zur_towerkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I heard Endrit practically shouting towards his factory floor about empty machines. You'd best secure those sacks of %sugar% from the %zur_market% before he loses his mind!</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tut_10</Data></Cell>
 	 <Cell><Data ss:Type="String">Plenty of Sugar</Data></Cell>
 	</Row>
@@ -223,7 +263,15 @@
 	</Row>
 	<Row>
      <Cell><Data ss:Type="String">market_welcome_tut_10_zur_marketkeep_1</Data></Cell>
-     <Cell><Data ss:Type="String">If you look below, &lt;player&gt;, you'll see the sack of %sugar%. Click that to proceed to purchasing some.</Data></Cell>
+     <Cell><Data ss:Type="String">If you look below, &lt;player&gt;, you'll see the sack of sugar. Click that to proceed to purchasing some.</Data></Cell>
+	</Row>
+	<Row>
+     <Cell><Data ss:Type="String">market_thanks_tut_10_zur_marketkeep_sugar_1</Data></Cell>
+     <Cell><Data ss:Type="String">Well done, &lt;player&gt;. I am very happy to serve you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">market_thanks_tut_10_zur_marketkeep_sugar_insufficient_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Not quite there yet, though. You need %1% more sacks of sugar.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10_summary</Data></Cell>
@@ -236,6 +284,14 @@
 	<Row>
 	 <Cell><Data ss:Type="String">tut_10_help_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">%zur_market% is the only place I know of here in %zurich% where you'll find the %sugar% you need. The market is just to the right of the chocolate factory...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_10_help_offer_main_alex_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I gave you that capital for a reason, &lt;player&gt;. Go see Verena at the %zur_market% and secure at least 200 sacks of %sugar% so we can keep the factory running.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_10_help_offer_zur_towerkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I heard Endrit practically shouting towards his factory floor about empty machines. You'd best secure those sacks of %sugar% from the %zur_market% before he loses his mind!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_11</Data></Cell>
@@ -258,6 +314,18 @@
 	 <Cell><Data ss:Type="String">You looking to buy some %cacao%? See %dou_marketkeep% over at %dou_market%...</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tut_11_helpb_offer_dou_bldg1keep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You look lost. If you came off your plane looking for %cacao%, you need to head into the noise of the %dou_market%. Look for Tomge. She runs a tight stall, so have your money ready.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_11_helpb_offer_dou_plantationkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to the plantation, my friend.&lt;br&gt;&lt;br&gt;I may be a cacao farmer, but I'm not really your best subject right now. My own crop isn't ready for commercial sale. Tomge at the %dou_market% will have the sacks of %cacao% you require. I believe it'll fit your needs.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_11_helpb_offer_dou_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, a visitor from Baumeister Confections. Welcome to Douala. If it is %cacao% you need, you must seek out Tomge at the %dou_market%. Just down the street...</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tut_12</Data></Cell>
 	 <Cell><Data ss:Type="String">Cacao for Sale</Data></Cell>
 	</Row>
@@ -275,7 +343,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_thanks_tut_12_dou_marketkeep_sugar_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%sugar%? Ha! You came all this way for %sugar%? My friend, you could have gotten that cheaper in %zurich%!</Data></Cell>
+	 <Cell><Data ss:Type="String">Sugar? Ha! You came all this way for sugar? My friend, you could have gotten that cheaper in %zurich%!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">market_thanks_tut_12_dou_marketkeep_cacao_insufficient_1</Data></Cell>
@@ -298,12 +366,16 @@
 	 <Cell><Data ss:Type="String">You need to have at least 200 sacks of %cacao% in your inventory, isn't that right?&lt;br&gt;&lt;br&gt;The only place that I've heard of %cacao% for sale lately is at %dou_market% in %douala%...</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tut_12_help_offer_dou_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm more than happy to stock your %b01% into my shop. I certainly can assist you with this, if you're seeking more cash to fund your investment in %cacao% at the %dou_market%.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tut_13</Data></Cell>
 	 <Cell><Data ss:Type="String">Back to Alex</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_13_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The %cacao% should now be secure and ready to transport back to Switzerland. Now you need to fly back to %zurich% and see Alex.&lt;br&gt;&lt;br&gt;She sounds familiar. Alex is from Baumeister Confections, isn't she? Finding her lost husband, didn't I hear? From my experience of working here as a woman, we all must have strong spirits to survive and thrive in this world. Alex's must be made of iron. I find her spirit, you know, so admirable. Please send my thoughts to her.</Data></Cell>
+	 <Cell><Data ss:Type="String">The %cacao% should now be secure and ready to transport back to Switzerland. Now you need to fly back to %zurich% and see Alex.&lt;br&gt;&lt;br&gt;She sounds familiar. Alex is from Baumeister Confections, isn't she? Finding her lost husband, didn't I hear? From my experience of working here as a woman, we all must have strong spirits to survive and thrive in this world, and I find Alex's spirit so admirable. Please send my thoughts to her.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_13_summary</Data></Cell>
@@ -312,6 +384,18 @@
 	<Row>
 	 <Cell><Data ss:Type="String">tut_13_help_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Alex would like to see you, &lt;player&gt;. She's still at the main train station in %zurich%, %zur_station%. That's the building just in front of %zur_tower% church.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_13_help_offer_dou_bldg1keep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">The next flight bound for Europe leaves soon, &lt;player&gt;. You have your %cacao%. I suggest you get back to %zurich% and ease Alex's worries.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_13_help_offer_dou_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Your transaction is done, &lt;player&gt;. The humidity here will melt you if you aren't used to it, I'm sure!&lt;br&gt;&lt;br&gt;Better get those beans back to your boss in Switzerland. She's waiting at the station, isn't she?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_13_help_offer_dou_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">A successful negotiation at the market, I presume? I wish you a safe flight back to Switzerland. I believe Mrs. Fletcher is awaiting you at the main train station in %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14</Data></Cell>
@@ -328,6 +412,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">tut_14_help_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">&lt;player&gt;, make your way back over to %zur_market% - %zur_marketkeep% has some new ingredients you'll be able to use to make a new recipe...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_14_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">My customers are always looking for something novel, &lt;player&gt;. If I were you, I would visit Verena at the %zur_market%. She always gets the finest new ingredients first.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15</Data></Cell>
@@ -352,6 +440,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">tut_15_help_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">As soon as you have %milk%, %sugar%, and %cacao% in your inventory, visit the factory here in %zurich% to make a new recipe - %b02%...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_15_help_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand you'd like to manufacture some %b02%. You'll need to make sure you've got %cacao%, %sugar% and %milk% on hand to do so!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16</Data></Cell>
@@ -398,6 +490,22 @@
 	 <Cell><Data ss:Type="String">You need to have at least [D|10|20|30] cases of %b02% on hand. Once you do, go see %zur_towerkeep% - you'll find her at %zur_tower% - just look for the clock tower...</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%zur_towerkeep%'s likely managing affairs over at the %zur_tower%. You'd best make haste with those %b02% - she is a very busy woman!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_factorykeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Liridona has such a keen eye for harmony, &lt;player&gt;, whether it's in her sketches or in the balance of perfect %b02%. You'll find her at the %zur_tower%.&lt;br&gt;&lt;br&gt;Don't keep her waiting. She was one of my first friends in this city, and she's holding onto something handy for us!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Our dear Liridona at the %zur_tower% is expecting you. I saw her sketching by the Limmat earlier, talking about how much she was looking forward to your %b02%. She has a very sophisticated palate, so do make sure those [D|10|20|30] cases are perfect!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Liridona's opinion carries a lot of weight in Zürich's confection circles. Bringing her those [D|10|20|30] cases of %b02% you have on hand to %zur_tower% would be a very smart business move, &lt;player&gt;.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tut_17</Data></Cell>
 	 <Cell><Data ss:Type="String">Caramel Bars</Data></Cell>
 	</Row>
@@ -411,15 +519,27 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">We need the ingredients for %b03%  - %cacao%, %sugar% and %caramel%.</Data></Cell>
+	 <Cell><Data ss:Type="String">We need the ingredients for %b03% - %cacao%, %sugar% and %caramel%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %b03%  - %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %b03% - %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17_help_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">I understand you're ready to work on your 3rd chocolate recipe! The only place you can do that is at the red brick chocolate factory in the middle of %zurich% - %zur_factory%. If you need %cacao%, you'll need to get yourself to %douala% - everything else can be found at the market in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_17_help_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">Word is you need to get a hold of the ingredients for %b03%: %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_17_help_offer_3</Data></Cell>
+	 <Cell><Data ss:Type="String">You'll make a pretty penny with %b03%, that's for sure. You need to have %sugar%, %cacao% and %caramel% in your inventory. Then, go to %zur_factory%, &quot;Change Recipe&quot; to %b03% and make some product!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_17_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you ready to attempt a more complex recipe, &lt;player&gt;? Along with your %cacao% and %sugar%, you'll need my fresh %caramel%, if you need any more. Grab what you need and take it all over to Endrit at the %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18</Data></Cell>
@@ -443,11 +563,23 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %b03%  - %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Get a hold of the ingredients for %b03% - %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_18_help_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I understand you're ready to work on your 3rd chocolate recipe! The only place you can do that is at the red brick chocolate factory in the middle of %zurich% - %zur_factory%. If you need %cacao%, you'll need to get yourself to %douala% - everything else can be found at the market in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_18_help_offer_2</Data></Cell>
 	 <Cell><Data ss:Type="String">Word is you need to get a hold of the ingredients for %b03%: %cacao%, %sugar% and %caramel% - and bring them to %zur_factory% in %zurich%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_18_help_offer_3</Data></Cell>
+	 <Cell><Data ss:Type="String">You'll make a pretty penny with %b03%, that's for sure. You need to have %sugar%, %cacao% and %caramel% in your inventory. Then, go to %zur_factory%, &quot;Change Recipe&quot; to %b03% and make some product!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_18_help_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Are you ready to attempt a more complex recipe, &lt;player&gt;? Along with your %cacao% and %sugar%, you'll need my fresh %caramel%, if you need any more. Grab what you need and take it all over to Endrit at the %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_19_prompt_offer_1</Data></Cell>
@@ -459,11 +591,39 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're well on your way, &lt;player&gt;. As long as you've got the needed ingredients in your inventory, your factory will crank out chocolates as you travel.&lt;br&gt;&lt;br&gt;I hear that Alex will be ready to make a move as soon as you've accumulated $10,000...</Data></Cell>
+	 <Cell><Data ss:Type="String">You're well on your way, &lt;player&gt;. As long as you've got the needed ingredients in your inventory, your factory will crank out chocolates as you travel.&lt;br&gt;&lt;br&gt;I hear that Alex will be ready to make a move as soon as you've accumulated [D|$10,000|$15,000|$25,000]...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_over_prompt_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I have been keeping a close eye on your ledgers, &lt;player&gt;. You are making steady progress! Just keep your factories supplied while you travel, and continue selling to Analiese.&lt;br&gt;&lt;br&gt;Once your accounts hit the [D|$10,000|$15,000|$25,000] mark, Mrs. Fletcher will finally have the peace of mind to begin her search.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_over_prompt_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Alex is so incredibly anxious to begin looking for Sean, &lt;player&gt;. You have such a good heart to help her.&lt;br&gt;&lt;br&gt;If you keep my ingredients stocked in your inventory, your factory will work for you while you travel. Build up that [D|$10,000|$15,000|$25,000] cushion so she can finally lay her worries to rest and depart.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Alex is waiting to speak with you, &lt;player&gt;. She is anxious to be on her way. Please go see her in Zurich at the %zur_station% as soon as you can...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_2</Data></Cell>
+	 <Cell><Data ss:Type="String">You've done it, &lt;player&gt;! You've shown that you have what it takes to run Baumeister Confections and turn a profit.&lt;br&gt;&lt;br&gt;Alex has her bags packed and is waiting for you at the %zur_station%. Head over there as soon as you can so she can be on her way!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_bankkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Mrs. Fletcher left explicit instructions - she is waiting for you at the %zur_station%. You'd best head over there so she can officially endorse your new role.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_marketkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You have done wonderful work, young one. You have given Alex exactly the security she needed.&lt;br&gt;&lt;br&gt;Make your way to the %zur_station%. She has her bags packed and is waiting to say her goodbyes to you.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_shopkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You've proven to be quite the entrepreneur, &lt;player&gt;. Alex is waiting for you at the %zur_station% to finalize your new position. Do not keep her waiting!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">tut_really_over_prompt_offer_zur_towerkeep_1</Data></Cell>
+	 <Cell><Data ss:Type="String">There is a wonderful symmetry to what you've accomplished here, &lt;player&gt;. A beautiful start to a new era for Baumeister Confections, isn't it?&lt;br&gt;&lt;br&gt;I saw Alex gazing out toward the tracks near the %zur_station% earlier. You should go relieve her of her burdens and let her begin her journey to find her husband.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over</Data></Cell>
@@ -479,7 +639,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_notut_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I genuinely understand, &lt;player&gt;. I do like your moxie! But I won't lie; it's not easy for me to just hand the reins over like this to someone I barely know. I am counting on you to prove that you're doing what's right in my absence.&lt;br&gt;&lt;br&gt;The company is in your hands. As I promised, you are now one of Baumeister Confections' %rank_2%s. I've saved [D|$20,000|$25,000|$30,000] in my bank balance to get you started.</Data></Cell>
+	 <Cell><Data ss:Type="String">I genuinely understand, &lt;player&gt;. I do like your moxie! But I won't lie; it's not easy for me to just hand the reins over like this to someone I barely know. I am counting on you to prove that you're doing what's right in my absence.&lt;br&gt;&lt;br&gt;Ready or not, the company is in your hands. As I promised, you are now one of Baumeister Confections' %rank_2%s. I've saved [D|$20,000|$25,000|$30,000] in my bank balance to get you started.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_over_extra01_1</Data></Cell>

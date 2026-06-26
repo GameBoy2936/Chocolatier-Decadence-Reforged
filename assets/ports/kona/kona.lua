@@ -21,7 +21,7 @@ kon_plantation.layer = 910
 kon_plantation.inventory = {kon_coffee}
 --
 CreateBuilding("kon_market", kona, Market)
-kon_market.inventory = {cream, sugar, milk, macadamia, cashew, orange, mint, honey, pineapple, salt, ginger, cacao, powder, pecan, passionfruit, banana }
+kon_market.inventory = { banana, cacao, cashew, cream, ginger, hazelnut, honey, macadamia, milk, mint, orange, pecan, pineapple, powder, salt, sugar }
 kon_market.x = 102.5
 kon_market.y = 286.5
 kon_market.layer = 930

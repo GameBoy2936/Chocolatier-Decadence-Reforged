@@ -1,23 +1,28 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Language Selection Dialog
-	Copyright (c) 2025 Michael Lane and Google Gemini AI.
+	Chocolatier Three: Decadence by Design Reforged (Language Engine Menu)
+	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
 --]]---------------------------------------------------------------------------
 
--- 1. Define specific font paths.
--- Ensure these .mvec files exist in your assets/fonts/ folder!
-local FontLatin		= "fonts/fertigo.mvec"				-- Standard Western
-local FontGreek		= "fonts/arima.mvec"				-- Greek
-local FontCyrillic	= "fonts/gabriela.mvec"				-- Russian, Ukrainian, etc.
-local FontJapanese	= "fonts/shipporimincho.mvec"		-- Japanese
-local FontChineseS	= "fonts/notoserif-sc.mvec"			-- Chinese, Simplified
-local FontChineseT	= "fonts/notoserif-tc.mvec"			-- Chinese, Traditional
-local FontKorean	= "fonts/nanummyeongjo.mvec"		-- Korean
-local FontThai		= "fonts/trirong.mvec"				-- Thai
-local FontHindi		= "fonts/notoserifdevanagari.mvec"	-- Hindi
-local FontBengali	= "fonts/notoserifbengali.mvec"		-- Bengali
+-------------------------------------------------------------------------------
+-- Dynamic Typography Configuration
+-------------------------------------------------------------------------------
+-- The default Latin fonts used by the game (Fertigo and Choco3) do not natively 
+-- support complex character sets. When a button requires an exotic script, we 
+-- manually inject these fallback MVEC engine fonts so the button renders correctly.
 
--- 2. Map languages to fonts. 
--- If a font is nil, it will fall back to the currently active game font (uiFontName).
+local FontLatin		= "fonts/fertigo.mvec"				-- Standard Western Alphabet
+local FontGreek		= "fonts/arima.mvec"				-- Greek Alphabet
+local FontCyrillic	= "fonts/gabriela.mvec"				-- Russian, Ukrainian, Bulgarian, etc.
+local FontJapanese	= "fonts/shipporimincho.mvec"		-- Japanese Kanji/Kana
+local FontChineseS	= "fonts/notoserif-sc.mvec"			-- Simplified Chinese
+local FontChineseT	= "fonts/notoserif-tc.mvec"			-- Traditional Chinese
+local FontKorean	= "fonts/nanummyeongjo.mvec"		-- Korean Hangul
+local FontThai		= "fonts/trirong.mvec"				-- Thai Script
+local FontHindi		= "fonts/notoserifdevanagari.mvec"	-- Hindi Devanagari
+local FontBengali	= "fonts/notoserifbengali.mvec"		-- Bengali Script
+
+-- Defines all languages supported by the translation mod files, and maps 
+-- them to the specific font required to render their localized names correctly.
 local availableLanguages = {
 	{ code = "en", key = "lang_en", font = FontLatin },
 	{ code = "fr", key = "lang_fr", font = FontLatin },
@@ -57,23 +62,33 @@ local availableLanguages = {
 	{ code = "tl", key = "lang_tl", font = FontLatin },
 }
 
+-------------------------------------------------------------------------------
+-- Application Logic
+-------------------------------------------------------------------------------
+
 local function SelectLanguage(langCode)
-	DebugOut("UI", "Language selected: " .. langCode)
+	DebugOut("UI", string.format("Player triggered language swap to: %s", langCode))
 	
+	-- Verify we actually changed languages before forcing a save and reboot prompt
 	if Player.options.language ~= langCode then
 		Player.options.language = langCode
 		Player:SaveGame()
-		DisplayDialog { "ui/ui_generic.lua", text="language_restart_needed" }
+		
+		-- Strings are parsed on initial Engine Boot, so hot-swapping requires a restart
+		DisplayDialog { "ui/ui_generic.lua", text = "language_restart_needed" }
 	else
+		DebugOut("UI", "Language swap aborted: Target language is already active.")
 		FadeCloseWindow("language_select", "cancel")
 	end
 end
 
 -------------------------------------------------------------------------------
+-- Grid Logic & Layout Rendering
+-------------------------------------------------------------------------------
 
 local buttons = {}
 
--- Layout Configuration for 4 Columns
+-- Layout Configuration (Calculated for 4 even columns)
 local columnWidth = 113
 local xStart = 24
 local yStart = 70
@@ -82,14 +97,13 @@ local ySpacing = 36
 for i, langData in ipairs(availableLanguages) do
 	local tempCode = langData.code
 	
-	-- Calculate column (0 to 3) and row
+	-- Calculate the rigid grid coordinate offsets for this button
 	local column = Mod(i - 1, 4)
 	local row = Floor((i - 1) / 4)
-	
-	-- Calculate position
 	local xPos = xStart + (column * columnWidth)
 	local yPos = yStart + (row * ySpacing)
 	
+	-- Fetch the localized name for this language (e.g. "lang_fr" -> "Français")
 	local labelStr = langData.key
 	if string.sub(labelStr, 1, 5) == "lang_" then
 		labelStr = "#" .. GetString(labelStr)
@@ -97,50 +111,44 @@ for i, langData in ipairs(availableLanguages) do
 		labelStr = "#" .. labelStr
 	end
 
-	-- DYNAMIC FONT SELECTION
-	-- If the language entry has a specific font, use it.
-	-- Otherwise, fall back to the global uiFontName (whatever is currently active).
+	-- Override the display font based on the language's specific requirements
 	local targetFontName = langData.font or uiFontName
 	
-	-- Create a font style table: { FontFile, Size, Color }
-	-- We use 14pt (or maybe 12pt for CJK/Thai to fit better)
 	local fontSize = 16
+	-- Complex scripts are slightly taller in engine space, so we shrink them to prevent 
+	-- their ascenders/descenders from clipping out of the UI bounding box.
 	if langData.font == FontCJK or langData.font == FontThai then
-		fontSize = 16 -- Slightly smaller for complex scripts to prevent clipping
+		fontSize = 16 
 	end
 	
 	local buttonFont = { targetFontName, fontSize, BlackColor }
 
 	table.insert(buttons, Button {
-		x = xPos,
-		y = yPos,
-		w = 96,
-		h = 30,
-		scale = 0.85, 
-		
+		x = xPos, y = yPos, w = 96, h = 30, scale = 0.85, 
 		label = labelStr,
-		font = buttonFont, -- Apply the specific font here
-		
+		font = buttonFont,
 		command = function() SelectLanguage(tempCode) end
 	})
 end
 
+-------------------------------------------------------------------------------
+-- Main UI Construction
 -------------------------------------------------------------------------------
 
 MakeDialog
 {
 	Bitmap
 	{
-		name="language_select",
-		x=1000, y=kCenter, image="image/popup_back_generic_tall",
+		name = "language_select",
+		x = 1000, y = kCenter, image = "image/popup_back_generic_tall",
 
 		SetStyle(C3DialogBodyStyle),
-		Text { x=20, y=35, w=459, h=30, label="#"..GetString"select_language", font={ uiFontName, 24, BlackColor }, flags=kVAlignCenter+kHAlignCenter },
+		Text { x = 20, y = 35, w = 459, h = 30, label = "#" .. GetString("select_language"), font = { uiFontName, 24, BlackColor }, flags = kVAlignCenter + kHAlignCenter },
 
 		SetStyle(C3ButtonStyle),
 		Group(buttons),
 		
-		Button { x=kCenter, y=417, name="cancel", label="cancel", cancel=true, command=function() FadeCloseWindow("language_select", "cancel") end },
+		Button { x = kCenter, y = 417, name = "cancel", label = "cancel", cancel = true, command = function() FadeCloseWindow("language_select", "cancel") end },
 	}
 }
 

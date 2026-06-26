@@ -75,7 +75,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gVersionString</Data></Cell>
-	 <Cell><Data ss:Type="String">ver. 1.1 (GameBoy2936's Revamp)</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design Reforged - v.1.1 (March 2026)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>
@@ -590,6 +590,18 @@
 	 <Cell><Data ss:Type="String">Select an entry from the list to view its details.</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_gender</Data></Cell>
+	 <Cell><Data ss:Type="String">Gender</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_dob</Data></Cell>
+	 <Cell><Data ss:Type="String">Date of Birth</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_nationality</Data></Cell>
+	 <Cell><Data ss:Type="String">Nationality</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">catalogue_likes</Data></Cell>
 	 <Cell><Data ss:Type="String">Likes</Data></Cell>
 	</Row>
@@ -598,20 +610,24 @@
 	 <Cell><Data ss:Type="String">Dislikes</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">catalogue_none_discovered</Data></Cell>
+	 <Cell><Data ss:Type="String">catalogue_notes</Data></Cell>
+	 <Cell><Data ss:Type="String">Notes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_none</Data></Cell>
 	 <Cell><Data ss:Type="String">None</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">catalogue_unknown_preference</Data></Cell>
-	 <Cell><Data ss:Type="String">???</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">catalogue_undiscovered_location</Data></Cell>
+	 <Cell><Data ss:Type="String">catalogue_unknown</Data></Cell>
 	 <Cell><Data ss:Type="String">???</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_category_label</Data></Cell>
 	 <Cell><Data ss:Type="String">Category</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_origin_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Origin</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_season_label</Data></Cell>
@@ -754,52 +770,28 @@
 	 <Cell><Data ss:Type="String">You are missing the ingredients required to make this recipe.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">stat_established_format</Data></Cell>
-	 <Cell><Data ss:Type="String">Established: %1%</Data></Cell>
+	 <Cell><Data ss:Type="String">upgrades</Data></Cell>
+	 <Cell><Data ss:Type="String">Upgrades</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">stat_top_product_format</Data></Cell>
-	 <Cell><Data ss:Type="String">Top Product: %1%</Data></Cell>
+	 <Cell><Data ss:Type="String">title_upgrades</Data></Cell>
+	 <Cell><Data ss:Type="String">Factory Upgrades</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">stat_total_cases_format</Data></Cell>
-	 <Cell><Data ss:Type="String">Total Output: %1% Cases</Data></Cell>
+	 <Cell><Data ss:Type="String">upgrade_owned</Data></Cell>
+	 <Cell><Data ss:Type="String">Owned</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">weekly_consumption</Data></Cell>
-	 <Cell><Data ss:Type="String">Weekly Consumption</Data></Cell>
+	 <Cell><Data ss:Type="String">upgrade_buy_machine</Data></Cell>
+	 <Cell><Data ss:Type="String">Buy Machine: %1%</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">machinery_equipment</Data></Cell>
-	 <Cell><Data ss:Type="String">Machinery &amp; Equipment</Data></Cell>
+	 <Cell><Data ss:Type="String">upgrade_buy_recycler</Data></Cell>
+	 <Cell><Data ss:Type="String">Buy Recycler: %1%</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">machinery_installed</Data></Cell>
-	 <Cell><Data ss:Type="String">INSTALLED</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">machinery_buy</Data></Cell>
-	 <Cell><Data ss:Type="String">Buy (%1%)</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">machinery_cost</Data></Cell>
-	 <Cell><Data ss:Type="String">%1%</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">prompt_buy_machinery</Data></Cell>
-	 <Cell><Data ss:Type="String">Install %1% machinery for %2%?</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">prompt_buy_recycler</Data></Cell>
-	 <Cell><Data ss:Type="String">Install Recycler unit for %1%?</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">recycler</Data></Cell>
-	 <Cell><Data ss:Type="String">Recycler</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">stat_na</Data></Cell>
-	 <Cell><Data ss:Type="String">N/A</Data></Cell>
+	 <Cell><Data ss:Type="String">factory_buyrecycler</Data></Cell>
+	 <Cell><Data ss:Type="String">Purchase Recycler for %1% production?&lt;br&gt;Cost: %2%</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gamble_options</Data></Cell>
@@ -915,15 +907,35 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_title</Data></Cell>
-	 <Cell><Data ss:Type="String">Special Order for %3%</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Order for {ender_char}</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_title_multi</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Multi-Order for {ender_char}</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver %1% cases of %2% for %3% at %6% in %7%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver {quantity} cases of {item} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_summary_multi2</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver {quantity_item1} cases of {item_item1} and {quantity_item2} cases of {item_item2} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_summary_multi3</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver {quantity_item1} cases of {item_item1}, {quantity_item2} cases of {item_item2}, and {quantity_item3} cases of {item_item3} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_intro</Data></Cell>
-	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED:&lt;br&gt;%1% cases of %2% for %3%.&lt;br&gt;Will pay %4%.&lt;br&gt;Required within %5% weeks or order will be cancelled.</Data></Cell>
+	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED:&lt;br&gt;{quantity} cases of {item} for {ender_char}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_intro_multi2</Data></Cell>
+	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED: MULTIPLE ARTICLES FOR {ender_char}.&lt;br&gt;{quantity_item1} cases of {item_item1}.&lt;br&gt;{quantity_item2} cases of {item_item2}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">delivery_intro_multi3</Data></Cell>
+	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED: MULTIPLE ARTICLES FOR {ender_char}.&lt;br&gt;{quantity_item1} cases of {item_item1}.&lt;br&gt;{quantity_item2} cases of {item_item2}.&lt;br&gt;{quantity_item3} cases of {item_item3}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>
@@ -1534,6 +1546,26 @@
 	 <Cell><Data ss:Type="String">Welcome to the world of Chocolatier!&lt;br&gt;&lt;br&gt;Generations ago, confectioner Marten Baumeister founded the chocolate company that bears his name, and for over a hundred years, the company has survived family squabbles, hostile competitors, and economic ups and downs.&lt;br&gt;&lt;br&gt;Today, in the twin shadows of the Great Depression and World War II, the company's factories have been converted for the war effort or lie unused, and the disappearance of her husband Sean has left Alex Tangye Fletcher unavailable to steer the company.&lt;br&gt;&lt;br&gt;Can you help them?</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">help_reforged</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to Reforged!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design Reforged is a total conversion and engine overhaul of the 2009 classic. By reverse-engineering the long-abandoned Playground SDK™ and decrypting the game's proprietary XML and Lua repositories, we've unlocked the ability to modernize the Baumeister legacy for 2026 and beyond.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_mechanics</Data></Cell>
+	 <Cell><Data ss:Type="String">Experience a dynamic living economy featuring a weekly random-event engine and a regional/global holiday system. With overhauled dialogue and character interactions, selectable difficulty tiers, random events, brand new lore expansions, a revamped Special Order system, the all-new Catalogue encyclopedia, and many more we can't list in here, the simulation runs deeper than ever before. Every variable has been retuned to provide a fresh challenge for veteran Chocolatiers.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_modding_text</Data></Cell>
+	 <Cell><Data ss:Type="String">Want to tweak the game? Reforged uses the Playground SDK™'s loose file priority. The game's assets are fully decrypted, meaning the scripts are open-sourced and readable. You can easily edit the game's extracted XML and Lua files in your 'assets' folder in Reforged's installed filepath, using any basic text editor to add new dialogue, add new recipes, alter economics, design brand new ports, or even write your own custom quests!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_upsell</Data></Cell>
+	 <Cell><Data ss:Type="String">The Chocolatier franchise lives on, all thanks to its loyal community - including you. Join fellow modders to share your custom creations, help document gameplay and lore, learn how to script your own expansions, or just chat with fellow Chocolatiers!&lt;br&gt;&lt;br&gt;Official Wiki: &lt;a id='http=https://the-chocolatier-series.fandom.com/wiki/The_Chocolatier_Series_Wiki'&gt;&lt;font color='0000ff'&gt;&lt;u&gt;https://the-chocolatier-series.fandom.com/wiki/The_Chocolatier_Series_Wiki&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;Discord Server: &lt;a id='http=https://discord.gg/ef3TPaVsmq'&gt;&lt;font color='0000ff'&gt;&lt;u&gt;https://discord.gg/ef3TPaVsmq&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">help_map</Data></Cell>
 	 <Cell><Data ss:Type="String">The Map</Data></Cell>
 	</Row>
@@ -1563,7 +1595,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_port_text</Data></Cell>
-	 <Cell><Data ss:Type="String">In every port, there are buildings, monuments, parks, and other public spaces full of interesting people.&lt;br&gt;&lt;br&gt;Buildings you can explore will pulse when you enter a port or roll over them. Click on a building or location to visit &#45;- you never know who you might meet! New ports will become available as you complete quests, build your business, and reach higher ranks.</Data></Cell>
+	 <Cell><Data ss:Type="String">In every port, there are buildings, monuments, parks, and other public spaces full of interesting people.&lt;br&gt;&lt;br&gt;Buildings you can explore will pulse when you enter a port or roll over them. Click on a building or location to visit - you never know who you might meet! New ports will become available as you complete quests, build your business, and reach higher ranks.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_market</Data></Cell>
@@ -1595,7 +1627,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_shop_misc</Data></Cell>
-	 <Cell><Data ss:Type="String">Some shopkeepers specialize in particular products. Haggling with the shop keeper may get you a better offer for the products they do buy... or it may not!</Data></Cell>
+	 <Cell><Data ss:Type="String">Once you own a shop, make sure to return regularly to pick up &quot;Special Orders&quot; from the shopkeepers to review details of incoming, smartly generated custom orders to rake up further profits. Some shopkeepers also may specialize in particular products. Haggling with the shop keeper may get you a better offer for the products they do buy... or it may not!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_chocolate</Data></Cell>
@@ -1635,7 +1667,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_kitchen_text</Data></Cell>
-	 <Cell><Data ss:Type="String">In the Secret Test Kitchen, you combine your ingredients in new and interesting ways to create combinations and recipes never seen before.</Data></Cell>
+	 <Cell><Data ss:Type="String">In the Secret Test Kitchen, you have total creative freedom to combine your ingredients in new and interesting ways to create recipes never seen before.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_kitchen_drawers</Data></Cell>
@@ -1643,11 +1675,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_kitchen_create</Data></Cell>
-	 <Cell><Data ss:Type="String">To create a recipe, select a product category from the options on the bulletin board, then select ingredients from your drawers, clicking to place ingredients on the plates. Click on a full plate to clear it.</Data></Cell>
+	 <Cell><Data ss:Type="String">To create a recipe, select a product category from the bulletin board. You can now customize your recipe's complexity by adding or removing ingredient bowls using the (+/-) buttons! Chocolates support 2 to 6 ingredients, while Coffees utilize 3 to 5. Click drawers to place ingredients, and click a full bowl to clear it.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_kitchen_next</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;%invent_taste%&quot; to get some feedback from Teddy, then make adjustments and click &quot;%design_recipe%&quot; when you're ready to move on to the next step.</Data></Cell>
+	 <Cell><Data ss:Type="String">Click "%invent_taste%" to get specific, detailed flavor critiques from Teddy. Pay close attention to his feedback on your pairings! Make adjustments and click "%design_recipe%" when you're ready to move on to the next step.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_design</Data></Cell>
@@ -1688,6 +1720,34 @@
 	<Row>
 	 <Cell><Data ss:Type="String">help_quests_ledger</Data></Cell>
 	 <Cell><Data ss:Type="String">Your selected quest goal appears in your ledger. The green indicator flashes when you have completed your goals.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_catalogue</Data></Cell>
+	 <Cell><Data ss:Type="String">Catalogue</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_catalogue_text</Data></Cell>
+	 <Cell><Data ss:Type="String">The Catalogue is your personal, auto-updating encyclopedia of the chocolate world, brand new to Chocolatier: Decadence by Design Reforged. As you travel the globe, meet new people, and discover rare ingredients, this repository will automatically fill with valuable information to help you manage your growing empire.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_catalogue_history</Data></Cell>
+	 <Cell><Data ss:Type="String">The History tab serves as a centralized archive of the Baumeister family's legacy, housing notes on the rich history of Baumeister Confections' past. You can even find letters, journals and memos left behind by Baumeister family members themselves that you pick up through your career!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_catalogue_characters</Data></Cell>
+	 <Cell><Data ss:Type="String">The Characters tab contains detailed biographies of the people you meet. As you fulfill Special Orders and interact with locals, you will uncover their specific flavor "Likes" and "Dislikes," which is crucial for predicting their requests and maximizing your profits.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_catalogue_ingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">Use the Ingredients tab to track the raw materials you have discovered. It records essential data such as the best known prices, the ports where the ingredient is sold, and critical seasonality calendars so you know when to buy low.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_catalogue_ports</Data></Cell>
+	 <Cell><Data ss:Type="String">The Ports tab provides historical and geographical data for every location you visit. Unlocked entries will give you a better understanding of the local culture and trade economy.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_catalogue_locked</Data></Cell>
+	 <Cell><Data ss:Type="String">Entries marked with question marks (????) represent people, places, or ingredients you have not yet discovered. Keep exploring the world and expanding your business to uncover all of the Catalogue's secrets!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_recipes</Data></Cell>
@@ -2835,7 +2895,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m07_desc</Data></Cell>
-	 <Cell><Data ss:Type="String">Ground coffee and ground spices are the secret behind this delightful blend.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ground coffee, spices and rum are the secret behind this delightful blend.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m08</Data></Cell>
@@ -2851,7 +2911,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m09_desc</Data></Cell>
-	 <Cell><Data ss:Type="String">Like desert in a cup!</Data></Cell>
+	 <Cell><Data ss:Type="String">Like dessert in a cup!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">m10</Data></Cell>
@@ -3095,7 +3155,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gob_xxx</Data></Cell>
-	 <Cell><Data ss:Type="String">Nyama's Outpost</Data></Cell>
+	 <Cell><Data ss:Type="String">Nyamjarjav's Outpost</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gob_greatwall</Data></Cell>
@@ -3507,7 +3567,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bog_plantationkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Jorge Gaitain</Data></Cell>
+	 <Cell><Data ss:Type="String">Jorge Montoya</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bog_shopkeep</Data></Cell>
@@ -3515,7 +3575,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">cap_factorykeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Alice van der Stel</Data></Cell>
+	 <Cell><Data ss:Type="String">Alice van Niekerk</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">cap_marketkeep</Data></Cell>
@@ -3555,7 +3615,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gob_xxxkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Nyama</Data></Cell>
+	 <Cell><Data ss:Type="String">Nyamjarjav</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">hav_casinokeep</Data></Cell>
@@ -3783,7 +3843,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">zur_bankkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Nino Bragger</Data></Cell>
+	 <Cell><Data ss:Type="String">Nino Brägger</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">zur_factorykeep</Data></Cell>
@@ -3883,7 +3943,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">trav_16</Data></Cell>
-	 <Cell><Data ss:Type="String">Agnessa Hadonov</Data></Cell>
+	 <Cell><Data ss:Type="String">Agnessa Hadonova</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">trav_17</Data></Cell>
@@ -3938,7 +3998,7 @@
 	 <Cell><Data ss:Type="String">Deal</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">fair enough</Data></Cell>
+	 <Cell><Data ss:Type="String">fairenough</Data></Cell>
 	 <Cell><Data ss:Type="String">Fair Enough</Data></Cell>
 	</Row>
 	<Row>
@@ -3970,6 +4030,10 @@
 	 <Cell><Data ss:Type="String">I'll Do It</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">illgetrightonit</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Get Right On It</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">illtakeit</Data></Cell>
 	 <Cell><Data ss:Type="String">I'll Take It!</Data></Cell>
 	</Row>
@@ -3998,6 +4062,10 @@
 	 <Cell><Data ss:Type="String">It's a Deal</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">leaveittome</Data></Cell>
+	 <Cell><Data ss:Type="String">Leave It To Me</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">ofcourse</Data></Cell>
 	 <Cell><Data ss:Type="String">Of Course!</Data></Cell>
 	</Row>
@@ -4012,6 +4080,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">sure</Data></Cell>
 	 <Cell><Data ss:Type="String">Sure!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">weareinbusiness</Data></Cell>
+	 <Cell><Data ss:Type="String">We Are In Business</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">whynot</Data></Cell>
@@ -4066,6 +4138,10 @@
 	 <Cell><Data ss:Type="String">Another Time</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">illgetbacktoyou</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Get Back To You</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">inawhile</Data></Cell>
 	 <Cell><Data ss:Type="String">In a While</Data></Cell>
 	</Row>
@@ -4076,6 +4152,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">laterperhaps</Data></Cell>
 	 <Cell><Data ss:Type="String">Later, Perhaps...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">letmethinkaboutit</Data></Cell>
+	 <Cell><Data ss:Type="String">Let Me Think About It</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">maybelater</Data></Cell>
@@ -4122,12 +4202,20 @@
 	 <Cell><Data ss:Type="String">I'm Fine, Thanks</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">imout</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Out</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">impossible</Data></Cell>
 	 <Cell><Data ss:Type="String">Impossible</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">never</Data></Cell>
 	 <Cell><Data ss:Type="String">Never!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nodeal</Data></Cell>
+	 <Cell><Data ss:Type="String">No Deal</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nonever</Data></Cell>
@@ -4162,6 +4250,10 @@
 	 <Cell><Data ss:Type="String">No, Thanks</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">noway</Data></Cell>
+	 <Cell><Data ss:Type="String">No Way</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">notachance</Data></Cell>
 	 <Cell><Data ss:Type="String">Not a Chance</Data></Cell>
 	</Row>
@@ -4172,6 +4264,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">notreally</Data></Cell>
 	 <Cell><Data ss:Type="String">Not Really</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">notworthmytime</Data></Cell>
+	 <Cell><Data ss:Type="String">Not Worth My Time</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">regrettablyno</Data></Cell>
@@ -4196,6 +4292,14 @@
 	<Row>
 	 <Cell><Data ss:Type="String">allright</Data></Cell>
 	 <Cell><Data ss:Type="String">All Right</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">copythat</Data></Cell>
+	 <Cell><Data ss:Type="String">Copy That</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">goodtoknow</Data></Cell>
+	 <Cell><Data ss:Type="String">Good to Know</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">isee</Data></Cell>
@@ -4226,6 +4330,14 @@
 	 <Cell><Data ss:Type="String">Makes Sense to Me</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">noted</Data></Cell>
+	 <Cell><Data ss:Type="String">Noted</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">understandable</Data></Cell>
+	 <Cell><Data ss:Type="String">Understandable</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">understood</Data></Cell>
 	 <Cell><Data ss:Type="String">Understood</Data></Cell>
 	</Row>
@@ -4246,8 +4358,12 @@
 	 <Cell><Data ss:Type="String">Go On...</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">details</Data></Cell>
+	 <Cell><Data ss:Type="String">ineeddetails</Data></Cell>
 	 <Cell><Data ss:Type="String">I Need Details</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iminterested</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Interested</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">imlistening</Data></Cell>
@@ -4258,32 +4374,24 @@
 	 <Cell><Data ss:Type="String">Let's Hear It</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">elaborate</Data></Cell>
+	 <Cell><Data ss:Type="String">pleaseelaborate</Data></Cell>
 	 <Cell><Data ss:Type="String">Please Elaborate</Data></Cell>
-	</Row>
-    <Row>
-	 <Cell><Data ss:Type="String">onmyway</Data></Cell>
-	 <Cell><Data ss:Type="String">On My Way</Data></Cell>
-    </Row>
-	<Row>
-	 <Cell><Data ss:Type="String">nicetomeetyou</Data></Cell>
-	 <Cell><Data ss:Type="String">Nice to Meet You</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tellmemore</Data></Cell>
 	 <Cell><Data ss:Type="String">Tell Me More</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">thankyou</Data></Cell>
-	 <Cell><Data ss:Type="String">Thank You</Data></Cell>
+	 <Cell><Data ss:Type="String">youhavemyattention</Data></Cell>
+	 <Cell><Data ss:Type="String">You Have My Attention</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">thanks</Data></Cell>
-	 <Cell><Data ss:Type="String">Thanks!</Data></Cell>
+	 <Cell><Data ss:Type="String">anytime</Data></Cell>
+	 <Cell><Data ss:Type="String">Anytime!</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">iappreciateit</Data></Cell>
-	 <Cell><Data ss:Type="String">I Appreciate It</Data></Cell>
+	 <Cell><Data ss:Type="String">enjoy</Data></Cell>
+	 <Cell><Data ss:Type="String">Enjoy!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gladtobeofservice</Data></Cell>
@@ -4298,6 +4406,10 @@
 	 <Cell><Data ss:Type="String">My Pleasure!</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">pleasuredoingbusiness</Data></Cell>
+	 <Cell><Data ss:Type="String">Pleasure Doing Business</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">noproblem</Data></Cell>
 	 <Cell><Data ss:Type="String">No Problem</Data></Cell>
 	</Row>
@@ -4306,28 +4418,168 @@
 	 <Cell><Data ss:Type="String">You're Welcome</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">goodtoseeyou</Data></Cell>
-	 <Cell><Data ss:Type="String">Good to See You</Data></Cell>
+	 <Cell><Data ss:Type="String">couldvebeenworse</Data></Cell>
+	 <Cell><Data ss:Type="String">Could've Been Worse</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">goodiwasworried</Data></Cell>
+	 <Cell><Data ss:Type="String">Good. I Was Worried!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">phew</Data></Cell>
+	 <Cell><Data ss:Type="String">Phew...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thankgoodness</Data></Cell>
+	 <Cell><Data ss:Type="String">Thank Goodness</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thatwasclose</Data></Cell>
+	 <Cell><Data ss:Type="String">That Was Close!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">luckybreak</Data></Cell>
+	 <Cell><Data ss:Type="String">What a Lucky Break</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">goodgrief</Data></Cell>
+	 <Cell><Data ss:Type="String">Good Grief...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">howdarethey</Data></Cell>
+	 <Cell><Data ss:Type="String">How Dare They...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">iamsorry</Data></Cell>
 	 <Cell><Data ss:Type="String">I Am Sorry</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">metoo</Data></Cell>
-	 <Cell><Data ss:Type="String">Me Too!</Data></Cell>
+	 <Cell><Data ss:Type="String">iknow</Data></Cell>
+	 <Cell><Data ss:Type="String">I Know</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">really</Data></Cell>
-	 <Cell><Data ss:Type="String">Really?</Data></Cell>
+	 <Cell><Data ss:Type="String">illmakeituptoyou</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Make It Up To You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imfurious</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Furious</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imsosorry</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm So Sorry</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lessonlearned</Data></Cell>
+	 <Cell><Data ss:Type="String">Lesson Learned</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">myapologies</Data></Cell>
+	 <Cell><Data ss:Type="String">My Apologies</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mybad</Data></Cell>
+	 <Cell><Data ss:Type="String">My Bad</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">pleaseforgiveme</Data></Cell>
+	 <Cell><Data ss:Type="String">Please, Forgive Me!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">thatsunfortunate</Data></Cell>
 	 <Cell><Data ss:Type="String">That's Unfortunate</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">understandable</Data></Cell>
-	 <Cell><Data ss:Type="String">Understandable</Data></Cell>
+	 <Cell><Data ss:Type="String">theyplayedus</Data></Cell>
+	 <Cell><Data ss:Type="String">They Played Us...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thosecowards</Data></Cell>
+	 <Cell><Data ss:Type="String">Those Cowards...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unbelievable</Data></Cell>
+	 <Cell><Data ss:Type="String">Unbelievable</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">whatashame</Data></Cell>
+	 <Cell><Data ss:Type="String">What a Shame</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wonthappenagain</Data></Cell>
+	 <Cell><Data ss:Type="String">Won't Happen Again</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">howdareyou</Data></Cell>
+	 <Cell><Data ss:Type="String">How Dare You!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imcallingthepolice</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Calling the Police!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nostop</Data></Cell>
+	 <Cell><Data ss:Type="String">NO! STOP!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">really</Data></Cell>
+	 <Cell><Data ss:Type="String">Really?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thief</Data></Cell>
+	 <Cell><Data ss:Type="String">Thief!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thisisoutrageous</Data></Cell>
+	 <Cell><Data ss:Type="String">This is Outrageous!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">what</Data></Cell>
+	 <Cell><Data ss:Type="String">What?!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wow</Data></Cell>
+	 <Cell><Data ss:Type="String">Wow...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yougottobekiddingme</Data></Cell>
+	 <Cell><Data ss:Type="String">You've Got To Be Kidding Me</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youwouldntdare</Data></Cell>
+	 <Cell><Data ss:Type="String">You Wouldn't Dare!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youllpayforthis</Data></Cell>
+	 <Cell><Data ss:Type="String">You'll Pay For This...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">iappreciateit</Data></Cell>
+	 <Cell><Data ss:Type="String">I Appreciate It</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">goodtoseeyou</Data></Cell>
+	 <Cell><Data ss:Type="String">Good to See You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">metoo</Data></Cell>
+	 <Cell><Data ss:Type="String">Me Too!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nicetomeetyou</Data></Cell>
+	 <Cell><Data ss:Type="String">Nice to Meet You</Data></Cell>
+	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">onmyway</Data></Cell>
+	 <Cell><Data ss:Type="String">On My Way</Data></Cell>
+    </Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thankyou</Data></Cell>
+	 <Cell><Data ss:Type="String">Thank You</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">thanks</Data></Cell>
+	 <Cell><Data ss:Type="String">Thanks!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">youhavemysupport</Data></Cell>

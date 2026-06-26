@@ -171,11 +171,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I happen to know a lady who is holding a pair of exotics recipes. Her name is Keylla, and you'll find her at the %lim_plaza% in %lima%, Peru. To influence her to share them, I suggest you should bring her [D|5 dozen|90|150] cases of %t06%, and then she'll set you up.</Data></Cell>
+	 <Cell><Data ss:Type="String">I happen to know a lady who is holding a pair of exotics recipes. Frankly, my aged brain has gone a bit fuzzy on the specifics, though. I do know her name is Keylla and was from a Spanish-speaking country, I just don't know where exactly. But to influence her to share the recipes, I suggest you should bring her [D|5 dozen|90|150] cases of %t06%. Then, she'll set you up.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver [D|60|90|150] cases of %t06% to someone named Keylla at %lim_plaza% in %lima%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [D|60|90|150] cases of %t06% to someone named Keylla in a Spanish-speaking port.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_incomplete_1</Data></Cell>
@@ -447,7 +447,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome to %bag_shop%, &lt;player&gt;. I am pleased to make your acquaintance, and look forward to a long and fruitful partnership. I heard that François sent you, too. He talks much, that Frenchman, but he has good taste. This pumpkin is very strange to my palate, but I can't stop drinking it. Perhaps François was right that we must evolve.&lt;br&gt;&lt;br&gt;Here is a recipe for %m09% - something sweet for the new generation. And do feel free to step inside and review my current prices.</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to %bag_shop%, &lt;player&gt;. I am pleased to make your acquaintance, and look forward to a long and fruitful partnership. I heard that François sent you, too. He talks much, that Frenchman, but he has good taste. This pumpkin is very strange to my palate, but I can't stop drinking it.&lt;br&gt;&lt;br&gt;Here is a recipe for %m09% - something sweet for the new generation. And do feel free to step inside and review my current prices.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_incomplete_1</Data></Cell>
@@ -538,16 +538,28 @@
 	 <Cell><Data ss:Type="String">For my part, Sean is alive. We've got some work to do to rescue him, and I trust you are prepared to help me out. I will keep you posted.&lt;br&gt;&lt;br&gt;You'll want to make sure to use those spaces and create good recipes - you'll be needing those confections soon...</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_main_elen_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome to Canada, &lt;player&gt;. It brings me such relief to finally meet the person Alexandra has placed so much faith in. While Joseph busies himself with the machinery of business, I find myself waiting here for news... any news, really... of our missing family.&lt;br&gt;&lt;br&gt;I manage the guest relations for our partners here. If you find yourself exhausted by the factories and business ventures, you are always welcome here at the %tor_hotel%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_main_jose_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">You know, I feel a bit sentimental, and I wanted to share something to you. There was a time, years ago, when I thought I knew exactly how this company should be run. I was wrong. My daughter Alex had to essentially stage a coup to show me that I'd grown stagnant.&lt;br&gt;&lt;br&gt;It's a bitter pill for a father to swallow, but look at us now. Blending coffee in Canada is indeed a long way from the old days in California.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_main_whit_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Teddy thinks he's the only 'visionary' in the family just because he's hiding in a volcano in Iceland. Typical big brother behavior!&lt;br&gt;&lt;br&gt;I tell him: any idiot can mix ingredients in a bowl. It takes a real artist to calibrate a high-pressure injector to handle macadamia nut oils without clogging the pipes.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_tor_shopkeep_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">I just got off the telephone with %main_whit% down in New Zealand. That woman is an absolute mad scientist! She started talking about the melting point of cocoa butter and the shear strength of macadamia nuts like she was building a bridge. Honestly, darling? I love her.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">rank3_story_tok_mountainkeep_1_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">You're back. You look like you've seen a ghost. Let me guess... a rumor about a parachute?&lt;br&gt;&lt;br&gt;You're looking at the man who saw it. It was me. Fletcher's plane was hit hard, but I saw a chute open clear as day. I reported it, of course, but my statement got 'lost.' Officially, the sighting was deemed 'unreliable due to combat stress.' What a load of garbage.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_story_tok_mountainkeep_1_extra01_1</Data></Cell>
 	 <Cell><Data ss:Type="String">The whole thing stank from the start. The one who pushed to bury my report was our squadron's liaison officer, a real cold fish named %evil_wolf%. He was a German defector flying for us, and he never sat right with me.&lt;br&gt;&lt;br&gt;Oh, well. At least I'm glad someone like you's asking the right questions...</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">rank3_story_main_elen_1_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome to Canada, &lt;player&gt;. It brings me such relief to finally meet the person Alexandra has placed so much faith in. While Joseph busies himself with the machinery of business, I find myself waiting here for news... any news, really... of our missing family.&lt;br&gt;&lt;br&gt;I manage the guest relations for our partners here. If you find yourself exhausted by the factories and business ventures, you are always welcome here at the %tor_hotel%.</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

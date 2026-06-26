@@ -5,6 +5,7 @@
 
 -------------------------------------------------------------------------------
 
+local bodyFont = { uiFontName, 16, BlackColor }
 local reg_scale = 0.75
 
 local ask = Dollars(b01.price_high)
@@ -17,7 +18,7 @@ MakeDialog
 	Bitmap { x=0,y=103, image="image/button_box_up",
 		Bitmap { x=35,y=46, image="items/b01_big", scale=0.5 } },
 	Text { x=135,y=103,w=320,h=145, flags=kVAlignCenter+kHAlignLeft, label="#"..GetString("help_shop_sell") },
-	Text { x=55,y=255,w=640,h=130, flags=kVAlignTop+kHAlignCenter, label="#"..GetString("help_shop_misc") },
+	Text { x=55,y=255,w=640,h=130, flags=kVAlignTop+kHAlignCenter, font=bodyFont, label="#"..GetString("help_shop_misc") },
 
 	Bitmap
 	{

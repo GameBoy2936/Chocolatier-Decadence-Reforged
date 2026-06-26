@@ -59,495 +59,507 @@
    <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_prompt</Data></Cell>
-	 <Cell><Data ss:Type="String">An Invitation from %main_jose%</Data></Cell>
+	 <Cell><Data ss:Type="String">Une invitation de %main_jose%</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%main_jose% is eager to in meet with you, &lt;player&gt;. Would you be able to pay him a visit at %tor_office% in %toronto%?</Data></Cell>
+	 <Cell><Data ss:Type="String">%main_jose% a hâte de vous rencontrer, &lt;player&gt;. Pourriez-vous lui rendre visite à %tor_office% à %toronto% ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_prompt_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Go visit with %main_jose% at %tor_office% in %toronto%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Rendez visite à %main_jose% à %tor_office% à %toronto%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph</Data></Cell>
-	<Cell><Data ss:Type="String">The Endorsements of Joseph</Data></Cell>
+	<Cell><Data ss:Type="String">Le soutien de Joseph</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I must admit it, you have been doing a wonderful job for us. When I first heard of your efforts, I was skeptical, but then again, I am skeptical by nature. In any event, I am most pleased with the direction you have taken the company. I am confident you will be able to earn the remaining endorsements - in fact I am ready to tell you how you can do so now.</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, je dois l'admettre, vous avez fait un travail formidable pour nous. Quand j'ai entendu parler de vos efforts pour la première fois, j'étais sceptique, mais encore une fois, je suis sceptique par nature. Quoi qu'il en soit, je suis très satisfait de la direction que vous avez fait prendre à l'entreprise. Je suis convaincu que vous parviendrez à obtenir les derniers soutiens ; en fait, je suis prêt à vous dire comment y parvenir dès maintenant.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Alex has supported you from the get go, and you have already earned the trust of Evangeline, Deiter and Felix. You only have myself and Whitney left to convince. I'll let Whitney explain what she would like to see you accomplish - as for me, I have been working with Brooke, the boss of our factory here in Toronto, on some enhancements for Felix's coffee machines. We are now set up and ready to launch a line of Blended Coffees. </Data></Cell>
+	 <Cell><Data ss:Type="String">Alex vous a soutenu depuis le début, et vous avez déjà gagné la confiance d'Evangeline, de Deiter et de Felix. Il ne vous reste plus qu'à convaincre Whitney et moi-même. Je laisserai Whitney vous expliquer ce qu'elle attend de vous. Quant à moi, j'ai travaillé avec Brooke, la directrice de notre usine ici à Toronto, sur quelques améliorations pour les machines à café de Felix. Nous sommes maintenant prêts à lancer une gamme de Mélanges de café.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'd like you to help me convince the other members of the board that we can be successful with these products. I need you to not only nearly fill the Coffee Blends page of our recipe book, but also to have [D|$3,000,000|$4,500,000|$7,500,000] in the bank. Once you have accomplished these things, I will gladly confer my endorsement.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'aimerais que vous m'aidiez à convaincre les autres membres du conseil d'administration que nous pouvons réussir avec ces produits. Vous devez non seulement presque remplir la page des Mélanges de café de notre carnet de recettes, mais aussi avoir[D|3 000 000 $|4 500 000 $|7 500 000 $] en banque. Une fois que vous aurez accompli tout cela, je vous accorderai volontiers mon soutien.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Collect 11 recipes for Coffee Blends and have at least [D|$3,000,000|$4,500,000|$7,500,000] on hand to earn Joseph's endorsement.</Data></Cell>
+	 <Cell><Data ss:Type="String">Collectionnez 11 recettes de Mélanges de café et ayez au moins[D|3 000 000 $|4 500 000 $|7 500 000 $] en banque pour obtenir le soutien de Joseph.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Terrific work, &lt;player&gt;. I've been saving this final blends recipe for you...</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent travail, &lt;player&gt;. J'avais gardé cette dernière recette de mélange pour vous...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_extra03_1</Data></Cell>
-	 <Cell><Data ss:Type="String">And, as promised, I am fully on board with you becoming our %rank_4% - you have earned my endorsement, &lt;player&gt;. Keep up the great work!</Data></Cell>
+	 <Cell><Data ss:Type="String">Et, comme promis, je suis tout à fait d'accord pour que vous deveniez notre %rank_4% : vous avez gagné mon soutien, &lt;player&gt;. Continuez votre excellent travail !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_jose_middle_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're on the right track, &lt;player&gt;. Keep going until you've met the goals we discussed - [D|$3,000,000|$4,500,000|$7,500,000] in your account and 11 Coffee Blends recipes collected...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes sur la bonne voie, &lt;player&gt;. Continuez jusqu'à ce que vous ayez atteint les objectifs dont nous avons parlé :[D|3 000 000 $|4 500 000 $|7 500 000 $] sur votre compte et 11 recettes de Mélanges de café obtenues...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney</Data></Cell>
-	 <Cell><Data ss:Type="String">From Joseph to Whitney</Data></Cell>
+	 <Cell><Data ss:Type="String">De Joseph à Whitney</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'd like you to go see Whitney in Wellington. Bring her a sample from your first batch of Coffee Blends. Here is the first recipe that you will need...</Data></Cell>
+	 <Cell><Data ss:Type="String">J'aimerais que vous alliez voir Whitney à Wellington. Apportez-lui un échantillon de votre première production de Mélanges de café. Voici la première recette dont vous aurez besoin...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Just bring her [D|a case|10 cases|25 cases] of those %m01%, and she'll let you know what she has in mind.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez-lui simplement [D|une caisse|10 caisses|25 caisses] de ces %m01%, et elle vous dira ce qu'elle a en tête.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|a case|10 cases|25 cases] of %m01% to %main_whit% at %wel_factory% in %wellington%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|1 caisse|10 caisses|25 caisses] de %m01% à %main_whit% à %wel_factory% à %wellington%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">My first cousin Joseph told me that he had given you a recipe and prepared the Toronto factory to make %m01%, and that you were planning to offer me a taste? Does this ring any bells, &lt;player&gt;?</Data></Cell>
+	 <Cell><Data ss:Type="String">Mon cousin germain Joseph m'a dit qu'il vous avait donné une recette et préparé l'usine de Toronto pour fabriquer des %m01%, et que vous comptiez m'en offrir une dégustation ? Cela vous dit-il quelque chose, &lt;player&gt; ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Tasty! I agree with Joseph - I think your new line of Coffee Blends are going to do wonderfully for our company!</Data></Cell>
+	 <Cell><Data ss:Type="String">Savoureux ! Je suis d'accord avec Joseph : je pense que votre nouvelle gamme de Mélanges de café va faire des merveilles pour notre entreprise !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">brooke_welcome_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">All right, &lt;player&gt;, step inside and let's crank up these machines!&lt;br&gt;&lt;br&gt;Our belts are a bit wider than Felix's down in %capetown%, to accommodate more ingredients. But I think you'll get the hang of things in no time flat...</Data></Cell>
+	 <Cell><Data ss:Type="String">Très bien, &lt;player&gt;, entrez et faisons tourner ces machines !&lt;br&gt;&lt;br&gt;Nos tapis sont un peu plus larges que ceux de Felix à %capetown%, pour accueillir plus d'ingrédients. Mais je suis sûre que vous prendrez le coup de main en un rien de temps...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_whitney</Data></Cell>
-	<Cell><Data ss:Type="String">Endorsement by Whitney</Data></Cell>
+	<Cell><Data ss:Type="String">Le soutien de Whitney</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_whitney_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Our factory here is configured for Exotics - my own favorite treats. It is also important to me that you are continuing to show success with your own creations. I will endorse your promotion to %rank_4%, and give you an excellent exotic recipe, once you have learned all the other 11 Exotics recipes, as well as created at least [D|7|8|9] confections of your own.</Data></Cell>
+	 <Cell><Data ss:Type="String">Notre usine ici est configurée pour les Exotiques : mes friandises préférées. Il est également important pour moi que vous continuiez à avoir du succès avec vos propres créations. Je soutiendrai votre promotion au poste de %rank_4%, et vous donnerai une excellente recette d'exotiques, une fois que vous aurez appris les 11 autres recettes d'Exotiques et créé au moins [D|7|8|9] confiseries de votre propre invention.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_whitney_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Learn 11 Exotics recipes, and invent at least [D|7|8|9] recipes of your own, to gain Whitney's endorsement.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apprenez 11 recettes d'Exotiques et inventez au moins[D|7|8|9] de vos propres recettes pour obtenir le soutien de Whitney.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_whitney_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You are doing a truly magnificent job, &lt;player&gt;. It is my pleasure to offer you the final exotics recipe - for %e12% - and, more importantly, my endorsement of your abilities to lead our company into the future. Nice work!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous faites un travail vraiment magnifique, &lt;player&gt;. C'est un plaisir de vous offrir la dernière recette d'exotiques (pour les %e12%) et, plus important encore, mon soutien quant à vos capacités à diriger notre entreprise vers l'avenir. Beau travail !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">back_to_joseph</Data></Cell>
-	 <Cell><Data ss:Type="String">From Whitney to Joseph</Data></Cell>
+	 <Cell><Data ss:Type="String">De Whitney à Joseph</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">back_to_joseph_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am going to ask you to return Joseph's favor, and to bring him a sample of your first batch of Exotics. This is a truly sophisticated factory - you've got 3 colors to match, and a recycler just in case. Good luck!</Data></Cell>
+	 <Cell><Data ss:Type="String">Je vais vous demander de rendre la pareille à Joseph, et de lui apporter un échantillon de votre première production d'Exotiques. C'est une usine vraiment sophistiquée : vous avez 3 couleurs à assortir, et un recycleur au cas où. Bonne chance !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">back_to_joseph_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|a case|10 cases|25 cases] of %e01% to %main_jose% at %tor_office% in %toronto%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|1 caisse|10 caisses|25 caisses] de %e01% à %main_jose% à %tor_office% à %toronto%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">back_to_joseph_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have seen Whitney, correct? And she gave you a recipe for %e01%, right? She assured me that you would be bringing me a sample to try...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez vu Whitney, c'est bien ça ? Et elle vous a donné une recette pour les %e01%, n'est-ce pas ? Elle m'a assuré que vous m'apporteriez un échantillon à goûter...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">back_to_joseph_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Tasty! You are really on a tear, &lt;player&gt;, launching new product types fast and furious! I have no doubt that you will succeed in all you set out to accomplish.</Data></Cell>
+	 <Cell><Data ss:Type="String">Savoureux ! Vous êtes vraiment sur une belle lancée, &lt;player&gt;, lançant de nouveaux types de produits à un rythme effréné ! Je ne doute pas que vous réussirez tout ce que vous entreprenez.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01</Data></Cell>
-	 <Cell><Data ss:Type="String">A Lead on Exotics</Data></Cell>
+	 <Cell><Data ss:Type="String">Une piste sur les Exotiques</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I happen to know a lady who is holding a pair of exotics recipes. Her name is Keylla, and you'll find her at the %lim_plaza% in %lima%, Peru. To influence her to share them, I suggest you should bring her [D|5 dozen|90|150] cases of %t06%, and then she'll set you up.</Data></Cell>
+	 <Cell><Data ss:Type="String">Il se trouve que je connais une dame qui possède quelques recettes d'exotiques. Franchement, mon vieux cerveau est devenu un peu flou sur les détails, cependant. Je sais qu'elle s'appelle Keylla et qu'elle vient d'un pays hispanophone, je ne sais juste pas où exactement. Mais pour l'encourager à partager ses recettes, je vous suggère de lui apporter [D|60|90|150] caisses de %t06%. Ensuite, elle vous arrangera ça.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver [D|60|90|150] cases of %t06% to someone named Keylla at %lim_plaza% in %lima%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Livrez [D|60|90|150] caisses de %t06% à une certaine Keylla dans un port hispanophone.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm happy to see you &lt;player&gt;, I've heard wonderful things about your confections. In particular, I heard I might really enjoy some %t06%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis heureuse de vous voir, &lt;player&gt;. J'ai entendu des choses merveilleuses sur vos confiseries. En particulier, j'ai entendu dire que je pourrais vraiment apprécier des %t06%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%lim_plazakeep% is holding a couple of recipes for exotics for you. As long as you show up with [D|60|90|150] cases of %t06%, she'll be willing to share what she's got.</Data></Cell>
+	 <Cell><Data ss:Type="String">%lim_plazakeep% garde quelques recettes d'exotiques pour vous. Si vous vous présentez avec[D|60|90|150] caisses de %t06%, elle sera prête à partager ce qu'elle a.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02</Data></Cell>
-	 <Cell><Data ss:Type="String">A Pair of Exotics Recipes</Data></Cell>
+	 <Cell><Data ss:Type="String">Une paire de recettes exotiques</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am impressed, &lt;player&gt; - your %t06% are delicious.&lt;br&gt;&lt;br&gt;I have a couple of exotics recipes that I would be willing to part with. I tell you what - I'll hand over the first one now, and when you bring me [D|50|75|125] cases of those, I'll hand over the second. OK?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis impressionnée, &lt;player&gt; : vos %t06% sont délicieuses.&lt;br&gt;&lt;br&gt;J'ai deux recettes d'exotiques dont je serais prête à me séparer. Voilà ce qu'on va faire : je vous donne la première maintenant, et quand vous m'apporterez[D|50|75|125] caisses de celles-ci, je vous donnerai la seconde. D'accord ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent - here's the recipe, and I look forward to receiving the [D|50|75|125] cases.</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. Voici la recette, et j'ai hâte de recevoir les[D|50|75|125] caisses.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e03% to Keylla at %lim_plaza% in %lima%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|50|75|125] caisses de %e03% à Keylla à %lim_plaza% à %lima%. </Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Perfect! Here is the other recipe I mentioned.</Data></Cell>
+	 <Cell><Data ss:Type="String">Parfait ! Voici l'autre recette dont je vous ai parlé.</Data></Cell>
 	</Row>
    <Row>
      <Cell><Data ss:Type="String">rank3_02_extra02_1</Data></Cell>
-     <Cell><Data ss:Type="String">You know, it is funny. I have recognized seeing you and %main_alex% coming into Peru lately. She's looking for her husband, Sean, right?&lt;br&gt;&lt;br&gt;Well, I've heard of what Schokolade Weltreich is really trying to do behind the scenes. I did see %evil_wolf% pass around here a month or two ago. He is not a kind man. You should stay away from him if you're travelling around, because he does have some tricks upon his sleeve...</Data></Cell>
+     <Cell><Data ss:Type="String">Vous savez, c'est curieux. J'ai remarqué que %main_alex% et vous étiez venus au Pérou récemment. Elle cherche son mari, Sean, n'est-ce pas ?&lt;br&gt;&lt;br&gt;Eh bien, j'ai entendu parler de ce que Schokolade Weltreich essaie vraiment de faire en coulisses. J'ai vu %evil_wolf% passer par ici il y a un mois ou deux. Ce n'est pas un homme bienveillant. Vous devriez rester loin de lui si vous voyagez, car il a plus d'un tour dans son sac...</Data></Cell>
    </Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You've got the recipe, right? You do want the other recipe, right? Well, you need to bring me those [D|50|75|125] cases of %e03%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez la recette, n'est-ce pas ? Et vous voulez l'autre recette, non ? Eh bien, vous devez m'apporter ces [D|50|75|125] caisses de %e03%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%lim_plazakeep% is holding another recipe for you. Once you show up with [D|50|75|125] cases of %e03%, she'll be willing to share what she's got.</Data></Cell>
+	 <Cell><Data ss:Type="String">%lim_plazakeep% garde une autre recette pour vous. Dès que vous vous présenterez avec [D|50|75|125] caisses de %e03%, elle sera disposée à la partager.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03</Data></Cell>
-	 <Cell><Data ss:Type="String">Sandy Adventure</Data></Cell>
+	 <Cell><Data ss:Type="String">Aventure sablonneuse</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm glad I ran into you, &lt;player&gt;. My friend Keylla told me that she had given you a recipe for %e02%. I happen to be able to offer you passage to the only place on earth where you'll be able to find the %date% you need for that recipe. If I can get you there, as well as promise a couple of recipes in return, will you be willing to bring me [D|50|75|125] cases of %e02%?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis ravie de vous croiser, &lt;player&gt;. Mon amie Keylla m'a dit qu'elle vous avait donné une recette pour les %e02%. Il se trouve que je peux vous offrir un passage vers le seul endroit sur terre où vous pourrez trouver les %date% dont vous avez besoin pour cette recette. Si je vous y emmène et que je vous promets quelques recettes en retour, seriez-vous prêt à m'apporter [D|50|75|125] caisses de %e02% ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Great. I'm actually on my way to Keylla's place in Peru. I'll meet you there, at %lim_plaza%, and as soon as you arrive with [D|50|75|125] cases of %e02%, I'll hand over the other recipes.&lt;br&gt;&lt;br&gt;In the meantime, you can now travel to %gobidesert%, where you'll find the %date% you need...</Data></Cell>
+	 <Cell><Data ss:Type="String">Super. Je suis justement en route pour aller chez Keylla au Pérou. Je vous y retrouverai, à %lim_plaza%, et dès que vous arriverez avec[D|50|75|125] caisses de %e02%, je vous donnerai les autres recettes.&lt;br&gt;&lt;br&gt;En attendant, vous pouvez maintenant voyager vers le %gobidesert%, où vous trouverez les %date% qu'il vous faut...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e02% to %trav_05% at %lim_plaza% in %lima%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|50|75|125] caisses de %e02% à %trav_05% à %lim_plaza% à %lima%. </Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have outdone yourself, &lt;player&gt;. Here are the recipes I promised. I'll be seeing you on the road, I'm sure...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous vous êtes surpassé, &lt;player&gt;. Voici les recettes promises. Je vous reverrai sur la route, j'en suis sûre...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Here I am, as promised. You made a promise, too, &lt;player&gt;, do you remember? That's right - [D|50|75|125] cases of %e02%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Me voici, comme promis. Vous avez fait une promesse vous aussi, &lt;player&gt;, vous vous souvenez ? C'est cela :[D|50|75|125] caisses de %e02%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%trav_05% is waiting at %lim_plaza% with a couple of Exotics recipes for you, &lt;player&gt;. She is eager for you to arrive with the [D|50|75|125] cases of %e02% she is expecting...</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_05% vous attend à %lim_plaza% avec quelques recettes d'Exotiques, &lt;player&gt;. Elle a hâte que vous arriviez avec les [D|50|75|125] caisses de %e02% qu'elle espère...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04</Data></Cell>
-	 <Cell><Data ss:Type="String">Coffee Among Brothers</Data></Cell>
+	 <Cell><Data ss:Type="String">Le café entre frères</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am glad you were able to get some %m01% to Whitney. Are you willing to do me another favor right now? It will help us start to build out our Blends offerings...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis heureux que vous ayez pu apporter des %m01% à Whitney. Seriez-vous prêt à me rendre un autre service ? Cela nous aiderait à commencer à développer notre offre de Mélanges de café...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Super. I'm going to give you a couple more Blends recipes. I want you to take [D|20|50|100] cases of each of %m01%, %m02% and %m03% to my brother Felix in %capetown%. That's [D|60|150|300] cases total.</Data></Cell>
+	 <Cell><Data ss:Type="String">Super. Je vais vous donner d'autres recettes de Mélanges. Je veux que vous apportiez [D|20|50|100] caisses de %m01%, %m02% et %m03% à mon frère Felix à %capetown%. Cela fait[D|60|150|300] caisses au total.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|20|50|100] cases each of %m01%, %m02% and %m03% to %main_feli% in %capetown%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|20|50|100] caisses de %m01%, %m02% et %m03% à %main_feli% à %capetown%. </Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Let me taste what you have there, &lt;player&gt;...scrumptious! I'm going to just take a couple of cases of each of those Blends - the rest you should be able to sell at a healthy profit. I'm on board with Blends - here are a couple of additional recipes that I think will also prove quite worth your while to produce...</Data></Cell>
+	 <Cell><Data ss:Type="String">Laissez-moi goûter ce que vous avez là, &lt;player&gt;... Succulent ! Je vais juste prendre quelques caisses de chacun de ces Mélanges ; vous devriez pouvoir vendre le reste avec un bon bénéfice. Je suis convaincu par les Mélanges. Voici quelques recettes supplémentaires qui, je pense, vaudront vraiment la peine d'être produites...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm willing to consider expansion into the realm of Blends, but I need to taste first hand some of the products coming out of Joseph's machinery up there in Toronto.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis prêt à envisager une expansion dans le domaine des Mélanges, mais je dois d'abord goûter moi-même quelques-uns des produits sortant des machines de Joseph, là-haut à Toronto.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to bring [D|20|50|100] cases each of %m01%, %m02% and %m03% to %main_feli% in %capetown% in order to get him comfortable with the expansion of the business into Blends.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous devez apporter[D|20|50|100] caisses de %m01%, %m02% et %m03% à %main_feli% à %capetown% afin de le rassurer sur l'expansion de l'entreprise dans les Mélanges.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05</Data></Cell>
-	 <Cell><Data ss:Type="String">A Special Order</Data></Cell>
+	 <Cell><Data ss:Type="String">Une commande spéciale</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I have been trying to get a hold of some of your special creations. I can offer a healthy sum, paid in advance - as well as a couple of recipes - one exotic, one coffee blend - in exchange for some of your concoctions. Shall we make a deal? </Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, j'essaie de me procurer certaines de vos créations spéciales. Je peux vous offrir une belle somme payée d'avance, ainsi que quelques recettes (un exotique, un mélange de café) en échange de certaines de vos préparations. Marché conclu ? </Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Sweet! OK, here's [D|$100,000|$150,000|$250,000]. I'll track you down in a few months, and by that time please have on hand for me [D|35|60|100] cases each of your &lt;user4&gt; and &lt;user5&gt;. When you give me the confections, I'll give you the recipes I mentioned.</Data></Cell>
+	 <Cell><Data ss:Type="String">Super ! Très bien, voici[D|100 000 $|150 000 $|250 000 $]. Je vous retrouverai dans quelques mois, et d'ici là, veuillez me garder [D|35|60|100] caisses de vos &lt;user4&gt; et &lt;user5&gt;. Lorsque vous me remettrez les confiseries, je vous donnerai les recettes dont je vous ai parlé.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Have [D|35|60|100] cases each of &lt;user4&gt; and &lt;user5&gt; on hand for %trav_06%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ayez[D|35|60|100] caisses de &lt;user4&gt; et &lt;user5&gt; en stock pour %trav_06%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Ah, people of their word are so few and far between these days! It is my pleasure to give you these recipes now...</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, les gens de parole se font si rares de nos jours ! C'est un plaisir de vous remettre ces recettes maintenant...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You will find %rose% at the market in %zurich%, and as for the %m06%, I understand there are now some wonderful %coconut% to be had in %bali%. I'm not sure if you've ever had occasion to visit Indonesia?</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous trouverez des %rose% au marché de %zurich%, et pour les %m06%, j'ai cru comprendre qu'il y a maintenant de merveilleuses %coconut% à %bali%. Je ne sais pas si vous avez déjà eu l'occasion de visiter l'Indonésie ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I paid you in advance, &lt;player&gt;, and I expect that you will honor your end of our bargain, right?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je vous ai payé d'avance, &lt;player&gt;, et j'attends de vous que vous honoriez votre part du marché, n'est-ce pas ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%trav_06% is expecting [D|35|60|100] cases each of your &lt;user4&gt; and &lt;user5&gt;, for which he paid you in advance.</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_06% attend[D|35|60|100] caisses de vos &lt;user4&gt; et &lt;user5&gt;, pour lesquelles il vous a payé d'avance.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06</Data></Cell>
-	 <Cell><Data ss:Type="String">Colombian Treats</Data></Cell>
+	 <Cell><Data ss:Type="String">Délices colombiens</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It is good to see you again, &lt;player&gt;. As I've always said through my life, I've always had friends in the chocolate world. If you are willing to make a trip to South America, I have a friend there who is in possession of some valuable recipes that utilize some local ingredients. Are you available to do something for me right now?</Data></Cell>
+	 <Cell><Data ss:Type="String">C'est bon de vous revoir, &lt;player&gt;. Comme je l'ai toujours dit tout au long de ma vie, j'ai toujours eu des amis dans le monde du chocolat. Si vous êtes prêt à faire un voyage en Amérique du Sud, j'ai un ami là-bas qui possède de précieuses recettes utilisant des ingrédients locaux. Êtes-vous disponible pour m'aider tout de suite ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Wonderful. First, here is a recipe for %m10%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Merveilleux. Tout d'abord, voici une recette pour les %m10%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Make [D|25|40|60] cases and bring them along with [D|65|100|150] cases of %t09% to my friend Pedro, whom you'll find in the %bog_mountain% in %bogota%. As far as I'm aware, the %sesame% you'll need can now be found in %tangiers%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Préparez-en [D|25|40|60] caisses et apportez-les avec [D|65|100|150] caisses de %t09% à mon ami Pedro, que vous trouverez à la %bog_mountain% à %bogota%. Pour autant que je sache, les %sesame% dont vous aurez besoin se trouvent désormais à %tangiers%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|25|40|60] cases of %m10% and [D|65|100|150] cases of %t09% to Pedro in %bogota%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez [D|25|40|60] caisses de %m10% et [D|65|100|150] caisses de %t09% à Pedro à %bogota%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">These truffles are delightful, &lt;player&gt;, and I look forward to enjoying your %m10%! In appreciation, I have a recipe for you here, for %e10%. %pecan% can be found here at %bog_market%, but let me warn you - they are only in season from around September through November, and at other times of year you'll pay a pretty penny for those nuts...</Data></Cell>
+	 <Cell><Data ss:Type="String">Ces truffes sont un délice, &lt;player&gt;, et j'ai hâte de savourer vos %m10% ! En guise de remerciement, j'ai une recette pour vous ici : pour les %e10%. Vous trouverez des %pecan% ici, à %bog_market%, mais je vous préviens : elles ne sont de saison que de septembre à novembre, et le reste de l'année, vous paierez ces noix au prix fort...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">My friend Evangeline gave me a heads up that you would be calling to visit, but she said something about truffles and coffee blends you'd have for me?</Data></Cell>
+	 <Cell><Data ss:Type="String">Mon amie Evangeline m'a prévenu que vous viendriez me voir, mais elle m'a parlé de truffes et de mélanges de café que vous m'apporteriez ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%bog_mountainkeep% is expecting you to visit him at %bog_mountain% in %bogota% with [D|65|100|150] cases of %t09% and [D|25|40|60] cases of %m10%...</Data></Cell>
+	 <Cell><Data ss:Type="String">%bog_mountainkeep% s'attend à ce que vous lui rendiez visite à %bog_mountain% à %bogota% avec[D|65|100|150] caisses de %t09% et [D|25|40|60] caisses de %m10%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07</Data></Cell>
-	 <Cell><Data ss:Type="String">More Recipes in Colombia</Data></Cell>
+	 <Cell><Data ss:Type="String">Plus de recettes en Colombie</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">By the way, I do happen to know where you can get a hold of a couple of additional recipes here in Colombia. You should bring [D|a dozen cases|30 cases|50 cases] of your delicious %i11%, as well as [D|a dozen cases|30 cases|50 cases] of %e10%, to %bog_churchkeep% here at %bog_church%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Au fait, il se trouve que je sais où vous pouvez vous procurer quelques recettes supplémentaires ici, en Colombie. Vous devriez apporter[D|12 caisses|30 caisses|50 caisses] de vos délicieuses %i11%, ainsi que[D|12 caisses|30 caisses|50 caisses] de %e10%, à %bog_churchkeep% ici, à %bog_church%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Give [D|12|30|50] cases each of %e10% and %i11% to %bog_churchkeep% in %bogota%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Donnez [D|12|30|50] caisses de %e10% et %i11% à %bog_churchkeep% à %bogota%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Pedro was singing your praises, &lt;player&gt;, but I must say his words did not do your confections justice! Here are a couple of additional recipes for exotics that I think you will find especially lucrative...</Data></Cell>
+	 <Cell><Data ss:Type="String">Pedro ne tarissait pas d'éloges sur vous, &lt;player&gt;, mais je dois dire que ses mots ne rendaient pas justice à vos confiseries ! Voici quelques recettes d'exotiques supplémentaires que vous trouverez, je pense, particulièrement lucratives...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Pedro has been telling me all kinds of wonderful things about your offerings, &lt;player&gt; - I do have some recipes for you if you show up with the products I'm expecting...</Data></Cell>
+	 <Cell><Data ss:Type="String">Pedro m'a dit des choses merveilleuses sur vos créations, &lt;player&gt;. J'ai bien quelques recettes pour vous, à condition que vous vous présentiez avec les produits que j'attends...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%bog_churchkeep% at %bog_church% in %bogota% is holding a couple of recipes for you, &lt;player&gt; - she'll exchange them for [D|12|30|50] cases of %e10% and [D|12|30|50] cases of %i11%...</Data></Cell>
+	 <Cell><Data ss:Type="String">%bog_churchkeep% à %bog_church% à %bogota% vous réserve quelques recettes, &lt;player&gt;. Elle vous les échangera contre [D|12|30|50] caisses de %e10% et[D|12|30|50] caisses de %i11%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_prep_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, you need to make your way to %lasvegas% and see %las_marketkeep% there. Word is that she won a valuable recipe, and would be willing to part with it for a very reasonable amount...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, vous devez vous rendre à %lasvegas% pour voir %las_marketkeep%. On dit qu'elle a gagné une recette de valeur, et qu'elle serait prête à s'en séparer pour une somme très raisonnable...</Data></Cell>
 	</Row>
 	<Row>
      <Cell><Data ss:Type="String">rank3_08</Data></Cell>
-     <Cell><Data ss:Type="String">Your Lucky Day</Data></Cell>
+     <Cell><Data ss:Type="String">Votre jour de chance</Data></Cell>
 	</Row>
 	<Row>
      <Cell><Data ss:Type="String">rank3_08_offer_1</Data></Cell>
-     <Cell><Data ss:Type="String">&lt;player&gt;, are you feeling lucky today?</Data></Cell>
+     <Cell><Data ss:Type="String">&lt;player&gt;, vous sentez-vous chanceux aujourd'hui ?</Data></Cell>
 	</Row>
 	<Row>
      <Cell><Data ss:Type="String">rank3_08_extra01_1</Data></Cell>
-     <Cell><Data ss:Type="String">It's no wonder - it's your lucky day! Here's a recipe for %m07% - no strings attached. Enjoy!</Data></Cell>
+     <Cell><Data ss:Type="String">C'est normal : c'est votre jour de chance ! Voici une recette pour les %m07%, sans aucune condition. Profitez-en !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09</Data></Cell>
-	 <Cell><Data ss:Type="String">A Recipe for Sale</Data></Cell>
+	 <Cell><Data ss:Type="String">Une recette à vendre</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Ah, &lt;player&gt;, you must have heard of my good fortune? I indeed have a proposal for you. For just [D|$25,000|$40,000|$65,000], I will sell you the recipe for %e07%, a delightful concoction that benefits from some of the fine %whiskey% I sell right here. But wait, there's more: I also know of a way for you to acquire yet another recipe once you make a few dozen cases of these chocolates. Will you buy the recipe?</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, &lt;player&gt;, vous avez dû entendre parler de ma bonne fortune ? J'ai effectivement une proposition à vous faire. Pour seulement[D|25 000 $|40 000 $|65 000 $], je vous vends la recette des %e07%, une délicieuse création qui profite du bon %whiskey% que je vends ici même. Mais attendez, il y a plus : je connais aussi un moyen pour vous d'acquérir une autre recette une fois que vous aurez préparé quelques douzaines de caisses de ces chocolats. Achetez-vous la recette ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent. I'll grab the [D|$25,000|$40,000|$65,000] and give you the recipe. What you need to do is bring [D|78|116|172] cases of the finished product to %dou_shopkeep% in %douala%. Good luck!</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. Je prends les[D|25 000 $|40 000 $|65 000 $] et je vous donne la recette. Ce que vous devez faire, c'est apporter[D|78|116|172] caisses du produit fini à %dou_shopkeep% à %douala%. Bonne chance !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|78|116|172] cases of %e07% to %dou_shopkeep% at %dou_shop% in %douala%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez [D|78|116|172] caisses de %e07% à %dou_shopkeep% à %dou_shop% à %douala%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Your %e07% are simply divine. In exchange for the first [D|78|116|172] cases, I will now give you a recipe for %e09%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vos %e07% sont tout simplement divines. En échange de ces[D|78|116|172] premières caisses, je vais maintenant vous donner la recette des %e09%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I have a recipe for you, &lt;player&gt;, as well as an opportunity to discuss, as soon as you bring [D|78|116|172] cases of %e07% - the recipe you bought from %las_marketkeep% in Vegas.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai une recette pour vous, &lt;player&gt;, ainsi qu'une opportunité à vous proposer, dès que vous m'aurez apporté[D|78|116|172] caisses de %e07% (la recette que vous avez achetée à %las_marketkeep% à Vegas).</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You are on the hook for [D|78|116|172] cases of %e07%, which you must deliver to %dou_shopkeep% at %dou_shop% in %douala%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous devez honorer votre promesse de[D|78|116|172] caisses de %e07%, que vous devez livrer à %dou_shopkeep% à %dou_shop% à %douala%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10</Data></Cell>
-	 <Cell><Data ss:Type="String">An Offer for %dou_shop%</Data></Cell>
+	 <Cell><Data ss:Type="String">Une offre pour %dou_shop%</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm not sure if Claudia mentioned this to you, &lt;player&gt;, but I have been looking for a partner for my shop. You have continued to impress me with your creations, and at this point I am willing to sign ownership of this shop over to you, in exchange for [D|100|150|250] cases of the recipe I gave you - %e09% - as well as [D|100|150|250] cases each of %c06% and your &lt;user2&gt;. Do we have a deal?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne sais pas si Claudia vous en a parlé, &lt;player&gt;, mais je cherche un associé pour ma boutique. Vous n'avez cessé de m'impressionner avec vos créations, et à ce stade, je suis prêt à vous céder la propriété de cette boutique en échange de[D|100|150|250] caisses de la recette que je vous ai donnée, les %e09%, ainsi que[D|100|150|250] caisses de %c06% et de vos &lt;user2&gt;. Marché conclu ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Exchange [D|100|150|250] cases each of %e09%, %c06% and &lt;user2&gt; for %dou_shop%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Échangez[D|100|150|250] caisses de %e09%, %c06% et &lt;user2&gt; contre %dou_shop%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Wonderful. This shop is now yours - you will from this point forward always get the very best prices for your goods, and I will be happy to pass along any Special Orders I happen to receive on your behalf!</Data></Cell>
+	 <Cell><Data ss:Type="String">Merveilleux. Cette boutique est maintenant à vous. À partir de ce jour, vous obtiendrez toujours les meilleurs prix pour vos marchandises, et je me ferai un plaisir de vous transmettre toutes les Commandes Spéciales que je pourrais recevoir pour vous !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I've got the deed to my shop, and I am ready to sign, as soon as you bring me the items we agreed upon....</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai l'acte de propriété de ma boutique, et je suis prêt à le signer dès que vous m'apporterez les articles convenus...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%dou_shopkeep% is ready to transfer ownership of his shop to you, as soon as you bring him [D|100|150|250] cases each of %c06%, %e09%, and your &lt;user2&gt;...</Data></Cell>
+	 <Cell><Data ss:Type="String">%dou_shopkeep% est prêt à vous transférer la propriété de sa boutique, dès que vous lui apporterez[D|100|150|250] caisses de %c06%, %e09%, et de vos &lt;user2&gt;...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11</Data></Cell>
-	 <Cell><Data ss:Type="String">Business in Iraq</Data></Cell>
+	 <Cell><Data ss:Type="String">Affaires en Irak</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Ah, &lt;player&gt;! I have just returned from %baghdad%, and my head is still spinning from the aromas! I spent hours at Tigris River Coffees, run by a man named %bag_shopkeep%. He reminds me of the old maître d's back in Paris - stern, but with a deep love for the bean. He is looking to modernize, but he fears losing his soul. I told him I know an expert who can bridge that gap. Will you help me prove it?</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, &lt;player&gt; ! Je viens de rentrer de %baghdad%, et ma tête tourne encore à cause des arômes ! J'ai passé des heures aux Cafés du Tigre, tenus par un homme nommé %bag_shopkeep%. Il me rappelle les vieux maîtres d'hôtel de Paris : sévère, mais avec un amour profond pour le grain. Il cherche à se moderniser, mais il a peur de perdre son âme. Je lui ai dit que je connaissais un expert qui pourrait combler ce fossé. M'aiderez-vous à le lui prouver ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Magnifique. We must show him respect for the past and vision for the future. Bring him [D|50|85|130] cases of %c12% - the mint is a flavor he will respect. But to shock him a little, bring [D|50|85|130] cases of %m08% as well. He needs to see what the modern world is drinking!</Data></Cell>
+	 <Cell><Data ss:Type="String">Magnifique. Nous devons lui montrer notre respect pour le passé et notre vision pour l'avenir. Apportez-lui [D|50|85|130] caisses de %c12% : la menthe est une saveur qu'il respectera. Mais pour le bousculer un peu, apportez-lui aussi [D|50|85|130] caisses de %m08%. Il doit voir ce que boit le monde moderne !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Take [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c12% to %bag_shop% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|50|85|130] caisses de %m08% et[D|50|85|130] caisses de %c12% à %bag_shop% à %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome to %bag_shop%, &lt;player&gt;. I am pleased to make your acquaintance, and look forward to a long and fruitful partnership. I heard that François sent you, too. He talks much, that Frenchman, but he has good taste. This pumpkin is very strange to my palate, but I can't stop drinking it. Perhaps François was right that we must evolve.&lt;br&gt;&lt;br&gt;Here is a recipe for %m09% - something sweet for the new generation. And do feel free to step inside and review my current prices.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bienvenue à %bag_shop%, &lt;player&gt;. Je suis ravi de faire votre connaissance, et j'ai hâte de nouer un partenariat long et fructueux avec vous. J'ai cru comprendre que c'était François qui vous envoyait. Il parle beaucoup, ce Français, mais il a bon goût. Cette citrouille est très étrange pour mon palais, mais je ne peux m'empêcher d'en boire.&lt;br&gt;&lt;br&gt;Voici une recette pour les %m09% : quelque chose de doux pour la nouvelle génération. Et n'hésitez pas à entrer pour consulter mes prix actuels.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I was sincerely hoping you'd show up on our first meeting with [D|50|85|130] cases of %m08% and %c09% for me. I don't like giving reminders, but next time you step inside my shop, I would appreciate being given said products...</Data></Cell>
+	 <Cell><Data ss:Type="String">J'espérais sincèrement que vous vous présenteriez à notre première rencontre avec [D|50|85|130] caisses de %m08% et %c09% pour moi. Je n'aime pas faire de rappels, mais la prochaine fois que vous entrerez dans ma boutique, j'apprécierais qu'on me remette lesdits produits...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%trav_09% wants you to impress the owner of %bag_shop%. Deliver [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c12% to %bag_shopkeep% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_09% veut que vous impressionniez le propriétaire de %bag_shop%. Livrez [D|50|85|130] caisses de %m08% et [D|50|85|130] caisses de %c12% à %bag_shopkeep% à %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12</Data></Cell>
-	 <Cell><Data ss:Type="String">An Iraqi Shop?</Data></Cell>
+	 <Cell><Data ss:Type="String">Une boutique irakienne ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am willing to discuss a partnership, yes. But in %baghdad%, the community comes first. The Imam, %bag_towerkeep%, is a man of great wisdom and influence. He does not touch alcohol, of course, but he has a well-known weakness for caramel. If you can win his favor with this recipe, you will have mine. Will you make this delivery?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis prêt à discuter d'un partenariat, oui. Mais à %baghdad%, la communauté passe avant tout. L'Imam, %bag_towerkeep%, est un homme d'une grande sagesse et d'une grande influence. Il ne touche pas à l'alcool, bien sûr, mais il a une faiblesse bien connue pour le caramel. Si vous pouvez vous attirer ses faveurs avec cette recette, vous aurez les miennes. Ferez-vous cette livraison ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Good. Take [D|200|280|440] cases of %m09% - the recipe I just gave you - to the %bag_tower%. He will appreciate the caramel. Speak with him, and he will guide you further.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bien. Apportez[D|200|280|440] caisses de %m09% (la recette que je viens de vous donner) à la %bag_tower%. Il appréciera le caramel. Parlez-lui, et il vous guidera pour la suite.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Convey [D|200|280|440] cases of %m09% to %bag_towerkeep% at %bag_tower% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Acheminez [D|200|280|440] caisses de %m09% à %bag_towerkeep% à la %bag_tower% à %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Abrahem sent you? Peace be upon you.&lt;br&gt;&lt;br&gt;Ah, the aroma of caramel... he knows my weakness well. It is a good gift. To run a shop in our city, one must understand our flavors, not just European ones. Now, here... take this recipe for %m11%. It is a traditional spiced brew, heavy with cardamom and cloves.</Data></Cell>
+	 <Cell><Data ss:Type="String">Abrahem vous envoie ? La paix soit avec vous.&lt;br&gt;&lt;br&gt;Ah, l'arôme du caramel... il connaît bien ma faiblesse. C'est un beau cadeau. Pour tenir une boutique dans notre ville, il faut comprendre nos saveurs, et pas seulement les européennes. Tenez, prenez... voici la recette pour les %m11%. C'est une boisson épicée traditionnelle, très chargée en cardamome et en clous de girofle.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Abrahem mentioned a delivery for the mosque. I am expecting [D|200|280|440] cases of %m09%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Abrahem a mentionné une livraison pour la mosquée. J'attends[D|200|280|440] caisses de %m09%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%bag_shopkeep% wants you to win the favor of the Imam. Deliver [D|200|280|440] cases of %m09% to %bag_towerkeep% at the %bag_tower% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">%bag_shopkeep% veut que vous gagniez les faveurs de l'Imam. Livrez[D|200|280|440] caisses de %m09% à %bag_towerkeep% à la %bag_tower% à %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13</Data></Cell>
-	 <Cell><Data ss:Type="String">Your Iraqi Shop!</Data></Cell>
+	 <Cell><Data ss:Type="String">Votre boutique irakienne !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">To be a partner in this city, you must bring gifts and understand our soul. Take the recipe I have given you. Go now, brew [D|200|300|460] cases of that %m11%, and present them to Abrahem at his shop. Show him also [D|50|80|130] cases each of your own &lt;user4&gt;, &lt;user5&gt;, and &lt;user6&gt;. If you can master our flavors alongside your own, he will surely sign the deed.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour être partenaire dans cette ville, vous devez apporter des cadeaux et comprendre notre âme. Prenez la recette que je vous ai donnée. Allez maintenant, préparez [D|200|300|460] caisses de ces %m11% et présentez-les à Abrahem dans sa boutique. Montrez-lui aussi [D|50|80|130] caisses de vos propres &lt;user4&gt;, &lt;user5&gt; et &lt;user6&gt;. Si vous pouvez maîtriser nos saveurs en plus des vôtres, il signera certainement l'acte.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|200|300|460] cases of %m11% and [D|50|80|130] cases each of &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; to %bag_shop%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez[D|200|300|460] caisses de %m11% et[D|50|80|130] caisses de &lt;user4&gt;, &lt;user5&gt; et &lt;user6&gt; à %bag_shop%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">This... by the will of Allah, this takes me back to my childhood. You have captured the soul of %baghdad% in this cup, &lt;player&gt;. Your own creations, too, are magnificent.&lt;br&gt;&lt;br&gt;It is my pleasure to hand over the keys to this shop - we are partners now, and you will always be offered the very best prices for your coffee creations here. I look forward to doing much business together.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ceci... par la volonté d'Allah, ceci me ramène à mon enfance. Vous avez capturé l'âme de %baghdad% dans cette tasse, &lt;player&gt;. Vos propres créations, elles aussi, sont magnifiques.&lt;br&gt;&lt;br&gt;C'est avec plaisir que je vous remets les clés de cette boutique : nous sommes partenaires désormais, et on vous proposera toujours les meilleurs prix pour vos créations de café ici. J'ai hâte que nous fassions de belles affaires ensemble.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am eager to take you on as my partner, but I am waiting to taste the %m11%. And do not forget the samples of your own creations we discussed.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai hâte de vous prendre comme partenaire, mais j'attends de goûter les %m11%. Et n'oubliez pas les échantillons de vos propres créations dont nous avons discuté.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">In order to take ownership of %bag_shop% in %baghdad%, you must show up with [D|200|300|460] cases of %m11%, as well as [D|50|80|130] cases each of &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; for %bag_shopkeep%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour devenir propriétaire de %bag_shop% à %baghdad%, vous devez vous présenter avec [D|200|300|460] caisses de %m11%, ainsi que [D|50|80|130] caisses de &lt;user4&gt;, &lt;user5&gt; et &lt;user6&gt; pour %bag_shopkeep%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am proud of how well you are doing with exotics, &lt;player&gt;. I have petitioned the Board, and they have agreed. We'd like to give you another 2 spaces in the recipe book for you own creations. Use them wisely!</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis fier de voir à quel point vous vous en sortez bien avec les exotiques, &lt;player&gt;. J'ai fait une requête auprès du Conseil, et ils ont accepté. Nous aimerions vous accorder 2 emplacements supplémentaires dans le carnet de recettes pour vos propres créations. Utilisez-les à bon escient !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The rest of the Board and I are very pleased with the success you've had to date with expanding the business to include blends. It is my pleasure to report that we have decided to grant you another opportunity to create your own recipe, which you will be able to do as soon as you next make your way to the Secret Test Kitchen.</Data></Cell>
+	 <Cell><Data ss:Type="String">Le reste du Conseil et moi-même sommes très satisfaits du succès que vous avez rencontré jusqu'à présent en élargissant l'entreprise aux mélanges de café. J'ai le plaisir de vous annoncer que nous avons décidé de vous accorder une autre opportunité de créer votre propre recette, ce que vous pourrez faire dès votre prochaine visite à la Cuisine d'essai secrète.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_06_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have smoothly folded the manufacture and marketing of exotic chocolates into your repertoire, &lt;player&gt;. I am pleased to announce that the board has opened up another couple of spaces for you in the recipe book. Good stuff!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez parfaitement intégré la fabrication et la commercialisation de chocolats exotiques à votre répertoire, &lt;player&gt;. J'ai le plaisir de vous annoncer que le conseil vous a ouvert deux nouveaux emplacements dans le carnet de recettes. Bon travail !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_promo_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, %main_alex% is excited about the endorsements you have earned, and is eager to speak with you. I will let her know that I ran into you; expect to see her on your travels shortly...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, %main_alex% est ravie des soutiens que vous avez obtenus, et elle a hâte de vous parler. Je lui ferai savoir que je vous ai croisé ; attendez-vous à la voir très bientôt lors de vos voyages...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_promo_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Ah, there you are! Good news, &lt;player&gt;. The rest of the board and I are most pleased with all you have accomplished to date. As you know, you have been endorsed by all of the other board members.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, vous voilà ! De bonnes nouvelles, &lt;player&gt;. Le reste du conseil et moi-même sommes très satisfaits de tout ce que vous avez accompli jusqu'à présent. Comme vous le savez, vous avez obtenu le soutien de tous les autres membres du conseil.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_promo_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">We have been particularly impressed with your abilities to create your own recipes, and therefore feel that you are more than able to grow our company. You are now officially the %rank_4% of Baumeister Confections - a title well earned. We are also pleased to reward you with 2 additional recipe book spaces.</Data></Cell>
+	 <Cell><Data ss:Type="String">Nous avons été particulièrement impressionnés par votre capacité à créer vos propres recettes, et nous estimons donc que vous êtes plus que capable de faire prospérer notre entreprise. Vous êtes maintenant officiellement le %rank_4% de Baumeister Confections : un titre bien mérité. Nous sommes également ravis de vous récompenser avec 2 emplacements supplémentaires dans le carnet de recettes.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_promo_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For my part, Sean is alive. We've got some work to do to rescue him, and I trust you are prepared to help me out. I will keep you posted.&lt;br&gt;&lt;br&gt;You'll want to make sure to use those spaces and create good recipes - you'll be needing those confections soon...</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">rank3_story_tok_mountainkeep_1_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're back. You look like you've seen a ghost. Let me guess... a rumor about a parachute?&lt;br&gt;&lt;br&gt;You're looking at the man who saw it. It was me. Fletcher's plane was hit hard, but I saw a chute open clear as day. I reported it, of course, but my statement got 'lost.' Officially, the sighting was deemed 'unreliable due to combat stress.' What a load of garbage.</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">rank3_story_tok_mountainkeep_1_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The whole thing stank from the start. The one who pushed to bury my report was our squadron's liaison officer, a real cold fish named %evil_wolf%. He was a German defector flying for us, and he never sat right with me.&lt;br&gt;&lt;br&gt;Oh, well. At least I'm glad someone like you's asking the right questions...</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour ma part, Sean est vivant. Nous avons du pain sur la planche pour le sauver, et je suis sûre que vous êtes prêt à m'y aider. Je vous tiendrai au courant.&lt;br&gt;&lt;br&gt;Vous devriez utiliser ces emplacements pour créer de bonnes recettes : vous aurez bientôt besoin de ces confiseries...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_story_main_elen_1_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome to Canada, &lt;player&gt;. It brings me such relief to finally meet the person Alexandra has placed so much faith in. While Joseph busies himself with the machinery of business, I find myself waiting here for news... any news, really... of our missing family.&lt;br&gt;&lt;br&gt;I manage the guest relations for our partners here. If you find yourself exhausted by the factories and business ventures, you are always welcome here at the %tor_hotel%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bienvenue au Canada, &lt;player&gt;. C'est un tel soulagement de rencontrer enfin la personne en qui Alexandra a placé tant d'espoir. Pendant que Joseph s'occupe des rouages de l'entreprise, je me retrouve ici à attendre des nouvelles... n'importe quelles nouvelles, en fait... de notre famille disparue.&lt;br&gt;&lt;br&gt;Je gère les relations avec les invités pour nos partenaires ici. Si vous vous sentez épuisé par les usines et les affaires, vous serez toujours le bienvenu ici à %tor_hotel%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_main_jose_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous savez, je me sens un peu sentimental, et je voulais partager quelque chose avec vous. Il fut un temps, il y a des années, où je croyais savoir exactement comment diriger cette entreprise. J'avais tort. Ma fille Alex a dû faire un véritable coup d'État pour me montrer que je m'étais encroûté.&lt;br&gt;&lt;br&gt;C'est une pilule amère à avaler pour un père, mais regardez-nous aujourd'hui. Mélanger du café au Canada, on est bien loin de notre ancienne vie en Californie.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_main_whit_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Teddy se prend pour le seul 'visionnaire' de la famille juste parce qu'il se cache dans un volcan en Islande. Typique d'un grand frère !&lt;br&gt;&lt;br&gt;Je lui dis toujours : n'importe quel idiot peut mélanger des ingrédients dans un bol. Il faut être un véritable artiste pour calibrer un injecteur haute pression afin de traiter les huiles de noix de macadamia sans boucher les tuyaux.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_tor_shopkeep_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Je viens de raccrocher le téléphone avec %main_whit%, depuis la Nouvelle-Zélande. Cette femme est un savant fou ! Elle s'est mise à parler du point de fusion du beurre de cacao et de la résistance au cisaillement des noix de macadamia comme si elle construisait un pont. Franchement, très cher ? Je l'adore.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_tok_mountainkeep_1_offer_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous revoilà. On dirait que vous avez vu un fantôme. Laissez-moi deviner... une rumeur sur un parachute ?&lt;br&gt;&lt;br&gt;Vous avez devant vous l'homme qui l'a vu. C'était moi. L'avion de Fletcher a été durement touché, mais j'ai vu un parachute s'ouvrir aussi clair que le jour. Je l'ai signalé, bien sûr, mais ma déclaration s'est 'perdue'. Officiellement, l'observation a été jugée 'peu fiable en raison du stress lié au combat'. Quel ramassis de bêtises.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_story_tok_mountainkeep_1_extra01_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Cette histoire sentait mauvais depuis le début. Celui qui a fait pression pour enterrer mon rapport était l'officier de liaison de notre escadron, un vrai requin sans cœur nommé %evil_wolf%. C'était un transfuge allemand qui volait pour nous, et je ne l'ai jamais senti.&lt;br&gt;&lt;br&gt;Enfin bref. Au moins, je suis content que quelqu'un comme vous se pose les bonnes questions...</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

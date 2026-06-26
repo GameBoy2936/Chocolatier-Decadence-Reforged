@@ -17,7 +17,7 @@ gobidesert.hidden = true
 
 --LOCATIONS
 CreateBuilding("gob_xxx", gobidesert, Market)
-gob_xxx.inventory = { sugar, date, milk, fig, currant, ginger, sumac, saffron, cardamom, clove }
+gob_xxx.inventory = { cardamom, date, ginger, milk, peach, rhubarb, saffron, star_anise, sugar, tea }
 gob_xxx.x = 198.5
 gob_xxx.y = 284
 gob_xxx.layer = 990

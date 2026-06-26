@@ -17,21 +17,12 @@ CreateBuilding("zur_market", zurich, Market)
 zur_market.x = 534.5 
 zur_market.y = 230.5 
 zur_market.layer = 860
-zur_market.inventory = { sugar, milk, almond, cherry, clove, caramel, orange, lemon, whiskey, grand_marnier, espresso, amaretto, honey, rose, lavender, walnut }
+zur_market.inventory = { almond, amaretto, caramel, cherry, espresso, grand_marnier, hazelnut, honey, lavender, lemon, milk, orange, rose, sugar, walnut, whiskey }
 
 CreateBuilding("zur_shop", zurich, Shop)
 zur_shop.x = 107
 zur_shop.y = 209.5
 zur_shop.layer = 900
-
--- Analiese Rausis, late 20s
-zur_shopkeep.likes = {
-    categories = { bar=true, truffle=true },
-    ingredients = { caramel=true, almond=true, hazelnut=true }
-}
-zur_shopkeep.dislikes = {
-    ingredients = { pepper=true } -- Her clientele might be more traditional.
-}
 
 CreateBuilding("zur_factory", zurich, Factory)
 zur_factory.x = 428.5 
@@ -52,11 +43,6 @@ CreateBuilding("zur_tower", zurich)
 zur_tower.x = 178.5
 zur_tower.y = 133
 zur_tower.layer = 790
-
--- Liridona Gygax, mid 20s
-zur_towerkeep.likes = {
-    ingredients = { almond=true, milk=true, cream=true, lavender=true }
-}
 
 CreateBuilding("zur_mountain", zurich, Wilderness)
 zur_mountain.x = 498.5

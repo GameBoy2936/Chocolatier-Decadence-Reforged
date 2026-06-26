@@ -16,7 +16,7 @@ tangiers.locked = true
 --LOCATIONS-----------------
 
 CreateBuilding("tan_market", tangiers, Market)
-tan_market.inventory = { sugar, milk, nutmeg, saffron, sesame, clove, sumac, cashew, mint, orange, raspberry, tan_coffee, cinnamon, blueberry, cherry, fig }
+tan_market.inventory = { anise, apricot, chamomile, cherry, cinnamon, clove, fig, milk, mint, nutmeg, orange, raspberry, rosemary, saffron, sesame, sugar, sumac, tan_coffee }
 tan_market.x = 417.5
 tan_market.y = 302.5
 tan_market.layer = 990

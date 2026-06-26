@@ -81,13 +81,28 @@ Brad Simon
 Hung Chang
 
 
-<b><font size='30'>Community</font></b>
+<b><font size='30'>Reforged & Community</font></b>
 
 <b><font size='20'>Game Modification (Lua 5.0 and XML)</font></b>
 Michael "GameBoy2936" Lane
+Google Gemini AI
 
-<b><font size='20'>Art</font></b>
-Elene
+<b><font size='20'>Art Concepts</font></b>
+Elene "Nekomata Suisei" / "eleenxoxo"
+
+
+<b><font size='30'>The Chocolatier Series Wiki</font></b>
+https://the-chocolatier-series.fandom.com/wiki/The_Chocolatier_Series_Wiki
+
+Michael "GameBoy2936" Lane (bureaucrat)
+Christopher "TheChrisWikiFan" Johnson (administrator)
+RyoseiTakai (administrator)
+Evanramlie99 (administrator)
+
+<b><font size='20'>Special Thanks</font></b>
+Remainedfear
+Expedic Habbet
+
 
 [This game was built using the Playground SDK™.]
 

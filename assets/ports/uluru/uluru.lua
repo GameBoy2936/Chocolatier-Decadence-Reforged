@@ -15,18 +15,13 @@ uluru.hidden = true
 
 --LOCATIONS
 CreateBuilding("ulu_hut", uluru, Market)
-ulu_hut.inventory = {lime }
+ulu_hut.inventory = { lime }
 ulu_hut.x = 189
 ulu_hut.y = 284.5
 ulu_hut.layer = 980
 ulu_hut.labely = 300
-
--- Kowaki, Aboriginal woman
-ulu_hutkeep.likes = {
-    categories = { bar=true },
-    ingredients = { lime=true }
-}
-
+--
+--
 CreateBuilding("ulu_rock", uluru)
 ulu_rock.x = 564
 ulu_rock.y = 168.5

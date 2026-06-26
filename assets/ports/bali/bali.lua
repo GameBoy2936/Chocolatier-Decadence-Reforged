@@ -30,7 +30,7 @@ bal_temple.layer = 930
 --
 --
 CreateBuilding("bal_market", bali, Market)
-bal_market.inventory = { coconut, cacao, powder, espresso, allspice, cardamom, cinnamon, clove, ginger, mango, salt, sugar, lychee, turmeric, star_anise, nutmeg }
+bal_market.inventory = { cardamom, cinnamon, clove, coconut, espresso, ginger, jasmine, lemongrass, lychee, mango, nutmeg, powder, salt, sugar, tea, turmeric }
 bal_market.x = 632.5
 bal_market.y = 212
 bal_market.layer = 880

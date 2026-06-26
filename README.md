@@ -80,12 +80,19 @@ KEY FEATURES
      to comment on your actions, your current quests, or certain events.
 
 4. EXPANDED CONTENT
-   - 20 New Ingredients: Apples, Bananas, Blackberries, Brandy, Chestnuts,
+   - 40 New Ingredients:
+     - v1: Apples, Bananas, Blackberries, Brandy, Chestnuts,
      Figs, Hibiscus Petals, Lavender, Lychees, Matcha, Passionfruit,
 	 Pineapples, Pomegranate, Raisins, Rum, Star Anise, Sumac, Toffee,
-	 Turmeric, and Walnuts. A few base game recipes have been altered
+	 Turmeric, and Walnuts.
+	 - v2: Apricots, Chamomile, Cranberries, Dragonfruit,
+	 Earl Grey Tea, Guava, Ice Cream, Jasmine Petals, Lemongrass,
+	 Marshmallows, Oats, Peaches, Pears, Plums, Rhubarb, Rooibos, Rosemary,
+	 Tamarind, Wafers, and Yuzu.
+	 
+	 A few base game recipes have been altered
 	 to involve some of these ingredients.
-   - 4 New Characters: Elena Tangye, Douglas McInnes,
+   - 5 New Characters: Elena Tangye, Douglas McInnes,
      Patrick Ratsimbazafy (Mahajanga in a future release if we get art comms?),
 	 Halla Þorvaldsdóttir, and Bjarki Eiríksson.
    - HD Art: Base game ingredients have been AI-upscaled for clarity.

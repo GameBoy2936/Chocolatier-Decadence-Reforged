@@ -14,7 +14,7 @@ havana.locked = true
 
 --LOCATIONS-----------------------------------
 CreateBuilding("hav_market", havana, Market)
-hav_market.inventory = { sugar, rum, mint, orange, allspice, cacao, powder, cinnamon, tea, honey }
+hav_market.inventory = { allspice, cacao, honey, mint, orange, pineapple, powder, rum, sugar, tea }
 hav_market.x = 496
 hav_market.y = 181
 hav_market.layer = 910

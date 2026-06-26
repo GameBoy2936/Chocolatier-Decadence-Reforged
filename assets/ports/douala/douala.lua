@@ -14,7 +14,7 @@ douala.locked = true
 
 --LOCATIONS-----------------------------
 CreateBuilding("dou_market", douala, Market)
-dou_market.inventory = { sugar, cacao, ginger, pepper, hazelnut, banana, peanut, cashew, mint, cinnamon, cardamom, anise, currant, vanilla, mango, powder }
+dou_market.inventory = { anise, banana, cacao, cardamom, cashew, cayenne, cinnamon, currant, ginger, mango, mint, peanut, powder, sugar, tamarind, vanilla }
 dou_market.labely = 250
 dou_market.x = 741.5
 dou_market.y = 428.5
@@ -26,14 +26,6 @@ dou_plantation.inventory = { dou_cacao }
 dou_plantation.x = 177
 dou_plantation.y = 116.5
 dou_plantation.layer = 930
-
--- Guy Etame, late 30s cacao farmer
-dou_plantationkeep.likes = {
-    ingredients = { dou_cacao=true }
-}
-dou_plantationkeep.dislikes = {
-    categories = { exotic=true } -- He has simple tastes and might dislike overly complex things.
-}
 --
 --
 CreateBuilding("dou_shop", douala, Shop)

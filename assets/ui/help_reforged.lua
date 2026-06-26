@@ -1,27 +1,27 @@
 --[[---------------------------------------------------------------------------
 	Chocolatier Three: Help
-	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
+	Copyright (c) 2026 Michael Lane and Google Gemini AI.
 --]]---------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
 
+local introFont = { uiFontName, 16, BlackColor }
+local bodyFont = { uiFontName, 15, BlackColor }
+local linkFont = { uiFontName, 14, BlackColor }
+
 MakeDialog
 {
 	SetStyle(C3DialogBodyStyle),
-	Text { x=15,y=5,w=729,h=kMax, flags=kVAlignTop+kHAlignLeft, label="#"..GetString("help_quests_text") },
 	
-	Bitmap { x=120,y=130, image="image/indicatorlight_off", },
-	Text { x=155,y=128,w=470,h=36, flags=kVAlignCenter+kHAlignLeft, label="#"..GetString("help_quests_incomplete") },
+	-- Top Section: Intro and Logo
+	Text { x=15, y=5, w=480, h=85, flags=kVAlignTop+kHAlignLeft, font=introFont, label="#"..GetString("help_reforged_text") },
+	Bitmap { x=500, y=5, image="image/title_logo", scale=0.3 },
 	
-	Bitmap { x=120,y=166, image="image/indicatorlight_green", },
-	Text { x=155,y=164,w=470,h=36, flags=kVAlignCenter+kHAlignLeft, label="#"..GetString("help_quests_complete") },
+	-- Left Column: Mechanics and Modding Details
+	Text { x=15, y=95, w=480, h=100, flags=kVAlignTop+kHAlignLeft, font=bodyFont, label="#"..GetString("help_reforged_mechanics") },
+	Text { x=15, y=190, w=480, h=110, flags=kVAlignTop+kHAlignLeft, font=bodyFont, label="#"..GetString("help_reforged_modding_text") },
 	
-	Bitmap { x=120,y=202, image="image/indicatorlight_blank", },
-	Text { x=155,y=200,w=470,h=36, flags=kVAlignCenter+kHAlignLeft, label="#"..GetString("help_quests_hint") },
-	
-	Bitmap { x=50,y=205, image="image/ledger_help",
-		Bitmap { x=0,y=9, image="image/badge_button_indicator_complete" },
-		Text { x=86,y=58,w=442,h=34, flags=kHAlignCenter+kVAlignCenter, font = { uiFontName, 17, Color(0,0,0,255) },
-			label="#"..GetString("help_quests_ledger") },
-	},
+	-- Right Column: Community Links and QR Code
+	Text { x=510, y=95, w=215, h=220, flags=kVAlignTop+kHAlignLeft, font=linkFont, label="#"..GetString("help_reforged_upsell") },
+	Bitmap { x=535, y=205, image="image/discord_qrcode", scale=1 },
 }

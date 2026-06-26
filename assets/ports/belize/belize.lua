@@ -8,7 +8,7 @@ belize.mapx = 179
 belize.mapy = 146
 belize.align = "left"
 belize.hemisphere="north"
-belize.region="centralamerica"
+belize.region="central_america"
 belize.country = "belize"
 belize.culture = "latin"
 belize.hidden = true
@@ -21,7 +21,7 @@ bel_ruins.layer = 970
 --
 --
 CreateBuilding("bel_hut", belize, Market)
-bel_hut.inventory = {sugar, bel_cacao, hibiscus }
+bel_hut.inventory = { bel_cacao, cacao, cayenne, dragonfruit, espresso, guava, hibiscus, sugar, tamarind, vanilla }
 bel_hut.x = 697
 bel_hut.y = 311
 bel_hut.layer = 950

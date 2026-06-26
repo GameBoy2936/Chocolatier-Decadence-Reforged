@@ -14,7 +14,7 @@ lima.locked = true
 
 --LOCATIONS
 CreateBuilding("lim_market", lima, Market)
-lim_market.inventory = {powder, cacao, pecan, sugar, milk, honey, pepper, passionfruit, hazelnut, cinnamon, mint, lim_cacao }
+lim_market.inventory = { cacao, cayenne, cinnamon, hazelnut, honey, lim_cacao, milk, mint, passionfruit, powder, salt, sugar }
 lim_market.x = 96.5
 lim_market.y = 222
 lim_market.layer = 970

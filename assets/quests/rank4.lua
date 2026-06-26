@@ -45,9 +45,9 @@ CreateQuest
 	goals = { RequireItem("b12", 25), RequireItem("c10", 25), RequireItem("i12", 25), RequireItem("t11", 25), RequireItem("m07", 25), RequireItem("e12", 25), HintPerson("evil_kath", "fal_board", "falklands")},
 	goals_medium = { RequireItem("b12", 100), RequireItem("c10", 100), RequireItem("i12", 100), RequireItem("t11", 100), RequireItem("m07", 100), RequireItem("e12", 100), HintPerson("evil_kath", "fal_board", "falklands")},
 	goals_hard = { RequireItem("b12", 250), RequireItem("c10", 250), RequireItem("i12", 250), RequireItem("t11", 250), RequireItem("m07", 250), RequireItem("e12", 250), HintPerson("evil_kath", "fal_board", "falklands")},
-	oncomplete = {IncrementVariable("gameover"), AwardItem("b12", -25), AwardItem("c10", -25), AwardItem("i12", -25), AwardItem("t11", -25), AwardItem("m07", -25), AwardItem("e12", -25), AwardText("rank4_kath_bribe_extra01"), AwardUnlockPort("belize"), AwardBlockBuilding("bel_hut"), AwardRemoveCharacter("bel_hutkeep", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_ruins"), AwardPlaceCharacter("trav_03", "bel_hut"), AwardEnableOrderForChar("evil_kath"), AwardEnableOrderForBuilding("fal_board"), AwardUnlockCharacter("evil_kath"), AwardUnlockCharacter("evil_wolf"), AwardUnlockCharacter("fal_xxxkeep")},
-	oncomplete_medium = {IncrementVariable("gameover"), AwardItem("b12", -100), AwardItem("c10", -100), AwardItem("i12", -100), AwardItem("t11", -100), AwardItem("m07", -100), AwardItem("e12", -100), AwardText("rank4_kath_bribe_extra01"), AwardUnlockPort("belize"), AwardBlockBuilding("bel_hut"), AwardRemoveCharacter("bel_hutkeep", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_ruins"), AwardPlaceCharacter("trav_03", "bel_hut"), AwardEnableOrderForChar("evil_kath"), AwardEnableOrderForBuilding("fal_board"), AwardUnlockCharacter("evil_kath"), AwardUnlockCharacter("evil_wolf"), AwardUnlockCharacter("fal_xxxkeep")},
-	oncomplete_hard = {IncrementVariable("gameover"), AwardItem("b12", -250), AwardItem("c10", -250), AwardItem("i12", -250), AwardItem("t11", -250), AwardItem("m07", -250), AwardItem("e12", -250), AwardText("rank4_kath_bribe_extra01"), AwardUnlockPort("belize"), AwardBlockBuilding("bel_hut"), AwardRemoveCharacter("bel_hutkeep", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_ruins"), AwardPlaceCharacter("trav_03", "bel_hut"), AwardEnableOrderForChar("evil_kath"), AwardEnableOrderForBuilding("fal_board"), AwardUnlockCharacter("evil_kath"), AwardUnlockCharacter("evil_wolf"), AwardUnlockCharacter("fal_xxxkeep")},
+	oncomplete = {IncrementVariable("gameover"), AwardItem("b12", -25), AwardItem("c10", -25), AwardItem("i12", -25), AwardItem("t11", -25), AwardItem("m07", -25), AwardItem("e12", -25), AwardText("rank4_kath_bribe_extra01"), AwardUnlockPort("belize"), AwardBlockBuilding("bel_hut"), AwardRemoveCharacter("bel_hutkeep", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_ruins"), AwardPlaceCharacter("trav_03", "bel_hut"), AwardEnableOrderForBuilding("fal_board"), AwardUnlockCharacter("evil_kath"), AwardUnlockCharacter("evil_wolf"), AwardUnlockCharacter("fal_xxxkeep")},
+	oncomplete_medium = {IncrementVariable("gameover"), AwardItem("b12", -100), AwardItem("c10", -100), AwardItem("i12", -100), AwardItem("t11", -100), AwardItem("m07", -100), AwardItem("e12", -100), AwardText("rank4_kath_bribe_extra01"), AwardUnlockPort("belize"), AwardBlockBuilding("bel_hut"), AwardRemoveCharacter("bel_hutkeep", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_ruins"), AwardPlaceCharacter("trav_03", "bel_hut"), AwardEnableOrderForBuilding("fal_board"), AwardUnlockCharacter("evil_kath"), AwardUnlockCharacter("evil_wolf"), AwardUnlockCharacter("fal_xxxkeep")},
+	oncomplete_hard = {IncrementVariable("gameover"), AwardItem("b12", -250), AwardItem("c10", -250), AwardItem("i12", -250), AwardItem("t11", -250), AwardItem("m07", -250), AwardItem("e12", -250), AwardText("rank4_kath_bribe_extra01"), AwardUnlockPort("belize"), AwardBlockBuilding("bel_hut"), AwardRemoveCharacter("bel_hutkeep", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_ruins"), AwardPlaceCharacter("trav_03", "bel_hut"), AwardEnableOrderForBuilding("fal_board"), AwardUnlockCharacter("evil_kath"), AwardUnlockCharacter("evil_wolf"), AwardUnlockCharacter("fal_xxxkeep")},
 }
 
 CreateQuest
@@ -86,10 +86,10 @@ CreateQuest
 	reject = "none",
 	require = {RequireQuestComplete("rank4_sean_ransom_01"), RequireMinMoney(1000000)},
 	require_medium = {RequireQuestComplete("rank4_sean_ransom_01"), RequireMinMoney(10000000)},
-	require_hard = {RequireQuestComplete("rank4_sean_ransom_01"), RequireMinMoney(50000000)},
+	require_hard = {RequireQuestComplete("rank4_sean_ransom_01"), RequireMinMoney(25000000)},
 	onaccept = {AwardMoney(-1000000), AwardText("rank4_sean_ransom_02_extra01"), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardDelayQuest("rank4_sean_return", 11)},
 	onaccept_medium = {AwardMoney(-10000000), AwardText("rank4_sean_ransom_02_extra01"), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardDelayQuest("rank4_sean_return", 11)},
-	onaccept_hard = {AwardMoney(-50000000), AwardText("rank4_sean_ransom_02_extra01"), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardDelayQuest("rank4_sean_return", 11)},
+	onaccept_hard = {AwardMoney(-25000000), AwardText("rank4_sean_ransom_02_extra01"), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardDelayQuest("rank4_sean_return", 11)},
 }
 
 CreateQuest
@@ -104,7 +104,7 @@ CreateQuest
 	onaccept = {AwardPlaceCharacter("bel_hutkeep", "bel_ruins")},
 	goals = {HintPerson("bel_hutkeep", "bel_ruins", "belize")},
 	require = {RequireQuestComplete("rank4_sean_ransom_02")},
-	oncomplete = {IncrementVariable("gameover"), AwardText("rank4_sean_thanks_text01", _AllCharacters["main_sean"]), AwardText("rank4_sean_thanks_text02", _AllCharacters["main_sean"]), AwardText("rank4_sean_thanks_text03", _AllCharacters["main_sean"]), AwardHappiness("main_sean", 100), AwardText("rank4_sean_thanks_text04", _AllCharacters["main_sean"]), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardRemoveCharacter("trav_03", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_hut"), AwardUnblockBuilding("bel_hut"), AwardUnlockIngredient("bel_cacao"), AwardUnlockIngredient("hibiscus"), AwardPlaceCharacter("main_sean", "zur_mountain"), AwardEnableOrderForChar("main_sean"), AwardEnableOrderForChar("bel_hutkeep"), AwardEnableOrderForBuilding("bel_ruins"), AwardEnableOrderForBuilding("bel_hut"), AwardUnlockCharacter("main_sean"), AwardUnlockCharacter("bel_hutkeep")},
+	oncomplete = {IncrementVariable("gameover"), AwardText("rank4_sean_thanks_text01", _AllCharacters["main_sean"]), AwardText("rank4_sean_thanks_text02", _AllCharacters["main_sean"]), AwardText("rank4_sean_thanks_text03", _AllCharacters["main_sean"]), AwardHappiness("main_sean", 100), AwardText("rank4_sean_thanks_text04", _AllCharacters["main_sean"]), AwardRemoveCharacter("bel_hutkeep", "bel_ruins"), AwardRemoveCharacter("trav_03", "bel_hut"), AwardPlaceCharacter("bel_hutkeep", "bel_hut"), AwardUnblockBuilding("bel_hut"), AwardUnlockIngredient("bel_cacao"), AwardUnlockIngredient("dragonfruit"), AwardUnlockIngredient("hibiscus"), AwardPlaceCharacter("main_sean", "zur_mountain"), AwardEnableOrderForChar("main_sean"), AwardEnableOrderForChar("bel_hutkeep"), AwardEnableOrderForBuilding("bel_ruins"), AwardEnableOrderForBuilding("bel_hut"), AwardUnlockCharacter("main_sean"), AwardUnlockCharacter("bel_hutkeep")},
 }
 
 CreateQuest
@@ -133,7 +133,7 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	require = {RequireQuestComplete("final_quest")},
+	require = {RequireQuestComplete("rank4_final_quest_part1")},
 	goals = {RequireItem("user7", 200), RequireItem("user8", 200), RequireItem("user9", 200), RequireItem("user10", 200), RequireItem("user11", 200), RequireItem("user12", 200), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
 	goals_medium = {RequireItem("user7", 500), RequireItem("user8", 500), RequireItem("user9", 500), RequireItem("user10", 500), RequireItem("user11", 500), RequireItem("user12", 500), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
 	goals_hard = {RequireItem("user7", 1000), RequireItem("user8", 1000), RequireItem("user9", 1000), RequireItem("user10", 1000), RequireItem("user11", 1000), RequireItem("user12", 1000), HintPerson("main_evan", "san_bchq", "sanfrancisco")},
@@ -151,9 +151,9 @@ CreateQuest
 	reject = "none",
 	autocomplete = true,
 	visible = false,
-	onaccept ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardText("rank5_promo_extra01"), AwardMoney(10000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers"), AwardCustomSlot(12)},
-	onaccept_medium ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardText("rank5_promo_extra01"), AwardMoney(25000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers"), AwardCustomSlot(12)},
-	onaccept_hard ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardText("rank5_promo_extra01"), AwardMoney(100000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers"), AwardCustomSlot(12)},
+	onaccept ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardCustomSlot(12), AwardText("rank5_promo_extra01"), AwardDialog("recipes"), AwardText("rank5_promo_extra02"), AwardMoney(10000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers")},
+	onaccept_medium ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardCustomSlot(12), AwardText("rank5_promo_extra01"), AwardDialog("recipes"), AwardText("rank5_promo_extra02"), AwardMoney(25000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers")},
+	onaccept_hard ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardCustomSlot(12), AwardText("rank5_promo_extra01"), AwardDialog("recipes"), AwardText("rank5_promo_extra02"), AwardMoney(100000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers")},
 	require = {RequireQuestComplete("rank4_final_quest_part2")},
 }
 
@@ -176,7 +176,7 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	require = {RequireQuestComplete("seans_ransom_02"), RequireQuestNotActive("rank4_sean_return"), RequireQuestIncomplete("rank4_sean_return")},
+	require = {RequireQuestComplete("rank4_sean_ransom_02"), RequireQuestNotActive("rank4_sean_return"), RequireQuestIncomplete("rank4_sean_return")},
 	priority = 1,
 	visible = false,
 	autoComplete = true,
@@ -191,7 +191,21 @@ CreateQuest
 	defer = "notnow",
 	reject = "none",
 	goals = {HintPerson("main_sean", "zur_mountain", "zurich")},
-	oncomplete = {AwardItem("bel_cacao", 200), AwardHappiness("main_sean", 100), AwardText("rank4_story_tok_mountainkeep_2_extra01"), AwardDialog("inventory"),},
+	oncomplete = {AwardUnlockHistory("catalogue_history_letter_hardy_sean"), AwardItem("bel_cacao", 200), AwardHappiness("main_sean", 100), AwardText("rank4_story_tok_mountainkeep_2_extra01"), AwardDialog("inventory"), AwardDelayQuest("rank5_story_main_sean_1", 4)},
 	require = {RequireQuestComplete("rank4_sean_return")},
 	priority = 1,
+}
+
+CreateQuest
+{
+	name = "rank5_story_main_sean_1",
+	starter = "main_sean",
+	accept = "tellmemore",
+	defer = "maybelater",
+	reject = "none",
+	onaccept = {AwardText("rank5_story_main_sean_1_extra01"), AwardText("rank5_story_main_sean_1_extra02")},
+	require = {RequireQuestComplete("rank4_story_tok_mountainkeep_2")},
+	priority = 1,
+	visible = false,
+	autoComplete = true,
 }

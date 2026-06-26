@@ -24,15 +24,10 @@ cap_factory.windowY =31
 --
 --
 CreateBuilding("cap_market", capetown, Market)
-cap_market.inventory = { sugar, milk, peanut, hazelnut, almond, caramel, cashew, mint, raspberry, whipped_cream }
+cap_market.inventory = { almond, butter, caramel, cashew, hazelnut, ice_cream, milk, mint, peanut, plum, raspberry, rooibos, sugar, whipped_cream }
 cap_market.x = 540.5
 cap_market.y = 306.5
 cap_market.layer = 880
-
--- Gavin Hotz, late 40s man
-cap_marketkeep.likes = {
-    ingredients = { mint=true }
-}
 --
 --
 CreateBuilding("cap_shop", capetown, Shop)

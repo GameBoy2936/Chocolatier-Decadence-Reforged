@@ -15,7 +15,7 @@ lasvegas.hidden = true
 
 --LOCATIONS
 CreateBuilding("las_market", lasvegas, Market)
-las_market.inventory = { sugar, milk, whiskey, amaretto, grand_marnier, kahlua, espresso, strawberry, rum, brandy }
+las_market.inventory = { amaretto, brandy, cherry, espresso, grand_marnier, ice_cream, kahlua, marshmallow, milk, rum, strawberry, sugar, wafer, whiskey }
 las_market.x = 70
 las_market.y = 171.5
 las_market.layer = 940

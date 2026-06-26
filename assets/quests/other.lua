@@ -1,5 +1,32 @@
 CreateQuest
 {
+	name = "hotfix_wolf_orders",
+	require = { RequireCharOrdersDisabled("evil_wolf") },
+	onaccept = { AwardEnableOrderForChar("evil_wolf") },
+	visible = false,
+	autoComplete = true,
+}
+
+CreateQuest
+{
+	name = "hotfix_tyso_orders",
+	require = { RequireCharOrdersDisabled("evil_tyso") },
+	onaccept = { AwardEnableOrderForChar("evil_tyso") },
+	visible = false,
+	autoComplete = true,
+}
+
+CreateQuest
+{
+	name = "hotfix_kath_orders",
+	require = { RequireCharOrdersDisabled("evil_kath") },
+	onaccept = { AwardEnableOrderForChar("evil_kath") },
+	visible = false,
+	autoComplete = true,
+}
+
+CreateQuest
+{
 	name = "nomoney",
 	starter = "las_casinokeep",
 	ender = "las_casinokeep",
@@ -279,19 +306,6 @@ CreateQuest
 	require = {RequireMinRank(2), RequireQuestComplete("tanshop_02")},
 	visible = false,
 --	oncomplete ={AwardDelayQuest("shop_tease_01", 7)},
-}
-
-CreateQuest
-{
-	name = "tan_shop_owned_00",
-	starter = "main_zach",
-	accept = "ok",
-	defer = "none",
-	reject = "none",
-	require = {RequireBuildingOwned("tan_shop"), RequireVariableLessThan("tanshop_stop", 4)},
-	onaccept = {IncrementVariable("tanshop_stop")},
-	visible = false,
-	repeatable = 24,
 }
 
 CreateQuest
@@ -934,7 +948,7 @@ CreateQuest
 	autoComplete = true,
 	priority = 33,
 	require = {RequireMinRank(4),  RequireQuestComplete("plot_points_06")},
-	onaccept ={IncrementVariable("gameover")},
+	onaccept ={AwardUnlockIngredient("yuzu"), IncrementVariable("gameover")},
 	visible = false,
 }
 
