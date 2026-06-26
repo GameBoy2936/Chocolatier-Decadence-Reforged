@@ -1,8 +1,8 @@
 CHOCOLATIER: DECADENCE BY DESIGN REFORGED
+========================================================================
 Version 2.0 (BETA)
 Release Date: December 25, 2025
 Created by: Michael Lane
-========================================================================
 
 INTRODUCTION
 ------------
