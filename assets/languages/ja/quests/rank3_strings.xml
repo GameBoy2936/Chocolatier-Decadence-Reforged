@@ -499,7 +499,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">This... by the will of Allah, this takes me back to my childhood. You have captured the soul of %baghdad% in this cup, &lt;player&gt;. Your own creations, too, are magnificent.&lt;br&gt;&lt;br&gt;It is my pleasure to hand over the keys to this shop - we are partners now, and you will always be offered the very best prices for your coffee creations here. I look forward to doing much business together.</Data></Cell>
+	 <Cell><Data ss:Type="String">This... by the will of God, this takes me back to my childhood. You have captured the soul of %baghdad% in this cup, &lt;player&gt;. Your own creations, too, are magnificent.&lt;br&gt;&lt;br&gt;It is my pleasure to hand over the keys to this shop - we are partners now, and you will always be offered the very best prices for your coffee creations here. I look forward to doing much business together.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_incomplete_1</Data></Cell>

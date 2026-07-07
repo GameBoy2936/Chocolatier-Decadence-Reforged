@@ -486,10 +486,6 @@
 	 <Cell><Data ss:Type="String">You have been successful by consistently creating high quality chocolates and coffees, managing your costs, building solid relationships and taking advantage of opportunities to expand. Kudos!</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">tan_shop_owned_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome back to your shop, &lt;player&gt;. It is always a pleasure to see you again...</Data></Cell>
-	</Row>
-	<Row>
 	 <Cell><Data ss:Type="String">dou_shop_own_tease_offer_1</Data></Cell>
 	 <Cell><Data ss:Type="String">You're quite an impressive chocolate maker, &lt;player&gt;. I've been hearing about you the past couple of years, and I'm going to be keeping an eye on you. No time soon, but some day, I may be interested in discussing a partnership with you for my shop here.</Data></Cell>
 	</Row>

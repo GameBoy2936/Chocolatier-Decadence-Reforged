@@ -74,14 +74,16 @@ local function LaunchGameSequence()
 		DebugOut("UI", "Main Menu: Transitioning to World Map.")
 		SwapToModal("ui/mapview.lua")
 	else
-		-- Tutorial active. Force them to the Zurich train station to meet Evie.
+		-- Tutorial active. Force them to the Zurich train station to meet Alex Fletcher.
 		DebugOut("UI", "Main Menu: Transitioning to Tutorial Sequence in Zurich.")
 		SoundEvent("Stop_Music")
 		SoundEvent("zurich_sting")			
 		SoundEvent("zurich")				
 		SwapToModal("ui/portview.lua")
 		
-		q:Offer(main_alex, zur_station)
+		QueueCommand(function()
+			q:Offer(main_alex, zur_station)
+		end)
 	end
 end
 

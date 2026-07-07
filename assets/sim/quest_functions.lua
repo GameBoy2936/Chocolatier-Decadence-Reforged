@@ -1403,7 +1403,17 @@ local _AwardText = {
 			text = quest:GetDynamicExtraTextString(self.key, self.char)
 		else
 			DebugOut("ERROR", "AwardText was executed without a valid quest object reference. Cannot perform dynamic replacements.")
-			text = GetString(self.key) 
+			text = GetString(self.key)
+		end
+
+		if not text or text == "" or text == "#####" then
+			DebugOut("ERROR", string.format(
+				"AwardText failed: no valid text found for key '%s'. Skipping dialogue.",
+				tostring(self.key)
+			))
+
+			gActiveCharacter = lastChar
+			return true, false
 		end
 
 		DisplayDialog { 

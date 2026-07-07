@@ -75,7 +75,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gVersionString</Data></Cell>
-	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design Reforged - v.1.1 (March 2026)</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design Reforged - v.2</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>
@@ -243,163 +243,335 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_fr</Data></Cell>
-	 <Cell><Data ss:Type="String">Français</Data></Cell>
+	 <Cell><Data ss:Type="String">French</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_de</Data></Cell>
-	 <Cell><Data ss:Type="String">Deutsch</Data></Cell>
+	 <Cell><Data ss:Type="String">German</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_nl</Data></Cell>
-	 <Cell><Data ss:Type="String">Nederlands</Data></Cell>
+	 <Cell><Data ss:Type="String">Dutch</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_it</Data></Cell>
-	 <Cell><Data ss:Type="String">Italiano</Data></Cell>
+	 <Cell><Data ss:Type="String">Italian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_es_eu</Data></Cell>
-	 <Cell><Data ss:Type="String">Español (latinoamerica)</Data></Cell>
+	 <Cell><Data ss:Type="String">Spanish (Latin America)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_es_lt</Data></Cell>
-	 <Cell><Data ss:Type="String">Español (españa)</Data></Cell>
+	 <Cell><Data ss:Type="String">Spanish (Spain)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_pt_eu</Data></Cell>
-	 <Cell><Data ss:Type="String">Português (Portugal)</Data></Cell>
+	 <Cell><Data ss:Type="String">Portuguese (Portugal)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_pt_br</Data></Cell>
-	 <Cell><Data ss:Type="String">Português (Brasil)</Data></Cell>
+	 <Cell><Data ss:Type="String">Portuguese (Brazil)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ca</Data></Cell>
-	 <Cell><Data ss:Type="String">Català</Data></Cell>
+	 <Cell><Data ss:Type="String">Catalan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_gl</Data></Cell>
+	 <Cell><Data ss:Type="String">Galician</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_eu</Data></Cell>
+	 <Cell><Data ss:Type="String">Basque</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ga</Data></Cell>
+	 <Cell><Data ss:Type="String">Irish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_cy</Data></Cell>
+	 <Cell><Data ss:Type="String">Welsh</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_mt</Data></Cell>
-	 <Cell><Data ss:Type="String">Malti</Data></Cell>
+	 <Cell><Data ss:Type="String">Maltese</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_pl</Data></Cell>
-	 <Cell><Data ss:Type="String">Polski</Data></Cell>
+	 <Cell><Data ss:Type="String">Polish</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_cz</Data></Cell>
-	 <Cell><Data ss:Type="String">Čeština</Data></Cell>
+	 <Cell><Data ss:Type="String">Czech</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_sk</Data></Cell>
+	 <Cell><Data ss:Type="String">Slovak</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_hu</Data></Cell>
-	 <Cell><Data ss:Type="String">Magyar</Data></Cell>
+	 <Cell><Data ss:Type="String">Hungarian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ro</Data></Cell>
-	 <Cell><Data ss:Type="String">Română</Data></Cell>
+	 <Cell><Data ss:Type="String">Romanian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_hr</Data></Cell>
-	 <Cell><Data ss:Type="String">Hrvatski</Data></Cell>
+	 <Cell><Data ss:Type="String">Croatian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_sr</Data></Cell>
-	 <Cell><Data ss:Type="String">Српски</Data></Cell>
+	 <Cell><Data ss:Type="String">Serbian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_sl</Data></Cell>
+	 <Cell><Data ss:Type="String">Slovenian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_bg</Data></Cell>
-	 <Cell><Data ss:Type="String">български</Data></Cell>
+	 <Cell><Data ss:Type="String">Bulgarian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_mk</Data></Cell>
+	 <Cell><Data ss:Type="String">Macedonian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_lt</Data></Cell>
+	 <Cell><Data ss:Type="String">Lithuanian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_lv</Data></Cell>
+	 <Cell><Data ss:Type="String">Latvian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_et</Data></Cell>
+	 <Cell><Data ss:Type="String">Estonian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_da</Data></Cell>
-	 <Cell><Data ss:Type="String">Dansk</Data></Cell>
+	 <Cell><Data ss:Type="String">Danish</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_is</Data></Cell>
-	 <Cell><Data ss:Type="String">Íslenska</Data></Cell>
+	 <Cell><Data ss:Type="String">Icelandic</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_no</Data></Cell>
-	 <Cell><Data ss:Type="String">Norsk</Data></Cell>
+	 <Cell><Data ss:Type="String">Norwegian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_sv</Data></Cell>
-	 <Cell><Data ss:Type="String">Svenska</Data></Cell>
+	 <Cell><Data ss:Type="String">Swedish</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_fi</Data></Cell>
-	 <Cell><Data ss:Type="String">Suomi</Data></Cell>
+	 <Cell><Data ss:Type="String">Finnish</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ru</Data></Cell>
-	 <Cell><Data ss:Type="String">Русский</Data></Cell>
+	 <Cell><Data ss:Type="String">Russian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_uk</Data></Cell>
-	 <Cell><Data ss:Type="String">українська</Data></Cell>
+	 <Cell><Data ss:Type="String">Ukrainian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_be</Data></Cell>
+	 <Cell><Data ss:Type="String">Belarusian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_el</Data></Cell>
-	 <Cell><Data ss:Type="String">ελληνικά</Data></Cell>
+	 <Cell><Data ss:Type="String">Greek</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_tr</Data></Cell>
-	 <Cell><Data ss:Type="String">Türkçe</Data></Cell>
+	 <Cell><Data ss:Type="String">Turkish</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ka</Data></Cell>
+	 <Cell><Data ss:Type="String">Georgian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_hy</Data></Cell>
+	 <Cell><Data ss:Type="String">Armenian</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_az</Data></Cell>
+	 <Cell><Data ss:Type="String">Azerbaijani</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_am</Data></Cell>
+	 <Cell><Data ss:Type="String">Amharic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_yo</Data></Cell>
+	 <Cell><Data ss:Type="String">Yoruba</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ig</Data></Cell>
+	 <Cell><Data ss:Type="String">Igbo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_sw</Data></Cell>
+	 <Cell><Data ss:Type="String">Swahili</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_af</Data></Cell>
+	 <Cell><Data ss:Type="String">Afrikaans</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_zu</Data></Cell>
+	 <Cell><Data ss:Type="String">Zulu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_mg</Data></Cell>
+	 <Cell><Data ss:Type="String">Malagasy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_he</Data></Cell>
+	 <Cell><Data ss:Type="String">Hebrew</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ar</Data></Cell>
-	 <Cell><Data ss:Type="String">Arabic (UNSUPPORTED RTL)</Data></Cell>
+	 <Cell><Data ss:Type="String">Arabic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_fa</Data></Cell>
+	 <Cell><Data ss:Type="String">Persian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_hi</Data></Cell>
-	 <Cell><Data ss:Type="String">हिन्दी</Data></Cell>
+	 <Cell><Data ss:Type="String">Hindi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ur</Data></Cell>
+	 <Cell><Data ss:Type="String">Urdu</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_bn</Data></Cell>
-	 <Cell><Data ss:Type="String">বাংলা</Data></Cell>
+	 <Cell><Data ss:Type="String">Bengali</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_pa</Data></Cell>
+	 <Cell><Data ss:Type="String">Punjabi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_gu</Data></Cell>
+	 <Cell><Data ss:Type="String">Gujarati</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_mr</Data></Cell>
+	 <Cell><Data ss:Type="String">Marathi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ta</Data></Cell>
+	 <Cell><Data ss:Type="String">Tamil</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_te</Data></Cell>
+	 <Cell><Data ss:Type="String">Telugu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_kn</Data></Cell>
+	 <Cell><Data ss:Type="String">Kannada</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_ml</Data></Cell>
+	 <Cell><Data ss:Type="String">Malayalam</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_kk</Data></Cell>
+	 <Cell><Data ss:Type="String">Kazakh</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_mn</Data></Cell>
+	 <Cell><Data ss:Type="String">Mongolian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_zhs</Data></Cell>
-	 <Cell><Data ss:Type="String"> 中文（简体）</Data></Cell>
+	 <Cell><Data ss:Type="String">Chinese (Simplified)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_zht</Data></Cell>
-	 <Cell><Data ss:Type="String"> 中文（繁體）</Data></Cell>
+	 <Cell><Data ss:Type="String">Chinese (Traditional)</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ko</Data></Cell>
-	 <Cell><Data ss:Type="String">한국인</Data></Cell>
+	 <Cell><Data ss:Type="String">Korean</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ja</Data></Cell>
-	 <Cell><Data ss:Type="String">日本語</Data></Cell>
+	 <Cell><Data ss:Type="String">Japanese</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_th</Data></Cell>
-	 <Cell><Data ss:Type="String">ไทย</Data></Cell>
+	 <Cell><Data ss:Type="String">Thai</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_lo</Data></Cell>
+	 <Cell><Data ss:Type="String">Lao</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_vi</Data></Cell>
-	 <Cell><Data ss:Type="String">Tiếng Việt</Data></Cell>
+	 <Cell><Data ss:Type="String">Vietnamese</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_km</Data></Cell>
+	 <Cell><Data ss:Type="String">Khmer</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lang_my</Data></Cell>
+	 <Cell><Data ss:Type="String">Burmese</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_id</Data></Cell>
-	 <Cell><Data ss:Type="String">Bahasa Indonesia</Data></Cell>
+	 <Cell><Data ss:Type="String">Indonesian</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_ms</Data></Cell>
-	 <Cell><Data ss:Type="String">Bahasa Melayu</Data></Cell>
+	 <Cell><Data ss:Type="String">Malay</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lang_tl</Data></Cell>
 	 <Cell><Data ss:Type="String">Filipino</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">lang_mi</Data></Cell>
+	 <Cell><Data ss:Type="String">Māori</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">select_language</Data></Cell>
 	 <Cell><Data ss:Type="String">Select a Language</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">select_language_legend</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font color='#0BDB31'&gt;&lt;b&gt;Green:&lt;/b&gt;&lt;/font&gt; selected after restart / &lt;font color='#EBC002'&gt;&lt;b&gt;Yellow:&lt;/b&gt;&lt;/font&gt; currently loaded</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">language_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Confirm Language</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">language_confirm_current</Data></Cell>
+	 <Cell><Data ss:Type="String">Switch the game language to %s?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">language_confirm_restart</Data></Cell>
+	 <Cell><Data ss:Type="String">You will need to restart the game before the new language is fully applied.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">language_samechoice</Data></Cell>
+	 <Cell><Data ss:Type="String">You are already playing in this language.</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">language_restart_needed</Data></Cell>
 	 <Cell><Data ss:Type="String">Language settings have been changed. Please restart the game for the changes to take full effect.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">language_restart_samechoice</Data></Cell>
+	 <Cell><Data ss:Type="String">You have already selected this language. Please close and reboot the game to load it.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help</Data></Cell>
@@ -411,7 +583,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">quit</Data></Cell>
-	 <Cell><Data ss:Type="String">Save & Quit</Data></Cell>
+	 <Cell><Data ss:Type="String">Save &amp; Quit</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">use_recipe</Data></Cell>
@@ -1890,44 +2062,92 @@
 	 <Cell><Data ss:Type="String">UNITS</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_bottle_other</Data></Cell>
-	 <Cell><Data ss:Type="String">botol</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_bottle_1</Data></Cell>
+	 <Cell><Data ss:Type="String">bottle</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_box_other</Data></Cell>
-	 <Cell><Data ss:Type="String">kotak</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_bottle_2</Data></Cell>
+	 <Cell><Data ss:Type="String">bottles</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_bundle_other</Data></Cell>
-	 <Cell><Data ss:Type="String">ikat</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_box_1</Data></Cell>
+	 <Cell><Data ss:Type="String">box</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_can_other</Data></Cell>
-	 <Cell><Data ss:Type="String">tin</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_box_2</Data></Cell>
+	 <Cell><Data ss:Type="String">boxes</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_carton_other</Data></Cell>
-	 <Cell><Data ss:Type="String">kadbod</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_bundle_1</Data></Cell>
+	 <Cell><Data ss:Type="String">bundle</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_case_other</Data></Cell>
-	 <Cell><Data ss:Type="String">peti</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_bundle_2</Data></Cell>
+	 <Cell><Data ss:Type="String">bundles</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_crate_other</Data></Cell>
-	 <Cell><Data ss:Type="String">peti kayu</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_can_1</Data></Cell>
+	 <Cell><Data ss:Type="String">can</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_cup_other</Data></Cell>
-	 <Cell><Data ss:Type="String">cawan</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_can_2</Data></Cell>
+	 <Cell><Data ss:Type="String">cans</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_jar_other</Data></Cell>
-	 <Cell><Data ss:Type="String">balang</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_carton_1</Data></Cell>
+	 <Cell><Data ss:Type="String">carton</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">unit_sack_other</Data></Cell>
-	 <Cell><Data ss:Type="String">guni</Data></Cell>
+	 <Cell><Data ss:Type="String">unit_carton_2</Data></Cell>
+	 <Cell><Data ss:Type="String">cartons</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_case_1</Data></Cell>
+	 <Cell><Data ss:Type="String">case</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_case_2</Data></Cell>
+	 <Cell><Data ss:Type="String">cases</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_crate_1</Data></Cell>
+	 <Cell><Data ss:Type="String">crate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_crate_2</Data></Cell>
+	 <Cell><Data ss:Type="String">crates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_cup_1</Data></Cell>
+	 <Cell><Data ss:Type="String">cup</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_cup_2</Data></Cell>
+	 <Cell><Data ss:Type="String">cups</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_jar_1</Data></Cell>
+	 <Cell><Data ss:Type="String">jar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_jar_2</Data></Cell>
+	 <Cell><Data ss:Type="String">jars</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_sack_1</Data></Cell>
+	 <Cell><Data ss:Type="String">sack</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_sack_2</Data></Cell>
+	 <Cell><Data ss:Type="String">sacks</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_tub_1</Data></Cell>
+	 <Cell><Data ss:Type="String">tub</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">unit_tub_2</Data></Cell>
+	 <Cell><Data ss:Type="String">tubs</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>
@@ -1960,6 +2180,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">apple</Data></Cell>
 	 <Cell><Data ss:Type="String">Apples</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">apricot</Data></Cell>
+	 <Cell><Data ss:Type="String">Apricots</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bal_cacao</Data></Cell>
@@ -2018,16 +2242,20 @@
 	 <Cell><Data ss:Type="String">Cashews</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">cayenne</Data></Cell>
+	 <Cell><Data ss:Type="String">Cayenne Peppers</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">chamomile</Data></Cell>
+	 <Cell><Data ss:Type="String">Chamomile</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">cherry</Data></Cell>
 	 <Cell><Data ss:Type="String">Bing Cherries</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">chestnut</Data></Cell>
 	 <Cell><Data ss:Type="String">Chestnuts</Data></Cell>
-	</Row>
-	<Row>
-     <Cell><Data ss:Type="String">chili</Data></Cell>
-     <Cell><Data ss:Type="String">Chili Peppers</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">cinnamon</Data></Cell>
@@ -2050,6 +2278,10 @@
 	 <Cell><Data ss:Type="String">Coffee</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">cranberry</Data></Cell>
+	 <Cell><Data ss:Type="String">Cranberries</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">cream</Data></Cell>
 	 <Cell><Data ss:Type="String">Cream</Data></Cell>
 	</Row>
@@ -2066,6 +2298,14 @@
 	 <Cell><Data ss:Type="String">Doualan Cacao</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">dragonfruit</Data></Cell>
+	 <Cell><Data ss:Type="String">Dragonfruit</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">earl_grey</Data></Cell>
+	 <Cell><Data ss:Type="String">Earl Grey Tea</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">espresso</Data></Cell>
 	 <Cell><Data ss:Type="String">Espresso Beans</Data></Cell>
 	</Row>
@@ -2080,6 +2320,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">grand_marnier</Data></Cell>
 	 <Cell><Data ss:Type="String">Grand Marnier</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">guava</Data></Cell>
+	 <Cell><Data ss:Type="String">Guava</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">han_coffee</Data></Cell>
@@ -2102,6 +2346,14 @@
 	 <Cell><Data ss:Type="String">Honey</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">ice_cream</Data></Cell>
+	 <Cell><Data ss:Type="String">Ice Cream</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">jasmine</Data></Cell>
+	 <Cell><Data ss:Type="String">Jasmine Petals</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">kahlua</Data></Cell>
 	 <Cell><Data ss:Type="String">Kahlúa</Data></Cell>
 	</Row>
@@ -2116,6 +2368,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">lemon</Data></Cell>
 	 <Cell><Data ss:Type="String">Lemons</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lemongrass</Data></Cell>
+	 <Cell><Data ss:Type="String">Lemongrass</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">lim_cacao</Data></Cell>
@@ -2146,6 +2402,10 @@
 	 <Cell><Data ss:Type="String">Maple Syrup</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">marshmallow</Data></Cell>
+	 <Cell><Data ss:Type="String">Marshmallows</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">matcha</Data></Cell>
 	 <Cell><Data ss:Type="String">Matcha</Data></Cell>
 	</Row>
@@ -2162,6 +2422,10 @@
 	 <Cell><Data ss:Type="String">Nutmeg</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">oat</Data></Cell>
+	 <Cell><Data ss:Type="String">Oats</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">orange</Data></Cell>
 	 <Cell><Data ss:Type="String">Oranges</Data></Cell>
 	</Row>
@@ -2170,16 +2434,20 @@
 	 <Cell><Data ss:Type="String">Passionfruit</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">peach</Data></Cell>
+	 <Cell><Data ss:Type="String">Peaches</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">peanut</Data></Cell>
 	 <Cell><Data ss:Type="String">Peanuts</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">pecan</Data></Cell>
-	 <Cell><Data ss:Type="String">Pecans</Data></Cell>
+	 <Cell><Data ss:Type="String">pear</Data></Cell>
+	 <Cell><Data ss:Type="String">Pears</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">pepper</Data></Cell>
-	 <Cell><Data ss:Type="String">Cayenne Peppers</Data></Cell>
+	 <Cell><Data ss:Type="String">pecan</Data></Cell>
+	 <Cell><Data ss:Type="String">Pecans</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">pistachio</Data></Cell>
@@ -2188,6 +2456,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">pineapple</Data></Cell>
 	 <Cell><Data ss:Type="String">Pineapples</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">plum</Data></Cell>
+	 <Cell><Data ss:Type="String">Plums</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">pomegranate</Data></Cell>
@@ -2210,12 +2482,24 @@
 	 <Cell><Data ss:Type="String">Raspberries</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">rhubarb</Data></Cell>
+	 <Cell><Data ss:Type="String">Rhubarb</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">rio_coffee</Data></Cell>
 	 <Cell><Data ss:Type="String">Brazilian Coffee</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">rooibos</Data></Cell>
+	 <Cell><Data ss:Type="String">Rooibos</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">rose</Data></Cell>
 	 <Cell><Data ss:Type="String">Rose Petals</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rosemary</Data></Cell>
+	 <Cell><Data ss:Type="String">Rosemary</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rum</Data></Cell>
@@ -2250,6 +2534,10 @@
 	 <Cell><Data ss:Type="String">Sumac</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">tamarind</Data></Cell>
+	 <Cell><Data ss:Type="String">Tamarind</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">tan_coffee</Data></Cell>
 	 <Cell><Data ss:Type="String">Moroccan Coffee</Data></Cell>
 	</Row>
@@ -2274,6 +2562,10 @@
 	 <Cell><Data ss:Type="String">Walnuts</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">wafer</Data></Cell>
+	 <Cell><Data ss:Type="String">Wafers</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">wasabi</Data></Cell>
 	 <Cell><Data ss:Type="String">Wasabi</Data></Cell>
 	</Row>
@@ -2284,6 +2576,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">whiskey</Data></Cell>
 	 <Cell><Data ss:Type="String">Whiskey</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">yuzu</Data></Cell>
+	 <Cell><Data ss:Type="String">Yuzu</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>
@@ -2571,7 +2867,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">t08</Data></Cell>
-	 <Cell><Data ss:Type="String">Peruvian Cacao Cardamom & Nutmeg Truffles</Data></Cell>
+	 <Cell><Data ss:Type="String">Peruvian Cacao Cardamom &amp; Nutmeg Truffles</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">t08_desc</Data></Cell>
@@ -2659,7 +2955,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">e07</Data></Cell>
-	 <Cell><Data ss:Type="String">Mint & Whiskey Liqueurs</Data></Cell>
+	 <Cell><Data ss:Type="String">Mint &amp; Whiskey Liqueurs</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">e07_desc</Data></Cell>
@@ -2902,12 +3198,20 @@
 	 <Cell><Data ss:Type="String">PORT NAMES AND REGIONS</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">addisababa</Data></Cell>
+	 <Cell><Data ss:Type="String">Addis Ababa</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">baghdad</Data></Cell>
 	 <Cell><Data ss:Type="String">Baghdad</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bali</Data></Cell>
 	 <Cell><Data ss:Type="String">Bali</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bangkok</Data></Cell>
+	 <Cell><Data ss:Type="String">Bangkok</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">belize</Data></Cell>
@@ -2962,6 +3266,10 @@
 	 <Cell><Data ss:Type="String">Mahajanga</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">naples</Data></Cell>
+	 <Cell><Data ss:Type="String">Naples</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">reykjavik</Data></Cell>
 	 <Cell><Data ss:Type="String">Reykjavík</Data></Cell>
 	</Row>
@@ -3000,6 +3308,22 @@
 	<Row>
 	 <Cell></Cell>
 	 <Cell><Data ss:Type="String">BUILDING NAMES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Addis Mercato</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Lion of Judah Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Kaffa Coffee Exporters</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_station</Data></Cell>
+	 <Cell><Data ss:Type="String">La Gare Station</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bag_market</Data></Cell>
@@ -3070,8 +3394,28 @@
 	 <Cell><Data ss:Type="String">El Dorado Suites</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">bom_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Crawford Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bom_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Malabar Sweets &amp; Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bom_hotel</Data></Cell>
+	 <Cell><Data ss:Type="String">Taj Mahal Palace</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bom_gateway</Data></Cell>
+	 <Cell><Data ss:Type="String">Gateway of India</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">bom_station</Data></Cell>
+	 <Cell><Data ss:Type="String">Victoria Terminus</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">cap_market</Data></Cell>
-	 <Cell><Data ss:Type="String">Victoria & Alfred Waterfront Market</Data></Cell>
+	 <Cell><Data ss:Type="String">Victoria &amp; Alfred Waterfront Market</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">cap_shop</Data></Cell>
@@ -3146,6 +3490,30 @@
 	 <Cell><Data ss:Type="String">Casino National</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">ist_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Eminönü Spice Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Bosphorus Delights &amp; Coffees</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_hotel</Data></Cell>
+	 <Cell><Data ss:Type="String">Pera Palace Hotel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_tower</Data></Cell>
+	 <Cell><Data ss:Type="String">Galata Tower</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_bridge</Data></Cell>
+	 <Cell><Data ss:Type="String">Galata Bridge</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_palace</Data></Cell>
+	 <Cell><Data ss:Type="String">Topkapı Palace</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">kon_market</Data></Cell>
 	 <Cell><Data ss:Type="String">Open Air Market</Data></Cell>
 	</Row>
@@ -3202,6 +3570,50 @@
 	 <Cell><Data ss:Type="String">Pizarro Place</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">mah_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Tsaramandroso Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Pâtisserie du Baobab</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_plantation</Data></Cell>
+	 <Cell><Data ss:Type="String">Betsiboka Red Cacao Estate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_postoffice</Data></Cell>
+	 <Cell><Data ss:Type="String">Bureau des Postes</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">mah_building1</Data></Cell>
+	 <Cell><Data ss:Type="String">The Great Baobab</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_market</Data></Cell>
+	 <Cell><Data ss:Type="String">Porta Nolana Market</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Pasticceria del Sole</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_mountain</Data></Cell>
+	 <Cell><Data ss:Type="String">Mount Vesuvius</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_castle</Data></Cell>
+	 <Cell><Data ss:Type="String">Castel dell'Ovo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_plaza</Data></Cell>
+	 <Cell><Data ss:Type="String">Piazza del Plebiscito</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_tavern</Data></Cell>
+	 <Cell><Data ss:Type="String">Tre Limoni Tavern</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">rey_inn</Data></Cell>
 	 <Cell><Data ss:Type="String">Old Compass Inn</Data></Cell>
 	</Row>
@@ -3215,7 +3627,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rey_shop</Data></Cell>
-	 <Cell><Data ss:Type="String">Norðurljós Sweets & Coffees</Data></Cell>
+	 <Cell><Data ss:Type="String">Norðurljós Sweets &amp; Coffees</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">san_market</Data></Cell>
@@ -3470,6 +3882,22 @@
 	 <Cell><Data ss:Type="String">Rick Lafontaine</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">add_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Abeba Tadesse</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Ephrem Mekonnen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_plantationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Zewdu Haile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">add_stationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Fikre Tesfaye</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">bal_marketkeep</Data></Cell>
 	 <Cell><Data ss:Type="String">Nyoman</Data></Cell>
 	</Row>
@@ -3598,6 +4026,22 @@
 	 <Cell><Data ss:Type="String">Armena Caraballa</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">ist_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Kenan Süleymanoğlu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Ayla Yıldız</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_hotelkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Tarık Arslan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">ist_towerkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Feride Gürpınar</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">kon_bldg2keep</Data></Cell>
 	 <Cell><Data ss:Type="String">Onaona Waipa</Data></Cell>
 	</Row>
@@ -3662,8 +4106,28 @@
 	 <Cell><Data ss:Type="String">Patrick Ratsimbazafy</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">mah_plantationkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Lalao Rakotomalala</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">mah_xxxkeep</Data></Cell>
 	 <Cell><Data ss:Type="String">Sahondra Befanonana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_marketkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Gennaro Esposito</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_shopkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Isabella Ricci</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_mountainkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Salvatore Coppola</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">nap_castlekeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Vincenzo Marino</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rey_marketkeep</Data></Cell>
@@ -3982,6 +4446,10 @@
 	 <Cell><Data ss:Type="String">I Would!</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">idbehonored</Data></Cell>
+	 <Cell><Data ss:Type="String">I'd Be Honored</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">idloveit</Data></Cell>
 	 <Cell><Data ss:Type="String">I'd Love It!</Data></Cell>
 	</Row>
@@ -4044,6 +4512,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">weareinbusiness</Data></Cell>
 	 <Cell><Data ss:Type="String">We Are In Business</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">wehaveadeal</Data></Cell>
+	 <Cell><Data ss:Type="String">We Have a Deal</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">whynot</Data></Cell>
@@ -4186,6 +4658,10 @@
 	 <Cell><Data ss:Type="String">No, Not For Me</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">noidonttrustthem</Data></Cell>
+	 <Cell><Data ss:Type="String">No, I Don't Trust Them</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">noimtoobusy</Data></Cell>
 	 <Cell><Data ss:Type="String">No, I'm Too Busy</Data></Cell>
 	</Row>
@@ -4294,6 +4770,10 @@
 	 <Cell><Data ss:Type="String">Noted</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">okayigetit</Data></Cell>
+	 <Cell><Data ss:Type="String">Okay, I Get It...</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">understandable</Data></Cell>
 	 <Cell><Data ss:Type="String">Understandable</Data></Cell>
 	</Row>
@@ -4362,6 +4842,14 @@
 	 <Cell><Data ss:Type="String">Happy to Help</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">illkeepintouch</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Keep in Touch</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">imgladyoulikethem</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm Glad You Like Them</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">mypleasure</Data></Cell>
 	 <Cell><Data ss:Type="String">My Pleasure!</Data></Cell>
 	</Row>
@@ -4376,6 +4864,26 @@
 	<Row>
 	 <Cell><Data ss:Type="String">yourewelcome</Data></Cell>
 	 <Cell><Data ss:Type="String">You're Welcome</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">illgetthemmade</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Get Them Made</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">illhavethemready</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Have Them Ready</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">notjustyet</Data></Cell>
+	 <Cell><Data ss:Type="String">Not Just Yet</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">theyrecomingalong</Data></Cell>
+	 <Cell><Data ss:Type="String">They're Coming Along</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">theyareontheirway</Data></Cell>
+	 <Cell><Data ss:Type="String">They're On Their Way</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">couldvebeenworse</Data></Cell>
@@ -4521,6 +5029,14 @@
 	 <Cell><Data ss:Type="String">goodtoseeyou</Data></Cell>
 	 <Cell><Data ss:Type="String">Good to See You</Data></Cell>
 	</Row>
+    <Row>
+	 <Cell><Data ss:Type="String">illheadthereimmediately</Data></Cell>
+	 <Cell><Data ss:Type="String">I'll Head There Immediately</Data></Cell>
+    </Row>
+	<Row>
+	 <Cell><Data ss:Type="String">lookingforwardtoit</Data></Cell>
+	 <Cell><Data ss:Type="String">Looking Forward to It</Data></Cell>
+	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">metoo</Data></Cell>
 	 <Cell><Data ss:Type="String">Me Too!</Data></Cell>
@@ -4544,6 +5060,14 @@
 	<Row>
 	 <Cell><Data ss:Type="String">youhavemysupport</Data></Cell>
 	 <Cell><Data ss:Type="String">You Have My Support</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youhavemyword</Data></Cell>
+	 <Cell><Data ss:Type="String">You Have My Word</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">youmayberight</Data></Cell>
+	 <Cell><Data ss:Type="String">You May Be Right...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell></Cell>

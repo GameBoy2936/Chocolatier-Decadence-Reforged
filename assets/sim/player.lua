@@ -399,28 +399,70 @@ function Player:Reset(restoreTable)
 		self:SetPort("zurich")
 	end
 
-	-- Catalogue Default Unlocks
+	-- Catalogue Ingredient Migration
 	if not restoreTable then
 		DebugOut("CATALOGUE", "New game detected. Unlocking default catalogue ingredient entries.")
+		
 		for _, ing in ipairs(_IngredientOrder) do
 			if not ing.locked then
 				self.catalogue.unlockedIngredients[ing.name] = true
 			end
 		end
 	else
-		-- This is a LOADED GAME. Perform a one-time migration check to fix older saves
+		local migratedCount = 0
+		
+		-- 1. Default ingredients
+		-- Any ingredient that is not marked locked in the ingredient data should
+		-- always have a visible catalogue entry.
 		for _, ing in ipairs(_IngredientOrder) do
 			if not ing.locked and not self.catalogue.unlockedIngredients[ing.name] then
 				self.catalogue.unlockedIngredients[ing.name] = true
-				DebugOut("CATALOGUE", string.format("MIGRATION: Retroactively unlocked default ingredient '%s'.", ing.name))
+				migratedCount = migratedCount + 1
+				
+				DebugOut("CATALOGUE", string.format("Retroactively unlocked default ingredient catalogue entry: %s", ing.name))
 			end
+		end
+		
+		-- 2. Quest-unlocked ingredients from older saves
+		-- If an older save already has an ingredient available in markets, the
+		-- Catalogue should also show its article.
+		for ingredientName, available in pairs(self.ingredientsAvailable or {}) do
+			if available and _AllIngredients[ingredientName] and not self.catalogue.unlockedIngredients[ingredientName] then
+				self.catalogue.unlockedIngredients[ingredientName] = true
+				migratedCount = migratedCount + 1
+				
+				DebugOut("CATALOGUE", string.format("Retroactively unlocked catalogue entry for available ingredient: %s", ingredientName))
+			end
+		end
+		
+		-- 3. Inventory-backed discovery
+		-- If the player already owns the ingredient, has placed it in the lab,
+		-- or has bought it before, the article should not remain blacked out.
+		for _, ing in ipairs(_IngredientOrder) do
+			local ingredientName = ing.name
+			local hasInventory = (self.ingredients[ingredientName] or 0) > 0
+			local hasLabEntry = self.labIngredients and self.labIngredients[ingredientName]
+			local hasBoughtBefore = self.firstEverBuy and self.firstEverBuy[ingredientName]
+			
+			if (hasInventory or hasLabEntry or hasBoughtBefore) and not self.catalogue.unlockedIngredients[ingredientName] then
+				self.catalogue.unlockedIngredients[ingredientName] = true
+				migratedCount = migratedCount + 1
+				
+				DebugOut("CATALOGUE", string.format("Retroactively unlocked catalogue entry for previously handled ingredient: %s", ingredientName))
+			end
+		end
+		
+		if migratedCount > 0 then
+			DebugOut("CATALOGUE", string.format("Ingredient catalogue migration completed. Added %d missing entries.", migratedCount))
+		else
+			DebugOut("CATALOGUE", "Ingredient catalogue migration completed. No missing entries found.")
 		end
 	end
 	
 	-- Synchronize holiday states immediately on load
 	self:UpdateHolidays()
 
-	-- CRITICAL FIX: Reload strings NOW that options and difficulty are fully set.
+	-- Reload strings NOW that options and difficulty are fully set.
 	self:ReloadStrings()
 	
 	DebugOut("PLAYER", string.format("Player Reset complete. Name: %s, Money: %s, Rank: %d", tostring(self.name or "N/A"), Dollars(self.money), self.rank))

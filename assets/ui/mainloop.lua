@@ -271,6 +271,11 @@ function Main()
         lang = Player.options.language
     end
 	
+	-- Tracks the language currently loaded into the running string/font session.
+	-- If the player changes language in Options, Player.options.language changes
+	-- immediately, but gLoadedLanguage remains the old language until reboot.
+	gLoadedLanguage = lang
+	
 	DebugOut("FONT", "Evaluating font mapping for active language.", { activeLanguage = lang })
 	
 	-- New modded addition: multi-language dynamic font support

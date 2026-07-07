@@ -58,7 +58,7 @@ end
 
 local function ShowLanguages()
 	DebugOut("UI", "Language selector button clicked.")
-	DisplayDialog("ui/ui_language.lua")
+	DisplayDialog { "ui/ui_language.lua" }
 end
 
 -------------------------------------------------------------------------------
