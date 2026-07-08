@@ -1257,7 +1257,9 @@ function Player:SetPrimaryQuest(questName)
 		
 		UpdateLedger("quest")
 		FadeIn{"questText"}
-		devUpdateQuest()
+		if devUpdateQuest then
+			devUpdateQuest()
+		end
 	end
 
 	UpdateActiveQuestGoalsComplete()
