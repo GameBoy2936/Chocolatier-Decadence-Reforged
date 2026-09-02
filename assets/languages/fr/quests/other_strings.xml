@@ -59,547 +59,547 @@
    <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
 	<Row>
 	 <Cell><Data ss:Type="String">$</Data></Cell>
-	 <Cell><Data ss:Type="String">NOMONEY QUESTS</Data></Cell>
+	 <Cell><Data ss:Type="String">QUÊTES SANS ARGENT</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney</Data></Cell>
-	 <Cell><Data ss:Type="String">A Reasonable Loan</Data></Cell>
+	 <Cell><Data ss:Type="String">Un prêt raisonnable</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, it looks like you've gotten yourself into a pickle. I'm always here to help an entrepreneur in need. I am willing to loan you the sum of $5,000 for a few weeks. But I will expect to be repaid with interest. I'll find you in a month or so, at which time you will owe me [D|$7,500|$8,500|$10,000]. Do we have a deal?</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, on dirait que vous vous êtes mis dans de beaux draps. Je suis toujours là pour aider un entrepreneur dans le besoin. Je suis disposé à vous prêter 5 000 $ pour quelques semaines. Mais je m'attends à être remboursé avec des intérêts. Je vous retrouverai d'ici un mois environ ; à ce moment-là, vous me devrez [D|7 500 $|8 500 $|10 000 $]. Marché conclu ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Make sure you have [D|$7,500|$8,500|$10,000] on hand to repay %las_casinokeep%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Assurez-vous d'avoir [D|7 500 $|8 500 $|10 000 $] en réserve pour rembourser %las_casinokeep%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000], and I expect to be paid. I'll be seeing you around...</Data></Cell>
+	 <Cell><Data ss:Type="String">Un petit rappel : vous me devez [D|7 500 $|8 500 $|10 000 $], et je compte bien être payé. On se reverra...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_incomplete_2</Data></Cell>
-	 <Cell><Data ss:Type="String">This is a friendly reminder - you owe me [D|$7,500|$8,500|$10,000]. I'll be seeing you around...</Data></Cell>
+	 <Cell><Data ss:Type="String">Juste un rappel amical : vous me devez [D|7 500 $|8 500 $|10 000 $]. On se reverra...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_incomplete_3</Data></Cell>
-	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000]. If I were you, I'd get the dough together...</Data></Cell>
+	 <Cell><Data ss:Type="String">Un petit rappel : vous me devez [D|7 500 $|8 500 $|10 000 $]. À votre place, je réunirais vite la somme...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_incomplete_4</Data></Cell>
-	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$7,500|$8,500|$10,000]. I'll find you...</Data></Cell>
+	 <Cell><Data ss:Type="String">Un petit rappel : vous me devez [D|7 500 $|8 500 $|10 000 $]. Je vous retrouverai...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I appreciate when customers meet their obligations. I'll take that [D|$7,500|$8,500|$10,000] that you owe me. It has been a pleasure doing business with you.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'apprécie les clients qui respectent leurs obligations. Je vais prendre les [D|7 500 $|8 500 $|10 000 $] que vous me devez. Ce fut un plaisir de faire affaire avec vous.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney2</Data></Cell>
-	 <Cell><Data ss:Type="String">A Second Loan</Data></Cell>
+	 <Cell><Data ss:Type="String">Un deuxième prêt</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney2_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Hello again, &lt;player&gt;. Have you gotten yourself into another pinch? As I said, I'm always here when someone is in need. But this time, my fees have increased. I will loan you another $5,000. But, you will need to repay me [D|$10,000|$12,500|$15,000]. Please don't fret, I will find you. Do we have a deal?</Data></Cell>
+	 <Cell><Data ss:Type="String">Bonjour de nouveau, &lt;player&gt;. Vous vous êtes encore retrouvé à court d'argent ? Comme je vous l'ai dit, je suis toujours là lorsqu'une personne est dans le besoin. Mais cette fois, mes frais ont augmenté. Je vais vous prêter encore 5 000 $. En revanche, vous devrez me rembourser [D|10 000 $|12 500 $|15 000 $]. Ne vous inquiétez pas, je saurai vous retrouver. Marché conclu ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney2_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Have [D|$10,000|$12,500|$15,000] ready to repay %las_casinokeep%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ayez [D|10 000 $|12 500 $|15 000 $] de côté pour rembourser %las_casinokeep%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney2_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">This is a friendly reminder - you owe me [D|$10,000|$12,500|$15,000]. I'll be seeing you around...</Data></Cell>
+	 <Cell><Data ss:Type="String">Juste un rappel amical : vous me devez [D|10 000 $|12 500 $|15 000 $]. On se reverra...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney2_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'll take that [D|$10,000|$12,500|$15,000] now. The pleasure has been mine. See you around, friend...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je vais prendre ces [D|10 000 $|12 500 $|15 000 $] maintenant. Tout le plaisir a été pour moi. À bientôt, mon ami...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney3</Data></Cell>
-	 <Cell><Data ss:Type="String">Yet Another Loan</Data></Cell>
+	 <Cell><Data ss:Type="String">Encore un autre prêt</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney3_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Well, hello again, &lt;player&gt;. Another pickle, I see? Of course I'm able to help. I'll loan you another $5,000. And again, you will owe me [D|$10,000|$12,500|$15,000]. Be forewarned, though. From here on out, my rates will not be so favorable for you. Deal?</Data></Cell>
+	 <Cell><Data ss:Type="String">Eh bien, bonjour encore, &lt;player&gt;. Encore dans le pétrin, à ce que je vois ? Bien sûr que je peux vous aider. Je vais vous prêter encore 5 000 $. Et, une fois de plus, vous me devrez [D|10 000 $|12 500 $|15 000 $]. Mais je vous préviens : à partir de maintenant, mes taux ne seront plus aussi avantageux pour vous. Marché conclu ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney3_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Have [D|$10,000|$12,500|$15,000] ready to repay %las_casinokeep%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ayez [D|10 000 $|12 500 $|15 000 $] de côté pour rembourser %las_casinokeep%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney3_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$10,000|$12,500|$15,000]. If I were you, I'd get the dough together...</Data></Cell>
+	 <Cell><Data ss:Type="String">Un petit rappel : vous me devez [D|10 000 $|12 500 $|15 000 $]. À votre place, je réunirais vite la somme...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney3_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Listen, &lt;player&gt;. I'm going to take that [D|$10,000|$12,500|$15,000] that you owe me.&lt;br&gt;&lt;br&gt;You should do a better job minding your finances. I'll be willing to loan you money again, of course, but my interest rate is going up. Way up. Good luck...</Data></Cell>
+	 <Cell><Data ss:Type="String">Écoutez, &lt;player&gt;. Je vais prendre les [D|10 000 $|12 500 $|15 000 $] que vous me devez.&lt;br&gt;&lt;br&gt;Vous devriez mieux surveiller vos finances. Je serai bien sûr disposé à vous prêter de nouveau de l'argent, mais mon taux d'intérêt va augmenter. Fortement. Bonne chance...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney4</Data></Cell>
-	 <Cell><Data ss:Type="String">Money Trouble</Data></Cell>
+	 <Cell><Data ss:Type="String">Problèmes d'argent</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney4_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am afraid your credit is not great, my friend. I am happy to help you once again, but as I warned you - my interest rate has gone up. I will loan you another $5,000, but you must repay me [D|$20,000|$22,500|$25,000]. What do you say?</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai bien peur que votre crédit ne soit pas fameux, mon ami. Je veux bien vous aider une nouvelle fois, mais comme je vous l'avais annoncé, mon taux d'intérêt a augmenté. Je vais vous prêter encore 5 000 $, mais vous devrez me rembourser [D|20 000 $|22 500 $|25 000 $]. Qu'en dites-vous ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney4_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Get the [D|$20,000|$22,500|$25,000] together to repay %las_casinokeep%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Réunissez les [D|20 000 $|22 500 $|25 000 $] nécessaires pour rembourser %las_casinokeep%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney4_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Just a reminder - you owe me [D|$20,000|$22,500|$25,000]. I'll find you...</Data></Cell>
+	 <Cell><Data ss:Type="String">Un petit rappel : vous me devez [D|20 000 $|22 500 $|25 000 $]. Je vous retrouverai...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney4_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Hello there, &lt;player&gt;. Allow me to take that [D|$20,000|$22,500|$25,000] we agreed to earlier. Thank you for doing business with me.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bonjour, &lt;player&gt;. Permettez-moi de prendre les [D|20 000 $|22 500 $|25 000 $] dont nous étions convenus. Merci d'avoir fait affaire avec moi.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney5</Data></Cell>
-	 <Cell><Data ss:Type="String">Bank Bailout</Data></Cell>
+	 <Cell><Data ss:Type="String">Renflouement bancaire</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nomoney5_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Listen. I realize that the only way I can hope to see any return on my loan is to help you out once again. I am not happy about this, but here's another $2,500 to help you get back on your feet...</Data></Cell>
+	 <Cell><Data ss:Type="String">Écoutez. Je me rends compte que mon seul espoir de récupérer un jour mon prêt est de vous aider encore une fois. Ça ne me réjouit pas, mais voici 2 500 $ supplémentaires pour vous aider à vous remettre sur pied...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling</Data></Cell>
-	 <Cell><Data ss:Type="String">Opening the Machines</Data></Cell>
+	 <Cell><Data ss:Type="String">Ouverture des machines à sous</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">We've got some great slot machines in here, &lt;player&gt;, but this is an exclusive casino. If you'd be willing to bring me [D|35|60|85] cases of your &lt;user1&gt;, I could see my way to getting you on our list...</Data></Cell>
+	 <Cell><Data ss:Type="String">Nous avons d'excellentes machines à sous ici, &lt;player&gt;, mais ce casino est très sélect. Si vous m'apportiez [D|35|60|85] caisses de votre &lt;user1&gt;, je pourrais peut-être vous faire inscrire sur notre liste...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Grease the wheels by giving [D|35|60|85] cases of &lt;user1&gt; to %hav_casinokeep% at %hav_casino% in %havana%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Graissez les rouages en donnant [D|35|60|85] caisses de &lt;user1&gt; à %hav_casinokeep%, au %hav_casino% de %havana%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Lots of winners in there, &lt;player&gt;. But you can't win if you don’t play, and you can't play if you don't bring me the [D|35|60|85] cases of &lt;user1&gt; we discussed.</Data></Cell>
+	 <Cell><Data ss:Type="String">Il y a beaucoup de gagnants là-dedans, &lt;player&gt;. Mais impossible de gagner sans jouer, et impossible de jouer si vous ne m'apportez pas les [D|35|60|85] caisses de &lt;user1&gt; dont nous avons parlé.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">gambling_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Okay, friend. You have honored your end of the deal, and I will honor mine. From this day forward, you are welcome to gamble here any time.</Data></Cell>
+	 <Cell><Data ss:Type="String">Très bien, mon ami. Vous avez tenu votre part du marché, je tiendrai la mienne. À compter d'aujourd'hui, vous pourrez venir jouer ici quand bon vous semblera.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">airplane</Data></Cell>
-	 <Cell><Data ss:Type="String">Corporate Airplane</Data></Cell>
+	 <Cell><Data ss:Type="String">Avion d'entreprise</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">airplane_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I'm sure you are aware of how high travel costs have gotten. The bad news is that this trend is likely to continue. The good news is that I am here to offer you a Corporate Airplane. For an investment of [D|$500,000|$850,000|$1,500,000], you'll be able to fly direct from any port to any port, and all of your future travel costs will be zero. This certainly makes a difference as you fly in and out of secret ports. And this is not even considering the bump to your style and grace. What do you say?</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, vous savez certainement à quel point le coût des voyages a augmenté. La mauvaise nouvelle, c'est que cette tendance risque de se poursuivre. La bonne, c'est que je suis ici pour vous proposer un avion d'entreprise. Pour un investissement de [D|500 000 $|850 000 $|1 500 000 $], vous pourrez voler directement de n'importe quel port à n'importe quel autre, et tous vos futurs frais de voyage seront nuls. Cela fait une sacrée différence lorsque vous entrez et sortez de ports secrets. Sans même parler du supplément de style et d'élégance. Qu'en dites-vous ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">airplane_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Making arrangements to travel first class, all the time!</Data></Cell>
+	 <Cell><Data ss:Type="String">Préparez-vous à voyager en première classe, tout le temps !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">airplane_deferred_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand. Now may not be the right time to buy an airplane. Don't worry, the airplane is not going anywhere. I'll be sure to find you again after a few months, and I'll be willing to make the same offer another time. And I think you'll agree that as time goes on, doing something about those escalating travel costs will make more and more sense...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je comprends. Ce n'est peut-être pas le bon moment pour acheter un avion. Ne vous inquiétez pas, l'avion ne va nulle part. Je reviendrai vous voir dans quelques mois et je serai disposé à vous faire de nouveau la même offre. Et je pense que vous conviendrez qu'à mesure que le temps passe, faire quelque chose contre l'escalade des frais de voyage deviendra de plus en plus raisonnable...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">airplane_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent. I am convinced that you will be pleased with your purchase. Your Corporate Airplane will be ready for take off for your next journey.</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. Je suis convaincu que votre achat vous donnera satisfaction. Votre avion d'entreprise sera prêt à décoller dès votre prochain voyage.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">telegraph</Data></Cell>
-	 <Cell><Data ss:Type="String">Remote Control</Data></Cell>
+	 <Cell><Data ss:Type="String">Commande à distance</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">telegraph_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I want to tell you about a pretty nifty gizmo - the Remote Telegraph. Once hooked up, you will be able to reconfigure your factories without needing to travel there. You can re-set factories to any product they have previously produced, by clicking on the appropriate status window below. Believe me, this is well worth the price tag of [D|$100,000|$175,000|$250,000] - you'll save that much in travel costs before too long, and how can we put a price tag on convenience? Shall I wire it up for you?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je veux vous parler d'un petit appareil très pratique : le télégraphe à distance. Une fois installé, il vous permettra de reconfigurer vos usines sans avoir à vous y rendre. Vous pourrez remettre une usine sur n'importe quel produit qu'elle a déjà fabriqué en cliquant sur la fenêtre d'état correspondante ci-dessous. Croyez-moi, cela vaut largement les [D|100 000 $|175 000 $|250 000 $] demandés : vous économiserez cette somme en frais de voyage avant longtemps, et puis, comment mettre un prix sur le confort ? Je vous l'installe ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">telegraph_deferred_1</Data></Cell>
-	 <Cell><Data ss:Type="String">No problem. You don't want to spend that kind of cash right now. I understand. I'll be around in a few months to see if you haven't perhaps changed your mind.</Data></Cell>
+	 <Cell><Data ss:Type="String">Aucun problème. Vous ne voulez pas dépenser autant d'argent pour le moment, je comprends. Je repasserai dans quelques mois pour voir si vous n'avez pas changé d'avis.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">telegraph_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Good choice. I'll wire it up for you right away.&lt;br&gt;&lt;br&gt;Just click on any of the factory status windows, and you'll be able to revert production at any factory to manufacture any product that has been previously made there. Good stuff!</Data></Cell>
+	 <Cell><Data ss:Type="String">Bon choix. Je vais vous l'installer tout de suite.&lt;br&gt;&lt;br&gt;Cliquez simplement sur l'une des fenêtres d'état des usines : vous pourrez alors rétablir la production de n'importe quelle usine sur tout produit qui y a déjà été fabriqué. Pratique !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, the Board wants to make sure that you keep an ear out for any opportunities to take ownership of retail locations. One benefit you might not know about is the ability to accept special orders - they are a fantastic way to bump up your margins.</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, le conseil veut s'assurer que vous restez à l'affût de toute occasion de prendre possession de points de vente. Un avantage que vous ignorez peut-être est la possibilité d'accepter des commandes spéciales : c'est un excellent moyen d'augmenter vos marges.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You should really do what you can to take ownership of some retail locations, &lt;player&gt;. It's a surefire way to maximize your profits, and therefore a worthwhile investment.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous devriez vraiment faire votre possible pour prendre possession de quelques points de vente, &lt;player&gt;. C'est un moyen sûr de maximiser vos bénéfices et donc un investissement qui en vaut la peine.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">If you have a chance to partner with a shop owner, &lt;player&gt;, I highly recommend it. Accepting Special Orders is a fantastic way to boost profits, especially if you can catch the offers in person.</Data></Cell>
+	 <Cell><Data ss:Type="String">Si vous avez l'occasion de vous associer à un propriétaire de boutique, &lt;player&gt;, je vous le recommande vivement. Accepter des commandes spéciales est un excellent moyen d'augmenter les bénéfices, surtout si vous interceptez les offres en personne.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Special Orders, which you can start fulfilling once you own a shop or two, are a great way to earn a lot of money for your confections.</Data></Cell>
+	 <Cell><Data ss:Type="String">Les commandes spéciales, que vous pourrez commencer à honorer dès que vous posséderez une ou deux boutiques, sont un excellent moyen de gagner beaucoup d'argent grâce à vos confiseries.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Be sure to touch base with shop keepers around the globe: you never know who might be interested in partnering with you and Baumeister Confections.</Data></Cell>
+	 <Cell><Data ss:Type="String">N'oubliez pas de prendre contact avec les commerçants du monde entier : on ne sait jamais qui pourrait vouloir s'associer à vous et à Baumeister Confections.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Things seem to be going well, &lt;player&gt;. I highly recommend doing all you can to see about taking ownership of a shop or two - it's a great way to grow your business.</Data></Cell>
+	 <Cell><Data ss:Type="String">Les affaires semblent bien se porter, &lt;player&gt;. Je vous recommande vivement de faire tout votre possible pour prendre possession d'une ou deux boutiques : c'est un excellent moyen de développer votre entreprise.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_06_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">To take things to the next level, and really impress the Baumeister Confections Board of Directors, you're going to need to make steps towards owning some shops.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour passer à l'étape supérieure et vraiment impressionner le conseil d'administration de Baumeister Confections, vous allez devoir avancer vers l'acquisition de quelques boutiques.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_tease_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Without taking ownership of a shop, &lt;player&gt;, you'll never be able to accept those highly profitable Special Orders...</Data></Cell>
+	 <Cell><Data ss:Type="String">Sans posséder de boutique, &lt;player&gt;, vous ne pourrez jamais accepter ces commandes spéciales si lucratives...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_owned_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm glad to see that you were able to work something out with Zach at %tan_shop%, &lt;player&gt;. I'm confident that you will find special orders to be a terrific boost to your business.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis ravi de voir que vous avez réussi à trouver un accord avec Zach au %tan_shop%, &lt;player&gt;. Je suis certain que les commandes spéciales donneront un formidable coup de pouce à vos affaires.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">new_ingredients_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, it seems that things are finally getting back to normal after the war. I've been seeing new ingredients in stock in markets all over the world...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, on dirait que les choses reviennent enfin à la normale après la guerre. Je vois de nouveaux ingrédients arriver sur les marchés du monde entier...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, you need to be sure to get to the Secret Test Kitchen and invent a recipe soon.&lt;br&gt;&lt;br&gt;You simply won't be able to progress up the corporate ladder without successfully creating and marketing your own creations!</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, vous devez absolument vous rendre à la Cuisine d'essai secrète et inventer bientôt une recette.&lt;br&gt;&lt;br&gt;Vous ne pourrez tout simplement pas progresser dans la hiérarchie de l'entreprise sans créer puis commercialiser avec succès l'une de vos propres créations !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_2</Data></Cell>
-	 <Cell><Data ss:Type="String">You know, &lt;player&gt;, the word on the street is that the most successful chocolatiers are the ones who aren't afraid to experiment. Maybe it's time you paid a visit to that Secret Test Kitchen I've heard rumors about?</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous savez, &lt;player&gt;, on dit que les chocolatiers les plus prospères sont ceux qui n'ont pas peur d'expérimenter. Peut-être est-il temps d'aller faire un tour dans cette Cuisine d'essai secrète dont j'ai entendu parler ?</Data></Cell>
 	</Row>
 	<Row>
 	<Cell><Data ss:Type="String">ugr_prompt_offer_3</Data></Cell>
-	<Cell><Data ss:Type="String">I'm curious to see what you'll cook up once you get some time in the Secret Test Kitchen. Don't keep the company waiting too long - you won't be able to progress much further until you've designed and marketed a creation of your own.</Data></Cell>
+	<Cell><Data ss:Type="String">J'ai hâte de voir ce que vous concocterez lorsque vous aurez passé un peu de temps dans la Cuisine d'essai secrète. Ne faites pas attendre l'entreprise trop longtemps : vous ne pourrez guère progresser davantage tant que vous n'aurez pas conçu et commercialisé votre propre création.</Data></Cell>
 	</Row>
 	<Row>
 	<Cell><Data ss:Type="String">ugr_prompt_offer_4</Data></Cell>
-	<Cell><Data ss:Type="String">Are you still making only the old family recipes? Don't get me wrong, they're classics, but a real CEO needs to show some initiative...</Data></Cell>
+	<Cell><Data ss:Type="String">Vous ne préparez toujours que les vieilles recettes familiales ? Ne vous méprenez pas, ce sont des classiques, mais un vrai PDG doit faire preuve d'un peu d'initiative...</Data></Cell>
 	</Row>
 	<Row>
 	<Cell><Data ss:Type="String">ugr_prompt_offer_5</Data></Cell>
-	<Cell><Data ss:Type="String">Don't let those spaces in the recipe book stay empty for too long, &lt;player&gt;. A chocolatier needs a signature creation to call their own.&lt;br&gt;&lt;br&gt;See if you can pay a visit to Teddy over at Reykjavík when you have the chance to do so.</Data></Cell>
+	<Cell><Data ss:Type="String">Ne laissez pas ces emplacements du livre de recettes vides trop longtemps, &lt;player&gt;. Un chocolatier a besoin d'une création emblématique qui lui appartienne.&lt;br&gt;&lt;br&gt;Essayez d'aller voir Teddy à Reykjavík lorsque vous en aurez l'occasion.</Data></Cell>
 	</Row>
 	<Row>
 	<Cell><Data ss:Type="String">ugr_prompt_offer_6</Data></Cell>
-	<Cell><Data ss:Type="String">Listen, &lt;player&gt;. If you want to climb the corporate ladder, you have to prove you can lead the market. Make tracks for the Secret Test Kitchen and get to work on a new recipe.</Data></Cell>
+	<Cell><Data ss:Type="String">Écoutez, &lt;player&gt;. Si vous voulez gravir les échelons de l'entreprise, vous devez prouver que vous savez mener le marché. Filez à la Cuisine d'essai secrète et mettez-vous au travail sur une nouvelle recette.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_7</Data></Cell>
-	 <Cell><Data ss:Type="String">People are always asking me what's new from Baumeister Confections. If you head up to Iceland and use that Test Kitchen, I'm sure you could invent an absolute bestseller.</Data></Cell>
+	 <Cell><Data ss:Type="String">Les gens me demandent sans cesse ce qu'il y a de nouveau chez Baumeister Confections. Si vous montez en Islande utiliser cette Cuisine d'essai, je suis sûr que vous pourriez inventer un véritable best-seller.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_8</Data></Cell>
-	 <Cell><Data ss:Type="String">It's a shame to leave those blank spaces in your recipe book, don't you think? An ambitious chocolatier like you should be taking a trip to the Test Kitchen to invent something entirely your own.</Data></Cell>
+	 <Cell><Data ss:Type="String">C'est dommage de laisser tous ces emplacements vides dans votre livre de recettes, vous ne trouvez pas ? Un chocolatier ambitieux comme vous devrait faire un voyage à la Cuisine d'essai pour inventer quelque chose qui lui soit entièrement propre.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_9</Data></Cell>
-	 <Cell><Data ss:Type="String">You clearly have a talent for this business, &lt;player&gt;. Why not take it to the next level?&lt;br&gt;&lt;br&gt;A trip to the Secret Test Kitchen in Iceland might be exactly what you need to further impress the Board.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez manifestement du talent pour ce métier, &lt;player&gt;. Pourquoi ne pas passer à l'étape suivante ?&lt;br&gt;&lt;br&gt;Un séjour dans la Cuisine d'essai secrète en Islande pourrait être exactement ce qu'il vous faut pour impressionner davantage le conseil.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_announcer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Hey, &lt;player&gt;. Just a heads up from the corporate side - the Board is getting a little restless. They want to see what you can do on your own. You really need to get up to the Secret Test Kitchen in Reykjavík and fill that empty recipe slot before they start second-guessing your potential.</Data></Cell>
+	 <Cell><Data ss:Type="String">Hé, &lt;player&gt;. Un petit mot du siège : le conseil commence à s'impatienter. Ils veulent voir ce que vous savez faire par vous-même. Vous devez vraiment monter à la Cuisine d'essai secrète de Reykjavík et remplir cet emplacement de recette vide avant qu'ils commencent à douter de votre potentiel.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_announcer_2</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I'm looking at the latest memos from the Board, and they are specifically asking for updates on your R&amp;D progress. Please get to the Secret Test Kitchen whenever you can to come up with a brand new addition to the recipe book.</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, je consulte les derniers mémos du conseil, et ils demandent expressément des nouvelles de vos progrès en recherche et développement. Rendez-vous à la Cuisine d'essai secrète dès que possible afin de créer une toute nouvelle recette pour le livre.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_evil_bian_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Everyone in my circles is whispering that you're just a factory manager, not a true artisan. If you want to impress the right people, you simply must launch your next signature confection. Chop chop!</Data></Cell>
+	 <Cell><Data ss:Type="String">Dans mon cercle, tout le monde murmure que vous n'êtes qu'un directeur d'usines, pas un véritable artisan. Si vous voulez impressionner les bonnes personnes, il vous faut absolument lancer votre prochaine confiserie emblématique. Allez, hop !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_evil_tyso_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Still relying on the Baumeisters' dusty old recipe book, &lt;player&gt;? How uninspired. If you don't come up with an original creation soon, you'll never survive in this market. Not that I'd complain.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous vous reposez toujours sur le vieux livre de recettes poussiéreux des Baumeister, &lt;player&gt; ? Quel manque d'imagination. Si vous ne trouvez pas bientôt une création originale, vous ne survivrez jamais sur ce marché. Ce n'est pas moi qui m'en plaindrai.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_evil_wolf_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I hear the Baumeister Board is waiting for you to demonstrate some actual talent in their little 'test kitchen'. I won't hold my breath.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'entends dire que le conseil de Baumeister attend que vous fassiez preuve d'un véritable talent dans leur petite « cuisine d'essai ». Je ne vais pas retenir mon souffle.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_hav_marketkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You want to impress the people in charge? Stop selling their old ideas and make your own. Heard they built a kitchen for you up north.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous voulez impressionner les patrons ? Arrêtez de vendre leurs vieilles idées et inventez les vôtres. J'ai entendu dire qu'ils vous avaient aménagé une cuisine là-haut, dans le Nord.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_kon_shopkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Aloha, &lt;player&gt;! My customers are always asking for something new and exciting. When are you going to head up to that Test Kitchen of yours and invent a signature treat for us?</Data></Cell>
+	 <Cell><Data ss:Type="String">Aloha, &lt;player&gt; ! Mes clients demandent toujours quelque chose de nouveau et d'excitant. Quand allez-vous monter à votre Cuisine d'essai et nous inventer une spécialité maison ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_chas_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You know, &lt;player&gt;, I've always believed that the best things in life are the things you make with your own two hands. You should take a break from the spreadsheets, head up to Iceland, and just... create something. For the joy of it. It'll be good for your soul. And it'll keep the Board off your back, too.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous savez, &lt;player&gt;, j'ai toujours pensé que les meilleures choses dans la vie sont celles qu'on fabrique de ses propres mains. Vous devriez laisser les tableaux de chiffres de côté un moment, monter en Islande et simplement... créer quelque chose. Pour le plaisir. Ça vous fera du bien. Et ça empêchera aussi le conseil de vous tomber dessus.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_deit_1</Data></Cell>
-	 <Cell><Data ss:Type="String">There is a thorough beauty in creating something entirely your own, &lt;player&gt;. I suggest you make the trip to Iceland in order for you and Teddy to collaborate on something new to add to your recipe book.</Data></Cell>
+	 <Cell><Data ss:Type="String">Il y a une beauté profonde à créer quelque chose qui vous appartienne entièrement, &lt;player&gt;. Je vous suggère de faire le voyage jusqu'en Islande afin que Teddy et vous puissiez collaborer sur une nouveauté à ajouter à votre livre de recettes.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_feli_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I love a good classic as much as the next man, &lt;player&gt;, but the post-war palate is changing! You simply must travel to Iceland and spend some time with my nephew Teddy. Get up there and invent something that will knock the Board's socks off.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'aime les grands classiques autant que n'importe qui, &lt;player&gt;, mais les goûts de l'après-guerre évoluent ! Vous devez absolument aller en Islande passer du temps avec mon neveu Teddy. Montez là-bas et inventez quelque chose qui laissera le conseil bouche bée.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_jose_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Our family recipes have kept this company afloat for decades, &lt;player&gt;, but Alex insists we need modern creations to survive. Prove to me that her faith in your 'innovation' isn't misplaced. Get to the Test Kitchen and invent something.</Data></Cell>
+	 <Cell><Data ss:Type="String">Nos recettes familiales maintiennent cette entreprise à flot depuis des décennies, &lt;player&gt;, mais Alex affirme qu'il nous faut des créations modernes pour survivre. Prouvez-moi que la confiance qu'elle accorde à votre « innovation » n'est pas mal placée. Allez à la Cuisine d'essai et inventez quelque chose.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_jose_2</Data></Cell>
-	 <Cell><Data ss:Type="String">I was, by very nature, skeptical of Alex's 'creative freedom' initiative at first, &lt;player&gt;, but the results are hard to argue with. Don't prove me right by letting your imagination stall.&lt;br&gt;&lt;br&gt;I recommend making your way to the Secret Test Kitchen to market a new creation, which can then be added to your recipe book.</Data></Cell>
+	 <Cell><Data ss:Type="String">Par nature, j'étais sceptique face à l'initiative de « liberté créative » d'Alex, &lt;player&gt;, mais les résultats sont difficiles à contester. Ne me donnez pas raison en laissant votre imagination s'essouffler.&lt;br&gt;&lt;br&gt;Je vous recommande de vous rendre à la Cuisine d'essai secrète pour mettre sur le marché une nouvelle création, qui pourra ensuite rejoindre votre livre de recettes.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_sara_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You've got a good head for logistics, but that's only half the job. If you want to sit in the CEO's chair, you need to understand flavor creation. Book a flight to Iceland and get a new product to market.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez un bon sens de la logistique, mais ce n'est que la moitié du métier. Si vous voulez occuper le fauteuil du PDG, vous devez comprendre la création des saveurs. Réservez un vol pour l'Islande et lancez un nouveau produit sur le marché.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_main_whit_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Are you allergic to the Test Kitchen or something? It's highly inefficient to let a perfectly good recipe slot sit empty. Get to Iceland, mix some things up, and give my brother Teddy something to do! It's not rocket science.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes allergique à la Cuisine d'essai ou quoi ? C'est d'une inefficacité incroyable de laisser un emplacement de recette parfaitement utilisable vide. Allez en Islande, mélangez quelques ingrédients et donnez quelque chose à faire à mon frère Teddy ! Ce n'est tout de même pas de la science spatiale.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_prompt_offer_rey_shopkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Velkominn! You know, your friend Teddy is just up the road at the Test Kitchen, pacing the floor. He's got all that equipment warmed up and no one to cook with! You should go invent something so I have something new to sell.</Data></Cell>
+	 <Cell><Data ss:Type="String">Velkominn ! Vous savez, votre ami Teddy est juste à côté, à la Cuisine d'essai, en train de tourner en rond. Tout son équipement est chaud et il n'a personne avec qui cuisiner ! Vous devriez aller inventer quelque chose pour que j'aie une nouveauté à vendre.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I wonder how Alex is faring, poor thing...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je me demande comment va Alex, la pauvre...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It's so nice to see people passionate about sweets again, don't you think?</Data></Cell>
+	 <Cell><Data ss:Type="String">Quel plaisir de voir les gens se passionner de nouveau pour les douceurs, vous ne trouvez pas ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I heard a rumor that you were considering expanding your offerings to include some new product lines, is that true?</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai entendu dire que vous envisagiez d'élargir votre offre avec de nouvelles gammes de produits. C'est vrai ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Baumeister Confections, eh? Do you really think you can salvage that old company?</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections, hein ? Vous pensez vraiment pouvoir sauver cette vieille entreprise ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Baumeister Confections? I thought I heard that they had converted all their factories to manufacture munitions for the war effort...</Data></Cell>
+	 <Cell><Data ss:Type="String">Baumeister Confections ? Il me semblait avoir entendu qu'ils avaient reconverti toutes leurs usines pour fabriquer des munitions destinées à l'effort de guerre...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">From what I have been told, to truly earn the respect of chocolatiers, one must prove one's ability by successfully creating and marketing one's own recipes...</Data></Cell>
+	 <Cell><Data ss:Type="String">D'après ce qu'on m'a dit, pour vraiment gagner le respect des chocolatiers, il faut prouver son talent en créant et en commercialisant avec succès ses propres recettes...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_06_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You don't know anything about a Secret Test Kitchen, where Baumeister Confections is working on developing new recipes, do you?</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous ne sauriez rien au sujet d'une Cuisine d'essai secrète où Baumeister Confections travaillerait à mettre au point de nouvelles recettes, par hasard ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_06e_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, do you have any idea where all these new Baumeister Confections recipes are coming from?</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, vous savez d'où sortent toutes ces nouvelles recettes de Baumeister Confections ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand that the market has responded quite favorably to your own creations - congratulations, &lt;player&gt;!</Data></Cell>
+	 <Cell><Data ss:Type="String">Je crois comprendre que le marché accueille très favorablement vos propres créations. Félicitations, &lt;player&gt; !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_08_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Listen, if you ever have a chance to visit %havana%, Cuba, be sure to check out the %hav_casino% there. Their slot machines can be a lot of fun!</Data></Cell>
+	 <Cell><Data ss:Type="String">Écoutez, si jamais vous avez l'occasion de visiter %havana%, à Cuba, allez donc voir le %hav_casino%. Leurs machines à sous peuvent être très amusantes !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_09_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now that you're %rank_2%, you'll be able to haggle at shops and markets. Be careful, though - if you say the right thing haggling can result in better prices, but you can also insult merchants and cause their prices to move the wrong way, too.</Data></Cell>
+	 <Cell><Data ss:Type="String">Maintenant que vous êtes %rank_2%, vous pouvez marchander dans les boutiques et sur les marchés. Mais attention : si vous trouvez les bons mots, le marchandage peut vous obtenir de meilleurs prix ; vous pouvez aussi vexer les commerçants et faire évoluer leurs prix dans le mauvais sens.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_10_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It can be a smart move to haggle at markets, &lt;player&gt;, as long as you've got a sense of whom you're haggling with and a good idea about his or her current prices.</Data></Cell>
+	 <Cell><Data ss:Type="String">Marchander sur les marchés peut être très judicieux, &lt;player&gt;, à condition de savoir avec qui vous négociez et d'avoir une bonne idée de ses prix du moment.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_tease_11_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Haggling is tricky, but buying low and selling high is the secret to success in the confections business, &lt;player&gt;.</Data></Cell>
+	 <Cell><Data ss:Type="String">Le marchandage est délicat, mais acheter à bas prix et vendre cher, c'est le secret de la réussite dans le commerce des confiseries, &lt;player&gt;.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">So Alex feels like she's making progress with her search. Bless her heart, I hope she's not just hearing what she wants to hear.</Data></Cell>
+	 <Cell><Data ss:Type="String">Alors Alex a l'impression d'avancer dans ses recherches. Pauvre chérie, j'espère qu'elle n'entend pas seulement ce qu'elle a envie d'entendre.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're now partners with %main_zach%, eh? That must certainly be good for business!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes maintenant associé à %main_zach%, c'est bien ça ? Cela doit certainement être bon pour les affaires !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You seem to be off to a great start as %rank_2% of Baumiester Confections, &lt;player&gt;. I wish you nothing but success as you continue to grow the company.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous semblez avoir pris un excellent départ en tant que %rank_2% de Baumeister Confections, &lt;player&gt;. Je ne peux que vous souhaiter de réussir à mesure que vous continuez à développer l'entreprise.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I understand you've made your way to Indonesia, correct? There's quite a bit of Baumeister Confections history there, you know...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je crois que vous avez réussi à vous rendre en Indonésie, n'est-ce pas ? Baumeister Confections y possède une histoire assez riche, vous savez...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Have you tried your hand at the slot machines at %hav_casino% in %havana%?</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez tenté votre chance aux machines à sous du %hav_casino% à %havana% ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You are doing amazingly well, &lt;player&gt;. Just the other day a friend was singing your praises. I take it your &lt;user2&gt; products are earning a healthy profit?</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous vous en sortez à merveille, &lt;player&gt;. Pas plus tard que l'autre jour, un ami ne tarissait pas d'éloges à votre sujet. J'imagine que vos produits &lt;user2&gt; vous rapportent un joli bénéfice ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_06_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It seems that certain combinations of ingredients command higher profits than others, doesn't it?</Data></Cell>
+	 <Cell><Data ss:Type="String">On dirait que certaines combinaisons d'ingrédients rapportent davantage que d'autres, non ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Is it my imagination, or has the cost of travel increased recently?</Data></Cell>
+	 <Cell><Data ss:Type="String">C'est moi ou les voyages coûtent plus cher ces derniers temps ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Wow, you are really doing an amazing job, &lt;player&gt;. I've seen your wares literally all over the world!</Data></Cell>
+	 <Cell><Data ss:Type="String">Waouh, vous faites vraiment un travail remarquable, &lt;player&gt;. J'ai vu vos produits aux quatre coins du monde !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I must say, I was skeptical when I heard about your efforts to turn the company around, but it seems like you are well on your way to success.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je dois l'avouer, j'étais sceptique quand j'ai entendu parler de vos efforts pour redresser l'entreprise, mais vous semblez être en très bonne voie.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">What do you think, &lt;player&gt;? Do you think Sean is still alive? Well, if anyone will be able to get to the bottom of it, Alex will.</Data></Cell>
+	 <Cell><Data ss:Type="String">Qu'en pensez-vous, &lt;player&gt; ? Vous croyez que Sean est encore en vie ? En tout cas, s'il y a quelqu'un capable de découvrir la vérité, c'est Alex.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_tease_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It's wonderful to see your own creations performing so well in the marketplace, isn't it?</Data></Cell>
+	 <Cell><Data ss:Type="String">C'est formidable de voir vos propres créations rencontrer un tel succès sur le marché, n'est-ce pas ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_tease_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It sure looks like things are going well for you, &lt;player&gt;. It must be satisfying to be able to provide people with luxuries like coffee and chocolates.</Data></Cell>
+	 <Cell><Data ss:Type="String">Les choses semblent vraiment bien se passer pour vous, &lt;player&gt;. Ça doit être gratifiant de pouvoir offrir aux gens des petits luxes comme le café et les chocolats.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_tease_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%rank_3%? Not too shabby, &lt;player&gt;. Baumeister Confections was a great company in its day, and it looks like you're well on your way to restoring it to its former glory!</Data></Cell>
+	 <Cell><Data ss:Type="String">%rank_3% ? Pas mal du tout, &lt;player&gt;. Baumeister Confections était une grande entreprise en son temps, et vous semblez bien parti pour lui rendre sa gloire d'antan !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Wow, you are really doing a stunningly good job, &lt;player&gt;. I've been seeing your products in shops all over the world.</Data></Cell>
+	 <Cell><Data ss:Type="String">Waouh, vous faites vraiment un travail épatant, &lt;player&gt;. Je vois vos produits dans des boutiques partout dans le monde.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%rank_4% of Baumeister Confections! Way to go, &lt;player&gt;!</Data></Cell>
+	 <Cell><Data ss:Type="String">%rank_4% de Baumeister Confections ! Bravo, &lt;player&gt; !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It makes me very happy, &lt;player&gt;, to see that things are going so well for you. Couldn't happen to a nicer person!</Data></Cell>
+	 <Cell><Data ss:Type="String">Ça me fait vraiment plaisir, &lt;player&gt;, de voir que tout se passe aussi bien pour vous. Une personne aussi sympathique ne pouvait pas mieux le mériter !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_tease_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I imagine it must be quite challenging to keep multiple factories operational. But I guess that's why you are the %rank_4%, and I am not!</Data></Cell>
+	 <Cell><Data ss:Type="String">J'imagine qu'il doit être assez difficile de faire tourner plusieurs usines à la fois. Mais j'imagine que c'est pour cela que vous êtes %rank_4%, et pas moi !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_tease_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">There certainly seems to be a lot to juggle to run a multi-national corporation, but you seem to be handling it all in stride, &lt;player&gt;.</Data></Cell>
+	 <Cell><Data ss:Type="String">Il faut manifestement jongler avec énormément de choses pour diriger une multinationale, mais vous semblez tout gérer sans sourciller, &lt;player&gt;.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_tease_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have been successful by consistently creating high quality chocolates and coffees, managing your costs, building solid relationships and taking advantage of opportunities to expand. Kudos!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez réussi en créant constamment des chocolats et des cafés de grande qualité, en maîtrisant vos coûts, en nouant de solides relations et en saisissant les occasions de vous développer. Bravo !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">dou_shop_own_tease_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're quite an impressive chocolate maker, &lt;player&gt;. I've been hearing about you the past couple of years, and I'm going to be keeping an eye on you. No time soon, but some day, I may be interested in discussing a partnership with you for my shop here.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous êtes un chocolatier assez impressionnant, &lt;player&gt;. J'entends parler de vous depuis deux ou trois ans et je vais garder un œil sur vous. Pas tout de suite, mais un jour, je pourrais être intéressé par l'idée de discuter d'un partenariat pour ma boutique ici.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Is it my imagination, &lt;player&gt;, or has the cost of travel gone up lately? Must be hard on someone who travels as much as you do...</Data></Cell>
+	 <Cell><Data ss:Type="String">C'est moi, &lt;player&gt;, ou le coût des voyages a augmenté récemment ? Cela doit être dur pour quelqu'un qui voyage autant que vous...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Inflation is surely upon us, eh &lt;player&gt;. It seems like every few months it costs more to get from one port to another...</Data></Cell>
+	 <Cell><Data ss:Type="String">L'inflation est bien là, hein, &lt;player&gt; ? On dirait que tous les quelques mois, aller d'un port à l'autre coûte encore plus cher...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I can't believe what it is costing to get around these days. A lot of companies seem to be investing in corporate aircraft - I tell you, I can certainly see why!</Data></Cell>
+	 <Cell><Data ss:Type="String">Je n'en reviens pas de ce qu'il faut dépenser pour se déplacer aujourd'hui. Beaucoup d'entreprises semblent investir dans des avions d'affaires ; je vous assure que je comprends parfaitement pourquoi !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">These travel costs are getting out of hand. There must be something one could do to try to contain the outlay of capital required just to get from place to place these days.</Data></Cell>
+	 <Cell><Data ss:Type="String">Ces frais de voyage deviennent incontrôlables. Il doit bien y avoir un moyen de limiter le capital qu'il faut dépenser rien que pour aller d'un endroit à un autre de nos jours.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">travel_tease_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For someone in your position, I would highly recommend investing in a corporate jet, to help offset the increasing costs of travel.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour quelqu'un dans votre position, je recommanderais vivement d'investir dans un jet d'entreprise afin de compenser l'augmentation des frais de voyage.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">expire_tease_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm not sure if you realize this, &lt;player&gt;, but ingredients do not last forever. If you are storing an ingredient that you are not using, it will expire and disappear from your inventory over time...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne sais pas si vous le réalisez, &lt;player&gt;, mais les ingrédients ne se conservent pas éternellement. Si vous stockez un ingrédient que vous n'utilisez pas, il finira par expirer et disparaître de votre inventaire...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">expire_tease_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">As long as you are using an ingredient at one of your factories, it will not expire. After a number of weeks of not using it, however, the ingredient will expire and be removed from your inventory.</Data></Cell>
+	 <Cell><Data ss:Type="String">Tant que vous utilisez un ingrédient dans l'une de vos usines, il n'expire pas. En revanche, après plusieurs semaines sans utilisation, il périme et est retiré de votre inventaire.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">expire_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Unused ingredients don't last and last - they will expire over time and be removed from your inventory...</Data></Cell>
+	 <Cell><Data ss:Type="String">Les ingrédients inutilisés ne se conservent pas indéfiniment : avec le temps, ils périment et sont retirés de votre inventaire...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">itsover_alex_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It isn't possible for me to thank you enough times for all that you have done for me, &lt;player&gt;!</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne pourrai jamais vous remercier assez pour tout ce que vous avez fait pour moi, &lt;player&gt; !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">itsover_bc_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, we could not have imagined a better CEO for our little family company - you have made us proud!</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, nous n'aurions pas pu rêver d'un meilleur PDG pour notre petite entreprise familiale. Vous nous avez rendus fiers !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">itsover_evil_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">What can I say, &lt;player&gt;? You have gottn the best of us once again. It's so rare to see someone gifted at both the creative and the business side of things. Hats off to you, indeed.</Data></Cell>
+	 <Cell><Data ss:Type="String">Que puis-je dire, &lt;player&gt; ? Vous avez encore une fois eu le dessus sur nous. Il est si rare de voir quelqu'un d'aussi doué à la fois du côté créatif et du côté des affaires. Chapeau bas, vraiment.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_00_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I can't blame Alex - I would probably be doing the same thing myself if I were in her situation - but does she really think she's going to be able to find her husband? It's been quite some time...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne peux pas en vouloir à Alex ; à sa place, je ferais probablement la même chose. Mais croit-elle vraiment pouvoir retrouver son mari ? Cela fait quand même très longtemps...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I represent a rival chocolate maker - Schokolade Weltreich - perhaps you have heard of us? I understand you're making a good name for yourself in this business, but in terms of Alex and her personal problems, why are you poking your nose into business that's got nothing to do with you?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je représente un chocolatier concurrent, Schokolade Weltreich. Peut-être avez-vous entendu parler de nous ? Je crois savoir que vous commencez à vous faire un nom dans ce métier, mais pour ce qui est d'Alex et de ses problèmes personnels, pourquoi fourrez-vous votre nez dans des affaires qui ne vous regardent pas ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Hey, &lt;player&gt;. I ran into Alex not too long ago. She sure seemed to be in a big hurry - maybe she's following a solid lead...</Data></Cell>
+	 <Cell><Data ss:Type="String">Hé, &lt;player&gt;. J'ai croisé Alex il n'y a pas longtemps. Elle semblait vraiment pressée ; peut-être qu'elle suit enfin une piste solide...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I just hope Alex isn't getting in over her head - when the military wants to conceal information, they certainly have the ways and means to do so...</Data></Cell>
+	 <Cell><Data ss:Type="String">J'espère seulement qu'Alex ne se met pas dans une situation qui la dépasse. Quand l'armée veut dissimuler des informations, elle a certainement les moyens de le faire...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You should be more careful, &lt;player&gt;. It's fine if you want to build up their confections empire, but here's some advice: keep yourself clear of this whole Sean and Alex story - it's none of your concern, and it will do you no good to worry about it anyhow...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous devriez être plus prudent, &lt;player&gt;. Si vous voulez rebâtir leur empire de la confiserie, très bien, mais voici un conseil : tenez-vous à l'écart de toute cette histoire entre Sean et Alex. Cela ne vous concerne pas, et vous inquiéter ne vous apportera rien de bon de toute façon...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now I can't vouch for whether or not it's true, but I met someone who told me they had met someone who flew with Sean Fletcher in the war. This person saw Sean's plane go down, but he also claims that he saw Sean's parachute open...</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne peux pas garantir que ce soit vrai, mais j'ai rencontré quelqu'un qui m'a dit avoir rencontré une personne qui avait volé avec Sean Fletcher pendant la guerre. Cette personne a vu l'avion de Sean tomber, mais elle affirme aussi avoir vu son parachute s'ouvrir...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_06_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You know, it was unusual, but not unheard of, for Germans to hold enemy pilots in secret camps towards the end of the war.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous savez, c'était inhabituel, mais pas sans précédent, que les Allemands retiennent des pilotes ennemis dans des camps secrets vers la fin de la guerre.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, some news from Alex. She was in a rush and I don't have any details, but I understand that she has discovered legitimate evidence that Sean is indeed still alive...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, j'ai des nouvelles d'Alex. Elle était pressée et je n'ai pas de détails, mais il paraît qu'elle a découvert des preuves sérieuses que Sean est bel et bien toujours en vie...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">evan_endorsed_rank2_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Keep up the great work, &lt;player&gt;!</Data></Cell>
+	 <Cell><Data ss:Type="String">Continuez cet excellent travail, &lt;player&gt; !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">itsover_evan_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Who could have ever imagined the success you've had with our little company, &lt;player&gt;.&lt;br&gt;&lt;br&gt;You have made me so, so proud!</Data></Cell>
+	 <Cell><Data ss:Type="String">Qui aurait pu imaginer le succès que vous rencontreriez avec notre petite entreprise, &lt;player&gt; ?&lt;br&gt;&lt;br&gt;Vous me rendez tellement, tellement fier !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_boardspew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%rank_4%! I never doubted you, &lt;player&gt;! Keep making me proud...</Data></Cell>
+	 <Cell><Data ss:Type="String">%rank_4% ! Je n'ai jamais douté de vous, &lt;player&gt; ! Continuez à me rendre fier...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2_bianspew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You never know whom you'll cross paths with here at %tan_bar%, &lt;player&gt;...</Data></Cell>
+	 <Cell><Data ss:Type="String">On ne sait jamais qui on peut croiser ici, au %tan_bar%, &lt;player&gt;...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_bianspew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Sean Fletcher? Well, I hear all kinds of things here at %tan_bar%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean Fletcher ? Eh bien, j'entends toutes sortes de choses ici, au %tan_bar%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_bianspew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Certainly seems like things are coming to a head with Alex and her little plans, eh, &lt;player&gt;?</Data></Cell>
+	 <Cell><Data ss:Type="String">On dirait vraiment que les petits projets d'Alex arrivent à leur dénouement, hein, &lt;player&gt; ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_bianspew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">All's well that end's well, as they say. No hard feelings, right, &lt;player&gt;?</Data></Cell>
+	 <Cell><Data ss:Type="String">Tout est bien qui finit bien, comme on dit. Sans rancune, hein, &lt;player&gt; ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">whit_premeta_spew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're doing swell, &lt;player&gt;, and I very much look forward to working with you soon to launch our line of Exotics.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous vous en sortez à merveille, &lt;player&gt;, et j'ai vraiment hâte de travailler bientôt avec vous pour lancer notre gamme d'Exotiques.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">jose_endorsed_spew_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Your efforts have made our Blends business a huge success, &lt;player&gt;. I have no doubt you will earn the remaining endorsements and that you will be our %rank_4% in no time flat!</Data></Cell>
+	 <Cell><Data ss:Type="String">Vos efforts ont fait de notre activité de Mélanges un immense succès, &lt;player&gt;. Je ne doute pas que vous obtiendrez les dernières recommandations et que vous serez notre %rank_4% en un rien de temps !</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

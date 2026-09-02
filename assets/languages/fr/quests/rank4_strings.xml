@@ -59,195 +59,195 @@
    <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_prep_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Have you heard the news? Sean is alive! Keep an eye out for Alexandra, she's trying to track you down...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous avez entendu la nouvelle ? Sean est vivant ! Gardez l’œil ouvert : Alexandra essaie de vous retrouver...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_intro_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, Sean is alive! I have definitive proof, but we're dealing with some shady characters. I know she has been quite dismissive of you and your work with us in the past, but in fact, %evil_kath% communicated to me that she is deserting Schokolade Weltreich and betraying her co-workers to help us find my husband. Kath has fled to the %falklands% in hiding, and that is where you will find her. Now, if you listen closely to me for a second...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, Sean est vivant ! J'en ai la preuve formelle, mais nous avons affaire à des personnages peu recommandables. Je sais qu'elle s'est montrée assez méprisante envers vous et votre travail avec nous par le passé, mais en réalité, %evil_kath% m'a fait savoir qu'elle abandonnait Schokolade Weltreich et trahissait ses collègues pour nous aider à retrouver mon mari. Kath s'est enfuie et se cache aux %falklands% ; c'est là que vous la trouverez. Maintenant, écoutez-moi bien un instant...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe</Data></Cell>
-	 <Cell><Data ss:Type="String">The Double-Cross</Data></Cell>
+	 <Cell><Data ss:Type="String">La double trahison</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring %evil_kath% [D|25|100|250] cases each of %b12%, %c10%, %i12%, %t11%, %m07% and %e12% at the %falklands%. Don't get me wrong, that is a long list of confections, but the sooner we get them to Kath, the better. She'll need to use those to help her escape from that toxic company of hers. Ready, &lt;player&gt;?</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez à %evil_kath%, aux %falklands%, [D|25|100|250] caisses de chacun des produits suivants : %b12%, %c10%, %i12%, %t11%, %m07% et %e12%. Ne vous méprenez pas, c'est une sacrée liste de confiseries, mais plus vite nous les remettrons à Kath, mieux ce sera. Elle en aura besoin pour réussir à s'échapper de cette entreprise toxique. Vous êtes prêt, &lt;player&gt; ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring a long list of confections - [D|25|100|250] cases each - to %evil_kath% in %falklands%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez une longue liste de confiseries — [D|25|100|250] caisses de chaque — à %evil_kath% aux %falklands%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, this has been a long time coming. To be honest with you, I have always admired your business acumen, as well as your abilities in the test kitchen. What can I say, you're impressive. I've spent too much time under Schokolade Weltreich, and I've been blind to just how much wanton greed and defamation of other companies meant to them. All I can do now is apologize, and try to make it up to you all now.</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, cela faisait longtemps que ce moment se préparait. Pour être franche avec vous, j'ai toujours admiré votre sens des affaires, ainsi que vos talents dans la cuisine d'essai. Que voulez-vous que je dise ? Vous êtes impressionnant. J'ai passé beaucoup trop de temps chez Schokolade Weltreich, sans voir à quel point l'avidité débridée et la diffamation des autres entreprises comptaient pour eux. Tout ce que je peux faire désormais, c'est vous présenter mes excuses et essayer de me racheter auprès de vous tous.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now, I don't mean to offend you and what you've done, but I want you to get out of here before that snake of a man called %evil_wolf% sees that you and Alex came here.&lt;br&gt;&lt;br&gt;You need to go see %bel_hutkeep% at %belize%. She'll be able to tell you where to find Sean.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne veux pas vous offenser ni minimiser ce que vous avez fait, mais je veux que vous partiez d'ici avant que cette vipère de %evil_wolf% ne voie que vous et Alex êtes venus.&lt;br&gt;&lt;br&gt;Vous devez aller voir %bel_hutkeep% à %belize%. Elle pourra vous dire où trouver Sean.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm prepared to double-cross my people, &lt;player&gt;, but it will cost you. There is a long list of confections I'm expecting you to deliver to me here.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je suis prête à trahir les miens, &lt;player&gt;, mais cela a un prix. J'attends de vous une longue liste de confiseries à me livrer ici.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Oh yes, the American? I know exactly where he is - he is with a remote tribe deep in the highlands. I can fetch him for you, but it will not be cheap. If you are willing and able to pay me [D|$1,000,000|$10,000,000|$25,000,000] up front to cover all of my expenses, I can guarantee you that I will deliver Sean to you here.</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh oui, l'Américain ? Je sais exactement où il se trouve : auprès d'une tribu isolée, au cœur des hautes terres. Je peux aller le chercher pour vous, mais ce ne sera pas bon marché. Si vous êtes disposé et en mesure de me verser [D|1 000 000 $|10 000 000 $|25 000 000 $] d'avance pour couvrir toutes mes dépenses, je vous garantis que je vous ramènerai Sean ici.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_morecash_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to come back when you've got enough cash to pay me - I need [D|$1,000,000|$10,000,000|$25,000,000] up front to cover all of my costs to free Sean and bring him back to you here.</Data></Cell>
+	 <Cell><Data ss:Type="String">Revenez quand vous aurez assez d'argent pour me payer : il me faut [D|1 000 000 $|10 000 000 $|25 000 000 $] d'avance pour couvrir tous les frais nécessaires afin de libérer Sean et de vous le ramener ici.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_02</Data></Cell>
-	 <Cell><Data ss:Type="String">Sean's Rescue</Data></Cell>
+	 <Cell><Data ss:Type="String">Le sauvetage de Sean</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I see you have the cash. Shall I take my [D|$1,000,000|$10,000,000|$25,000,000] fee now, and guarantee Sean's safe return?</Data></Cell>
+	 <Cell><Data ss:Type="String">Je vois que vous avez l'argent. Dois-je prendre mes [D|1 000 000 $|10 000 000 $|25 000 000 $] maintenant et vous garantir le retour de Sean sain et sauf ?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_ransom_02_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">OK. I will need about 3 months for the round trip journey. I will send word once I have the American safely with me.</Data></Cell>
+	 <Cell><Data ss:Type="String">D'accord. Il me faudra environ trois mois pour faire l'aller-retour. Je vous ferai parvenir un message dès que l'Américain sera en sécurité auprès de moi.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_return</Data></Cell>
-	 <Cell><Data ss:Type="String">Sean Is Alive</Data></Cell>
+	 <Cell><Data ss:Type="String">Sean est vivant</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_return_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, have you heard the incredible news? Sean has been found - alive! You absolutely must get to %belize% immediately!</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, vous avez entendu l'incroyable nouvelle ? Sean a été retrouvé — vivant ! Vous devez absolument vous rendre à %belize% sur-le-champ !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_return_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Get to %belize% as soon as you can!</Data></Cell>
+	 <Cell><Data ss:Type="String">Rendez-vous à %belize% aussi vite que possible !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_return_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Did you doubt me, &lt;player&gt;? I certainly hope not - I have honored my commitment to you. Here, I trust, is the person you've been looking for...</Data></Cell>
+	 <Cell><Data ss:Type="String">Vous doutiez de moi, &lt;player&gt; ? J'espère bien que non. J'ai tenu mon engagement envers vous. Voici, je crois, la personne que vous cherchiez...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_thanks_text01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I never gave up. I knew that some day, some way, my true love would find me. After being shot down, I was captured by the Germans. As luck would have it, the officer in charge of the POW camp where I was held was none other than %evil_wolf% - that's right, our old nemesis!</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, je n'ai jamais abandonné. Je savais qu'un jour, d'une manière ou d'une autre, mon grand amour finirait par me retrouver. Après que mon avion a été abattu, j'ai été capturé par les Allemands. Et, comble du hasard, l'officier qui dirigeait le camp de prisonniers où j'étais détenu n'était autre que %evil_wolf% — oui, notre vieil ennemi juré !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_thanks_text02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I have no idea why he didn't just kill me, but as the war was drawing to a close, he hatched a crafty plan. Squirreling me away with a remote highlands tribe in Central America, Wolf assumed that with Alex distracted looking for me, Baumeister Confections would fall apart. I guess he didn't count on you, &lt;player&gt;!</Data></Cell>
+	 <Cell><Data ss:Type="String">Je n'ai aucune idée de la raison pour laquelle il ne m'a pas simplement tué, mais alors que la guerre touchait à sa fin, il a échafaudé un plan particulièrement retors. En me cachant auprès d'une tribu isolée des hautes terres d'Amérique centrale, Wolf comptait sur le fait qu'Alex, occupée à me rechercher, laisserait Baumeister Confections s'effondrer. J'imagine qu'il n'avait pas prévu votre arrivée, &lt;player&gt; !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_thanks_text03_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I myself have been keeping busy by helping the tribe learn to cultivate cacao. Their crop is incredible - you won't find finer cacao anywhere in the world. And I have now set %bel_hutkeep% up here with a market to sell the ingredient, so you'll know where to find it.</Data></Cell>
+	 <Cell><Data ss:Type="String">De mon côté, je ne suis pas resté les bras croisés : j'ai aidé la tribu à apprendre à cultiver le cacao. Leur récolte est extraordinaire — vous ne trouverez pas de meilleur cacao ailleurs dans le monde. Et j'ai maintenant aidé %bel_hutkeep% à installer un marché ici pour vendre cet ingrédient, alors vous saurez où vous en procurer.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_sean_thanks_text04_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now I am to depart to finally go meet Alex in %zurich% - you must come see us there soon!</Data></Cell>
+	 <Cell><Data ss:Type="String">Je vais maintenant partir retrouver enfin Alex à %zurich% — vous devrez venir nous voir là-bas bientôt !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1</Data></Cell>
-	 <Cell><Data ss:Type="String">Highest Honors Part 1</Data></Cell>
+	 <Cell><Data ss:Type="String">Les plus grands honneurs — 1re partie</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, you have accomplished an incredible amount. You control all of our factories, and have taken ownership of multiple retail locations bringing in additional revenues through special orders. Your creations have won awards and new customers the world over. This is not even to mention all that you have done for me personally...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, vous avez accompli une quantité incroyable de choses. Vous contrôlez toutes nos usines et avez pris possession de plusieurs points de vente qui génèrent des revenus supplémentaires grâce aux commandes spéciales. Vos créations ont remporté des récompenses et séduit de nouveaux clients dans le monde entier. Et je ne parle même pas de tout ce que vous avez fait pour moi personnellement...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">There is only one thing left for you to do, something that used to be a lot easier. In the old days, you would have achieved this rank a long time ago, but nowadays this distinction doesn't come as easily as it once did.</Data></Cell>
+	 <Cell><Data ss:Type="String">Il ne vous reste plus qu'une seule chose à accomplir, quelque chose qui était autrefois bien plus facile. Jadis, vous auriez atteint ce rang depuis longtemps, mais aujourd'hui, cette distinction ne s'obtient plus aussi aisément.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">We are prepared to submit your application to the International Society of Artisan Confectioners - that's right, &lt;player&gt;, we're prepared to nominate you to be designated a %rank_5%. First, I'll give you the final space in the recipe book - once you create your last recipe, the recipe book will be complete.</Data></Cell>
+	 <Cell><Data ss:Type="String">Nous sommes prêts à présenter votre candidature à la Société internationale des confiseurs artisans. Oui, &lt;player&gt; : nous sommes prêts à vous proposer pour le titre de %rank_5%. Tout d'abord, je vais vous accorder le dernier emplacement du livre de recettes. Une fois votre ultime recette créée, le livre sera complet.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_extra03_1</Data></Cell>
-	 <Cell><Data ss:Type="String">To support your case, we're going to need a heck of a lot of sweets. We need you to deliver [D|200|500|1,000] cases of each and every one of your recipes - from &lt;user1&gt; right up through the last recipe you still need to create - to %main_evan% at %san_bchq%. We'll collect them in two batches, and then submit all of those confections with your application.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour appuyer votre dossier, nous allons avoir besoin d'une quantité phénoménale de douceurs. Vous devez livrer à %main_evan%, au %san_bchq%, [D|200|500|1 000] caisses de chacune de vos recettes — de &lt;user1&gt; jusqu'à la dernière recette qu'il vous reste à créer. Nous les rassemblerons en deux lots, puis joindrons toutes ces confiseries à votre candidature.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_extra04_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For the first batch, bring [D|200|500|1,000] cases each of &lt;user1&gt;, &lt;user2&gt;, &lt;user3&gt;, &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; to %san_bchq%. You'll also need to create that final recipe.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour le premier lot, apportez au %san_bchq% [D|200|500|1 000] caisses de chacun des produits suivants : &lt;user1&gt;, &lt;user2&gt;, &lt;user3&gt;, &lt;user4&gt;, &lt;user5&gt; et &lt;user6&gt;. Vous devrez aussi créer cette dernière recette.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|200|500|1,000] cases of each of your first six creations to %san_bchq%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez au %san_bchq% [D|200|500|1 000] caisses de chacune de vos six premières créations.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For the first batch we need [D|200|500|1,000] cases of each of your first six creations, &lt;player&gt;, and you'll also need to create your final recipe.</Data></Cell>
+	 <Cell><Data ss:Type="String">Pour le premier lot, nous avons besoin de [D|200|500|1 000] caisses de chacune de vos six premières créations, &lt;player&gt;, et vous devez également créer votre dernière recette.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2</Data></Cell>
-	 <Cell><Data ss:Type="String">Highest Honors Part 2</Data></Cell>
+	 <Cell><Data ss:Type="String">Les plus grands honneurs — 2e partie</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">So far, so good, &lt;player&gt;. Now, for the second batch we'll need [D|200|500|1,000] cases each of &lt;user7&gt;, &lt;user8&gt;, &lt;user9&gt;, &lt;user10&gt;, &lt;user11&gt; and &lt;user12&gt;. After that, your application package will be complete.</Data></Cell>
+	 <Cell><Data ss:Type="String">Jusqu'ici, tout va bien, &lt;player&gt;. Pour le second lot, il nous faudra maintenant [D|200|500|1 000] caisses de chacun des produits suivants : &lt;user7&gt;, &lt;user8&gt;, &lt;user9&gt;, &lt;user10&gt;, &lt;user11&gt; et &lt;user12&gt;. Après cela, votre dossier de candidature sera complet.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|200|500|1,000] cases of each of your final six creations to %san_bchq%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Apportez au %san_bchq% [D|200|500|1 000] caisses de chacune de vos six dernières créations.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, for the second batch we need [D|200|500|1,000] cases of each of your final six creations, &lt;player&gt;. Then we'll be ready to get your application for %rank_5% into the appropriate parties...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, pour le second lot, il nous faut [D|200|500|1 000] caisses de chacune de vos six dernières créations. Ensuite, nous serons prêts à transmettre votre candidature au rang de %rank_5% aux personnes compétentes...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent. We now have everything we need. We'll submit your application immediately, and we should have an answer back in about a month.&lt;br&gt;&lt;br&gt;In the meantime, you keep up the great work!</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. Nous avons désormais tout ce qu'il nous faut. Nous allons présenter votre candidature immédiatement et devrions recevoir une réponse d'ici environ un mois.&lt;br&gt;&lt;br&gt;En attendant, continuez votre excellent travail !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_promo_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I am here on behalf of the Board of Directors, and I have some wonderful news. Your candidacy has been approved! That's right, you are now a %rank_5%! Congratulations!!&lt;br&gt;&lt;br&gt;Now, I do have various news for you. Listen in for a second...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, je viens au nom du conseil d'administration et j'ai une merveilleuse nouvelle. Votre candidature a été approuvée ! C'est officiel : vous êtes maintenant %rank_5% ! Félicitations !!&lt;br&gt;&lt;br&gt;J'ai aussi plusieurs nouvelles à vous annoncer. Écoutez-moi un instant...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_promo_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">First things first, after all the successful work with your inventions with Teddy, I know how much you've enjoyed your time in the Secret Test Kitchen. The Board of Directors is more than happy to add new pages to the book, and they've awarded you not one, not two, but twelve new spaces in the recipe book! They're all for your own use, whenever you want.&lt;br&gt;&lt;br&gt;You may continue to work to grow the business as you wish, and of course, special orders will also help bump up our profits over time.</Data></Cell>
+	 <Cell><Data ss:Type="String">Commençons par le commencement. Après tout le travail fructueux que vous avez accompli avec Teddy sur vos inventions, je sais combien vous avez apprécié votre passage dans la Cuisine d'essai secrète. Le conseil d'administration est ravi d'ajouter de nouvelles pages au livre et vous a accordé non pas un, ni deux, mais douze nouveaux emplacements dans le livre de recettes ! Ils sont tous à votre disposition, quand bon vous semble.&lt;br&gt;&lt;br&gt;Vous pouvez continuer à développer l'entreprise comme vous l'entendez et, bien entendu, les commandes spéciales contribueront elles aussi à augmenter nos bénéfices au fil du temps.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_promo_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Speaking of profits, I don't know if you realized this, but the award of %rank_5% comes with a significant cash bonus - I am most pleased to credit your account with the [D|$10,000,000|$25,000,000|$100,000,000] we received for you having earned this distinction.&lt;br&gt;&lt;br&gt;My hat is off to you, &lt;player&gt;, you truly are a %rank_5%!</Data></Cell>
+	 <Cell><Data ss:Type="String">En parlant de bénéfices, je ne sais pas si vous vous en étiez rendu compte, mais l'obtention du rang de %rank_5% s'accompagne d'une importante prime en espèces : j'ai le grand plaisir de créditer votre compte des [D|10 000 000 $|25 000 000 $|100 000 000 $] que nous avons reçus pour avoir mérité cette distinction.&lt;br&gt;&lt;br&gt;Chapeau bas, &lt;player&gt; : vous êtes véritablement %rank_5% !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_alex_thanks_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I can't thank you enough for all you have done, &lt;player&gt;, not only for the business, but for me personally as well. I knew the day we met, that you were the right candidate for the job.</Data></Cell>
+	 <Cell><Data ss:Type="String">Je ne pourrai jamais assez vous remercier pour tout ce que vous avez fait, &lt;player&gt;, non seulement pour l'entreprise, mais aussi pour moi personnellement. Dès le jour de notre rencontre, je savais que vous étiez la bonne personne pour ce poste.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_1_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Oh, so you've helped with funding a private search for Sean in Central America? That takes guts. And a whole lot of cash. I just... I hope they find him after all these years.&lt;br&gt;&lt;br&gt;Keep me posted, will you? Godspeed.</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh, alors vous avez contribué au financement d'une recherche privée pour retrouver Sean en Amérique centrale ? Il faut du cran. Et énormément d'argent. Je... j'espère vraiment qu'ils le retrouveront après toutes ces années.&lt;br&gt;&lt;br&gt;Tenez-moi au courant, d'accord ? Bonne chance.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_2</Data></Cell>
-	 <Cell><Data ss:Type="String">An Old Friend's Regards</Data></Cell>
+	 <Cell><Data ss:Type="String">Les salutations d'un vieil ami</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_2_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I heard the news! I can hardly believe it. Sean's alive and back with Alex in Zürich. You actually did it! Listen, I know he's got a lot of catching up to do, but... could you do me a favor? I've written him a letter. Nothing formal, just... things you say to a friend you thought you'd lost forever. Could you deliver it to him at the %zur_mountain% in %zurich%? I'd be eternally grateful.</Data></Cell>
+	 <Cell><Data ss:Type="String">J'ai entendu la nouvelle ! J'ai peine à y croire. Sean est vivant et de retour auprès d'Alex à Zürich. Vous avez vraiment réussi ! Écoutez, je sais qu'il a énormément de temps perdu à rattraper, mais... pourriez-vous me rendre un service ? Je lui ai écrit une lettre. Rien de formel, juste... les choses qu'on dit à un ami qu'on croyait avoir perdu pour toujours. Pourriez-vous la lui remettre au %zur_mountain% à %zurich% ? Je vous en serais éternellement reconnaissant.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_2_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver %tok_mountainkeep%'s letter to %main_sean% at the %zur_mountain% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Remettez la lettre de %tok_mountainkeep% à %main_sean%, au %zur_mountain% à %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_2_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">A letter from... Tom Hardy? Well, I'll be. Let me have a read at that.</Data></Cell>
+	 <Cell><Data ss:Type="String">Une lettre de... Tom Hardy ? Eh bien, ça alors. Laissez-moi la lire.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_2_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Oh, he always was a sentimental old coot. I can't believe he remembered that story about the busted landing gear in '43. We have so much catching up to do after we flew together!&lt;br&gt;&lt;br&gt;Thank you for bringing this to me, &lt;player&gt;. It means more than you know to hear from him. I wanted to give some of my own stock of %bel_cacao% for your trouble. Make something really nice with it, my friend!</Data></Cell>
+	 <Cell><Data ss:Type="String">Ah, il a toujours été un vieux sentimental. Je n'arrive pas à croire qu'il se souvienne encore de cette histoire de train d'atterrissage cassé en 43. Nous avons tant de choses à nous raconter après avoir volé ensemble !&lt;br&gt;&lt;br&gt;Merci de m'avoir apporté cette lettre, &lt;player&gt;. Vous ne pouvez pas savoir ce que cela représente pour moi d'avoir de ses nouvelles. Pour vous remercier, je voulais vous donner une partie de ma propre réserve de %bel_cacao%. Faites-en quelque chose de vraiment délicieux, mon ami !</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_story_tok_mountainkeep_2_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">It's amazing news that %main_sean% is alive and accounted for, but I know he's missing out on hearing from his coworkers again from WWII. He would love to receive that letter you've got on hand from %tok_mountainkeep%. You can find Sean at the %zur_mountain% in %zurich%.</Data></Cell>
+	 <Cell><Data ss:Type="String">C'est une nouvelle extraordinaire que %main_sean% soit vivant et retrouvé, mais je sais qu'il regrette de ne pas encore avoir repris contact avec ses camarades de la Seconde Guerre mondiale. Il serait ravi de recevoir la lettre de %tok_mountainkeep% que vous avez sur vous. Vous trouverez Sean au %zur_mountain% à %zurich%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Being back in %zurich% is... a heck of an adjustment, &lt;player&gt;. Sometimes the sound of the streetcars outside my window sounds like the engines of my old B-24, and for a second, I'm back in the cockpit. But then I smell the chocolate from the kitchen, and I remember the humidity of the Belizean highlands. Let me share you a story...</Data></Cell>
+	 <Cell><Data ss:Type="String">Être de retour à %zurich%, c'est... un sacré bouleversement, &lt;player&gt;. Parfois, le bruit des tramways sous ma fenêtre ressemble tellement aux moteurs de mon vieux B-24 que, pendant une seconde, je me retrouve dans le cockpit. Puis je sens le chocolat qui vient de la cuisine et je repense à l'humidité des hautes terres du Belize. Laissez-moi vous raconter une histoire...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">When Fleischer left me for dead, I thought my flight plan had finally reached the end of the line. But then I met this fella, Tzin - a Mopan Maya elder with a heart of gold. He didn't care about my uniform; he just saw a man whose engine had sputtered out. &lt;br&gt;&lt;br&gt;The cacao groves were a pretty interesting sight, &lt;player&gt;. They grow the cacao under these massive 'Mother of Cacao' trees, and Tzin said the cacao beans are like kids that need the forest's protection to keep them safe and strong. Without that shade, the whole crop goes down in flames.</Data></Cell>
+	 <Cell><Data ss:Type="String">Quand Fleischer m'a laissé pour mort, je pensais que mon plan de vol avait enfin atteint son terminus. Puis j'ai rencontré un certain Tzin, un ancien maya mopan au cœur d'or. Mon uniforme ne l'intéressait pas ; il voyait simplement un homme dont le moteur venait de caler.&lt;br&gt;&lt;br&gt;Les cacaoyères étaient un spectacle fascinant, &lt;player&gt;. Le cacao pousse sous d'immenses arbres qu'ils appellent « Mères du cacao », et Tzin disait que les fèves de cacao sont comme des enfants qui ont besoin de la protection de la forêt pour grandir en sécurité et devenir fortes. Sans cette ombre, toute la récolte part en fumée.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">The Mopan don't just eat the stuff - they treat it with real reverence. Tzin had me grinding beans on a stone metate until my arms felt like lead. Then, he'd pour the liquid from way up high, back and forth, until it had a thick, frothy head on it. He told me that froth was the 'soul' of the drink.&lt;br&gt;&lt;br&gt;I think one day, to enter a new recipe or two into the market that respects such tradition would really win some hearts over. I bet Alex would love to meet the Mayas halfway with something pretty special.</Data></Cell>
+	 <Cell><Data ss:Type="String">Les Mopan ne se contentent pas d'en consommer : ils traitent le cacao avec un véritable respect. Tzin me faisait broyer les fèves sur un metate de pierre jusqu'à ce que mes bras soient lourds comme du plomb. Ensuite, il versait le liquide de très haut, d'un récipient à l'autre, jusqu'à former une épaisse couche de mousse. Il m'expliquait que cette mousse était « l'âme » de la boisson.&lt;br&gt;&lt;br&gt;Je pense qu'un jour, lancer sur le marché une ou deux nouvelles recettes respectueuses de cette tradition pourrait vraiment toucher les gens. Je parie qu'Alex adorerait aller à la rencontre des Mayas avec quelque chose de vraiment spécial.</Data></Cell>
 	</Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
