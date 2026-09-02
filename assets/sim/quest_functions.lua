@@ -1395,7 +1395,10 @@ local _AwardText = {
 	Description = function(self) return "Text: " .. self.key end,
 	Apply = function(self, iterator)
 		local lastChar = gActiveCharacter
-		local quest = self.quest
+		-- AwardText objects are created while the quest table is still being evaluated,
+		-- before Quest:Create() knows which quest owns them. Resolve the owning quest
+		-- at execution time from ApplyGiftList instead of capturing the previous quest.
+		local quest = (iterator and iterator.quest) or self.quest
 		local text
 
 		if quest then
@@ -1432,12 +1435,10 @@ local _AwardText = {
 
 function AwardText(key, char, options)
 	options = options or {}
-	local quest_context = _AllQuests[gCurrentQuestBeingBuilt]
 
 	return CreateObject(_AwardText, { 
 		key = key, 
 		char = char,
-		quest = quest_context, 
 		ok_label = options.label,
 		ok_length = options.length,
 		mood = options.mood

@@ -1614,6 +1614,10 @@
 	 <Cell><Data ss:Type="String">Terrific. You won't be disappointed. The place is %lasvegas%, Nevada. There are riches to be had there, but do be careful: I nearly lost my kimono. All I would like you to do for me is to get me [D|100|150|200] sacks of %strawberry% sold at the market there. I'll find you in a couple of months, and I'll have a recipe on hand to trade for those berries...</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">rank2_40_extra_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Terrific. You won't be disappointed. The place is %lasvegas%, Nevada. There are riches to be had there, but do be careful: I nearly lost my kimono. All I would like you to do for me is to get me [D|100|150|200] sacks of %strawberry% sold at the market there. I'll find you in a couple of months, and I'll have a recipe on hand to trade for those berries...</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">rank2_40_summary</Data></Cell>
 	 <Cell><Data ss:Type="String">Have [D|100|150|200] sacks of %strawberry% on hand for %trav_08% who will find you in your travels.</Data></Cell>
 	</Row>

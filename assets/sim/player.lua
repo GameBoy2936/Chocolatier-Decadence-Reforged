@@ -459,6 +459,12 @@ function Player:Reset(restoreTable)
 		end
 	end
 	
+	-- Repair saves that accepted rank2_40 before its Las Vegas unlock sequence
+	-- could finish. Safe to call on every load; it only changes impossible states.
+	if restoreTable then
+		self:RepairRank2_40Progression()
+	end
+
 	-- Synchronize holiday states immediately on load
 	self:UpdateHolidays()
 
@@ -506,6 +512,57 @@ function Player:LogScore()
 		
 		DebugOut("PLAYER", string.format("Logging final score to platform: %d (Data: %s)", score, stringData))
 		LogScore(score, stringData, medalXML)
+	end
+end
+
+-------------------------------------------------------------------------------
+-- Progression Repair: rank2_40 / Las Vegas
+-------------------------------------------------------------------------------
+-- Older or mixed-version installs could crash while applying rank2_40's first
+-- onaccept reward (AwardText). Quest:Accept() records the quest as active before
+-- applying those rewards, so affected saves can permanently contain an accepted
+-- rank2_40 without Las Vegas or strawberries ever having been unlocked.
+--
+-- Repair that impossible state when loading a save. This is intentionally
+-- idempotent and does not grant anything unless rank2_40 was already accepted
+-- (active) or completed.
+-------------------------------------------------------------------------------
+
+function Player:RepairRank2_40Progression()
+	self.questsActive = self.questsActive or {}
+	self.questsComplete = self.questsComplete or {}
+	self.portsAvailable = self.portsAvailable or {}
+	self.ingredientsAvailable = self.ingredientsAvailable or {}
+	self.catalogue = self.catalogue or {}
+	self.catalogue.unlockedIngredients = self.catalogue.unlockedIngredients or {}
+
+	local wasAccepted =
+		self.questsActive["rank2_40"] ~= nil or
+		self.questsComplete["rank2_40"] ~= nil
+
+	if not wasAccepted then return end
+
+	local repaired = false
+	local vegasState = self.portsAvailable["lasvegas"]
+	if vegasState == nil or vegasState == "locked" or vegasState == "hidden" then
+		self.portsAvailable["lasvegas"] = "new"
+		repaired = true
+		DebugOut("MIGRATION", "rank2_40 repair: restored Las Vegas unlock for an already-accepted quest.")
+	end
+
+	if _AllIngredients["strawberry"] and self.ingredientsAvailable["strawberry"] ~= true then
+		self.ingredientsAvailable["strawberry"] = true
+		repaired = true
+		DebugOut("MIGRATION", "rank2_40 repair: restored strawberry market availability for an already-accepted quest.")
+	end
+
+	if not self.catalogue.unlockedIngredients["strawberry"] then
+		self.catalogue.unlockedIngredients["strawberry"] = true
+		repaired = true
+	end
+
+	if repaired then
+		DebugOut("MIGRATION", "rank2_40 progression repair completed successfully.")
 	end
 end
 

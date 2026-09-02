@@ -221,12 +221,13 @@ local function EvaluateRequirementList(requirements, quest)
 end
 
 -- Iterates and triggers an array of reward/penalty hooks (e.g., "Give 500 dollars")
-local function ApplyGiftList(gifts)
+local function ApplyGiftList(gifts, quest)
 	-- We use an iterator object pattern here to allow complex hooks to pause
 	-- or conditionally advance the execution sequence.
 	local iterator = { 
 		t = gifts or {}, 
-		n = 0 
+		n = 0,
+		quest = quest,
 	}
 	
 	function iterator:go()
