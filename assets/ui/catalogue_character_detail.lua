@@ -146,7 +146,7 @@ elseif showMetView then
 	description_key = "catalogue_character_met_not_unlocked"
 else
 	local locked_text_key = "catalogue_character_" .. char.name .. "_locked_text"
-	if GetString(locked_text_key) ~= "#####" then
+	if HasString(locked_text_key) then
 		description_key = locked_text_key
 	end
 end
@@ -252,7 +252,7 @@ if showUnlockedView then
 	local notes = {}
 	if char.religion then
 		local religionKey = "culture_" .. char.religion 
-		if GetString(religionKey) == "#####" then religionKey = "religion_"..char.religion end 
+		if not HasString(religionKey) then religionKey = "religion_"..char.religion end 
 		table.insert(notes, GetString(religionKey))
 	end
 	if char.dietaryreqs then

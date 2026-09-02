@@ -220,77 +220,115 @@ local function EvaluateRequirementList(requirements, quest)
 	return allgood, allhints
 end
 
--- Iterates and triggers an array of reward/penalty hooks (e.g., "Give 500 dollars")
-local function ApplyGiftList(gifts, quest)
-	-- We use an iterator object pattern here to allow complex hooks to pause
-	-- or conditionally advance the execution sequence.
-	local iterator = { 
-		t = gifts or {}, 
+-- Returns the highest numeric index in a possibly sparse quest hook table.
+local function GetHookListMaxIndex(t)
+	local maxIndex = 0
+	for k, _ in pairs(t or {}) do
+		if type(k) == "number" and k > maxIndex then maxIndex = k end
+	end
+	return maxIndex
+end
+
+-- Iterates and triggers an array of reward/penalty hooks. The iterator carries
+-- the owning quest so asynchronous rewards such as AwardText never have to infer
+-- context from whichever quest happened to be constructed previously.
+local function ApplyGiftList(gifts, quest, alreadyApplied)
+	local iterator = {
+		t = gifts or {},
 		n = 0,
+		max = GetHookListMaxIndex(gifts),
 		quest = quest,
+		alreadyApplied = alreadyApplied or {}
 	}
-	
+
 	function iterator:go()
 		local somethingHappened = false
 		local cont = true
-		
-		-- Run through the gift list until there's an Apply function that tells us to stop
-		while (cont and self.n < table.getn(self.t)) do
+
+		while cont and self.n < self.max do
 			self.n = self.n + 1
 			local gift = self.t[self.n]
-			
-			if gift.Apply then
+
+			if gift == nil then
+				DebugOut("ERROR", string.format("Quest '%s' reward list contains an empty slot at index %d; skipping it.", tostring(self.quest and self.quest.name or "unknown"), self.n))
+			elseif type(gift) ~= "table" or type(gift.Apply) ~= "function" then
+				DebugOut("ERROR", string.format("Quest '%s' reward list contains a non-reward value at index %d; skipping it.", tostring(self.quest and self.quest.name or "unknown"), self.n))
+			elseif self.alreadyApplied[gift] then
+				-- Count pre-applied hooks as real activity; they already changed state.
+				somethingHappened = true
+			else
 				local somethingJustHappened
 				cont, somethingJustHappened = gift:Apply(self)
-				somethingHappened = somethingHappened or somethingJustHappened
+				if cont == nil then cont = true end
+				somethingHappened = somethingHappened or (somethingJustHappened == true)
 			end
 		end
-		
+
 		return somethingHappened
 	end
-	
+
 	return iterator:go()
 end
 
--- Executes happiness modifiers immediately. This ensures the character displays
--- the correct emotional state portrait BEFORE their dialog UI pops up.
+-- Executes happiness modifiers immediately so the character portrait reflects the
+-- new mood before dialogue. Returns the exact reward objects already executed so
+-- ApplyGiftList can skip them and avoid applying happiness twice.
 local function PreApplyHappinessChanges(gifts, character)
-	if not gifts or not character then return end
-	
-	for _, gift in ipairs(gifts) do
-		-- Look for an AwardHappiness action that targets the specific speaker
-		if gift.type == "AwardHappiness" and gift.name == character.name then
+	local applied = {}
+	if not gifts or not character then return applied end
+
+	for _, gift in pairs(gifts) do
+		if type(gift) == "table" and gift.type == "AwardHappiness" and gift.name == character.name and type(gift.Apply) == "function" then
 			DebugOut("QUEST", string.format("Pre-applying happiness modifier for %s prior to UI rendering.", character.name))
-			gift:Apply() 
+			gift:Apply()
+			applied[gift] = true
 		end
 	end
+	return applied
 end
 
 ------------------------------------------------------------------------------
 -- Debugging / Safety Checks
 ------------------------------------------------------------------------------
 
-local function CrossCheckQuestFunctions(t, name)
-	for _, f in ipairs(t) do
-		if f.CrossCheck then
-			local result = f:CrossCheck()
-			if result then
-				DebugOut("ERROR", string.format("Quest CrossCheck failed for '%s': %s", name, result))
+local function CrossCheckQuestFunctions(t, questName, fieldName, expectsRequirement)
+	local maxIndex = GetHookListMaxIndex(t)
+	for i = 1, maxIndex do
+		local f = t[i]
+		if f == nil then
+			DebugOut("ERROR", string.format("Quest CrossCheck failed for '%s': %s contains an empty slot at index %d.", questName, fieldName, i))
+		elseif type(f) ~= "table" then
+			DebugOut("ERROR", string.format("Quest CrossCheck failed for '%s': %s[%d] is not a quest hook object.", questName, fieldName, i))
+		else
+			local requiredMethod = expectsRequirement and "Evaluate" or "Apply"
+			if type(f[requiredMethod]) ~= "function" then
+				DebugOut("ERROR", string.format("Quest CrossCheck failed for '%s': %s[%d] has no %s() method.", questName, fieldName, i, requiredMethod))
+			end
+			if f.CrossCheck then
+				local result = f:CrossCheck()
+				if result then
+					DebugOut("ERROR", string.format("Quest CrossCheck failed for '%s' (%s): %s", questName, fieldName, result))
+				end
 			end
 		end
 	end
 end
 
--- Ensures all assigned hooks inside the quest definition are valid and executable
+-- Validates every base, timing and difficulty branch instead of only Easy/base lists.
 function Quest:CrossCheck()
-	if table.getn(self.require) > 0 then CrossCheckQuestFunctions(self.require, self.name) end
-	if table.getn(self.goals) > 0 then CrossCheckQuestFunctions(self.goals, self.name) end
-	if table.getn(self.onaccept) > 0 then CrossCheckQuestFunctions(self.onaccept, self.name) end
-	if table.getn(self.onreject) > 0 then CrossCheckQuestFunctions(self.onreject, self.name) end
-	if table.getn(self.ondefer) > 0 then CrossCheckQuestFunctions(self.ondefer, self.name) end
-	if table.getn(self.oncomplete) > 0 then CrossCheckQuestFunctions(self.oncomplete, self.name) end
-	if table.getn(self.onincomplete) > 0 then CrossCheckQuestFunctions(self.onincomplete, self.name) end
-	if table.getn(self.onexpire) > 0 then CrossCheckQuestFunctions(self.onexpire, self.name) end
+	for fieldName, hooks in pairs(self) do
+		if type(hooks) == "table" then
+			local isRequirement = (fieldName == "require" or string.find(fieldName, "^require_"))
+			local isGoal = (fieldName == "goals" or string.find(fieldName, "^goals_"))
+			local isReward = string.find(fieldName, "^onaccept") or string.find(fieldName, "^onreject") or string.find(fieldName, "^ondefer") or string.find(fieldName, "^oncomplete") or string.find(fieldName, "^onincomplete") or string.find(fieldName, "^onexpire")
+
+			if isRequirement or isGoal then
+				CrossCheckQuestFunctions(hooks, self.name, fieldName, true)
+			elseif isReward then
+				CrossCheckQuestFunctions(hooks, self.name, fieldName, false)
+			end
+		end
+	end
 end
 
 ------------------------------------------------------------------------------
@@ -453,9 +491,9 @@ local function QueueDeliveryAftermath(quest, eventType, penaltyKey)
 	local finalKey = baseKey
 	
 	for _, key in ipairs(keys_to_try) do
-		if GetString(key .. "_1") ~= "#####" then
+		if HasString(key .. "_1") then
 			local count = 1
-			while GetString(key .. "_" .. (count + 1)) ~= "#####" do 
+			while HasString(key .. "_" .. (count + 1)) do 
 				count = count + 1 
 			end
 			finalKey = key .. "_" .. RandRange(1, count)
@@ -463,8 +501,8 @@ local function QueueDeliveryAftermath(quest, eventType, penaltyKey)
 		end
 	end
 
+	if not HasString(finalKey) then return end
 	local rawText = GetString(finalKey)
-	if rawText == "#####" then return end
 
 	local text = SubstituteQuestParams(rawText, quest, starter)
 	local buttons = GetDeliveryButtonLabels(finalKey)
@@ -504,10 +542,10 @@ function Quest:GetTimingContext()
 			return "_very_early"
 		elseif weeksLeft >= (deadline * 0.75) then 
 			return "_early"
-		elseif weeksLeft <= (deadline * 0.25) and deadline > 4 then 
-			return "_late"
 		elseif weeksLeft <= 2 and deadline > 4 then 
 			return "_very_late"
+		elseif weeksLeft <= (deadline * 0.25) and deadline > 4 then 
+			return "_late"
 		end
 	else
 		-- CASE B: Free-floating quests (No deadline)
@@ -515,41 +553,49 @@ function Quest:GetTimingContext()
 			return "_very_early"
 		elseif weeksPassed <= 6 then 
 			return "_early" 		-- Within 6 weeks is early
-		elseif weeksPassed >= 26 then 
-			return "_late" 			-- Over 6 months is late
 		elseif weeksPassed >= 52 then 
 			return "_very_late" 	-- Over a year is very late
+		elseif weeksPassed >= 26 then 
+			return "_late" 			-- Over 6 months is late
 		end
 	end
 
 	return "" -- Default if it perfectly hits the median window
 end
 
+-- Resolves a quest string under the difficulty locked when that quest was
+-- accepted. This keeps [D|...] quantities synchronized with the quest's actual
+-- Easy/Medium/Hard goals even if the player changes global difficulty later.
+local function GetQuestReplacedString(quest, key)
+	local previous = gStringDifficultyOverride
+	gStringDifficultyOverride = GetQuestDifficulty(quest)
+	local ok, result = pcall(GetReplacedString, key, quest)
+	gStringDifficultyOverride = previous
+	if not ok then
+		DebugOut("ERROR", string.format("Quest string resolution failed for '%s' (%s): %s", tostring(quest and quest.name or "unknown"), tostring(key), tostring(result)))
+		return nil
+	end
+	return result
+end
+
 -- Fundamental fallback string fetcher used for UI titles and summaries.
 function Quest:GetQuestString(key)
 	local difficulty = GetQuestDifficulty(self)
 	local difficulty_key = nil
-	
-	if difficulty == 2 then 
+
+	if difficulty == 2 then
 		difficulty_key = self.name .. "_medium" .. (key or "")
-	elseif difficulty == 3 then 
+	elseif difficulty == 3 then
 		difficulty_key = self.name .. "_hard" .. (key or "")
 	end
 
-	if difficulty_key then
-		local text = GetReplacedString(difficulty_key, self)
-		if text ~= "#####" then 
-			return text 
-		end
+	if difficulty_key and HasString(difficulty_key) then
+		return GetQuestReplacedString(self, difficulty_key)
 	end
 
-	local text = self.name .. (key or "")
-	text = GetReplacedString(text, self)
-	if text == "#####" then 
-		return nil 
-	else 
-		return text 
-	end
+	local baseKey = self.name .. (key or "")
+	if not HasString(baseKey) then return nil end
+	return GetQuestReplacedString(self, baseKey)
 end
 
 -- Powerful hierarchical lookup that fetches context-aware dialogue strings.
@@ -589,7 +635,7 @@ function Quest:GetDynamicQuestString(baseKey, character)
 	-- Search for the best match
 	local finalBaseKey = nil
 	for _, key in ipairs(keys_to_try) do
-		if GetString(key .. "_1") ~= "#####" then
+		if HasString(key .. "_1") then
 			finalBaseKey = key
 			break
 		end
@@ -602,7 +648,7 @@ function Quest:GetDynamicQuestString(baseKey, character)
 
 	-- Count variations and pick one randomly
 	local count = 1
-	while GetString(finalBaseKey .. "_" .. (count + 1)) ~= "#####" do 
+	while HasString(finalBaseKey .. "_" .. (count + 1)) do 
 		count = count + 1 
 	end
 	
@@ -613,13 +659,13 @@ function Quest:GetDynamicQuestString(baseKey, character)
 	-- Save the key so we can map the buttons to it later
 	if self.delivery then self.lastDynamicKey = finalKey end
 
-	return GetReplacedString(finalKey, self)
+	return GetQuestReplacedString(self, finalKey)
 end
 
 -- Specialized helper for extra flavor text blocks.
 function Quest:GetDynamicExtraTextString(fullKey, character)
 	local char = character or self:GetEnder() or self:GetStarter()
-	if not char then return GetReplacedString(fullKey) end 
+	if not char then return GetQuestReplacedString(self, fullKey) end 
 
 	local keys_to_try = { 
 		fullKey .. "_" .. char.name, 
@@ -628,7 +674,7 @@ function Quest:GetDynamicExtraTextString(fullKey, character)
 	
 	local finalBaseKey = nil
 	for _, key in ipairs(keys_to_try) do
-		if GetString(key .. "_1") ~= "#####" then
+		if HasString(key .. "_1") then
 			finalBaseKey = key
 			break
 		end
@@ -637,11 +683,11 @@ function Quest:GetDynamicExtraTextString(fullKey, character)
 	if not finalBaseKey then return nil end 
 
 	local count = 1
-	while GetString(finalBaseKey .. "_" .. (count + 1)) ~= "#####" do 
+	while HasString(finalBaseKey .. "_" .. (count + 1)) do 
 		count = count + 1 
 	end
 	
-	return GetReplacedString(finalBaseKey .. "_" .. RandRange(1, count), self)
+	return GetQuestReplacedString(self, finalBaseKey .. "_" .. RandRange(1, count))
 end
 
 -- Generates randomized tooltip advice for players who are stuck on an objective
@@ -661,7 +707,7 @@ function Quest:GetDynamicHintString(character)
 	
 	local finalBaseKey = nil
 	for _, key in ipairs(keys_to_try) do
-		if GetString(key .. "_1") ~= "#####" then
+		if HasString(key .. "_1") then
 			finalBaseKey = key
 			break
 		end
@@ -670,14 +716,14 @@ function Quest:GetDynamicHintString(character)
 	if not finalBaseKey then return nil end 
 
 	local count = 1
-	while GetString(finalBaseKey .. "_" .. (count + 1)) ~= "#####" do 
+	while HasString(finalBaseKey .. "_" .. (count + 1)) do 
 		count = count + 1 
 	end
 	
 	local finalKey = finalBaseKey .. "_" .. RandRange(1, count)
 	DebugOut("DIALOGUE", string.format("Extracted quest hint string: %s", finalKey))
 	
-	return GetReplacedString(finalKey, self)
+	return GetQuestReplacedString(self, finalKey)
 end
 
 -- Getter overrides for standard UI mapping
@@ -799,6 +845,8 @@ function Quest:Accept(char)
 	Player.questsActive[self.name] = Player.time
 	Player.questStarters[self.name] = char and char.name or nil
 	Player.questsComplete[self.name] = nil
+	Player.questsAcceptedEver = Player.questsAcceptedEver or {}
+	Player.questsAcceptedEver[self.name] = Player.time
 	
 	-- Lock in the current difficulty so the quest scales appropriately, even if the player
 	-- changes their difficulty setting in the options menu mid-quest.
@@ -818,8 +866,8 @@ function Quest:Accept(char)
 		accept_list = self.onaccept_hard 
 	end
 	
-	PreApplyHappinessChanges(accept_list, char)
-	ApplyGiftList(accept_list, self)
+	local preApplied = PreApplyHappinessChanges(accept_list, char)
+	ApplyGiftList(accept_list, self, preApplied)
 	
 	-- Auto-completion mechanic for purely narrative/tracker quests
 	if self.autoComplete then self:Complete() end
@@ -848,8 +896,8 @@ function Quest:Reject(char)
 		reject_list = self.onreject_hard 
 	end
 	
-	PreApplyHappinessChanges(reject_list, char)
-	ApplyGiftList(reject_list, self)
+	local preApplied = PreApplyHappinessChanges(reject_list, char)
+	ApplyGiftList(reject_list, self, preApplied)
 end
 
 function Quest:IsComplete() 
@@ -886,7 +934,11 @@ function Quest:Complete(char, building)
 		reward_list = self["oncomplete" .. timing_context .. "_hard"] or self.oncomplete_hard
 	end
 
-	PreApplyHappinessChanges(reward_list, char)
+	local preApplied = PreApplyHappinessChanges(reward_list, char)
+
+	-- Resolve timing-sensitive dialogue while the active start time and locked
+	-- difficulty still exist. Clearing them first makes every completion look early.
+	local text = self:GetCompleteString(char)
 
 	-- 2. Clear Trackers
 	Player.questsActive[self.name] = nil
@@ -894,7 +946,6 @@ function Quest:Complete(char, building)
 	Player.questDifficulty[self.name] = nil
 
 	-- 3. Execute Dialogue UI
-	local text = self:GetCompleteString(char)
 	local q = self.followup
 	if q then q = _AllQuests[q] end
 	
@@ -914,7 +965,7 @@ function Quest:Complete(char, building)
 	end
 
 	-- 4. Finalize rewards
-	somethingHappened = ApplyGiftList(reward_list, self) or somethingHappened
+	somethingHappened = ApplyGiftList(reward_list, self, preApplied) or somethingHappened
 	
 	-- If a chained quest is attached, force it to offer immediately
 	if q then
@@ -936,7 +987,7 @@ function Quest:Incomplete(char, building)
 	local timing_context = self:GetTimingContext()
 	local incomplete_list = self["onincomplete" .. timing_context] or self.onincomplete
 
-	PreApplyHappinessChanges(incomplete_list, char)
+	local preApplied = PreApplyHappinessChanges(incomplete_list, char)
 
 	local text = self:GetIncompleteString(char)
 	
@@ -953,12 +1004,15 @@ function Quest:Incomplete(char, building)
 		}
 	end
 	
-	ApplyGiftList(incomplete_list, self)
+	ApplyGiftList(incomplete_list, self, preApplied)
 	return somethingHappened
 end
 
 -- Validates whether the active deadline has passed
 function Quest:IsExpired()
+	local acceptedTime = Player.questsActive[self.name]
+	if not acceptedTime then return false end
+
 	local difficulty = GetQuestDifficulty(self)
 	local expires_time = self.expires 
 	
@@ -968,7 +1022,7 @@ function Quest:IsExpired()
 		expires_time = self.expires_hard 
 	end
 
-	if expires_time and (Player.time >= Player.questsActive[self.name] + expires_time) then 
+	if expires_time and (Player.time >= acceptedTime + expires_time) then 
 		return true 
 	end
 	
@@ -978,7 +1032,7 @@ end
 -- Handles the logic and consequence triggers when a quest deadline passes
 function Quest:Expire(char, building)
 	DebugOut("QUEST", string.format("Quest EXPIRED/FAILED: %s", self.name))
-	
+
 	if self.delivery then
 		QueueDeliveryAftermath(self, "expired")
 	end
@@ -987,30 +1041,31 @@ function Quest:Expire(char, building)
 	local c = self:GetEnder()
 	char = c or char
 
+	-- Resolve timing-sensitive state before clearing the active quest.
+	local difficulty = Player.questDifficulty[self.name] or Player.difficulty or 1
+	local expire_list = self.onexpire
+	if difficulty == 2 and self.onexpire_medium then
+		expire_list = self.onexpire_medium
+	elseif difficulty == 3 and self.onexpire_hard then
+		expire_list = self.onexpire_hard
+	end
+	local preApplied = PreApplyHappinessChanges(expire_list, char)
+	local text = self:GetExpiredString(char)
+
 	-- Clean up trackers
 	Player.questsActive[self.name] = nil
 	Player.questStarters[self.name] = nil
 	Player.questsComplete[self.name] = Player.time
-	
-	local difficulty = Player.questDifficulty[self.name] or Player.difficulty or 1 
 	Player.questDifficulty[self.name] = nil
 
 	-- Display failure telegram UI
-	local text = self:GetExpiredString()
 	DisplayDialog { "ui/ui_telegram.lua", char = char, text = text, building = building }
-	
-	-- Issue Penalties
-	local expire_list = self.onexpire
-	if difficulty == 2 and self.onexpire_medium then 
-		expire_list = self.onexpire_medium
-	elseif difficulty == 3 and self.onexpire_hard then 
-		expire_list = self.onexpire_hard 
-	end
-	
-	ApplyGiftList(expire_list, self)
 
-	if Player.questPrimary == self.name then 
-		Player:SetPrimaryQuest(nil) 
+	-- Issue Penalties
+	ApplyGiftList(expire_list, self, preApplied)
+
+	if Player.questPrimary == self.name then
+		Player:SetPrimaryQuest(nil)
 	end
 end
 
@@ -1036,8 +1091,8 @@ function Quest:Defer(char, weeks)
 		defer_list = self.ondefer_hard 
 	end
 
-	PreApplyHappinessChanges(defer_list, char)
-	ApplyGiftList(defer_list, self)
+	local preApplied = PreApplyHappinessChanges(defer_list, char)
+	ApplyGiftList(defer_list, self, preApplied)
 end
 
 function Quest:IsHintEligible()
@@ -1278,7 +1333,7 @@ function GetDynamicDeliveryString(baseKey, quest, contextChar)
 	local totalWeight = 0
 	
 	local function AddCandidate(k, w)
-		if GetString(k .. "_1") ~= "#####" then
+		if HasString(k .. "_1") then
 			table.insert(pool, { key=k, weight=w })
 			totalWeight = totalWeight + w
 		end
@@ -1335,7 +1390,7 @@ function GetDynamicDeliveryString(baseKey, quest, contextChar)
 			current = current + cand.weight
 			if roll <= current then
 				local count = 1
-				while GetString(cand.key .. "_" .. (count + 1)) ~= "#####" do count = count + 1 end
+				while HasString(cand.key .. "_" .. (count + 1)) do count = count + 1 end
 				finalKey = cand.key .. "_" .. RandRange(1, count)
 				break
 			end
@@ -1343,15 +1398,15 @@ function GetDynamicDeliveryString(baseKey, quest, contextChar)
 	else
 		-- Absolute fallback if probability pool failed
 		finalKey = baseKey .. "_1"
-		if GetString(finalKey) == "#####" then finalKey = baseKey end
+		if not HasString(finalKey) then finalKey = baseKey end
 		DebugOut("DIALOGUE", string.format("WARNING: Hit strict fallback for delivery string: %s", baseKey))
 	end
 
 	-- Save reference to assign dynamic UI buttons
 	if quest then quest.lastDynamicKey = finalKey end
 
+	if not HasString(finalKey) then return nil end
 	local rawText = GetString(finalKey)
-	if rawText == "#####" then return nil end
 	
 	-- Pipe the final text through the regex engine
 	return SubstituteQuestParams(rawText, quest, contextChar)
@@ -1421,7 +1476,7 @@ function DeliveryQuest:GetCompleteString(char)
 
 		if weeksPassed == 0 then 
 			baseKey = "delivery_complete_very_early"
-		elseif weeksLeft >= (self.expires * 0.99) then 
+		elseif weeksLeft >= (self.expires * 0.75) then 
 			baseKey = "delivery_complete_early"
 		elseif weeksLeft <= 2 and self.expires > 4 then 
 			baseKey = "delivery_complete_very_late"
@@ -1503,7 +1558,7 @@ function DeliveryQuest:GetCompleteString(char)
 	self.oncomplete_label = buttons.ok
 	self.oncomplete_label_length = "long"
 	
-	return GetReplacedString("#" .. message) 
+	return message 
 end
 
 function DeliveryQuest:Complete(char, building)
@@ -1514,15 +1569,15 @@ function DeliveryQuest:Complete(char, building)
 		
 		if self:IsReal() then Player.lastCompleteTime = Player.time end
 		
+		local difficulty = Player.questDifficulty[self.name] or Player.difficulty or 1
+		local reward_list = self.oncomplete
+
 		Player.questsWaiting[self.name] = nil
 		Player.questsActive[self.name] = nil
 		Player.questsComplete[self.name] = Player.time
 		Player.questDifficulty[self.name] = nil
 		
 		if Player.questPrimary == self.name then Player:SetPrimaryQuest(nil) end
-
-		local reward_list = self.oncomplete
-		local difficulty = Player.questDifficulty[self.name] or Player.difficulty or 1
 		
 		if difficulty == 2 and self.oncomplete_medium then 
 			reward_list = self.oncomplete_medium
@@ -1579,32 +1634,9 @@ function DeliveryQuest:GetSummary()
 end
 
 function DeliveryQuest:Expire(char, building)
-	Quest.Expire(self, char, building)
-	
-	Player.pendingAftermaths = Player.pendingAftermaths or {}
-	local aftermathBaseKey = self.isEvilScheme and "delivery_aftermath_expired_evilscheme" or "delivery_aftermath_expired"
-	
-	local weeksPassed = Player.time - (Player.questsActive[self.name] or Player.time)
-	local weeksLeft = (self.expires or 0) - weeksPassed
-	local prodName = _AllProducts[self.product] and _AllProducts[self.product]:GetName() or "Unknown"
-	local itemName = self.items and FormatMultiItemString(self.items) or prodName
-	local countStr = (self.items and table.getn(self.items) > 1) and "a shipment of" or tostring(self.count)
-	
-	local aftermath = {
-		starter = self:GetStarterName(),
-		baseKey = aftermathBaseKey,
-		item = itemName,
-		quantity = countStr,
-		product = prodName,
-		ender_char = GetString(self:GetEnderName()),
-		salary = self.price,
-		deadline_weeksleft = tostring(weeksLeft),
-		deadline = tostring(self.expires),
-		port = GetString(self.endport)
-	}
-	
-	table.insert(Player.pendingAftermaths, aftermath)
-	DebugOut("QUEST", string.format("Queued expiration aftermath dialogue for %s.", aftermath.starter))
+	-- The base expiry path already queues the correctly structured, building-scoped
+	-- aftermath entry. Do not enqueue the obsolete root-level duplicate.
+	return Quest.Expire(self, char, building)
 end
 
 function DeliveryQuest:GetSaveTable()
@@ -1696,7 +1728,7 @@ function CreateDeliveryQuest(t, isResident, sourcePool)
 					
 					local key = "delivery_complete_" .. enderChar.name .. "_success"
 					local count = 1
-					while GetString(key .. "_" .. (count + 1)) ~= "#####" do count = count + 1 end
+					while HasString(key .. "_" .. (count + 1)) do count = count + 1 end
 					local finalKey = key .. "_" .. RandRange(1, count)
 					
 					local text = SubstituteQuestParams(GetString(finalKey), q, enderChar)
@@ -1768,7 +1800,7 @@ function CreateDeliveryQuest(t, isResident, sourcePool)
 
 					local key = "delivery_complete_" .. enderChar.name .. "_fail_" .. penaltyKey
 					local count = 1
-					while GetString(key .. "_" .. (count + 1)) ~= "#####" do count = count + 1 end
+					while HasString(key .. "_" .. (count + 1)) do count = count + 1 end
 					local finalKey = key .. "_" .. RandRange(1, count)
 					
 					local text = SubstituteQuestParams(GetString(finalKey), q, enderChar)

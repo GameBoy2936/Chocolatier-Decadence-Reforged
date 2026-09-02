@@ -484,7 +484,6 @@ CreateQuest
 {
 	name = "tut_18",
 	starter = "zur_factorykeep",
-	accept = "ok",
 	accept = "letsgo",
 	accept_length = "medium",
 	defer = "none",

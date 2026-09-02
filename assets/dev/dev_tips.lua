@@ -278,13 +278,13 @@ local function CreateTip()
 	-- Synthesize the randomized suffix logic to pick a valid variation of the text
 	if not tip.seasonal_key then
 		local count = 1
-		while GetString(tip.key .. "_" .. (count + 1)) ~= "#####" do count = count + 1 end
+		while HasString(tip.key .. "_" .. (count + 1)) do count = count + 1 end
 		local randomIndex = RandRange(1, count)
 		tip.key = tip.key .. "_" .. randomIndex
 	else
 		local base = tip.key
 		local count = 1
-		while GetString(base .. "_" .. (count + 1)) ~= "#####" do count = count + 1 end
+		while HasString(base .. "_" .. (count + 1)) do count = count + 1 end
 		tip.key = base .. "_" .. RandRange(1, count)
 	end
 	

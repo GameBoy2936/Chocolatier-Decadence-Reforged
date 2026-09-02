@@ -430,8 +430,8 @@ function ValidateRecipeFeedbackRules()
 
 	local function FeedbackExists(key)
 		if type(GetReplacedString) ~= "function" then return true end
-		if GetReplacedString(key) ~= "#####" then return true end
-		if GetReplacedString(key .. "_1") ~= "#####" then return true end
+		if HasString(key) then return true end
+		if HasString(key .. "_1") then return true end
 		return false
 	end
 

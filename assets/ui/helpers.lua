@@ -85,10 +85,7 @@ function Date(weeks)
 	
 	-- 3. Localization and Formatting
 	local month_key = "month_" .. month_index 
-	local month_str = GetString(month_key)
-	
-	-- Failsafe: if the month string is missing, print the integer to avoid UI crashes
-	if month_str == "#####" then month_str = tostring(month_index) end 
+	local month_str = HasString(month_key) and GetString(month_key) or tostring(month_index)
 
 	-- Assemble the final localized date string using positional arguments
 	-- EN: "%1% %2%, %3%"  -> "January 1, 1946"
@@ -179,48 +176,77 @@ local _originalGetString = GetString
 
 local _textCache = {}
 local _baseStringCache = {}
+local _stringExistenceCache = {}
+local _missingStringCache = {}
 
--- Flushes the memory caches. Essential when swapping languages mid-game.
+-- Flushes all Lua-side caches. Essential when swapping languages mid-game.
 function ClearStringCache()
 	_textCache = {}
 	_baseStringCache = {}
+	_stringExistenceCache = {}
+	_missingStringCache = {}
 	DebugOut("LOAD", "Internal Lua string caches have been successfully flushed.")
 end
 
--- Retrieves the raw XML string from the C++ layer securely.
-local function GetBaseString(key)
-	if _baseStringCache[key] then return _baseStringCache[key] end
-	
+-- Silent existence probe for dynamic/fallback string selection. This deliberately
+-- avoids the legacy GetString() fallback so normal variant probing does not spam
+-- logfile.txt with expected "Missing string" diagnostics.
+function HasString(key)
+	if type(key) ~= "string" or key == "" then return false end
+	if _baseStringCache[key] then return true end
+	if _stringExistenceCache[key] ~= nil then return _stringExistenceCache[key] end
+
 	local text = bsgGetString(key)
-	
-	if text == "" or text == nil then
+	local exists = (text ~= nil and text ~= "" and text ~= "#####" and text ~= key)
+	_stringExistenceCache[key] = exists
+	if exists then _baseStringCache[key] = text end
+	return exists
+end
+
+-- Retrieves the raw XML/native string securely. Missing display strings may still
+-- consult the legacy engine accessor, but failed lookups are negatively cached.
+local function GetBaseString(key)
+	if type(key) ~= "string" or key == "" then return nil end
+	if _baseStringCache[key] then return _baseStringCache[key] end
+	if _missingStringCache[key] then return nil end
+
+	local text = bsgGetString(key)
+
+	if text == "" or text == nil or text == "#####" or text == key then
 		local success, result = pcall(function() return _originalGetString(key) end)
-		
-		-- Filter out the C++ missing string error flag ("#####") 
-		-- We NEVER cache "#####". This prevents missing strings from permanently poisoning the cache.
+
 		if success and result and result ~= "" and result ~= key and result ~= "#####" then
 			text = result
 		else
 			text = nil
 		end
 	end
-	
-	if text then _baseStringCache[key] = text end
-	
+
+	if text then
+		_baseStringCache[key] = text
+		_stringExistenceCache[key] = true
+	else
+		_missingStringCache[key] = true
+	end
+
 	return text
+end
+
+-- Returns the difficulty context used for [D|easy|medium|hard] text. Active
+-- quest dialogue can temporarily set gStringDifficultyOverride so its wording
+-- stays locked to the difficulty chosen when that quest was accepted.
+local function GetStringDifficultyContext()
+	if gStringDifficultyOverride then return gStringDifficultyOverride end
+	if gDetailQuest and Player.questDifficulty[gDetailQuest.name] then
+		return Player.questDifficulty[gDetailQuest.name]
+	end
+	return Player.difficulty or 1
 end
 
 -- Evaluates difficulty syntax tags inside strings: [D|easy|medium|hard]
 local function ProcessDifficulty(text)
+	local difficulty = GetStringDifficultyContext()
 	return string.gsub(text, "%[D%|(.-)|(.-)|(.-)%]", function(easy, medium, hard)
-		local difficulty = Player.difficulty or 1
-		
-		if gCurrentQuestBeingBuilt then
-			difficulty = Player.difficulty or 1
-		elseif gDetailQuest and Player.questDifficulty[gDetailQuest.name] then
-			difficulty = Player.questDifficulty[gDetailQuest.name]
-		end
-		
 		if difficulty == 3 then return hard
 		elseif difficulty == 2 then return medium
 		else return easy
@@ -284,13 +310,17 @@ end
 -- Advanced fetcher: Resolves complex nested arguments and caches the final compilation
 function GetText(key, ...)
 	-- Safety blocks to prevent execution failures on invalid calls
+	if key == nil then return "" end
 	if type(key) == "number" then return tostring(key) end
-	if type(key) == "string" and string.find(key, "^%d+$") then return key end
+	if type(key) ~= "string" then return tostring(key) end
+	if string.find(key, "^%d+$") then return key end
 	
-	-- Hash a unique cache key based on the positional arguments
-	local cacheKey = key
+	-- Hash a unique cache key based on positional arguments AND difficulty. Without
+	-- the difficulty component, changing difficulty mid-game can reuse text compiled
+	-- from the previous [D|...] branch.
+	local cacheKey = key .. ":D" .. tostring(GetStringDifficultyContext())
 	if arg and arg.n > 0 then
-		cacheKey = key .. ":"
+		cacheKey = cacheKey .. ":"
 		for i = 1, arg.n do
 			cacheKey = cacheKey .. tostring(arg[i]) .. "|"
 		end
@@ -352,23 +382,22 @@ end
 
 -- Randomly selects a variation of a base string key (e.g. key_1, key_2, key_3)
 function GetRandomString(baseKey, ...)
-	local count = 1
-	while GetString(baseKey .. "_" .. (count + 1)) ~= "#####" do
+	local count = 0
+	while HasString(baseKey .. "_" .. (count + 1)) do
 		count = count + 1
 	end
-	
+
 	local finalKey = baseKey
-	if count > 1 or GetString(baseKey .. "_1") ~= "#####" then
-		local index = RandRange(1, count)
-		finalKey = baseKey .. "_" .. index
+	if count > 0 then
+		finalKey = baseKey .. "_" .. RandRange(1, count)
 	end
-	
+
 	local text = GetString(finalKey, unpack(arg or {}))
-	
+
 	if text and string.find(text, "<player>") then
 		text = string.gsub(text, "<player>", Player.name or "Chocolatier")
 	end
-	
+
 	return text
 end
 
@@ -442,18 +471,15 @@ end
 function GetLocalizedUnit(baseKey, count)
 	local lang = Player.options.language or "en"
 	local suffix = GetPluralSuffix(count, lang)
-	
 	local key = baseKey .. suffix
-	local str = GetString(key)
-	
-	-- Hierarchy Fallback: If a language demands "_5" but the XML only defined "_2", cascade down safely.
-	if str == "#####" then
-		if GetString(baseKey .. "_2") ~= "#####" then return GetString(baseKey .. "_2") end
-		if GetString(baseKey .. "_other") ~= "#####" then return GetString(baseKey .. "_other") end
-		return GetString(baseKey .. "_1") 
-	end
-	
-	return str
+
+	if HasString(key) then return GetString(key) end
+
+	-- Hierarchy Fallback: If a language demands a form not supplied by its XML,
+	-- cascade to the nearest supported unit form without relying on display text.
+	if HasString(baseKey .. "_2") then return GetString(baseKey .. "_2") end
+	if HasString(baseKey .. "_other") then return GetString(baseKey .. "_other") end
+	return GetString(baseKey .. "_1")
 end
 
 -------------------------------------------------------------------------------
@@ -549,9 +575,9 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 	-- First-Visit Override Bypass
 	if isFirstVisit then
 		local introKey = baseKey .. "_" .. character.name .. "_first"
-		if GetString(introKey .. "_1") ~= "#####" then
+		if HasString(introKey .. "_1") then
 			local count = 1
-			while GetString(introKey .. "_" .. (count + 1)) ~= "#####" do count = count + 1 end
+			while HasString(introKey .. "_" .. (count + 1)) do count = count + 1 end
 			local finalKey = introKey .. "_" .. RandRange(1, count)
 			
 			DebugOut("DIALOGUE", string.format("Priority Override: Firing First-Visit Intro -> %s", finalKey))
@@ -594,8 +620,8 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 	end
 	
 	local holidayContext = nil
-	if Player.currentHoliday and Player:IsHolidayActiveInPort(building.port.name) then
-		holidayContext = Player.currentHoliday
+	if Player.GetActiveHolidayForPort and building and building.port then
+		holidayContext = Player:GetActiveHolidayForPort(building.port.name)
 	end
 	
 	local contextString = nil
@@ -610,7 +636,7 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 	local totalWeight = 0
 	
 	local function AddCandidate(k, w, o)
-		if GetString(k .. "_1") ~= "#####" then
+		if HasString(k .. "_1") then
 			table.insert(pool, { key = k, weight = w, obj = o })
 			totalWeight = totalWeight + w
 		end
@@ -674,7 +700,7 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 			current = current + cand.weight
 			if roll <= current then
 				local count = 1
-				while GetString(cand.key .. "_" .. (count + 1)) ~= "#####" do count = count + 1 end
+				while HasString(cand.key .. "_" .. (count + 1)) do count = count + 1 end
 				finalKey = cand.key .. "_" .. RandRange(1, count)
 				finalObj = cand.obj
 				break
@@ -683,13 +709,13 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 	else
 		-- Critical Failsafe
 		finalKey = baseKey .. "_1"
-		if GetString(finalKey) == "#####" then finalKey = baseKey end
+		if not HasString(finalKey) then finalKey = baseKey end
 		DebugOut("DIALOGUE", string.format("WARNING: Matrix weight zero. Falling back to generic key: %s", baseKey))
 	end
 
 	-- 5. Format and Inject Tokens
 	local rawText = GetString(finalKey)
-	if rawText == "#####" or rawText == nil then return "..." end
+	if rawText == nil or rawText == finalKey and not HasString(finalKey) then return "..." end
 
 	local map = {}
 	

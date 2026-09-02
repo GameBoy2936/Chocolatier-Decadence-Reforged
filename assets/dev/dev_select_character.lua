@@ -86,7 +86,7 @@ end
 local characters = {}
 for name, char in pairs(_AllCharacters) do
 	-- Failsafe: Ignore corrupted/empty localization records
-	if GetString(char.name) ~= "#####" then
+	if HasString(char.name) then
 		table.insert(characters, char)
 	end
 end

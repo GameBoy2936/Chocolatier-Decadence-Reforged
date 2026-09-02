@@ -266,14 +266,14 @@ CreateQuest
 	defer = "anothertime",
 	reject = "none",
 	onaccept = {AwardText("rank3_09_extra01"), AwardMoney(-25000), AwardRecipe("e07"), AwardDialog("recipes"), AwardUnlockCharacter("las_marketkeep")},
-	onaccept = {AwardText("rank3_09_extra01"), AwardMoney(-40000), AwardRecipe("e07"), AwardDialog("recipes"), AwardUnlockCharacter("las_marketkeep")},
-	onaccept = {AwardText("rank3_09_extra01"), AwardMoney(-65000), AwardRecipe("e07"), AwardDialog("recipes"), AwardUnlockCharacter("las_marketkeep")},
+	onaccept_medium = {AwardText("rank3_09_extra01"), AwardMoney(-40000), AwardRecipe("e07"), AwardDialog("recipes"), AwardUnlockCharacter("las_marketkeep")},
+	onaccept_hard = {AwardText("rank3_09_extra01"), AwardMoney(-65000), AwardRecipe("e07"), AwardDialog("recipes"), AwardUnlockCharacter("las_marketkeep")},
 	goals = { RequireItem("e07", 78), HintPerson("dou_shopkeep", "dou_shop", "douala")},
 	goals_medium = { RequireItem("e07", 116), HintPerson("dou_shopkeep", "dou_shop", "douala")},
 	goals_hard = { RequireItem("e07", 172), HintPerson("dou_shopkeep", "dou_shop", "douala")},
 	oncomplete = {IncrementVariable("rank3_work"), AwardItem("e07", -78), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
-	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("e07", -110), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
-	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("e07", -175), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
+	oncomplete_medium = {IncrementVariable("rank3_work"), AwardItem("e07", -116), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
+	oncomplete_hard = {IncrementVariable("rank3_work"), AwardItem("e07", -172), AwardRecipe("e09"), AwardDialog("recipes"), AwardOfferQuest("rank3_10"), AwardUnlockIngredient("rhubarb")},
 	require = {RequireVariableEqual("rank3_09_ready", 5), RequireMinMoney(80000)},
 }
 

@@ -111,13 +111,13 @@ end
 -- (e.g., "ev_prod_priceup_1", "ev_prod_priceup_2").
 local function GetRandomEventKey(baseKey)
 	local count = 1
-	-- Check existence against "#####" to avoid falling into the missing-string trap
-	while GetString(baseKey .. "_" .. (count + 1)) ~= "#####" and GetString(baseKey .. "_" .. (count + 1)) ~= (baseKey .. "_" .. (count + 1)) do
+	-- Count only strings that actually exist in the loaded localization table
+	while HasString(baseKey .. "_" .. (count + 1)) do
 		count = count + 1
 	end
 	
 	-- If no _1 exists, assume it's just a single base key.
-	if count == 1 and (GetString(baseKey .. "_1") == "#####" or GetString(baseKey .. "_1") == (baseKey .. "_1")) then 
+	if count == 1 and not HasString(baseKey .. "_1") then 
 		return baseKey 
 	end
 	
@@ -705,12 +705,11 @@ function Tips.GetDynamicTipString(tip, character)
 	local finalKey = nil
 	for _, key in ipairs(keys_to_try) do
 		-- Safe check to see if the key exists in the localized table at all
-		local text = GetString(key .. "_1")
-		if text ~= "#####" and text ~= (key .. "_1") then
+		if HasString(key .. "_1") then
 			
 			-- Discover how many randomized variations of this specific string exist
 			local count = 1
-			while GetString(key .. "_" .. (count + 1)) ~= "#####" and GetString(key .. "_" .. (count + 1)) ~= (key .. "_" .. (count + 1)) do
+			while HasString(key .. "_" .. (count + 1)) do
 				count = count + 1
 			end
 			

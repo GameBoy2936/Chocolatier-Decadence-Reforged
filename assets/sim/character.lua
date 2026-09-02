@@ -174,10 +174,11 @@ function Character:GetHonorific()
 	
 	-- Fallback based on assigned gender
 	local g = self.gender or "neutral"
-	local title = GetString("honorific_default_" .. g)
+	local titleKey = "honorific_default_" .. g
+	local title = HasString(titleKey) and GetString(titleKey) or nil
 	
-	-- Hardcoded safety fallback if localization string is missing to prevent UI "#####" breaks
-	if title == "#####" then
+	-- Hardcoded safety fallback if localization string is missing.
+	if not title then
 		if g == "male" then return "Mr."
 		elseif g == "female" then return "Ms."
 		else return "Mx." end

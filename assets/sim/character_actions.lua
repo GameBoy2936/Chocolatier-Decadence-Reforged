@@ -97,7 +97,7 @@ local _ActionSpeakDynamic =
 		
 		for _, base_key in ipairs(keys_to_try) do
 			-- Ensure the string actually exists in the localized file (checking for _1)
-			if GetString(base_key .. "_1") ~= "#####" then
+			if HasString(base_key .. "_1") then
 				
 				-- If the key is NOT the ultimate generic fallback, we test it against the RNG.
 				local is_specific = (base_key ~= "generic_building")
@@ -116,7 +116,7 @@ local _ActionSpeakDynamic =
 					final_base_key = base_key
 					variation_count = 1
 					
-					while GetString(final_base_key .. "_" .. (variation_count + 1)) ~= "#####" do
+					while HasString(final_base_key .. "_" .. (variation_count + 1)) do
 						variation_count = variation_count + 1
 					end
 					
@@ -130,7 +130,7 @@ local _ActionSpeakDynamic =
 		if not final_base_key then
 			final_base_key = "generic_building"
 			variation_count = 1
-			while GetString(final_base_key .. "_" .. (variation_count + 1)) ~= "#####" do
+			while HasString(final_base_key .. "_" .. (variation_count + 1)) do
 				variation_count = variation_count + 1
 			end
 			DebugOut("CHAR", string.format("Dialogue search exhausted. Falling back to base generic_building (%d variations).", variation_count))

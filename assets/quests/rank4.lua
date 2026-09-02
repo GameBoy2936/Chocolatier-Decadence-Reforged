@@ -149,7 +149,7 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	autocomplete = true,
+	autoComplete = true,
 	visible = false,
 	onaccept ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardCustomSlot(12), AwardText("rank5_promo_extra01"), AwardDialog("recipes"), AwardText("rank5_promo_extra02"), AwardMoney(10000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers")},
 	onaccept_medium ={AwardRank(5), AwardDelayQuest("rank4_alex_thanks", 3), AwardCustomSlot(12), AwardText("rank5_promo_extra01"), AwardDialog("recipes"), AwardText("rank5_promo_extra02"), AwardMoney(25000000), AwardEnableOrderForChar("main_alex"), AwardEnableOrderForChar("announcer"), AwardPlaceCharacter("announcer", "_travelers")},
@@ -164,7 +164,7 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	automcomplete = true,
+	autoComplete = true,
 	visible = false,
 	require = {RequireQuestComplete("rank5_promo")},
 }

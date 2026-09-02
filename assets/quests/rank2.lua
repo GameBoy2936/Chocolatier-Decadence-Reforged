@@ -29,7 +29,7 @@ CreateQuest
 	require = { RequireMinRank(2)},
 	oncomplete = {AwardOfferQuest("rank2_02"), AwardDelayQuest("rank2_precoffee_hint", 4), AwardUnlockCharacter("main_feli")},
     oncomplete_label = "rank2_01_complete_label",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 }
 
 CreateQuest
@@ -51,9 +51,9 @@ CreateQuest
     oncomplete_medium = { AwardItem("b04", -30), AwardOfferQuest("rank2_03"), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardUnlockCharacter("zur_schoolkeep")},
     oncomplete_hard = { AwardItem("b04", -45), AwardOfferQuest("rank2_03"), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardUnlockCharacter("zur_schoolkeep")},
     oncomplete_label = "yourewelcome",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
     onincomplete_label = "notjustyet",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -74,9 +74,9 @@ CreateQuest
 	oncomplete_hard = {AwardItem("b04", -60), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardUnlockIngredient("mint"), AwardUnlockIngredient("orange"), AwardUnlockIngredient("lemon"), AwardUnlockCharacter("cap_mountainkeep"), AwardDiscoverPreference("cap_mountainkeep", "like", "peanut")},
 	require = { RequireMinRank(2), RequireQuestComplete("rank2_02")}, 
     oncomplete_label = "goodtoknow",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
     onincomplete_label = "isee",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -96,9 +96,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"),  IncrementVariable("lab"), AwardItem("b06", -40), AwardMoney(32500), AwardDiscoverPreference("zur_towerkeep", "like", "almond")},
 	require = { RequireMinRank(2) },
     oncomplete_label = "mypleasure",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
     onincomplete_label = "illgetrightonit",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -122,9 +122,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"),  IncrementVariable("lab"), AwardItem("b08", -58), AwardUnlockCharacter("zur_mountainkeep")},
 	require = { RequireMinRank(2), RequireQuestComplete("rank2_03")},
     oncomplete_label = "imgladyoulikethem",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
     onincomplete_label = "youmayberight",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -145,9 +145,9 @@ CreateQuest
 	oncomplete_hard = {AwardHappiness("cap_marketkeep", 100), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardItem("b10", -46), AwardItem("sugar", 2000), AwardDiscoverPreference("cap_marketkeep", "like", "mint")},
 	require = {RequireMinRank(2), RequireQuestComplete("rank2_03")},
     oncomplete_label = "pleasuredoingbusiness",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
     onincomplete_label = "theyareontheirway",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -161,15 +161,15 @@ CreateQuest
 	goals_medium = { RequireItem("b11", 50), HintPerson("evil_bian", "tan_bar", "tangiers")},
 	goals_hard = { RequireItem("b11", 100), HintPerson("evil_bian", "tan_bar", "tangiers")},
 	onaccept = {AwardItem("honey", 100), AwardUnlockIngredient("honey")},
-	onreject = {AwardText("rank2_07_rejected"), nil, {mood = "angry"}},
+	onreject = {AwardText("rank2_07_rejected", nil, {mood = "angry"})},
 	oncomplete = {AwardHappiness("evil_bian", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b11", -25), AwardUnlockIngredient("apricot"), AwardDiscoverPreference("evil_bian", "like", "honey")},
 	oncomplete_medium = {AwardHappiness("evil_bian", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b11", -50), AwardUnlockIngredient("apricot"), AwardDiscoverPreference("evil_bian", "like", "honey")},
 	oncomplete_hard = {AwardHappiness("evil_bian", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b11", -100), AwardUnlockIngredient("apricot"), AwardDiscoverPreference("evil_bian", "like", "honey")},
 	require = { RequireMinRank(2)},
 	oncomplete_label = "allright",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "myapologies",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -190,9 +190,9 @@ CreateQuest
 	oncomplete_hard = {AwardDelayQuest("rank2_coffee16", 2), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b09", -25)},
 	require = {RequireMinRank(2)},
 	oncomplete_label = "soundsgood",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "theyrecomingalong",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -227,9 +227,9 @@ CreateQuest
 	oncomplete_hard = {AwardHappiness("dou_plantationkeep", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b12", -60), AwardMoney(85000), AwardDiscoverPreference("dou_plantationkeep", "like", "dou_cacao")},
 	require = {RequireMinRank(2), RequireAbsoluteTime(24)},
 	oncomplete_label = "thanks",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "iknow",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -253,9 +253,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"),  AwardItem("b07", -33)},
 	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome")},
 	oncomplete_label = "thanks",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "iknow",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -274,9 +274,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"), AwardMoney(32500), AwardItem("b08", -50)},
 	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome")},
 	oncomplete_label = "enjoy",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "illgetbacktoyou",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -295,9 +295,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"), AwardMoney(11000), AwardItem("b01", -80), AwardDiscoverPreference("zur_stationkeep", "like", "b01")},
 	require = {RequireMinRank(2), RequireQuestComplete("tedd_welcome")},
 	oncomplete_label = "lookingforwardtoit",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "illgetthemmade",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -809,9 +809,9 @@ CreateQuest
 	goals = { RequireItem("c05", 100), RequireItem("user2", 100), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_medium = { RequireItem("c05", 150), RequireItem("user2", 150), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_hard = { RequireItem("c05", 200), RequireItem("user2", 200), HintPerson("main_zach", "tan_shop", "tangiers")},
-	oncomplete = { IncrementVariable("tanshop"), AwardItem("user2", -100), AwardItem("c05", -100), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("tan_shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
-	oncomplete_medium = { IncrementVariable("tanshop"), AwardItem("user2", -150), AwardItem("c05", -150), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("tan_shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
-	oncomplete_hard = { IncrementVariable("tanshop"), AwardItem("user2", -200), AwardItem("c05", -200), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("tan_shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
+	oncomplete = { IncrementVariable("tanshop"), AwardItem("user2", -100), AwardItem("c05", -100), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
+	oncomplete_medium = { IncrementVariable("tanshop"), AwardItem("user2", -150), AwardItem("c05", -150), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
+	oncomplete_hard = { IncrementVariable("tanshop"), AwardItem("user2", -200), AwardItem("c05", -200), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
 	require = {RequireQuestComplete("tanshop_01")},
 }
 
@@ -960,7 +960,7 @@ CreateQuest
 	require_hard = { RequireMinRank(2), RequireQuestComplete("ugr_01"), RequireRecipe("c01"), RequireRecipe("c05"), RequireRecipesMade(4, "beverage"), RequireQuestComplete("rank2_coffee03"), RequireNoOffers(2), RequireNoCompletes(1), RequireVariableEqual("ugr_slots", 0)},
     isReal = true,
 	oncomplete_label = "thankyou",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 }
 
 CreateQuest
@@ -981,9 +981,9 @@ CreateQuest
     oncomplete_medium = {AwardItem("b02", -75), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
     oncomplete_hard = {AwardItem("b02", -100), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
 	oncomplete_label = "weareinbusiness",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "verywell",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -1153,7 +1153,7 @@ CreateQuest
 	oncomplete_medium = {AwardItem("user1", - 30), AwardItem("user2", -30), AwardUnblockBuilding("bal_plantation"), AwardUnlockIngredient("bal_coffee"), AwardUnlockIngredient("bal_cacao"), AwardRecipe("c09"), AwardRecipe("c10"), AwardDialog("recipes"), AwardDelayQuest("ugr_02b", 5), AwardEnableOrderForChar("bal_xxxkeep"), AwardEnableOrderForBuilding("bal_plantation"), AwardUnlockCharacter("bal_xxxkeep")},
 	oncomplete_hard = {AwardItem("user1", - 50), AwardItem("user2", -50), AwardUnblockBuilding("bal_plantation"), AwardUnlockIngredient("bal_coffee"), AwardUnlockIngredient("bal_cacao"), AwardRecipe("c09"), AwardRecipe("c10"), AwardDialog("recipes"), AwardDelayQuest("ugr_02b", 5), AwardEnableOrderForChar("bal_xxxkeep"), AwardEnableOrderForBuilding("bal_plantation"), AwardUnlockCharacter("bal_xxxkeep")},
 	oncomplete_label = "thankyou",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 }
 
 CreateQuest
@@ -1233,9 +1233,9 @@ CreateQuest
 	oncomplete_medium = {AwardUnlockIngredient("apricot"), AwardItem("i01", -45), AwardMoney(28000), AwardUnlockCharacter("evil_bian")},
 	oncomplete_hard = {AwardUnlockIngredient("apricot"), AwardItem("i01", -60), AwardMoney(35000), AwardUnlockCharacter("evil_bian")},
 	oncomplete_label = "tokyo_02_complete_label",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "tokyo_02_incomplete_label",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -1341,9 +1341,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"), AwardItem("i04", -100), AwardRemoveCharacter("trav_02", "dou_emptybuilding1"), AwardPlaceCharacter("trav_02", "_travelers"), AwardEnableOrderForChar("trav_02"), AwardEnableOrderForBuilding("dou_emptybuilding1"), AwardUnlockCharacter("trav_02")},
 	require = {RequireMinRank(2), RequireRecipe("i01"), RequireIngredientAvailable("anise"), RequireIngredientAvailable("cayenne"), RequireCharHasNoActiveOrder("trav_02"), RequireBuildingHasNoActiveOrder("dou_emptybuilding1")},
 	oncomplete_label = "iappreciateit",
-	oncomplete_length = "long",
+	oncomplete_label_length = "long",
 	onincomplete_label = "fairenough",
-	onincomplete_length = "long",
+	onincomplete_label_length = "long",
 }
 
 CreateQuest
@@ -1354,7 +1354,7 @@ CreateQuest
 	accept = "itsadeal",
 	accept_length = "long",
 	defer = "maybelater",
-	accept_length = "long",
+	defer_length = "long",
 	reject = "none",
 	onaccept = {AwardRecipe("i06"), AwardDialog("recipes"), AwardUnlockCharacter("tok_shopkeep")},
 	goals = {RequireItem("i06", 50), HintPerson("tok_stationkeep", "tok_station", "tokyo")},
@@ -1488,7 +1488,7 @@ CreateQuest
 	accept = "deal",
 	accept_length = "long",
 	defer = "notnow",
-	accept_length = "long",
+	defer_length = "long",
 	reject = "none",
 	onaccept = {AwardRecipe("i09"), AwardDialog("recipes")},
 	goals = { RequireItem("i09", 40), HintPerson("tan_portkeep", "tan_port", "tangiers")},
@@ -1549,7 +1549,7 @@ CreateQuest
 	goals = { RequireItem("user1", 120), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_medium = { RequireItem("user1", 150), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_hard = { RequireItem("user1", 180), HintPerson("main_zach", "tan_shop", "tangiers")},
-	onaccept = {AwardText("konshop_01_extra01"), AwardDelayQuest("tan_shop_owned_00", 15)},
+	onaccept = {AwardText("konshop_01_extra01"), AwardDelayQuest("shop_owned_00", 15)},
 	oncomplete = {AwardItem("user1", -120),  AwardOfferQuest("konshop_02")},
 	oncomplete_medium = {AwardItem("user1", -150),  AwardOfferQuest("konshop_02")},
 	oncomplete_hard = {AwardItem("user1", -180),  AwardOfferQuest("konshop_02")},
@@ -1566,7 +1566,7 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	goals = { HintPerson("kon_shopkeep", "kon_shop", "kona")},
-	oncomplete = {AwardOfferQuest("konshop_03"), AwardDelayQuest("tan_shop_owned_00", 5)},
+	oncomplete = {AwardOfferQuest("konshop_03"), AwardDelayQuest("shop_owned_00", 5)},
 	require = {RequireQuestComplete("konshop_01")},
 }
 
@@ -1818,9 +1818,9 @@ CreateQuest
 	goals = {RequireItem("t04", 1)},
 	goals_medium = {RequireItem("t04", 10)},
 	goals_hard = {RequireItem("t04", 50)},
-	oncomplete ={AwardItem("t04", -1), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep"), AwardUnlockCharacter("lim_plantationkeep")},
-	oncomplete_medium ={AwardItem("t04", -10), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep"), AwardUnlockCharacter("lim_plantationkeep")},
-	oncomplete_hard ={AwardItem("t04", -50), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep"), AwardUnlockCharacter("lim_plantationkeep")},
+	oncomplete ={AwardItem("t04", -1), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep")},
+	oncomplete_medium ={AwardItem("t04", -10), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep")},
+	oncomplete_hard ={AwardItem("t04", -50), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep")},
 	require = {RequireItem("t04", 1), RequireQuestActive("rank2_51")},
 	require_medium = {RequireItem("t04", 10), RequireQuestActive("rank2_51")},
 	require_hard = {RequireItem("t04", 50), RequireQuestActive("rank2_51")},
@@ -1916,15 +1916,15 @@ CreateQuest
 	reject = "none",
 	onaccept = {AwardRemoveCharacter("trav_11", "_travelers"), AwardPlaceCharacter("trav_11", "dou_emptybuilding1"), AwardDisableOrderForChar("trav_11"), AwardDisableOrderForBuilding("dou_emptybuilding1")},
 	goals = { RequireItem("c05", 60), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
-	goals = { RequireItem("c05", 75), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
-	goals = { RequireItem("c05", 90), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
+	goals_medium = { RequireItem("c05", 75), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
+	goals_hard = { RequireItem("c05", 90), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
 	expires = 19,
 	expires_medium = 16,
 	expires_hard = 13,
 	onexpire = {AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
 	oncomplete = {AwardItem("c05", -60), AwardMoney(60000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
-	oncomplete = {AwardItem("c05", -75), AwardMoney(75000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
-	oncomplete = {AwardItem("c05", -90), AwardMoney(90000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
+	oncomplete_medium = {AwardItem("c05", -75), AwardMoney(75000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
+	oncomplete_hard = {AwardItem("c05", -90), AwardMoney(90000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
 	require = {RequireNoOffers(3), RequireMinRank(2), RequireRecipe("c05"), RequireCharHasNoActiveOrder("trav_11"), RequireBuildingHasNoActiveOrder("dou_emptybuilding1"), RequireQuestComplete("rank2_tangiersb")},
 }
 

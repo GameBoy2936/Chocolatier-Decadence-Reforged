@@ -786,11 +786,10 @@ CreateQuest
 	accept = "ok",
 	defer = "none",
 	reject = "none",
-	onaccept = {IncrementVariable("travel_tease_03")},
+	onaccept = {IncrementVariable("travel_tease_03"), AwardDelayQuest("travel_tease_04", 31)},
 	autoComplete = true,
 	require = {RequireMinRank(2), RequireQuestIncomplete("airplane"), RequireQuestComplete("travel_tease_02")},
 	visible = false,
-	onaccept ={AwardDelayQuest("travel_tease_04", 31)},
 }
 
 CreateQuest

@@ -606,32 +606,30 @@ local _UnlockPort = {
 	Description = function(self) return "Unlock " .. GetString(self.name) end,
 	Apply = function(self)
 		local port = _AllPorts[self.name]
+		if not port then
+			DebugOut("ERROR", string.format("AwardUnlockPort skipped undefined port '%s'.", tostring(self.name)))
+			return true, false
+		end
 		port:Unlock()
-		return true
+		return true, true
 	end,
-	CrossCheck = function(self) if _AllPorts[self.name] then return nil else return "UNDEFINED PORT: " .. self.name end end
+	CrossCheck = function(self) if _AllPorts[self.name] then return nil else return "UNDEFINED PORT: " .. tostring(self.name) end end
 }
-function AwardUnlockPort(name)
-	if _AllPorts[name] then return CreateObject(_UnlockPort, { name = name })
-	else DebugOut("ERROR", string.format("Attempted to unlock undefined port mapping: '%s'", tostring(name)))
-	end
-end
+function AwardUnlockPort(name) return CreateObject(_UnlockPort, { name = name }) end
 
 -- ==========================================
 -- REQUIREMENT: RequirePort
 -- Validates that the player has discovered a port.
 -- ==========================================
 local _PortAvailable = {
-	Description = function(self) return "Unlocked: " .. self.name end,
+	Description = function(self) return "Unlocked: " .. tostring(self.name) end,
 	Evaluate = function(self, quest)
 		local port = _AllPorts[self.name]
-		return port:IsAvailable()
+		return port and port:IsAvailable() or false
 	end,
-	CrossCheck = function(self) if _AllPorts[self.name] then return nil else return "UNDEFINED PORT: " .. self.name end end
+	CrossCheck = function(self) if _AllPorts[self.name] then return nil else return "UNDEFINED PORT: " .. tostring(self.name) end end
 }
-function RequirePort(name)
-	if _AllPorts[name] then return CreateObject(_PortAvailable, { name = name }) end
-end
+function RequirePort(name) return CreateObject(_PortAvailable, { name = name }) end
 
 -- ==========================================
 -- REQUIREMENT: RequirePlayerInPort
@@ -658,17 +656,18 @@ local _UnlockIngredient = {
 	Description = function(self) return "Unlock " .. tostring(self.name) end,
 	Apply = function(self)
 		local ing = _AllIngredients[self.name]
+		if not ing then
+			DebugOut("ERROR", string.format("AwardUnlockIngredient skipped undefined ingredient '%s'.", tostring(self.name)))
+			return true, false
+		end
 		ing:Unlock()
-		
-		-- Automatically add the unlocked ingredient to the player's encyclopedia catalogue
 		Player.catalogue.unlockedIngredients[self.name] = true
 		DebugOut("PLAYER", string.format("Applying reward: Unlocking map presence and catalogue entry for '%s'.", self.name))
-		return true
+		return true, true
 	end,
+	CrossCheck = function(self) if _AllIngredients[self.name] then return nil else return "UNDEFINED INGREDIENT: " .. tostring(self.name) end end
 }
-function AwardUnlockIngredient(name)
-	if _AllIngredients[name] then return CreateObject(_UnlockIngredient, { name = name }) end
-end
+function AwardUnlockIngredient(name) return CreateObject(_UnlockIngredient, { name = name }) end
 
 -- ==========================================
 -- REWARD: AwardLockIngredient
@@ -679,45 +678,44 @@ local _LockIngredient = {
 	Description = function(self) return "Lock " .. tostring(self.name) end,
 	Apply = function(self)
 		local ing = _AllIngredients[self.name]
+		if not ing then
+			DebugOut("ERROR", string.format("AwardLockIngredient skipped undefined ingredient '%s'.", tostring(self.name)))
+			return true, false
+		end
 		ing:Lock()
-		
-		-- Scrub the ingredient from the encyclopedia so the player cannot reference it
 		Player.catalogue.unlockedIngredients[self.name] = nil
 		DebugOut("PLAYER", string.format("Applying reward: Locking and removing catalogue entry for '%s'.", self.name))
-		return true
+		return true, true
 	end,
+	CrossCheck = function(self) if _AllIngredients[self.name] then return nil else return "UNDEFINED INGREDIENT: " .. tostring(self.name) end end
 }
-function AwardLockIngredient(name)
-	if _AllIngredients[name] then return CreateObject(_LockIngredient, { name = name }) end
-end
+function AwardLockIngredient(name) return CreateObject(_LockIngredient, { name = name }) end
 
 -- ==========================================
 -- REQUIREMENT: RequireIngredientAvailable / Unavailable
 -- Checks the global lock state of an ingredient.
 -- ==========================================
 local _IngredientAvailable = {
-	DebugDescription = function(self) return "Available: " .. self.name end,
+	DebugDescription = function(self) return "Available: " .. tostring(self.name) end,
 	Description = function(self) return "AVAILABLE: " .. GetString(self.name) end,
 	Evaluate = function(self, quest)
 		local ing = _AllIngredients[self.name]
-		return ing:IsAvailable()
+		return ing and ing:IsAvailable() or false
 	end,
+	CrossCheck = function(self) if _AllIngredients[self.name] then return nil else return "UNDEFINED INGREDIENT: " .. tostring(self.name) end end
 }
-function RequireIngredientAvailable(name)
-	if _AllIngredients[name] then return CreateObject(_IngredientAvailable, { name = name }) end
-end
+function RequireIngredientAvailable(name) return CreateObject(_IngredientAvailable, { name = name }) end
 
 local _IngredientUnavailable = {
-	DebugDescription = function(self) return "Unavailable: " .. self.name end,
+	DebugDescription = function(self) return "Unavailable: " .. tostring(self.name) end,
 	Description = function(self) return "UNAVAILABLE: " .. GetString(self.name) end,
 	Evaluate = function(self, quest)
 		local ing = _AllIngredients[self.name]
-		return (not ing:IsAvailable())
+		return ing and (not ing:IsAvailable()) or false
 	end,
+	CrossCheck = function(self) if _AllIngredients[self.name] then return nil else return "UNDEFINED INGREDIENT: " .. tostring(self.name) end end
 }
-function RequireIngredientUnavailable(name)
-	if _AllIngredients[name] then return CreateObject(_IngredientUnavailable, { name = name }) end
-end
+function RequireIngredientUnavailable(name) return CreateObject(_IngredientUnavailable, { name = name }) end
 
 -------------------------------------------------------------------------------
 -- Character Moods & Haggling Manipulators
@@ -729,16 +727,20 @@ end
 -- ==========================================
 local _AwardHappiness = {
 	type = "AwardHappiness",
-	Description = function(self) return tostring(self.name) .. ": happiness +" .. tostring(self.amount) end,
+	Description = function(self) return tostring(self.name) .. ": happiness " .. string.format("%+d", self.amount or 0) end,
 	Apply = function(self)
+		local char = _AllCharacters[self.name]
+		if not char then
+			DebugOut("ERROR", string.format("AwardHappiness skipped undefined character '%s'.", tostring(self.name)))
+			return true, false
+		end
 		DebugOut("QUEST", string.format("Applying reward: Adjusting happiness modifier for %s by %+d.", self.name, self.amount))
-		_AllCharacters[self.name]:BumpHappiness(self.amount)
-		return true
+		char:BumpHappiness(self.amount)
+		return true, true
 	end,
+	CrossCheck = function(self) if _AllCharacters[self.name] then return nil else return "UNDEFINED CHARACTER: " .. tostring(self.name) end end
 }
-function AwardHappiness(name, amount)
-	if _AllCharacters[name] then return CreateObject(_AwardHappiness, { name = name, amount = amount }) end
-end
+function AwardHappiness(name, amount) return CreateObject(_AwardHappiness, { name = name, amount = tonumber(amount) or 0 }) end
 
 -- ==========================================
 -- REWARD: AwardHaggleSuccess
@@ -1273,7 +1275,7 @@ local _SetVariable = {
 }
 function SetVariable(name, value)
 	local lname = string.lower(name)
-	_AllVariableNames[name] = true
+	_AllVariableNames[lname] = true
 	return CreateObject(_SetVariable, { name = lname, value = value })
 end
 
@@ -1288,7 +1290,7 @@ local _IncVariable = {
 }
 function IncrementVariable(name)
 	local lname = string.lower(name)
-	_AllVariableNames[name] = true
+	_AllVariableNames[lname] = true
 	return CreateObject(_IncVariable, { name = lname })
 end
 
@@ -1314,7 +1316,7 @@ local _VarLessThan = {
 }
 function RequireVariableLessThan(name, value)
 	local lname = string.lower(name)
-	_AllVariableNames[name] = true
+	_AllVariableNames[lname] = true
 	return CreateObject(_VarLessThan, { name = lname, value = value })
 end
 
@@ -1327,7 +1329,7 @@ local _VarMoreThan = {
 }
 function RequireVariableMoreThan(name, value)
 	local lname = string.lower(name)
-	_AllVariableNames[name] = true
+	_AllVariableNames[lname] = true
 	return CreateObject(_VarMoreThan, { name = lname, value = value })
 end
 
@@ -1395,9 +1397,6 @@ local _AwardText = {
 	Description = function(self) return "Text: " .. self.key end,
 	Apply = function(self, iterator)
 		local lastChar = gActiveCharacter
-		-- AwardText objects are created while the quest table is still being evaluated,
-		-- before Quest:Create() knows which quest owns them. Resolve the owning quest
-		-- at execution time from ApplyGiftList instead of capturing the previous quest.
 		local quest = (iterator and iterator.quest) or self.quest
 		local text
 
@@ -1405,8 +1404,8 @@ local _AwardText = {
 			-- Supports context-sensitive {token} replacements mapped to this specific quest
 			text = quest:GetDynamicExtraTextString(self.key, self.char)
 		else
-			DebugOut("ERROR", "AwardText was executed without a valid quest object reference. Cannot perform dynamic replacements.")
-			text = GetString(self.key)
+			DebugOut("ERROR", "AwardText was executed without a valid quest object reference. Falling back to a direct string lookup.")
+			if HasString(self.key) then text = GetString(self.key) end
 		end
 
 		if not text or text == "" or text == "#####" then
@@ -1477,8 +1476,10 @@ local _AwardOfferQuest = {
 			q:Offer()
 			offered = true
 		end
+		if not q then DebugOut("ERROR", string.format("AwardOfferQuest references undefined quest '%s'.", tostring(self.name))) end
 		return true, offered
 	end,
+	CrossCheck = function(self) if _AllQuests[self.name] then return nil else return "UNDEFINED QUEST: " .. tostring(self.name) end end
 }
 function AwardOfferQuest(name) return CreateObject(_AwardOfferQuest, { name = name }) end
 
@@ -1490,8 +1491,10 @@ local _AwardDelayQuest = {
 			DebugOut("QUEST", string.format("Applying reward: Setting trigger delay for quest '%s' for %d weeks.", self.name, self.time))
 			Player.questsDeferred[self.name] = Player.time + self.time
 		end
+		if not q then DebugOut("ERROR", string.format("AwardDelayQuest references undefined quest '%s'.", tostring(self.name))) end
 		return true
 	end,
+	CrossCheck = function(self) if _AllQuests[self.name] then return nil else return "UNDEFINED QUEST: " .. tostring(self.name) end end
 }
 function AwardDelayQuest(name, time) return CreateObject(_AwardDelayQuest, { name = name, time = time or 1 }) end
 

@@ -30,7 +30,7 @@ local function GetRandomHaggleString(baseKey)
 	
 	-- We iterate through the raw XML data (using GetString, not GetReplacedString)
 	-- to see how many randomized variations of this specific line exist.
-	while GetString(baseKey .. (count + 1)) ~= "#####" do
+	while HasString(baseKey .. (count + 1)) do
 		count = count + 1
 	end
 	
@@ -39,7 +39,7 @@ local function GetRandomHaggleString(baseKey)
 	local rawText = GetString(baseKey .. randomIndex)
 	
 	-- Execute Named Placeholder Substitution (e.g., swapping {character_honorific})
-	if rawText and rawText ~= "#####" then
+	if rawText and HasString(baseKey .. randomIndex) then
 		local map = {}
 		
 		local charTokens = GetCharacterTokens(char, "character_")

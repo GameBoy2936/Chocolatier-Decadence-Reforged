@@ -27,12 +27,12 @@ local function GetRandomFeedbackString(feedbackData, ...)
 
 	-- Count how many numbered variations exist in the localization files (e.g., key_1, key_2)
 	local count = 1
-	while GetReplacedString(baseKey .. "_" .. (count + 1)) ~= "#####" do
+	while HasString(baseKey .. "_" .. (count + 1)) do
 		count = count + 1
 	end
 	
 	-- Fallback: If no _1 variation exists, assume it's a standalone key
-	if count == 1 and GetReplacedString(baseKey .. "_1") == "#####" then 
+	if count == 1 and not HasString(baseKey .. "_1") then 
 		return GetReplacedString(baseKey, unpack(arg or {})) 
 	end
 	
@@ -213,7 +213,7 @@ function EvaluatePlayerRecipe(productCategory, ingredients, slotCount)
 		if not Player.labFirstUse[ing.name] then
 			local first_use_key = "taster_feedback_firstuse_" .. ing.name
 			
-			if GetReplacedString(first_use_key .. "_1") ~= "#####" or GetReplacedString(first_use_key) ~= "#####" then
+			if HasString(first_use_key .. "_1") or HasString(first_use_key) then
 				table.insert(hints, first_use_key)
 				Player.labFirstUse[ing.name] = true
 				DebugOut("RECIPE", string.format("First-time use of '%s' detected. Injecting special lore feedback.", ing.name))

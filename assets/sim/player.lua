@@ -107,6 +107,7 @@ Player =
 	questsWaiting = {},				-- Set of { name = targetTime } for quests waiting for a particular time
 	questsComplete = {},			-- Set of { name = endTime } for completed OR REJECTED quests
 	questsDeferred = {},			-- Set of { name = availableTime } for deferred quests
+	questsAcceptedEver = {},		-- Set of { name = first/last accepted time } for migration/repair logic
 	questVariables = {},			-- Set of { name = value } variables for use by quest scripting
 	questDifficulty = {},			-- Set of { name = difficulty } for active quests
 	questHintCooldowns = {},		-- Set of { quest_name = endTime } for hint cooldowns
@@ -118,6 +119,7 @@ Player =
 	
 	shopOrderData = {},	 			-- Stores { chance=X } for each owned shop
 	pendingSpecialOrders = {},	 	-- A queue for generated orders waiting for delivery
+	pendingAftermaths = {},			-- Building-scoped special-order aftermath dialogue queues
 	orderEligibleChars = {},		-- Characters explicitly allowed to receive orders
 	orderBannedChars = {},		  	-- Characters temporarily banned from receiving orders
 	orderBannedBuildings = {},	  	-- Buildings temporarily banned from being order locations
@@ -305,6 +307,7 @@ function Player:Reset(restoreTable)
 	self.questsWaiting = t.questsWaiting or {}
 	self.questsComplete = t.questsComplete or {}
 	self.questsDeferred = t.questsDeferred or {}
+	self.questsAcceptedEver = t.questsAcceptedEver or {}
 	self.questDifficulty = t.questDifficulty or {}
 	self.questVariables = t.questVariables or { ugr_slots=0 }
 	self.questHintCooldowns = t.questHintCooldowns or {}
@@ -314,6 +317,7 @@ function Player:Reset(restoreTable)
 	self.lastOrderTime = t.lastOrderTime or 0
 	self.shopOrderData = t.shopOrderData or {}
 	self.pendingSpecialOrders = t.pendingSpecialOrders or {}
+	self.pendingAftermaths = t.pendingAftermaths or {}
 	self.orderEligibleChars = t.orderEligibleChars or {}
 	self.orderBannedChars = t.orderBannedChars or {}
 	self.orderBannedBuildings = t.orderBannedBuildings or {}
@@ -345,10 +349,14 @@ function Player:Reset(restoreTable)
 	self.difficulty = t.difficulty or 1
 	self.haggleDisable = t.haggleDisable or {}
 
-	-- Prepare ports available info for a new game if missing
+	-- Prepare/backfill port availability. Older saves may predate newly added ports;
+	-- a missing state must inherit the port's current default instead of implicitly
+	-- behaving as unlocked.
 	if not t.portsAvailable then
 		self.portsAvailable = {}
-		for name,port in pairs(_AllPorts) do
+	end
+	for name, port in pairs(_AllPorts) do
+		if self.portsAvailable[name] == nil then
 			if port.hidden then self.portsAvailable[name] = "hidden"
 			elseif port.locked then self.portsAvailable[name] = "locked"
 			else self.portsAvailable[name] = "new"
@@ -459,10 +467,10 @@ function Player:Reset(restoreTable)
 		end
 	end
 	
-	-- Repair saves that accepted rank2_40 before its Las Vegas unlock sequence
-	-- could finish. Safe to call on every load; it only changes impossible states.
+	-- Apply deterministic compatibility/repair passes after all core state is restored.
 	if restoreTable then
-		self:RepairRank2_40Progression()
+		self:ApplyV2IngredientMigration()
+		self:RepairKnownProgressionStates()
 	end
 
 	-- Synchronize holiday states immediately on load
@@ -472,6 +480,34 @@ function Player:Reset(restoreTable)
 	self:ReloadStrings()
 	
 	DebugOut("PLAYER", string.format("Player Reset complete. Name: %s, Money: %s, Rank: %d", tostring(self.name or "N/A"), Dollars(self.money), self.rank))
+end
+
+
+-- Repairs saves produced by old beta builds where rank2_40 could be marked active
+-- before AwardText crashed, preventing the mandatory Las Vegas/strawberry unlocks.
+function Player:RepairKnownProgressionStates()
+	local touched = false
+	local rank240Seen = (self.questsAcceptedEver and self.questsAcceptedEver.rank2_40) or self.questsActive.rank2_40 or self.questsComplete.rank2_40
+
+	if rank240Seen then
+		local vegas = _AllPorts["lasvegas"]
+		local vegasState = self.portsAvailable and self.portsAvailable["lasvegas"]
+		if vegas and (vegasState == nil or vegasState == "locked" or vegasState == "hidden") then
+			self.portsAvailable["lasvegas"] = "new"
+			touched = true
+			DebugOut("MIGRATION", "rank2_40 repair: restored Las Vegas unlock for an already-accepted quest.")
+		end
+
+		local strawberry = _AllIngredients["strawberry"]
+		if strawberry and not strawberry:IsAvailable() then
+			strawberry:Unlock()
+			self.catalogue.unlockedIngredients["strawberry"] = true
+			touched = true
+			DebugOut("MIGRATION", "rank2_40 repair: restored strawberry availability for an already-accepted quest.")
+		end
+	end
+
+	if touched then DebugOut("MIGRATION", "Known progression-state repair completed.") end
 end
 
 ------------------------------------------------------------------------------
@@ -516,57 +552,6 @@ function Player:LogScore()
 end
 
 -------------------------------------------------------------------------------
--- Progression Repair: rank2_40 / Las Vegas
--------------------------------------------------------------------------------
--- Older or mixed-version installs could crash while applying rank2_40's first
--- onaccept reward (AwardText). Quest:Accept() records the quest as active before
--- applying those rewards, so affected saves can permanently contain an accepted
--- rank2_40 without Las Vegas or strawberries ever having been unlocked.
---
--- Repair that impossible state when loading a save. This is intentionally
--- idempotent and does not grant anything unless rank2_40 was already accepted
--- (active) or completed.
--------------------------------------------------------------------------------
-
-function Player:RepairRank2_40Progression()
-	self.questsActive = self.questsActive or {}
-	self.questsComplete = self.questsComplete or {}
-	self.portsAvailable = self.portsAvailable or {}
-	self.ingredientsAvailable = self.ingredientsAvailable or {}
-	self.catalogue = self.catalogue or {}
-	self.catalogue.unlockedIngredients = self.catalogue.unlockedIngredients or {}
-
-	local wasAccepted =
-		self.questsActive["rank2_40"] ~= nil or
-		self.questsComplete["rank2_40"] ~= nil
-
-	if not wasAccepted then return end
-
-	local repaired = false
-	local vegasState = self.portsAvailable["lasvegas"]
-	if vegasState == nil or vegasState == "locked" or vegasState == "hidden" then
-		self.portsAvailable["lasvegas"] = "new"
-		repaired = true
-		DebugOut("MIGRATION", "rank2_40 repair: restored Las Vegas unlock for an already-accepted quest.")
-	end
-
-	if _AllIngredients["strawberry"] and self.ingredientsAvailable["strawberry"] ~= true then
-		self.ingredientsAvailable["strawberry"] = true
-		repaired = true
-		DebugOut("MIGRATION", "rank2_40 repair: restored strawberry market availability for an already-accepted quest.")
-	end
-
-	if not self.catalogue.unlockedIngredients["strawberry"] then
-		self.catalogue.unlockedIngredients["strawberry"] = true
-		repaired = true
-	end
-
-	if repaired then
-		DebugOut("MIGRATION", "rank2_40 progression repair completed successfully.")
-	end
-end
-
--------------------------------------------------------------------------------
 -- Reforged v2 Ingredient Migration
 -------------------------------------------------------------------------------
 -- This table retroactively unlocks v2 ingredients for players migrating from
@@ -585,32 +570,32 @@ end
 local migrationUnlocks =
 {
 	-- Rank 2 / early-mid progression
-	{ quest = "rank2_07", ingredient = "apricot", stage = "completed" },
-	{ quest = "tokyo_02", ingredient = "apricot", stage = "completed" },
-	{ quest = "rank2_38", ingredient = "chamomile", stage = "completed" },
-	{ quest = "ugr_03", ingredient = "cranberry", stage = "accepted" },
-	{ quest = "hav_shop_01", ingredient = "guava", stage = "accepted" },
-	{ quest = "rank2_coffee19", ingredient = "ice_cream", stage = "completed" },
-	{ quest = "open_bali", ingredient = "jasmine", stage = "accepted" },
-	{ quest = "rank2_32", ingredient = "lemongrass", stage = "completed" },
-	{ quest = "rank2_sanfrancisco", ingredient = "marshmallow", stage = "accepted" },
-	{ quest = "rank2_coffee03", ingredient = "oat", stage = "completed" },
-	{ quest = "rank2_tokyo", ingredient = "pear", stage = "accepted" },
-	{ quest = "rank2_30", ingredient = "plum", stage = "accepted" },
-	{ quest = "rank2_39", ingredient = "rosemary", stage = "completed" },
+	{ quest = "rank2_07", ingredient = "apricot", trigger = "completed" },
+	{ quest = "tokyo_02", ingredient = "apricot", trigger = "completed" },
+	{ quest = "rank2_38", ingredient = "chamomile", trigger = "completed" },
+	{ quest = "ugr_03", ingredient = "cranberry", trigger = "accepted" },
+	{ quest = "hav_shop_01", ingredient = "guava", trigger = "accepted" },
+	{ quest = "rank2_coffee19", ingredient = "ice_cream", trigger = "completed" },
+	{ quest = "open_bali", ingredient = "jasmine", trigger = "accepted" },
+	{ quest = "rank2_32", ingredient = "lemongrass", trigger = "completed" },
+	{ quest = "rank2_sanfrancisco", ingredient = "marshmallow", trigger = "accepted" },
+	{ quest = "rank2_coffee03", ingredient = "oat", trigger = "completed" },
+	{ quest = "rank2_tokyo", ingredient = "pear", trigger = "accepted" },
+	{ quest = "rank2_30", ingredient = "plum", trigger = "accepted" },
+	{ quest = "rank2_39", ingredient = "rosemary", trigger = "completed" },
 
 	-- Rank 3 progression
-	{ quest = "off_to_whitney", ingredient = "earl_grey", stage = "accepted" },
-	{ quest = "rank3_03", ingredient = "peach", stage = "accepted" },
-	{ quest = "rank3_09", ingredient = "rhubarb", stage = "completed" },
-	{ quest = "rank3_06", ingredient = "rooibos", stage = "accepted" },
-	{ quest = "rank3_02", ingredient = "tamarind", stage = "completed" },
-	{ quest = "meta_joseph", ingredient = "wafer", stage = "accepted" },
-	{ quest = "rank3_05", ingredient = "jasmine", stage = "completed" },
+	{ quest = "off_to_whitney", ingredient = "earl_grey", trigger = "accepted" },
+	{ quest = "rank3_03", ingredient = "peach", trigger = "accepted" },
+	{ quest = "rank3_09", ingredient = "rhubarb", trigger = "completed" },
+	{ quest = "rank3_06", ingredient = "rooibos", trigger = "accepted" },
+	{ quest = "rank3_02", ingredient = "tamarind", trigger = "completed" },
+	{ quest = "meta_joseph", ingredient = "wafer", trigger = "accepted" },
+	{ quest = "rank3_05", ingredient = "jasmine", trigger = "completed" },
 
 	-- Rank 4 / plot progression
-	{ quest = "rank4_sean_return", ingredient = "dragonfruit", stage = "completed" },
-	{ quest = "plot_points_07", ingredient = "yuzu", stage = "accepted" },
+	{ quest = "rank4_sean_return", ingredient = "dragonfruit", trigger = "completed" },
+	{ quest = "plot_points_07", ingredient = "yuzu", trigger = "accepted" },
 }
 
 function Player:ApplyV2IngredientMigration()
@@ -709,7 +694,7 @@ function Player:BuildSaveGameString()
 	table.insert(saveStringTable, "deliveries={")
 	for name,_ in pairs(self.questsActive) do
 		local q = _AllQuests[name]
-		if q.GetSaveTable then
+		if q and q.GetSaveTable then
 			local t = q:GetSaveTable()
 			table.insert(saveStringTable, "{")
 			AppendTableToString(t, saveStringTable)
