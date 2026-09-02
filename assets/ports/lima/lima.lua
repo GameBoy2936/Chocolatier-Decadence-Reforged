@@ -47,7 +47,7 @@ lim_mountain.layer = 870
 --
 EmptyBuilding("lim_redbuilding", lima)
 lim_redbuilding.x = 614
-lim_redbuilding.y = 207
+lim_redbuilding.y = 195
 lim_redbuilding.layer = 880
 --
 

@@ -1257,6 +1257,8 @@ function Player:SetPrimaryQuest(questName)
 		
 		UpdateLedger("quest")
 		FadeIn{"questText"}
+		
+		-- If dev mode is enabled, update the dev bar at top of screen
 		if devUpdateQuest then
 			devUpdateQuest()
 		end

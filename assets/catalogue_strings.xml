@@ -2032,7 +2032,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_san_shopkeep_text</Data></Cell>
-	 <Cell><Data ss:Type="String"></Data></Cell>
+	 <Cell><Data ss:Type="String">The McMurtry family has been running Union Square Chocolates since Helen's grandmother opened the doors back in the Victorian days. Helen practically grew up behind the counter, learning early on how to tell good cacao from bad just by the snap of the bar. She remembers the 1920s when Alex Tangye brought new life to Baumeister Confections, and she steered the shop through the long years of wartime sugar rationing by keeping her display cases filled with whatever local honey and dried fruit she could trade for.&lt;br&gt;&lt;br&gt;Helen is warm with regular customers but fiercely protective of her shop's reputation. While she doesn't get flustered easily, Helen has zero patience for bad logistics. If a delivery truck gets stuck in the damp coastal fog and turns her cardboard shipping boxes soft, the driver is going to get a earful before they even gets their clipboard signed.&lt;br&gt;&lt;br&gt;When the afternoon fog rolls in off the bay, you would often find Helen brewing a pot of black tea, turning on the radio, and sitting down with her collection of vintage San Francisco street photographs, happy to talk for hours with anyone who shares her love for the city's history.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_tan_hotelkeep_text</Data></Cell>
@@ -2096,7 +2096,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_ulu_hutkeep_text</Data></Cell>
-	 <Cell><Data ss:Type="String"></Data></Cell>
+	 <Cell><Data ss:Type="String">Kowaki operates out of a shade-hut set back from the red dust tracks near Uluru, gathering and trading wild desert limes harvested across Aṉangu Country. After years of watching pastoralists and mining surveyors cross the Territory taking whatever they pleased, Kowaki learned to measure visitors carefully before opening a ledger or hand-delivering a harvest.&lt;br&gt;&lt;br&gt;Her supply arrangement with Baumeister Confections came together after Alex Fletcher visited the Red Centre looking for leads on her missing husband. Kowaki agreed to trade once she saw that Alex was willing to sit down, speak plainly, and pay proper rates for wild-harvested fruit rather than treating the bush as free plunder. Kowaki speaks Pitjantjatjara and English, handles her trade with quiet efficiency, and expects anyone using her limes to treat the harvest with the same care her community shows the land.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_ulu_rockkeep_text</Data></Cell>
@@ -2112,7 +2112,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_wel_shopkeep_text</Data></Cell>
-	 <Cell><Data ss:Type="String"></Data></Cell>
+	 <Cell><Data ss:Type="String">Running a quiet, predictable shop was never going to work for Karolyne Radke. The middle child of German immigrants—a geologist who spent his life mapping rock strata across New Zealand's volcanic zones and a sharp-eyed botanist's assistant who pressed fern specimens at the kitchen table—Karolyne grew up in a house overflowing with soil samples, plant presses, and constant movement. In 1946, people simply describe Karolyne as a whirlwind who can't sit still, but anyone watching her run her shop sees a mind that moves faster than the harbour ferries.&lt;br&gt;&lt;br&gt;Routine bores her to tears. If she tries to tally plain inventory for too long, her foot starts tapping, her thoughts jump to five different topics at once, and she inevitably ends up completely tearing down and rebuilding the window display at two in the morning just to keep her hands busy. But when a bizarre new confection arrives—spiced dark chocolate, tart wild lime gels, or experimental exotics—she locks onto it with terrifying focus. She views ingredients much like her parents did: testing textures like mineral samples and breaking down flavors like plant specimens.&lt;br&gt;&lt;br&gt;Down at Britannia Fine Goods, Karolyne talks a mile a minute, leaping from harbour shipping schedules to local gossip to her latest complaint about dull milk chocolate before a customer has even placed their money on the counter. She pesters Whitney Baumeister constantly for stranger recipes, keeping track of her shop's trade in a battered notebook filled with scribbled calculations, plant sketches, and half-finished ideas.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">catalogue_character_zur_bankkeep_text</Data></Cell>

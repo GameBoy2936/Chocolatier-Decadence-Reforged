@@ -38,8 +38,8 @@ local noLength = gDialogTable.no_length or "medium"
 local function SetDynamicDialogueText(text)
 	local function Ceil(x) return Floor(x + 0.99999) end
 	local font_sizes_to_check = { 16, 15, 14, 13, 12 }
-	local chars_per_line_map = { [16] = 46,[15] = 49, [14] = 52, [13] = 56, [12] = 60 }
-	local line_thresholds = { [16] = 10, [15] = 11, [14] = 12,[13] = 13, [12] = 999 }
+	local chars_per_line_map = { [16] = 46, [15] = 49, [14] = 52, [13] = 56, [12] = 60 }
+	local line_thresholds = {[16] = 10, [15] = 11, [14] = 12, [13] = 13, [12] = 999 }
 	
 	local segments = {}
 	local current_pos = 1
@@ -53,7 +53,7 @@ local function SetDynamicDialogueText(text)
 		table.insert(segments, string.sub(text, current_pos))
 	end
 	if table.getn(segments) == 0 then segments = { text or "" } end
-	
+
 	local final_font_size = 12
 	for _, current_font_size in ipairs(font_sizes_to_check) do
 		local chars_per_line = chars_per_line_map[current_font_size]
