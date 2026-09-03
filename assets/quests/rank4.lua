@@ -71,7 +71,7 @@ CreateQuest
 	reject = "none",
 	require = {RequireQuestComplete("rank4_sean_ransom_01"), RequireQuestIncomplete("rank4_sean_ransom_02"), RequireMaxMoney(999999), RequireQuestNotActive("rank4_sean_ransom_02"),},
 	require_medium = {RequireQuestComplete("rank4_sean_ransom_01"), RequireQuestIncomplete("rank4_sean_ransom_02"), RequireMaxMoney(9999999), RequireQuestNotActive("rank4_sean_ransom_02"),},
-	require_hard = {RequireQuestComplete("rank4_sean_ransom_01"), RequireQuestIncomplete("rank4_sean_ransom_02"), RequireMaxMoney(49999999), RequireQuestNotActive("rank4_sean_ransom_02"),},
+	require_hard = {RequireQuestComplete("rank4_sean_ransom_01"), RequireQuestIncomplete("rank4_sean_ransom_02"), RequireMaxMoney(24999999), RequireQuestNotActive("rank4_sean_ransom_02"),},
 	autoComplete = true,
 	repeatable = 0,
 	visible = false,

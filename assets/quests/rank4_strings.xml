@@ -239,7 +239,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Being back in %zurich% is... a heck of an adjustment, &lt;player&gt;. Sometimes the sound of the streetcars outside my window sounds like the engines of my old B-24, and for a second, I'm back in the cockpit. But then I smell the chocolate from the kitchen, and I remember the humidity of the Belizean highlands. Let me share you a story...</Data></Cell>
+	 <Cell><Data ss:Type="String">Being back in %zurich% is... a heck of an adjustment, &lt;player&gt;. Sometimes the sound of the streetcars outside my window sounds like the engines of my old B-24, and for a second, I'm back in the cockpit. But then I smell the chocolate from the kitchen, and I remember the humidity of the Belizean highlands. Let me share a story with you...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank5_story_main_sean_1_extra01_1</Data></Cell>

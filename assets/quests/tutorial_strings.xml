@@ -171,11 +171,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_bankkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now that you have manufactured some goods, it is time to liquidate it into cash, yes? Run those %b01% over to Analiese at %zur_shop% - you will find her shop on the opposite side of the canal, over the bridge.</Data></Cell>
+	 <Cell><Data ss:Type="String">Now that you have manufactured some goods, it is time to liquidate them into cash, yes? Run those %b01% over to Analiese at %zur_shop% - you will find her shop on the opposite side of the canal, over the bridge.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_marketkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Oh, your %b01% smell absolutely heavenly! You should take those straight to Analiese at %zur_shop%. Shes just across the canal, and I know she pays very fairly for quality work.</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh, your %b01% smell absolutely heavenly! You should take those straight to Analiese at %zur_shop%. She's just across the canal, and I know she pays very fairly for quality work.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_schoolkeep_1</Data></Cell>
@@ -679,7 +679,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_zur_towerkeep_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're working with Endrit over at the factory, aren't you? He tries to act all business-like, but don't let him fool you. He was practically bouncing off the walls with excitement when Alex told him they were firing up the machines again.&lt;br&gt;&lt;br&gt;We grew up in the same neighborhood, you know. He's always been obsessed with how things work his whole life since his family seeked refuge from Albania...</Data></Cell>
+	 <Cell><Data ss:Type="String">You're working with Endrit over at the factory, aren't you? He tries to act all business-like, but don't let him fool you. He was practically bouncing off the walls with excitement when Alex told him they were firing up the machines again.&lt;br&gt;&lt;br&gt;We grew up in the same neighborhood, you know. He's been obsessed with how things work for as long as I've known him, ever since his family sought refuge from Albania...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_alex_01_offer_1</Data></Cell>

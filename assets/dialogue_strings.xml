@@ -4024,7 +4024,7 @@
 	<Row>
 	 <Cell><Data ss:Type="String">shop_haggle_good_pushedluck_soft_3</Data></Cell>
 	 <Cell><Data ss:Type="String">We're getting close to a golden number. Can you offer just a slight increase?</Data></Cell>
-	</Row> 
+	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">shop_haggle_good_pushedluck_soft_4</Data></Cell>
 	 <Cell><Data ss:Type="String">I'll gladly hand these over right now if you can just sweeten the deal a tiny bit more...</Data></Cell>
@@ -5729,7 +5729,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_aftermath_complete_evilscheme_stall_dou_shopkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Do you comprehend the sheer embarrassment this causes us? They used a delivery order from &lt;i&gt;our&lt;i&gt; shop to orchestrate an infiltration of your factories! If the European markets hear that my co-owner is so easily manipulated by corporate saboteurs, we will be the laughing stock of the industry.</Data></Cell>
+	 <Cell><Data ss:Type="String">Do you comprehend the sheer embarrassment this causes us? They used a delivery order from &lt;i&gt;our&lt;/i&gt; shop to orchestrate an infiltration of your factories! If the European markets hear that my co-owner is so easily manipulated by corporate saboteurs, we will be the laughing stock of the industry.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_aftermath_complete_evilscheme_stall_hav_shopkeep_1</Data></Cell>
@@ -5805,7 +5805,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_aftermath_complete_evilscheme_theft_wel_shopkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">{ender_char} raided your cargo hold? While you were making the delivery &lt;i&gt;I&lt;i&gt; set up? Oh, that is so low. Stealing finished products is one thing, but stealing raw ingredients? That's just lazy. I am officially furious on your behalf, &lt;player&gt;.</Data></Cell>
+	 <Cell><Data ss:Type="String">{ender_char} raided your cargo hold? While you were making the delivery &lt;i&gt;I&lt;/i&gt; set up? Oh, that is so low. Stealing finished products is one thing, but stealing raw ingredients? That's just lazy. I am officially furious on your behalf, &lt;player&gt;.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">kitchen_new_ingredients_1</Data></Cell>
@@ -7413,7 +7413,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ev_ing_priceup_dou_plantationkeep_dou_cacao_douala_2</Data></Cell>
-	 <Cell><Data ss:Type="String">Unfortunately I'm the bearer of some bad news, &lt;player&gt;: pestillence has been devouring our %dou_cacao%, and I don't have much to sell for a while. There's not much I can do in terms of pricing today, so I want to just say sorry for that.</Data></Cell>
+	 <Cell><Data ss:Type="String">Unfortunately I'm the bearer of some bad news, &lt;player&gt;: pestilence has been devouring our %dou_cacao%, and I don't have much to sell for a while. There's not much I can do in terms of pricing today, so I want to just say sorry for that.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ev_ing_priceup_evil_bian_1</Data></Cell>
@@ -8657,7 +8657,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ev_season_halloween_trav_07_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Halloween? Boy, everything's bigger in Texas, and that includes the sweet tooths! I'm hauling five crates of your best truffles back to Houston just for my nieces and nephews.</Data></Cell>
+	 <Cell><Data ss:Type="String">Halloween? Boy, everything's bigger in Texas, and that includes our sweet tooth! I'm hauling five crates of your best truffles back to Houston just for my nieces and nephews.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ev_season_halloween_wel_shopkeep_1</Data></Cell>

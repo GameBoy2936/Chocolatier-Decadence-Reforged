@@ -79,7 +79,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Alex has supported you from the get go, and you have already earned the trust of Evangeline, Deiter and Felix. You only have myself and Whitney left to convince. I'll let Whitney explain what she would like to see you accomplish - as for me, I have been working with Brooke, the boss of our factory here in Toronto, on some enhancements for Felix's coffee machines. We are now set up and ready to launch a line of Blended Coffees. </Data></Cell>
+	 <Cell><Data ss:Type="String">Alex has supported you from the get-go, and you have already earned the trust of Evangeline, Deiter and Felix. You only have myself and Whitney left to convince. I'll let Whitney explain what she would like to see you accomplish - as for me, I have been working with Brooke, the boss of our factory here in Toronto, on some enhancements for Felix's coffee machines. We are now set up and ready to launch a line of Blended Coffees.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">meta_joseph_extra02_1</Data></Cell>
@@ -171,7 +171,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I happen to know a lady who is holding a pair of exotics recipes. Frankly, my aged brain has gone a bit fuzzy on the specifics, though. I do know her name is Keylla and was from a Spanish-speaking country, I just don't know where exactly. But to influence her to share the recipes, I suggest you should bring her [D|5 dozen|90|150] cases of %t06%. Then, she'll set you up.</Data></Cell>
+	 <Cell><Data ss:Type="String">I happen to know a lady who is holding a pair of Exotics recipes. Frankly, my aged brain has gone a bit fuzzy on the specifics. I know her name is Keylla and that she is from a Spanish-speaking country; I simply cannot remember which one. If you want to persuade her to share the recipes, I suggest bringing her [D|60|90|150] cases of %t06%. Then, she'll set you up.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_summary</Data></Cell>
@@ -199,7 +199,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e03% to Keylla at %lim_plaza% in %lima%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e03% to Keylla at %lim_plaza% in %lima%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_complete_1</Data></Cell>
@@ -231,7 +231,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e02% to %trav_05% at %lim_plaza% in %lima%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e02% to %trav_05% at %lim_plaza% in %lima%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_complete_1</Data></Cell>
@@ -259,7 +259,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|20|50|100] cases each of %m01%, %m02% and %m03% to %main_feli% in %capetown%. </Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [D|20|50|100] cases each of %m01%, %m02% and %m03% to %main_feli% in %capetown%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_complete_1</Data></Cell>
@@ -279,7 +279,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, I have been trying to get a hold of some of your special creations. I can offer a healthy sum, paid in advance - as well as a couple of recipes - one exotic, one coffee blend - in exchange for some of your concoctions. Shall we make a deal? </Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, I have been trying to get a hold of some of your special creations. I can offer a healthy sum, paid in advance - as well as a couple of recipes - one exotic, one coffee blend - in exchange for some of your concoctions. Shall we make a deal?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_extra01_1</Data></Cell>
@@ -451,7 +451,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I was sincerely hoping you'd show up on our first meeting with [D|50|85|130] cases of %m08% and %c09% for me. I don't like giving reminders, but next time you step inside my shop, I would appreciate being given said products...</Data></Cell>
+	 <Cell><Data ss:Type="String">I was sincerely hoping you'd show up on our first meeting with [D|50|85|130] cases of %m08% and %c12% for me. I don't like giving reminders, but next time you step inside my shop, I would appreciate being given said products...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_hint_1</Data></Cell>

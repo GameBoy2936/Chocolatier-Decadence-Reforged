@@ -415,7 +415,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You seem to be off to a great start as %rank_2% of Baumiester Confections, &lt;player&gt;. I wish you nothing but success as you continue to grow the company.</Data></Cell>
+	 <Cell><Data ss:Type="String">You seem to be off to a great start as %rank_2% of Baumeister Confections, &lt;player&gt;. I wish you nothing but success as you continue to grow the company.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank2b_tease_03_offer_1</Data></Cell>
@@ -531,7 +531,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">itsover_evil_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">What can I say, &lt;player&gt;? You have gottn the best of us once again. It's so rare to see someone gifted at both the creative and the business side of things. Hats off to you, indeed.</Data></Cell>
+	 <Cell><Data ss:Type="String">What can I say, &lt;player&gt;? You have gotten the best of us once again. It's so rare to see someone gifted at both the creative and the business side of things. Hats off to you, indeed.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">plot_points_00_offer_1</Data></Cell>

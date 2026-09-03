@@ -638,10 +638,6 @@
 	 <Cell><Data ss:Type="String">Your creation '%1%' is a duplicate of a saved creation.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">configure</Data></Cell>
-	 <Cell><Data ss:Type="String">Change Recipe</Data></Cell>
-	</Row>
-	<Row>
 	 <Cell><Data ss:Type="String">finished_quests</Data></Cell>
 	 <Cell><Data ss:Type="String">Include Completed Quests</Data></Cell>
 	</Row>
@@ -3383,7 +3379,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bog_church</Data></Cell>
-	 <Cell><Data ss:Type="String">La Catederal</Data></Cell>
+	 <Cell><Data ss:Type="String">La Catedral</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bog_customs</Data></Cell>
@@ -3419,7 +3415,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">cap_shop</Data></Cell>
-	 <Cell><Data ss:Type="String">Adderly Street Chocolate Shop</Data></Cell>
+	 <Cell><Data ss:Type="String">Adderley Street Chocolate Shop</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">cap_factory</Data></Cell>
@@ -3659,7 +3655,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tan_shop</Data></Cell>
-	 <Cell><Data ss:Type="String">Morroco Fine Coffees</Data></Cell>
+	 <Cell><Data ss:Type="String">Morocco Fine Coffees</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tan_hotel</Data></Cell>
@@ -4227,10 +4223,6 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tor_xxxxkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Daniel Poisson</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">tor_xxxxkeep</Data></Cell>
 	 <Cell><Data ss:Type="String">Sheridan Munro</Data></Cell>
 	</Row>
 	<Row>
@@ -4252,14 +4244,6 @@
 	<Row>
 	 <Cell><Data ss:Type="String">wel_shopkeep</Data></Cell>
 	 <Cell><Data ss:Type="String">Karolyne Radke</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">wel_xxxxkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Duncan Borthwick</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">wel_xxxxkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Jack Abbott</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">wel_xxxxkeep</Data></Cell>
@@ -4668,10 +4652,6 @@
 	<Row>
 	 <Cell><Data ss:Type="String">noimgood</Data></Cell>
 	 <Cell><Data ss:Type="String">No, I'm Good</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">nonever</Data></Cell>
-	 <Cell><Data ss:Type="String">No, Never</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">nosorry</Data></Cell>
@@ -5163,7 +5143,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle02</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Over 100 years ago, Hieronymus Baumeister opened a small shop in&#10;Sydney Australia, to peddle his father Marten's chocolate inventions.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Over 100 years ago, Hieronymus Baumeister opened a small shop in&#10;Sydney, Australia, to peddle his father Marten's chocolate inventions.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle03</Data></Cell>
@@ -5175,11 +5155,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle05</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Sisters Evangeline and Rowena managed to reconcile&#10;and return the firm to it's former glory.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Sisters Evangeline and Rowena managed to reconcile&#10;and return the firm to its former glory.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle06</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;But by the roaring 20's the chocolate&#10;empire had grown complacent.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;But by the roaring '20s, the chocolate&#10;empire had grown complacent.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle07</Data></Cell>
@@ -5187,7 +5167,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle08</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;But now, the one-two punch of the Depression and the Second&#10;World War, has left the company splintered once again.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;But now, the one-two punch of the Depression and the Second&#10;World War has left the company splintered once again.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle09</Data></Cell>
@@ -5195,11 +5175,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle10</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;It's great chocolate factories,&#10;converted or abandoned, sit idle.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Its great chocolate factories,&#10;converted or abandoned, sit idle.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle11</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;And Alex's husband Sean, disappeared&#10;during a dangerous wartime mission.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;And Alex's husband Sean disappeared&#10;during a dangerous wartime mission.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle12</Data></Cell>
