@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (UI Helpers & String Engine)
+	Chocolatier: Decadence by Design Reforged (UI Helpers & String Engine)
 	Copyright (c) 2006-2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -25,54 +25,54 @@ end
 -- 2. Time & Date Formatting
 -------------------------------------------------------------------------------
 
--- [TODO, MICHAEL @ 2026 MODDING] Override the C++ Dollars function. This will need to be able to grab the localized money based strings. The ledger must be able to update the money at any time, decked out with a money rolling animation, even when the ledger is not the active UI in the player's control, which is something that the original C++ had handled. For now, the original Dollars made in C++ in the encrypted/compiled .exe is in charge.
+-- Currency formatting remains delegated to the original engine Dollars() implementation.
 
 -- Overrides the C++ Date function to support dynamic multi-language localization.
 -- Translates the raw simulation "Week" integer into a formatted string (e.g., "June 27, 1946").
 function Date(weeks)
 	-- Game canonical start date: June 27, 1946
 	local start_year = 1946
-	
+
 	-- Calculate the day offset for June 27th in a standard non-leap year.
 	-- Jan(31) + Feb(28) + Mar(31) + Apr(30) + May(31) = 151 days. (+27 = 178)
 	local start_day_offset = 178
-	
+
 	-- Calculate total absolute days elapsed (1 week = 7 days)
 	local days_elapsed = (weeks - 1) * 7
 	local days_remaining = start_day_offset + days_elapsed
 	local current_year = start_year
-	
+
 	local function IsLeapYear(y)
 		return (Mod(y, 4) == 0) and ((Mod(y, 100) ~= 0) or (Mod(y, 400) == 0))
 	end
-	
+
 	-- 1. Determine the exact Year by subtracting days
 	while true do
 		local days_in_this_year = 365
 		if IsLeapYear(current_year) then
 			days_in_this_year = 366
 		end
-		
+
 		if days_remaining <= days_in_this_year then
 			break
 		end
-		
+
 		days_remaining = days_remaining - days_in_this_year
 		current_year = current_year + 1
 	end
-	
+
 	-- 2. Determine the exact Month and Day
 	local months = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }
 	local month_index = 1
-	
+
 	for i, standard_days in ipairs(months) do
 		local days_in_month = standard_days
-		
+
 		-- Adjust February length for leap years
 		if i == 2 and IsLeapYear(current_year) then
 			days_in_month = 29
 		end
-		
+
 		if days_remaining <= days_in_month then
 			month_index = i
 			break
@@ -80,16 +80,16 @@ function Date(weeks)
 			days_remaining = days_remaining - days_in_month
 		end
 	end
-	
+
 	local day = days_remaining
-	
+
 	-- 3. Localization and Formatting
-	local month_key = "month_" .. month_index 
+	local month_key = "month_" .. month_index
 	local month_str = HasString(month_key) and GetString(month_key) or tostring(month_index)
 
 	-- Assemble the final localized date string using positional arguments
 	-- EN: "%1% %2%, %3%"  -> "January 1, 1946"
-	-- JA: "%3%年%1%%2%日" -> "1946年1月1日" 
+	-- JA: "%3%年%1%%2%日" -> "1946年1月1日"
 	return GetText("date_format", month_str, tostring(day), tostring(current_year))
 end
 
@@ -101,7 +101,7 @@ function UpdateActiveQuestGoalsComplete()
 	if SetLedgerQuestIndicator then
 		local mode = "off"
 		local q = Player:GetPrimaryQuest()
-		
+
 		if q then
 			local allgood, allhints = q:AreGoalsMet()
 			if allgood then
@@ -129,18 +129,18 @@ end
 -- Master Ledger Refresh Hook
 function UpdateLedger(type)
 	local data = ""
-	
-	if type == "factory" or type == "newplayer" then 
-		UpdateLedgerFactoryCovers() 
+
+	if type == "factory" or type == "newplayer" then
+		UpdateLedgerFactoryCovers()
 	end
-	
+
 	if type == "quest" or type == "newplayer" then
 		local label = Player.questPrimary
 		if label then
 			local q = _AllQuests[label]
 			data = q:GetSummary()
-			
-			if (data == "#####") or (not data) then 
+
+			if (data == "#####") or (not data) then
 				data = ""
 			else
 				-- Dynamically shrink the text if the quest summary is excessively long
@@ -152,7 +152,7 @@ function UpdateLedger(type)
 			end
 		end
 	end
-	
+
 	if RealUpdateLedger then RealUpdateLedger(type, data) end
 	UpdateActiveQuestGoalsComplete()
 end
@@ -243,9 +243,62 @@ local function GetStringDifficultyContext()
 	return Player.difficulty or 1
 end
 
--- Evaluates difficulty syntax tags inside strings: [D|easy|medium|hard]
+-- Converts a runtime quantity into a number without trusting callers to have
+-- already done so. Some original-engine call paths can hand Lua nil/string
+-- values while a UI/quest is still being assembled, and localization must never
+-- be allowed to take the entire string-resolution path down with it.
+local function NormalizeQuantityCount(count)
+	if type(count) == "number" then return count end
+	if type(count) == "string" then
+		local cleaned = string.gsub(count, ",", "")
+		return tonumber(cleaned)
+	end
+	return nil
+end
+
+-- Evaluates difficulty syntax tags inside strings.
+
+-- [D|easy|medium|hard] selects ordinary difficulty-dependent text.
+-- [Q|unit_key|easy|medium|hard] selects a difficulty-dependent quantity and
+-- formats it through the localized numerical-unit system.  The selected branch
+-- may contain surrounding words (for example "your first 75"); the final
+-- integer inside the branch drives plural selection while the branch itself is
+-- preserved for display.
 local function ProcessDifficulty(text)
 	local difficulty = GetStringDifficultyContext()
+
+	text = string.gsub(text, "%[Q%|([^|%]]+)|(.-)|(.-)|(.-)%]", function(unitKey, easy, medium, hard)
+		local display = easy
+		if difficulty == 3 then display = hard
+		elseif difficulty == 2 then display = medium end
+
+		-- Pull the last integer out of the selected display branch.  This lets
+		-- strings such as "your first 75" still choose the correct noun form.
+		local countText = nil
+		for digits in string.gfind(display, "([%d,]+)") do countText = digits end
+		if countText then countText = string.gsub(countText, ",", "") end
+		local count = NormalizeQuantityCount(countText)
+		if not count then
+			DebugOut("WARNING", "Could not read a numeric quantity from [Q|" .. tostring(unitKey) .. "|...] branch '" .. tostring(display) .. "'.")
+			return display
+		end
+
+		-- Keep quantity formatting failures local to this token. Quest/dialogue
+		-- resolution is intentionally tolerant: one bad unit must not erase the
+		-- entire offer/summary and cause background-task fallbacks.
+		local ok, formatted = pcall(function()
+			return FormatLocalizedQuantity(unitKey, count, display)
+		end)
+		if ok and formatted and formatted ~= "" then return formatted end
+
+		DebugOut("WARNING", "Quantity token formatting failed for unit '" .. tostring(unitKey) .. "' and count " .. tostring(count) .. "; using a raw localized-unit fallback.")
+		local fallback = GetBaseString(unitKey .. "_2") or GetBaseString(unitKey .. "_other") or GetBaseString(unitKey .. "_1")
+		if fallback and fallback ~= "" then
+			return tostring(display) .. " " .. tostring(fallback)
+		end
+		return tostring(display)
+	end)
+
 	return string.gsub(text, "%[D%|(.-)|(.-)|(.-)%]", function(easy, medium, hard)
 		if difficulty == 3 then return hard
 		elseif difficulty == 2 then return medium
@@ -257,7 +310,7 @@ end
 -- Evaluates positional argument tags inside strings: %1%, -->1<--
 local function ProcessParameters(text, params)
 	if not params or params.n == 0 then return text end
-	
+
 	local function replacePlaceholder(n)
 		local index = tonumber(n)
 		if params[index] ~= nil then
@@ -270,7 +323,7 @@ local function ProcessParameters(text, params)
 			return ""
 		end
 	end
-	
+
 	text = string.gsub(text, "%%([%d]+)%%%-?", replacePlaceholder)
 	text = string.gsub(text, "-->([%d]+)<--%-?", replacePlaceholder)
 	return text
@@ -294,13 +347,54 @@ function SubstituteTextParams(text, map)
 	local result = string.gsub(text, "{(.-)}", function(key)
 		return map[key] or "{" .. key .. "}"
 	end)
-	
+
 	-- Legacy player-name support
 	if string.find(result, "<player>") then
 		result = string.gsub(result, "<player>", Player.name or "")
 	end
 
 	return result
+end
+
+-- Explicit-table formatter for code that must run identically on the original
+-- Lua 5.0 runtime and OpenChoc. Lua 5.0 supports vararg declarations but does
+-- not support using `...` as an expression, while newer Lua versions do not
+-- guarantee the old implicit `arg` table. Community UI code therefore passes
+-- positional values as an ordinary table to this helper instead of relying on
+-- either vararg representation.
+function GetTextParams(key, params)
+	if key == nil then return "" end
+	if type(key) == "number" then return tostring(key) end
+	if type(key) ~= "string" then return tostring(key) end
+	if string.find(key, "^%d+$") then return key end
+
+	params = params or {}
+	if params.n == nil then
+		local paramCount = 0
+		while params[paramCount + 1] ~= nil do
+			paramCount = paramCount + 1
+		end
+		params.n = paramCount
+	end
+
+	local cacheKey = key .. ":D" .. tostring(GetStringDifficultyContext()) .. ":P"
+	for i = 1, params.n do
+		cacheKey = cacheKey .. ":" .. tostring(params[i])
+	end
+	if _textCache[cacheKey] then return _textCache[cacheKey] end
+
+	local text = GetBaseString(key)
+	if not text then
+		return string.gsub(key, "_", " ")
+	end
+
+	text = ProcessDifficulty(text)
+	text = ProcessParameters(text, params)
+	text = ProcessNamedPlaceholders(text)
+	text = string.gsub(text, "%%%%", "%%")
+
+	_textCache[cacheKey] = text
+	return text
 end
 
 -------------------------------------------------------------------------------
@@ -314,7 +408,7 @@ function GetText(key, ...)
 	if type(key) == "number" then return tostring(key) end
 	if type(key) ~= "string" then return tostring(key) end
 	if string.find(key, "^%d+$") then return key end
-	
+
 	-- Hash a unique cache key based on positional arguments AND difficulty. Without
 	-- the difficulty component, changing difficulty mid-game can reuse text compiled
 	-- from the previous [D|...] branch.
@@ -325,22 +419,22 @@ function GetText(key, ...)
 			cacheKey = cacheKey .. tostring(arg[i]) .. "|"
 		end
 	end
-	
+
 	if _textCache[cacheKey] then return _textCache[cacheKey] end
-	
+
 	local text = GetBaseString(key)
-	
+
 	if not text then
 		text = string.gsub(key, "_", " ")
 		return text
 	end
-	
+
 	-- Process all formatting layers sequentially
 	text = ProcessDifficulty(text)
 	text = ProcessParameters(text, arg)
 	text = ProcessNamedPlaceholders(text)
 	text = string.gsub(text, "%%%%", "%%")
-	
+
 	_textCache[cacheKey] = text
 	return text
 end
@@ -355,7 +449,7 @@ function GetString(key, ...)
 	if arg and arg.n > 0 then
 		return GetText(key, unpack(arg))
 	end
-	
+
 	local text = GetBaseString(key)
 	if text then
 		text = ProcessDifficulty(text)
@@ -370,8 +464,8 @@ end
 -- Replaces bracketed variables with entries from the Player's string table
 function GetTextReplaced(key, ...)
 	local s = GetText(key, unpack(arg or {}))
-	local temp = string.gsub(s, "<(.-)>", function(a) 
-		return Player.stringTable[a] or "<" .. a .. ">" 
+	local temp = string.gsub(s, "<(.-)>", function(a)
+		return Player.stringTable[a] or "<" .. a .. ">"
 	end)
 	return temp
 end
@@ -405,18 +499,31 @@ end
 -- 7. Pluralization & Grammar Engine
 -------------------------------------------------------------------------------
 
--- Computes the correct linguistic pluralization suffix based on numerical rules
+-- Computes the correct linguistic unit-form suffix for integer quantities.
+-- IMPORTANT: _2 is not always a literal "plural". In languages such as
+-- Finnish/Estonian/Bulgarian it can hold the numeral-governed count form.
 function GetPluralSuffix(count, lang)
+	count = NormalizeQuantityCount(count)
+	if count == nil then
+		DebugOut("WARNING", "GetPluralSuffix received a nil/non-numeric quantity; using the safe generic form.")
+		return "_2"
+	end
+
 	-- Ensure count is absolute (math.abs isn't loaded globally here)
 	if count < 0 then count = -count end
 	lang = lang or "en"
 
-	-- 1. NO PLURALIZATION AFTER NUMBERS (e.g., "1 Case", "5 Case")
-	if lang == "ja" or lang == "zhs" or lang == "zht" or lang == "ko" or lang == "hu" or lang == "tr" or lang == "th" or lang == "vi" or lang == "id" or lang == "ms" then
+	-- 1. NO NOUN PLURALIZATION AFTER EXPLICIT NUMBERS / CLASSIFIER LANGUAGES
+	-- Hungarian, Turkish, Japanese, Chinese, Korean, Thai, Vietnamese,
+	-- Indonesian, Malay and Filipino keep the unit noun/classifier invariant.
+	if lang == "ja" or lang == "zhs" or lang == "zht" or lang == "ko"
+	or lang == "hu" or lang == "tr" or lang == "th" or lang == "vi"
+	or lang == "id" or lang == "ms" or lang == "tl" then
 		return "_other"
 	end
 
-	-- 2. POLISH (Complex fraction logic)
+	-- 2. POLISH
+	-- 1 butelka; 2-4 / 22-24 butelki; 0, 5+, 12-14, 25+ butelek.
 	if lang == "pl" then
 		if count == 1 then return "_1" end
 		local rem10 = Mod(count, 10)
@@ -428,7 +535,9 @@ function GetPluralSuffix(count, lang)
 		end
 	end
 
-	-- 3. SLAVIC LANGUAGES (Russian, Ukrainian, Serbian, Croatian)
+	-- 3. EAST/SOUTH SLAVIC NUMERAL FORMS
+	-- Russian, Ukrainian, Serbian and Croatian:
+	-- 1/21 -> _1; 2-4/22-24 -> _2; 0, 5+, 11-14 -> _5.
 	if lang == "ru" or lang == "uk" or lang == "sr" or lang == "hr" then
 		local rem10 = Mod(count, 10)
 		local rem100 = Mod(count, 100)
@@ -441,45 +550,138 @@ function GetPluralSuffix(count, lang)
 		end
 	end
 
-	-- 4. ROMANIAN (20+ injection rule)
+	-- 4. LITHUANIAN
+	-- 1/21 -> nominative singular; 2-9/22-29 -> nominative plural;
+	-- 0, 10-20, 30... -> genitive plural.
+	if lang == "lt" then
+		local rem10 = Mod(count, 10)
+		local rem100 = Mod(count, 100)
+		if rem10 == 1 and (rem100 < 11 or rem100 > 19) then
+			return "_1"
+		elseif (rem10 >= 2 and rem10 <= 9) and (rem100 < 11 or rem100 > 19) then
+			return "_2"
+		else
+			return "_5"
+		end
+	end
+
+	-- 5. LATVIAN
+	-- 1/21 -> singular; 2-9/22-29 -> ordinary plural;
+	-- 0, numbers ending in 0, and 11-19 -> genitive plural.
+	if lang == "lv" then
+		local rem10 = Mod(count, 10)
+		local rem100 = Mod(count, 100)
+		if rem10 == 1 and rem100 ~= 11 then
+			return "_1"
+		elseif rem10 == 0 or (rem100 >= 11 and rem100 <= 19) then
+			return "_5"
+		else
+			return "_2"
+		end
+	end
+
+	-- 6. ROMANIAN (20+ "de" injection form)
+	-- _20 strings include the required leading "de ".
 	if lang == "ro" then
 		if count == 1 then return "_1" end
 		local rem100 = Mod(count, 100)
 		if count == 0 or (rem100 >= 1 and rem100 <= 19) then return "_2" end
-		return "_20" 
+		return "_20"
 	end
 
-	-- 5. FRENCH (0 is singular)
+	-- 7. FRENCH (0 and 1 use the singular unit form)
 	if lang == "fr" then
 		if count <= 1 then return "_1" end
 		return "_2"
 	end
 
-	-- 6. CZECH
+	-- 8. CZECH
+	-- Only the literal values 2, 3 and 4 use the _2 form; 5+ (including 22) use _5.
 	if lang == "cz" then
 		if count == 1 then return "_1" end
 		if count >= 2 and count <= 4 then return "_2" end
 		return "_5"
 	end
 
-	-- DEFAULT (English, German, Spanish, Italian, Dutch, Nordic)
-	-- 1 is singular. Everything else (0, 2, 3+) is plural.
+	-- 9. ICELANDIC
+	-- Integer quantities ending in 1 use singular except 11/111/etc.
+	if lang == "is" then
+		local rem10 = Mod(count, 10)
+		local rem100 = Mod(count, 100)
+		if rem10 == 1 and rem100 ~= 11 then return "_1" end
+		return "_2"
+	end
+
+	-- 10. TWO-FORM NUMERICAL LANGUAGES
+	-- Includes bg, ca, da, de, el, es_eu, es_lt, et, fi, it, nl, no,
+	-- pt_br, pt_eu and sv (plus English/default).
+	-- Note that the localized _2 string may be a language-specific count form
+	-- rather than a dictionary plural (e.g. Finnish/Estonian/Bulgarian).
 	if count == 1 then return "_1" else return "_2" end
 end
 
--- Fetches a unit string and dynamically modifies it for accurate grammar 
-function GetLocalizedUnit(baseKey, count)
+-- Fetches a unit string and dynamically selects the form required by the language.
+
+-- context is optional and future-proofs the numerical system for grammatical case.
+-- If, for example, unit_case_object_2 exists, GetLocalizedUnit("unit_case", 2,
+-- "object") will prefer it; otherwise it safely falls back to unit_case_2.
+function GetLocalizedUnit(baseKey, count, context)
 	local lang = Player.options.language or "en"
 	local suffix = GetPluralSuffix(count, lang)
+
+	local function ResolveUnitFamily(familyKey)
+		local key = familyKey .. suffix
+		if HasString(key) then return GetString(key) end
+		if HasString(familyKey .. "_2") then return GetString(familyKey .. "_2") end
+		if HasString(familyKey .. "_other") then return GetString(familyKey .. "_other") end
+		if HasString(familyKey .. "_1") then return GetString(familyKey .. "_1") end
+		return nil
+	end
+
+	if context and context ~= "" then
+		local contextual = ResolveUnitFamily(baseKey .. "_" .. context)
+		if contextual then return contextual end
+	end
+
+	return ResolveUnitFamily(baseKey) or GetString(baseKey .. "_1")
+end
+
+-- Formats a complete number + localized unit phrase.  Keeping this operation in
+-- one helper lets languages control spacing (for example Japanese/Chinese/Korean
+-- do not need the English-style space between a numeral and classifier).
+
+-- displayValue is optional.  It may be a decorated quantity such as
+-- "your first 75" while count remains the numeric value used for grammar.
+-- context is optional and is passed through to GetLocalizedUnit().
+function FormatLocalizedQuantity(baseKey, count, displayValue, context)
+	local numericCount = NormalizeQuantityCount(count)
+	local display = displayValue
+	if display == nil then display = (numericCount ~= nil and tostring(numericCount)) or tostring(count or "") end
+
+	if numericCount == nil then
+		DebugOut("WARNING", "FormatLocalizedQuantity received a nil/non-numeric quantity for '" .. tostring(baseKey) .. "'; returning display text without unit inflection.")
+		return tostring(display)
+	end
+
+	local unit = GetLocalizedUnit(baseKey, numericCount, context)
+	if not unit or unit == "" then return tostring(display) end
+	return GetText("quantity_unit_format", tostring(display), unit)
+end
+
+-- Whole-sentence plural selector for places where agreement extends beyond the
+-- noun.  Callers should only use this for keys whose selected variants exist in
+-- every shipped locale; otherwise the English base layer would become visible.
+function GetPluralizedText(baseKey, count, params)
+	local numericCount = NormalizeQuantityCount(count)
+	if numericCount == nil then
+		DebugOut("WARNING", "GetPluralizedText received a nil/non-numeric quantity for '" .. tostring(baseKey) .. "'; using the base string.")
+		return GetTextParams(baseKey, params or {})
+	end
+	local suffix = GetPluralSuffix(numericCount, Player.options.language or "en")
 	local key = baseKey .. suffix
-
-	if HasString(key) then return GetString(key) end
-
-	-- Hierarchy Fallback: If a language demands a form not supplied by its XML,
-	-- cascade to the nearest supported unit form without relying on display text.
-	if HasString(baseKey .. "_2") then return GetString(baseKey .. "_2") end
-	if HasString(baseKey .. "_other") then return GetString(baseKey .. "_other") end
-	return GetString(baseKey .. "_1")
+	if not HasString(key) then key = baseKey end
+	params = params or {}
+	return GetTextParams(key, params)
 end
 
 -------------------------------------------------------------------------------
@@ -489,7 +691,7 @@ end
 -- Determines if a specific quest currently holds relevance to the active building/NPC.
 -- Prevents generic "Welcome to my market!" chatter if the player is here on an active quest.
 local function IsQuestRelevantToBuilding(quest, building, character, baseKey)
-	
+
 	-- Relevance A: Identity Hooks
 	if quest:CanEnd(character) then return true end
 	for _, s in ipairs(quest.starter) do if s == character then return true end end
@@ -502,7 +704,7 @@ local function IsQuestRelevantToBuilding(quest, building, character, baseKey)
 
 	-- Relevance C: Inventory Demand Hooks
 	-- Scans the market's physical stock to see if they sell what the player needs.
-	if building.inventory then 
+	if building.inventory then
 		local function MarketSells(ingName)
 			for _, stockIng in ipairs(building.inventory) do
 				if stockIng.name == ingName then return true end
@@ -510,7 +712,7 @@ local function IsQuestRelevantToBuilding(quest, building, character, baseKey)
 			return false
 		end
 
-		-- We intentionally filter out extremely common items (Sugar, Milk) so they 
+		-- We intentionally filter out extremely common items (Sugar, Milk) so they
 		-- don't artificially flag the market as "Quest Relevant" on every single visit.
 		local commonIngredients = { sugar = true, milk = true, cacao = true, powder = true }
 		local checkInventory = (baseKey == "market_welcome" or baseKey == "market_welcome_first")
@@ -526,13 +728,13 @@ local function IsQuestRelevantToBuilding(quest, building, character, baseKey)
 			local prod = _AllProducts[quest.product]
 			if prod then
 				for ingName, _ in pairs(prod.counts) do
-					if MarketSells(ingName) and not commonIngredients[ingName] then 
+					if MarketSells(ingName) and not commonIngredients[ingName] then
 						if PlayerNeeds(ingName, 1) then return true end
 					end
 				end
 			end
 		end
-		
+
 		-- Story Quest Goal Checks
 		local difficulty = GetQuestDifficulty(quest)
 		local goals = quest.goals
@@ -541,10 +743,10 @@ local function IsQuestRelevantToBuilding(quest, building, character, baseKey)
 
 		if goals then
 			for _, req in ipairs(goals) do
-				if req.name and _AllIngredients[req.name] and MarketSells(req.name) then 
+				if req.name and _AllIngredients[req.name] and MarketSells(req.name) then
 					if not commonIngredients[req.name] and PlayerNeeds(req.name, req.count or 1) then return true end
 				end
-				
+
 				if req.code and _AllProducts[req.code] then
 					local prod = _AllProducts[req.code]
 					for ingName, _ in pairs(prod.counts) do
@@ -556,14 +758,14 @@ local function IsQuestRelevantToBuilding(quest, building, character, baseKey)
 			end
 		end
 	end
-	
+
 	return false
 end
 
 -- The master probability matrix for contextual NPC dialogue generation.
 function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey, isFirstVisit, itemCount)
 	if not baseKey or not character then return "..." end
-	
+
 	-- 1. Visitation Tracking Context
 	local isRepeatVisit = false
 	if Player.buildingLastVisitTime and Player.buildingLastVisitTime[building.name] == Player.time then
@@ -571,7 +773,7 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 	end
 	Player.buildingLastVisitTime = Player.buildingLastVisitTime or {}
 	Player.buildingLastVisitTime[building.name] = Player.time
-	
+
 	-- First-Visit Override Bypass
 	if isFirstVisit then
 		local introKey = baseKey .. "_" .. character.name .. "_first"
@@ -579,9 +781,9 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 			local count = 1
 			while HasString(introKey .. "_" .. (count + 1)) do count = count + 1 end
 			local finalKey = introKey .. "_" .. RandRange(1, count)
-			
-			DebugOut("DIALOGUE", string.format("Priority Override: Firing First-Visit Intro -> %s", finalKey))
-			
+
+			DebugOut("DIALOGUE", string.format("Selected first-visit dialogue override: %s", finalKey))
+
 			local map = { merchant = GetString(character.name), building = GetString(building.name), port = GetString(building.port.name) }
 			return SubstituteTextParams(GetString(finalKey), map)
 		end
@@ -603,7 +805,7 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 
 	local tipContext = nil
 	local seasonContext = nil
-	
+
 	if itemKey then
 		local item = _AllIngredients[itemKey]
 		if item and Player.activeTips then
@@ -618,23 +820,23 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 			if item:IsInSeason() then seasonContext = "inseason" else seasonContext = "outofseason" end
 		end
 	end
-	
+
 	local holidayContext = nil
 	if Player.GetActiveHolidayForPort and building and building.port then
 		holidayContext = Player:GetActiveHolidayForPort(building.port.name)
 	end
-	
+
 	local contextString = nil
 	if isFirstVisit then contextString = "first"
 	elseif isRepeatVisit and baseKey == "market_welcome" then contextString = "repeat"
 	elseif (baseKey == "market_thanks" or baseKey == "shop_thanks") and haggleResult and (haggleResult == "bad" or haggleResult == "good") then
 		contextString = "haggle_" .. haggleResult
 	end
-	
+
 	-- 3. Construct probability pool and apply weights
 	local pool = {}
 	local totalWeight = 0
-	
+
 	local function AddCandidate(k, w, o)
 		if HasString(k .. "_1") then
 			table.insert(pool, { key = k, weight = w, obj = o })
@@ -659,7 +861,7 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 		AddCandidate(baseKey .. "_" .. qName .. "_" .. character.name, W_QUEST, quest)
 		AddCandidate(baseKey .. "_" .. qName, W_QUEST, quest)
 	end
-	
+
 	if itemKey then
 		if seasonContext then
 			AddCandidate(baseKey .. "_" .. character.name .. "_" .. itemKey .. "_" .. seasonContext, 40)
@@ -673,7 +875,7 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 		AddCandidate(baseKey .. "_" .. holidayContext .. "_" .. character.name, 25)
 		AddCandidate(baseKey .. "_" .. holidayContext, 25)
 	end
-	
+
 	AddCandidate(baseKey .. "_" .. character.name, W_CHAR)
 
 	if tipContext and itemKey then
@@ -685,17 +887,17 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 		AddCandidate(baseKey .. "_" .. contextString .. "_" .. character.name, W_VISIT)
 		AddCandidate(baseKey .. "_" .. contextString, W_VISIT)
 	end
-	
+
 	AddCandidate(baseKey, W_BASE)
 
 	-- 4. Roll the weighted dice
 	local finalKey = nil
 	local finalObj = nil
-	
+
 	if totalWeight > 0 then
 		local roll = RandRange(1, totalWeight)
 		local current = 0
-		
+
 		for _, cand in ipairs(pool) do
 			current = current + cand.weight
 			if roll <= current then
@@ -710,7 +912,7 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 		-- Critical Failsafe
 		finalKey = baseKey .. "_1"
 		if not HasString(finalKey) then finalKey = baseKey end
-		DebugOut("DIALOGUE", string.format("WARNING: Matrix weight zero. Falling back to generic key: %s", baseKey))
+		DebugOut("WARNING", string.format("Matrix weight zero. Falling back to generic key: %s", baseKey))
 	end
 
 	-- 5. Format and Inject Tokens
@@ -718,18 +920,18 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 	if rawText == nil or rawText == finalKey and not HasString(finalKey) then return "..." end
 
 	local map = {}
-	
+
 	-- Inject deep character metadata into the text format map
 	local charTokens = GetCharacterTokens(character, "character_")
 	for k, v in pairs(charTokens) do map[k] = v end
-	
+
 	local merchTokens = GetCharacterTokens(character, "merchant_")
 	for k, v in pairs(merchTokens) do map[k] = v end
 
 	map["merchant"] = map["character_name"]
 	map["building"] = GetString(building.name)
 	map["port"] = GetString(building.port.name)
-	
+
 	if itemKey then
 		local item = _AllIngredients[itemKey] or _AllProducts[itemKey]
 		if item then
@@ -740,11 +942,11 @@ function GetMerchantDialogue(baseKey, character, building, haggleResult, itemKey
 			map["price"] = Dollars(unitPrice)
 			map["total_price"] = Dollars(unitPrice * quantity)
 
-			local baseUnit = item.unit_singular or "sack"
-			if _AllProducts[itemKey] then baseUnit = "case" end
-			
-			local baseUnitKey = "unit_" .. baseUnit
-			map["unit"] = GetLocalizedUnit(baseUnitKey, quantity)
+			-- Item metadata is the single source of truth for packaging. Ingredients
+			-- now define unit_type (bottle, jar, crate, tub, etc.) and products
+			-- expose their case unit through the same GetUnitName() API.  Do not
+			-- fall back to the retired Ingredient.unit_singular = "sack" field.
+			map["unit"] = item:GetUnitName(quantity, "object")
 		end
 	end
 
@@ -821,20 +1023,20 @@ end
 function FadeCloseWindow(name, value)
 	local v = value
 	gButtonsDisabled = true
-	Transition { 
-		"fadeout", 
-		window = name, 
-		alpha = 1, 
-		onend = function() 
-			gButtonsDisabled = nil 
-			CloseWindow(v) 
-		end 
+	Transition {
+		"fadeout",
+		window = name,
+		alpha = 1,
+		onend = function()
+			gButtonsDisabled = nil
+			CloseWindow(v)
+		end
 	}
 end
 
 function CloseAllModals()
 	DebugOut("UI", "Closing all modal windows to force UI reload.")
-	
+
 	local topWindow = GetTopModalWindow()
 	while topWindow and topWindow:GetName() ~= "screen" do
 		PopModal(topWindow:GetID())

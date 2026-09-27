@@ -1,11 +1,11 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Building Class)
+	Chocolatier: Decadence by Design Reforged (Building Class)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- A "Building" represents any interactable, clickable entity within a Port.
--- This class handles character population, quest interactions, economy checks 
+-- This class handles character population, quest interactions, economy checks
 -- (like bankruptcy), and the master priority loop for player clicks.
 
 Building =
@@ -16,7 +16,7 @@ Building =
 	name = nil,				-- Internal key name of the building (e.g., "zur_market")
 	port = nil,				-- The Port object where this building resides
 	enabled = true,			-- TRUE if the building is interactable by default
-	
+
 	-- ==========================================
 	-- Visuals & Geography
 	-- ==========================================
@@ -34,7 +34,7 @@ _AllBuildings = {}
 -- ==========================================
 -- Subclasses & Specific Building Types
 -- ==========================================
--- These inherit from the base Building class but apply specific audio 
+-- These inherit from the base Building class but apply specific audio
 -- keys or UI overrides depending on their flavor.
 
 Saloon = { cadikey = "saloons" }
@@ -66,7 +66,7 @@ Casino.__tostring = function(t) return "{Casino:" .. tostring(t.name) .. "}" end
 function Casino:EnterBuilding(char, somethingHappened)
 	char = self:RandomCharacter()
 	DebugOut("BUILDING", string.format("Player entering Casino: %s", self.name))
-	DisplayDialog { "ui/ui_slotselect.lua", char = char, building = self }	
+	DisplayDialog { "ui/ui_slotselect.lua", char = char, building = self }
 	return true
 end
 
@@ -91,24 +91,24 @@ function Building:Create(name, port)
 		end
 
 		t = _AllBuildings[name] or {}
-		
+
 		-- Bind the Building class metatable
-		setmetatable(t, self) 
+		setmetatable(t, self)
 		self.__index = self
-		
+
 		-- Register globally
 		_AllBuildings[name] = t
 		_G[name] = t
-		
+
 		-- Initialize core tables
 		t.name = name
 		t.port = port
 		t.characters = {}
-		
+
 		-- Link building to its parent port's building list
 		if port then table.insert(port.buildings, t) end
 	end
-	
+
 	return t
 end
 
@@ -116,7 +116,7 @@ end
 function CreateBuilding(name, port, type)
 	type = type or Building
 	local t = type:Create(name, port)
-	
+
 	-- Automatically generate a default "keeper" character for this building
 	t.characters[1] = { name .. "keep" }
 	CreateCharacter(name .. "keep")
@@ -126,10 +126,10 @@ end
 function EmptyBuilding(name, port, type)
 	local buildingType = type or Building
 	local t = buildingType:Create(name, port)
-	
+
 	-- Setup character table as explicitly empty
 	t.characters[1] = {}
-	
+
 	-- Carry over type definition if a specific class was passed
 	if type then
 		t.type = type.type
@@ -161,7 +161,7 @@ end
 function Building:PortRolloverContents()
 	local n = GetString(self.name)
 	if n == "#####" then n = self.name end
-	
+
 	return MakeDialog
 	{
 		BSGWindow
@@ -183,7 +183,7 @@ function Building:SetCharacters(rank, charTable)
 		charTable = rank
 		rank = 1
 	end
-	
+
 	if type(rank) == "number" and type(charTable) == "table" then
 		self.characters[rank] = charTable
 	else
@@ -194,7 +194,7 @@ end
 -- Appends a single character to a specific rank tier in this building
 function Building:AddCharacter(rank, char)
 	if type(char) == "table" then char = char.name end
-	
+
 	if type(rank) == "number" and type(char) == "string" then
 		local temp = self.characters[rank] or {}
 		table.insert(temp, char)
@@ -204,93 +204,133 @@ function Building:AddCharacter(rank, char)
 	end
 end
 
--- Constructs the active character list dynamically based on player rank, quests, and fallbacks.
+-- Declares how this physical venue participates in the living-character system.
+-- Port files own this geography-specific metadata; the mobility service only
+-- interprets it. requireAny is optional and is used for genuinely restricted
+-- venues (for example a corporate HQ, palace or bank).
+function Building:SetMobilityProfile(tags, residentEncounterWeight, requireAny)
+	self.mobilityVisitors = true
+	self.mobilityTags = tags or {}
+	self.residentEncounterWeight = residentEncounterWeight
+	self.mobilityRequireAny = requireAny
+end
+
+-- Constructs resident and mobile populations separately. This keeps permanent
+-- residents meaningful even when several visitors happen to be present.
+function Building:GetCharacterGroups()
+	local residents, visitors = {}, {}
+	local residentSeen, visitorSeen = {}, {}
+
+	local function addUnique(list, seen, char)
+		if char and char.name and not seen[char.name] then
+			seen[char.name] = true
+			table.insert(list, char)
+		end
+	end
+
+	-- Ghost pools are now compatibility views only. Their static rank arrays are
+	-- intentionally ignored so the mobility service controls who is actually in
+	-- travel / legacy-empty state.
+	if self.name ~= "_travelers" and self.name ~= "_empty" then
+		local chars = self.characters[1]
+		for i = 1, Player.rank do chars = self.characters[i] or chars end
+		if chars then
+			for _, char in ipairs(chars) do addUnique(residents, residentSeen, char) end
+		end
+	end
+
+	-- Quest and Special Order placements remain authoritative and compatible.
+	local bt = Player.buildingCharacters[self.name]
+	if bt then
+		for name, _ in pairs(bt) do
+			addUnique(visitors, visitorSeen, _AllCharacters[name])
+		end
+	end
+
+	-- Ambient living-world characters. Home-port locals are available at every
+	-- eligible building in that port; settled outsiders are tied to this building.
+	if CharacterMobility then
+		for _, char in ipairs(CharacterMobility:GetCharactersForBuilding(self)) do
+			if not residentSeen[char.name] then addUnique(visitors, visitorSeen, char) end
+		end
+	end
+
+	return residents, visitors
+end
+
 function Building:GetCharacterList()
-	-- 1. Start with the Rank 1 base list, overriding upwards to match the Player's current rank
-	local chars = self.characters[1]
-	for i = 1, Player.rank do
-		chars = self.characters[i] or chars
-	end
-
-	-- 2. Create a working copy so we don't accidentally mutate the static definition arrays
-	local combinedList = {}
-	if chars then
-		for _, c in ipairs(chars) do table.insert(combinedList, c) end
-	end
-
-	-- 3. Inject Dynamic Quest Characters (Temporary placements assigned by the engine)
-	local bt = Player.buildingCharacters[self.name]
-	if bt then
-		for name, _ in pairs(bt) do
-			local c = _AllCharacters[name]
-			if c then table.insert(combinedList, c) end
-		end
-	end
-	
-	-- 4. Fill Empty Spaces (The "_empty" pool handling)
-	-- If the building is completely empty, or if it explicitly includes wanderers
-	if (table.getn(combinedList) == 0) or (self.includeEmpty and _empty) then 
-		local emptyChars = _empty:GetCharacterList()
-		for _, c in ipairs(emptyChars) do
-			-- Prevent duplicating a character if they are already naturally populated
-			local isDuplicate = false
-			for _, existing in ipairs(combinedList) do
-				if existing == c then isDuplicate = true; break end
-			end
-			
-			if not isDuplicate then
-				table.insert(combinedList, c)
-			end
-		end
-	end
-
-	return combinedList
+	local residents, visitors = self:GetCharacterGroups()
+	local combined = {}
+	for _, char in ipairs(residents) do table.insert(combined, char) end
+	for _, char in ipairs(visitors) do table.insert(combined, char) end
+	return combined
 end
 
--- Returns ONLY the true residents and temporary quest placements.
--- Used to prevent the game from accidentally generating delivery quests 
--- for random empty-pool wanderers that will vanish.
+-- Returns ONLY permanent residents and forced/scripted placements. Ambient
+-- mobility is excluded so legacy Special Order generation cannot accidentally
+-- claim a roaming character without going through the mobility service.
 function Building:GetResidentCharacterList()
-	local chars = self.characters[1]
-	for i = 1, Player.rank do
-		chars = self.characters[i] or chars
+	local residents = {}
+	local seen = {}
+	local chars = nil
+	if self.name ~= "_travelers" and self.name ~= "_empty" then
+		chars = self.characters[1]
+		for i = 1, Player.rank do chars = self.characters[i] or chars end
+	end
+	if chars then
+		for _, char in ipairs(chars) do
+			if char and char.name and not seen[char.name] then
+				seen[char.name] = true
+				table.insert(residents, char)
+			end
+		end
 	end
 
 	local bt = Player.buildingCharacters[self.name]
 	if bt then
-		local t = chars
-		chars = {}
-		for i, char in ipairs(t) do table.insert(chars, char) end
 		for name, _ in pairs(bt) do
-			local c = _AllCharacters[name]
-			if c then table.insert(chars, c) end
+			local char = _AllCharacters[name]
+			if char and not seen[name] then
+				seen[name] = true
+				table.insert(residents, char)
+			end
 		end
 	end
-	
-	return chars
+	return residents
 end
 
--- Returns a random character from this building who currently has an interaction defined
+local function PickRandomFrom(list)
+	local n = table.getn(list)
+	if n <= 0 then return nil end
+	return list[(n > 1) and RandRange(1, n) or 1]
+end
+
+local function PickResidentOrVisitor(building, residents, visitors)
+	if table.getn(residents) == 0 then return PickRandomFrom(visitors) end
+	if table.getn(visitors) == 0 then return PickRandomFrom(residents) end
+
+	-- Headcount does not dilute a permanent resident. By default the resident
+	-- group and visitor group each receive half the generic encounter chance.
+	local residentWeight = tonumber(building.residentEncounterWeight) or 50
+	if RandRange(1, 100) <= residentWeight then return PickRandomFrom(residents) end
+	return PickRandomFrom(visitors)
+end
+
 function Building:RandomActionCharacter()
-	local charList = self:GetCharacterList()
-	local possible = {}
-	
-	for _, c in ipairs(charList) do
-		if c.actions and (table.getn(c.actions) > 0) then table.insert(possible, c) end
+	local residents, visitors = self:GetCharacterGroups()
+	local residentActions, visitorActions = {}, {}
+	for _, char in ipairs(residents) do
+		if char.actions and table.getn(char.actions) > 0 then table.insert(residentActions, char) end
 	end
-	
-	local n = table.getn(possible)
-	if n > 1 then n = RandRange(1, n) end
-	if n > 0 then return possible[n] else return nil end
+	for _, char in ipairs(visitors) do
+		if char.actions and table.getn(char.actions) > 0 then table.insert(visitorActions, char) end
+	end
+	return PickResidentOrVisitor(self, residentActions, visitorActions)
 end
 
--- Returns ANY random character currently occupying this building
 function Building:RandomCharacter()
-	local charList = self:GetCharacterList()
-	local n = table.getn(charList)
-	
-	if n > 1 then n = RandRange(1, n) end
-	if n > 0 then return charList[n] else return nil end
+	local residents, visitors = self:GetCharacterGroups()
+	return PickResidentOrVisitor(self, residents, visitors)
 end
 
 ------------------------------------------------------------------------------
@@ -300,7 +340,7 @@ end
 -- Scans the building to see if anyone inside is the target of an active, ready-to-finish quest
 function Building:FindQuestsEnding()
 	local quests = nil
-	
+
 	-- 1. Check Primary Characters first
 	for _, char in ipairs(_PrimaryCharacters) do
 		if char.questEnds then
@@ -312,7 +352,7 @@ function Building:FindQuestsEnding()
 			end
 		end
 	end
-	
+
 	-- 2. If no Primary characters have ending quests, check the local building population
 	if not quests then
 		local charList = self:GetCharacterList()
@@ -333,7 +373,7 @@ end
 -- Scans the building to see if anyone inside is ready to hand out a new quest
 function Building:FindQuestsStarting(maxPriority)
 	local quests = nil
-	
+
 	-- 1. Check Primary Characters first
 	for _, char in ipairs(_PrimaryCharacters) do
 		if char.questStarts then
@@ -360,17 +400,17 @@ function Building:FindQuestsStarting(maxPriority)
 			end
 		end
 	end
-	
+
 	-- 3. Priority Filtering
 	-- Sorts all discovered quests and strips out everything except the highest available priority tier.
 	if quests and (table.getn(quests) > 0) then
 		table.sort(quests, function(a, b) return a.quest.priority < b.quest.priority end)
-		
+
 		maxPriority = maxPriority or kDefaultPriority
-		if maxPriority > quests[1].quest.priority then 
-			maxPriority = quests[1].quest.priority 
+		if maxPriority > quests[1].quest.priority then
+			maxPriority = quests[1].quest.priority
 		end
-		
+
 		for i, qt in ipairs(quests) do
 			local q = qt.quest
 			if q.priority > maxPriority then
@@ -380,7 +420,7 @@ function Building:FindQuestsStarting(maxPriority)
 			end
 		end
 	end
-	
+
 	if quests and (table.getn(quests) > 0) then return quests else return nil end
 end
 
@@ -395,28 +435,28 @@ function CheckOutOfMoney()
 	local targetMoney = BaseTravelPrice() * 2
 	local nomoney = false
 
-	DebugOut("ECONOMY", string.format("Bankruptcy Check: Current Money: %s / Safe Threshold: %s", Dollars(Player.money), Dollars(targetMoney)))
+	DebugOut("ECONOMY", string.format("Bankruptcy check: Current Money: %s / Safe Threshold: %s", Dollars(Player.money), Dollars(targetMoney)))
 
 	-- The player can only truly lose if they have unlocked the first free market
 	if Player.money < targetMoney and not gTravelActive and not Player.buildingsBlocked["zur_market"] then
 		nomoney = true
-		
+
 		DebugOut("ECONOMY", "Player cash is critically low. Auditing physical assets...")
-		
+
 		-- Step 1: Liquid Asset Check
 		-- Calculate the total value of all finished products the player could sell immediately in THIS port.
 		local shop = _AllPorts[Player.portName].hasShop
 		if shop then
 			local potentialValue = 0
 			local value = 0
-			
+
 			for code, count in pairs(Player.products) do
 				local prod = _AllProducts[code]
 				local category = prod:GetMachinery()
-				
+
 				-- Only count the value if the local shop actually BUYS this item category
-				if shop.buys[category.name] then 
-					value = value + (count * Player.itemPrices[code]) 
+				if shop.buys[category.name] then
+					value = value + (count * Player.itemPrices[code])
 				end
 			end
 			DebugOut("ECONOMY", string.format("Current sellable inventory value in %s: %s", shop.port.name, Dollars(value)))
@@ -426,10 +466,10 @@ function CheckOutOfMoney()
 				DebugOut("ECONOMY", "Bankruptcy averted: Player has enough immediate inventory to sell.")
 			else
 				-- Step 2: Predictive Production Check
-				-- Calculate the total value of products the player COULD manufacture right now 
+				-- Calculate the total value of products the player COULD manufacture right now
 				-- using ingredients already in their inventory.
 				DebugOut("ECONOMY", "Liquid assets insufficient. Calculating potential factory production output...")
-				
+
 				for name, info in pairs(Player.factories) do
 					if info.current then
 						-- Calculate maximum possible production yield based on on-hand ingredients
@@ -439,12 +479,12 @@ function CheckOutOfMoney()
 							local possible = Floor(have / need)
 							if possible < produce then produce = possible end
 						end
-						
+
 						-- Calculate the local market value of that potential yield
 						if produce > 0 then
 							local prod = _AllProducts[info.current]
 							local category = prod:GetMachinery()
-							
+
 							if shop.buys[category.name] then
 								local price = Player.itemPrices[prod.code] or 0
 								local val = produce * price
@@ -458,8 +498,8 @@ function CheckOutOfMoney()
 				DebugOut("ECONOMY", string.format("Total potential factory output value: %s", Dollars(potentialValue)))
 
 				-- Combine liquid goods and potential manufactured goods
-				if (value + potentialValue) >= targetMoney then 
-					nomoney = false 
+				if (value + potentialValue) >= targetMoney then
+					nomoney = false
 					DebugOut("ECONOMY", "Bankruptcy averted: Manufacturing potential covers the deficit.")
 				else
 					DebugOut("ECONOMY", "Total physical assets insufficient. Player is functionally bankrupt.")
@@ -468,7 +508,7 @@ function CheckOutOfMoney()
 		else
 			DebugOut("ECONOMY", string.format("No shop exists in %s. Player cannot sell assets locally.", Player.portName))
 		end
-		
+
 		-- Step 3: Trigger Bailout Protocol
 		-- If assets are insufficient, queue an emergency loan quest from the Casino keeper.
 		if nomoney then
@@ -487,7 +527,7 @@ function CheckOutOfMoney()
 					end
 				end
 			end
-			
+
 			if q then
 				DebugOut("ECONOMY", string.format("Offering standard bailout quest: %s", q.name))
 				nomoney = false
@@ -502,7 +542,7 @@ function CheckOutOfMoney()
 			end
 		end
 	end
-	
+
 	return nomoney
 end
 
@@ -525,22 +565,22 @@ function Building:TransitionIn(x, y)
 	return function()
 		EnableWindow("background", true)
 		EnableWindow("contents", false)
-		
-		Transition { 
-			"path", 
-			window = "background", 
-			time = 150, 
-			path = { {self.x, self.y}, {self.x, self.y}, {target_x, target_y}, {target_x, target_y} } 
+
+		Transition {
+			"path",
+			window = "background",
+			time = 150,
+			path = { {self.x, self.y}, {self.x, self.y}, {target_x, target_y}, {target_x, target_y} }
 		}
-		
-		Transition { 
-			"zoomin", 
-			window = "background", 
+
+		Transition {
+			"zoomin",
+			window = "background",
 			time = 100,
 			onend = function()
 				EnableWindow("contents", true)
 				Transition { "fadein", window = "contents", time = 50 }
-			end 
+			end
 		}
 	end
 end
@@ -553,7 +593,7 @@ end
 function Building:HandleQuestExpiration()
 	local somethingHappened = false
 	local expired = nil
-	
+
 	for name, _ in pairs(Player.questsActive) do
 		local quest = _AllQuests[name]
 		if quest:IsExpired() then
@@ -570,41 +610,56 @@ function Building:HandleQuestExpiration()
 			somethingHappened = true
 		end
 	end
-	
+
 	return somethingHappened
 end
 
 -- Processes standard quest completion dialogs when entering a building.
 function Building:HandleQuestCompletion(allowIncompletes)
 	if allowIncompletes == nil then allowIncompletes = true end
-	
+
 	local char = nil
 	local quest = nil
 	local completed = false
 	local incompleted = false
-	
+
 	local complete = {}
+	local expiredDeliveries = {}
 	local incomplete = {}
 	local quests = self:FindQuestsEnding()
-	
+
 	if quests and table.getn(quests) > 0 then
 		for _, data in ipairs(quests) do
 			quest = data.quest
-			if quest:AreGoalsMet() and not quest:IsComplete() then 
+			if quest.delivery and quest:IsExpired() and not quest:IsComplete() then
+				-- A delivery that is genuinely beyond its final arrival window should
+				-- resolve as failed when the player meets the recipient, not fall
+				-- through to misleading "still working on it" dialogue.
+				table.insert(expiredDeliveries, data)
+			elseif quest:AreGoalsMet() and not quest:IsComplete() then
 				table.insert(complete, data)
-			elseif allowIncompletes and (not quest:IsComplete()) then 
+			elseif allowIncompletes and (not quest:IsComplete()) then
 				table.insert(incomplete, data)
 			end
 		end
 	end
-	
-	-- Sort chronologically to resolve meta-quests cleanly
+
+	-- Sort chronologically to resolve meta-quests cleanly. A valid completion
+	-- always wins; an actually expired delivery resolves before incomplete flavor.
 	if table.getn(complete) > 0 then
 		table.sort(complete, function(q1, q2) return Player.questsActive[q1.quest.name] < Player.questsActive[q2.quest.name] end)
 		for _, data in ipairs(complete) do
 			char = data.char
 			quest = data.quest
 			completed = quest:Complete(char, self)
+		end
+	elseif table.getn(expiredDeliveries) > 0 then
+		table.sort(expiredDeliveries, function(q1, q2) return Player.questsActive[q1.quest.name] < Player.questsActive[q2.quest.name] end)
+		for _, data in ipairs(expiredDeliveries) do
+			char = data.char
+			quest = data.quest
+			quest:Expire(char, self)
+			incompleted = true
 		end
 	elseif table.getn(incomplete) > 0 then
 		table.sort(incomplete, function(q1, q2) return Player.questsActive[q1.quest.name] < Player.questsActive[q2.quest.name] end)
@@ -614,7 +669,7 @@ function Building:HandleQuestCompletion(allowIncompletes)
 			incompleted = quest:Incomplete(char, self)
 		end
 	end
-	
+
 	return char, completed, incompleted
 end
 
@@ -623,30 +678,30 @@ function Building:HandleQuestCompletionAndRealOffers()
 	-- Priority 1: Check for ready-to-finish quests.
 	local char, questCompleted, _ = self:HandleQuestCompletion(false)
 	if questCompleted then
-		return true, char 
+		return true, char
 	end
 
 	-- Priority 2: Check for new starting quests.
 	local allQuests = self:FindQuestsStarting(kDefaultPriority + 1)
 	if allQuests and table.getn(allQuests) > 0 then
-		
+
 		local realQuests = {}
 		for _, data in ipairs(allQuests) do
 			if data.quest:IsReal() then
 				table.insert(realQuests, data)
 			end
 		end
-		
+
 		if table.getn(realQuests) > 0 then
 			local n = 1
 			while realQuests[n+1] and realQuests[n+1].quest.priority == realQuests[1].quest.priority do
 				n = n + 1
 			end
 			if n > 1 then n = RandRange(1, n) end
-			
+
 			local quest = realQuests[n].quest
 			char = realQuests[n].char
-			
+
 			DebugOut("QUEST", string.format("Offering high-priority quest: %s", quest.name))
 			quest:Offer(char, self)
 			return true, char
@@ -663,8 +718,8 @@ function Building:HandleIncompleteAndTeaseOffers()
 	-- Priority 1: Check for incomplete quest status dialogs
 	local _, _, questIncompleted = self:HandleQuestCompletion(true)
 	if questIncompleted then
-		char = self:RandomCharacter() 
-		return char 
+		char = self:RandomCharacter()
+		return char
 	end
 
 	-- Priority 2: Offer a "tease" quest (Flavor narrative)
@@ -680,17 +735,17 @@ function Building:HandleIncompleteAndTeaseOffers()
 		if table.getn(teaseQuests) > 0 then
 			local n = table.getn(teaseQuests)
 			if n > 1 then n = RandRange(1, n) end
-			
+
 			local quest = teaseQuests[n].quest
 			char = teaseQuests[n].char
-			
+
 			DebugOut("QUEST", string.format("Offering flavor/tease quest: %s", quest.name))
 			quest:Offer(char, self)
 			return char
 		end
 	end
-	
-	return nil 
+
+	return nil
 end
 
 ------------------------------------------------------------------------------
@@ -701,14 +756,14 @@ end
 function OfferDeliveryQuestInPerson(questData, character, building)
 	questData.forceTelegram = false
 	local quest = CreateDeliveryQuest(questData, questData.isResident, questData.sourcePool)
-	
+
 	local offerKey
 	if building.name == questData.startbuilding then
 		offerKey = "delivery_sender_offer"
 	else
 		offerKey = "delivery_recipient_offer"
 	end
-	
+
 	Player.questOfferText[quest.name] = GetDynamicDeliveryString(offerKey, quest)
 	quest:Offer(character, building)
 
@@ -724,7 +779,7 @@ function OfferDeliveryQuestInPerson(questData, character, building)
 		if building.name == questData.startbuilding then responseKey = "delivery_sender_defer"
 		else responseKey = "delivery_recipient_defer"
 		end
-	elseif quest:IsComplete() then 
+	elseif quest:IsComplete() then
 		-- Player Rejected (IsComplete flags true upon rejection to clear it)
 		if building.name == questData.startbuilding then responseKey = "delivery_sender_reject"
 		else responseKey = "delivery_recipient_reject"
@@ -745,18 +800,8 @@ function OfferDeliveryQuestInPerson(questData, character, building)
 			end
 		end
 
-		-- If rejected, return the NPC safely to the wandering pool
-		if not quest:IsActive() and not questData.isResident then
-			DebugOut("QUEST", string.format("Player rejected in-person order. Returning NPC '%s' to source pool.", questData.ender))
-			if Player.buildingCharacters[questData.endbuilding] then
-				Player.buildingCharacters[questData.endbuilding][questData.ender] = nil
-			end
-			Player.buildingCharacters[questData.sourcePool] = Player.buildingCharacters[questData.sourcePool] or {}
-			Player.buildingCharacters[questData.sourcePool][questData.ender] = true
-			
-			Player.orderBannedChars[questData.ender] = nil
-			Player.orderBannedBuildings[questData.endbuilding] = nil
-		end
+		-- Rejected non-resident orders restore through the delivery quest's
+		-- sourceLocation action; no legacy pool shuffle is needed here.
 	else
 		DebugOut("QUEST", "Player deferred in-person order. Item remains in pending queue.")
 	end
@@ -770,15 +815,15 @@ function Building:HandleInPersonSpecialOrders()
 
 	for i, orderData in ipairs(Player.pendingSpecialOrders) do
 		if Player.time < orderData.earlyOfferCutoff then
-			
+
 			-- Sender Case
 			if self.name == orderData.startbuilding then
 				local shopkeeper = self:GetCharacterList()[1]
-				
+
 				-- Shim an object to feed into the dynamic string generator
 				local tempQuest = {
 					product = orderData.product,
-					items = orderData.items, 
+					items = orderData.items,
 					ender = _AllCharacters[orderData.ender],
 					GetEnder = function(self) return self.ender end,
 					startbuilding = orderData.startbuilding,
@@ -786,22 +831,22 @@ function Building:HandleInPersonSpecialOrders()
 					price = orderData.price,
 					count = orderData.count,
 					expires = orderData.expires,
-					delivery = true 
+					delivery = true
 				}
-				
+
 				local promptText = GetDynamicDeliveryString("delivery_sender_prompt", tempQuest)
 				local buttons = GetDeliveryButtonLabels(tempQuest.lastDynamicKey)
-				
-				local choice = DisplayDialog { 
-					"ui/ui_character_yesno.lua", 
-					char = shopkeeper, 
+
+				local choice = DisplayDialog {
+					"ui/ui_character_yesno.lua",
+					char = shopkeeper,
 					text = "#" .. promptText,
 					yes = buttons.yes,
 					no = buttons.no,
 					yes_length = "long",
 					no_length = "long"
 				}
-				
+
 				if choice == "yes" then
 					OfferDeliveryQuestInPerson(orderData, shopkeeper, self)
 				end
@@ -854,15 +899,15 @@ function DeliverRandomEligibleHint(character, building)
 
 	if table.getn(filtered_hints) > 0 then
 		local hint_data = filtered_hints[RandRange(1, table.getn(filtered_hints))]
-		
+
 		DebugOut("HINT", string.format("Delivering hint for quest '%s' via character '%s'.", hint_data.quest.name, char.name))
 		DisplayDialog { "ui/ui_character_generic.lua", char = char, text = "#" .. hint_data.text, building = building }
-		
+
 		Player.questHintCooldowns[hint_data.quest.name] = Player.time + 8
 		return true
 	end
-	
-	return false 
+
+	return false
 end
 
 ------------------------------------------------------------------------------
@@ -879,35 +924,35 @@ function Building:OnClick()
 
 	if Player then Player:AutoSave() end
 	if self.cadikey then SoundEvent(self.cadikey) end
-	
+
 	local somethingHappened, char = false, nil
-	
+
 	-- -----------------------------------------------------
 	-- Priority 1: High-Priority Quests
 	-- -----------------------------------------------------
 	somethingHappened, char = self:HandleQuestCompletionAndRealOffers()
-	
+
 	-- -----------------------------------------------------
 	-- Priority 2: Quest Aftermath Dialogues
 	-- -----------------------------------------------------
 	if not somethingHappened and Player.pendingAftermaths and Player.pendingAftermaths[self.name] and table.getn(Player.pendingAftermaths[self.name]) > 0 then
 		local aftermath = table.remove(Player.pendingAftermaths[self.name], 1)
 		char = self:GetCharacterList()[1] or self:RandomCharacter()
-		
+
 		if char then
 			DebugOut("QUEST", string.format("Triggering queued aftermath dialogue in %s", self.name))
 			DisplayDialog { "ui/ui_character_generic.lua", char = char, text = "#" .. aftermath.text, building = self, mood = aftermath.mood, ok = aftermath.ok_label, ok_length = aftermath.ok_length }
 			somethingHappened = true
 		end
 	end
-	
+
 	-- -----------------------------------------------------
 	-- Priority 3: Special Order Offers
 	-- -----------------------------------------------------
 	if not somethingHappened then
 		somethingHappened = self:HandleInPersonSpecialOrders()
 	end
-	
+
 	-- -----------------------------------------------------
 	-- Priority 4: Bankruptcy Defenses (Loan Sharks)
 	-- -----------------------------------------------------
@@ -916,14 +961,14 @@ function Building:OnClick()
 			somethingHappened = true
 		end
 	end
-	
+
 	-- -----------------------------------------------------
 	-- Priority 5: Quest Hints
 	-- -----------------------------------------------------
 	if not somethingHappened then
 		somethingHappened = DeliverRandomEligibleHint(char, self)
 	end
-		
+
 	-- -----------------------------------------------------
 	-- Priority 6: Tutorial Tips / Announcements
 	-- -----------------------------------------------------
@@ -932,13 +977,13 @@ function Building:OnClick()
 		if char then
 			for i, tip_to_announce in ipairs(Player.pendingAnnouncements) do
 				if Tips.CanCharacterAnnounceTip(char, self, tip_to_announce) then
-					gPendingTip = nil 
-					
+					gPendingTip = nil
+
 					local text = Tips.GetDynamicTipString(tip_to_announce, char)
 					DebugOut("TIP", string.format("Announcing tip '%s' via character %s", tip_to_announce.key, char.name))
 					DisplayDialog { "ui/ui_character_generic.lua", char = char, text = "#" .. text }
 					somethingHappened = true
-					
+
 					table.remove(Player.pendingAnnouncements, i)
 					break
 				end
@@ -969,7 +1014,7 @@ function Building:OnClick()
 		if not char then
 			char = self:RandomActionCharacter()
 			if not char then char = self:RandomCharacter() end
-			
+
 			if char and char.actions then
 				char:RandomAction(self)
 				somethingHappened = true
@@ -978,7 +1023,19 @@ function Building:OnClick()
 			end
 		end
 	end
-	
+
+	-- -----------------------------------------------------
+	-- Priority 10: Empty Building Feedback
+	-- -----------------------------------------------------
+	-- If no quest, building UI, hint, announcement or character interaction
+	-- handled the click, give the player explicit feedback instead of silently
+	-- returning to the port.
+	if not somethingHappened and not char then
+		DebugOut("BUILDING", string.format("No characters are currently present in building: %s", self.name))
+		DisplayDialog { "ui/ui_generic.lua", text = "building_empty", building = self, ok = "ok" }
+		somethingHappened = true
+	end
+
 	-- On exit, quietly check if the action just performed fulfilled a goal
 	self:HandleQuestCompletion(false)
 
@@ -990,7 +1047,7 @@ end
 -- Haggling Mathematics
 ------------------------------------------------------------------------------
 
--- Computes the success rate of a haggling attempt based on current market 
+-- Computes the success rate of a haggling attempt based on current market
 -- conditions, character personality, and player difficulty.
 function Building:ComputeHaggle(char, good, soft)
 	-- R (Reasonableness) scale (0-100)
@@ -998,46 +1055,46 @@ function Building:ComputeHaggle(char, good, soft)
 	-- 50:  Prices are average / fair.
 	-- 0:   Prices are terrible for the player.
 	local R = self:ComputeReasonableness()
-	
+
 	-- F (Factor) multiplier based on character personality
 	-- Lower values indicate a character who hates haggling.
 	local F = char.haggleFactor
-	
+
 	-- Behavioral Bonus 1: Alignment with market reality
 	-- Take a 10% bump if the player's response matches the market state.
 	-- (e.g. Asking nicely when prices are already fair, or playing hardball when prices are bad)
-	if (R >= 50 and good) or (R <= 50 and not good) then 
+	if (R >= 50 and good) or (R <= 50 and not good) then
 		F = F + 0.1
-	else 
+	else
 		F = F - 0.1
 	end
-	
+
 	-- Behavioral Bonus 2: Alignment with character preference
 	-- Take a 10% bump if the player matched the NPC's preferred communication style.
-	if (soft and char.prefersSoft) or (not soft and not char.prefersSoft) then 
+	if (soft and char.prefersSoft) or (not soft and not char.prefersSoft) then
 		F = F + 0.1
-	else 
+	else
 		F = F - 0.1
 	end
-	
+
 	-- Multiply Reasonableness by the final Factor modifier
 	-- A lower R mathematically means better prices.
 	R = R * F
-	
-	-- Apply Difficulty constraints to the success/failure margins
-	local success_threshold = 20 
-	local failure_threshold = 30 
 
-	if Player.difficulty == 2 then 
+	-- Apply Difficulty constraints to the success/failure margins
+	local success_threshold = 20
+	local failure_threshold = 30
+
+	if Player.difficulty == 2 then
 		-- Medium: Success is harder (-25), failure is more likely (+25)
 		success_threshold = 25
 		failure_threshold = 25
-	elseif Player.difficulty == 3 then 
+	elseif Player.difficulty == 3 then
 		-- Hard: Success is severely restricted (-30), failure is very common (+20)
 		success_threshold = 30
 		failure_threshold = 20
 	end
-	
+
 	-- H (Haggle Roll)
 	-- Roll 1-100 against the computed R threshold.
 	local H = RandRange(1, 100)
@@ -1049,11 +1106,11 @@ function Building:ComputeHaggle(char, good, soft)
 	-- Roll > 80: Bad (Prices spike)
 	-- Roll 30-80: Neutral (Prices remain unchanged)
 	local result = "neutral"
-	if H < R - success_threshold then 
+	if H < R - success_threshold then
 		result = "good"
-	elseif H > R + failure_threshold then 
+	elseif H > R + failure_threshold then
 		result = "bad"
 	end
-	
+
 	return result
 end

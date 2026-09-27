@@ -1,10 +1,10 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Cash Register Interface)
+	Chocolatier: Decadence by Design Reforged (Cash Register Interface)
 	Copyright (c) 2006-2007 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
--- The script handles the Numpad popup window that appears when clicking a 
+-- The script handles the Numpad popup window that appears when clicking a
 -- product/ingredient sack in a shop or market.
 
 -- Determine the context of the transaction
@@ -42,20 +42,20 @@ local function okFunction()
 	local count = GetLabel("count") or "0"
 	if count == "" then count = "0" end
 	count = tonumber(count)
-	
+
 	-- Execute the functional callback passed from the parent Shop/Market script
-	if count > 0 and type(onOk) == "function" then 
+	if count > 0 and type(onOk) == "function" then
 		DebugOut("UI", string.format("Executing %s transaction for amount: %d", (buy and "BUY" or "SELL"), count))
-		onOk(count) 
-		
+		onOk(count)
+
 		-- UI REFRESH FIX: Force the global Ledger UI to acknowledge the money delta immediately.
-		-- This prevents the "money increasing" animation from lagging or glitching 
+		-- This prevents the "money increasing" animation from lagging or glitching
 		-- while the register dialog is in the middle of its fade-out sequence.
-		if LedgerUpdateDisplay then 
-			LedgerUpdateDisplay() 
+		if LedgerUpdateDisplay then
+			LedgerUpdateDisplay()
 		end
 	end
-	
+
 	FadeCloseWindow("ui_register", count)
 end
 
@@ -70,25 +70,25 @@ local function Update()
 	local count = GetLabel("count") or "0"
 	if count == "" then count = "0" end
 	count = tonumber(count)
-	
+
 	-- Strict enforcement of the mathematical ceiling
 	if max and count > max then
 		count = max
 		SetLabel("count", tostring(count))
 	end
-	
+
 	-- Build the descriptive subtotal string
 	local s
 	local total = count * price
-	
-	if count == 0 then 
+
+	if count == 0 then
 		s = ""
-	else 
+	else
 		s = " x " .. Dollars(price) .. " = " .. Dollars(total)
 	end
-	
+
 	SetLabel("subtotal", s)
-	
+
 	-- Force the OS cursor back onto the input text box
 	SetFocus("count")
 end
@@ -100,10 +100,10 @@ end
 local function PressDigit(n)
 	local count = GetLabel("count") or "0"
 	if count == "" then count = "0" end
-	
+
 	-- Standard numeric string append logic
 	count = tonumber(count) * 10 + n
-	
+
 	if max and count > max then count = max end
 	SetLabel("count", tostring(count))
 	Update()
@@ -112,10 +112,10 @@ end
 local function Add(n)
 	local count = GetLabel("count") or "0"
 	if count == "" then count = "0" end
-	
+
 	-- Mathematical addition logic
 	count = tonumber(count) + n
-	
+
 	if max and count > max then count = max end
 	SetLabel("count", tostring(count))
 	Update()
@@ -137,7 +137,7 @@ if buy then
 	buysell = "buy"
 	-- For purchases, we default the prompt to the Plural unit representation
 	-- because we are asking "How many [Sacks] of [Sugar] do you want?"
-	local unit_name = item:GetUnitName(2) 
+	local unit_name = item:GetUnitName(2, "generic")
 	ask = "#" .. GetText("buy_howmany", item:GetName(), ask, unit_name)
 else
 	buysell = "sell"
@@ -145,14 +145,14 @@ else
 	-- the accurate pluralized capacity right in the string.
 	local invCount = item:GetInventory()
 	local unit_name = item:GetUnitName(invCount)
-	ask = "#" .. GetText("sell_howmany", item:GetName(), ask, tostring(invCount) .. " " .. unit_name)
+	ask = "#" .. GetText("sell_howmany", item:GetName(), ask, item:GetQuantityName(invCount, "inventory"))
 end
 
 -- Resolve the hover tooltip object type (Ingredients vs Products)
 local rolloverContents
-if buy then 
+if buy then
 	rolloverContents = item.name .. ":BuySellRolloverContents()"
-else 
+else
 	rolloverContents = "_AllProducts['" .. item.code .. "']:BuySellRolloverContents()"
 end
 
@@ -168,28 +168,28 @@ MakeDialog
 	Bitmap
 	{
 		x = 287, y = 59, name = "ui_register", image = "image/popup_back_register",
-		
+
 		SetStyle(C3CharacterDialogStyle),
-		
+
 		-- Icon & Informational Text
 		Rollover { x = 30, y = 24, w = 64, h = 64, contents = rolloverContents, fit = false, item:GetAppearanceBig() },
 		Text { x = 110, y = 18, w = 245, h = 78, label = ask, flags = kHAlignLeft + kVAlignCenter },
-		
+
 		-- White Text Entry Field
 		Bitmap { x = 70, y = 104, image = "image/popup_back_register_entryfield",
-			TextEdit { 
-				x = 4, y = 0, w = 114, h = kMax, 
-				name = "count", 
-				length = 7, 
-				label = "0", 
-				ignore = kNumbersOnly, clearinitial = true, onkey = Update, 
-				flags = kVAlignCenter + kHAlignRight, font = { uiFontName, 18, WhiteColor } 
+			TextEdit {
+				x = 4, y = 0, w = 114, h = kMax,
+				name = "count",
+				length = 7,
+				label = "0",
+				ignore = kNumbersOnly, clearinitial = true, onkey = Update,
+				flags = kVAlignCenter + kHAlignRight, font = { uiFontName, 18, WhiteColor }
 			},
 		},
-		
+
 		-- Math Readout
 		Text { x = 192, y = 104, w = 158, h = 36, name = "subtotal", flags = kHAlignLeft + kVAlignCenter },
-		
+
 		-- Phone-style Numpad
 		SetStyle(C3SmallRoundButtonStyle),
 		Button { x = 7, y = 86, label = "#C", command = function() Clear() end },
@@ -215,7 +215,7 @@ MakeDialog
 		-- Confirm / Cancel Buttons
 		SetStyle(C3LargeRoundButtonStyle),
 		Button { x = 137, y = 228, command = okFunction, default = true, label = buysell },
-		
+
 		SetStyle(C3ButtonStyle),
 		Button { x = 9, y = 258, name = "sell_all", command = sellAll, label = "sell_all" },
 		Button { x = 232, y = 258, command = cancelFunction, label = "cancel", cancel = true },

@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Factory Upgrades Dialog)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Factory Upgrades Dialog)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local factory = gDialogTable.factory
@@ -11,13 +11,13 @@ local char = gDialogTable.char
 -------------------------------------------------------------------------------
 
 -- Recycler cost scales aggressively based on difficulty
-local kRecyclerCost = 250000 
+local kRecyclerCost = 250000
 if Player.difficulty == 2 then kRecyclerCost = 350000 end
 if Player.difficulty == 3 then kRecyclerCost = 500000 end
 
 -- Font styling definitions
 local categoryFont = { labelFontName, 18, BlackColor }
-local costFont = { uiFontName, 17, Color(79, 9, 9, 255) } 
+local costFont = { uiFontName, 17, Color(79, 9, 9, 255) }
 local statusFont = { uiFontName, 12, Color(0, 100, 0, 255) }
 
 -------------------------------------------------------------------------------
@@ -29,13 +29,13 @@ local function BuyMachinery(catName, cost)
 	if Player.money >= cost then
 		local confirmText = GetText("factory_buymachinery", GetText(catName), Dollars(cost), Dollars(Player.money))
 		local yn = DisplayDialog { "ui/ui_generic_yn.lua", text = "#" .. confirmText }
-		
+
 		if yn == "yes" then
-			Player:SubtractMoney(cost)
+			Player:SubtractMoney(cost, false, "machinery")
 			factory:Equip(catName)
 			SoundEvent("buy")
 			DebugOut("FACTORY", string.format("Machinery upgrade purchased: %s installed in %s.", catName, factory.name))
-			
+
 			CloseWindow()
 			QueueCommand(function() DisplayDialog { "ui/ui_factory_upgrades.lua", factory = factory, char = char } end)
 		end
@@ -50,14 +50,14 @@ local function BuyRecycler(catName, cost)
 	if Player.money >= cost then
 		local confirmText = GetText("factory_buyrecycler", GetText(catName), Dollars(cost))
 		local yn = DisplayDialog { "ui/ui_generic_yn.lua", text = "#" .. confirmText }
-		
+
 		if yn == "yes" then
-			Player:SubtractMoney(cost)
+			Player:SubtractMoney(cost, false, "recycler")
 			local category = _AllCategories[catName]
 			factory:EnablePowerup(category, "recycler")
 			SoundEvent("buy")
 			DebugOut("FACTORY", string.format("Recycler powerup purchased for %s line in %s.", catName, factory.name))
-			
+
 			CloseWindow()
 			QueueCommand(function() DisplayDialog { "ui/ui_factory_upgrades.lua", factory = factory, char = char } end)
 		end
@@ -99,11 +99,11 @@ local function CreateUpgradeSlot(data)
 	-- Calculate absolute pixel offsets
 	local xBase = (data.col - 1) * 245 + 45
 	local yBase = (data.row - 1) * 165 + 135
-	
+
 	local isEquipped = factory:IsEquipped(cat.name)
 	local hasRecycler = factory:HasPowerup(cat, "recycler")
 	local machineImg = machineImages[cat.name] or "image/machine_1"
-	
+
 	-- Dark tint used for unowned machine silhouettes (preserves transparency)
 	local shadowTint = Color(50, 50, 50, 255)
 
@@ -122,9 +122,9 @@ local function CreateUpgradeSlot(data)
 		-- Unowned: Show tinted silhouette and purchase button
 		table.insert(slotGroup, BitmapTint { x = machX, y = machY, image = machineImg, scale = 0.35, tint = shadowTint })
 		local cost = cat.machinecost or 10000
-		table.insert(slotGroup, Button { 
-			x = machX - 15, y = machY + 70, w = 90, h = 25, scale = 0.9, label = "#" .. Dollars(cost), font = costFont, 
-			command = function() BuyMachinery(cat.name, cost) end 
+		table.insert(slotGroup, Button {
+			x = machX - 15, y = machY + 70, w = 90, h = 25, scale = 0.9, label = "#" .. Dollars(cost), font = costFont,
+			command = function() BuyMachinery(cat.name, cost) end
 		})
 	end
 
@@ -132,7 +132,7 @@ local function CreateUpgradeSlot(data)
 	if cat.factory == "chocolate" then
 		local recX = machX + 110
 		local recY = machY + 20
-		
+
 		if isEquipped then
 			if hasRecycler then
 				-- Recycler Owned
@@ -141,9 +141,9 @@ local function CreateUpgradeSlot(data)
 			else
 				-- Machinery Owned, but Recycler Unowned
 				table.insert(slotGroup, BitmapTint { x = recX, y = recY, image = "image/recycler_icon", scale = 0.55, tint = shadowTint })
-				table.insert(slotGroup, Button { 
-					x = recX - 25, y = recY + 65, w = 100, h = 25, scale = 0.9, label = "#" .. Dollars(kRecyclerCost), font = costFont, 
-					command = function() BuyRecycler(cat.name, kRecyclerCost) end 
+				table.insert(slotGroup, Button {
+					x = recX - 25, y = recY + 65, w = 100, h = 25, scale = 0.9, label = "#" .. Dollars(kRecyclerCost), font = costFont,
+					command = function() BuyRecycler(cat.name, kRecyclerCost) end
 				})
 			end
 		else
@@ -173,7 +173,7 @@ MakeDialog
 		Bitmap
 		{
 			x = 0, y = 0, image = "image/popup_back_awards",
-			
+
 			-- Title Header (Text with white stroke outline effect)
 			Text { x = 55, y = 20, w = 670, h = 100, name = "title_highlight", label = "#" .. GetString("title_upgrades"), font = { labelFontName, 50, WhiteColor }, flags = kVAlignCenter + kHAlignCenter },
 			Text { x = 55, y = 20, w = 670, h = 100, name = "title", label = "#" .. GetString("title_upgrades"), font = { labelFontName, 50, BlackColor }, flags = kVAlignCenter + kHAlignCenter },
@@ -181,7 +181,7 @@ MakeDialog
 			SetStyle(C3ButtonStyle),
 			Group(gridItems),
 		},
-		
+
 		SetStyle(C3RoundButtonStyle),
 		Button { x = 704, y = 406, name = "ok", label = "ok", default = true, cancel = true, command = function() FadeCloseWindow("ui_upgrades", "ok") end },
 		Button { x = 734, y = 361, name = "help", label = "#?", command = function() HelpDialog("help_factory") end },

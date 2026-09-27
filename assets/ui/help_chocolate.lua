@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Help
+	Chocolatier: Decadence by Design Reforged (Help)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -8,7 +8,7 @@
 MakeDialog
 {
 	SetStyle(C3DialogBodyStyle),
-	
+
 	Bitmap { x=5,y=5, image="image/gun_help" },
 	Text { x=155,y=5,w=440,h=kMax, flags=kVAlignTop+kHAlignLeft, label="#"..GetString("help_chocolate_text1") },
 	Text { x=15,y=150,w=580,h=kMax, flags=kVAlignTop+kHAlignLeft, label="#"..GetString("help_chocolate_text2") },

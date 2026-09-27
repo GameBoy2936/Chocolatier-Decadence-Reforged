@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Factory Configuration Content)
+	Chocolatier: Decadence by Design Reforged (Factory Configuration Content)
 	Copyright (c) 2006-2007 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -16,8 +16,8 @@ local countFont = { uiFontName, 50, Color(255, 41, 77) }
 
 -- Coffee blends require a slightly different vertical alignment due to their sprite shape
 local currentAlignment = kHAlignCenter + kVAlignBottom
-if current and current:GetMachinery().name == "blend" then 
-	currentAlignment = kHAlignCenter + kVAlignCenter 
+if current and current:GetMachinery().name == "blend" then
+	currentAlignment = kHAlignCenter + kVAlignCenter
 end
 
 -------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ MakeDialog
 	SetStyle(C3CharacterDialogStyle),
 
 	-- Performance Timer / Gauge Face
-	Bitmap { 
+	Bitmap {
 		x = 147, y = 60, w = 128, h = 128, name = "timer_face", image = "image/timer_face", scale = 128/148,
 		Bitmap { image = "image/timer_hand", scale = 128/148 },
 		Text { x = 0, y = 32, w = 128, h = 64, flags = kVAlignTop + kHAlignCenter, label = "#" .. GetString("cases"), font = { uiFontName, 18, Color(255, 1, 17) } },

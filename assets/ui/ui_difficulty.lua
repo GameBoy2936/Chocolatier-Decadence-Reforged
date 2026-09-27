@@ -1,9 +1,9 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Difficulty Selector)
-	Modified (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Difficulty Selector)
+	Reforged modifications (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
-local titleFont = { uiFontName, 24, BlackColor } 
+local titleFont = { uiFontName, 24, BlackColor }
 local difficultyFont = { labelFontName, 22, BlackColor }
 
 -- Internal state tracking the current selection before the player confirms it
@@ -31,7 +31,7 @@ end
 -- Invoked when clicking the button row.
 local function SelectDifficulty(level)
 	selectedDifficulty = level
-	UpdateSelectionVisuals() 
+	UpdateSelectionVisuals()
 end
 
 -- Invoked when the player officially confirms their choice.
@@ -50,12 +50,12 @@ MakeDialog
 	{
 		name = "difficulty_select",
 		x = 1000, y = kCenter, image = "image/popup_back_generic_1",
-		
+
 		SetStyle(C3DialogBodyStyle),
 		Text { x = 20, y = 42, w = 459, h = 50, label = "#" .. GetString("difficulty_prompt"), font = titleFont, flags = kVAlignCenter + kHAlignCenter },
-		
+
 		-- Tier 1: Easy (Standard)
-		Button { 
+		Button {
 			x = kCenter - 150, y = 106, w = 140, h = 80, graphics = {},
 			command = function() SelectDifficulty(1) end,
 			Group {
@@ -65,7 +65,7 @@ MakeDialog
 		},
 
 		-- Tier 2: Medium (10%-25% tougher economy margins)
-		Button { 
+		Button {
 			x = kCenter, y = 106, w = 140, h = 80, graphics = {},
 			command = function() SelectDifficulty(2) end,
 			Group {
@@ -75,7 +75,7 @@ MakeDialog
 		},
 
 		-- Tier 3: Hard (Aggressive, predatory economy constraints)
-		Button { 
+		Button {
 			x = kCenter + 150, y = 106, w = 140, h = 80, graphics = {},
 			command = function() SelectDifficulty(3) end,
 			Group {
@@ -83,7 +83,7 @@ MakeDialog
 				Text { x = kCenter, y = 50, w = 140, h = 30, label = "#" .. GetString("difficulty_hard"), font = difficultyFont, flags = kVAlignCenter + kHAlignCenter },
 			}
 		},
-		
+
 		SetStyle(C3ButtonStyle),
 		Button { x = 113, y = 237, name = "ok", label = "done", command = okFunction, default = true },
 		Button { x = 256, y = 237, name = "cancel", label = "cancel", command = function() FadeCloseWindow("difficulty_select", nil) end, cancel = true },

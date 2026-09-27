@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Market Interface)
+	Chocolatier: Decadence by Design Reforged (Market Interface)
 	Copyright (c) 2006-2007 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 require("ui/helpers.lua")
@@ -37,16 +37,16 @@ local lastHaggleResult = nil
 -------------------------------------------------------------------------------
 -- UI: Dynamic Font Auto-Scaler
 -------------------------------------------------------------------------------
--- Dynamically measures the character length of the merchant's dialogue string 
+-- Dynamically measures the character length of the merchant's dialogue string
 -- and shrinks the font size to ensure it fits cleanly inside the speech bubble UI.
 local function SetDynamicKeeperText(text)
 	if not text then text = "" end
 	local function Ceil(x) return Floor(x + 0.99999) end
-	
+
 	-- Font Size to Line-Capacity mappings
 	local font_sizes_to_check = { 16, 15, 14 }
 	local chars_per_line_map = { [16] = 54,[15] = 56, [14] = 58 }
-	
+
 	-- Split the text by HTML line breaks
 	local segments = {}
 	local current_pos = 1
@@ -60,7 +60,7 @@ local function SetDynamicKeeperText(text)
 		table.insert(segments, string.sub(text, current_pos))
 	end
 	if table.getn(segments) == 0 then segments = { text or "" } end
-	
+
 	-- Evaluate the optimal font size
 	local final_font_size = 14
 	for _, current_font_size in ipairs(font_sizes_to_check) do
@@ -69,14 +69,14 @@ local function SetDynamicKeeperText(text)
 		for _, segment in ipairs(segments) do
 			total_lines = total_lines + Ceil(string.len(segment) / chars_per_line)
 		end
-		
+
 		-- If it fits within 2 lines, we lock in this font size
 		if total_lines <= 2 then
 			final_font_size = current_font_size
-			break 
+			break
 		end
 	end
-	
+
 	-- Apply the evaluated size
 	local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
 	SetLabel("keeper_text", formatted_text)
@@ -90,29 +90,29 @@ end
 local function BuyIngredient(ing, n)
 	transactionCompleted = true
 	SoundEvent("buy")
-	
+
 	-- 1. Milestone Tracking
 	local itemKey = ing.name
 	local portKey = port.name
 	local isFirstEver = not Player.firstEverBuy[itemKey]
-	
+
 	Player.firstBuy[portKey] = Player.firstBuy[portKey] or {}
 	local isFirstAtPort = not Player.firstBuy[portKey][itemKey]
 
 	if isFirstEver then
 		Player.firstEverBuy[itemKey] = true
-		DebugOut("PLAYER", string.format("Global First: Player bought ingredient '%s' for the first time.", itemKey))
+		DebugOut("PLAYER", string.format("First global transaction: Player bought ingredient '%s' for the first time.", itemKey))
 	end
 	if isFirstAtPort then
 		Player.firstBuy[portKey][itemKey] = true
-		DebugOut("PLAYER", string.format("Local First: Player bought ingredient '%s' at port '%s' for the first time.", itemKey, portKey))
+		DebugOut("PLAYER", string.format("First local transaction: Player bought ingredient '%s' at port '%s' for the first time.", itemKey, portKey))
 	end
-	
+
 	-- 2. Execute Purchase
 	ing:Buy(n)
-	
+
 	-- 3. Merchant Mood Adjustment
-	-- Completing a transaction makes the merchant happy, UNLESS the player just insulted 
+	-- Completing a transaction makes the merchant happy, UNLESS the player just insulted
 	-- them with a failed haggle attempt, in which case it only returns them to neutral.
 	if lastHaggleResult == "bad" then
 		char:MakeNeutral()
@@ -143,7 +143,7 @@ local count = table.getn(ingredients)
 -------------------------------------------------------------------------------
 -- Dynamic Layout Engine
 -------------------------------------------------------------------------------
--- Evaluates the number of ingredients for sale and automatically scales and 
+-- Evaluates the number of ingredients for sale and automatically scales and
 -- arranges the burlap sack icons so they fit cleanly in the UI window.
 
 local layout =
@@ -159,15 +159,15 @@ local layout =
 	rowCount = 0,
 	count = count,
 	ingredientList = {},
-	
+
 	Initialize = function(self)
 		self.perRow = Floor(self.dx / self.xDelta)
-		if self.perRow == self.count and self.count > 3 then 
-			self.perRow = Floor((self.count + 1) / 2) 
+		if self.perRow == self.count and self.count > 3 then
+			self.perRow = Floor((self.count + 1) / 2)
 		end
 		self.rows = Floor((self.count + self.perRow - 1) / self.perRow)
 		self.perRow = Floor((self.count + self.rows - 1) / self.rows)
-		
+
 		self.xLeft = 226 + (self.dx - self.perRow * self.xDelta) / 2
 		self.x = self.xLeft
 	end,
@@ -184,27 +184,27 @@ if count <= 3 then
 		local ing = ingredient
 		local currentPrice = ing:GetPrice()
 		local priceLabel = Dollars(currentPrice)
-		
+
 		-- Color code the price tag if a rumor/tip is active
 		local modifier = Tips.GetPriceModifier(ing.name, port.name)
 		if modifier > 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>" end
-		
+
 		-- Render "New!" burst underlay if the player has never seen this item here
 		if not Player.lastSeenPort[ing.name] then
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up",
 				Bitmap { x = 6, y = 18, image = "image/button_recipes_new_underlay", scale = 120/100 },
-				Bitmap { x = 33, y = 47, image = "items/" .. ing.name .. "_big" } 
+				Bitmap { x = 33, y = 47, image = "items/" .. ing.name .. "_big" }
 			})
 		else
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up",
-				Bitmap { x = 33, y = 47, image = "items/" .. ing.name .. "_big" } 
+				Bitmap { x = 33, y = 47, image = "items/" .. ing.name .. "_big" }
 			})
 		end
-		
-		table.insert(self.ingredientList, Rollover { 
+
+		table.insert(self.ingredientList, Rollover {
 			x = self.x + 33, y = self.y + 47, w = 64, h = 64, contents = ing.name .. ":MarketRolloverContents()", fit = false,
 			command = function()
 				local count = DisplayDialog { "ui/ui_buysell.lua", buy = ing, onOk = function(n) BuyIngredient(ing, n) end }
@@ -213,7 +213,7 @@ if count <= 3 then
 					if not Player.firstEverBuy[ing.name] then thanks_key = "market_thanks_firstever"
 					elseif not Player.firstBuy[port.name][ing.name] then thanks_key = "market_thanks_firstatbuilding" end
 					SetDynamicKeeperText(GetMerchantDialogue(thanks_key, char, market, lastHaggleResult, ing.name, nil, count))
-					lastHaggleResult = nil 
+					lastHaggleResult = nil
 				end
 			end,
 		})
@@ -234,21 +234,21 @@ elseif count <= 10 then
 		local modifier = Tips.GetPriceModifier(ing.name, port.name)
 		if modifier > 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>" end
-		
+
 		if not Player.lastSeenPort[ing.name] then
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up", scale = 0.6,
 				Bitmap { x = 4, y = 10, image = "image/button_recipes_new_underlay", scale = 72/100 },
-				Bitmap { x = 20, y = 28, image = "items/" .. ing.name .. "_big", scale = 0.6 } 
+				Bitmap { x = 20, y = 28, image = "items/" .. ing.name .. "_big", scale = 0.6 }
 			})
 		else
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up", scale = 0.6,
-				Bitmap { x = 20, y = 28, image = "items/" .. ing.name .. "_big", scale = 0.6 } 
+				Bitmap { x = 20, y = 28, image = "items/" .. ing.name .. "_big", scale = 0.6 }
 			})
 		end
-		
-		table.insert(self.ingredientList, Rollover { 
+
+		table.insert(self.ingredientList, Rollover {
 			x = self.x + 20, y = self.y + 28, w = 38, h = 38, contents = ing.name .. ":MarketRolloverContents()", fit = false,
 			command = function()
 				local count = DisplayDialog { "ui/ui_buysell.lua", buy = ing, onOk = function(n) BuyIngredient(ing, n) end }
@@ -278,21 +278,21 @@ elseif count <= 16 then
 		local modifier = Tips.GetPriceModifier(ing.name, port.name)
 		if modifier > 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>" end
-		
+
 		if not Player.lastSeenPort[ing.name] then
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up", scale = 0.5,
 				Bitmap { x = 3, y = 9, image = "image/button_recipes_new_underlay", scale = 60/100 },
-				Bitmap { x = 17, y = 24, image = "items/" .. ing.name .. "_big", scale = 0.5 } 
+				Bitmap { x = 17, y = 24, image = "items/" .. ing.name .. "_big", scale = 0.5 }
 			})
 		else
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up", scale = 0.5,
-				Bitmap { x = 17, y = 24, image = "items/" .. ing.name .. "_big", scale = 0.5 } 
+				Bitmap { x = 17, y = 24, image = "items/" .. ing.name .. "_big", scale = 0.5 }
 			})
 		end
 
-		table.insert(self.ingredientList, Rollover { 
+		table.insert(self.ingredientList, Rollover {
 			x = self.x + 16, y = self.y + 24, w = 32, h = 32, contents = ing.name .. ":MarketRolloverContents()", fit = false,
 			command = function()
 				local count = DisplayDialog { "ui/ui_buysell.lua", buy = ing, onOk = function(n) BuyIngredient(ing, n) end }
@@ -322,21 +322,21 @@ else
 		local modifier = Tips.GetPriceModifier(ing.name, port.name)
 		if modifier > 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>" end
-		
+
 		if not Player.lastSeenPort[ing.name] then
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up", scale = 0.45,
 				Bitmap { x = 4, y = 8, image = "image/button_recipes_new_underlay", scale = 54/100 },
-				Bitmap { x = 16, y = 21, image = "items/" .. ing.name .. "_big", scale = 0.45 } 
+				Bitmap { x = 16, y = 21, image = "items/" .. ing.name .. "_big", scale = 0.45 }
 			})
 		else
-			table.insert(self.ingredientList, Bitmap { 
+			table.insert(self.ingredientList, Bitmap {
 				x = self.x, y = self.y, image = "image/button_sack_up", scale = 0.45,
-				Bitmap { x = 16, y = 21, image = "items/" .. ing.name .. "_big", scale = 0.45 } 
+				Bitmap { x = 16, y = 21, image = "items/" .. ing.name .. "_big", scale = 0.45 }
 			})
 		end
 
-		table.insert(self.ingredientList, Rollover { 
+		table.insert(self.ingredientList, Rollover {
 			x = self.x + 15, y = self.y + 21, w = 30, h = 30, contents = ing.name .. ":MarketRolloverContents()", fit = false,
 			command = function()
 				local count = DisplayDialog { "ui/ui_buysell.lua", buy = ing, onOk = function(n) BuyIngredient(ing, n) end }
@@ -379,7 +379,7 @@ local function Haggle()
 		for _, tip in ipairs(Player.activeTips) do
 			if tip.port == port.name and tip.type == "up" and tip.port_wide then
 				block_haggle = true
-				refusal_key = "market_haggle_refusal_event_priceup_all" 
+				refusal_key = "market_haggle_refusal_event_priceup_all"
 				break
 			end
 		end
@@ -390,15 +390,15 @@ local function Haggle()
 		local refusal_text = GetMerchantDialogue(refusal_key, char, market)
 		SetDynamicKeeperText(refusal_text)
 		SoundEvent("negative_haggle")
-		return 
+		return
 	end
 
 	-- Launch Haggle Minigame UI
 	local response = DisplayDialog { "ui/ui_haggle.lua", char = char, market = market, pushedLuck = haggleSucceededOnce }
-	
+
 	-- Update state based on the result of the dialogue pop-up
 	lastHaggleResult = gHaggleSuccess
-	
+
 	if gHaggleSuccess == "good" then
 		local response_key
 		if haggleSucceededOnce then
@@ -407,17 +407,17 @@ local function Haggle()
 		else
 			response_key = "market_haggle_response_good"
 		end
-		
+
 		local response_text = GetMerchantDialogue(response_key, char, market)
 		if response_text then SetDynamicKeeperText(response_text) end
 
 		haggleSucceededOnce = true
 		market:HaggleSuccess()
 		char:MakeHappy()
-		
+
 		-- Leave the Haggle button enabled to allow "Pushing Luck" (unless Rank 1)
 		EnableWindow("haggle", (Player.rank > 1) and (not Player.haggleDisable[char.name]))
-		
+
 	elseif gHaggleSuccess == "bad" then
 		local response_key
 		if haggleSucceededOnce then
@@ -425,7 +425,7 @@ local function Haggle()
 		else
 			response_key = "market_haggle_response_bad"
 		end
-		
+
 		local response_text = GetMerchantDialogue(response_key, char, market)
 		SetDynamicKeeperText(response_text)
 
@@ -433,8 +433,8 @@ local function Haggle()
 		char:MakeAngry()
 		Player.haggleDisable[char.name] = true
 		EnableWindow("haggle", false)
-		
-	elseif response then 
+
+	elseif response then
 		SetDynamicKeeperText(response)
 	end
 end
@@ -447,23 +447,23 @@ local function CloseMarketWindow()
 			local displayedPrice = ing:GetPrice()
 			if port then Player.lastSeenPort[ing.name] = port.name end
 			Player.lastSeenPrice[ing.name] = displayedPrice
-			
+
 			local modifier = Tips.GetPriceModifier(ing.name, port.name)
 			local basePrice = Floor(displayedPrice / modifier)
-			
+
 			if not Player.lowPrice[ing.name] then Player.lowPrice[ing.name] = basePrice
 			elseif basePrice < Player.lowPrice[ing.name] then Player.lowPrice[ing.name] = basePrice
 			end
-			
+
 			if not Player.highPrice[ing.name] then Player.highPrice[ing.name] = basePrice
 			elseif basePrice > Player.highPrice[ing.name] then Player.highPrice[ing.name] = basePrice
 			end
 		end
 	end
-	
+
 	-- Tick the simulation forward slightly to account for the time spent transacting
 	if transactionCompleted then SubTickSim() end
-	
+
 	FadeCloseWindow("ui_market", "ok")
 end
 
@@ -481,18 +481,18 @@ MakeDialog
 		Bitmap
 		{
 			x = 0, y = 9, image = "image/popup_back_market",
-			
+
 			-- Main Interface Text
 			SetStyle(C3CharacterDialogStyle),
-			Text { x = 235, y = 32, w = 398, h = 50, name = "keeper_text" }, 
-			
+			Text { x = 235, y = 32, w = 398, h = 50, name = "keeper_text" },
+
 			-- Render the dynamically generated product layout
 			Group(layout.ingredientList),
-			
+
 			-- Character Identity Plate
 			SetStyle(C3CharacterNameStyle),
 			Text { x = 37, y = 241, w = 187, h = 20, label = "#" .. GetString(char.name), font = characterNameFont, flags = kVAlignCenter + kHAlignCenter },
-			
+
 			-- UI Controls
 			SetStyle(C3ButtonStyle),
 			Button { x = 334, y = 280, name = "haggle", label = "haggle", command = Haggle },

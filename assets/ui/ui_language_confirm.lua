@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Language Confirmation)
-	Copyright (c) 2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Language Confirmation)
+	Copyright (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ end
 -------------------------------------------------------------------------------
 -- The current-language question and restart note come from XML, because they
 -- should be rendered in the language currently loaded into memory.
---
+
 -- The selected-language question and restart note live here, because the target
 -- language's XML is not loaded until the next launch.
 
@@ -331,17 +331,17 @@ MakeDialog
 			command = ConfirmLanguage,
 			default = true,
 			cancel = false,
-			
+
 			font = buttonFont,
 			flags = kVAlignCenter + kHAlignCenter,
 			ty = kCenter - 3,
 			tx = kCenter - 1,
-			
+
 			graphics = C3ButtonMediumStyle.graphics,
 			sound = C3ButtonMediumStyle.sound,
 			type = C3ButtonMediumStyle.type,
 		},
-		
+
 		Button {
 			x = 253, y = 237, w = 165, h = 50,
 			name = "no",
@@ -349,12 +349,12 @@ MakeDialog
 			command = CancelLanguage,
 			default = false,
 			cancel = true,
-			
+
 			font = buttonFont,
 			flags = kVAlignCenter + kHAlignCenter,
 			ty = kCenter - 3,
 			tx = kCenter - 1,
-			
+
 			graphics = C3ButtonMediumStyle.graphics,
 			sound = C3ButtonMediumStyle.sound,
 			type = C3ButtonMediumStyle.type,

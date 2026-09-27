@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three Port Data: Zürich, Switzerland
+	Chocolatier: Decadence by Design Reforged (Port Data - Zürich, Switzerland)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -11,13 +11,13 @@ zurich.region = "europe"
 zurich.country = "switzerland"
 zurich.culture = "european"
 
---Begin Clickable Locations===================
+-- Begin Clickable Locations===================
 
 CreateBuilding("zur_market", zurich, Market)
-zur_market.x = 534.5 
-zur_market.y = 230.5 
+zur_market.x = 534.5
+zur_market.y = 230.5
 zur_market.layer = 860
-zur_market.inventory = { almond, amaretto, caramel, cherry, espresso, grand_marnier, hazelnut, honey, lavender, lemon, milk, orange, rose, sugar, walnut, whiskey }
+zur_market.inventory = { almond, amaretto, blueberry, caramel, cherry, espresso, grand_marnier, hazelnut, honey, lavender, lemon, milk, orange, rose, sugar, whiskey }
 
 CreateBuilding("zur_shop", zurich, Shop)
 zur_shop.x = 107
@@ -25,10 +25,11 @@ zur_shop.y = 209.5
 zur_shop.layer = 900
 
 CreateBuilding("zur_factory", zurich, Factory)
-zur_factory.x = 428.5 
-zur_factory.y = 255 
+zur_factory.purchaseCharacter = "zur_factorykeep"
+zur_factory.x = 428.5
+zur_factory.y = 255
 zur_factory.layer = 820
-zur_factory.windowX =57 
+zur_factory.windowX =57
 zur_factory.windowY =20
 
 CreateBuilding("zur_station", zurich, TrainStation)
@@ -60,9 +61,17 @@ zur_bank.x = 687.5
 zur_bank.y = 204
 zur_bank.layer = 920
 
---End Clickable Locations=============================
---
---Begin Non-Animated Sprites=======================================
+-- End Clickable Locations=============================
+
+-- Begin Non-Animated Sprites=======================================
+-- LIVING CHARACTER MOBILITY
+-- Venue metadata stays with the geography it describes.
+zur_station:SetMobilityProfile({ transit=true }, 50)
+zur_tower:SetMobilityProfile({ cultural=true }, 85)
+zur_mountain:SetMobilityProfile({ wilderness=true, landmark=true }, 100)
+zur_school:SetMobilityProfile({ academic=true }, 75)
+zur_bank:SetMobilityProfile({ business=true, finance=true }, 80, { "business", "finance" })
+
 CreateSprite("zur_mountain_mask", zurich)
 zur_mountain_mask.x = 489
 zur_mountain_mask.y = 124
@@ -112,23 +121,21 @@ CreateSprite("zur_trees", zurich)
 zur_trees.x = 136
 zur_trees.y = 372.5
 zur_trees.layer = 970
---
---CreateSprite("zur_carfar", zurich)
---zur_carfar.x = 741
---zur_carfar.y = 325
---zur_carfar.layer = 915
---
+
+-- zur_carfar.x = 741
+-- zur_carfar.y = 325
+-- zur_carfar.layer = 915
+
 CreateSprite("zur_carsparked", zurich)
 zur_carsparked.x = 316.5
 zur_carsparked.y = 365
 zur_carsparked.layer = 965
--- 
 
---End Non-Animated Sprites=======================================
---
---Begin Animated Sprites=======================================
+-- End Non-Animated Sprites=======================================
 
---animate boat1 red on river
+-- Begin Animated Sprites=======================================
+
+-- animate boat1 red on river
 CreateSprite("zur_boat1", zurich)
 zur_boat1.time = 9000
 zur_boat1.motion = 'loop' --motion can be "bounce" "loop" or "oneway"
@@ -140,7 +147,7 @@ zur_boat1.speedFar=0.05
 zur_boat1.speedNear=1.5
 zur_boat1.path={{904,582},{520,420},{510,420},{276,306},}
 
---animate boat2 white on river
+-- animate boat2 white on river
 CreateSprite("zur_boat2", zurich)
 zur_boat2.time = 12000
 zur_boat2.motion ='loop' --motion can be "bounce" "loop" or "oneway"
@@ -152,7 +159,7 @@ zur_boat2.speedFar=0.05
 zur_boat2.speedNear=1.5
 zur_boat2.path={{260,301},{260,301},{940,437},{940,437}}
 
---Car on Bridge
+-- Car on Bridge
 CreateSprite("zur_car1",zurich)
 zur_car1.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3","ports/animations/car4"}
 zur_car1.time=4000
@@ -168,7 +175,7 @@ zur_car1.path= {{84,682},{104,622},{146,506},{200,440},{234,400},{290,350},{354,
 zur_car1.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask","ports/animations/car4_colormask",}
 zur_car1.tints = { Color(200,0,0,255), Color(0,200,0,255), Color(0,0,200,255),Color(200,200,0,255),Color(200,0,200,255),Color(0,200,200,255), }
 
---cars moving on z-axis street
+-- cars moving on z-axis street
 CreateSprite("zur_car2",zurich)
 zur_car2.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3","ports/animations/car4"}
 zur_car2.time=6000
@@ -183,7 +190,7 @@ zur_car2.yNear=600
 zur_car2.path= {{96,666},{110,630},{234,318},{236,302},{232,300},{214,300},{194,300},{146,300},{104,300},{74,300}}
 zur_car2.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask","ports/animations/car4_colormask",}
 zur_car2.tints = { Color(200,0,0,255), Color(0,200,0,255), Color(0,0,200,255),Color(200,200,0,255),Color(200,0,200,255),Color(0,200,200,255), }
---
+
 CreateSprite("zur_car5",zurich)
 zur_car5.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3","ports/animations/car4"}
 zur_car5.time=5000
@@ -199,7 +206,7 @@ zur_car5.path= {{270,296},{235,304},{235,328},{265,378},{300,456},{370,614},{400
 zur_car5.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask","ports/animations/car4_colormask",}
 zur_car5.tints = { Color(200,0,0,255), Color(0,200,0,255), Color(0,0,200,255),Color(200,200,0,255),Color(200,0,200,255),Color(0,200,200,255), }
 
---cars moving on far parallel street
+-- cars moving on far parallel street
 CreateSprite("zur_car3",zurich)
 zur_car3.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3"}--No truck
 zur_car3.time=1200
@@ -214,7 +221,7 @@ zur_car3.yNear=600
 zur_car3.path= {{97,300},{144,300},{544,300},{573,300}}
 zur_car3.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask"}--No truck
 zur_car3.tints = { Color(200,0,0,255), Color(0,200,0,255), Color(0,0,200,255),Color(200,200,0,255),Color(200,0,200,255),Color(0,200,200,255), }
---
+
 CreateSprite("zur_car4",zurich)
 zur_car4.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3"}--No truck
 zur_car4.time=1500
@@ -230,10 +237,9 @@ zur_car4.path= {{573,303},{573,303},{97,303},{97,303}}
 zur_car4.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask"}--No truck
 zur_car4.tints = { Color(200,0,0,255), Color(0,200,0,255), Color(0,0,200,255),Color(200,200,0,255),Color(200,0,200,255),Color(0,200,200,255), }
 
+-- cars on far street
 
---cars on far street
-
---animate clouds
+-- animate clouds
 CreateSprite("zur_clouds1", zurich)
 zur_clouds1.x = 131
 zur_clouds1.y = 100
@@ -243,7 +249,7 @@ zur_clouds1.time = 100000
 zur_clouds1.motion = "loop"		-- This is the default, other options are "bounce" and "oneway"
 zur_clouds1.htile = 400			-- Horizontal tiling to the left and right
 zur_clouds1.frequency = 60		-- Only show this cloud 50% of the timel. Default is 100%.
---kon_cloud1.random = false		-- Keeping this in means kon_cloud1 will always start at the beginning of the path
+-- kon_cloud1.random = false		-- Keeping this in means kon_cloud1 will always start at the beginning of the path
 
 CreateSprite("zur_clouds2", zurich)
 zur_clouds2.x = 131
@@ -254,7 +260,6 @@ zur_clouds2.time = 190000
 zur_clouds2.motion = "loop"		-- This is the default, other options are "bounce" and "oneway"
 zur_clouds2.htile = 400			-- Horizontal tiling to the left and right
 zur_clouds2.frequency = 80		-- Only show this cloud 50% of the timel. Default is 100%.
---kon_cloud1.random = false		-- Keeping this in means kon_cloud1 will always start at the beginning of the path
+-- kon_cloud1.random = false		-- Keeping this in means kon_cloud1 will always start at the beginning of the path
 
-
---End Animated Sprites=======================================
+-- End Animated Sprites=======================================

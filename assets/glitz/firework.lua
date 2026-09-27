@@ -1,3 +1,9 @@
+--[[---------------------------------------------------------------------------
+	Chocolatier: Decadence by Design Reforged (Firework Effect)
+	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
+	Reforged modifications (c) 2026 Michael Lane.
+--]]---------------------------------------------------------------------------
+
 ---------------------------------------------------------------
 -- FIREWORK: Explode quickly in all directions, falling down and spinning, with slow color fade
 -- Controllable:
@@ -18,13 +24,11 @@ end
 
 SetBlendMode(kBlendNormal)
 SetNumParticles(80)
---SetNumParticles(120)
 
 ---------------------------------------------------------------
 -- Particle initialization
 
 pPosition:Init( fRange( Vec2(-2,-2), Vec2(2,2) ) )
---pScale:Init( fRange(.3,1) )
 pScale:Init( fRange(.2,.75) )
 
 pGravity:Init( fRange( Vec2(0,90), Vec2(0,110) ) )
@@ -34,12 +38,8 @@ pAge:Init(0)
 pSpin:Init( fRange( 0, 2*3.1415927 ) )
 pSpinSpeed:Init( fRange( 60,80 ) )
 
---if not gSparkleColorStart then gSparkleColorStart = Color(1,1,1,1) end
---if not gSparkleColorEnd then gSparkleColorEnd = Color(1,1,1,0) end
 gSparkleColorStart = Color(1,1,1,.8)
 gSparkleColorEnd = Color(1,1,1,0)
---pColor:Init(gSparkleColorStart)
---pColor:Init(gSparkleColorEnd)
 pColor:Init(Color(1,1,1,1))
 pColor:Init(Color(1,1,1,0))
 
@@ -51,7 +51,6 @@ pPosition:Anim( pPosition + fTimeScale(pVelocity) )
 pVelocity:Anim( pVelocity + fTimeScale(pGravity) )
 
 -- Fade
---pColor:Anim(  fFade( pAge, gSparkleColorStart, 1000, gSparkleColorEnd ) )
 pColor:Anim(  fFade( pAge, gSparkleColorStart, 2000, gSparkleColorEnd ) )
 
 -- Shrink
@@ -63,7 +62,7 @@ pUp:Anim( f2dRotation( pSpin ) )
 
 -- Age the particle using age function, expire after given time
 pAge:Anim( pAge+fAge() )
---Anim( fExpire( fGreater(pAge,1000) ) )
+-- Anim( fExpire( fGreater(pAge,1000) ) )
 Anim( fExpire( fGreater(pAge,2000) ) )
 
 ---------------------------------------------------------------
@@ -76,6 +75,5 @@ function Update(seconds)
 	if gSparkleTime > 0 then
 		gSparkleTime = gSparkleTime - seconds
 		CreateParticles( seconds * 800 )
---		CreateParticles( seconds * 1200 )
 	end
 end

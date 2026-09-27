@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Master Catalogue UI)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Master Catalogue UI)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- ----------------------------------------------------------------------------
@@ -44,7 +44,7 @@ local categoriesPerPage = 7 -- The maximum number of top-level tabs that visuall
 local function UpdatePanels()
 	local list_script = list_scripts[gCatalogueCategory] or "ui/quest_none.lua"
 	FillWindow("catalogue_list", list_script)
-	
+
 	-- The detail window relies on a dispatcher script to route to the correct layout
 	FillWindow("catalogue_detail", "ui/catalogue_detail.lua")
 end
@@ -57,7 +57,7 @@ local function SelectCategory(cat_key)
 		gCatalogueSelection = nil
 		gCatalogueTopIndex = 1
 		UpdatePanels()
-		
+
 		-- Visually lock down the pressed tab
 		for i = 1, totalCategories do
 			local cat = categories[i]
@@ -75,7 +75,7 @@ end
 -- Standard vertical pagination logic for the internal lists
 local function ScrollUp()
 	if gCatalogueTopIndex > 1 and gCatalogueLayout then
-		gCatalogueTopIndex = gCatalogueTopIndex - gCatalogueLayout.items_per_row 
+		gCatalogueTopIndex = gCatalogueTopIndex - gCatalogueLayout.items_per_row
 		if gCatalogueTopIndex < 1 then gCatalogueTopIndex = 1 end
 		FillWindow("catalogue_list", list_scripts[gCatalogueCategory])
 	end
@@ -121,15 +121,15 @@ local startIndex = (gCatalogueCategoryPage - 1) * categoriesPerPage + 1
 for i = 1, categoriesPerPage do
 	local cat_index = startIndex + i - 1
 	local cat_key = categories[cat_index]
-	
+
 	if cat_key then
 		local tempKey = cat_key
 		local info = categoryPositions[i] -- Absolute position based on visual slot 1-7
-		
-		table.insert(categoryTabs, JukeboxCategoryButton { 
-			x = info.x, y = info.y, name = tempKey, label = "catalogue_" .. tempKey, 
+
+		table.insert(categoryTabs, JukeboxCategoryButton {
+			x = info.x, y = info.y, name = tempKey, label = "catalogue_" .. tempKey,
 			graphics = { "image/recipes_category_" .. i .. "_enabled", "image/recipes_category_" .. i .. "_used" },
-			type = kRadio, command = function() SelectCategory(tempKey) end 
+			type = kRadio, command = function() SelectCategory(tempKey) end
 		})
 	end
 end
@@ -146,11 +146,11 @@ MakeDialog
 		Bitmap
 		{
 			x = 4, y = 16, image = "image/popup_back_catalogue",
-			
+
 			-- Sub-window anchors for the dynamic child panels
 			Window { name = "catalogue_list", x = 16, y = 91, w = 289, h = 484 },
 			Window { name = "catalogue_detail", x = 311, y = 98, w = 457, h = 484 },
-			
+
 			-- Category Pagination
 			Button { x = 5, y = 12, name = "prev_cat_page", command = PrevCategoryPage, graphics = { "image/button_arrow_left_up", "image/button_arrow_left_down", "image/button_arrow_left_over" }, scale = 0.75 },
 			Group(categoryTabs),
@@ -161,11 +161,11 @@ MakeDialog
 			Button { x = 150, y = 510, name = "catalogue_scrollUp", command = ScrollUp, graphics = { "image/button_arrow_up_up", "image/button_arrow_up_down", "image/button_arrow_up_over" }, scale = 0.75 },
 			Button { x = 210, y = 510, name = "catalogue_scrollDown", command = ScrollDown, graphics = { "image/button_arrow_down_up", "image/button_arrow_down_down", "image/button_arrow_down_over" }, scale = 0.75 },
 		},
-		
+
 		Bitmap { image = "image/popup_nameplate", x = 228, y = 0,
 			Text { x = 34, y = 10, w = 270, h = 38, label = "#" .. GetString("ledger_catalogue"), font = nameplateFont, flags = kVAlignCenter + kHAlignCenter },
 		},
-		
+
 		SetStyle(C3RoundButtonStyle),
 		Button { x = 734, y = 502, name = "ok", label = "ok", default = true, cancel = true, command = function() FadeCloseWindow("catalogue", "ok") end },
 	},

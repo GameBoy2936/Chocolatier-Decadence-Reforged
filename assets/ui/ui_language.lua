@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Language Engine Menu)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Language Engine Menu)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -44,7 +44,7 @@ local FontMongolian		= "fonts/notoserifmongolian.mvec"		-- Mongolian
 -------------------------------------------------------------------------------
 -- Active entries appear in the language list.
 -- Commented entries are pre-defined and ready to uncomment once localized.
---
+
 -- The list label comes from XML via lang_*. That means it appears in the
 -- currently loaded UI language and uses uiFontName. The native/font data is only
 -- used after click, inside ui_language_confirm.lua.
@@ -61,20 +61,22 @@ local availableLanguages = {
 	{ code = "pt_eu",	key = "lang_pt_eu",		native = "Português (Portugal)",		font = FontLatin },
 	{ code = "pt_br",	key = "lang_pt_br",		native = "Português (Brasil)",			font = FontLatin },
 	{ code = "ca",		key = "lang_ca",		native = "Català",						font = FontLatin },
-	{ code = "mt",		key = "lang_mt",		native = "Malti",						font = FontLatin },
 	{ code = "pl",		key = "lang_pl",		native = "Polski",						font = FontLatin },
-	{ code = "cz",		key = "lang_cz",		native = "Čeština",					font = FontLatin },
+	{ code = "cz",		key = "lang_cz",		native = "Čeština",						font = FontLatin },
 	{ code = "hu",		key = "lang_hu",		native = "Magyar",						font = FontLatin },
 	{ code = "ro",		key = "lang_ro",		native = "Română",						font = FontLatin },
 	{ code = "hr",		key = "lang_hr",		native = "Hrvatski",					font = FontLatin },
 	{ code = "sr",		key = "lang_sr",		native = "Српски",						font = FontCyrillic },
 	{ code = "bg",		key = "lang_bg",		native = "Български",					font = FontCyrillic },
+	{ code = "lt",		key = "lang_lt",		native = "Lietuvių",					font = FontLatin },
+	{ code = "lv",		key = "lang_lv",		native = "Latviešu",					font = FontLatin },
+	{ code = "et",		key = "lang_et",		native = "Eesti",						font = FontLatin },
 	{ code = "da",		key = "lang_da",		native = "Dansk",						font = FontLatin },
 	{ code = "is",		key = "lang_is",		native = "Íslenska",					font = FontLatin },
 	{ code = "no",		key = "lang_no",		native = "Norsk",						font = FontLatin },
-	{ code = "sv",		key = "lang_sv",		native = "Svenska",					font = FontLatin },
+	{ code = "sv",		key = "lang_sv",		native = "Svenska",						font = FontLatin },
 	{ code = "fi",		key = "lang_fi",		native = "Suomi",						font = FontLatin },
-	{ code = "ru",		key = "lang_ru",		native = "Русский",					font = FontCyrillic },
+	{ code = "ru",		key = "lang_ru",		native = "Русский",						font = FontCyrillic },
 	{ code = "uk",		key = "lang_uk",		native = "Українська",					font = FontCyrillic },
 	{ code = "el",		key = "lang_el",		native = "Ελληνικά",					font = FontGreek },
 	{ code = "tr",		key = "lang_tr",		native = "Türkçe",						font = FontLatin },
@@ -82,7 +84,7 @@ local availableLanguages = {
 	{ code = "zht",		key = "lang_zht",		native = "中文（繁體）",					font = FontChineseT },
 	{ code = "ko",		key = "lang_ko",		native = "한국어",						font = FontKorean },
 	{ code = "ja",		key = "lang_ja",		native = "日本語",						font = FontJapanese },
-	{ code = "th",		key = "lang_th",		native = "ไทย",						font = FontThai },
+	{ code = "th",		key = "lang_th",		native = "ไทย",							font = FontThai },
 	{ code = "vi",		key = "lang_vi",		native = "Tiếng Việt",					font = FontLatin },
 	{ code = "id",		key = "lang_id",		native = "Bahasa Indonesia",			font = FontLatin },
 	{ code = "ms",		key = "lang_ms",		native = "Bahasa Melayu",				font = FontLatin },
@@ -95,12 +97,10 @@ local availableLanguages = {
 	-- { code = "eu",	key = "lang_eu",		native = "Euskara",						font = FontLatin },
 	-- { code = "ga",	key = "lang_ga",		native = "Gaeilge",						font = FontLatin },
 	-- { code = "cy",	key = "lang_cy",		native = "Cymraeg",						font = FontLatin },
+	-- { code = "mt",	key = "lang_mt",		native = "Malti",						font = FontLatin },
 	-- { code = "sk",	key = "lang_sk",		native = "Slovenčina",					font = FontLatin },
 	-- { code = "sl",	key = "lang_sl",		native = "Slovenščina",					font = FontLatin },
 	-- { code = "mk",	key = "lang_mk",		native = "Македонски",					font = FontCyrillic },
-	-- { code = "lt",	key = "lang_lt",		native = "Lietuvių",					font = FontLatin },
-	-- { code = "lv",	key = "lang_lv",		native = "Latviešu",					font = FontLatin },
-	-- { code = "et",	key = "lang_et",		native = "Eesti",						font = FontLatin },
 	-- { code = "be",	key = "lang_be",		native = "Беларуская",					font = FontCyrillic },
 	-- { code = "ka",	key = "lang_ka",		native = "ქართული",						font = FontGeorgian },
 	-- { code = "hy",	key = "lang_hy",		native = "Հայերեն",						font = FontArmenian },
@@ -255,7 +255,7 @@ local function SelectLanguage(langData)
 	-- to restart the game.
 	if savedLang == langCode then
 		if loadedLang == langCode then
-			DebugOut("UI", "Language swap aborted: Target language is already active and loaded.")
+			DebugOut("UI", "Language change skipped because the selected language is already loaded.")
 			DisplayDialog { "ui/ui_generic.lua", text = "language_samechoice" }
 		else
 			DebugOut("UI", "Language swap reminder: Target language is saved but not currently loaded.")

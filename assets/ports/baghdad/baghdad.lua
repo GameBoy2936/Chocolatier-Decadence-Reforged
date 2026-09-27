@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three Port Data: Baghdad, Iraq
+	Chocolatier: Decadence by Design Reforged (Port Data - Baghdad, Iraq)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -12,121 +12,106 @@ baghdad.country = "iraq"
 baghdad.culture = "muslim"
 baghdad.locked = true
 
---LOCATIONS
+-- LOCATIONS
 CreateBuilding("bag_market", baghdad, Market)
 bag_market.inventory = { allspice, anise, apricot, cardamom, cinnamon, clove, espresso, fig, milk, nutmeg, pistachio, pomegranate, saffron, sugar, sumac, turmeric }
 bag_market.x = 247
 bag_market.y = 298
 bag_market.layer = 890
 bag_market.labely = 305
---
---
+
 CreateBuilding("bag_shop", baghdad, Shop)
 bag_shop.x = 547.5
 bag_shop.y = 292.5
 bag_shop.layer = 920
 bag_shop.labely = 360
---
---
+
 CreateBuilding("bag_tower", baghdad)
 bag_tower.x = 296.5
 bag_tower.y = 83
 bag_tower.layer = 850
---
---
+
 EmptyBuilding("bag_buildingreddoor", baghdad)
 bag_buildingreddoor.x = 660.5
 bag_buildingreddoor.y = 268
 bag_buildingreddoor.layer = 930
---
---
 
+-- NON ANIMATED SPRITES
 
---NON ANIMATED SPRITES
---
+-- LIVING CHARACTER MOBILITY
+-- Venue metadata stays with the geography it describes.
+bag_tower:SetMobilityProfile({ cultural=true }, 80)
+bag_buildingreddoor:SetMobilityProfile({ social=true, business=true }, nil)
+
 CreateSprite("bag_telephonefront", baghdad)
 bag_telephonefront.x = 212
 bag_telephonefront.y = 447
 bag_telephonefront.layer = 980
---
---
+
 CreateSprite("bag_palmmask1", baghdad)
 bag_palmmask1.x = 39.5
 bag_palmmask1.y = 233
 bag_palmmask1.layer = 970
---
---
+
 CreateSprite("bag_telephoneback", baghdad)
 bag_telephoneback.x = 424.5
 bag_telephoneback.y = 287.5
 bag_telephoneback.layer = 910
---
---
+
 CreateSprite("bag_house", baghdad)
 bag_house.x = 577.5
 bag_house.y = 223
 bag_house.layer = 900
---
---
+
 CreateSprite("bag_forbuildings", baghdad)
 bag_forbuildings.x = 461
 bag_forbuildings.y = 496
 bag_forbuildings.layer = 990
---
---
+
 CreateSprite("bag_building2", baghdad)
 bag_building2.x = 751.5
 bag_building2.y = 302
 bag_building2.layer = 950
---
---
+
 CreateSprite("bag_backbuildings", baghdad)
 bag_backbuildings.x = 400
 bag_backbuildings.y = 189.5
 bag_backbuildings.layer = 860
---
---
+
 CreateSprite("bag_palmmask2", baghdad)
 bag_palmmask2.x = 282
 bag_palmmask2.y = 158
 bag_palmmask2.layer = 870
---
---
+
 CreateSprite("bag_building1", baghdad)
 bag_building1.x = 504.5
 bag_building1.y = 165.5
 bag_building1.layer = 880
---
---
+
 CreateSprite("bag_farshore", baghdad)
 bag_farshore.x = 407
 bag_farshore.y = 83
 bag_farshore.layer = 830
---
---
+
 CreateSprite("bag_nearshore", baghdad)
 bag_nearshore.x = 168
 bag_nearshore.y = 109.5
 bag_nearshore.layer = 840
---
---
+
 CreateSprite("bag_palmright", baghdad)
 bag_palmright.x = 767.5
 bag_palmright.y = 213.5
 bag_palmright.layer = 960
---
---
 
---(TO BE) ANIMATED
+-- (TO BE) ANIMATED
 CreateSprite("bag_cart", baghdad)
 bag_cart.x = 646
 bag_cart.y = 372
 bag_cart.layer = 940
 bag_cart.frequency = 50 --cart is not always there
---
---
---Cars
---F to B
+
+-- Cars
+-- F to B
 CreateSprite("bag_car1",baghdad)
 bag_car1.images = {"ports/animations/car1","ports/animations/car4"} --only small car and truck
 bag_car1.time=15500
@@ -143,7 +128,7 @@ bag_car1.path= {{-49,672},{77,574},{166,513},{286,434},{392,362},{490,281},{538,
 bag_car1.masks = {"ports/animations/car1_colormask","ports/animations/car4_colormask",} --only small car and truck
 bag_car1.tints = { Color(150,0,0,255), Color(0,150,0,255), Color(0,0,150,255),Color(150,150,0,255),Color(150,0,150,255),Color(0,150,150,255), }
 
---B to Side
+-- B to Side
 CreateSprite("bag_car2",baghdad)
 bag_car2.images = {"ports/animations/car1","ports/animations/car4"} --only small car and truck
 bag_car2.time=15000
@@ -160,7 +145,7 @@ bag_car2.path= {{460,144},{494,144},{515,148},{535,151},{555,157},{562,167},{562
 bag_car2.masks = {"ports/animations/car1_colormask","ports/animations/car4_colormask",} --only small car and truck
 bag_car2.tints = { Color(150,0,0,255), Color(0,150,0,255), Color(0,0,150,255),Color(150,150,0,255),Color(150,0,150,255),Color(0,150,150,255), }
 
---River boat
+-- River boat
 CreateSprite("bag_riverboat",baghdad)
 bag_riverboat.image = "ports/zurich/zur_boat1"--use red zurich boat
 bag_riverboat.time=25000
@@ -176,16 +161,16 @@ bag_riverboat.yNear=600
 bag_riverboat.random=false
 bag_riverboat.path= {{370,130},{343,109},{235,100},{152,96},{94,95},{56,83},{21,67},{-40,69}}
 
---Sandstorm
+-- Sandstorm
 CreateSprite("bag_dustcloud1", baghdad)
 bag_dustcloud1.image = "ports/gobidesert/gob_dustcloud"
 bag_dustcloud1.layer = 825 --distant sandstorm
 bag_dustcloud1.path = { {0,65},{0,65},{800,65},{800,65}}
 bag_dustcloud1.scale = 0.5
 bag_dustcloud1.time = 18000
-bag_dustcloud1.motion = "loop"		
-bag_dustcloud1.htile = 800			
-bag_dustcloud1.frequency = 60	
+bag_dustcloud1.motion = "loop"
+bag_dustcloud1.htile = 800
+bag_dustcloud1.frequency = 60
 
 CreateSprite("bag_dustcloud2", baghdad)
 bag_dustcloud2.image = "ports/gobidesert/gob_dustcloud"
@@ -193,7 +178,6 @@ bag_dustcloud2.layer = 861 --close sandstorm
 bag_dustcloud2.path = { {0,120},{0,120},{800,120},{800,120}}
 bag_dustcloud2.scale = 1.0
 bag_dustcloud2.time = 5000
-bag_dustcloud2.motion = "loop"		
-bag_dustcloud2.htile = 800			
-bag_dustcloud2.frequency = 40			
---
+bag_dustcloud2.motion = "loop"
+bag_dustcloud2.htile = 800
+bag_dustcloud2.frequency = 40

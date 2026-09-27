@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three Port Data: Douala, Cameroon
+	Chocolatier: Decadence by Design Reforged (Port Data - Douala, Cameroon)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -12,90 +12,80 @@ douala.country = "cameroon"
 douala.culture = "western"
 douala.locked = true
 
---LOCATIONS-----------------------------
+-- LOCATIONS-----------------------------
 CreateBuilding("dou_market", douala, Market)
 dou_market.inventory = { anise, banana, cacao, cardamom, cashew, cayenne, cinnamon, currant, ginger, mango, mint, peanut, powder, sugar, tamarind, vanilla }
 dou_market.labely = 250
 dou_market.x = 741.5
 dou_market.y = 428.5
 dou_market.layer = 890
---
---
+
 CreateBuilding("dou_plantation", douala, Farm)
 dou_plantation.inventory = { dou_cacao }
 dou_plantation.x = 177
 dou_plantation.y = 116.5
 dou_plantation.layer = 930
---
---
+
 CreateBuilding("dou_shop", douala, Shop)
 dou_shop.x = 328.5
 dou_shop.y = 157
 dou_shop.layer = 950
---
---
 
-
---EMPTY BUILDING LOCATIONS-----------
+-- EMPTY BUILDING LOCATIONS-----------
 
 EmptyBuilding("dou_emptybuilding2", douala)
 dou_emptybuilding2.x = 500
 dou_emptybuilding2.y = 191
 dou_emptybuilding2.layer = 910
---
---
+
 EmptyBuilding("dou_emptybuilding1", douala)
 dou_emptybuilding1.x = 88
 dou_emptybuilding1.y = 221
 dou_emptybuilding1.layer = 970
---
 
+-- SPRITES-----------------------
+-- LIVING CHARACTER MOBILITY
+-- Venue metadata stays with the geography it describes.
+dou_emptybuilding2:SetMobilityProfile({ social=true, lodging=true }, nil)
+dou_emptybuilding1:SetMobilityProfile({ lodging=true }, nil)
 
---SPRITES-----------------------
 CreateSprite("dou_marketmask", douala)
 dou_marketmask.x = 712.5
 dou_marketmask.y = 280
 dou_marketmask.layer = 900
---
---
+
 CreateSprite("dou_plantationmask", douala)
 dou_plantationmask.x = 122.5
 dou_plantationmask.y = 146
 dou_plantationmask.layer = 940
---
---
+
 CreateSprite("dou_shopmask", douala)
 dou_shopmask.x = 459.5
 dou_shopmask.y = 196.5
 dou_shopmask.layer = 960
---
---
+
 CreateSprite("dou_farbuildings", douala)
 dou_farbuildings.x = 754.5
 dou_farbuildings.y = 191
 dou_farbuildings.layer = 880
---
+
 CreateSprite("dou_palms", douala)
 dou_palms.x = 502
 dou_palms.y = 196.5
 dou_palms.layer = 920
---
+
 CreateSprite("dou_building1", douala)
 dou_building1.x = 537.5
 dou_building1.y = 167
 dou_building1.layer = 905
---
---
+
 CreateSprite("dou_treeright", douala)
 dou_treeright.x = 702.5
 dou_treeright.y = 188.5
 dou_treeright.layer = 888
---
 
-
-
---(TO BE) ANIMATED SPRITES
---Clouds
+-- (TO BE) ANIMATED SPRITES
+-- Clouds
 CreateSprite("dou_clouds1", douala)
 dou_clouds1.image = "ports/douala/dou_clouds"
 dou_clouds1.x = 131
@@ -118,10 +108,10 @@ dou_clouds2.motion = "loop"		-- This is the default, other options are "bounce" 
 dou_clouds2.htile = 800			-- Horizontal tiling to the left and right
 dou_clouds2.frequency = 60		-- Only show this cloud 80% of the time. Default is 100%.
 
---Far cars
+-- Far cars
 
---Z-axis cars
---Z towards
+-- Z-axis cars
+-- Z towards
 CreateSprite("dou_car1",douala)
 dou_car1.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3","ports/animations/car4"}
 dou_car1.time=6500
@@ -137,7 +127,6 @@ dou_car1.yNear=600
 dou_car1.path= {{620,216},{582,232},{512,246},{376,284},{218,322},{36,374},{-260,450}}
 dou_car1.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask","ports/animations/car4_colormask",}
 dou_car1.tints = { Color(150,0,0,255), Color(0,150,0,255), Color(0,0,150,255),Color(150,150,0,255),Color(150,0,150,255),Color(0,150,150,255), }
-
 
 CreateSprite("dou_car2",douala)
 dou_car2.images = {"ports/animations/car1","ports/animations/car2","ports/animations/car3","ports/animations/car4"}
@@ -155,7 +144,7 @@ dou_car2.path= {{192,752},{298,624},{650,220},{674,210},{698,206},{732,206},{756
 dou_car2.masks = {"ports/animations/car1_colormask","ports/animations/car2_colormask","ports/animations/car3_colormask","ports/animations/car4_colormask",}
 dou_car2.tints = { Color(150,0,0,255), Color(0,150,0,255), Color(0,0,150,255),Color(150,150,0,255),Color(150,0,150,255),Color(0,150,150,255), }
 
---Boat
+-- Boat
 CreateSprite("dou_boat", douala)
 dou_boat.time=48000
 dou_boat.frequency = 50
@@ -166,10 +155,8 @@ dou_boat.path= {{100,172},{100,172},{900,172},{900,172}}
 dou_boat.x = 667.5
 dou_boat.y = 174
 dou_boat.layer = 850
---
---
---
---Puddle Drops
+
+-- Puddle Drops
 CreateSprite("dou_drop1", douala)
 dou_drop1.image = "ports/animations/rainring1.xml"
 dou_drop1.frequency = 60
@@ -233,4 +220,3 @@ dou_drop8.x = 300
 dou_drop8.y = 300
 dou_drop8.scale = 0.5
 dou_drop8.layer = 708
---

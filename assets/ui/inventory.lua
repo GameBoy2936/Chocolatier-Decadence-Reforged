@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Inventory Dialog)
+	Chocolatier: Decadence by Design Reforged (Inventory Dialog)
 	Copyright (c) 2006-2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This script renders the player's active global inventory, separating
@@ -52,7 +52,7 @@ end
 -- Render ingredients in static alphabetical/cost order
 for _, ing in pairs(_IngredientOrder) do
 	if ing:GetInventory() > 0 then
-		
+
 		-- Tier 1: Large Icons (Below 20 items)
 		if count <= 20 then
 			table.insert(ingredientList,
@@ -60,7 +60,7 @@ for _, ing in pairs(_IngredientOrder) do
 					Bitmap { x = 0, y = 0, image = "items/" .. ing.name .. "_big", name = ing.name },
 					Text { x = 0, y = 64, w = 64, h = 20, label = ing:GetInventory(), flags = kVAlignTop + kHAlignCenter },
 				})
-		
+
 		-- Tier 2: Medium Icons
 		elseif count <= 42 then
 			table.insert(ingredientList,
@@ -68,7 +68,7 @@ for _, ing in pairs(_IngredientOrder) do
 					Bitmap { x = 8, y = 0, image = "items/" .. ing.name, name = ing.name },
 					Text { x = 0, y = 32, w = 48, h = 20, label = ing:GetInventory(), flags = kVAlignTop + kHAlignCenter },
 				})
-		
+
 		-- Tier 3: Small Icons (Dense Lists)
 		elseif count <= 52 then
 			table.insert(ingredientList,
@@ -76,7 +76,7 @@ for _, ing in pairs(_IngredientOrder) do
 					Bitmap { x = 0, y = 0, image = "items/" .. ing.name, name = ing.name, scale = 0.75 },
 					Text { x = 26, y = 0, w = xSpacing - 26, h = 24, label = ing:GetInventory(), flags = kVAlignCenter + kHAlignLeft },
 				})
-		
+
 		-- Tier 4: Extremely Dense Lists
 		else
 			table.insert(ingredientList,
@@ -137,15 +137,15 @@ end
 -- Render products
 for _, prod in pairs(_AllProducts) do
 	if prod:GetInventory() > 0 then
-		
+
 		-- Tier 1: Massive Visuals
 		if count <= 20 then
-			table.insert(productList, 
+			table.insert(productList,
 				Rollover { x = x, y = y, contents = "_AllProducts['" .. prod.code .. "']:InventoryRolloverContents()",
 					prod:GetAppearanceBig(),
 					Text { x = 0, y = 64, w = 64, h = 20, label = prod:GetInventory(), flags = kVAlignTop + kHAlignCenter }
 				})
-				
+
 		-- Tier 2: Medium Visuals
 		elseif count <= 34 then
 			table.insert(productList,
@@ -153,7 +153,7 @@ for _, prod in pairs(_AllProducts) do
 					prod:GetAppearance(8, 0),
 					Text { x = 0, y = 32, w = 48, h = 20, label = prod:GetInventory(), flags = kVAlignTop + kHAlignCenter }
 				})
-				
+
 		-- Tier 3: Small Visuals (Lists)
 		elseif count <= 52 then
 			table.insert(productList,
@@ -161,7 +161,7 @@ for _, prod in pairs(_AllProducts) do
 					prod:GetAppearance(0, 0, 0.75),
 					Text { x = 26, y = 0, w = xSpacing - 26, h = 24, label = prod:GetInventory(), flags = kVAlignCenter + kHAlignLeft }
 				})
-				
+
 		-- Tier 4: Dense Visuals (Lists)
 		elseif count <= 64 then
 			table.insert(productList,
@@ -169,7 +169,7 @@ for _, prod in pairs(_AllProducts) do
 					prod:GetAppearance(0, 0, 0.75),
 					Text { x = 26, y = 0, w = xSpacing - 26, h = 24, label = prod:GetInventory(), flags = kVAlignCenter + kHAlignLeft }
 				})
-				
+
 		-- Tier 5: Extreme Density
 		else
 			table.insert(productList,
@@ -201,15 +201,15 @@ MakeDialog
 		{
 			x = 0, y = 13, image = "image/popup_back_inventory",
 			SetStyle(controlStyle),
-			
+
 			Group(ingredientList),
 			Group(productList),
 		},
-		
+
 		Bitmap { image = "image/popup_nameplate", x = 223, y = 0,
 			Text { x = 34, y = 10, w = 270, h = 38, label = "#" .. GetString("title_inventory"), font = nameplateFont, flags = kVAlignCenter + kHAlignCenter },
 		},
-		
+
 		SetStyle(C3RoundButtonStyle),
 		Button { x = 704, y = 426, name = "ok", label = "ok", default = true, cancel = true, command = function() FadeCloseWindow("inventory", "ok") end },
 	},

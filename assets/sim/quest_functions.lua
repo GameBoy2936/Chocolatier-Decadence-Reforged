@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Quest Functions)
+	Chocolatier: Decadence by Design Reforged (Quest Functions)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This script houses all the atomic building blocks used to construct Quests.
@@ -14,12 +14,12 @@
 -------------------------------------------------------------------------------
 
 -- Retrieves a product object safely using its string code.
--- Crucially, it parses dynamic "user" codes (e.g., "user1", "user2") to fetch 
+-- Crucially, it parses dynamic "user" codes (e.g., "user1", "user2") to fetch
 -- custom player-created UGRs from the category arrays, preventing crashes when
 -- a quest asks for a product that didn't exist at launch.
 local function GetProductByCode(code)
 	local prod = _AllProducts[code]
-	
+
 	if not prod then
 		-- Search the string for the "user" prefix
 		local first, last = string.find(code, "user", 1, true)
@@ -27,14 +27,14 @@ local function GetProductByCode(code)
 			-- Extract the numerical index (e.g., "user3" -> 3)
 			local i = tonumber(string.sub(code, last + 1))
 			local products = _AllCategories["user"].products
-			
+
 			-- Verify the player actually has a recipe in that slot
-			if products and i <= table.getn(products) then 
-				prod = products[i] 
+			if products and i <= table.getn(products) then
+				prod = products[i]
 			end
 		end
 	end
-	
+
 	return prod
 end
 
@@ -49,9 +49,11 @@ end
 local _AwardMoney = {
 	DebugDescription = function(self) return "Cash: " .. Dollars(self.money) end,
 	Description = function(self) return GetText("award_money", Dollars(self.money)) end,
-	Apply = function(self)
+	Apply = function(self, iterator)
 		DebugOut("QUEST", string.format("Applying reward: Deposit %s into player account.", Dollars(self.money)))
-		Player:AddMoney(self.money)
+		local source = "quest_reward"
+		if iterator and iterator.quest and iterator.quest.delivery then source = "special_order" end
+		Player:AddMoney(self.money, false, source)
 		return true
 	end,
 }
@@ -151,7 +153,11 @@ function RequireMaxRank(rank) return CreateObject(_MaxRank, { rank = tonumber(ra
 -- ==========================================
 local _AwardIngredient = {
 	DebugDescription = function(self) return tostring(self.count) .. " sacks " .. tostring(self.name) end,
-	Description = function(self) return GetText("award_ingredient", tostring(self.count), GetText(self.name)) end,
+	Description = function(self)
+		local ing = _AllIngredients[self.name]
+		local unit = ing and ing:GetUnitName(self.count) or GetLocalizedUnit("unit_sack", self.count)
+		return GetText("award_ingredient", tostring(self.count), GetText(self.name), unit)
+	end,
 	Apply = function(self)
 		DebugOut("QUEST", string.format("Applying reward: Adding %d sacks of raw %s.", self.count, self.name))
 		Player:AddIngredient(self.name, self.count)
@@ -171,7 +177,8 @@ local _AwardProduct = {
 		local name = self.code
 		local prod = GetProductByCode(self.code)
 		if prod then name = prod:GetName() end
-		return GetText("award_product", tostring(self.count), name)
+		local unit = prod and prod:GetUnitName(self.count) or GetLocalizedUnit("unit_case", self.count)
+		return GetText("award_product", tostring(self.count), name, unit)
 	end,
 	Apply = function(self)
 		local prod = GetProductByCode(self.code)
@@ -186,9 +193,9 @@ local _AwardProduct = {
 -- Wrapper function: Automatically detects if the requested item is a raw ingredient
 -- or a finished product and generates the correct Reward Object.
 function AwardItem(name, count)
-	if _AllIngredients[name] then 
+	if _AllIngredients[name] then
 		return CreateObject(_AwardIngredient, { name = name, count = count })
-	else 
+	else
 		return CreateObject(_AwardProduct, { code = name, count = count })
 	end
 end
@@ -202,14 +209,14 @@ local _AwardSetInventory = {
 	DebugDescription = function(self) return "Set " .. tostring(self.name) .. " to " .. tostring(self.count) end,
 	Apply = function(self)
 		DebugOut("QUEST", string.format("Applying reward: Hard-setting inventory of '%s' to exactly %d.", self.name, self.count))
-		
+
 		if _AllIngredients[self.name] then
 			Player.ingredients[self.name] = self.count
 		else
 			local prod = GetProductByCode(self.name)
 			if prod then Player.products[prod.code] = self.count end
 		end
-		
+
 		-- Force a supply recalculation in case we just emptied out active factories
 		Player:UpdateSupplies()
 		return true
@@ -228,34 +235,34 @@ local _AwardRandomIngredient = {
 		if self.max then range = range .. " to " .. tostring(self.max) end
 		return "Random Ingredient (" .. self.poolType .. "): " .. range
 	end,
-	
+
 	-- Description omitted because the specific item is generated at the moment of execution.
 	Description = function(self) return nil end,
-	
+
 	Apply = function(self)
 		local pool = {}
-		
+
 		-- Filter the global ingredient list based on the requested parameter
 		for _, ing in ipairs(_IngredientOrder) do
 			local include = false
-			if self.poolType == "all" then 
+			if self.poolType == "all" then
 				include = true
-			elseif self.poolType == "unlocked" then 
+			elseif self.poolType == "unlocked" then
 				if Player.catalogue.unlockedIngredients[ing.name] then include = true end
-			elseif self.poolType == "locked" then 
+			elseif self.poolType == "locked" then
 				if not Player.catalogue.unlockedIngredients[ing.name] then include = true end
 			end
-			
+
 			if include then table.insert(pool, ing) end
 		end
-		
+
 		if table.getn(pool) > 0 then
 			-- Execute weighted selection
 			local ing = pool[RandRange(1, table.getn(pool))]
-			
+
 			local amount = self.min
 			if self.max then amount = RandRange(self.min, self.max) end
-			
+
 			DebugOut("QUEST", string.format("Applying reward: Random Ingredient Generator (%s pool) yielded %d sacks of '%s'.", self.poolType, amount, ing:GetName()))
 			Player:AddIngredient(ing.name, amount)
 		else
@@ -279,33 +286,33 @@ local _AwardRandomProduct = {
 		if self.max then range = range .. " to " .. tostring(self.max) end
 		return "Random Product (" .. self.poolType .. "): " .. range
 	end,
-	
+
 	Apply = function(self)
 		local pool = {}
-		
+
 		for code, prod in pairs(_AllProducts) do
 			-- Block user creations; only base-game system recipes are eligible for RNG drops
 			if prod.category.name ~= "user" then
 				local include = false
-				
-				if self.poolType == "all" then 
+
+				if self.poolType == "all" then
 					include = true
-				elseif self.poolType == "unlocked" then 
+				elseif self.poolType == "unlocked" then
 					if prod:IsKnown() then include = true end
-				elseif self.poolType == "locked" then 
+				elseif self.poolType == "locked" then
 					if not prod:IsKnown() then include = true end
 				end
-				
+
 				if include then table.insert(pool, prod) end
 			end
 		end
-		
+
 		if table.getn(pool) > 0 then
 			local prod = pool[RandRange(1, table.getn(pool))]
-			
+
 			local amount = self.min
 			if self.max then amount = RandRange(self.min, self.max) end
-			
+
 			DebugOut("QUEST", string.format("Applying reward: Random Product Generator (%s pool) yielded %d cases of '%s'.", self.poolType, amount, prod:GetName()))
 			Player:AddProduct(prod.code, amount)
 		else
@@ -325,8 +332,10 @@ end
 local _RequireIngredient = {
 	DebugDescription = function(self) return tostring(self.count) .. " sacks " .. tostring(self.name) end,
 	Description = function(self)
-		if self.count > 1 then return GetText("require_ingredient", tostring(self.count), GetText(self.name))
-		else return GetText("require_ingredient_single", GetText(self.name))
+		local ing = _AllIngredients[self.name]
+		local unit = ing and ing:GetUnitName(self.count) or GetLocalizedUnit("unit_sack", self.count)
+		if self.count > 1 then return GetText("require_ingredient", tostring(self.count), GetText(self.name), unit)
+		else return GetText("require_ingredient_single", GetText(self.name), unit)
 		end
 	end,
 	Evaluate = function(self, quest)
@@ -344,9 +353,10 @@ local _RequireProduct = {
 		if prod then name = prod:GetName()
 		else name = GetString("ugr_generic")
 		end
-		
-		if self.count > 1 then return GetText("require_product", tostring(self.count), name)
-		else return GetText("require_product_single", name)
+
+		local unit = prod and prod:GetUnitName(self.count) or GetLocalizedUnit("unit_case", self.count)
+		if self.count > 1 then return GetText("require_product", tostring(self.count), name, unit)
+		else return GetText("require_product_single", name, unit)
 		end
 	end,
 	Evaluate = function(self, quest)
@@ -436,7 +446,7 @@ function RequireRecipe(code) return CreateObject(_RequireRecipe, { code = code }
 
 -- ==========================================
 -- REQUIREMENT: RequireLabIngredient
--- Verifies that the player has physically evaluated an ingredient in the test kitchen 
+-- Verifies that the player has physically evaluated an ingredient in the test kitchen
 -- by dropping 1 sack of it into Teddy's pantry.
 -- ==========================================
 local _RequireLabIngredient = {
@@ -450,7 +460,7 @@ function RequireLabIngredient(ingredientName) return CreateObject(_RequireLabIng
 
 -- ==========================================
 -- REQUIREMENT: RequireRecipeMade
--- Validates if the player has actually run the factory to produce a product, 
+-- Validates if the player has actually run the factory to produce a product,
 -- rather than just buying it or cheating it in.
 -- ==========================================
 local _RequireRecipeMade = {
@@ -459,9 +469,10 @@ local _RequireRecipeMade = {
 		local name = self.code
 		local prod = GetProductByCode(self.code)
 		if prod then name = prod:GetName() end
-		
-		if self.count == 1 then return GetText("require_recipe_made_single", name, tostring(self.count))
-		else return GetText("require_recipe_made", name, tostring(self.count))
+
+		local unit = prod and prod:GetUnitName(self.count) or GetLocalizedUnit("unit_case", self.count)
+		if self.count == 1 then return GetText("require_recipe_made_single", name, tostring(self.count), unit)
+		else return GetText("require_recipe_made", name, tostring(self.count), unit)
 		end
 	end,
 	Evaluate = function(self, quest)
@@ -542,7 +553,7 @@ end
 
 -- ==========================================
 -- REQUIREMENT: RequireUserCreationWithIngredient
--- Complex evaluator: Checks if a specific custom User Recipe (or any User Recipe) 
+-- Complex evaluator: Checks if a specific custom User Recipe (or any User Recipe)
 -- utilizes a specific ingredient. Heavily used in the endgame judging quests.
 -- ==========================================
 local _RequireUserCreationWithIngredient = {
@@ -567,7 +578,7 @@ local _RequireUserCreationWithIngredient = {
 			-- Mode A: Check a specific explicitly requested UGR
 			local codeTable = Player.itemRecipes[self.index]
 			if not codeTable then return false end
-			
+
 			local ingCode = _AllIngredients[self.name].code
 			-- Scan the recipe signature (Skipping index 1 as it holds the category string)
 			for i = 2, table.getn(codeTable) do
@@ -771,6 +782,7 @@ local _AwardPlaceCharacter = {
 		DebugOut("QUEST", string.format("Applying reward: Overriding geometry map and placing '%s' in '%s'.", self.char, self.building))
 		Player.buildingCharacters[self.building] = Player.buildingCharacters[self.building] or {}
 		Player.buildingCharacters[self.building][self.char] = true
+		if CharacterMobility then CharacterMobility:OnScriptedPlace(self.char, self.building) end
 		return true
 	end
 }
@@ -789,6 +801,7 @@ local _AwardRemoveCharacter = {
 			DebugOut("QUEST", string.format("Applying reward: Un-assigning character '%s' from override building '%s'.", self.char, self.building))
 			Player.buildingCharacters[self.building][self.char] = nil
 		end
+		if CharacterMobility then CharacterMobility:OnScriptedRemove(self.char, self.building) end
 		return true
 	end
 }
@@ -805,7 +818,7 @@ local _RequireCharacterInBuilding = {
 	Evaluate = function(self, quest)
 		local building = _AllBuildings[self.building]
 		if not building then return false end
-		
+
 		local charList = building:GetCharacterList()
 		for _, char in ipairs(charList) do
 			if char.name == self.char then return true end
@@ -818,8 +831,8 @@ local _RequireCharacterInBuilding = {
 		return nil
 	end
 }
-function RequireCharacterInBuilding(characterName, buildingName) 
-	return CreateObject(_RequireCharacterInBuilding, { char = characterName, building = buildingName }) 
+function RequireCharacterInBuilding(characterName, buildingName)
+	return CreateObject(_RequireCharacterInBuilding, { char = characterName, building = buildingName })
 end
 
 -------------------------------------------------------------------------------
@@ -835,10 +848,10 @@ local _AwardFactoryPowerup = {
 	Apply = function(self)
 		local building = self.building
 		local category = self.category
-		
+
 		if type(building) == "string" then building = _AllBuildings[building] end
 		if type(category) == "string" then category = _AllCategories[category] end
-		
+
 		building:EnablePowerup(category, self.key)
 		return true
 	end
@@ -900,7 +913,6 @@ local _AwardBuildingOwned = {
 function AwardBuildingOwned(name)
 	return CreateObject(_AwardBuildingOwned, { name = name })
 end
-
 
 local _RequireBuildingOwned = {
 	DebugDescription = function(self) return "Owned: " .. self.name end,
@@ -1086,7 +1098,6 @@ local _QuestComplete = {
 }
 function RequireQuestComplete(quest) return CreateObject(_QuestComplete, { name = quest }) end
 
-
 local _QuestActive = {
 	DebugDescription = function(self) return "Active: " .. self.name end,
 	Evaluate = function(self, quest) return Player.questsActive[self.name] end,
@@ -1094,14 +1105,12 @@ local _QuestActive = {
 }
 function RequireQuestActive(quest) return CreateObject(_QuestActive, { name = quest }) end
 
-
 local _QuestNotActive = {
 	DebugDescription = function(self) return "NOT Active: " .. self.name end,
 	Evaluate = function(self, quest) return (Player.questsActive[self.name] == nil) end,
 	CrossCheck = function(self) if _AllQuests[self.name] then return nil else return "UNDEFINED QUEST: " .. self.name end end
 }
 function RequireQuestNotActive(quest) return CreateObject(_QuestNotActive, { name = quest }) end
-
 
 local _QuestIncomplete = {
 	DebugDescription = function(self) return "Incomplete: " .. self.name end,
@@ -1113,7 +1122,7 @@ local _QuestIncomplete = {
 }
 function RequireQuestIncomplete(quest)
 	if type(quest) == "table" then
-		DebugOut("ERROR", string.format("BAD QUEST NAME in RequireQuestIncomplete -- Table passed instead of string. Could be %s", tostring(quest[1])))
+		DebugOut("ERROR", string.format("RequireQuestIncomplete received a table instead of a quest name; candidate: %s.", tostring(quest[1])))
 	end
 	return CreateObject(_QuestIncomplete, { name = quest })
 end
@@ -1126,15 +1135,15 @@ end
 -- instead of a permanent shopkeeper or resident.
 function IsCharacterNonResident(charName)
 	if not charName then return false end
-	
+
 	for _, travName in ipairs(_TravelCharacters) do
 		if travName == charName then return true end
 	end
-	
+
 	for _, emptyName in ipairs(_EmptyCharacters) do
 		if emptyName == charName then return true end
 	end
-	
+
 	return false
 end
 
@@ -1145,7 +1154,7 @@ end
 -- ==========================================
 local _AwardEnableOrderForChar = {
 	DebugDescription = function(self) return "Enable Orders for: " .. self.name end,
-	Description = function(self) return "Enable Orders for: " .. self.name end, 
+	Description = function(self) return "Enable Orders for: " .. self.name end,
 	Apply = function(self)
 		DebugOut("QUEST", string.format("Applying reward: Un-banning '%s' from receiving future special orders.", self.name))
 		Player.orderBannedChars[self.name] = nil
@@ -1157,7 +1166,7 @@ function AwardEnableOrderForChar(charName) return CreateObject(_AwardEnableOrder
 
 local _AwardDisableOrderForChar = {
 	DebugDescription = function(self) return "Disable Orders for: " .. self.name end,
-	Description = function(self) return "Disable Orders for: " .. self.name end, 
+	Description = function(self) return "Disable Orders for: " .. self.name end,
 	Apply = function(self)
 		DebugOut("QUEST", string.format("Applying reward: Banning '%s' from receiving future special orders.", self.name))
 		Player.orderBannedChars[self.name] = true
@@ -1169,7 +1178,7 @@ function AwardDisableOrderForChar(charName) return CreateObject(_AwardDisableOrd
 
 local _AwardEnableOrderForBuilding = {
 	DebugDescription = function(self) return "Enable Orders at: " .. self.name end,
-	Description = function(self) return "Enable Orders at: " .. self.name end, 
+	Description = function(self) return "Enable Orders at: " .. self.name end,
 	Apply = function(self)
 		DebugOut("QUEST", string.format("Applying reward: Un-banning '%s' from hosting future special orders.", self.name))
 		Player.orderBannedBuildings[self.name] = nil
@@ -1180,7 +1189,7 @@ function AwardEnableOrderForBuilding(buildingName) return CreateObject(_AwardEna
 
 local _AwardDisableOrderForBuilding = {
 	DebugDescription = function(self) return "Disable Orders at: " .. self.name end,
-	Description = function(self) return "Disable Orders at: " .. self.name end, 
+	Description = function(self) return "Disable Orders at: " .. self.name end,
 	Apply = function(self)
 		DebugOut("QUEST", string.format("Applying reward: Banning '%s' from hosting future special orders.", self.name))
 		Player.orderBannedBuildings[self.name] = true
@@ -1191,7 +1200,7 @@ function AwardDisableOrderForBuilding(buildingName) return CreateObject(_AwardDi
 
 -- ==========================================
 -- REQUIREMENT: Activity Verification
--- Scans both the active quest list AND the pending telegram queue to ensure 
+-- Scans both the active quest list AND the pending telegram queue to ensure
 -- an NPC/Building is completely free before assigning them a new mission.
 -- ==========================================
 local _RequireCharHasNoActiveOrder = {
@@ -1209,7 +1218,7 @@ local _RequireCharHasNoActiveOrder = {
 				return false
 			end
 		end
-		
+
 		return true
 	end,
 	CrossCheck = function(self) if _AllCharacters[self.name] then return nil else return "UNDEFINED CHARACTER: " .. self.name end end
@@ -1230,13 +1239,13 @@ local _RequireBuildingHasNoActiveOrder = {
 			if activeQuest and activeQuest.endbuilding == self.name then
 				-- Fail if there's a dynamic procedural delivery actively running here
 				if activeQuest.delivery then return false end
-				
+
 				-- Fail if a transient wanderer NPC has been locked here by a scripted quest
 				local enderName = activeQuest:GetEnderName()
 				if enderName and IsCharacterNonResident(enderName) then return false end
 			end
 		end
-		
+
 		return true
 	end,
 	CrossCheck = function(self) if _AllBuildings[self.name] then return nil else return "UNDEFINED BUILDING: " .. self.name end end
@@ -1371,11 +1380,11 @@ local _AwardCustomSlot = {
 	Description = function(self) return tostring(self.n) .. " Recipe Slot(s)" end,
 	Apply = function(self)
 		local n = (Player.customSlots or 0) + self.n
-		DebugOut("QUEST", string.format("Applying reward: Upgraded UGR cap by %d. New maximum allowed slots: %d", self.n, n))
-		
+		DebugOut("QUEST", string.format("Applying reward: increased custom-recipe slot cap by %d; new maximum is %d.", self.n, n))
+
 		Player.customSlots = n
 		Player.questVariables.ugr_slots = n - (Player.categoryCount.user or 0)
-		
+
 		-- Reset UI pointers so the recipe book recognizes the new empty slot
 		gRecipeSelection = nil
 		gCategorySelection = _AllCategories.user
@@ -1418,9 +1427,9 @@ local _AwardText = {
 			return true, false
 		end
 
-		DisplayDialog { 
-			"ui/ui_character_generic.lua", 
-			text = "#" .. text, 
+		DisplayDialog {
+			"ui/ui_character_generic.lua",
+			text = "#" .. text,
 			char = self.char,
 			ok = self.ok_label,
 			ok_length = self.ok_length,
@@ -1435,8 +1444,8 @@ local _AwardText = {
 function AwardText(key, char, options)
 	options = options or {}
 
-	return CreateObject(_AwardText, { 
-		key = key, 
+	return CreateObject(_AwardText, {
+		key = key,
 		char = char,
 		ok_label = options.label,
 		ok_length = options.length,
@@ -1508,18 +1517,18 @@ function AwardDelayQuest(name, time) return CreateObject(_AwardDelayQuest, { nam
 -- ==========================================
 local _AwardHistory = {
 	DebugDescription = function(self) return "Unlock History: " .. self.key end,
-	
+
 	Description = function(self)
 		local prefix = GetString("award_history_prefix")
 		if prefix == "#####" or prefix == "award_history_prefix" then prefix = "New Catalogue Entry:" end
-		
+
 		return prefix .. " " .. GetString(self.key .. "_title")
 	end,
-	
+
 	Apply = function(self)
 		Player.catalogue.unlockedHistory = Player.catalogue.unlockedHistory or {}
 		Player.catalogue.unlockedHistory[self.key] = true
-		
+
 		DebugOut("PLAYER", string.format("Applying reward: Unlocking encyclopedia history article '%s'.", self.key))
 		return true
 	end
@@ -1537,7 +1546,7 @@ local _AwardUnlockCharacter = {
 	Description = function(self) return "New Catalogue Entry: " .. GetString(self.name) end,
 	Apply = function(self)
 		local charName = self.name
-		
+
 		if not Player.catalogue.unlockedCharacters[charName] then
 			Player.catalogue.unlockedCharacters[charName] = {
 				met = false,
@@ -1551,8 +1560,8 @@ local _AwardUnlockCharacter = {
 		if not Player.catalogue.unlockedCharacters[charName].unlocked then
 			-- Execute Full Stage 2 Discovery
 			Player.catalogue.unlockedCharacters[charName].unlocked = true
-			Player.catalogue.unlockedCharacters[charName].met = true 
-			
+			Player.catalogue.unlockedCharacters[charName].met = true
+
 			DebugOut("PLAYER", string.format("Applying reward: Unlocking full catalogue bio for '%s'.", charName))
 
 			-- Calculate and populate the secret dislikes pool so they can be discovered gradually
@@ -1560,7 +1569,7 @@ local _AwardUnlockCharacter = {
 			local charObject = _AllCharacters[charName]
 			if charObject and charObject.dislikes then
 				Player.catalogue.unlockedCharacters[charName].undiscovered_dislikes_pool = {}
-				
+
 				if charObject.dislikes.ingredients then
 					for ingredientName, _ in pairs(charObject.dislikes.ingredients) do
 						table.insert(Player.catalogue.unlockedCharacters[charName].undiscovered_dislikes_pool, ingredientName)
@@ -1576,7 +1585,7 @@ local _AwardUnlockCharacter = {
 						table.insert(Player.catalogue.unlockedCharacters[charName].undiscovered_dislikes_pool, categoryName)
 					end
 				end
-				
+
 				DebugOut("PLAYER", string.format("Populated secret dislike discovery pool for %s with %d items.", charName, table.getn(Player.catalogue.unlockedCharacters[charName].undiscovered_dislikes_pool)))
 			end
 		end
@@ -1605,29 +1614,29 @@ local _AwardDiscoverPreference = {
 
 	Apply = function(self)
 		local characterToUpdate = nil
-		
+
 		-- 1. IDENTIFY TARGET CHARACTER
 		if self.char then
 			characterToUpdate = _AllCharacters[self.char]
 		else
-			-- If no character is specified, scan the entire world for a random valid character 
+			-- If no character is specified, scan the entire world for a random valid character
 			-- who the player has met, but hasn't fully figured out yet.
 			local eligibleChars = {}
 			for charName, charData in pairs(Player.catalogue.unlockedCharacters) do
 				if charData.met then
 					local charObj = _AllCharacters[charName]
-					if charObj and charObj.likes then 
-						
+					if charObj and charObj.likes then
+
 						-- Tally up the total possible traits they possess
 						local masterLikesCount = 0
 						if charObj.likes.categories then for _ in pairs(charObj.likes.categories) do masterLikesCount = masterLikesCount + 1 end end
 						if charObj.likes.products then for _ in pairs(charObj.likes.products) do masterLikesCount = masterLikesCount + 1 end end
 						if charObj.likes.ingredients then for _ in pairs(charObj.likes.ingredients) do masterLikesCount = masterLikesCount + 1 end end
-						
+
 						-- Tally up what the player currently knows
 						local discoveredLikesCount = 0
 						if charData.discovered_likes then for _ in ipairs(charData.discovered_likes) do discoveredLikesCount = discoveredLikesCount + 1 end end
-						
+
 						local undiscoveredDislikesCount = 0
 						if charData.undiscovered_dislikes_pool then for _ in ipairs(charData.undiscovered_dislikes_pool) do undiscoveredDislikesCount = undiscoveredDislikesCount + 1 end end
 
@@ -1638,7 +1647,7 @@ local _AwardDiscoverPreference = {
 					end
 				end
 			end
-			
+
 			if table.getn(eligibleChars) > 0 then
 				characterToUpdate = eligibleChars[RandRange(1, table.getn(eligibleChars))]
 			end
@@ -1652,24 +1661,24 @@ local _AwardDiscoverPreference = {
 		-- 2. DETERMINE PREFERENCE CATEGORY (Like vs. Dislike)
 		local charData = Player.catalogue.unlockedCharacters[characterToUpdate.name]
 		local prefType = self.type
-		
+
 		-- If no preference type is requested, randomize between learning a Like or a Dislike.
 		if not prefType then
 			local hasUndiscoveredLikes = false
 			local masterLikesCount = 0
-			
+
 			if characterToUpdate.likes then
 				if characterToUpdate.likes.categories then for _ in pairs(characterToUpdate.likes.categories) do masterLikesCount = masterLikesCount + 1 end end
 				if characterToUpdate.likes.products then for _ in pairs(characterToUpdate.likes.products) do masterLikesCount = masterLikesCount + 1 end end
 				if characterToUpdate.likes.ingredients then for _ in pairs(characterToUpdate.likes.ingredients) do masterLikesCount = masterLikesCount + 1 end end
 			end
-			
+
 			if charData.discovered_likes and table.getn(charData.discovered_likes) < masterLikesCount then
 				hasUndiscoveredLikes = true
 			end
-			
+
 			local hasUndiscoveredDislikes = charData.undiscovered_dislikes_pool and table.getn(charData.undiscovered_dislikes_pool) > 0
-			
+
 			-- Only roll the dice if BOTH types of traits are still hidden. Otherwise, force the one that remains.
 			if hasUndiscoveredLikes and hasUndiscoveredDislikes then
 				if RandRange(1, 2) == 1 then prefType = "like" else prefType = "dislike" end
@@ -1679,7 +1688,7 @@ local _AwardDiscoverPreference = {
 				prefType = "dislike"
 			else
 				DebugOut("ERROR", string.format("AwardDiscoverPreference: Requested random trait generation, but %s has no remaining hidden traits.", characterToUpdate.name))
-				return true 
+				return true
 			end
 		end
 
@@ -1687,7 +1696,7 @@ local _AwardDiscoverPreference = {
 		local preferenceToReveal = self.pref
 		if not preferenceToReveal then
 			local undiscovered = {}
-			
+
 			if prefType == "like" and characterToUpdate.likes then
 				local masterList = {}
 				if characterToUpdate.likes.categories then for k, _ in pairs(characterToUpdate.likes.categories) do table.insert(masterList, k) end end
@@ -1704,11 +1713,11 @@ local _AwardDiscoverPreference = {
 					end
 					if not found then table.insert(undiscovered, prefName) end
 				end
-				
+
 			elseif prefType == "dislike" then
 				undiscovered = charData.undiscovered_dislikes_pool or {}
 			end
-			
+
 			if table.getn(undiscovered) > 0 then
 				preferenceToReveal = undiscovered[RandRange(1, table.getn(undiscovered))]
 			end
@@ -1717,9 +1726,9 @@ local _AwardDiscoverPreference = {
 		-- 4. COMMIT THE DISCOVERY TO THE CATALOGUE UI
 		if preferenceToReveal then
 			local discoveredListKey = "discovered_" .. prefType .. "s"
-			
+
 			if not charData[discoveredListKey] then charData[discoveredListKey] = {} end
-			
+
 			-- Sanity check: Verify the trait isn't already known to prevent redundant duplication
 			local alreadyKnown = false
 			for _, knownPref in ipairs(charData[discoveredListKey]) do
@@ -1745,14 +1754,14 @@ local _AwardDiscoverPreference = {
 		else
 			DebugOut("ERROR", string.format("AwardDiscoverPreference: Could not locate a valid undiscovered trait for %s of type %s.", characterToUpdate.name, prefType))
 		end
-		
+
 		return true
 	end,
-	
+
 	CrossCheck = function(self)
 		if self.char and not _AllCharacters[self.char] then return "UNDEFINED CHARACTER: " .. self.char end
 		if self.type and (self.type ~= "like" and self.type ~= "dislike") then return "INVALID PREFERENCE TYPE: " .. self.type end
-		
+
 		if self.pref then
 			local found = _AllIngredients[self.pref] or _AllProducts[self.pref] or _AllCategories[self.pref]
 			if not found then return "UNDEFINED PREFERENCE ITEM: " .. self.pref end
@@ -1775,11 +1784,31 @@ end
 -- ==========================================
 local _HintPerson = {
 	DebugDescription = function(self) return "Hint: " .. self.name end,
-	Description = function(self)
-		if self.port and self.building then return GetText("require_person_building_port", GetText(self.name), GetText(self.building), GetText(self.port))
-		elseif self.port then return GetText("require_person_port", GetText(self.name), GetText(self.port))
-		elseif self.building and self.building == "_travelers" then return GetText("require_person_travel", GetText(self.name))
-		elseif self.building then return GetText("require_person_building", GetText(self.name), GetText(self.building))
+	Description = function(self, quest)
+		local building, port = self.building, self.port
+
+		-- Stay-where-met quests must describe the character's actual living-world
+		-- position rather than the old scripted fallback. Prefer the quest-owned
+		-- snapshot; if an older active save lacks that table, recover from the
+		-- character's canonical mobility state before using the legacy arguments.
+		if quest and quest.locationPolicy == "stay_where_met" then
+			local qloc = Player and Player.questLocations and Player.questLocations[quest.name] or nil
+			if qloc and qloc.character == self.name then
+				building = qloc.building or building
+				port = qloc.port or port
+			elseif CharacterMobility and CharacterMobility.GetLocation then
+				local live = CharacterMobility:GetLocation(self.name)
+				if live and live.mode == "building" and live.building then
+					building = live.building
+					port = live.port or (_AllBuildings[live.building] and _AllBuildings[live.building].port and _AllBuildings[live.building].port.name) or port
+				end
+			end
+		end
+
+		if port and building then return GetText("require_person_building_port", GetText(self.name), GetText(building), GetText(port))
+		elseif port then return GetText("require_person_port", GetText(self.name), GetText(port))
+		elseif building and building == "_travelers" then return GetText("require_person_travel", GetText(self.name))
+		elseif building then return GetText("require_person_building", GetText(self.name), GetText(building))
 		else return GetText("require_person", GetText(self.name))
 		end
 	end,
@@ -1818,7 +1847,6 @@ local _HintDate = {
 }
 function HintExpirationDate() return CreateObject(_HintDate) end
 
-
 local _HintWeeks = {
 	DebugDescription = function(self, quest)
 		local weeksPassed = Player.time - (Player.questsActive[quest.name] or Player.time)
@@ -1828,16 +1856,21 @@ local _HintWeeks = {
 	Description = function(self, quest)
 		local weeksPassed = Player.time - (Player.questsActive[quest.name] or Player.time)
 		local weeksLeft = (quest.expires or 0) - weeksPassed
-		
+
 		if (weeksLeft > 1) then return GetText("expire_weeks", tostring(weeksLeft))
 		elseif (weeksLeft == 1) then return GetString("expire_weeks_one")
 		elseif (weeksLeft == 0) then return GetText("expire_weeks_zero", tostring(weeksLeft))
+		elseif quest.delivery and weeksLeft == -1 then
+			-- Whole-week travel can carry a delivery from the displayed final week
+			-- into its destination. Treat that arrival week as the final handoff window.
+			return GetText("expire_weeks_zero", "0")
 		else return GetString("expire_done")
 		end
 	end,
 	Evaluate = function(self, quest)
 		local weeksPassed = Player.time - (Player.questsActive[quest.name] or Player.time)
 		local weeksLeft = (quest.expires or 0) - weeksPassed
+		if quest.delivery then return (weeksLeft >= -1) end
 		return (weeksLeft >= 0)
 	end,
 	hint = true,

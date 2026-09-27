@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Generic Yes/No Dialog)
+	Chocolatier: Decadence by Design Reforged (Generic Yes/No Dialog)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local yes = gDialogTable.yes or "yes"
@@ -40,7 +40,7 @@ local function SetDynamicGenericText(text)
 	local font_sizes_to_check = { 18, 16, 14, 12 }
 	local chars_per_line_map = {[18] = 40, [16] = 46, [14] = 52, [12] = 60 }
 	local line_thresholds = { [18] = 8, [16] = 9, [14] = 11, [12] = 999 }
-	
+
 	local segments = {}
 	local current_pos = 1
 	if text then
@@ -64,10 +64,10 @@ local function SetDynamicGenericText(text)
 		end
 		if total_lines <= line_threshold then
 			final_font_size = current_font_size
-			break 
+			break
 		end
 	end
-	
+
 	local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
 	SetLabel("generic_text", formatted_text)
 end
@@ -75,7 +75,7 @@ end
 -- ----------------------------------------------------------------------------
 -- Dynamic Button Layout Engine
 -- ----------------------------------------------------------------------------
--- Evaluates the required widths of all active buttons, determines the total 
+-- Evaluates the required widths of all active buttons, determines the total
 -- width of the row, and dynamically aligns them in the absolute center.
 
 local containerWidth = 499
@@ -111,8 +111,8 @@ local totalGroupWidth = 0
 for i, btn in ipairs(activeButtons) do
 	local width = buttonWidths[btn.length] or buttonWidths.standard
 	totalGroupWidth = totalGroupWidth + width
-	if i < table.getn(activeButtons) then 
-		totalGroupWidth = totalGroupWidth + buttonSpacing 
+	if i < table.getn(activeButtons) then
+		totalGroupWidth = totalGroupWidth + buttonSpacing
 	end
 end
 
@@ -124,22 +124,22 @@ local generatedButtons = {}
 for _, btn in ipairs(activeButtons) do
 	local style = buttonStyles[btn.length] or buttonStyles.standard
 	local width = buttonWidths[btn.length] or buttonWidths.standard
-	
+
 	table.insert(generatedButtons, Button {
 		x = currentX, y = buttonY, w = width, h = 50,
 		name = btn.name, label = "#" .. GetString(btn.label),
 		command = btn.command, default = btn.default, cancel = btn.cancel,
-		
-		font = buttonFont, 
+
+		font = buttonFont,
 		flags = kVAlignCenter + kHAlignCenter,
 		ty = kCenter - 3,
 		tx = kCenter - 1,
-		
+
 		graphics = style.graphics,
 		sound = style.sound,
-		type = style.type, 
+		type = style.type,
 	})
-	
+
 	currentX = currentX + width + buttonSpacing
 end
 
@@ -153,17 +153,17 @@ MakeDialog
 	{
 		name = "generic",
 		x = windowX, y = kCenter, image = "image/popup_back_generic_1",
-		
+
 		SetStyle(C3DialogBodyStyle),
 		Text { x = 20, y = 42, w = 459, h = 177, name = "generic_text", label = "", flags = kVAlignCenter + kHAlignCenter },
-		
+
 		Group(generatedButtons)
 	}
 }
 
-if gDialogTable.building then 
+if gDialogTable.building then
 	OpenBuilding("generic", gDialogTable.building)
-elseif not gDialogTable.noFade then 
+elseif not gDialogTable.noFade then
 	CenterFadeIn("generic")
 end
 

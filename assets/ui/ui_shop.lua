@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Shop Interface)
+	Chocolatier: Decadence by Design Reforged (Shop Interface)
 	Copyright (c) 2006-2007 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 require("ui/helpers.lua")
@@ -35,12 +35,12 @@ local lastHaggleResult = nil
 local function SetDynamicKeeperText(text)
 	if not text then text = "" end
 	local function Ceil(x) return Floor(x + 0.99999) end
-	
+
 	local font_sizes_to_check = { 16, 15, 14 }
 	local chars_per_line_map = { [16] = 54, [15] = 56, [14] = 58 }
 	local segments = {}
 	local current_pos = 1
-	
+
 	if text then
 		local start_pos, end_pos = string.find(text, "<br>", current_pos, true)
 		while start_pos do
@@ -51,7 +51,7 @@ local function SetDynamicKeeperText(text)
 		table.insert(segments, string.sub(text, current_pos))
 	end
 	if table.getn(segments) == 0 then segments = { text or "" } end
-	
+
 	local final_font_size = 14
 	for _, current_font_size in ipairs(font_sizes_to_check) do
 		local chars_per_line = chars_per_line_map[current_font_size]
@@ -61,10 +61,10 @@ local function SetDynamicKeeperText(text)
 		end
 		if total_lines <= 2 then
 			final_font_size = current_font_size
-			break 
+			break
 		end
 	end
-	
+
 	local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
 	SetLabel("keeper_text", formatted_text)
 end
@@ -74,12 +74,12 @@ end
 -------------------------------------------------------------------------------
 
 -- Executes when the player finalizes a product sale
-local function SellProduct(prod, n, silent) 
+local function SellProduct(prod, n, silent)
 	transactionCompleted = true
 	if not silent then
 		SoundEvent("sell")
 	end
-	
+
 	-- 1. Milestone Tracking
 	local itemKey = prod.code
 	local categoryKey = prod.category.name
@@ -88,31 +88,31 @@ local function SellProduct(prod, n, silent)
 
 	Player.firstSell[portKey] = Player.firstSell[portKey] or {}
 	local isFirstAtPort = not Player.firstSell[portKey][itemKey]
-	
+
 	Player.firstSellCategory[portKey] = Player.firstSellCategory[portKey] or {}
 	local isFirstCategoryAtPort = not Player.firstSellCategory[portKey][categoryKey]
 
 	if isFirstEver then
 		Player.firstEverSell[itemKey] = true
-		DebugOut("PLAYER", string.format("Global First: Player sold product '%s' for the first time.", itemKey))
+		DebugOut("PLAYER", string.format("First global transaction: Player sold product '%s' for the first time.", itemKey))
 	end
 	if isFirstAtPort then
 		Player.firstSell[portKey][itemKey] = true
-		DebugOut("PLAYER", string.format("Local First: Player sold product '%s' at port '%s' for the first time.", itemKey, portKey))
+		DebugOut("PLAYER", string.format("First local transaction: Player sold product '%s' at port '%s' for the first time.", itemKey, portKey))
 	end
 	if isFirstCategoryAtPort then
 		Player.firstSellCategory[portKey][categoryKey] = true
-		DebugOut("PLAYER", string.format("Category First: Player sold a '%s' product at port '%s' for the first time.", categoryKey, portKey))
+		DebugOut("PLAYER", string.format("First category transaction: Player sold a '%s' product at port '%s' for the first time.", categoryKey, portKey))
 	end
-	
+
 	-- 2. Execute Sale
 	prod:Sell(n)
-	
+
 	-- Lock the UI element immediately if we've completely exhausted our inventory of this item
-	if prod:GetInventory() == 0 then 
-		EnableWindow(prod.code, false) 
+	if prod:GetInventory() == 0 then
+		EnableWindow(prod.code, false)
 	end
-	
+
 	-- 3. Merchant Mood Adjustment
 	if lastHaggleResult == "bad" then
 		char:MakeNeutral()
@@ -134,7 +134,7 @@ local products = {}
 for code, _ in pairs(Player.products) do
 	local prod = _AllProducts[code]
 	local category = prod:GetMachinery()
-	
+
 	if prod and prod:GetInventory() > 0 and shop.buys[category.name] then
 		count = count + 1
 		table.insert(products, prod)
@@ -146,7 +146,7 @@ table.sort(products, ProductOrderFunction)
 -------------------------------------------------------------------------------
 -- Dynamic Layout Engine
 -------------------------------------------------------------------------------
--- Evaluates the number of products the player intends to sell and automatically scales 
+-- Evaluates the number of products the player intends to sell and automatically scales
 -- and arranges the wooden crate icons to fit inside the UI dialogue box perfectly.
 
 local layout =
@@ -162,15 +162,15 @@ local layout =
 	rowCount = 0,
 	count = count,
 	productList = {},
-	
+
 	Initialize = function(self)
 		self.perRow = Floor(self.dx / self.xDelta)
-		if self.perRow == self.count and self.count > 3 then 
-			self.perRow = Floor(self.count / 2) 
+		if self.perRow == self.count and self.count > 3 then
+			self.perRow = Floor(self.count / 2)
 		end
 		self.rows = Floor((self.count + self.perRow - 1) / self.perRow)
 		self.perRow = Floor((self.count + self.rows - 1) / self.rows)
-		
+
 		self.xLeft = 226 + (self.dx - self.perRow * self.xDelta) / 2
 		self.x = self.xLeft
 	end,
@@ -187,12 +187,12 @@ if count <= 3 then
 		local prod = product
 		local currentPrice = prod:GetPrice()
 		local priceLabel = Dollars(currentPrice)
-		
+
 		local modifier = Tips.GetPriceModifier(prod.code, port.name)
 		if modifier > 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>" end
-		
-		table.insert(self.productList, Rollover { 
+
+		table.insert(self.productList, Rollover {
 			x = self.x, y = self.y, fit = true, contents = "_AllProducts['" .. prod.code .. "']:ShopRolloverContents()",
 			name = prod.code,
 			command = function()
@@ -202,7 +202,7 @@ if count <= 3 then
 					if not Player.firstEverSell[prod.code] then thanks_key = "shop_thanks_firstever"
 					elseif not Player.firstSell[port.name][prod.code] then thanks_key = "shop_thanks_firstatbuilding"
 					elseif not Player.firstSellCategory[port.name][prod.category.name] then thanks_key = "shop_thanks_firstcategory" end
-					
+
 					SetDynamicKeeperText(GetMerchantDialogue(thanks_key, char, shop, lastHaggleResult, prod.code, nil, count))
 					lastHaggleResult = nil
 				end
@@ -226,8 +226,8 @@ elseif count <= 12 then
 		local modifier = Tips.GetPriceModifier(prod.code, port.name)
 		if modifier > 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>" end
-		
-		table.insert(self.productList, Rollover { 
+
+		table.insert(self.productList, Rollover {
 			x = self.x, y = self.y, fit = true, contents = "_AllProducts['" .. prod.code .. "']:ShopRolloverContents()",
 			name = prod.code,
 			command = function()
@@ -237,7 +237,7 @@ elseif count <= 12 then
 					if not Player.firstEverSell[prod.code] then thanks_key = "shop_thanks_firstever"
 					elseif not Player.firstSell[port.name][prod.code] then thanks_key = "shop_thanks_firstatbuilding"
 					elseif not Player.firstSellCategory[port.name][prod.category.name] then thanks_key = "shop_thanks_firstcategory" end
-					
+
 					SetDynamicKeeperText(GetMerchantDialogue(thanks_key, char, shop, lastHaggleResult, prod.code, nil, count))
 					lastHaggleResult = nil
 				end
@@ -261,8 +261,8 @@ elseif count <= 16 then
 		local modifier = Tips.GetPriceModifier(prod.code, port.name)
 		if modifier > 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>" end
-		
-		table.insert(self.productList, Rollover { 
+
+		table.insert(self.productList, Rollover {
 			x = self.x, y = self.y, fit = true, contents = "_AllProducts['" .. prod.code .. "']:ShopRolloverContents()",
 			name = prod.code,
 			command = function()
@@ -272,7 +272,7 @@ elseif count <= 16 then
 					if not Player.firstEverSell[prod.code] then thanks_key = "shop_thanks_firstever"
 					elseif not Player.firstSell[port.name][prod.code] then thanks_key = "shop_thanks_firstatbuilding"
 					elseif not Player.firstSellCategory[port.name][prod.category.name] then thanks_key = "shop_thanks_firstcategory" end
-					
+
 					SetDynamicKeeperText(GetMerchantDialogue(thanks_key, char, shop, lastHaggleResult, prod.code, nil, count))
 					lastHaggleResult = nil
 				end
@@ -296,8 +296,8 @@ elseif count <= 27 then
 		local modifier = Tips.GetPriceModifier(prod.code, port.name)
 		if modifier > 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>" end
-		
-		table.insert(self.productList, Rollover { 
+
+		table.insert(self.productList, Rollover {
 			x = self.x, y = self.y, fit = true, contents = "_AllProducts['" .. prod.code .. "']:ShopRolloverContents()",
 			name = prod.code,
 			command = function()
@@ -307,7 +307,7 @@ elseif count <= 27 then
 					if not Player.firstEverSell[prod.code] then thanks_key = "shop_thanks_firstever"
 					elseif not Player.firstSell[port.name][prod.code] then thanks_key = "shop_thanks_firstatbuilding"
 					elseif not Player.firstSellCategory[port.name][prod.category.name] then thanks_key = "shop_thanks_firstcategory" end
-					
+
 					SetDynamicKeeperText(GetMerchantDialogue(thanks_key, char, shop, lastHaggleResult, prod.code, nil, count))
 					lastHaggleResult = nil
 				end
@@ -332,8 +332,8 @@ else
 		local modifier = Tips.GetPriceModifier(prod.code, port.name)
 		if modifier > 1.0 then priceLabel = BetterPriceColor .. priceLabel .. "</font>"
 		elseif modifier < 1.0 then priceLabel = WorsePriceColor .. priceLabel .. "</font>" end
-		
-		table.insert(self.productList, Rollover { 
+
+		table.insert(self.productList, Rollover {
 			x = self.x, y = self.y, fit = true, contents = "_AllProducts['" .. prod.code .. "']:ShopRolloverContents()",
 			name = prod.code,
 			command = function()
@@ -343,7 +343,7 @@ else
 					if not Player.firstEverSell[prod.code] then thanks_key = "shop_thanks_firstever"
 					elseif not Player.firstSell[port.name][prod.code] then thanks_key = "shop_thanks_firstatbuilding"
 					elseif not Player.firstSellCategory[port.name][prod.category.name] then thanks_key = "shop_thanks_firstcategory" end
-					
+
 					SetDynamicKeeperText(GetMerchantDialogue(thanks_key, char, shop, lastHaggleResult, prod.code, nil, count))
 					lastHaggleResult = nil
 				end
@@ -382,7 +382,7 @@ local function Haggle()
 		else
 			response_key = "shop_haggle_response_good"
 		end
-		
+
 		local response_text = GetMerchantDialogue(response_key, char, shop)
 		if response_text then SetDynamicKeeperText(response_text) end
 
@@ -390,7 +390,7 @@ local function Haggle()
 		shop:HaggleSuccess()
 		char:MakeHappy()
 		EnableWindow("haggle", (Player.rank > 1) and (not Player.haggleDisable[char.name]))
-		
+
 	elseif gHaggleSuccess == "bad" then
 		local response_key
 		if haggleSucceededOnce then
@@ -398,7 +398,7 @@ local function Haggle()
 		else
 			response_key = "shop_haggle_response_bad"
 		end
-		
+
 		local response_text = GetMerchantDialogue(response_key, char, shop)
 		SetDynamicKeeperText(response_text)
 
@@ -406,7 +406,7 @@ local function Haggle()
 		char:MakeAngry()
 		Player.haggleDisable[char.name] = true
 		EnableWindow("haggle", false)
-		
+
 	elseif response then
 		SetDynamicKeeperText(response)
 	end
@@ -417,23 +417,23 @@ local function SellAll()
 	if table.getn(products) > 0 then
 		DebugOut("ECONOMY", string.format("Sell All button clicked by player in %s.", shop.name))
 		SoundEvent("sell")
-		
+
 		local totalSold = 0
 		local contextProduct = products[1]
 
-		for _, prod in ipairs(products) do 
+		for _, prod in ipairs(products) do
 			local amount = prod:GetInventory()
 			totalSold = totalSold + amount
-			
+
 			-- Pass 'true' to silence the repetitive cash register noise
-			SellProduct(prod, amount, true) 
+			SellProduct(prod, amount, true)
 		end
-		
+
 		SetDynamicKeeperText(GetMerchantDialogue("shop_thanks", char, shop, lastHaggleResult, contextProduct.code, nil, totalSold))
 		lastHaggleResult = nil
-		
+
 		char:MakeHappy()
-		
+
 		-- Immediately boot the player out to process the transaction
 		CloseShopWindow()
 	end
@@ -447,22 +447,22 @@ function CloseShopWindow()
 			local displayedPrice = prod:GetPrice()
 			if port then Player.lastSeenPort[prod.code] = port.name end
 			Player.lastSeenPrice[prod.code] = displayedPrice
-			
+
 			local modifier = Tips.GetPriceModifier(prod.code, port.name)
 			local basePrice = Floor(displayedPrice / modifier)
-			
+
 			if not Player.lowPrice[prod.code] then Player.lowPrice[prod.code] = basePrice
 			elseif basePrice < Player.lowPrice[prod.code] then Player.lowPrice[prod.code] = basePrice
 			end
-			
+
 			if not Player.highPrice[prod.code] then Player.highPrice[prod.code] = basePrice
 			elseif basePrice > Player.highPrice[prod.code] then Player.highPrice[prod.code] = basePrice
 			end
 		end
 	end
-	
+
 	if transactionCompleted then SubTickSim() end
-	
+
 	FadeCloseWindow("ui_shop", "ok")
 end
 
@@ -475,8 +475,8 @@ local welcome = nil
 if layout.count > 0 then
 	-- Player has items to sell
 	local welcome_key = "shop_welcome"
-	if shop:IsOwned() then 
-		welcome_key = "shop_welcome_owned" 
+	if shop:IsOwned() then
+		welcome_key = "shop_welcome_owned"
 	end
 	welcome = GetMerchantDialogue(welcome_key, char, shop, nil, nil, isFirstVisit)
 
@@ -488,18 +488,18 @@ if layout.count > 0 then
 			Bitmap
 			{
 				x = 0, y = 9, image = "image/popup_back_shop",
-				
+
 				-- Main Interface Text
 				SetStyle(C3CharacterDialogStyle),
 				Text { x = 230, y = 36, w = 398, h = 40, name = "keeper_text" },
-				
+
 				-- Render the dynamically generated product layout
 				Group(layout.productList),
-				
+
 				-- Character Identity Plate
 				SetStyle(C3CharacterNameStyle),
 				Text { x = 37, y = 241, w = 187, h = 20, label = "#" .. GetString(char.name), font = characterNameFont, flags = kVAlignCenter + kHAlignCenter },
-				
+
 				-- UI Controls
 				SetStyle(C3ButtonStyle),
 				Button { x = 202, y = 280, name = "haggle", label = "haggle", command = Haggle },
@@ -528,13 +528,13 @@ else
 			Bitmap
 			{
 				x = 0, y = 9, image = "image/popup_back_shop",
-				
+
 				SetStyle(C3CharacterDialogStyle),
 				Text { x = 241, y = 48, w = 414, h = 172, name = "keeper_text" },
-				
+
 				SetStyle(C3CharacterNameStyle),
 				Text { x = 37, y = 241, w = 187, h = 20, label = "#" .. GetString(char.name), font = characterNameFont, flags = kVAlignCenter + kHAlignCenter },
-				
+
 				SetStyle(C3ButtonStyle),
 				Button { x = 466, y = 280, name = "ok", label = "exit", default = true, cancel = true, command = CloseShopWindow },
 
@@ -552,4 +552,12 @@ if isFirstVisit then
 end
 
 OpenBuilding("ui_shop", shop)
-SetDynamicKeeperText(welcome)
+if layout.count > 0 then
+	-- Product-bearing shop visits keep the dynamic two-line scaler used by sales,
+	-- haggling and transaction responses.
+	SetDynamicKeeperText(welcome)
+else
+	-- Comeback/scolding text has a much taller dialogue area and should use the
+	-- normal CharacterDialogStyle font instead of being unnecessarily shrunk.
+	SetLabel("keeper_text", welcome or "")
+end

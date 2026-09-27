@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Big Splash Games\Tools\playground\kon_hutkeep.xml" source=".\kon_hutkeep*.png">
+  <img regx="98.000000" regy="128.000000" name="kon_hutkeep.png" w="0.000000" h="0.000000"/>
+  <framelist>
+    <frame regx="108" regy="110" name="kon_hutkeep.png" w="206" h="256" x="0" y="0"/>
+    <frame regx="34" regy="86" name="kon_hutkeep_displeased.png" w="60" h="76" x="208" y="24"/>
+    <frame regx="34" regy="86" name="kon_hutkeep_neutral.png" w="60" h="76" x="271" y="24"/>
+    <frame regx="33" regy="86" name="kon_hutkeep_pleased.png" w="60" h="76" x="334" y="24"/>
+  </framelist>
+</sequence>

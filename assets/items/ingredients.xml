@@ -31,7 +31,8 @@
   <ingredient>
 	<name>amaretto</name>
 	<code>AMA</code>
-	<category>flavor</category>
+	<category>liqueur</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_bottle</unit_type>
 	<alcohol>true</alcohol>
 	<origin>italy</origin>
@@ -200,7 +201,8 @@
   <ingredient>
 	<name>brandy</name>
 	<code>BRA</code>
-	<category>flavor</category>
+	<category>liqueur</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_bottle</unit_type>
 	<alcohol>true</alcohol>
 	<origin>france</origin>
@@ -298,7 +300,8 @@
   <ingredient>
 	<name>chamomile</name>
 	<code>CHA</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>egypt</origin>
 	<locked>true</locked>
@@ -465,7 +468,8 @@
   <ingredient>
 	<name>earl_grey</name>
 	<code>EGT</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>uk</origin>
 	<locked>true</locked>
@@ -507,7 +511,8 @@
   <ingredient>
 	<name>grand_marnier</name>
 	<code>GMA</code>
-	<category>flavor</category>
+	<category>liqueur</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_bottle</unit_type>
 	<alcohol>true</alcohol>
 	<origin>france</origin>
@@ -578,7 +583,8 @@
   <ingredient>
 	<name>hibiscus</name>
 	<code>HIB</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>central_america</origin>
 	<locked>true</locked>
@@ -619,7 +625,8 @@
   <ingredient>
 	<name>jasmine</name>
 	<code>JAS</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>china</origin>
 	<locked>true</locked>
@@ -633,7 +640,8 @@
   <ingredient>
 	<name>kahlua</name>
 	<code>KHL</code>
-	<category>flavor</category>
+	<category>liqueur</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_bottle</unit_type>
 	<alcohol>true</alcohol>
 	<origin>mexico</origin>
@@ -662,7 +670,8 @@
   <ingredient>
 	<name>lavender</name>
 	<code>LAV</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>france</origin>
 	<locked>true</locked>
@@ -761,6 +770,8 @@
 	<name>marshmallow</name>
 	<code>MSH</code>
 	<category>special</category>
+	<kitchen_category>sugar</kitchen_category>
+	<recipe_family>sugar</recipe_family>
 	<unit_type>unit_box</unit_type>
 	<origin>usa</origin>
 	<locked>true</locked>
@@ -774,7 +785,8 @@
   <ingredient>
 	<name>matcha</name>
 	<code>MAT</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_can</unit_type>
 	<origin>japan</origin>
 	<locked>true</locked>
@@ -858,6 +870,8 @@
 	<name>oat</name>
 	<code>OAT</code>
 	<category>special</category>
+	<kitchen_category>dairy</kitchen_category>
+	<recipe_family>dairy</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>uk</origin>
 	<locked>true</locked>
@@ -1026,6 +1040,7 @@
 	<name>powder</name>
 	<code>POW</code>
 	<category>special</category>
+	<kitchen_category>cacao</kitchen_category>
 	<unit_type>unit_can</unit_type>
 	<origin>netherlands</origin>
 	<locked>true</locked>
@@ -1081,7 +1096,8 @@
   <ingredient>
 	<name>rooibos</name>
 	<code>ROO</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>south_africa</origin>
 	<locked>true</locked>
@@ -1095,7 +1111,8 @@
   <ingredient>
 	<name>rose</name>
 	<code>ROS</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_box</unit_type>
 	<origin>bulgaria</origin>
 	<locked>true</locked>
@@ -1123,7 +1140,8 @@
   <ingredient>
 	<name>rum</name>
 	<code>RUM</code>
-	<category>flavor</category>
+	<category>liqueur</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_bottle</unit_type>
 	<alcohol>true</alcohol>
 	<origin>barbados</origin>
@@ -1262,7 +1280,8 @@
   <ingredient>
 	<name>tea</name>
 	<code>TEA</code>
-	<category>flavor</category>
+	<category>tea</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_sack</unit_type>
 	<origin>china</origin>
 	<locked>true</locked>
@@ -1319,6 +1338,8 @@
 	<name>wafer</name>
 	<code>WAF</code>
 	<category>special</category>
+	<kitchen_category>sugar</kitchen_category>
+	<recipe_family>sugar</recipe_family>
 	<unit_type>unit_box</unit_type>
 	<origin>austria</origin>
 	<locked>true</locked>
@@ -1374,7 +1395,8 @@
   <ingredient>
 	<name>whiskey</name>
 	<code>WSK</code>
-	<category>flavor</category>
+	<category>liqueur</category>
+	<recipe_family>flavor</recipe_family>
 	<unit_type>unit_bottle</unit_type>
 	<alcohol>true</alcohol>
 	<origin>ireland</origin>

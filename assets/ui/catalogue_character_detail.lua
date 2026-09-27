@@ -1,7 +1,9 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Catalogue Detail - Characters
-	Copyright (c) 2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Catalogue Detail - Characters)
+	Copyright (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
+
+ClearStringCache()
 
 local char = gCatalogueSelection
 
@@ -19,10 +21,10 @@ local assetInfo = CharacterAssetManifest[char.name] or {}
 local showUnlockedView = isUnlocked or gDevForceReveal
 local showMetView = (isMet and not showUnlockedView)
 
-DebugOut("UI", "Initializing Catalogue UI Character Detail panel.", { 
-	selection = char.name, 
-	unlocked = showUnlockedView, 
-	met = showMetView 
+DebugOut("UI", "Initializing Catalogue UI Character Detail panel.", {
+	selection = char.name,
+	unlocked = showUnlockedView,
+	met = showMetView
 })
 
 -- Asset positioning defaults
@@ -62,7 +64,7 @@ local right_col_x = 200
 local right_col_w = 240
 
 -- Grid Anchors
-local data_start_y = portrait_y + 260 
+local data_start_y = portrait_y + 260
 local alignment_y_row2 = data_start_y + 48 -- Anchors "Gender" & "Likes"
 local alignment_y_row3 = alignment_y_row2 + 48 -- Anchors "Notes" & "Dislikes"
 
@@ -80,16 +82,16 @@ local function GetNextSafeOffset(text, start_offset, advance_chars)
 	local target = start_offset + advance_chars
 	local text_len = string.len(text)
 	if target >= text_len then return text_len end
-	
+
 	local in_tag = false
 	local i = start_offset + 1
-	
+
 	while i <= target do
 		local c = string.sub(text, i, i)
 		if c == "<" then in_tag = true elseif c == ">" then in_tag = false end
 		i = i + 1
 	end
-	
+
 	while i <= text_len do
 		local c = string.sub(text, i, i)
 		if c == "<" then
@@ -110,7 +112,7 @@ local function GetOpenTagsForOffset(text, offset)
 	local current_tag = ""
 	local is_closing_tag = false
 	local active_format_tags = {}
-	
+
 	local i = 1
 	while i <= offset do
 		local c = string.sub(text, i, i)
@@ -128,7 +130,7 @@ local function GetOpenTagsForOffset(text, offset)
 		end
 		i = i + 1
 	end
-	
+
 	local prefix = ""
 	for j = 1, table.getn(active_format_tags) do prefix = prefix .. active_format_tags[j] end
 	return prefix
@@ -167,14 +169,14 @@ end
 local function ScrollDown()
 	local rawBody = GetString(description_key)
 	if rawBody == "#####" then return end
-	
+
 	if gCatalogueCharPage == table.getn(gCatalogueCharOffsets) then
 		local current_offset = gCatalogueCharOffsets[gCatalogueCharPage]
 		local next_offset = GetNextSafeOffset(rawBody, current_offset, chars_per_scroll)
 		table.insert(gCatalogueCharOffsets, next_offset)
 		DebugOut("UI", "Calculated safe scroll offset.", { offset = next_offset })
 	end
-	
+
 	gCatalogueCharPage = gCatalogueCharPage + 1
 	SoundEvent("cadi/ui_click.ogg")
 	FillWindow("catalogue_detail", "ui/catalogue_character_detail.lua")
@@ -186,12 +188,12 @@ end
 
 local function EstimateTextHeight(txt, width, font_size)
 	if not txt or txt == "" then return 0 end
-	
+
 	local char_width = font_size * 0.45
 	local chars_per_line = Floor(width / char_width)
 	if chars_per_line < 10 then chars_per_line = 10 end
 	local line_height = font_size + 2
-	
+
 	local segments = {}
 	local pos = 1
 	local start_pos, end_pos = string.find(txt, "<br>", pos, true)
@@ -201,7 +203,7 @@ local function EstimateTextHeight(txt, width, font_size)
 		start_pos, end_pos = string.find(txt, "<br>", pos, true)
 	end
 	table.insert(segments, string.sub(txt, pos))
-	
+
 	local total_lines = 0
 	for _, seg in ipairs(segments) do
 		local lines = Floor(string.len(seg) / chars_per_line) + 1
@@ -212,9 +214,9 @@ end
 
 local function BuildPreferenceString(masterList, discoveredList)
 	if gDevForceReveal then discoveredList = masterList end
-	
+
 	if not masterList or table.getn(masterList) == 0 then return GetString("catalogue_none") end
-	
+
 	local displayItems = {}
 	for _, key in ipairs(masterList) do
 		local found = false
@@ -223,7 +225,7 @@ local function BuildPreferenceString(masterList, discoveredList)
 				if discoveredKey == key then found = true; break; end
 			end
 		end
-		
+
 		if found then table.insert(displayItems, GetString(key))
 		else table.insert(displayItems, GetString("catalogue_unknown"))
 		end
@@ -251,8 +253,8 @@ local notes_string = GetString("catalogue_unknown")
 if showUnlockedView then
 	local notes = {}
 	if char.religion then
-		local religionKey = "culture_" .. char.religion 
-		if not HasString(religionKey) then religionKey = "religion_"..char.religion end 
+		local religionKey = "culture_" .. char.religion
+		if GetString(religionKey) == "#####" then religionKey = "religion_"..char.religion end
 		table.insert(notes, GetString(religionKey))
 	end
 	if char.dietaryreqs then
@@ -275,7 +277,7 @@ if showMetView or showUnlockedView then
 		if char.likes.ingredients then for k,_ in pairs(char.likes.ingredients) do table.insert(master_likes_list, k) end end
 	end
 	table.sort(master_likes_list)
-	
+
 	local master_dislikes_list = {}
 	if char.dislikes then
 		if char.dislikes.categories then for k,_ in pairs(char.dislikes.categories) do table.insert(master_dislikes_list, k) end end
@@ -283,7 +285,7 @@ if showMetView or showUnlockedView then
 		if char.dislikes.ingredients then for k,_ in pairs(char.dislikes.ingredients) do table.insert(master_dislikes_list, k) end end
 	end
 	table.sort(master_dislikes_list)
-	
+
 	likes_string = BuildPreferenceString(master_likes_list, charData and charData.discovered_likes or {})
 	dislikes_string = BuildPreferenceString(master_dislikes_list, charData and charData.discovered_dislikes or {})
 end
@@ -309,10 +311,10 @@ else
 		silhouetteDisplay = BitmapTint { image = "characters/" .. char.name .. ".png", tint = Color(0, 0, 0, 255) }
 	end
 	if silhouetteDisplay then
-		table.insert(contents, Window { 
-			x = portrait_x, y = portrait_y, w = portrait_w, h = portrait_h, 
-			scale = portrait_scale, silhouetteDisplay, 
-			Bitmap { x = 0, y = 0, image = "image/catalogue_portrait_mask.png" } 
+		table.insert(contents, Window {
+			x = portrait_x, y = portrait_y, w = portrait_w, h = portrait_h,
+			scale = portrait_scale, silhouetteDisplay,
+			Bitmap { x = 0, y = 0, image = "image/catalogue_portrait_mask.png" }
 		})
 	end
 end
@@ -330,30 +332,30 @@ if current_offset > 0 then
 	DebugOut("UI", "Injected persistent formatting tags.", { tags = openTags })
 end
 
-table.insert(contents, Text { 
-	x = right_col_x, y = bio_y, w = right_col_w, h = bio_h, 
-	name = "catalogue_description_text", 
+table.insert(contents, Text {
+	x = right_col_x, y = bio_y, w = right_col_w, h = bio_h,
+	name = "catalogue_description_text",
 	label = "#" .. visibleText,
 	font = { uiFontName, 14, BlackColor },
-	flags=kVAlignTop+kHAlignLeft 
+	flags=kVAlignTop+kHAlignLeft
 })
 
 -- 3b. BIO SCROLL CONTROLS (Positioned below the bio, above the Right Column Data Grid)
 local btn_y = bio_y + bio_h
 local btn_spacing = 30
-local btn_center_x = right_col_x + (right_col_w / 2) 
+local btn_center_x = right_col_x + (right_col_w / 2)
 
-table.insert(contents, Button { 
-	x = btn_center_x - btn_spacing, y = btn_y, w = 25, h = 25, 
-	name = "char_scrollUp", command = ScrollUp, 
-	graphics = {"image/button_arrow_up_up", "image/button_arrow_up_down", "image/button_arrow_up_over"}, 
+table.insert(contents, Button {
+	x = btn_center_x - btn_spacing, y = btn_y, w = 25, h = 25,
+	name = "char_scrollUp", command = ScrollUp,
+	graphics = {"image/button_arrow_up_up", "image/button_arrow_up_down", "image/button_arrow_up_over"},
 	scale = 0.8
 })
 
-table.insert(contents, Button { 
-	x = btn_center_x + btn_spacing, y = btn_y, w = 25, h = 25, 
-	name = "char_scrollDown", command = ScrollDown, 
-	graphics = {"image/button_arrow_down_up", "image/button_arrow_down_down", "image/button_arrow_down_over"}, 
+table.insert(contents, Button {
+	x = btn_center_x + btn_spacing, y = btn_y, w = 25, h = 25,
+	name = "char_scrollDown", command = ScrollDown,
+	graphics = {"image/button_arrow_down_up", "image/button_arrow_down_down", "image/button_arrow_down_over"},
 	scale = 0.8
 })
 
@@ -422,16 +424,16 @@ MakeDialog(contents)
 QueueCommand(function()
 	local rawString = GetString(description_key)
 	local chars_remaining = string.len(rawString) - gCatalogueCharOffsets[gCatalogueCharPage]
-	
+
 	local canScrollUp = gCatalogueCharPage > 1
 	local canScrollDown = chars_remaining > chars_per_page
-	
+
 	EnableWindow("char_scrollUp", canScrollUp)
 	EnableWindow("char_scrollDown", canScrollDown)
-	
-	DebugOut("UI", "Post-render scroll states evaluated.", { 
-		canScrollUp = canScrollUp, 
-		canScrollDown = canScrollDown, 
-		charsRemaining = chars_remaining 
+
+	DebugOut("UI", "Post-render scroll states evaluated.", {
+		canScrollUp = canScrollUp,
+		canScrollDown = canScrollDown,
+		charsRemaining = chars_remaining
 	})
 end)

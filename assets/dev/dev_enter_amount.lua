@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Dev Entry Prompt)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Dev Entry Prompt)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This script renders a simple text-box overlay used by other dev tools to
@@ -17,10 +17,10 @@ local initialValue = gDialogTable.initialValue or "0"
 local function okFunction()
 	local amount = tonumber(GetLabel("entry") or "0")
 	if amount and type(onOkCallback) == "function" then
-		DebugOut("DEV", string.format("Dev Input Confirmed: Passing value %d to parent callback.", amount))
+		DebugOut("DEV", string.format("Passing value %d to parent callback.", amount))
 		onOkCallback(amount)
 	else
-		DebugOut("DEV", "Dev Input Failed: Invalid number parsed or missing callback.")
+		DebugOut("DEV", "Invalid number parsed or missing callback.")
 	end
 	FadeCloseWindow("dev_enter_amount", "ok")
 end
@@ -35,16 +35,16 @@ MakeDialog
 	{
 		name = "dev_enter_amount",
 		x = 1000, y = kCenter, image = "image/popup_back_generic_1",
-		
+
 		SetStyle(C3DialogBodyStyle),
 		Text { x = 20, y = 42, w = 459, h = 100, label = "#" .. promptText, flags = kVAlignCenter + kHAlignCenter },
-		
+
 		Bitmap { x = kCenter, y = 142, image = "image/entername",
-			TextEdit { 
+			TextEdit {
 				x = 0, y = 0, w = kMax, h = kMax, name = "entry", label = initialValue,
 				flags = kVAlignCenter + kHAlignCenter,
 				clearinitial = true, enablewindow = "ok",
-				length = 12, ignore = kNumbersOnly 
+				length = 12, ignore = kNumbersOnly
 			},
 		},
 

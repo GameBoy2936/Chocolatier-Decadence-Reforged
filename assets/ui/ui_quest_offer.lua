@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Quest Offer Dialog)
+	Chocolatier: Decadence by Design Reforged (Quest Offer Dialog)
 	Copyright (c) 2006-2007 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local quest = gDialogTable.quest
@@ -18,7 +18,7 @@ if building and not Player.buildingsVisited[building.name] then
 	Player.buildingsVisited[building.name] = true
 end
 
-local text = quest:GetIntro(char)
+local text = quest:GetIntro(char, building)
 local name = nil
 local happiness = nil
 
@@ -32,8 +32,8 @@ DebugOut("QUEST", string.format("Presenting Quest Offer UI: %s (Given by %s)", q
 -- Determine if the Accept button should also act as Cancel (ESC key bind)
 -- This happens if the quest is a mandatory progression beat and cannot be rejected or deferred.
 local okCancel = false
-if quest.defer == "none" and quest.reject == "none" then 
-	okCancel = true 
+if quest.defer == "none" and quest.reject == "none" then
+	okCancel = true
 end
 
 -- ----------------------------------------------------------------------------
@@ -45,7 +45,7 @@ local function SetDynamicDialogueText(text)
 	local font_sizes_to_check = { 16, 15, 14, 13, 12 }
 	local chars_per_line_map = { [16] = 46, [15] = 49, [14] = 52, [13] = 56, [12] = 60 }
 	local line_thresholds = {[16] = 10, [15] = 11, [14] = 12, [13] = 13, [12] = 999 }
-	
+
 	local segments = {}
 	local current_pos = 1
 	if text then
@@ -69,10 +69,10 @@ local function SetDynamicDialogueText(text)
 		end
 		if total_lines <= line_threshold then
 			final_font_size = current_font_size
-			break 
+			break
 		end
 	end
-	
+
 	local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
 	SetLabel("dialogue_text", formatted_text)
 end
@@ -85,7 +85,7 @@ end
 
 local windowWidth = 602
 local buttonY = 240
-local buttonSpacing = 5 
+local buttonSpacing = 5
 
 local buttonWidths = { standard = 135, medium = 165, long = 200, extralong = 400 }
 local buttonStyles = { standard = C3ButtonStyle, medium = C3ButtonMediumStyle, long = C3ButtonLongStyle, extralong = C3ButtonExtraLongStyle }
@@ -109,7 +109,7 @@ table.insert(activeButtons, {
 	name = "accept",
 	label = quest.accept,
 	length = quest.accept_length or "standard",
-	command = function() quest:Accept(char); CloseWindow() end,
+	command = function() quest:Accept(char, building); CloseWindow() end,
 	cancel = okCancel, default = true
 })
 
@@ -142,21 +142,21 @@ local generatedButtons = {}
 for _, btn in ipairs(activeButtons) do
 	local style = buttonStyles[btn.length] or buttonStyles.standard
 	local width = buttonWidths[btn.length] or buttonWidths.standard
-	
+
 	table.insert(generatedButtons, Button {
 		x = currentX, y = buttonY, w = width, h = 50,
 		name = btn.name, label = "#" .. GetString(btn.label),
 		command = btn.command, default = btn.default, cancel = btn.cancel,
-		
-		font = buttonFont, 
+
+		font = buttonFont,
 		flags = kVAlignCenter + kHAlignCenter,
 		ty = kCenter - 3, tx = kCenter - 1,
-		
+
 		graphics = style.graphics,
 		sound = style.sound,
-		type = style.type, 
+		type = style.type,
 	})
-	
+
 	currentX = currentX + width + buttonSpacing
 end
 
@@ -172,13 +172,13 @@ MakeDialog
 		Bitmap
 		{
 			x = 0, y = 49, image = "image/popup_back_dialog",
-			
+
 			SetStyle(C3CharacterDialogStyle),
 			Text { x = 241, y = 48, w = 314, h = 172, name = "dialogue_text", label = "#" .. text },
-			
+
 			SetStyle(C3CharacterNameStyle),
 			Text { x = 41, y = 201, w = 187, h = 20, label = name, font = characterNameFont, flags = kVAlignCenter + kHAlignCenter },
-			
+
 			Group(generatedButtons),
 		},
 		CharWindow { x = 49, y = 0, name = name, happiness = happiness },

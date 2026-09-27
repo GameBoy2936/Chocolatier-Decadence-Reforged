@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Special Order Editor)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Special Order Editor)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local orderData = gDialogTable.orderData
@@ -20,7 +20,7 @@ end
 
 -- Fix sparse arrays: If items 1 or 2 are empty but 3 is full, shift them upwards
 local cleanItems = {}
-for i = 1, 10 do 
+for i = 1, 10 do
 	if orderData.items[i] then table.insert(cleanItems, orderData.items[i]) end
 end
 orderData.items = cleanItems
@@ -37,15 +37,15 @@ end
 -- ----------------------------------------------------------------------------
 -- Algorithm: Auto-Calculate Order Math
 -- ----------------------------------------------------------------------------
--- Synthesizes the exact math used by the global quest generator to formulate 
+-- Synthesizes the exact math used by the global quest generator to formulate
 -- a fair market price and timeline based on the items placed in this draft container.
 local function AutoCalculateOrder()
-	DebugOut("DEV", string.format("Admin Action: Auto-calculating fair market price and deadline for: %s", orderData.name))
-	
+	DebugOut("DEV", string.format("Auto-calculating fair market price and deadline for: %s", orderData.name))
+
 	local totalPrice = 0
 	local numItems = table.getn(orderData.items)
 	local usedFactories = {}
-	
+
 	if numItems == 0 then return end
 
 	-- Part 1: Calculate raw margins
@@ -54,16 +54,16 @@ local function AutoCalculateOrder()
 		if prod then
 			-- Base price is standard max retail * 3 (A premium order payload)
 			local basePrice = Floor(prod.price_high * 3) * item.count
-			
+
 			-- Apply global difficulty constraints
-			if Player.difficulty == 2 then 
+			if Player.difficulty == 2 then
 				basePrice = Floor(basePrice * 0.9)
-			elseif Player.difficulty == 3 then 
-				basePrice = Floor(basePrice * 0.6) 
+			elseif Player.difficulty == 3 then
+				basePrice = Floor(basePrice * 0.6)
 			end
-			
+
 			totalPrice = totalPrice + basePrice
-			
+
 			if prod.category and prod.category.factory then
 				usedFactories[prod.category.factory] = true
 			end
@@ -73,16 +73,16 @@ local function AutoCalculateOrder()
 	-- Part 2: Apply Complexity Multipliers (Multi-item logistical hassle)
 	if numItems > 1 then
 		local complexityBonus = 1.0 + ((numItems - 1) * 0.15)
-		
+
 		local numFactories = 0
 		for _ in pairs(usedFactories) do numFactories = numFactories + 1 end
-		
+
 		-- If they have to use BOTH a Coffee and Chocolate factory, charge an extra 10% premium
 		if numFactories > 1 then complexityBonus = complexityBonus + 0.10 end
-		
+
 		totalPrice = Floor(totalPrice * complexityBonus)
 	end
-	
+
 	orderData.price = totalPrice
 
 	-- Part 3: Calculate Time Limit Deadline
@@ -91,16 +91,16 @@ local function AutoCalculateOrder()
 	elseif Player.rank == 3 then baseWeeks = RandRange(12, 16)
 	elseif Player.rank == 4 then baseWeeks = RandRange(10, 14)
 	elseif Player.rank >= 5 then baseWeeks = RandRange(8, 12) end
-	
+
 	local totalWeeks = baseWeeks * 2
-	
+
 	-- Grant an extra 4 weeks of grace period for every additional item line in the order
 	if numItems > 1 then totalWeeks = totalWeeks + (numItems - 1) * 4 end
-	
+
 	-- Severely compress time limits on higher difficulties
 	if Player.difficulty == 2 then totalWeeks = Floor(totalWeeks * 0.75)
 	elseif Player.difficulty == 3 then totalWeeks = Floor(totalWeeks * 0.5) end
-	
+
 	orderData.expires = totalWeeks
 	RefreshPanel()
 end
@@ -126,24 +126,24 @@ local function EditOrderValue(key, prompt, itemIndex)
 		"dev/dev_enter_amount.lua",
 		prompt = prompt,
 		initialValue = initialVal,
-		
+
 		onOk = function(newValue)
 			local numVal = tonumber(newValue)
-			
+
 			if itemIndex and orderData.items[itemIndex] then
 				 orderData.items[itemIndex][key] = numVal
-				 
+
 				 -- Synchronize root metadata if we edited the primary item line
 				 if itemIndex == 1 and key == "count" then orderData.count = numVal end
-				 DebugOut("DEV", string.format("Order Editor: Replaced slot %d key '%s' with %s", itemIndex, key, tostring(newValue)))
+				 DebugOut("DEV", string.format("Replaced slot %d key '%s' with %s", itemIndex, key, tostring(newValue)))
 			else
 				orderData[key] = numVal
-				DebugOut("DEV", string.format("Order Editor: Replaced global key '%s' with %s", key, tostring(newValue)))
+				DebugOut("DEV", string.format("Replaced global key '%s' with %s", key, tostring(newValue)))
 			end
 			valueWasChanged = true
 		end
 	}
-	
+
 	if valueWasChanged then RefreshPanel() end
 end
 
@@ -151,37 +151,37 @@ end
 local function EditOrderProduct(itemIndex)
 	local valueWasChanged = false
 	local currentCode = "b01"
-	
+
 	if orderData.items[itemIndex] then
 		currentCode = orderData.items[itemIndex].product
 	end
 
 	gRecipeSelection = _AllProducts[currentCode]
 	gCategorySelection = gRecipeSelection.category
-	
+
 	local ok = DisplayDialog { "ui/ui_recipes.lua" }
 
 	if ok and gRecipeSelection then
 		if not orderData.items[itemIndex] then
 			orderData.items[itemIndex] = { product = gRecipeSelection.code, count = 25, price = 0 }
-			DebugOut("DEV", string.format("Order Editor: Injected new item slot %d -> %s", itemIndex, gRecipeSelection.code))
+			DebugOut("DEV", string.format("Injected new item slot %d -> %s", itemIndex, gRecipeSelection.code))
 		else
 			orderData.items[itemIndex].product = gRecipeSelection.code
-			DebugOut("DEV", string.format("Order Editor: Replaced product in slot %d -> %s", itemIndex, gRecipeSelection.code))
+			DebugOut("DEV", string.format("Replaced product in slot %d -> %s", itemIndex, gRecipeSelection.code))
 		end
-		
+
 		if itemIndex == 1 then orderData.product = gRecipeSelection.code end
 		valueWasChanged = true
 	end
-	
+
 	if valueWasChanged then RefreshPanel() end
 end
 
 local function RemoveItem(itemIndex)
 	if orderData.items[itemIndex] then
-		DebugOut("DEV", string.format("Order Editor: Purged slot %d", itemIndex))
+		DebugOut("DEV", string.format("Purged slot %d", itemIndex))
 		table.remove(orderData.items, itemIndex)
-		
+
 		if itemIndex == 1 and orderData.items[1] then
 			orderData.product = orderData.items[1].product
 			orderData.count = orderData.items[1].count
@@ -194,26 +194,60 @@ end
 -- Geography & Network Logic Modifiers
 -- ----------------------------------------------------------------------------
 
--- Transfers a character explicitly from one backend array to another
-local function MoveNonResident(charName, fromBuildingName, toBuildingName)
+-- Transfers a legacy/non-mobility character explicitly between backend arrays.
+-- Mobility-managed characters use exact source-location snapshots instead.
+local function MoveLegacyNonResident(charName, fromBuildingName, toBuildingName)
 	local fromBuilding = _AllBuildings[fromBuildingName]
 	local toBuilding = _AllBuildings[toBuildingName]
-	
+
 	if fromBuilding and Player.buildingCharacters[fromBuilding.name] then
 		Player.buildingCharacters[fromBuilding.name][charName] = nil
 	end
-	
+
 	if toBuilding then
 		Player.buildingCharacters[toBuilding.name] = Player.buildingCharacters[toBuilding.name] or {}
 		Player.buildingCharacters[toBuilding.name][charName] = true
 	end
 end
 
--- Determines if a character is a World Wanderer or an Empty Building placeholder
+-- Determines the old compatibility pool for non-mobility characters.
 local function GetCharacterSourcePool(charName)
-	for _, travName in ipairs(_TravelCharacters) do if travName == charName then return "_travelers" end end
-	for _, emptyName in ipairs(_EmptyCharacters) do if emptyName == charName then return "_empty" end end
-	return nil
+	if CharacterMobility and CharacterMobility:IsMobile(charName) then
+		local location = CharacterMobility:SnapshotLocation(charName)
+		return CharacterMobility:GetLegacySourcePool(charName, location), location
+	end
+	for _, travName in ipairs(_TravelCharacters) do if travName == charName then return "_travelers", nil end end
+	for _, emptyName in ipairs(_EmptyCharacters) do if emptyName == charName then return "_empty", nil end end
+	return nil, nil
+end
+
+local function ReleaseEditedNonResident()
+	if orderData.isResident then return end
+	if CharacterMobility and CharacterMobility:IsMobile(orderData.ender) then
+		CharacterMobility:ReleaseOrderPlacement(orderData.ender, orderData.name, orderData.endbuilding, orderData.sourceLocation)
+	else
+		MoveLegacyNonResident(orderData.ender, orderData.endbuilding, orderData.sourcePool)
+		Player.orderBannedChars[orderData.ender] = nil
+		Player.orderBannedBuildings[orderData.endbuilding] = nil
+	end
+end
+
+local function PlaceEditedNonResident(charName)
+	orderData.ender = charName
+	orderData.isResident = false
+
+	if CharacterMobility and CharacterMobility:IsMobile(charName) then
+		orderData.sourceLocation = CharacterMobility:SnapshotLocation(charName)
+		orderData.sourcePool = CharacterMobility:GetLegacySourcePool(charName, orderData.sourceLocation) or "_travelers"
+		CharacterMobility:BeginOrderPlacement(charName, orderData.name, orderData.endbuilding, orderData.sourceLocation)
+	else
+		local sourcePool = GetCharacterSourcePool(charName) or "_travelers"
+		orderData.sourcePool = sourcePool
+		orderData.sourceLocation = nil
+		MoveLegacyNonResident(charName, sourcePool, orderData.endbuilding)
+		Player.orderBannedChars[charName] = true
+		Player.orderBannedBuildings[orderData.endbuilding] = true
+	end
 end
 
 local function EditStarterBuilding()
@@ -234,23 +268,24 @@ local function EditEnderBuilding()
 		"dev/dev_select_building.lua",
 		prompt = "Select new destination building:",
 		onOk = function(newBuilding)
-			if not orderData.isResident then 
-				MoveNonResident(orderData.ender, orderData.endbuilding, orderData.sourcePool) 
-			end
-			
+			ReleaseEditedNonResident()
+
 			orderData.endbuilding = newBuilding.name
-			local enderChar = newBuilding:GetCharacterList()[1]
-			
+			local residents = newBuilding.GetResidentCharacterList and newBuilding:GetResidentCharacterList() or newBuilding:GetCharacterList()
+			local enderChar = residents and residents[1] or nil
+
 			if enderChar then
 				orderData.ender = enderChar.name
 				orderData.isResident = true
 				orderData.sourcePool = "N/A"
+				orderData.sourceLocation = nil
 			else
-				local traveler = _travelers:RandomCharacter()
-				orderData.ender = traveler.name
-				orderData.isResident = false
-				orderData.sourcePool = "_travelers"
-				MoveNonResident(orderData.ender, orderData.sourcePool, orderData.endbuilding)
+				local candidates = CharacterMobility and CharacterMobility:GetAvailableOrderCandidates("global") or {}
+				if table.getn(candidates) == 0 and CharacterMobility then
+					candidates = CharacterMobility:GetAvailableOrderCandidates("local")
+				end
+				local traveler = candidates[1] or _travelers:RandomCharacter()
+				if traveler then PlaceEditedNonResident(traveler.name) end
 			end
 			RefreshPanel()
 		end
@@ -262,20 +297,17 @@ local function EditEnderCharacter()
 		"dev/dev_select_character.lua",
 		prompt = "Select recipient character:",
 		onOk = function(newChar)
-			if not orderData.isResident then 
-				MoveNonResident(orderData.ender, orderData.endbuilding, orderData.sourcePool) 
-			end
-			
-			orderData.ender = newChar.name
-			local newSourcePool = GetCharacterSourcePool(newChar.name)
-			
-			if newSourcePool then
-				orderData.isResident = false
-				orderData.sourcePool = newSourcePool
-				MoveNonResident(orderData.ender, orderData.sourcePool, orderData.endbuilding)
+			ReleaseEditedNonResident()
+
+			local newSourcePool, sourceLocation = GetCharacterSourcePool(newChar.name)
+			if (CharacterMobility and CharacterMobility:IsMobile(newChar.name)) or newSourcePool then
+				orderData.sourceLocation = sourceLocation
+				PlaceEditedNonResident(newChar.name)
 			else
+				orderData.ender = newChar.name
 				orderData.isResident = true
 				orderData.sourcePool = "N/A"
+				orderData.sourceLocation = nil
 			end
 			RefreshPanel()
 		end
@@ -290,15 +322,19 @@ local function DoDelete()
 	for i, order in ipairs(Player.pendingSpecialOrders) do
 		if order.name == orderData.name then
 			if not order.isResident then
-				if Player.buildingCharacters[order.endbuilding] then Player.buildingCharacters[order.endbuilding][order.ender] = nil end
-				Player.buildingCharacters[order.sourcePool] = Player.buildingCharacters[order.sourcePool] or {}
-				Player.buildingCharacters[order.sourcePool][order.ender] = true
-				Player.orderBannedChars[order.ender] = nil
-				Player.orderBannedBuildings[order.endbuilding] = nil
+				if CharacterMobility and CharacterMobility:IsMobile(order.ender) then
+					CharacterMobility:ReleaseOrderPlacement(order.ender, order.name, order.endbuilding, order.sourceLocation)
+				else
+					if Player.buildingCharacters[order.endbuilding] then Player.buildingCharacters[order.endbuilding][order.ender] = nil end
+					Player.buildingCharacters[order.sourcePool] = Player.buildingCharacters[order.sourcePool] or {}
+					Player.buildingCharacters[order.sourcePool][order.ender] = true
+					Player.orderBannedChars[order.ender] = nil
+					Player.orderBannedBuildings[order.endbuilding] = nil
+				end
 			end
-			
+
 			table.remove(Player.pendingSpecialOrders, i)
-			DebugOut("DEV", string.format("Admin Action: Aborted and scrubbed special order '%s'.", orderData.name))
+			DebugOut("DEV", string.format("Aborted and scrubbed special order '%s'.", orderData.name))
 			break
 		end
 	end
@@ -320,9 +356,9 @@ end
 
 local function DoExpireEarlyOffer()
 	for _, order in ipairs(Player.pendingSpecialOrders) do
-		if order.name == orderData.name then 
+		if order.name == orderData.name then
 			order.earlyOfferCutoff = Player.time - 1
-			break 
+			break
 		end
 	end
 	RefreshPanel()
@@ -359,25 +395,25 @@ y = y + h * 2
 
 -- Loop for 3 theoretical product slots (The game hard caps orders at 3 variations)
 for i = 1, 3 do
-	local index = i 
+	local index = i
 	local item = orderData.items[index]
-	
+
 	if item then
 		local prodName = _AllProducts[item.product] and _AllProducts[item.product]:GetName() or "Unknown"
-		
+
 		table.insert(items, Text { x = col_x_left, y = y, w = col_width_left - 60, h = h, label = "#<b>Item " .. index .. ":</b> " .. prodName, flags = kVAlignCenter + kHAlignLeft })
 		table.insert(items, Button { x = col_x_left + col_width_left - 60, y = y, w = 60, h = h, label = "#[Edit]", command = function() EditOrderProduct(index) end })
-		
+
 		y = y + h
-		
+
 		table.insert(items, Text { x = col_x_left + 10, y = y, w = col_width_left - 70, h = h, label = "#  Count: " .. item.count, flags = kVAlignCenter + kHAlignLeft })
 		table.insert(items, Button { x = col_x_left + col_width_left - 60, y = y, w = 60, h = h, label = "#[Edit]", command = function() EditOrderValue("count", "New count:", index) end })
-		
+
 		if index > 1 then
 			 table.insert(items, Button { x = col_x_left + col_width_left - 115, y = y, w = 50, h = h, label = "#[Clear]", command = function() RemoveItem(index) end })
 		end
-		
-		y = y + h * 1.5 
+
+		y = y + h * 1.5
 	else
 		table.insert(items, Text { x = col_x_left, y = y, w = col_width_left - 60, h = h, label = "#<b>Item " .. index .. ":</b> [Empty]", flags = kVAlignCenter + kHAlignLeft })
 		table.insert(items, Button { x = col_x_left + col_width_left - 60, y = y, w = 60, h = h, label = "#[Add...]", command = function() EditOrderProduct(index) end })
@@ -454,19 +490,19 @@ table.insert(footer_items, Button { x = padding + 634, y = footer_y, w = 150, h 
 MakeDialog
 {
 	name = "dev_order_detail",
-	BSGWindow { 
+	BSGWindow {
 		x = initial_x, y = initial_y, w = total_width, h = total_height, fit = true, color = { 1, 1, 1, 0.9 }, SetStyle(devMenuStyle),
-		
+
 		Text { x = padding, y = 0, w = total_width, h = h, label = "#<b>PENDING ORDER: " .. orderData.name .. "</b>", flags = kVAlignCenter + kHAlignLeft },
-		
-		Button { 
-			x = total_width - 150 - padding, y = 0, w = 150, h = h, label = "#<b>BACK TO LIST</b>", default = true, cancel = true, 
-			command = function() 
-				CloseWindow(); 
+
+		Button {
+			x = total_width - 150 - padding, y = 0, w = 150, h = h, label = "#<b>BACK TO LIST</b>", default = true, cancel = true,
+			command = function()
+				CloseWindow()
 				QueueCommand(function() DisplayDialog { "dev/dev_quests.lua", x = initial_x, y = initial_y } end)
-			end 
+			end
 		},
-		
+
 		Window { x = 0, y = h + padding, w = total_width, h = info_area_height, Group(items) },
 		Group(footer_items)
 	},

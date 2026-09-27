@@ -1,10 +1,5 @@
-<?xml version="1.0"?>
-<?mso-application progid="Excel.Sheet"?>
-<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
- xmlns:o="urn:schemas-microsoft-com:office:office"
- xmlns:x="urn:schemas-microsoft-com:office:excel"
- xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
- xmlns:html="http://www.w3.org/TR/REC-html40">
+<?xml version='1.0' encoding='UTF-8'?>
+<?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <LastAuthor>Citizen Comrade</LastAuthor>
   <Created>2006-10-04T22:28:33Z</Created>
@@ -53,8 +48,7 @@
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
  <Worksheet ss:Name="strings">
-  <Table ss:ExpandedColumnCount="256" ss:ExpandedRowCount="1099" x:FullColumns="1"
-   x:FullRows="1">
+  <Table ss:ExpandedColumnCount="256" ss:ExpandedRowCount="1890" x:FullColumns="1" x:FullRows="1">
    <Column ss:AutoFitWidth="0" ss:Width="200.25"/>
    <Column ss:AutoFitWidth="0" ss:Width="654.75"/>
 	<Row>
@@ -78,7 +72,7 @@
 	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design Reforged - v.2</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">GENERAL UI LABELS BELOW</Data></Cell>
 	</Row>
 	<Row>
@@ -202,12 +196,64 @@
 	 <Cell><Data ss:Type="String">Create</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">choose</Data></Cell>
+	 <Cell><Data ss:Type="String">Choose</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">remove</Data></Cell>
+	 <Cell><Data ss:Type="String">Remove</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">randomize</Data></Cell>
 	 <Cell><Data ss:Type="String">Randomize</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">story_mode</Data></Cell>
-	 <Cell><Data ss:Type="String">Start Game</Data></Cell>
+	 <Cell><Data ss:Type="String">Story Mode</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">free_mode</Data></Cell>
+	 <Cell><Data ss:Type="String">Free Play</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">freeplay_requires_story</Data></Cell>
+	 <Cell><Data ss:Type="String">Free Play becomes available after a Story Mode profile has been created.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">story_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">Story Creations</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">freeplay_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">Free Play Creations</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">freeplay_no_story_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not created anything in Story Mode yet. Story Creations will appear here automatically and can be manufactured in Free Play.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">freeplay_no_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not created anything in Free Play yet. Visit the Secret Test Kitchen and experiment as much as you like - Free Play has no Creation slot limit.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_forsale</Data></Cell>
+	 <Cell><Data ss:Type="String">Factory For Sale: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_purchased</Data></Cell>
+	 <Cell><Data ss:Type="String">Purchased %1% for %2%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_expensive</Data></Cell>
+	 <Cell><Data ss:Type="String">This factory is for sale alright, but it will cost you %1% -- come back and see me when you've got the cash.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">factory_purchase</Data></Cell>
+	 <Cell><Data ss:Type="String">This factory's in fine shape, and it can be yours for just %1%. Would you like to purchase it now?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_integrity_freeplay</Data></Cell>
+	 <Cell><Data ss:Type="String">Free Play / Unranked</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">change_player</Data></Cell>
@@ -220,6 +266,18 @@
 	<Row>
 	 <Cell><Data ss:Type="String">credits</Data></Cell>
 	 <Cell><Data ss:Type="String">Credits</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">restart</Data></Cell>
+	 <Cell><Data ss:Type="String">Restart</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">freeplay_restart_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;b&gt;Are you sure you wish to restart Free Play?&lt;/b&gt;&lt;br&gt;&lt;br&gt;Your current Free Play company, purchases, production, inventory, statistics and Free Play Creations will be permanently erased. A new company will begin from Week 1 using your Story Mode progression, and Story Mode itself will not be affected.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">freeplay_restart_failed</Data></Cell>
+	 <Cell><Data ss:Type="String">Free Play could not be restarted because the Story Mode save could not be loaded.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">main_menu</Data></Cell>
@@ -854,6 +912,30 @@
 	 <Cell><Data ss:Type="String">Holidays</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_view_document</Data></Cell>
+	 <Cell><Data ss:Type="String">View Document</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_view_transcript</Data></Cell>
+	 <Cell><Data ss:Type="String">Transcript</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_view_facsimile</Data></Cell>
+	 <Cell><Data ss:Type="String">Document</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_document_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Select the record to inspect the original. A localized transcript is also available.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_document_viewer_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Use the arrows to inspect the record. The localized transcript remains available in the Catalogue.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">catalogue_history_document_close</Data></Cell>
+	 <Cell><Data ss:Type="String">Close</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">telegram_from</Data></Cell>
 	 <Cell><Data ss:Type="String">FROM: %1%</Data></Cell>
 	</Row>
@@ -866,7 +948,7 @@
 	 <Cell><Data ss:Type="String">LOCATION: %1%</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">GENERAL DIALOG TEXT</Data></Cell>
 	</Row>
 	<Row>
@@ -931,7 +1013,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">factory_gameover</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;Production Rate:&lt;/b&gt; %1% cases per week.&lt;/font&gt;&lt;br&gt;&lt;br&gt;As long as you have the needed ingredients in stock, we'll keep on making %1% cases each and every week.</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;Production Rate:&lt;/b&gt; %1% %2% per week.&lt;/font&gt;&lt;br&gt;&lt;br&gt;As long as you have the needed ingredients in stock, we'll keep on making %1% %2% each and every week.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">factory_insufficient</Data></Cell>
@@ -1070,7 +1152,7 @@
 	 <Cell><Data ss:Type="String">&lt;b&gt;One of your factories has stalled!&lt;/b&gt;&lt;br&gt;&lt;br&gt;You need to have enough ingredients on hand to keep the machinery running while you travel so they can continue to produce chocolates for you to sell. Roll your mouse over the Factory Status window below to find out where to buy the ingredients you need.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">DELIVERY TEXT</Data></Cell>
 	</Row>
 	<Row>
@@ -1083,30 +1165,30 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver {quantity} cases of {item} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver {quantity_with_unit} of {item} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_summary_multi2</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver {quantity_item1} cases of {item_item1} and {quantity_item2} cases of {item_item2} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver {quantity_item1_with_unit} of {item_item1} and {quantity_item2_with_unit} of {item_item2} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_summary_multi3</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver {quantity_item1} cases of {item_item1}, {quantity_item2} cases of {item_item2}, and {quantity_item3} cases of {item_item3} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver {quantity_item1_with_unit} of {item_item1}, {quantity_item2_with_unit} of {item_item2}, and {quantity_item3_with_unit} of {item_item3} for {ender_char} at {ender_building} in {ender_port}.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_intro</Data></Cell>
-	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED:&lt;br&gt;{quantity} cases of {item} for {ender_char}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
+	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED:&lt;br&gt;{quantity_with_unit} of {item} for {ender_char}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_intro_multi2</Data></Cell>
-	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED: MULTIPLE ARTICLES FOR {ender_char}.&lt;br&gt;{quantity_item1} cases of {item_item1}.&lt;br&gt;{quantity_item2} cases of {item_item2}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
+	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED: MULTIPLE ARTICLES FOR {ender_char}.&lt;br&gt;{quantity_item1_with_unit} of {item_item1}.&lt;br&gt;{quantity_item2_with_unit} of {item_item2}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_intro_multi3</Data></Cell>
-	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED: MULTIPLE ARTICLES FOR {ender_char}.&lt;br&gt;{quantity_item1} cases of {item_item1}.&lt;br&gt;{quantity_item2} cases of {item_item2}.&lt;br&gt;{quantity_item3} cases of {item_item3}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
+	 <Cell><Data ss:Type="String">SPECIAL ORDER RECEIVED: MULTIPLE ARTICLES FOR {ender_char}.&lt;br&gt;{quantity_item1_with_unit} of {item_item1}.&lt;br&gt;{quantity_item2_with_unit} of {item_item2}.&lt;br&gt;{quantity_item3_with_unit} of {item_item3}.&lt;br&gt;Will pay {salary}.&lt;br&gt;Required within {deadline_weeksleft} weeks or order will be cancelled.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">OTHER UI ELEMENTS BELOW</Data></Cell>
 	</Row>
 	<Row>
@@ -1131,7 +1213,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">prod_inventory</Data></Cell>
-	 <Cell><Data ss:Type="String">%1% cases in inventory.</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% %2% in inventory.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">prod_inventory_single</Data></Cell>
@@ -1175,7 +1257,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">factory_config</Data></Cell>
-	 <Cell><Data ss:Type="String">This factory is configured to make %1% cases per week.</Data></Cell>
+	 <Cell><Data ss:Type="String">This factory is configured to make %1% %2% per week.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">factory_noconfig</Data></Cell>
@@ -1232,6 +1314,10 @@
 	<Row>
 	 <Cell><Data ss:Type="String">trip_locked</Data></Cell>
 	 <Cell><Data ss:Type="String">This port is not yet available.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">trip_locked_freeplay</Data></Cell>
+	 <Cell><Data ss:Type="String">Unlock this port in Story Mode first.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">category_empty</Data></Cell>
@@ -1430,7 +1516,7 @@
 	 <Cell><Data ss:Type="String">Master Chocolatier</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">QUEST REQUIREMENTS AND REWARDS</Data></Cell>
 	</Row>
 	<Row>
@@ -1455,23 +1541,23 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_ingredient</Data></Cell>
-	 <Cell><Data ss:Type="String">Have %1% sacks of %2% in inventory.</Data></Cell>
+	 <Cell><Data ss:Type="String">Have %1% %3% of %2% in inventory.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_ingredient_single</Data></Cell>
-	 <Cell><Data ss:Type="String">Have a sack of %1% in inventory.</Data></Cell>
+	 <Cell><Data ss:Type="String">Have a %2% of %1% in inventory.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">award_ingredient</Data></Cell>
-	 <Cell><Data ss:Type="String">Receive %1% sacks of %2%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive %1% %3% of %2%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_product</Data></Cell>
-	 <Cell><Data ss:Type="String">Have %1% cases of %2% in inventory.</Data></Cell>
+	 <Cell><Data ss:Type="String">Have %1% %3% of %2% in inventory.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_product_single</Data></Cell>
-	 <Cell><Data ss:Type="String">Have a case of %1% in inventory.</Data></Cell>
+	 <Cell><Data ss:Type="String">Have a %2% of %1% in inventory.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_recipe_invented</Data></Cell>
@@ -1479,11 +1565,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_recipe_made</Data></Cell>
-	 <Cell><Data ss:Type="String">Make at least %2% cases of %1%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Make at least %2% %3% of %1%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_recipe_made_single</Data></Cell>
-	 <Cell><Data ss:Type="String">Make at least one case of %1%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Make at least %2% %3% of %1%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_recipes_known</Data></Cell>
@@ -1539,7 +1625,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">award_product</Data></Cell>
-	 <Cell><Data ss:Type="String">Receive %1% cases of %2%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Receive %1% %3% of %2%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">require_min_money</Data></Cell>
@@ -1594,7 +1680,7 @@
 	 <Cell><Data ss:Type="String">Take ownership of %1% shops.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">HIGH SCORES</Data></Cell>
 	</Row>
 	<Row>
@@ -1607,7 +1693,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">globalhighscores</Data></Cell>
-	 <Cell><Data ss:Type="String">Global High Scores</Data></Cell>
+	 <Cell><Data ss:Type="String">Community High Scores</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">topplayers</Data></Cell>
@@ -1619,27 +1705,27 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">globalhighscoreinfo</Data></Cell>
-	 <Cell><Data ss:Type="String">Global high scores allow you to compare your high scores against people across the globe.</Data></Cell>
+	 <Cell><Data ss:Type="String">Compare your best company result with the Reforged community.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">eligible</Data></Cell>
-	 <Cell><Data ss:Type="String">Submit your name and score to the global list</Data></Cell>
+	 <Cell><Data ss:Type="String">Your current company result is ready to submit.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">eligibleasterisk</Data></Cell>
-	 <Cell><Data ss:Type="String">*Global score list maintained by PlayFirst: http://www.playfirst.com/privacypolicy.html  For privacy purposes, you should not use your full name as your player name.</Data></Cell>
+	 <Cell><Data ss:Type="String">Community leaderboard. Scores are submitted by the game client.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">congratshighscore</Data></Cell>
-	 <Cell><Data ss:Type="String">Congratulations! You earned a new global high score!</Data></Cell>
+	 <Cell><Data ss:Type="String">Submitted! You earned a new community high score.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">scorednq</Data></Cell>
-	 <Cell><Data ss:Type="String">Your score did not qualify for a new global high score.</Data></Cell>
+	 <Cell><Data ss:Type="String">Submitted successfully, but this result did not enter the current leaderboard.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">yourrank</Data></Cell>
-	 <Cell><Data ss:Type="String">Your Rank: %1%</Data></Cell>
+	 <Cell><Data ss:Type="String">Rank %1%</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">moreinfo</Data></Cell>
@@ -1647,11 +1733,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">viewglobal</Data></Cell>
-	 <Cell><Data ss:Type="String">View Global High Scores</Data></Cell>
+	 <Cell><Data ss:Type="String">Community High Scores</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">viewlocal</Data></Cell>
-	 <Cell><Data ss:Type="String">View Local High Scores</Data></Cell>
+	 <Cell><Data ss:Type="String">Local High Scores</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">submit</Data></Cell>
@@ -1659,23 +1745,107 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">highscorecompleteinfo</Data></Cell>
-	 <Cell><Data ss:Type="String">PlayFirst global high scores allow you to compare your scores with people across the globe. &lt;br&gt;&lt;br&gt;Log scores anonymously or personalize your high score listings by entering your PlayFirst user name and password. PlayFirst members are identified with a P1 icon. &lt;br&gt;&lt;br&gt;If you are not already a PlayFirst member, register for a free account by visiting http://www.playfirst.com. &lt;br&gt;&lt;br&gt;The PlayFirst privacy policy can be viewed by clicking this link: &lt;a id='privacypolicy'&gt;&lt;font size = &quot;18&quot; color '0000ff'&gt;&lt;u&gt;Privacy Policy&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;.</Data></Cell>
+	 <Cell><Data ss:Type="String">Reforged community leaderboards compare company results submitted directly by the game. No PlayFirst account is used or required.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">privacy</Data></Cell>
-	 <Cell><Data ss:Type="String">By submitting this form, you acknowledge that this information will be publicly available.  &lt;a id='privacybutton'&gt;&lt;font color '0000ff'&gt;&lt;u&gt;Privacy Policy&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">Your display name, score and campaign summary will be publicly visible.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">privacy_info</Data></Cell>
-	 <Cell><Data ss:Type="String">By submitting this form, you acknowledge that this information will be publicly available.  &lt;a id='privacybutton'&gt;&lt;font color '0000ff'&gt;&lt;u&gt;Privacy Info&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">Your display name, score and campaign summary will be publicly visible.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">privacy_anon</Data></Cell>
-	 <Cell><Data ss:Type="String">Please do not include any personal information such as your contact information when you submit your high score.  By submitting, the name you enter and your high score information is transmitted to PlayFirst, Inc.'s servers and will be available for others to see.</Data></Cell>
+	 <Cell><Data ss:Type="String">Do not include contact information in your display name. Your score information will be available for other Reforged players to see.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">submitglobal</Data></Cell>
-	 <Cell><Data ss:Type="String">Submit Global High Score</Data></Cell>
+	 <Cell><Data ss:Type="String">Submit Score</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_rank_column</Data></Cell>
+	 <Cell><Data ss:Type="String">Rank</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_player_column</Data></Cell>
+	 <Cell><Data ss:Type="String">Player</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_score_column</Data></Cell>
+	 <Cell><Data ss:Type="String">Score</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_result_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Your Standing</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_community_notice</Data></Cell>
+	 <Cell><Data ss:Type="String">Scores are submitted directly by Reforged players.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_online_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Leaderboard</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_current</Data></Cell>
+	 <Cell><Data ss:Type="String">Submit Current Score</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_info_button</Data></Cell>
+	 <Cell><Data ss:Type="String">About Leaderboards</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submission_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">Do you wish to submit this score?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_public_name</Data></Cell>
+	 <Cell><Data ss:Type="String">Public name:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_public_name_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Up to 20 characters. You can change this on a later submission.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_privacy_notice</Data></Cell>
+	 <Cell><Data ss:Type="String">Your public name, Company Score and company summary will appear on the community leaderboard.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_score</Data></Cell>
+	 <Cell><Data ss:Type="String">Submit Score</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_info_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Leaderboards</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_info_text</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;b&gt;How the boards work&lt;/b&gt;&lt;br&gt;Compare Company Scores with fellow Chocolatiers around the world. Ranked boards are reserved for campaigns Reforged can verify as clean; All Runs also includes Unranked and Legacy / Unverified results. Use Previous and Next to change boards.&lt;br&gt;&lt;br&gt;&lt;b&gt;Keeping score fairly&lt;/b&gt;&lt;br&gt;Using Developer or cheat mode permanently marks a campaign Unranked. Older saves from before integrity tracking are labelled Legacy / Unverified. They can still be shared—we just won't pretend we know what happened before anyone was keeping score!&lt;br&gt;&lt;br&gt;&lt;b&gt;What gets shared&lt;/b&gt;&lt;br&gt;Your public name, Company Score, optional nationality and a compact company snapshot are sent. Your save file and passwords stay on your computer, and no PlayFirst account is involved. You can change your public name whenever you submit again, and your best eligible score follows it. Select a score, then choose Score Details for a closer look. Local High Scores stay separate.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_integrity_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Run:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_integrity_ranked</Data></Cell>
+	 <Cell><Data ss:Type="String">Ranked</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_integrity_dev</Data></Cell>
+	 <Cell><Data ss:Type="String">Unranked (Developer Mode)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_integrity_legacy</Data></Cell>
+	 <Cell><Data ss:Type="String">Unverified</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_ranked_notice</Data></Cell>
+	 <Cell><Data ss:Type="String">This clean campaign is eligible for Ranked leaderboards.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_unranked_notice</Data></Cell>
+	 <Cell><Data ss:Type="String">This campaign will appear only in All Runs and is excluded from Ranked leaderboards.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">playerlabel</Data></Cell>
@@ -1702,7 +1872,7 @@
 	 <Cell><Data ss:Type="String">Remember My PlayFirst Account</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">HELP</Data></Cell>
 	</Row>
 	<Row>
@@ -1719,19 +1889,39 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_reforged_text</Data></Cell>
-	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design Reforged is a total conversion and engine overhaul of the 2009 classic. By reverse-engineering the long-abandoned Playground SDK™ and decrypting the game's proprietary XML and Lua repositories, we've unlocked the ability to modernize the Baumeister legacy for 2026 and beyond.</Data></Cell>
+	 <Cell><Data ss:Type="String">Chocolatier: Decadence by Design Reforged is a total conversion and engine overhaul of the 2009 classic, part of the bold, fan-led and modern revival of the Chocolatier video game series. Built by reverse-engineering the long-abandoned Playground SDK™ and unlocking the game's XML and Lua data, Reforged modernizes the Baumeister legacy for 2026 and beyond while preserving the original world, artwork, story, and core gameplay.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_whats_new</Data></Cell>
+	 <Cell><Data ss:Type="String">What's New?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_reforged_mechanics</Data></Cell>
-	 <Cell><Data ss:Type="String">Experience a dynamic living economy featuring a weekly random-event engine and a regional/global holiday system. With overhauled dialogue and character interactions, selectable difficulty tiers, random events, brand new lore expansions, a revamped Special Order system, the all-new Catalogue encyclopedia, and many more we can't list in here, the simulation runs deeper than ever before. Every variable has been retuned to provide a fresh challenge for veteran Chocolatiers.</Data></Cell>
+	 <Cell><Data ss:Type="String">The world is a livelier place in Reforged. Prices rise and fall with weekly events, holidays can send demand in unexpected directions, and selectable difficulty levels can make your road to chocolate fortune a little gentler... or quite a bit tougher. You'll also find more conversations, new bits of lore, expanded Special Orders, the Catalogue, reworked progression, and plenty of other surprises tucked into familiar places.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_make_it_yours</Data></Cell>
+	 <Cell><Data ss:Type="String">Make It Yours</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_reforged_modding_text</Data></Cell>
-	 <Cell><Data ss:Type="String">Want to tweak the game? Reforged uses the Playground SDK™'s loose file priority. The game's assets are fully decrypted, meaning the scripts are open-sourced and readable. You can easily edit the game's extracted XML and Lua files in your 'assets' folder in Reforged's installed filepath, using any basic text editor to add new dialogue, add new recipes, alter economics, design brand new ports, or even write your own custom quests!</Data></Cell>
+	 <Cell><Data ss:Type="String">Want to tweak the game? The Playground SDK™ gives loose files priority over the packed originals, so the files in your assets folder can be opened with an ordinary text editor to change dialogue, recipes, prices, characters, or quests. Or if you're feeling ambitious, try your hand at a new port, event chain, economy, or even an expansion of your own!</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_community</Data></Cell>
+	 <Cell><Data ss:Type="String">Join Our Community</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_reforged_upsell</Data></Cell>
-	 <Cell><Data ss:Type="String">The Chocolatier franchise lives on, all thanks to its loyal community - including you. Join fellow modders to share your custom creations, help document gameplay and lore, learn how to script your own expansions, or just chat with fellow Chocolatiers!&lt;br&gt;&lt;br&gt;Official Wiki: &lt;a id='http=https://the-chocolatier-series.fandom.com/wiki/The_Chocolatier_Series_Wiki'&gt;&lt;font color='0000ff'&gt;&lt;u&gt;https://the-chocolatier-series.fandom.com/wiki/The_Chocolatier_Series_Wiki&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;Discord Server: &lt;a id='http=https://discord.gg/ef3TPaVsmq'&gt;&lt;font color='0000ff'&gt;&lt;u&gt;https://discord.gg/ef3TPaVsmq&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">Of course, we can never do a series revival alone. Visit the Official Wiki when you need a guide or a little research, or join the Discord Server to swap ideas, share mods and creations, ask questions, and talk shop with fellow Chocolatiers.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_wiki</Data></Cell>
+	 <Cell><Data ss:Type="String">Official Wiki</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">help_reforged_discord</Data></Cell>
+	 <Cell><Data ss:Type="String">Discord Server</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_map</Data></Cell>
@@ -1771,15 +1961,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_market_text</Data></Cell>
-	 <Cell><Data ss:Type="String">Vendors in markets and farms hawk the ingredients you need to manufacture your products. Purchases are transported automatically to the factories where they are needed. Some markets carry exclusive ingredients, and you'll buy specialty products directly from the farmers who grow them.</Data></Cell>
+	 <Cell><Data ss:Type="String">Vendors in markets and farms hawk the ingredients you need to manufacture your products. Purchases are transported automatically to the factories where they're needed. Some markets carry exclusive ingredients, and you'll buy specialty products directly from the farmers who grow them.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_market_buy</Data></Cell>
-	 <Cell><Data ss:Type="String">To purchase an ingredient, click on its sack then enter the quantity you desire into the calculator. When you are ready, click the &quot;%buy%&quot; button to complete your purchase.</Data></Cell>
+	 <Cell><Data ss:Type="String">To purchase an ingredient, click on its sack then enter the quantity you desire into the calculator. Use the +1, +10, +100, and +1000 buttons to adjust large orders quickly. When you are ready, click &quot;%buy%&quot; to complete your purchase.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_market_misc</Data></Cell>
-	 <Cell><Data ss:Type="String">Pay attention to the seasons, as some ingredients are very expensive when they're not in season. If you don't like the prices you see, haggling with the market owner may get you a lower price...but it may also make them angry, so be careful what you say!</Data></Cell>
+	 <Cell><Data ss:Type="String">Keep an eye on prices from week to week. Some ingredients can become very expensive when they're not in season, and holidays or local goings-on may send the price of an ingredient climbing - or tumbling. If you don't like the prices you see, haggling with the market owner may get you a lower price... but it may also make them angry, so be careful what you say!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_shop</Data></Cell>
@@ -1787,15 +1977,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_shop_text</Data></Cell>
-	 <Cell><Data ss:Type="String">Turn your products into cash at chocolate shops around the world. Vary the products you sell to keep customers interested and keep prices up, and for higher profits consider investing in shops and inventive confections of your own when the opportunity arises.</Data></Cell>
+	 <Cell><Data ss:Type="String">Turn your products into cash at chocolate shops around the world. Different shops buy different kinds of products, and sale prices can shift from week to week with local market events and holiday demand. Vary what you sell, watch for unusually good prices, and consider investing in shops when the opportunity arises.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_shop_sell</Data></Cell>
-	 <Cell><Data ss:Type="String">To sell a product, click on its box and enter the quantity to sell into the calculator. When you are ready, click the &quot;%sell%&quot; button to complete the transaction. As a shortcut, click &quot;%sell_all%&quot; in the calculator to sell all of them at once. Click &quot;%sell_all%&quot; in the shop to sell everything you own.</Data></Cell>
+	 <Cell><Data ss:Type="String">To sell a product, click its box and enter the quantity into the calculator. Use +1, +10, +100, and +1000 to adjust the amount quickly, then click &quot;%sell%&quot;. &quot;%sell_all%&quot; in the calculator sells all of that product, whilst &quot;%sell_all%&quot; in the shop sells every product the shop currently buys.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_shop_misc</Data></Cell>
-	 <Cell><Data ss:Type="String">Once you own a shop, make sure to return regularly to pick up &quot;Special Orders&quot; from the shopkeepers to review details of incoming, smartly generated custom orders to rake up further profits. Some shopkeepers also may specialize in particular products. Haggling with the shop keeper may get you a better offer for the products they do buy... or it may not!</Data></Cell>
+	 <Cell><Data ss:Type="String">Owning shops also opens your business network to Special Orders. As time passes, don't be surprised if a customer comes looking for a rather large order. You may encounter an offer in person or receive it later by telegram - accepted orders appear in the Quest Log and must be completed before their deadline. Haggling with the shop keeper may get you a better offer for the products they do buy... or it may not!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_chocolate</Data></Cell>
@@ -1859,11 +2049,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_design_graphics</Data></Cell>
-	 <Cell><Data ss:Type="String">Using the large left and right arrows on each of the four image options, select the graphics you want to use for your product. Click on the small color swatch below the images to select a tint you like.&lt;br&gt;&lt;br&gt;Try hitting the &quot;%randomize%&quot; button to create a random look for your creation.</Data></Cell>
+	 <Cell><Data ss:Type="String">Using the large left and right arrows on each of the four image options, select the graphics you want to use for your product. Click on the small color swatch below the images to select a tint you like.&lt;br&gt;&lt;br&gt;Try hitting the "%randomize%" button to create a random look for your creation.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_design_add</Data></Cell>
-	 <Cell><Data ss:Type="String">Don't forget to name your recipe and enter a description for your recipe book, and when you're ready, click &quot;%save_recipe%&quot; to add your creation to your recipe book.&lt;br&gt;&lt;br&gt;Remember, once you add a recipe to your book you will not be able to edit or delete it, but don't worry, the directors of Baumeister Confections will give you plenty of opportunities to experiment with your own recipes.</Data></Cell>
+	 <Cell><Data ss:Type="String">Don't forget to name your recipe and enter a description for your recipe book, and when you're ready, click "%save_recipe%" to add your creation to your recipe book.&lt;br&gt;&lt;br&gt;Remember, once you add a recipe to your book you will not be able to edit or delete it, but don't worry, the directors of Baumeister Confections will give you plenty of opportunities to experiment with your own recipes.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_quests</Data></Cell>
@@ -1871,7 +2061,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_quests_text</Data></Cell>
-	 <Cell><Data ss:Type="String">You'll meet people around the world who may need your help securing ingredients, making products, developing markets, inventing new recipes, delivering goods, and maintaining relationships with friends and loved ones.&lt;br&gt;&lt;br&gt;Use the Quest Log to keep track of your past accomplishments and your current To Do list. Select a quest in the left column to see the details of the quest you have accepted, including a list of tasks you need to complete.</Data></Cell>
+	 <Cell><Data ss:Type="String">People around the world may need help securing ingredients, making products, inventing recipes, delivering goods, or managing relationships. Reforged also adds Special Orders generated through your growing shop network.&lt;br&gt;&lt;br&gt;The Quest Log tracks active and completed work. Select an entry to review its goals and, when relevant, its payment and deadline. Difficulty can change a quest's requirements or time limit when you accept it; those conditions then remain fixed for that quest.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_quests_complete</Data></Cell>
@@ -1931,14 +2121,14 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_recipes_creations</Data></Cell>
-	 <Cell><Data ss:Type="String">Initially, the Creations category will be empty. As your career progresses, you may be given the opportunity to invent your own recipes to fill it.</Data></Cell>
+	 <Cell><Data ss:Type="String">The Creations category starts empty and fills with recipes you invent in the Secret Test Kitchen. In Reforged, select a saved Creation and choose &quot;Save Creation&quot; to share it to the Community Cookbook. A Community Account is required.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">help_recipes_factory</Data></Cell>
-	 <Cell><Data ss:Type="String">From inside your factory, you will use your recipe book to configure the factory's production.</Data></Cell>
+	 <Cell><Data ss:Type="String">From inside a factory, use the Recipe Book to choose what that factory produces.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">HISTORY MESSAGES</Data></Cell>
 	</Row>
 	<Row>
@@ -2030,7 +2220,7 @@
 	 <Cell><Data ss:Type="String">You are now the proud owner of &lt;b&gt;%1%.&lt;/b&gt; in %2%!</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">INGREDIENT CATEGORIES</Data></Cell>
 	</Row>
 	<Row>
@@ -2054,7 +2244,7 @@
 	 <Cell><Data ss:Type="String">Special</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">UNITS</Data></Cell>
 	</Row>
 	<Row>
@@ -2146,7 +2336,7 @@
 	 <Cell><Data ss:Type="String">tubs</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">INGREDIENTS</Data></Cell>
 	</Row>
 	<Row>
@@ -2578,7 +2768,7 @@
 	 <Cell><Data ss:Type="String">Yuzu</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">PRODUCTS</Data></Cell>
 	</Row>
 	<Row>
@@ -3190,7 +3380,7 @@
 	 <Cell><Data ss:Type="String">Chocolate, sugar, coffee - what could be better?</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">PORT NAMES AND REGIONS</Data></Cell>
 	</Row>
 	<Row>
@@ -3302,7 +3492,7 @@
 	 <Cell><Data ss:Type="String">Zürich</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">BUILDING NAMES</Data></Cell>
 	</Row>
 	<Row>
@@ -3723,7 +3913,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ulu_hut</Data></Cell>
-	 <Cell><Data ss:Type="String">Kowaki's Limes</Data></Cell>
+	 <Cell><Data ss:Type="String">Yaritji's Limes</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ulu_hutright</Data></Cell>
@@ -3790,7 +3980,7 @@
 	 <Cell><Data ss:Type="String">Swiss National Bank</Data></Cell>
 	</Row>
 	<Row>
- 	 <Cell></Cell>
+ 	 <Cell/>
  	 <Cell><Data ss:Type="String">CHARACTERS</Data></Cell>
 	</Row>
 	<Row>
@@ -3919,7 +4109,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bag_towerkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Zenab Sinjari</Data></Cell>
+	 <Cell><Data ss:Type="String">Zayd Sinjari</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">bag_xxxkeep</Data></Cell>
@@ -4042,6 +4232,10 @@
 	 <Cell><Data ss:Type="String">Onaona Waipa</Data></Cell>
 	</Row>
 	<Row>
+	 <Cell><Data ss:Type="String">kon_hutkeep</Data></Cell>
+	 <Cell><Data ss:Type="String">Manuia Akamu</Data></Cell>
+	</Row>
+	<Row>
 	 <Cell><Data ss:Type="String">kon_marketkeep</Data></Cell>
 	 <Cell><Data ss:Type="String">Hekili Pilipo</Data></Cell>
 	</Row>
@@ -4052,10 +4246,6 @@
 	<Row>
 	 <Cell><Data ss:Type="String">kon_shopkeep</Data></Cell>
 	 <Cell><Data ss:Type="String">Leialoha Naea</Data></Cell>
-	</Row>
-	<Row>
-	 <Cell><Data ss:Type="String">kon_xxxxkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Manuia Akamu</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">las_casinokeep</Data></Cell>
@@ -4227,7 +4417,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ulu_hutkeep</Data></Cell>
-	 <Cell><Data ss:Type="String">Kowaki</Data></Cell>
+	 <Cell><Data ss:Type="String">Yaritji</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ulu_rockkeep</Data></Cell>
@@ -4370,7 +4560,11 @@
 	 <Cell><Data ss:Type="String">Wu Xiuying</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell><Data ss:Type="String">trav_21</Data></Cell>
+	 <Cell><Data ss:Type="String">Nikos Argyros</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">QUEST RESPONSES BELOW</Data></Cell>
 	</Row>
 	<Row>
@@ -5050,7 +5244,7 @@
 	 <Cell><Data ss:Type="String">You May Be Right...</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">MEDALS</Data></Cell>
 	</Row>
 	<Row>
@@ -5134,40 +5328,48 @@
 	 <Cell><Data ss:Type="String">This prize is awarded to those players who have, through discovery, invention, and hard work amassed the entire recipe book.</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell></Cell>
+	 <Cell/>
 	 <Cell><Data ss:Type="String">MOVIE INTRO</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle01</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='26'&gt;&lt;b&gt;&lt;p align='center'&gt;A brief history of&#10;Baumeister Confections&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='26'&gt;&lt;b&gt;&lt;p align='center'&gt;A brief history of
+Baumeister Confections&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle02</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Over 100 years ago, Hieronymus Baumeister opened a small shop in&#10;Sydney, Australia, to peddle his father Marten's chocolate inventions.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Over 100 years ago, Hieronymus Baumeister opened a small shop in
+Sydney, Australia, to peddle his father Marten's chocolate inventions.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle03</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;A generation later, Baumeister Confections&#10;had become a household name worldwide.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;A generation later, Baumeister Confections
+had become a household name worldwide.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle04</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;As the turn of the century approached, family&#10;squabbles nearly destroyed the company.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;As the turn of the century approached, family
+squabbles nearly destroyed the company.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle05</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Sisters Evangeline and Rowena managed to reconcile&#10;and return the firm to its former glory.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Sisters Evangeline and Rowena managed to reconcile
+and return the firm to its former glory.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle06</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;But by the roaring '20s, the chocolate&#10;empire had grown complacent.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;But by the roaring '20s, the chocolate
+empire had grown complacent.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle07</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Alex Tangye, spirited granddaughter of Evangeline, used secret&#10;ingredients and fresh recipes to turn things around.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;Alex Tangye, spirited granddaughter of Evangeline, used secret
+ingredients and fresh recipes to turn things around.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle08</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;But now, the one-two punch of the Depression and the Second&#10;World War has left the company splintered once again.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='20'&gt;&lt;b&gt;&lt;p align='center'&gt;But now, the one-two punch of the Depression and the Second
+World War has left the company splintered once again.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle09</Data></Cell>
@@ -5175,17 +5377,2290 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle10</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Its great chocolate factories,&#10;converted or abandoned, sit idle.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;Its great chocolate factories,
+converted or abandoned, sit idle.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle11</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;And Alex's husband Sean disappeared&#10;during a dangerous wartime mission.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;And Alex's husband Sean disappeared
+during a dangerous wartime mission.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">FLASH_intro_subtitle12</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;As Alex sets off to search for Sean, she has no&#10;choice but to trust the fate of the company to an outsider.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;font size='25'&gt;&lt;b&gt;&lt;p align='center'&gt;As Alex sets off to search for Sean, she has no
+choice but to trust the fate of the company to an outsider.&lt;/p&gt;&lt;/b&gt;&lt;/font&gt;</Data></Cell>
 	</Row>
-  </Table>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_company_score_column</Data></Cell>
+	 <Cell><Data ss:Type="String">Company Score</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_company_score</Data></Cell>
+	 <Cell><Data ss:Type="String">Company Score:</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_button</Data></Cell>
+	 <Cell><Data ss:Type="String">Score Details</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Score Details</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_week_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Week</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_best</Data></Cell>
+	 <Cell><Data ss:Type="String">Personal best: %1% (Week %2%)</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_breakdown</Data></Cell>
+	 <Cell><Data ss:Type="String">Score Breakdown</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_value_points</Data></Cell>
+	 <Cell><Data ss:Type="String">Company value</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_commerce_points</Data></Cell>
+	 <Cell><Data ss:Type="String">Production &amp; sales</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_expansion_points</Data></Cell>
+	 <Cell><Data ss:Type="String">Expansion</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_mastery_points</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipe mastery</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_progression_points</Data></Cell>
+	 <Cell><Data ss:Type="String">Career rank</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_efficiency_points</Data></Cell>
+	 <Cell><Data ss:Type="String">Earnings pace</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_difficulty</Data></Cell>
+	 <Cell><Data ss:Type="String">Difficulty</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_base_score</Data></Cell>
+	 <Cell><Data ss:Type="String">Base score</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_snapshot</Data></Cell>
+	 <Cell><Data ss:Type="String">Company Snapshot</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_company_value</Data></Cell>
+	 <Cell><Data ss:Type="String">Company value</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_cash</Data></Cell>
+	 <Cell><Data ss:Type="String">Cash</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_inventory</Data></Cell>
+	 <Cell><Data ss:Type="String">Inventory value</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_machinery</Data></Cell>
+	 <Cell><Data ss:Type="String">Machinery value</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_earnings_pace</Data></Cell>
+	 <Cell><Data ss:Type="String">Cash pace</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_cases</Data></Cell>
+	 <Cell><Data ss:Type="String">Cases made / sold</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_empire</Data></Cell>
+	 <Cell><Data ss:Type="String">Factories / shops / ports</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_recipes</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipes known / made / custom</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_lifetime</Data></Cell>
+	 <Cell><Data ss:Type="String">Tracked cash in: %1  |  cash out: %2</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_tracking_legacy</Data></Cell>
+	 <Cell><Data ss:Type="String">Detailed lifetime totals are tracked from Week %1% for this older save.</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_tracking_full</Data></Cell>
+	 <Cell><Data ss:Type="String">Detailed lifetime totals have been tracked since this campaign began.</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_legacy_score_column</Data></Cell>
+	 <Cell><Data ss:Type="String">Earnings Pace</Data></Cell>
+	</Row>
+  <Row>
+	 <Cell><Data ss:Type="String">hiscore_details_career_stats</Data></Cell>
+	 <Cell><Data ss:Type="String">Career Statistics</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_highest_cash</Data></Cell>
+	 <Cell><Data ss:Type="String">Highest cash</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_lifetime_revenue</Data></Cell>
+	 <Cell><Data ss:Type="String">Tracked cash in</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_lifetime_spend</Data></Cell>
+	 <Cell><Data ss:Type="String">Tracked cash out</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_cases_made</Data></Cell>
+	 <Cell><Data ss:Type="String">Cases produced</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_cases_sold</Data></Cell>
+	 <Cell><Data ss:Type="String">Cases sold</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_factories</Data></Cell>
+	 <Cell><Data ss:Type="String">Factories owned</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_shops</Data></Cell>
+	 <Cell><Data ss:Type="String">Shops owned</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_ports</Data></Cell>
+	 <Cell><Data ss:Type="String">Ports visited</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_recipes_known</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipes known</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_recipes_made</Data></Cell>
+	 <Cell><Data ss:Type="String">Recipes produced</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_custom_medals</Data></Cell>
+	 <Cell><Data ss:Type="String">Custom recipes / medals</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_performance</Data></Cell>
+	 <Cell><Data ss:Type="String">Performance History</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_sales_revenue</Data></Cell>
+	 <Cell><Data ss:Type="String">Sales revenue</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_largest_sale</Data></Cell>
+	 <Cell><Data ss:Type="String">Largest sale</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_special_revenue</Data></Cell>
+	 <Cell><Data ss:Type="String">Special-order revenue</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_largest_special</Data></Cell>
+	 <Cell><Data ss:Type="String">Largest special order</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_quests</Data></Cell>
+	 <Cell><Data ss:Type="String">Quests completed</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_special_orders</Data></Cell>
+	 <Cell><Data ss:Type="String">Special orders done / expired</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_travel</Data></Cell>
+	 <Cell><Data ss:Type="String">Trips taken</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_spending_mix</Data></Cell>
+	 <Cell><Data ss:Type="String">Core operating spend</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_pb_history</Data></Cell>
+	 <Cell><Data ss:Type="String">Recent Personal Bests</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_pb_history_more</Data></Cell>
+	 <Cell><Data ss:Type="String">Earlier Personal Bests</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_no_pb_history</Data></Cell>
+	 <Cell><Data ss:Type="String">No personal-best history recorded yet.</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_page</Data></Cell>
+	 <Cell><Data ss:Type="String">Page %1% of %2%</Data></Cell>
+	</Row><Row>
+	 <Cell><Data ss:Type="String">hiscore_details_formula_version</Data></Cell>
+	 <Cell><Data ss:Type="String">Formula v%1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_pb_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Personal Best Summary</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_pb_count</Data></Cell>
+	 <Cell><Data ss:Type="String">Personal bests recorded</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_first_pb</Data></Cell>
+	 <Cell><Data ss:Type="String">First personal best</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_first_pb_week</Data></Cell>
+	 <Cell><Data ss:Type="String">First PB week</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_current_pb</Data></Cell>
+	 <Cell><Data ss:Type="String">Current personal best</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_current_pb_week</Data></Cell>
+	 <Cell><Data ss:Type="String">Current PB week</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_total_gain</Data></Cell>
+	 <Cell><Data ss:Type="String">Total improvement</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_latest_gain</Data></Cell>
+	 <Cell><Data ss:Type="String">Latest improvement</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_page_overview</Data></Cell>
+	 <Cell><Data ss:Type="String">Overview</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_page_breakdown</Data></Cell>
+	 <Cell><Data ss:Type="String">Score Breakdown</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_page_history</Data></Cell>
+	 <Cell><Data ss:Type="String">Personal Bests</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_nationality</Data></Cell>
+	 <Cell><Data ss:Type="String">Nationality</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_choose_flag</Data></Cell>
+	 <Cell><Data ss:Type="String">Choose Flag</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_choose_nationality</Data></Cell>
+	 <Cell><Data ss:Type="String">Choose your flag</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_nationality_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Choose the flag shown beside your public name on Community High Scores.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_none</Data></Cell>
+	 <Cell><Data ss:Type="String">No flag</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_no_flag</Data></Cell>
+	 <Cell><Data ss:Type="String">No flag</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_remote_details_unavailable</Data></Cell>
+	 <Cell><Data ss:Type="String">Detailed company data is unavailable for this legacy score.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_afghanistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Afghanistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_albania</Data></Cell>
+	 <Cell><Data ss:Type="String">Albania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_algeria</Data></Cell>
+	 <Cell><Data ss:Type="String">Algeria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_andorra</Data></Cell>
+	 <Cell><Data ss:Type="String">Andorra</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_angola</Data></Cell>
+	 <Cell><Data ss:Type="String">Angola</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_antigua_barbuda</Data></Cell>
+	 <Cell><Data ss:Type="String">Antigua &amp; Barbuda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_argentina</Data></Cell>
+	 <Cell><Data ss:Type="String">Argentina</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_armenia</Data></Cell>
+	 <Cell><Data ss:Type="String">Armenia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_australia</Data></Cell>
+	 <Cell><Data ss:Type="String">Australia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_austria</Data></Cell>
+	 <Cell><Data ss:Type="String">Austria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_azerbaijan</Data></Cell>
+	 <Cell><Data ss:Type="String">Azerbaijan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_bahamas</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahamas</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_bahrain</Data></Cell>
+	 <Cell><Data ss:Type="String">Bahrain</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_bangladesh</Data></Cell>
+	 <Cell><Data ss:Type="String">Bangladesh</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_barbados</Data></Cell>
+	 <Cell><Data ss:Type="String">Barbados</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_belarus</Data></Cell>
+	 <Cell><Data ss:Type="String">Belarus</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_belgium</Data></Cell>
+	 <Cell><Data ss:Type="String">Belgium</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_belize</Data></Cell>
+	 <Cell><Data ss:Type="String">Belize</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_benin</Data></Cell>
+	 <Cell><Data ss:Type="String">Benin</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_bhutan</Data></Cell>
+	 <Cell><Data ss:Type="String">Bhutan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_bolivia</Data></Cell>
+	 <Cell><Data ss:Type="String">Bolivia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_bosnia_herzegovina</Data></Cell>
+	 <Cell><Data ss:Type="String">Bosnia &amp; Herzegovina</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_botswana</Data></Cell>
+	 <Cell><Data ss:Type="String">Botswana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_brazil</Data></Cell>
+	 <Cell><Data ss:Type="String">Brazil</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_brunei</Data></Cell>
+	 <Cell><Data ss:Type="String">Brunei</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_bulgaria</Data></Cell>
+	 <Cell><Data ss:Type="String">Bulgaria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_burkina_faso</Data></Cell>
+	 <Cell><Data ss:Type="String">Burkina Faso</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_burundi</Data></Cell>
+	 <Cell><Data ss:Type="String">Burundi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_cape_verde</Data></Cell>
+	 <Cell><Data ss:Type="String">Cabo Verde</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_cambodia</Data></Cell>
+	 <Cell><Data ss:Type="String">Cambodia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_cameroon</Data></Cell>
+	 <Cell><Data ss:Type="String">Cameroon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_canada</Data></Cell>
+	 <Cell><Data ss:Type="String">Canada</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_central_african_republic</Data></Cell>
+	 <Cell><Data ss:Type="String">Central African Republic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_chad</Data></Cell>
+	 <Cell><Data ss:Type="String">Chad</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_chile</Data></Cell>
+	 <Cell><Data ss:Type="String">Chile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_china</Data></Cell>
+	 <Cell><Data ss:Type="String">China</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_colombia</Data></Cell>
+	 <Cell><Data ss:Type="String">Colombia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_comoros</Data></Cell>
+	 <Cell><Data ss:Type="String">Comoros</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_congo</Data></Cell>
+	 <Cell><Data ss:Type="String">Republic of the Congo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_costa_rica</Data></Cell>
+	 <Cell><Data ss:Type="String">Costa Rica</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_ivory_coast</Data></Cell>
+	 <Cell><Data ss:Type="String">Côte d’Ivoire</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_croatia</Data></Cell>
+	 <Cell><Data ss:Type="String">Croatia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_cuba</Data></Cell>
+	 <Cell><Data ss:Type="String">Cuba</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_cyprus</Data></Cell>
+	 <Cell><Data ss:Type="String">Cyprus</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_czechia</Data></Cell>
+	 <Cell><Data ss:Type="String">Czechia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_dr_congo</Data></Cell>
+	 <Cell><Data ss:Type="String">Democratic Republic of the Congo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_denmark</Data></Cell>
+	 <Cell><Data ss:Type="String">Denmark</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_djibouti</Data></Cell>
+	 <Cell><Data ss:Type="String">Djibouti</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_dominica</Data></Cell>
+	 <Cell><Data ss:Type="String">Dominica</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_dominican_republic</Data></Cell>
+	 <Cell><Data ss:Type="String">Dominican Republic</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_ecuador</Data></Cell>
+	 <Cell><Data ss:Type="String">Ecuador</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_egypt</Data></Cell>
+	 <Cell><Data ss:Type="String">Egypt</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_el_salvador</Data></Cell>
+	 <Cell><Data ss:Type="String">El Salvador</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_equatorial_guinea</Data></Cell>
+	 <Cell><Data ss:Type="String">Equatorial Guinea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_eritrea</Data></Cell>
+	 <Cell><Data ss:Type="String">Eritrea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_estonia</Data></Cell>
+	 <Cell><Data ss:Type="String">Estonia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_eswatini</Data></Cell>
+	 <Cell><Data ss:Type="String">Eswatini</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_ethiopia</Data></Cell>
+	 <Cell><Data ss:Type="String">Ethiopia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_fiji</Data></Cell>
+	 <Cell><Data ss:Type="String">Fiji</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_finland</Data></Cell>
+	 <Cell><Data ss:Type="String">Finland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_france</Data></Cell>
+	 <Cell><Data ss:Type="String">France</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_gabon</Data></Cell>
+	 <Cell><Data ss:Type="String">Gabon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_gambia</Data></Cell>
+	 <Cell><Data ss:Type="String">Gambia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_georgia</Data></Cell>
+	 <Cell><Data ss:Type="String">Georgia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_germany</Data></Cell>
+	 <Cell><Data ss:Type="String">Germany</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_ghana</Data></Cell>
+	 <Cell><Data ss:Type="String">Ghana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_greece</Data></Cell>
+	 <Cell><Data ss:Type="String">Greece</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_grenada</Data></Cell>
+	 <Cell><Data ss:Type="String">Grenada</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_guatemala</Data></Cell>
+	 <Cell><Data ss:Type="String">Guatemala</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_guinea</Data></Cell>
+	 <Cell><Data ss:Type="String">Guinea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_guinea_bissau</Data></Cell>
+	 <Cell><Data ss:Type="String">Guinea-Bissau</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_guyana</Data></Cell>
+	 <Cell><Data ss:Type="String">Guyana</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_haiti</Data></Cell>
+	 <Cell><Data ss:Type="String">Haiti</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_honduras</Data></Cell>
+	 <Cell><Data ss:Type="String">Honduras</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_hungary</Data></Cell>
+	 <Cell><Data ss:Type="String">Hungary</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_iceland</Data></Cell>
+	 <Cell><Data ss:Type="String">Iceland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_india</Data></Cell>
+	 <Cell><Data ss:Type="String">India</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_indonesia</Data></Cell>
+	 <Cell><Data ss:Type="String">Indonesia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_iran</Data></Cell>
+	 <Cell><Data ss:Type="String">Iran</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_iraq</Data></Cell>
+	 <Cell><Data ss:Type="String">Iraq</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_ireland</Data></Cell>
+	 <Cell><Data ss:Type="String">Ireland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_israel</Data></Cell>
+	 <Cell><Data ss:Type="String">Israel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_italy</Data></Cell>
+	 <Cell><Data ss:Type="String">Italy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_jamaica</Data></Cell>
+	 <Cell><Data ss:Type="String">Jamaica</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_japan</Data></Cell>
+	 <Cell><Data ss:Type="String">Japan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_jordan</Data></Cell>
+	 <Cell><Data ss:Type="String">Jordan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_kazakhstan</Data></Cell>
+	 <Cell><Data ss:Type="String">Kazakhstan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_kenya</Data></Cell>
+	 <Cell><Data ss:Type="String">Kenya</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_kiribati</Data></Cell>
+	 <Cell><Data ss:Type="String">Kiribati</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_korea_north</Data></Cell>
+	 <Cell><Data ss:Type="String">North Korea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_korea_south</Data></Cell>
+	 <Cell><Data ss:Type="String">South Korea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_kosovo</Data></Cell>
+	 <Cell><Data ss:Type="String">Kosovo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_kuwait</Data></Cell>
+	 <Cell><Data ss:Type="String">Kuwait</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_kyrgyzstan</Data></Cell>
+	 <Cell><Data ss:Type="String">Kyrgyzstan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_laos</Data></Cell>
+	 <Cell><Data ss:Type="String">Laos</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_latvia</Data></Cell>
+	 <Cell><Data ss:Type="String">Latvia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_lebanon</Data></Cell>
+	 <Cell><Data ss:Type="String">Lebanon</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_lesotho</Data></Cell>
+	 <Cell><Data ss:Type="String">Lesotho</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_liberia</Data></Cell>
+	 <Cell><Data ss:Type="String">Liberia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_libya</Data></Cell>
+	 <Cell><Data ss:Type="String">Libya</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_liechtenstein</Data></Cell>
+	 <Cell><Data ss:Type="String">Liechtenstein</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_lithuania</Data></Cell>
+	 <Cell><Data ss:Type="String">Lithuania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_luxembourg</Data></Cell>
+	 <Cell><Data ss:Type="String">Luxembourg</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_madagascar</Data></Cell>
+	 <Cell><Data ss:Type="String">Madagascar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_malawi</Data></Cell>
+	 <Cell><Data ss:Type="String">Malawi</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_malaysia</Data></Cell>
+	 <Cell><Data ss:Type="String">Malaysia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_maldives</Data></Cell>
+	 <Cell><Data ss:Type="String">Maldives</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_mali</Data></Cell>
+	 <Cell><Data ss:Type="String">Mali</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_malta</Data></Cell>
+	 <Cell><Data ss:Type="String">Malta</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_marshall</Data></Cell>
+	 <Cell><Data ss:Type="String">Marshall Islands</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_mauritania</Data></Cell>
+	 <Cell><Data ss:Type="String">Mauritania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_mauritius</Data></Cell>
+	 <Cell><Data ss:Type="String">Mauritius</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_mexico</Data></Cell>
+	 <Cell><Data ss:Type="String">Mexico</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_micronesia</Data></Cell>
+	 <Cell><Data ss:Type="String">Micronesia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_moldova</Data></Cell>
+	 <Cell><Data ss:Type="String">Moldova</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_monaco</Data></Cell>
+	 <Cell><Data ss:Type="String">Monaco</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_mongolia</Data></Cell>
+	 <Cell><Data ss:Type="String">Mongolia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_montenegro</Data></Cell>
+	 <Cell><Data ss:Type="String">Montenegro</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_morocco</Data></Cell>
+	 <Cell><Data ss:Type="String">Morocco</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_mozambique</Data></Cell>
+	 <Cell><Data ss:Type="String">Mozambique</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_myanmar</Data></Cell>
+	 <Cell><Data ss:Type="String">Myanmar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_namibia</Data></Cell>
+	 <Cell><Data ss:Type="String">Namibia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_nauru</Data></Cell>
+	 <Cell><Data ss:Type="String">Nauru</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_nepal</Data></Cell>
+	 <Cell><Data ss:Type="String">Nepal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_netherlands</Data></Cell>
+	 <Cell><Data ss:Type="String">Netherlands</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_new_zealand</Data></Cell>
+	 <Cell><Data ss:Type="String">New Zealand</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_nicaragua</Data></Cell>
+	 <Cell><Data ss:Type="String">Nicaragua</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_niger</Data></Cell>
+	 <Cell><Data ss:Type="String">Niger</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_nigeria</Data></Cell>
+	 <Cell><Data ss:Type="String">Nigeria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_macedonia</Data></Cell>
+	 <Cell><Data ss:Type="String">North Macedonia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_norway</Data></Cell>
+	 <Cell><Data ss:Type="String">Norway</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_oman</Data></Cell>
+	 <Cell><Data ss:Type="String">Oman</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_pakistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Pakistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_palau</Data></Cell>
+	 <Cell><Data ss:Type="String">Palau</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_panama</Data></Cell>
+	 <Cell><Data ss:Type="String">Panama</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_papua_new_guinea</Data></Cell>
+	 <Cell><Data ss:Type="String">Papua New Guinea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_paraguay</Data></Cell>
+	 <Cell><Data ss:Type="String">Paraguay</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_peru</Data></Cell>
+	 <Cell><Data ss:Type="String">Peru</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_philippines</Data></Cell>
+	 <Cell><Data ss:Type="String">Philippines</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_poland</Data></Cell>
+	 <Cell><Data ss:Type="String">Poland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_portugal</Data></Cell>
+	 <Cell><Data ss:Type="String">Portugal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_qatar</Data></Cell>
+	 <Cell><Data ss:Type="String">Qatar</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_romania</Data></Cell>
+	 <Cell><Data ss:Type="String">Romania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_russia</Data></Cell>
+	 <Cell><Data ss:Type="String">Russia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_rwanda</Data></Cell>
+	 <Cell><Data ss:Type="String">Rwanda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_saint_kitts_nevis</Data></Cell>
+	 <Cell><Data ss:Type="String">St. Kitts &amp; Nevis</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_saint_lucia</Data></Cell>
+	 <Cell><Data ss:Type="String">St. Lucia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_saint_vincent_grenadines</Data></Cell>
+	 <Cell><Data ss:Type="String">St. Vincent &amp; Grenadines</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_samoa</Data></Cell>
+	 <Cell><Data ss:Type="String">Samoa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_san_marino</Data></Cell>
+	 <Cell><Data ss:Type="String">San Marino</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_sao_tome_principe</Data></Cell>
+	 <Cell><Data ss:Type="String">São Tomé &amp; Príncipe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_saudi_arabia</Data></Cell>
+	 <Cell><Data ss:Type="String">Saudi Arabia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_senegal</Data></Cell>
+	 <Cell><Data ss:Type="String">Senegal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_serbia</Data></Cell>
+	 <Cell><Data ss:Type="String">Serbia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_seychelles</Data></Cell>
+	 <Cell><Data ss:Type="String">Seychelles</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_sierra_leone</Data></Cell>
+	 <Cell><Data ss:Type="String">Sierra Leone</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_singapore</Data></Cell>
+	 <Cell><Data ss:Type="String">Singapore</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_slovakia</Data></Cell>
+	 <Cell><Data ss:Type="String">Slovakia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_slovenia</Data></Cell>
+	 <Cell><Data ss:Type="String">Slovenia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_solomon</Data></Cell>
+	 <Cell><Data ss:Type="String">Solomon Islands</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_somalia</Data></Cell>
+	 <Cell><Data ss:Type="String">Somalia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_south_africa</Data></Cell>
+	 <Cell><Data ss:Type="String">South Africa</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_south_sudan</Data></Cell>
+	 <Cell><Data ss:Type="String">South Sudan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_spain</Data></Cell>
+	 <Cell><Data ss:Type="String">Spain</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_sri_lanka</Data></Cell>
+	 <Cell><Data ss:Type="String">Sri Lanka</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_sudan</Data></Cell>
+	 <Cell><Data ss:Type="String">Sudan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_suriname</Data></Cell>
+	 <Cell><Data ss:Type="String">Suriname</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_sweden</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweden</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_switzerland</Data></Cell>
+	 <Cell><Data ss:Type="String">Switzerland</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_syria</Data></Cell>
+	 <Cell><Data ss:Type="String">Syria</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_taiwan</Data></Cell>
+	 <Cell><Data ss:Type="String">Taiwan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_tajikistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Tajikistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_tanzania</Data></Cell>
+	 <Cell><Data ss:Type="String">Tanzania</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_thailand</Data></Cell>
+	 <Cell><Data ss:Type="String">Thailand</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_east_timor</Data></Cell>
+	 <Cell><Data ss:Type="String">Timor-Leste</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_togo</Data></Cell>
+	 <Cell><Data ss:Type="String">Togo</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_tonga</Data></Cell>
+	 <Cell><Data ss:Type="String">Tonga</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_trinidad_and_tobago</Data></Cell>
+	 <Cell><Data ss:Type="String">Trinidad &amp; Tobago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_tunisia</Data></Cell>
+	 <Cell><Data ss:Type="String">Tunisia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_turkey</Data></Cell>
+	 <Cell><Data ss:Type="String">Türkiye</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_turkmenistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Turkmenistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_tuvalu</Data></Cell>
+	 <Cell><Data ss:Type="String">Tuvalu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_uganda</Data></Cell>
+	 <Cell><Data ss:Type="String">Uganda</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_ukraine</Data></Cell>
+	 <Cell><Data ss:Type="String">Ukraine</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_uae</Data></Cell>
+	 <Cell><Data ss:Type="String">United Arab Emirates</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_uk</Data></Cell>
+	 <Cell><Data ss:Type="String">United Kingdom</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_usa</Data></Cell>
+	 <Cell><Data ss:Type="String">United States</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_uruguay</Data></Cell>
+	 <Cell><Data ss:Type="String">Uruguay</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_uzbekistan</Data></Cell>
+	 <Cell><Data ss:Type="String">Uzbekistan</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_vanuatu</Data></Cell>
+	 <Cell><Data ss:Type="String">Vanuatu</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_vatican_city</Data></Cell>
+	 <Cell><Data ss:Type="String">Vatican City</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_venezuela</Data></Cell>
+	 <Cell><Data ss:Type="String">Venezuela</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_vietnam</Data></Cell>
+	 <Cell><Data ss:Type="String">Vietnam</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_yemen</Data></Cell>
+	 <Cell><Data ss:Type="String">Yemen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_zambia</Data></Cell>
+	 <Cell><Data ss:Type="String">Zambia</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_country_zimbabwe</Data></Cell>
+	 <Cell><Data ss:Type="String">Zimbabwe</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_remote_snapshot</Data></Cell>
+	 <Cell><Data ss:Type="String">Community score snapshot</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_profile_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Public profile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_nationality_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Optional. Shown beside your public name.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_sharing_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Community submission</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_submit_status_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Leaderboard status:</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_selected_score_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Selected Score</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_selected_none</Data></Cell>
+	 <Cell><Data ss:Type="String">Select a community score to preview it.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_browse_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Select a score, then choose Score Details for its company snapshot.</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - HUB</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_menu</Data></Cell>
+	 <Cell><Data ss:Type="String">Community</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">Connect with Reforged players, share creations and manage your Community services.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_connecting</Data></Cell>
+	 <Cell><Data ss:Type="String">Connecting...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_online</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Online</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_offline</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Offline</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_players_online</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% players online</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_players_unknown</Data></Cell>
+	 <Cell><Data ss:Type="String">Players online: -</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_signed_in</Data></Cell>
+	 <Cell><Data ss:Type="String">Signed in as %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_signed_out</Data></Cell>
+	 <Cell><Data ss:Type="String">Not signed in</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_signin_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign in to submit, sync and manage Community data.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_cookbook</Data></Cell>
+	 <Cell><Data ss:Type="String">Cookbook</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_stats</Data></Cell>
+	 <Cell><Data ss:Type="String">Statistics</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_discord</Data></Cell>
+	 <Cell><Data ss:Type="String">Discord</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_wiki</Data></Cell>
+	 <Cell><Data ss:Type="String">Wiki</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_spotlight</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Spotlight</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_spotlight_loading</Data></Cell>
+	 <Cell><Data ss:Type="String">Loading the latest Community highlights...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_top_score</Data></Cell>
+	 <Cell><Data ss:Type="String">Top score: %1% - %2% - %3%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_top_score_none</Data></Cell>
+	 <Cell><Data ss:Type="String">No Community scores have been submitted yet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_featured_creation</Data></Cell>
+	 <Cell><Data ss:Type="String">Featured: %1% by %2% - %3% loads</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_featured_none</Data></Cell>
+	 <Cell><Data ss:Type="String">No Community Creations have been shared yet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_totals</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% accounts - %2% scores - %3% creations</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_totals_unknown</Data></Cell>
+	 <Cell><Data ss:Type="String">Community totals unavailable.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_refresh</Data></Cell>
+	 <Cell><Data ss:Type="String">Refresh</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_loading</Data></Cell>
+	 <Cell><Data ss:Type="String">Refreshing Community information...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_busy</Data></Cell>
+	 <Cell><Data ss:Type="String">Another Community request is already in progress.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_refreshed</Data></Cell>
+	 <Cell><Data ss:Type="String">Community information is up to date.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Community information could not be loaded: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_spotlight_unavailable</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Spotlight is unavailable while offline.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_opening_discord</Data></Cell>
+	 <Cell><Data ss:Type="String">Opening the Reforged Discord server...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_discord_opened</Data></Cell>
+	 <Cell><Data ss:Type="String">Discord opened in your web browser.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_opening_wiki</Data></Cell>
+	 <Cell><Data ss:Type="String">Opening The Chocolatier Series Wiki...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_wiki_opened</Data></Cell>
+	 <Cell><Data ss:Type="String">Wiki opened in your web browser.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_hub_external_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not open the external link: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - ACCOUNTS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Account</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign in to keep one public Community Profile across High Scores and the Community Cookbook, own the creations you share, and sync campaign saves online.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_signed_in</Data></Cell>
+	 <Cell><Data ss:Type="String">Signed in as %1%. Your public profile, Community Creations and Cloud Saves belong to this account.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_edit_profile</Data></Cell>
+	 <Cell><Data ss:Type="String">Edit Profile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_my_scores</Data></Cell>
+	 <Cell><Data ss:Type="String">My Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_sign_in</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign In</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_create</Data></Cell>
+	 <Cell><Data ss:Type="String">Create Account</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_sign_out</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign Out</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_signout_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign out of this Community Account on this computer?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_signing_out</Data></Cell>
+	 <Cell><Data ss:Type="String">Signing out...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_create_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Create Community Account</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_signin_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign In to Community Account</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_login_name</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign-in name</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_password</Data></Cell>
+	 <Cell><Data ss:Type="String">Password</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_password_visible_help</Data></Cell>
+	 <Cell><Data ss:Type="String">This old text field cannot reliably mask characters, so your password is visible while typing.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_register_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Use 3-32 letters, numbers, dots, dashes or underscores for your sign-in name. Passwords must be at least 10 characters.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_login_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Enter the private credentials for your Community Account. Your public username may be different from your sign-in name.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_creating</Data></Cell>
+	 <Cell><Data ss:Type="String">Creating Community Account...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_signing_in</Data></Cell>
+	 <Cell><Data ss:Type="String">Signing in...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_account_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Account error: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_session_expired</Data></Cell>
+	 <Cell><Data ss:Type="String">Your Community Account session expired or was revoked. Please sign in again.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - PROFILE</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Profile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_public_name</Data></Cell>
+	 <Cell><Data ss:Type="String">Public name</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_flag</Data></Cell>
+	 <Cell><Data ss:Type="String">Community flag</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_no_flag</Data></Cell>
+	 <Cell><Data ss:Type="String">No public flag selected</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_bio</Data></Cell>
+	 <Cell><Data ss:Type="String">Profile bio</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_category</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourite confection</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_product</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourite product</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_no_favorite_product</Data></Cell>
+	 <Cell><Data ss:Type="String">No favourite product selected</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_ingredient</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourite Ingredient</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_character</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourite Character</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_port</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourite Port</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_unspecified</Data></Cell>
+	 <Cell><Data ss:Type="String">Not specified</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_recipe_invalid</Data></Cell>
+	 <Cell><Data ss:Type="String">Choose a discovered standard recipe. Custom recipes cannot be used as a public profile favourite.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_gender_non_binary</Data></Cell>
+	 <Cell><Data ss:Type="String">Non-binary</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_gender_other</Data></Cell>
+	 <Cell><Data ss:Type="String">Other</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_gender_prefer_not_say</Data></Cell>
+	 <Cell><Data ss:Type="String">Prefer not to say</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_requires_account</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign in to a Community Account before editing your public profile.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_save</Data></Cell>
+	 <Cell><Data ss:Type="String">Save Profile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_saving</Data></Cell>
+	 <Cell><Data ss:Type="String">Saving Community Profile...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not save profile: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_set_favorite</Data></Cell>
+	 <Cell><Data ss:Type="String">Set Favourite</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_favorite_current</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourite</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - PUBLIC PROFILE</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_view_profile</Data></Cell>
+	 <Cell><Data ss:Type="String">View Profile</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_loading</Data></Cell>
+	 <Cell><Data ss:Type="String">Loading Community Profile...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not load Community Profile: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_no_bio</Data></Cell>
+	 <Cell><Data ss:Type="String">No public bio has been written yet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_meta</Data></Cell>
+	 <Cell><Data ss:Type="String">%1%  -  %2%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_online</Data></Cell>
+	 <Cell><Data ss:Type="String">Online</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_offline</Data></Cell>
+	 <Cell><Data ss:Type="String">Offline</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_unknown</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played unknown</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_just_now</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played just now</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_minute</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played %1% minute ago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_minutes</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played %1% minutes ago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_hour</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played %1% hour ago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_hours</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played %1% hours ago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_day</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played %1% day ago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_days</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played %1% days ago</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_last_played_date</Data></Cell>
+	 <Cell><Data ss:Type="String">Last played %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_favorites</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourites</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_favorite</Data></Cell>
+	 <Cell><Data ss:Type="String">Favourite Product</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_product_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Product</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_category_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Confection</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_ingredient_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Ingredient</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_profile_favorite_character_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Character</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_stats</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Stats</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">Creations shared</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_loads</Data></Cell>
+	 <Cell><Data ss:Type="String">Total creation loads</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_most_loaded</Data></Cell>
+	 <Cell><Data ss:Type="String">Most loaded creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_most_loaded_value</Data></Cell>
+	 <Cell><Data ss:Type="String">%1%  •  %2% loads</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_most_loaded_value_one</Data></Cell>
+	 <Cell><Data ss:Type="String">%1%  •  %2% load</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_member_since_value</Data></Cell>
+	 <Cell><Data ss:Type="String">Community member since %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_public_profile_none</Data></Cell>
+	 <Cell><Data ss:Type="String">None yet</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - COOKBOOK</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_nameplate</Data></Cell>
+	 <Cell><Data ss:Type="String">Cookbook</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Browse Community Creations</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_selected_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Selected Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_search</Data></Cell>
+	 <Cell><Data ss:Type="String">Search</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_filter_all</Data></Cell>
+	 <Cell><Data ss:Type="String">All</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_filter_blend</Data></Cell>
+	 <Cell><Data ss:Type="String">Blends</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_sort_newest</Data></Cell>
+	 <Cell><Data ss:Type="String">Newest</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_sort_most_loaded</Data></Cell>
+	 <Cell><Data ss:Type="String">Most Loaded</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_sort_top_rated</Data></Cell>
+	 <Cell><Data ss:Type="String">Top Rated</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_sort_name</Data></Cell>
+	 <Cell><Data ss:Type="String">Name</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_view_details</Data></Cell>
+	 <Cell><Data ss:Type="String">View Details</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_load_into_kitchen</Data></Cell>
+	 <Cell><Data ss:Type="String">Load into Kitchen</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_select_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Select a community creation to preview it.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_available_count</Data></Cell>
+	 <Cell><Data ss:Type="String">Ingredients available: %1% / %2%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_can_load</Data></Cell>
+	 <Cell><Data ss:Type="String">All required ingredients are discovered.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_category_locked</Data></Cell>
+	 <Cell><Data ss:Type="String">This confection type is not yet available in your Test Kitchen.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_missing_ingredients</Data></Cell>
+	 <Cell><Data ss:Type="String">Some ingredients are still undiscovered.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_loads</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% loads</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_creation_ready_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Ready</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_creation_locked_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Locked</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_page</Data></Cell>
+	 <Cell><Data ss:Type="String">Page %1% / %2%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_page_empty</Data></Cell>
+	 <Cell><Data ss:Type="String">No pages</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_busy</Data></Cell>
+	 <Cell><Data ss:Type="String">Another community request is already running.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_loading</Data></Cell>
+	 <Cell><Data ss:Type="String">Loading community creations...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not load Community Cookbook.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_none</Data></Cell>
+	 <Cell><Data ss:Type="String">No creations match these filters.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_one_result</Data></Cell>
+	 <Cell><Data ss:Type="String">1 community creation found.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_results</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% community creations found.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_browse_only</Data></Cell>
+	 <Cell><Data ss:Type="String">Open this cookbook from the Secret Test Kitchen to load creations.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cookbook_browse_only_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Browse only. Open from the Secret Test Kitchen to load.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - CREATION DETAILS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_details_ready</Data></Cell>
+	 <Cell><Data ss:Type="String">Ready to load into your Secret Test Kitchen.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_details_category_locked</Data></Cell>
+	 <Cell><Data ss:Type="String">Unlock %1% before loading this creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_details_missing</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% of %2% ingredients are still undiscovered.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_details_browse_only</Data></Cell>
+	 <Cell><Data ss:Type="String">Browse-only view. Open Community Cookbook from the Secret Test Kitchen to load this creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_details_browse_only_short</Data></Cell>
+	 <Cell><Data ss:Type="String">Open from the Secret Test Kitchen to load this creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_details_rating_label</Data></Cell>
+	 <Cell><Data ss:Type="String">Rating</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_shared_date</Data></Cell>
+	 <Cell><Data ss:Type="String">Shared %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_your_creation</Data></Cell>
+	 <Cell><Data ss:Type="String">Your creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_kitchen_loaded</Data></Cell>
+	 <Cell><Data ss:Type="String">Loaded %1% into the Test Kitchen. Edit the ingredients or taste it to continue.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_delete_creation</Data></Cell>
+	 <Cell><Data ss:Type="String">Delete Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_delete_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Permanently delete %1% from the Community Cookbook? This cannot be undone.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_delete_sending</Data></Cell>
+	 <Cell><Data ss:Type="String">Deleting creation...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_delete_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not delete creation: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - CREATION SHARING</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_share_creation</Data></Cell>
+	 <Cell><Data ss:Type="String">Share Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_share_remix</Data></Cell>
+	 <Cell><Data ss:Type="String">Share Remix</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_share_requires_account</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign in to a Community Account before sharing creations.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_share_sending</Data></Cell>
+	 <Cell><Data ss:Type="String">Sharing creation...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_share_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not share creation: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Share Community Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_ingredient_count</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% ingredients</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_tags_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Tags</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_tags_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Choose up to %1% tags that describe this creation.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_tag_count</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% / %2% tags selected</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_tag_limit</Data></Cell>
+	 <Cell><Data ss:Type="String">You can choose up to %1% tags.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_foreign_copy</Data></Cell>
+	 <Cell><Data ss:Type="String">Original Community recipe by %1%. Change its ingredients before sharing.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_foreign_creator</Data></Cell>
+	 <Cell><Data ss:Type="String">another Chocolatier</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_selected_none</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% / %2% selected  -  No tags selected yet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_selected_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% / %2% selected  -  %3%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_status_selected</Data></Cell>
+	 <Cell><Data ss:Type="String">Selected: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_upload_status_removed</Data></Cell>
+	 <Cell><Data ss:Type="String">Removed: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_creation_saved</Data></Cell>
+	 <Cell><Data ss:Type="String">Creation Saved</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - CREATION TAGS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_dark_chocolate</Data></Cell>
+	 <Cell><Data ss:Type="String">Dark Chocolate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_milk_chocolate</Data></Cell>
+	 <Cell><Data ss:Type="String">Milk Chocolate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_white_chocolate</Data></Cell>
+	 <Cell><Data ss:Type="String">White Chocolate</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_caramel</Data></Cell>
+	 <Cell><Data ss:Type="String">Caramel</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_sweet</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweet</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_bitter</Data></Cell>
+	 <Cell><Data ss:Type="String">Bitter</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_fruity</Data></Cell>
+	 <Cell><Data ss:Type="String">Fruity</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_nutty</Data></Cell>
+	 <Cell><Data ss:Type="String">Nutty</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_spiced</Data></Cell>
+	 <Cell><Data ss:Type="String">Spiced</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_floral</Data></Cell>
+	 <Cell><Data ss:Type="String">Floral</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_citrus</Data></Cell>
+	 <Cell><Data ss:Type="String">Citrus</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_tropical</Data></Cell>
+	 <Cell><Data ss:Type="String">Tropical</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_tea</Data></Cell>
+	 <Cell><Data ss:Type="String">Tea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_creamy</Data></Cell>
+	 <Cell><Data ss:Type="String">Creamy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_boozy</Data></Cell>
+	 <Cell><Data ss:Type="String">Boozy</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_rich</Data></Cell>
+	 <Cell><Data ss:Type="String">Rich</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_herbal</Data></Cell>
+	 <Cell><Data ss:Type="String">Herbal</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_savoury</Data></Cell>
+	 <Cell><Data ss:Type="String">Savoury</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_tag_experimental</Data></Cell>
+	 <Cell><Data ss:Type="String">Experimental</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - CREATION RATINGS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Rate Creation</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Choose a rating from 1 to 5. You can change it later.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_unrated</Data></Cell>
+	 <Cell><Data ss:Type="String">Not yet rated</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_summary</Data></Cell>
+	 <Cell><Data ss:Type="String">Rating: %1% / 5 (%2% ratings)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_summary_compact</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% / 5 (%2%)</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_current</Data></Cell>
+	 <Cell><Data ss:Type="String">Your current rating is %1% / 5.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_none</Data></Cell>
+	 <Cell><Data ss:Type="String">You have not rated this creation yet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_loading</Data></Cell>
+	 <Cell><Data ss:Type="String">Loading your rating...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_saving</Data></Cell>
+	 <Cell><Data ss:Type="String">Saving rating...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_clear</Data></Cell>
+	 <Cell><Data ss:Type="String">Clear Rating</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_rating_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not save rating: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - CLOUD SAVES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloud Saves</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">Manually sync campaign saves to your Community Account, or retrieve a cloud campaign on this computer.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_requires_account</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign in to a Community Account to use Cloud Saves.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_sync_current</Data></Cell>
+	 <Cell><Data ss:Type="String">Sync Current Game</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_loading</Data></Cell>
+	 <Cell><Data ss:Type="String">Loading Cloud Saves...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloud Save error: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_none</Data></Cell>
+	 <Cell><Data ss:Type="String">No Cloud Saves are stored on this account yet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_loaded</Data></Cell>
+	 <Cell><Data ss:Type="String">Loaded %1% Cloud Saves.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_unnamed</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloud Game</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_row_meta</Data></Cell>
+	 <Cell><Data ss:Type="String">Revision %1%  -  %2%  -  Week %3%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_select_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Select a Cloud Save to view its details.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_selected_meta</Data></Cell>
+	 <Cell><Data ss:Type="String">Revision %1%  -  Synced %2%  -  Score %3%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_no_local_game</Data></Cell>
+	 <Cell><Data ss:Type="String">There is no active local campaign to sync.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_syncing</Data></Cell>
+	 <Cell><Data ss:Type="String">Syncing current game...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_synced</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloud sync complete. Revision %1% is now current.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_up_to_date</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloud Save is already up to date. No new revision was needed.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_conflict</Data></Cell>
+	 <Cell><Data ss:Type="String">A newer cloud revision exists.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_conflict_restore_prompt</Data></Cell>
+	 <Cell><Data ss:Type="String">A newer cloud revision exists. Restore it now? Choosing No keeps this local game unchanged.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_conflict_fork_prompt</Data></Cell>
+	 <Cell><Data ss:Type="String">Keep this local version by uploading it as a separate Cloud Save instead?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_conflict_forked</Data></Cell>
+	 <Cell><Data ss:Type="String">The local version was saved as a separate Cloud Save.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_import_new</Data></Cell>
+	 <Cell><Data ss:Type="String">Download as New</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_restore_current</Data></Cell>
+	 <Cell><Data ss:Type="String">Restore Current</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_delete</Data></Cell>
+	 <Cell><Data ss:Type="String">Delete Cloud</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_local_full</Data></Cell>
+	 <Cell><Data ss:Type="String">All 10 local player slots are in use. Delete a local player before importing another cloud campaign.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_import_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Download this Cloud Save into a new local player named %1%?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_imported</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloud campaign downloaded successfully as %1%.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_restore_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Replace the current local campaign with the latest cloud revision of %1%? The current local game is saved first.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_restoring</Data></Cell>
+	 <Cell><Data ss:Type="String">Downloading and restoring Cloud Save...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_restored</Data></Cell>
+	 <Cell><Data ss:Type="String">The Cloud Save was restored into the current local campaign.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_delete_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Permanently delete %1% and its retained cloud revisions from this Community Account?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_deleting</Data></Cell>
+	 <Cell><Data ss:Type="String">Deleting Cloud Save...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_deleted</Data></Cell>
+	 <Cell><Data ss:Type="String">Cloud Save deleted.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_relink_account_prompt</Data></Cell>
+	 <Cell><Data ss:Type="String">This local campaign is linked to a Cloud Save under a different Community Account. Upload this campaign as a new Cloud Save under the account you are signed into now?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_relink_invalid_prompt</Data></Cell>
+	 <Cell><Data ss:Type="String">This campaign contains an invalid or damaged Cloud Save link. Upload the current local campaign as a new Cloud Save and replace the broken link?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_relink_missing_prompt</Data></Cell>
+	 <Cell><Data ss:Type="String">The Cloud Save linked to this local campaign no longer exists on this account. Upload the current local campaign again as a new Cloud Save?</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_cloud_relinked</Data></Cell>
+	 <Cell><Data ss:Type="String">The local campaign is now linked to a new Cloud Save on this account.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - SCORES</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_header</Data></Cell>
+	 <Cell><Data ss:Type="String">My Community Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">Scores submitted while signed in belong to this account and can be removed here.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_requires_account</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign in to your Community Account to view and manage your scores.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_loading</Data></Cell>
+	 <Cell><Data ss:Type="String">Loading your Community scores...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_error</Data></Cell>
+	 <Cell><Data ss:Type="String">Community score error: %1%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_empty</Data></Cell>
+	 <Cell><Data ss:Type="String">No account-owned Community scores are stored yet.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_count</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% account-owned score submissions found.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_select_hint</Data></Cell>
+	 <Cell><Data ss:Type="String">Select one of your scores to view its details or delete it.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_selected_meta</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% - Week %2% - %3%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_selected_meta_no_rank</Data></Cell>
+	 <Cell><Data ss:Type="String">Week %1% - %2%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_delete</Data></Cell>
+	 <Cell><Data ss:Type="String">Delete Score</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_delete_confirm</Data></Cell>
+	 <Cell><Data ss:Type="String">Permanently remove your %1% Community score from the leaderboard? This cannot be undone.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_deleting</Data></Cell>
+	 <Cell><Data ss:Type="String">Deleting Community score...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_scores_deleted</Data></Cell>
+	 <Cell><Data ss:Type="String">Community score deleted.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - SCORE SUBMISSION</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_score_account_required_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Account Required</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_score_account_required_body</Data></Cell>
+	 <Cell><Data ss:Type="String">Sign in or create a Community Account to submit this Company Score. New scores are account-owned so you can manage or delete them later. You can still browse Community High Scores while signed out.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_score_account_required_privacy</Data></Cell>
+	 <Cell><Data ss:Type="String">Your pending score stays local while you sign in. Cancelling does not discard it.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_score_account_profile_invalid</Data></Cell>
+	 <Cell><Data ss:Type="String">Your Community Profile is incomplete. Sign in again or repair your profile before submitting a score.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_score_request_busy</Data></Cell>
+	 <Cell><Data ss:Type="String">Another Community request is already in progress. Please try again in a moment.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_score_ticket_failed</Data></Cell>
+	 <Cell><Data ss:Type="String">Could not prepare an account-owned score submission.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_score_setup_failed</Data></Cell>
+	 <Cell><Data ss:Type="String">The High Score submission form could not be prepared. Your pending score has not been submitted.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED COMMUNITY - STATISTICS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_header</Data></Cell>
+	 <Cell><Data ss:Type="String">Community Statistics</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_intro</Data></Cell>
+	 <Cell><Data ss:Type="String">A live snapshot of activity across Reforged Community Services.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_group_players_scores</Data></Cell>
+	 <Cell><Data ss:Type="String">Players &amp; Scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_group_creations_cloud</Data></Cell>
+	 <Cell><Data ss:Type="String">Creations &amp; Cloud</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_players_online</Data></Cell>
+	 <Cell><Data ss:Type="String">Players online</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_accounts</Data></Cell>
+	 <Cell><Data ss:Type="String">Community accounts</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_scores</Data></Cell>
+	 <Cell><Data ss:Type="String">Community scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_owned_scores</Data></Cell>
+	 <Cell><Data ss:Type="String">Account-owned scores</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">Shared creations</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_creation_loads</Data></Cell>
+	 <Cell><Data ss:Type="String">Creation loads</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_server_version</Data></Cell>
+	 <Cell><Data ss:Type="String">Server version</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">community_stats_live_help</Data></Cell>
+	 <Cell><Data ss:Type="String">Players are counted when a running Reforged client has checked in within the last %1% seconds.</Data></Cell>
+	</Row>
+
+
+	<Row>
+	 <Cell><Data ss:Type="String">kitchen_category_tea</Data></Cell>
+	 <Cell><Data ss:Type="String">Tea</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">kitchen_category_liqueur</Data></Cell>
+	 <Cell><Data ss:Type="String">Liqueurs</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">quantity_unit_format</Data></Cell>
+	 <Cell><Data ss:Type="String">%1% %2%</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell/>
+	 <Cell><Data ss:Type="String">REFORGED SCORE DETAILS - MODE LABELS</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_mode_story</Data></Cell>
+	 <Cell><Data ss:Type="String">Story Mode</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_mode_free_play</Data></Cell>
+	 <Cell><Data ss:Type="String">Free Play</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_operations_points</Data></Cell>
+	 <Cell><Data ss:Type="String">Special Orders</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_free_creations</Data></Cell>
+	 <Cell><Data ss:Type="String">Free Play Creations</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">hiscore_details_button_unavailable</Data></Cell>
+	 <Cell><Data ss:Type="String">Score details are unavailable for this score.</Data></Cell>
+	</Row>
+
+	<Row>
+	 <Cell><Data ss:Type="String">building_empty</Data></Cell>
+	 <Cell><Data ss:Type="String">It looks like nobody is here at the moment...</Data></Cell>
+	</Row>
+
+</Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <Print>
     <ValidPrinterInfo/>

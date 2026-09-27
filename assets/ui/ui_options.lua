@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Options Settings)
+	Chocolatier: Decadence by Design Reforged (Options Settings)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 SliderFont = { labelFontName, 16, BlackColor }
@@ -20,7 +20,7 @@ end
 -- Triggers the C++ function to force a display bounds change
 local function ToggleFullscreen()
 	local success = ToggleFullScreen()
-	
+
 	if success then
 		DebugOut("UI", "Fullscreen toggle successful.")
 	else
@@ -40,7 +40,7 @@ end
 
 local function ReplayIntro()
 	DebugOut("UI", "Replay Intro button clicked. Triggering splash sequence.")
-	
+
 	SoundEvent("Stop_Music")
 	DisplaySplash("splash/intro_movie.swf", "splash/playfirst_logo", 0)
 
@@ -77,7 +77,7 @@ MakeDialog
 		OptionsWindow
 		{
 			x = 0, y = 0, w = kMax, h = kMax,
-			
+
 			-- Sound Mixers
 			SetStyle(C3DialogBodyStyle),
 			Text { x = 30, y = 40, w = 100, h = 40, name = "sfx", label = "#" .. GetString("sfxlevel"), font = SliderFont, flags = kHAlignCenter + kVAlignCenter },
@@ -92,10 +92,10 @@ MakeDialog
 			-- Toggles
 			SetStyle(C3SmallRoundButtonStyle),
 			AppendStyle { font = C3DialogBodyStyle.font },
-			
+
 			Button { x = 74, y = 155, name = "fullscreen", type = kToggle, command = ToggleFullscreen },
 			Text { x = 135, y = 180, w = 150, h = 32, label = "#" .. GetString("fullscreen") },
-			
+
 			Button { x = 249, y = 155, name = "mutebox", type = kToggle, command = MuteSound },
 			Text { x = 310, y = 180, w = 175, h = 32, label = "#" .. GetString("mutesound") },
 
@@ -105,7 +105,7 @@ MakeDialog
 			Button { x = kCenter, y = 230, name = "credits", label = "credits", type = kPush, command = ShowCredits },
 			Button { x = kCenter + 133, y = 230, name = "language", label = "language", type = kPush, command = ShowLanguages },
 		},
-		
+
 		-- Finalize OK Button
 		AppendStyle(C3RoundButtonStyle),
 		Button { x = 445, y = 251, name = "ok", command = okFunction, label = "ok", default = true, cancel = true },

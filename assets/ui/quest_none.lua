@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Empty Quest Log Detail)
+	Chocolatier: Decadence by Design Reforged (Empty Quest Log Detail)
 	Copyright (c) 2006-2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 

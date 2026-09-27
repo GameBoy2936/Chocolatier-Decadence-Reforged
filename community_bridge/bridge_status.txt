@@ -1,0 +1,4 @@
+Community Bridge v0.2.12
+STATUS: STOPPED
+HOST: scores.chocolatiercommunity.com
+IPC-ROOT: C:\Users\Micha\AppData\Roaming\PlayFirst\chocolatier-decadence-design

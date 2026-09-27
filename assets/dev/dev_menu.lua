@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Dev Menu Navigation)
+	Chocolatier: Decadence by Design Reforged (Dev Menu Navigation)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -39,10 +39,10 @@ local h = devMenuStyle.font[2]
 -- Assembles the top menu bar overlay. Returns an empty group if Dev Mode is disabled.
 function devMenu()
 	if CheckConfig("dev") then
-		return BSGWindow { 
-			x = kCenter, y = 0, w = 800, h = h, fit = true, color = { 1, 1, 1, 0.8 }, 
+		return BSGWindow {
+			x = kCenter, y = 0, w = 800, h = h, fit = true, color = { 1, 1, 1, 0.8 },
 			name = "dev_menu", SetStyle(devMenuStyle),
-			
+
 			Button { x = 0, y = 0, w = 150, h = h, name = "dev_quest", label = "#Q:" .. tostring(Player.questPrimary), command = function() devQuests(0, h) end },
 
 			Button { x = 150, y = 0, w = 70, h = h, label = "#Inventory", command = function() devInventory(0, h) end },
@@ -52,7 +52,7 @@ function devMenu()
 			Button { x = 400, y = 0, w = 60, h = h, label = "#Buildings", command = function() devBuildings(0, h) end },
 			Button { x = 460, y = 0, w = 40, h = h, label = "#Vars", command = function() devQuestVars(460, h) end },
 			Button { x = 500, y = 0, w = 60, h = h, label = "#Saves", command = function() devSaves(500, h) end },
-			
+
 			Button { x = 670, y = 0, w = 40, h = h, label = "#Utils", command = function() devUtils(670, h) end },
 			Button { x = 710, y = 0, w = 90, h = h, label = "#Money", command = function() devMoney(710, h) end },
 		}

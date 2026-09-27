@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Character Dialog)
+	Chocolatier: Decadence by Design Reforged (Character Dialog)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local char = gDialogTable.char or gActiveCharacter
@@ -33,7 +33,7 @@ local okLength = gDialogTable.ok_length or "medium"
 -- ----------------------------------------------------------------------------
 -- Mood & Emotion Resolution
 -- ----------------------------------------------------------------------------
--- Certain quests or special interactions explicitly pass a mood override 
+-- Certain quests or special interactions explicitly pass a mood override
 -- to forcefully change the character's facial expression during this dialogue.
 
 local displayHappiness = 50
@@ -56,7 +56,7 @@ local function SetDynamicDialogueText(text)
 	local font_sizes_to_check = { 16, 15, 14, 13, 12 }
 	local chars_per_line_map = { [16] = 46, [15] = 49, [14] = 52, [13] = 56, [12] = 60 }
 	local line_thresholds = {[16] = 10, [15] = 11, [14] = 12, [13] = 13, [12] = 999 }
-	
+
 	local segments = {}
 	local current_pos = 1
 	if text then
@@ -80,10 +80,10 @@ local function SetDynamicDialogueText(text)
 		end
 		if total_lines <= line_threshold then
 			final_font_size = current_font_size
-			break 
+			break
 		end
 	end
-	
+
 	local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
 	SetLabel("dialogue_text", formatted_text)
 end
@@ -116,21 +116,21 @@ MakeDialog
 		Bitmap
 		{
 			x = 0, y = 49, image = "image/popup_back_dialog",
-			
+
 			SetStyle(C3CharacterDialogStyle),
 			Text { x = 241, y = 48, w = 314, h = 172, name = "dialogue_text" },
-			
+
 			SetStyle(C3CharacterNameStyle),
 			Text { x = 41, y = 201, w = 187, h = 20, label = char.name, font = characterNameFont, flags = kVAlignCenter + kHAlignCenter },
-			
+
 			-- Generated Accept Button
-			Button { 
-				x = currentX, y = buttonY, w = width, h = 50, 
-				
-				name = "ok", label = "#" .. GetString(okLabel), 
+			Button {
+				x = currentX, y = buttonY, w = width, h = 50,
+
+				name = "ok", label = "#" .. GetString(okLabel),
 				default = true, cancel = true, close = true,
-				
-				font = buttonFont, 
+
+				font = buttonFont,
 				flags = kVAlignCenter + kHAlignCenter,
 				ty = kCenter - 3, tx = kCenter - 1,
 

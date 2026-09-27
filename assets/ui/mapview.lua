@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (World Map View)
+	Chocolatier: Decadence by Design Reforged (World Map View)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 gCurrentModal = "mapview"
@@ -13,13 +13,13 @@ gCurrentModal = "mapview"
 -- Toggles between the global map and the interior of the current local port
 function SwapMapPortScreens()
 	if gTravelActive then return end
-	
+
 	if Player.portName ~= "enroute" then
 		DebugOut("UI", string.format("Swapping from Global Map to Local Port View: %s", Player.portName))
-		
+
 		ReleaseLedger()
 		SwapToModal("ui/portview.lua")
-		
+
 		local port = Player:GetPort()
 		SoundEvent(port.cadikey)
 	end
@@ -32,7 +32,7 @@ end
 MakeDialog
 {
 	name = "map", x = kCenter, y = kCenter,
-	
+
 	-- Generates the interactive globe
 	MapWindow
 	{
@@ -41,7 +41,7 @@ MakeDialog
 		yFar = 80, yNear = 400, farScale = 0.4, nearScale = 1,
 		cloudY = 370, cloudTime = 60000,
 	},
-	
+
 	-- Inject the hidden developer menu wrapper
 	devMenu(),
 }

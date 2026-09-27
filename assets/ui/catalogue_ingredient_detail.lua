@@ -1,7 +1,9 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Catalogue Detail - Ingredients
-	Copyright (c) 2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Catalogue Detail - Ingredients)
+	Copyright (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
+
+ClearStringCache()
 
 local ing = gCatalogueSelection
 
@@ -223,8 +225,8 @@ local function BuildIngredientArticleText(ingredient)
 		return GetSafeString("catalogue_ingredient_missing_text", "No catalogue article has been written for this ingredient yet.")
 	end
 
-	AppendSection(parts, "catalogue_section_production", "Production and Locality", baseKey .. "_production", colors.primary)
-	AppendSection(parts, "catalogue_section_flavor", "Flavor Profile", baseKey .. "_flavor", colors.primary)
+	-- Production/locality and flavor-profile sections were intentionally removed
+	-- for the v2 release to keep ingredient Catalogue articles more focused.
 
 	-- Usage section groups three smaller strings under one generated parent header.
 	local usageChocolate = GetOptionalCatalogueString(baseKey .. "_usage_chocolate")
@@ -262,16 +264,16 @@ local function GetNextSafeOffset(text, start_offset, advance_chars)
 	local target = start_offset + advance_chars
 	local text_len = string.len(text)
 	if target >= text_len then return text_len end
-	
+
 	local in_tag = false
 	local i = start_offset + 1
-	
+
 	while i <= target do
 		local char = string.sub(text, i, i)
 		if char == "<" then in_tag = true elseif char == ">" then in_tag = false end
 		i = i + 1
 	end
-	
+
 	while i <= text_len do
 		local char = string.sub(text, i, i)
 		if char == "<" then
@@ -284,7 +286,7 @@ local function GetNextSafeOffset(text, start_offset, advance_chars)
 		end
 		i = i + 1
 	end
-	
+
 	return text_len
 end
 
@@ -294,7 +296,7 @@ local function GetOpenTagsForOffset(text, offset)
 	local current_tag = ""
 	local is_closing_tag = false
 	local active_format_tags = {}
-	
+
 	local i = 1
 	while i <= offset do
 		local char = string.sub(text, i, i)
@@ -312,7 +314,7 @@ local function GetOpenTagsForOffset(text, offset)
 		end
 		i = i + 1
 	end
-	
+
 	local prefix = ""
 	for j = 1, table.getn(active_format_tags) do prefix = prefix .. active_format_tags[j] end
 	return prefix
@@ -333,20 +335,20 @@ end
 
 local function ScrollDown()
 	if not showUnlockedView then return end
-	
+
 	local rawBody = BuildIngredientArticleText(ing)
 	if not rawBody or rawBody == "#####" then return end
-	
+
 	if gCatalogueIngPage == table.getn(gCatalogueIngOffsets) then
 		local current_offset = gCatalogueIngOffsets[gCatalogueIngPage]
 		local next_offset = GetNextSafeOffset(rawBody, current_offset, chars_per_scroll)
-		
+
 		if next_offset >= string.len(rawBody) then return end
-		
+
 		table.insert(gCatalogueIngOffsets, next_offset)
 		DebugOut("UI", string.format("Ingredient article prepared next scroll offset: %d", next_offset))
 	end
-	
+
 	gCatalogueIngPage = gCatalogueIngPage + 1
 	SoundEvent("cadi/ui_click.ogg")
 	FillWindow("catalogue_detail", "ui/catalogue_ingredient_detail.lua")
@@ -359,13 +361,13 @@ end
 if showUnlockedView then
 	-- STATE 2: UNLOCKED INGREDIENT VIEW
 	DebugOut("UI", string.format("Rendering unlocked Ingredient detail view: %s", ing.name))
-	
+
 	-- Header: Icon & Name
 	table.insert(contents, ing:GetAppearanceBig(35, 25))
-	
+
 	local nameLabel = GetString(ing.name)
 	table.insert(contents, Text { x = 105, y = 15, w = 306, h = 54, label = "#"..nameLabel, font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-	
+
 	-- Column 1: Structured Data (Left Side)
 	-- Uses dynamic vertical stacking to prevent overlapping text
 	local data_y = 110
@@ -378,33 +380,33 @@ if showUnlockedView then
 	-- Helper: Adds a text-only data section and pushes the Y cursor down appropriately
 	local function AddDataSection(titleKey, contentString)
 		local header_h = 20
-		
+
 		-- Add Header
-		table.insert(contents, Text { 
-			x = data_x, y = data_y, w = data_w, h = header_h, 
-			label = "#<b>"..GetString(titleKey).."</b>", 
-			font = header_font, flags = kVAlignTop + kHAlignLeft 
+		table.insert(contents, Text {
+			x = data_x, y = data_y, w = data_w, h = header_h,
+			label = "#<b>"..GetString(titleKey).."</b>",
+			font = header_font, flags = kVAlignTop + kHAlignLeft
 		})
-		
+
 		-- Estimate Content Height (Approx 28 chars per line at this width/font)
 		local chars_per_line = 28
 		local text_len = string.len(contentString)
 		local num_lines = Floor(text_len / chars_per_line) + 1
-		
+
 		local _, br_count = string.gsub(contentString, "<br>", "")
 		num_lines = num_lines + br_count
-		
+
 		local line_height = 16
 		local content_h = num_lines * line_height
 		if content_h < 20 then content_h = 20 end
-		
+
 		-- Add Content
-		table.insert(contents, Text { 
-			x = data_x, y = data_y + header_h, w = data_w, h = content_h, 
-			label = "#" .. contentString, 
-			font = data_font, flags = kVAlignTop + kHAlignLeft 
+		table.insert(contents, Text {
+			x = data_x, y = data_y + header_h, w = data_w, h = content_h,
+			label = "#" .. contentString,
+			font = data_font, flags = kVAlignTop + kHAlignLeft
 		})
-		
+
 		-- Advance Cursor
 		data_y = data_y + header_h + content_h + section_padding
 	end
@@ -412,16 +414,16 @@ if showUnlockedView then
 	-- Data Block 1: Category
 	AddDataSection("catalogue_category_label", GetString(ing.category))
 
-	-- Data Block 2: Origin 
+	-- Data Block 2: Origin
 	-- Uses a custom layout to insert the flag bitmap next to the text
 	if ing.origin then
 		local header_h = 20
 		local content_h = 20
-		
-		table.insert(contents, Text { 
-			x = data_x, y = data_y, w = data_w, h = header_h, 
-			label = "#<b>"..GetString("catalogue_origin_label").."</b>", 
-			font = header_font, flags = kVAlignTop + kHAlignLeft 
+
+		table.insert(contents, Text {
+			x = data_x, y = data_y, w = data_w, h = header_h,
+			label = "#<b>"..GetString("catalogue_origin_label").."</b>",
+			font = header_font, flags = kVAlignTop + kHAlignLeft
 		})
 
 		-- Resolve Localized String (Country -> Region -> Raw)
@@ -430,19 +432,19 @@ if showUnlockedView then
 		if origin_text == "#####" then origin_text = GetString(ing.origin) end
 
 		local content_y = data_y + header_h
-		
+
 		-- Add Flag
-		table.insert(contents, Bitmap { 
-			x = data_x, y = content_y, w = 30, h = 20, 
-			image = "image/flags/flag_" .. ing.origin, 
-			scale = 0.25 
+		table.insert(contents, Bitmap {
+			x = data_x, y = content_y, w = 30, h = 20,
+			image = "image/flags/flag_" .. ing.origin,
+			scale = 0.25
 		})
-		
+
 		-- Add Name
-		table.insert(contents, Text { 
-			x = data_x + 45, y = content_y, w = data_w - 35, h = content_h, 
-			label = "#" .. origin_text, 
-			font = data_font, flags = kVAlignCenter + kHAlignLeft 
+		table.insert(contents, Text {
+			x = data_x + 45, y = content_y, w = data_w - 35, h = content_h,
+			label = "#" .. origin_text,
+			font = data_font, flags = kVAlignCenter + kHAlignLeft
 		})
 
 		data_y = data_y + header_h + content_h + section_padding
@@ -456,7 +458,7 @@ if showUnlockedView then
 		-- Hide exact dates if undiscovered, unless Dev Reveal is active
 		local seasonData = Player.catalogue.discoveredIngredientSeasons[ing.name] or {}
 		if gDevForceReveal then seasonData = { start=true, end_=true } end
-		
+
 		local start_text = seasonData.start and ConvertWeekToDateString(ing.season_start) or GetString("catalogue_unknown")
 		local end_text = seasonData.end_ and ConvertWeekToDateString(ing.season_end) or GetString("catalogue_unknown")
 		season_text = GetString("catalogue_season_format", start_text, end_text)
@@ -466,31 +468,31 @@ if showUnlockedView then
 	-- Data Block 4: Price Range
 	local low, high = ing.price_low, ing.price_high
 	local low_ns, high_ns = ing.price_low_notinseason, ing.price_high_notinseason
-	
+
 	-- Display accuracy based on current save difficulty
 	local cost_multiplier = 1.0
 	if Player.difficulty == 2 then cost_multiplier = 1.25
 	elseif Player.difficulty == 3 then cost_multiplier = 1.50
 	end
-	
+
 	if cost_multiplier > 1.0 then
 		low = Floor(low * cost_multiplier)
 		high = Floor(high * cost_multiplier)
 		if low_ns then low_ns = Floor(low_ns * cost_multiplier) end
 		if high_ns then high_ns = Floor(high_ns * cost_multiplier) end
 	end
-	
+
 	local price_text = GetString("catalogue_price_format", Dollars(low), Dollars(high))
 	if low_ns and (ing.season_start ~= 1 or ing.season_end ~= 52) then
 		local out_of_season_price = GetString("catalogue_price_format", Dollars(low_ns), Dollars(high_ns))
 		price_text = GetString("catalogue_price_format_seasonal", price_text, out_of_season_price)
 	end
 	AddDataSection("catalogue_price_label", price_text)
-	
+
 	-- Data Block 5: Where to Find
 	local locations = {}
 	local discoveredLocations = Player.catalogue.discoveredIngredientLocations[ing.name] or {}
-	
+
 	for _, port in pairs(_AllPorts) do
 		if port.buildings then
 			for _, building in ipairs(port.buildings) do
@@ -509,7 +511,7 @@ if showUnlockedView then
 			end
 		end
 	end
-	
+
 	local location_str = table.concat(locations, ", ")
 	if location_str == "" then location_str = GetString("catalogue_unknown") end
 	AddDataSection("catalogue_locations_label", location_str)
@@ -527,12 +529,12 @@ if showUnlockedView then
 		DebugOut("UI", "Carrying active HTML formatting into paged ingredient text.", { ingredient = ing.name, tags = openTags })
 	end
 
-	table.insert(contents, Text { 
-		x = right_col_x, y = 69, w = right_col_w, h = right_col_h, 
-		name = "catalogue_description_text", 
+	table.insert(contents, Text {
+		x = right_col_x, y = 69, w = right_col_w, h = right_col_h,
+		name = "catalogue_description_text",
 		label = "#" .. visibleText,
 		font = { uiFontName, 15, BlackColor }, -- Statically set font size
-		flags = kVAlignTop + kHAlignLeft 
+		flags = kVAlignTop + kHAlignLeft
 	})
 
 	-- Scroll Controls
@@ -540,33 +542,33 @@ if showUnlockedView then
 	local btn_spacing = 40
 	local btn_center_x = right_col_x + (right_col_w / 2) - 36 -- Center over the right column
 
-	table.insert(contents, Button { 
-		x = btn_center_x - btn_spacing, y = btn_y, w = 25, h = 25, 
-		name = "ing_scrollUp", command = ScrollUp, 
-		graphics = {"image/button_arrow_up_up", "image/button_arrow_up_down", "image/button_arrow_up_over"}, 
+	table.insert(contents, Button {
+		x = btn_center_x - btn_spacing, y = btn_y, w = 25, h = 25,
+		name = "ing_scrollUp", command = ScrollUp,
+		graphics = {"image/button_arrow_up_up", "image/button_arrow_up_down", "image/button_arrow_up_over"},
 		scale = 0.8
 	})
-	
-	table.insert(contents, Button { 
-		x = btn_center_x + btn_spacing, y = btn_y, w = 25, h = 25, 
-		name = "ing_scrollDown", command = ScrollDown, 
-		graphics = {"image/button_arrow_down_up", "image/button_arrow_down_down", "image/button_arrow_down_over"}, 
+
+	table.insert(contents, Button {
+		x = btn_center_x + btn_spacing, y = btn_y, w = 25, h = 25,
+		name = "ing_scrollDown", command = ScrollDown,
+		graphics = {"image/button_arrow_down_up", "image/button_arrow_down_down", "image/button_arrow_down_over"},
 		scale = 0.8
 	})
 
 else
 	-- STATE 1: LOCKED INGREDIENT VIEW
 	DebugOut("UI", string.format("Rendering locked Ingredient detail view: %s", ing.name))
-	
+
 	table.insert(contents, BitmapTint { x=35, y=25, image="items/"..ing.name.."_big", tint=Color(0,0,0,255) })
 	table.insert(contents, Text { x = 55, y = 25, w = 406, h = 44, label ="#"..GetString("catalogue_locked_title"), font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-	
-	table.insert(contents, Text { 
-		x = 192, y = 69, w = 238, h = 157, 
-		name = "catalogue_description_text", 
+
+	table.insert(contents, Text {
+		x = 192, y = 69, w = 238, h = 157,
+		name = "catalogue_description_text",
 		label = "#" .. GetString("catalogue_ingredient_locked_desc"),
 		font = { uiFontName, 14, BlackColor },
-		flags = kVAlignTop + kHAlignLeft 
+		flags = kVAlignTop + kHAlignLeft
 	})
 end
 
@@ -585,18 +587,18 @@ if showUnlockedView then
 		local rawBody = BuildIngredientArticleText(ing)
 		local currentOffset = gCatalogueIngOffsets[gCatalogueIngPage] or 0
 		local chars_remaining = string.len(rawBody) - currentOffset
-		
+
 		local canScrollUp = gCatalogueIngPage > 1
 		local canScrollDown = chars_remaining > chars_per_page
-		
+
 		EnableWindow("ing_scrollUp", canScrollUp)
 		EnableWindow("ing_scrollDown", canScrollDown)
-		
-		DebugOut("UI", "Ingredient detail scroll controls updated.", { 
+
+		DebugOut("UI", "Ingredient detail scroll controls updated.", {
 			ingredient = ing.name,
-			canScrollUp = canScrollUp, 
-			canScrollDown = canScrollDown, 
-			charsRemaining = chars_remaining 
+			canScrollUp = canScrollUp,
+			canScrollDown = canScrollDown,
+			charsRemaining = chars_remaining
 		})
 	end)
 end

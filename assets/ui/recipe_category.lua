@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Recipe Grid View)
+	Chocolatier: Decadence by Design Reforged (Recipe Grid View)
 	Copyright (c) 2006-2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This script renders the left-hand grid of available recipes within the active category.
@@ -9,7 +9,7 @@
 -- ----------------------------------------------------------------------------
 -- Pagination Reset Logic
 -- ----------------------------------------------------------------------------
--- Ensures that if the player was on Page 2 of "Bars" and switches to "Blends", 
+-- Ensures that if the player was on Page 2 of "Bars" and switches to "Blends",
 -- the UI resets to Page 1 so they don't see a blank page.
 if not gLastViewedCategory or (gCategorySelection and gLastViewedCategory ~= gCategorySelection.name) then
 	gRecipePage = 1
@@ -25,16 +25,23 @@ if not gCategorySelection then
 	gRecipeSelection = gCategorySelection.products[1]
 end
 
+local function ActiveUserProducts()
+	if Player.IsFreePlay and Player:IsFreePlay() and GetCreationLibraryProducts then
+		return GetCreationLibraryProducts(gCreationLibraryTab or "free")
+	end
+	return gCategorySelection.products
+end
+
 -- Triggers when the player clicks an icon in the grid
 local function SelectProduct(prod)
 	if gRecipeSelection ~= prod then
 		-- Remove highlight from old selection
 		if gRecipeSelection then SetBitmap(gRecipeSelection.code, "image/button_recipes_up") end
-		
+
 		-- Apply highlight to new selection
 		gRecipeSelection = prod
 		SetBitmap(gRecipeSelection.code, "image/button_recipes_selected")
-		
+
 		-- Update the right-hand panel to show the details of the newly selected recipe
 		FillWindow("recipe_recipe", "ui/recipe_recipe.lua")
 	end
@@ -65,7 +72,7 @@ local startIndex = (gRecipePage - 1) * itemsPerPage + 1
 local function PrepareNormal()
 	local n = table.getn(gCategorySelection.products)
 	if n == 0 then return end
-	
+
 	for i = 1, itemsPerPage do
 		local productIndex = startIndex + i - 1
 		local prod = gCategorySelection.products[productIndex]
@@ -74,19 +81,19 @@ local function PrepareNormal()
 		if prod then
 			local temp = prod
 			local tint = Color(255, 255, 255, 0)
-			
+
 			-- Darken undiscovered recipes
-			if not prod:IsKnown() then 
+			if not prod:IsKnown() then
 				tint = Color(128, 128, 128, 0)
 			-- Show "New" burst on recipes that have never been manufactured (except basic bars)
-			elseif (prod:NumberMade() == 0) and (gCategorySelection.name ~= "bar") then 
+			elseif (prod:NumberMade() == 0) and (gCategorySelection.name ~= "bar") then
 				table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_new_underlay" })
 			end
-			
+
 			table.insert(contents,
-				BitmapTint { 
+				BitmapTint {
 					x = info.x, y = info.y, image = "image/button_recipes_up", name = prod.code, tint = tint,
-					Rollover { 
+					Rollover {
 						x = 34, y = 35, w = 64, h = 64,
 						contents = "_AllProducts['" .. prod.code .. "']:RecipeBookRolloverContents()",
 						command = function() SelectProduct(temp); SoundEvent("ui_click"); end,
@@ -105,46 +112,42 @@ end
 ------------------------------------------------------------------------------
 
 local function PrepareUser()
+	-- Free Play uses actual Creation count and has no locked/blank recipe slots.
+	if Player.IsFreePlay and Player:IsFreePlay() then
+		local products = ActiveUserProducts()
+		for i = 1, itemsPerPage do
+			local productIndex = startIndex + i - 1
+			local prod = products[productIndex]
+			local info = buttonPositions[i]
+			if prod then
+				local temp = prod
+				if prod:NumberMade() == 0 then table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_new_underlay" }) end
+				table.insert(contents, Bitmap {
+					x = info.x, y = info.y, image = "image/button_recipes_up", name = prod.code,
+					Rollover { x = 34, y = 35, w = 64, h = 64, contents = "_AllProducts['" .. prod.code .. "']:RecipeBookRolloverContents()", command = function() SelectProduct(temp); SoundEvent("ui_click"); end, prod:GetAppearance() },
+				})
+			else
+				table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_unavailable" })
+			end
+		end
+		return
+	end
+
+	-- Story Mode retains the earned slot system exactly as before.
 	local n = Player.customSlots
-	
 	for i = 1, itemsPerPage do
 		local slotIndex = startIndex + i - 1
 		local info = buttonPositions[i]
-		
-		-- Check if this slot index is within the maximum number of slots the player has unlocked
 		if slotIndex <= n then
 			local prod = gCategorySelection.products[slotIndex]
 			if prod then
-				-- Filled Slot: Display the player's custom recipe
 				local temp = prod
-				if (prod:NumberMade() == 0) and (gCategorySelection.name ~= "bar") then 
-					table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_new_underlay" }) 
-				end
-				
-				table.insert(contents,
-					Bitmap { 
-						x = info.x, y = info.y, image = "image/button_recipes_up", name = prod.code,
-						Rollover { 
-							x = 34, y = 35, w = 64, h = 64,
-							contents = "_AllProducts['" .. prod.code .. "']:RecipeBookRolloverContents()",
-							command = function() SelectProduct(temp); SoundEvent("ui_click"); end,
-							prod:GetAppearance()
-						},
-					})
+				if prod:NumberMade() == 0 then table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_new_underlay" }) end
+				table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_up", name = prod.code, Rollover { x = 34, y = 35, w = 64, h = 64, contents = "_AllProducts['" .. prod.code .. "']:RecipeBookRolloverContents()", command = function() SelectProduct(temp); SoundEvent("ui_click"); end, prod:GetAppearance() } })
 			else
-				-- Empty Slot: The player has unlocked the slot, but hasn't created a recipe for it yet
-				table.insert(contents,
-					Bitmap { 
-						x = info.x, y = info.y, image = "image/button_recipes_up",
-						Rollover { 
-							x = 34, y = 35, w = 64, h = 64,
-							contents = "RecipeBookEmptySlotContents()",
-							Bitmap { x = 0, y = 0, image = "items/unknown" },
-						},
-					})
+				table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_up", Rollover { x = 34, y = 35, w = 64, h = 64, contents = "RecipeBookEmptySlotContents()", Bitmap { x = 0, y = 0, image = "items/unknown" } } })
 			end
 		else
-			-- Locked Slot: The player hasn't earned this custom recipe slot yet
 			table.insert(contents, Bitmap { x = info.x, y = info.y, image = "image/button_recipes_unavailable" })
 		end
 	end
@@ -165,11 +168,12 @@ end
 local function NextPage()
 	local totalItems
 	if gCategorySelection.name == "user" then
-		totalItems = Player.customSlots or 0
+		if Player.IsFreePlay and Player:IsFreePlay() then totalItems = table.getn(ActiveUserProducts())
+		else totalItems = Player.customSlots or 0 end
 	else
 		totalItems = table.getn(gCategorySelection.products)
 	end
-	
+
 	if (gRecipePage * itemsPerPage) < totalItems then
 		SoundEvent("ui_click")
 		gRecipePage = gRecipePage + 1
@@ -181,16 +185,17 @@ end
 -- Layout Execution
 ------------------------------------------------------------------------------
 
-if gCategorySelection and gCategorySelection.name == "user" then 
+if gCategorySelection and gCategorySelection.name == "user" then
 	PrepareUser()
-else 
+else
 	PrepareNormal()
 end
 
 -- Render Pagination Controls
 local totalItemsForPage
 if gCategorySelection.name == "user" then
-	totalItemsForPage = Player.customSlots or 0
+	if Player.IsFreePlay and Player:IsFreePlay() then totalItemsForPage = table.getn(ActiveUserProducts())
+	else totalItemsForPage = Player.customSlots or 0 end
 else
 	totalItemsForPage = table.getn(gCategorySelection.products)
 end
@@ -199,7 +204,7 @@ end
 if totalItemsForPage > itemsPerPage then
 	local arrowScale = 0.8
 	local arrowY = 128 -- Vertically centered relative to the grid block
-	
+
 	-- Previous Button (Left Side)
 	if gRecipePage > 1 then
 		table.insert(contents, Button {
@@ -209,7 +214,7 @@ if totalItemsForPage > itemsPerPage then
 			scale = arrowScale
 		})
 	end
-	
+
 	-- Next Button (Right Side)
 	if (gRecipePage * itemsPerPage) < totalItemsForPage then
 		table.insert(contents, Button {
@@ -219,10 +224,10 @@ if totalItemsForPage > itemsPerPage then
 			scale = arrowScale
 		})
 	end
-	
+
 	-- Current Page / Total Pages Indicator
 	local totalPages = Floor((totalItemsForPage + itemsPerPage - 1) / itemsPerPage)
-	
+
 	table.insert(contents, Text {
 		x = 0, y = 340, w = 289, h = 20,
 		label = "#" .. gRecipePage .. " / " .. totalPages,
@@ -240,13 +245,14 @@ MakeDialog(contents)
 -- Apply final active-highlight overlay
 if gRecipeSelection then
 	local idx = -1
-	for i, prod in ipairs(gCategorySelection.products) do
+	local highlightProducts = (gCategorySelection.name == "user" and Player.IsFreePlay and Player:IsFreePlay()) and ActiveUserProducts() or gCategorySelection.products
+	for i, prod in ipairs(highlightProducts) do
 		if prod == gRecipeSelection then
 			idx = i
 			break
 		end
 	end
-	
+
 	-- Only highlight the selection if it is physically visible on the current page
 	if idx >= startIndex and idx < startIndex + itemsPerPage then
 		SetBitmap(gRecipeSelection.code, "image/button_recipes_selected")

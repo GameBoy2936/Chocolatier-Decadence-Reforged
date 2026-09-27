@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Category Class)
+	Chocolatier: Decadence by Design Reforged (Category Class)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- A "Category" defines a group of products (e.g., "bar", "truffle", "infusion").
@@ -15,31 +15,42 @@ Category =
 	-- ==========================================
 	name = nil,				-- Full system name (e.g., "bar")
 	code = nil,				-- A unique 3-letter identifier (Legacy from Choco 2)
-	
+
 	markup = 1,				-- Base profit markup multiplier applied over raw ingredient costs
 	min_ingredients = 2,	-- Minimum ingredients allowed for custom User Generated Recipes (UGRs)
 	max_ingredients = 6,	-- Maximum ingredients allowed for custom UGRs
-	
+
+	-- Test Kitchen / recipe-evaluation metadata.  These fields let the data
+	-- category describe its culinary rules instead of hard-coding product names
+	-- or category names inside recipe.lua.
+	feedback_pool = nil,			-- "chocolate" or "coffee"; falls back to factory
+	requires_cacao = false,
+	requires_sweetener = false,
+	allow_pure_cacao = false,
+	required_ingredient = nil,
+	required_ingredient_feedback = nil,
+	structural_failure_score = 30,
+
 	-- ==========================================
 	-- Factory Minigame Configuration Defaults
 	-- ==========================================
 	-- These govern the speed, layout, and difficulty of the factory minigame UI
 	traytime = 30000,
 	traypath = { {525,300},{525,225},{525,155},{525,80}, {375,80},{230,80},{80,80}, {80,220},{80,360},{80,500}, {230,500},{375,500},{525,500}, {525,430},{525,370},{525,300} },
-	
+
 	colorcount = 1,
 	conveyorcount = 5,
 	conveyortime = 1200,
 	conveyorpath = { {0,570},{20,570},{280,570},{300,570},{300,550},{300,320},{300,300} },
-	
+
 	gunspeed = 250,
 	producttime = 3000,
 	productpath = { {689,300},{689,320},{689,500},{689,555} },
-	
+
 	ringspeed = 500,
 	recyclertime = 20000,
 	recyclerpath = { {12,153},{8,8},{567,9},{608,94},{729,338},{656,393},{525,291},{222,52},{335,382},{200,364},{73,341},{10,373},{11,153} },
-	
+
 	-- ==========================================
 	-- Cross-References
 	-- ==========================================
@@ -70,27 +81,27 @@ function Category:Create(t)
 		return nil
 	else
 		DebugOut("LOAD", string.format("Created product category definition: %s", t.name))
-		
+
 		-- Bind the Category class metatable
-		setmetatable(t, self) 
+		setmetatable(t, self)
 		self.__index = self
-		
+
 		-- Register globally
 		_AllCategories[t.name] = t
 		table.insert(_CategoryOrder, t)
-		
+
 		t.products = {}
-		
+
 		-- By default, flag all shops globally to purchase goods from this new category
 		Shop.buys[t.name] = true
 	end
-	
+
 	return t
 end
 
 -- Global wrapper
-function CreateCategory(t) 
-	return Category:Create(t) 
+function CreateCategory(t)
+	return Category:Create(t)
 end
 
 ------------------------------------------------------------------------------
@@ -114,4 +125,64 @@ end
 -- Binds a finalized Product object to this category's reference list
 function Category:AddProduct(t)
 	table.insert(self.products, t)
+end
+
+------------------------------------------------------------------------------
+-- Test Kitchen / Recipe Evaluation
+------------------------------------------------------------------------------
+
+function Category:GetFeedbackEvaluators()
+	local pool = self.feedback_pool or self.factory
+	if pool == "coffee" then return CoffeeEvaluators or {} end
+	if pool == "chocolate" then return ChocolateEvaluators or {} end
+	return {}
+end
+
+function Category:IsRecipeSlotCountValid(count)
+	count = tonumber(count) or 0
+	return count >= (tonumber(self.min_ingredients) or 0)
+		and count <= (tonumber(self.max_ingredients) or 999)
+end
+
+-- Returns a fatal Teddy feedback key and score when a recipe violates a
+-- category-defining requirement.  nil means the structure is legal.
+function Category:GetRecipeStructuralFailure(ingredientCounts)
+	ingredientCounts = ingredientCounts or {}
+	local familyCounts = {}
+	local pureCacao = true
+
+	for ingredientName, count in pairs(ingredientCounts) do
+		local ing = _AllIngredients[ingredientName]
+		local family = nil
+		if ing then
+			if ing.GetRecipeFamily then family = ing:GetRecipeFamily()
+			else family = ing.recipe_family or ing.category end
+		end
+
+		if family then
+			familyCounts[family] = (familyCounts[family] or 0) + (tonumber(count) or 0)
+		end
+
+		-- Pure-cacao exceptions may include the category's one mandatory coating
+		-- ingredient (Truffle Powder) without ceasing to be a pure-cacao recipe.
+		if family ~= "cacao" and ingredientName ~= self.required_ingredient then
+			pureCacao = false
+		end
+	end
+
+	if self.requires_cacao and (familyCounts.cacao or 0) == 0 then
+		return "taster_cacao", self.structural_failure_score or 30
+	end
+
+	if self.requires_sweetener and (familyCounts.sugar or 0) == 0 and (familyCounts.fruit or 0) == 0 then
+		if not (self.allow_pure_cacao and pureCacao and (familyCounts.cacao or 0) > 0) then
+			return "taster_sugar", self.structural_failure_score or 30
+		end
+	end
+
+	if self.required_ingredient and not ingredientCounts[self.required_ingredient] then
+		return self.required_ingredient_feedback or "taster_powder", self.structural_failure_score or 30
+	end
+
+	return nil, nil
 end

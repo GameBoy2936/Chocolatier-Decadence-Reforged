@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Help
+	Chocolatier: Decadence by Design Reforged (Help)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 

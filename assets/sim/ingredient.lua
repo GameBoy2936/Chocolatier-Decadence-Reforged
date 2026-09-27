@@ -1,10 +1,10 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Ingredient Class)
+	Chocolatier: Decadence by Design Reforged (Ingredient Class)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
--- An "Ingredient" is a raw atomic item (like Cacao, Sugar, Milk) that can 
+-- An "Ingredient" is a raw atomic item (like Cacao, Sugar, Milk) that can
 -- be purchased at Markets or Farms, but can never be manufactured by the player.
 
 Ingredient =
@@ -14,20 +14,20 @@ Ingredient =
 	-- ==========================================
 	name = nil,						-- Internal localization key (e.g., "sugar")
 	code = nil,						-- A unique 3-letter identifier
-	category = nil,					-- The ingredient family (e.g., "cacao", "dairy", "fruit")
-	unit_singular = "sack",			-- Fallback localized unit syntax (singular)
-	unit_plural = "sacks",			-- Fallback localized unit syntax (plural)
+	category = nil,					-- Core market/economy family (e.g., "cacao", "dairy", "fruit")
+	kitchen_category = nil,			-- Optional Test Kitchen drawer override
+	recipe_family = nil,				-- Optional Test Kitchen balance/scoring family override
 	locked = nil,					-- TRUE if the ingredient is undiscovered
-	
+
 	-- ==========================================
 	-- Pricing & Seasonality
 	-- ==========================================
 	price_low = nil,				-- Lowest possible price when IN season
 	price_high = nil,				-- Highest possible price when IN season
-	
+
 	season_start = nil,				-- Week number (1-52) when season begins
 	season_end = nil,				-- Week number (1-52) when season ends
-	
+
 	price_low_notinseason = nil,	-- Lowest possible price when OUT of season
 	price_high_notinseason = nil,	-- Highest possible price when OUT of season
 
@@ -76,45 +76,64 @@ function Ingredient:Create(t)
 		return nil
 	else
 		DebugOut("LOAD", string.format("Created ingredient definition: %s", t.name))
-		
+
 		-- Bind the metatable
-		setmetatable(t, self) 
+		setmetatable(t, self)
 		self.__index = self
-		
+
 		-- Register globally
 		_AllIngredients[t.name] = t
 		_IngredientCodes[t.code] = t
 		_G[t.name] = t
-		
+
 		table.insert(_IngredientOrder, t)
 		_IngredientCategories[t.category] = _IngredientCategories[t.category] or {}
 		table.insert(_IngredientCategories[t.category], t)
-		
-		-- Assign base units from XML, or fallback to sacks
+
+		-- Assign base units and Test Kitchen metadata.  The core category remains
+		-- untouched for markets/economy; Reforged can independently choose where an
+		-- ingredient appears in the Kitchen and how it contributes to recipe balance.
 		t.unit_type = t.unit_type or "unit_sack"
-		
+		t.kitchen_category = t.kitchen_category or t.category
+		t.recipe_family = t.recipe_family or t.category
+
 		-- Cast XML string parameters to rigid numbers, with safe fallbacks
 		t.price_low = tonumber(t.price_low) or 0
 		t.price_high = tonumber(t.price_high) or 0
-		
+
 		-- Default to year-round (Week 1 to 52) if seasonality is omitted
 		t.season_start = tonumber(t.season_start) or 1
 		t.season_end = tonumber(t.season_end) or 52
-		
+
 		-- Fall back to standard prices if out-of-season prices aren't defined
 		t.price_low_notinseason = tonumber(t.price_low_notinseason) or t.price_low
 		t.price_high_notinseason = tonumber(t.price_high_notinseason) or t.price_high
-		
+
 		-- Cast XML booleans
 		if t.locked == "true" then t.locked = true else t.locked = nil end
 		if t.alcohol == "true" then t.alcohol = true else t.alcohol = nil end
 	end
-	
+
 	return t
 end
 
-function CreateIngredient(t) 
-	return Ingredient:Create(t) 
+function CreateIngredient(t)
+	return Ingredient:Create(t)
+end
+
+------------------------------------------------------------------------------
+-- Test Kitchen Classification
+------------------------------------------------------------------------------
+
+-- Presentation grouping used by ui_kitchen.lua.  This can differ from the
+-- ingredient's core market category without changing the rest of the economy.
+function Ingredient:GetKitchenCategory()
+	return self.kitchen_category or self.category
+end
+
+-- Balance family used by recipe.lua for cacao/coffee/dairy/etc. ratios.
+function Ingredient:GetRecipeFamily()
+	return self.recipe_family or self.category
 end
 
 ------------------------------------------------------------------------------
@@ -143,16 +162,17 @@ end
 -- Executes a purchase transaction and triggers Catalogue discovery logic
 function Ingredient:Buy(count)
 	local cost = self:GetPrice() * count
-	
+
 	if cost <= Player.money then
 		DebugOut("ECONOMY", string.format("Purchased %d %s of %s for %s.", count, self:GetUnitName(count), self:GetName(), Dollars(cost)))
-		
+
 		self:AdjustInventory(count)
-		
+
 		-- Flag recent usage to prevent spoilage mechanics
 		if count > 0 then Player.useTimes[self.name] = Player.time end
-		
-		Player:SubtractMoney(cost)
+
+		HighScoreModel:RecordIngredientPurchase(Player, count)
+		Player:SubtractMoney(cost, false, "ingredient_purchase")
 		Player:UpdateSupplies()
 		UpdateLedger("all")
 
@@ -161,28 +181,28 @@ function Ingredient:Buy(count)
 		-- -----------------------------------------------------
 		if count > 0 then
 			local currentWeek = Mod(Player.time, 52) + 1
-			
+
 			-- Only learn seasonal dates if we bought it while it was actively IN season.
 			-- (Year-round items, where start==1 and end==52, don't need discovery).
 			if self:IsInSeason(currentWeek) and not (self.season_start == 1 and self.season_end == 52) then
-				
+
 				if not Player.catalogue.discoveredIngredientSeasons[self.name] then
 					Player.catalogue.discoveredIngredientSeasons[self.name] = {}
 				end
-				
+
 				local seasonData = Player.catalogue.discoveredIngredientSeasons[self.name]
-				
+
 				-- Calculate total season length (handling December->January wrap arounds)
 				local sStart = self.season_start
 				local sEnd = self.season_end
 				local length = 0
-				
+
 				if sStart <= sEnd then
 					length = sEnd - sStart
 				else
 					length = (52 - sStart) + sEnd
 				end
-				
+
 				-- Calculate our relative position within that season
 				local weeksIn = 0
 				if currentWeek >= sStart then
@@ -190,18 +210,18 @@ function Ingredient:Buy(count)
 				else
 					weeksIn = (52 - sStart) + currentWeek
 				end
-				
+
 				-- If we bought it during the FIRST half of the season, reveal the Start Date.
 				if weeksIn <= (length / 2) then
 					if not seasonData.start then
 						seasonData.start = true
-						DebugOut("CATALOGUE", string.format("Discovered season START date for: %s", self.name))
+						DebugOut("CATALOGUE", string.format("Discovered season start date for %s.", self.name))
 					end
 				else
 					-- If we bought it during the SECOND half of the season, reveal the End Date.
 					if not seasonData.end_ then
 						seasonData.end_ = true
-						DebugOut("CATALOGUE", string.format("Discovered season END date for: %s", self.name))
+						DebugOut("CATALOGUE", string.format("Discovered season end date for %s.", self.name))
 					end
 				end
 			end
@@ -224,15 +244,15 @@ function Ingredient:AdjustInventory(n)
 end
 
 function Ingredient:Lock()
-	if self:IsAvailable() then 
-		DebugOut("PLAYER", string.format("Ingredient locked from generation: %s", self:GetName())) 
+	if self:IsAvailable() then
+		DebugOut("PLAYER", string.format("Ingredient locked from generation: %s", self:GetName()))
 	end
 	Player.ingredientsAvailable[self.name] = false
 end
 
 function Ingredient:Unlock()
-	if not self:IsAvailable() then 
-		DebugOut("PLAYER", string.format("Ingredient unlocked for generation: %s", self:GetName())) 
+	if not self:IsAvailable() then
+		DebugOut("PLAYER", string.format("Ingredient unlocked for generation: %s", self:GetName()))
 	end
 	Player.ingredientsAvailable[self.name] = true
 end
@@ -250,7 +270,7 @@ end
 function Ingredient:IsInSeason(week)
 	week = week or Player.time
 	week = Mod(week, 52) + 1
-	
+
 	return (self.season_start == self.season_end) or
 		(self.season_start < self.season_end and self.season_start <= week and week <= self.season_end) or
 		(self.season_start > self.season_end and (self.season_start <= week or week <= self.season_end))
@@ -272,15 +292,19 @@ function Ingredient:GetAppearance(x, y)
 	return Bitmap { x = x, y = y, image = "items/" .. self.name }
 end
 
-function Ingredient:GetUnitName(count)
-	return GetLocalizedUnit(self.unit_type, count)
+function Ingredient:GetUnitName(count, context)
+	return GetLocalizedUnit(self.unit_type, count, context)
+end
+
+function Ingredient:GetQuantityName(count, context)
+	return FormatLocalizedQuantity(self.unit_type, count, nil, context)
 end
 
 -- Master function for generating the informational tooltip shown on hover
 function Ingredient:RolloverContents(strings)
 	local invCount = self:GetInventory()
 	local unit_string = self:GetUnitName(invCount)
-	
+
 	-- Assemble localized text blocks
 	local inventory = GetText("ing_inventory", tostring(invCount), unit_string)
 
@@ -289,19 +313,19 @@ function Ingredient:RolloverContents(strings)
 	if Player.lowPrice[self.name] and Player.highPrice[self.name] then
 		priceRange = GetText("price_range", Dollars(Player.lowPrice[self.name]), Dollars(Player.highPrice[self.name]))
 	end
-	
+
 	-- Show last seen port
 	local lastSeen = GetString("ingredient_never_seen")
 	if Player.lastSeenPort[self.name] then
-		local singular_unit = self:GetUnitName(1) 
+		local singular_unit = self:GetUnitName(1)
 		lastSeen = GetText("ingredient_lastseen", GetText(Player.lastSeenPort[self.name]), Dollars(Player.lastSeenPrice[self.name]), singular_unit)
 	end
-	
+
 	-- Build visual layout list
 	local text = {}
 	table.insert(text, TightText { x = 64, y = 0, label = "#<b> " .. self:GetName() .. "</b>" })
 	table.insert(text, TightText { x = 64, y = 16, label = "# " .. inventory })
-	
+
 	local y = 32
 	if priceRange then
 		table.insert(text, TightText { x = 64, y = y, label = "# " .. priceRange })

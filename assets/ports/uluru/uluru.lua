@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three Port Data: Uluru, Australia
+	Chocolatier: Decadence by Design Reforged (Port Data - Uluru, Australia)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -13,49 +13,47 @@ uluru.country = "australia"
 uluru.culture = "western"
 uluru.hidden = true
 
---LOCATIONS
+-- LOCATIONS
 CreateBuilding("ulu_hut", uluru, Market)
 ulu_hut.inventory = { lime }
 ulu_hut.x = 189
 ulu_hut.y = 284.5
 ulu_hut.layer = 980
 ulu_hut.labely = 300
---
---
+
 CreateBuilding("ulu_rock", uluru)
 ulu_rock.x = 564
 ulu_rock.y = 168.5
 ulu_rock.layer = 940
---
---
+
 EmptyBuilding("ulu_hutright", uluru)
 ulu_hutright.x = 632.5
 ulu_hutright.y = 322.5
 ulu_hutright.layer = 960
---
---
 
---NON ANIMATED SPRITES
+-- NON ANIMATED SPRITES
+-- LIVING CHARACTER MOBILITY
+-- Venue metadata stays with the geography it describes.
+ulu_rock:SetMobilityProfile({ landmark=true, wilderness=true }, 70)
+ulu_hutright:SetMobilityProfile({ lodging=true, landmark=true }, nil)
+
 CreateSprite("ulu_backtrees", uluru)
 ulu_backtrees.x = 310
 ulu_backtrees.y = 141.5
 ulu_backtrees.layer = 950
---
---
+
 CreateSprite("ulu_otherhuts", uluru)
 ulu_otherhuts.x = 216.5
 ulu_otherhuts.y = 296
 ulu_otherhuts.layer = 970
---
---
+
 CreateSprite("ulu_treeright", uluru)
 ulu_treeright.x = 692.5
 ulu_treeright.y = 239
 ulu_treeright.layer = 990
---
---
---(TO BE) ANIMATED SPRITES
---Fire
+
+-- (TO BE) ANIMATED SPRITES
+-- Fire
 CreateSprite("ulu_firepit", uluru)
 ulu_firepit.image = "ports/animations/flame.xml"
 ulu_firepit.frequency = 100
@@ -64,7 +62,7 @@ ulu_firepit.y = 357
 ulu_firepit.scale = 0.8
 ulu_firepit.layer = 975
 
---Embers
+-- Embers
 CreateSprite("ulu_ember1", uluru)
 ulu_ember1.image = "ports/uluru/ulu_ember.png"
 ulu_ember1.frequency = 100
@@ -79,7 +77,6 @@ ulu_ember1.speedNear=1
 ulu_ember1.yFar=1
 ulu_ember1.yNear=600
 ulu_ember1.path= {{487,361},{487,343},{486,328},{496,315},{514,314},{525,314},{542,305},{553,290},{546,275},{533,259},{522,242},{518,220},{528,192},{545,170},{570,148},{592,132},{624,125},{661,120},{707,101},{723,80},{725,50},{733,30},{759,10},{766,1},{783,-28},{807,-46},{822,-54},{845,-65}}
-
 
 CreateSprite("ulu_ember2", uluru)
 ulu_ember2.image = "ports/uluru/ulu_ember.png"

@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged ("Basic" Sign Designer)
+	Chocolatier: Decadence by Design Reforged ("Basic" Sign Designer)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This script serves as the basic fallback editor for custom player shop signs.
@@ -93,9 +93,9 @@ MakeDialog
 		name = dialogName,
 		x = 1000, y = 25, image = "image/dialog_large_generic",
 		SetStyle(controlStyle),
-		
+
 		-- Master Graphic Composition Engine Hook
-		SignEditor { 
+		SignEditor {
 			x = 0, y = 0, w = kMax, h = kMax, signx = 175, signy = 100, sign = Player.sign,
 
 			Button { x = 375, y = 0, name = "bgPrev", command = bgPrev, label = "#BG <<" },
@@ -107,7 +107,7 @@ MakeDialog
 
 			TextEdit { x = 0, y = 210, w = 600, h = 20, name = "text", label = "#" .. text, length = 30 },
 			Button { x = 600, y = 210, name = "settext", default = true, command = function() SetText(GetLabel("text")) end },
-			
+
 			Button { x = kCenter, y = 415, name = "ok", command = okFunction, label = "ok" },
 
 			-- Text Transformation Scales (Hue, Saturation, Value, Alpha, Scale)
@@ -117,7 +117,7 @@ MakeDialog
 			Slider { x = 0, y = 290, w = 250, name = "textV" },
 			Slider { x = 0, y = 320, w = 250, name = "textA" },
 			Slider { x = 0, y = 350, w = 250, name = "textSize" },
-			
+
 			-- Logo Transformation Scales (Alpha, Rotation, Scale)
 			Slider { x = 260, y = 230, w = 250, name = "logoA" },
 			Slider { x = 260, y = 260, w = 250, name = "logoR" },

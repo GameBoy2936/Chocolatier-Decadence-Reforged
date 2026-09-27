@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Test Kitchen UI)
+	Chocolatier: Decadence by Design Reforged (Test Kitchen UI)
 	Copyright (c) 2006-2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -19,6 +19,19 @@ local productDescription = gDialogTable.productDescription or productDescription
 
 local autoRandomize = true
 
+-- Community Creations load into the active Test Kitchen workspace.
+require("community/api.lua")
+ClearStringCache()
+
+-- Compatibility entry point for direct developer imports.
+local startupCommunityCreation = gDialogTable and gDialogTable.communityCreation or nil
+local startupCommunityCreationId = gDialogTable and gDialogTable.communityCreationId or nil
+
+-- Tracks the Community origin of the recipe currently on Teddy's bench. It is
+-- deliberately session-local until the player commits the recipe to the Recipe
+-- Book, at which point a compact provenance record is stored in Player.
+local communitySource = nil
+
 local defaultProductName = GetString("recipe_name_default")
 local defaultProductDescription = GetString("recipe_description_default")
 
@@ -27,12 +40,12 @@ local kBottleWidth = 40
 -------------------------------------------------------------------------------
 -- Color Palette Definitions (RGBA)
 -------------------------------------------------------------------------------
-local colorOptions = 
+local colorOptions =
 {
 	-- Browns and Tans (Chocolate Colors)
 	Color(40, 22, 8, 255),    Color(67, 29, 8, 255),    Color(82, 35, 7, 255),    Color(99, 41, 16, 255),   Color(116, 50, 28, 255),  Color(154, 81, 46, 255),
 	Color(244, 224, 151, 255),Color(225, 187, 116, 255),Color(238, 178, 106, 255),Color(204, 127, 35, 255), Color(160, 119, 89, 255), Color(138, 87, 69, 255),
-	
+
 	-- White, Greys and Blacks
 	Color(0, 0, 0, 255),      Color(59, 59, 59, 255),   Color(115, 115, 115, 255),Color(176, 176, 176, 255),Color(227, 227, 227, 255),Color(255, 255, 255, 255),
 
@@ -81,7 +94,7 @@ local colorOptions =
 -------------------------------------------------------------------------------
 
 local function SetDynamicFeedbackText(text)
-	-- Dynamically adjusts the font size of Teddy's feedback text box by finding 
+	-- Dynamically adjusts the font size of Teddy's feedback text box by finding
 	-- the largest possible font size that will cleanly fit the text. (LUA 5.0 COMPATIBLE)
 
 	local function Ceil(x)
@@ -113,15 +126,15 @@ local function SetDynamicFeedbackText(text)
 		end
 		table.insert(segments, string.sub(text, current_pos))
 	end
-	
+
 	if table.getn(segments) == 0 then segments = { text or "" } end
 
 	-- 3. Iterate through our font sizes to find the best fit
-	local final_font_size = 12 
+	local final_font_size = 12
 	for _, current_font_size in ipairs(font_sizes_to_check) do
 		local chars_per_line = chars_per_line_map[current_font_size]
 		local line_threshold = line_thresholds[current_font_size]
-		
+
 		-- Calculate the total lines based on THIS font size's character estimate
 		local total_lines = table.getn(segments) - 1
 		for _, segment in ipairs(segments) do
@@ -131,7 +144,7 @@ local function SetDynamicFeedbackText(text)
 		-- If the calculated lines are within the UI threshold, we lock it in
 		if total_lines <= line_threshold then
 			final_font_size = current_font_size
-			break 
+			break
 		end
 	end
 
@@ -146,11 +159,11 @@ end
 local function UpdateRecipeButtons()
 	EnableWindow("clear_recipe", false)
 	EnableWindow("add_recipe", true)
-	
+
 	for i = 1, usedSlotCount do
-		if ingredients[i] then 
+		if ingredients[i] then
 			EnableWindow("clear_recipe", true) -- Allow "clear all" if at least one is full
-		else 
+		else
 			EnableWindow("add_recipe", false)  -- Disallow proceeding to design if any active slot is empty
 		end
 	end
@@ -167,15 +180,18 @@ end
 -- Empties all active mixing bowl slots and resets UI state
 local function ClearAllSlots()
 	DebugOut("RECIPE", "All active recipe ingredient slots cleared by player.")
+	-- Start Over / category changes sever the Community lineage. Individual bowl
+	-- edits do not: those are what turn a loaded creation into a genuine remix.
+	communitySource = nil
 	for i = 1, 6 do
 		SetBitmap("slot_" .. i, "")
 		ingredients[i] = nil
 	end
-	
+
 	EnableWindow("new_recipe", false)
 	EnableWindow("add_recipe", false)
 	EnableWindow("design_recipe", false)
-	SetDynamicFeedbackText(GetString("invent_instructions"))
+	SetDynamicFeedbackText(GetRandomString("invent_instructions"))
 end
 
 -- Hides or reveals ingredient mixing bowls depending on the current required slot count
@@ -187,7 +203,7 @@ local function UpdateBowlAndSlotVisibility()
 		else
 			EnableWindow("bowl_" .. i, false)
 			EnableWindow("slot_" .. i, false)
-			
+
 			-- Eject any ingredient stuck in a slot we are now hiding
 			if ingredients[i] then
 				ingredients[i] = nil
@@ -195,18 +211,18 @@ local function UpdateBowlAndSlotVisibility()
 			end
 		end
 	end
-	
+
 	UpdateRecipeButtons()
 
 	local category = _AllCategories[targetCategory]
 	if category then
-		-- Mod: Enable the '-' button ONLY if the current slot count is strictly greater than the minimum allowed
+		-- Allow removing a slot only while the category minimum is preserved.
 		EnableWindow("remove_slot_button", usedSlotCount > tonumber(category.min_ingredients))
-		
-		-- Mod: Enable the '+' button ONLY if the current slot count is strictly less than the maximum allowed
+
+		-- Allow adding a slot only while the category maximum is preserved.
 		EnableWindow("add_slot_button", usedSlotCount < tonumber(category.max_ingredients))
 	else
-		-- Fallback safety protocol
+		-- Disable slot controls if category data is unavailable.
 		EnableWindow("remove_slot_button", false)
 		EnableWindow("add_slot_button", false)
 	end
@@ -214,7 +230,7 @@ end
 
 function AddIngredientSlot()
 	local category = _AllCategories[targetCategory]
-	
+
 	if usedSlotCount < tonumber(category.max_ingredients) then
 		usedSlotCount = usedSlotCount + 1
 		DebugOut("RECIPE", string.format("Added additional ingredient slot. Total active slots: %d", usedSlotCount))
@@ -224,7 +240,7 @@ end
 
 function RemoveIngredientSlot()
 	local category = _AllCategories[targetCategory]
-	
+
 	if usedSlotCount > tonumber(category.min_ingredients) then
 		-- Eject the active ingredient from the final slot before physically removing the slot itself
 		ClearSlot(usedSlotCount)
@@ -239,7 +255,7 @@ local function SetTargetCategory(cat)
 	SetButtonToggleState(cat, true)
 	targetCategory = cat
 	autoRandomize = true
-	
+
 	DebugOut("RECIPE", string.format("Player selected recipe machinery category: %s", cat))
 
 	-- Re-align the active slots to the default baseline for the new category type
@@ -250,7 +266,7 @@ local function SetTargetCategory(cat)
 	elseif cat == "blend" then usedSlotCount = 4
 	elseif cat == "exotic" then usedSlotCount = 5
 	end
-	
+
 	UpdateBowlAndSlotVisibility()
 	ClearAllSlots()
 end
@@ -267,7 +283,7 @@ local function AddSlotIngredient(ing, slot)
 			break
 		end
 	end
-	
+
 	if success then UpdateRecipeButtons() end
 	return success
 end
@@ -278,10 +294,10 @@ end
 
 function SetRecipeTint(layer, index)
 	-- Wrap around safely
-	if index > table.getn(colorOptions) then 
-		index = Mod(index, table.getn(colorOptions)) + 1 
+	if index > table.getn(colorOptions) then
+		index = Mod(index, table.getn(colorOptions)) + 1
 	end
-	
+
 	colors[layer] = index
 	SetRectangleColor("tint" .. layer, colorOptions[index])
 	BTSetTint("option_layer" .. (layer - 1), colorOptions[index])
@@ -306,59 +322,119 @@ end
 -- Ingredient Drawer Mapping
 -------------------------------------------------------------------------------
 
--- Physically sort the global ingredient list into category buckets
-local categorized = { cacao={}, coffee={}, dairy={}, sugar={}, fruit={}, nut={}, flavor={}, special={} }
+-- Physically sort the global ingredient list into the nine Test Kitchen drawers.
+-- Six drawer tabs are visible at once; the arrow controls swap between two
+-- overlapping banks so the original drawer artwork can retain its full width.
+-- Ingredient XML may still override the Kitchen drawer independently of recipe
+-- balance via kitchen_category / recipe_family metadata.
+local categorized = { cacao={}, coffee={}, tea={}, dairy={}, sugar={}, fruit={}, nut={}, flavor={}, liqueur={} }
 
-for n, ing in ipairs(_IngredientOrder) do
-	table.insert(categorized[ing.category], ing)
+-- Drawer labels are separate from ingredient IDs.  In particular, the ingredient
+-- key "tea" is localized as "Black Tea", so the category needs its own label.
+local drawerLabels = {
+	cacao = "cacao",
+	coffee = "coffee",
+	tea = "kitchen_category_tea",
+	dairy = "dairy",
+	sugar = "sugar",
+	fruit = "fruit",
+	nut = "nut",
+	flavor = "flavor",
+	liqueur = "kitchen_category_liqueur",
+}
+
+-- Resolve drawer headings through the active localization table before passing
+-- them to UI widgets.  Button/Text label properties do not behave identically
+-- for dynamically selected keys, so using a literal localized label keeps open
+-- and closed drawers consistent in every language.
+local function GetDrawerLabel(name)
+	local key = drawerLabels[name] or name
+	return "#" .. GetString(key)
 end
 
--- Explicit drawer overrides
-table.insert(categorized.cacao, _AllIngredients.powder)
-table.insert(categorized.sugar, _AllIngredients.marshmallow)
-table.insert(categorized.sugar, _AllIngredients.wafer)
-table.insert(categorized.dairy, _AllIngredients.oat)
+-- Keep the two busiest open drawers clear of the drawer-bank arrow controls.
+-- The tab artwork itself remains full size; only the ingredient-vial layout is
+-- constrained for these drawers.  Arrow hitboxes occupy roughly x=18-44 and
+-- x=739-765 at the current scale, so 50..735 leaves a small safety margin.
+local drawerContentBounds = {
+	fruit  = { left = 50, right = 735 },
+	flavor = { left = 50, right = 735 },
+}
 
-local function ToggleDrawer(name)
-	if name == openDrawer then name = nil end
-	
-	-- Close previous active drawer
+for _, ing in ipairs(_IngredientOrder) do
+	local drawer = ing.GetKitchenCategory and ing:GetKitchenCategory() or ing.category
+	if categorized[drawer] then
+		table.insert(categorized[drawer], ing)
+	else
+		DebugOut("ERROR", string.format("Ingredient '%s' has no valid Test Kitchen drawer '%s'.", tostring(ing.name), tostring(drawer)))
+	end
+end
+
+local function ToggleDrawer(windowName)
+	if windowName == openDrawer then windowName = nil end
+
+	-- Close previous active drawer.  Drawer windows are page-specific so the open
+	-- drawer graphic always lines up under the tab the player actually clicked.
 	if openDrawer then
 		EnableWindow(openDrawer, false)
 		openDrawer = nil
 	end
-	
-	-- Open requested drawer
-	if name then
-		openDrawer = name
+
+	if windowName then
+		openDrawer = windowName
 		EnableWindow(openDrawer, true)
-		DebugOut("UI", string.format("Player opened ingredient drawer: %s", name))
+		DebugOut("UI", string.format("Player opened ingredient drawer window: %s", windowName))
 	end
+end
+
+local drawerPage = 1
+
+local function SetDrawerPage(page)
+	if page < 1 then page = 1 end
+	if page > 2 then page = 2 end
+	if page == drawerPage then return end
+
+	-- A page shift closes the open drawer first.  This avoids leaving an open tab
+	-- visually attached to a category that has just scrolled off-screen.
+	if openDrawer then ToggleDrawer(nil) end
+
+	drawerPage = page
+	EnableWindow("drawer_tabs_page_1", drawerPage == 1)
+	EnableWindow("drawer_tabs_page_2", drawerPage == 2)
+	DebugOut("UI", string.format("Test Kitchen drawer bank changed to page %d.", drawerPage))
+end
+
+local function ScrollDrawers(delta)
+	SetDrawerPage(drawerPage + delta)
 end
 
 -- Dynamically generates the visual drawer UI based on the player's unlocked ingredients.
 -- Modified to support dynamic row-wrapping for categories that exceed screen width (like Flavors).
 local function IngredientDrawer(t)
 	local name = t.name
+	local windowName = t.window_name or name
 	local vials = {}
 	local y = 32
 
 	local ingredients_in_drawer = categorized[name]
 	local num_ingredients = table.getn(ingredients_in_drawer)
-	
+	local bounds = drawerContentBounds[name] or { left = 5, right = 773 }
+	local leftBound = bounds.left
+	local rightBound = bounds.right
+
 	-- Max horizontal capacity before the drawer graphics clip the edge of the UI
-	local max_per_row = 17 
+	local max_per_row = 17
 
 	if num_ingredients > max_per_row then
 		-- MULTI-ROW DRAWER LOGIC
 		-- Calculates dynamic offset wrapping to prevent clipping
-		local x_start = 5
+		local x_start = leftBound
 		local x = x_start
 		local row_num = 1
 
 		for _, ing in ipairs(ingredients_in_drawer) do
 			local temp = ing
-			
+
 			if Player.labIngredients[ing.name] then
 				table.insert(vials,
 					Rollover { x = x, y = y, fit = true,
@@ -372,14 +448,14 @@ local function IngredientDrawer(t)
 				-- If the player hasn't discovered it yet, render an empty jar
 				table.insert(vials, Bitmap { x = x, y = y, image = "image/kitchen_jar_space" })
 			end
-			
+
 			x = x + kBottleWidth
-			
+
 			-- Detect edge-clip and force a line break
-			if x + kBottleWidth > 773 then
+			if x + kBottleWidth > rightBound then
 				y = y + 60
 				row_num = row_num + 1
-				
+
 				-- Alternate the starting X offset slightly for an interlocking honeycomb/triangular aesthetic
 				if Mod(row_num, 2) == 0 then
 					x = x_start + 20
@@ -393,13 +469,13 @@ local function IngredientDrawer(t)
 		-- Centers the jars dynamically if there's plenty of space
 		local w = num_ingredients * kBottleWidth
 		local x = t.x + 55 - w / 2
-		
-		if x < 5 then x = 5 end
-		if x + w > 773 then x = 773 - w end
+
+		if x < leftBound then x = leftBound end
+		if x + w > rightBound then x = rightBound - w end
 
 		for _, ing in ipairs(ingredients_in_drawer) do
 			local temp = ing
-			
+
 			if Player.labIngredients[ing.name] then
 				table.insert(vials,
 					Rollover { x = x, y = y, fit = true,
@@ -412,7 +488,7 @@ local function IngredientDrawer(t)
 			else
 				table.insert(vials, Bitmap { x = x, y = y, image = "image/kitchen_jar_space" })
 			end
-			
+
 			x = x + kBottleWidth
 		end
 	end
@@ -420,9 +496,13 @@ local function IngredientDrawer(t)
 	-- Assemble and return the physical drawer group layer
 	return Window
 	{
-		x = 0, y = t.y, name = name, fit = true,
+		x = 0, y = t.y, name = windowName, fit = true,
 		Bitmap { x = t.x, y = 0, image = "image/kitchen_drawer_open",
-			Text { x = 8, y = 130, w = 91, h = 17, label = name, font = { labelFontName, 16, BlackColor } },
+			-- The open drawer artwork is 110px wide.  This 91px label field is
+			-- inset evenly and explicitly centered so short and long translations
+			-- sit in the middle of the metal nameplate.
+			Text { x = 9, y = 130, w = 92, h = 17, label = GetDrawerLabel(name),
+				font = { labelFontName, 14, BlackColor }, flags = kHAlignCenter + kVAlignCenter },
 		},
 		Group(vials),
 	}
@@ -438,30 +518,28 @@ function TasteIt()
 	for i = 1, usedSlotCount do
 		if not ingredients[i] then allFull = false break end
 	end
-	
+
 	if not allFull then
 		SetDynamicFeedbackText(GetRandomString("taster_fillslots"))
 	else
 		DebugOut("RECIPE", "Player clicked 'Taste It'. Commencing evaluation.")
-		
+
 		local productCategory = _AllCategories[targetCategory]
 		local feedback
 		feedback, r, low, high, allow = EvaluatePlayerRecipe(productCategory, ingredients, usedSlotCount)
-		
+
 		SetDynamicFeedbackText(tostring(feedback))
-		
-		-- Check global limit logic: Allow them to proceed to naming/marketing IF they 
+
+		-- Check global limit logic: Allow them to proceed to naming/marketing IF they
 		-- still have free UGR memory slots remaining.
 		local category = _AllCategories.user
-		if category and table.getn(category.products) < Player.customSlots then 
-			EnableWindow("design_recipe", true) 
+		if (Player.IsFreePlay and Player:IsFreePlay()) or (category and table.getn(category.products) < Player.customSlots) then
+			EnableWindow("design_recipe", true)
 		end
-		
+
 		-- Force disable if Teddy absolutely hates it and rejects it
 		if not allow then EnableWindow("design_recipe", false) end
-		
-		-- Legacy telemetry hook
-		-- FirstPeekTasteIt(targetCategory, ingredients)
+
 	end
 end
 
@@ -472,7 +550,7 @@ function CreateMode()
 	EnableWindow("design_mode", false)
 	EnableWindow("create_mode", true)
 	SetLabel("nameplate", GetString("title_kitchen"))
-	DebugOut("UI", "Test Kitchen state shifted to: Creation Mode.")
+	DebugOut("UI", "Switched Test Kitchen to creation mode.")
 end
 
 function DesignMode()
@@ -481,16 +559,16 @@ function DesignMode()
 	EnableWindow("create_mode", false)
 	EnableWindow("design_mode", true)
 	SetLabel("nameplate", GetString("title_marketing"))
-	DebugOut("UI", "Test Kitchen state shifted to: Marketing Mode.")
-	
-	-- Determine if we are making a coffee. If so, apply the correct mug 
-	-- graphics and reveal the sandwiched layers. If not, hide them completely.
-	local isBeverage = (targetCategory == "beverage" or targetCategory == "blend")
-	if isBeverage then
+	DebugOut("UI", "Switched Test Kitchen to marketing mode.")
+
+	-- Served Drinks use the glass-mug sandwich. Beverage Blends are packaged
+	-- dry/ground mixes and render directly from their tin/package layers.
+	local isServedDrink = (targetCategory == "beverage")
+	if isServedDrink then
 		SetBitmap("display_mug", "custom/" .. targetCategory .. "/mug")
 		SetBitmap("display_rim_outer", "custom/" .. targetCategory .. "/rim_outer")
 		SetBitmap("display_rim_inner", "custom/" .. targetCategory .. "/rim_inner")
-		
+
 		EnableWindow("display_mug", true)
 		EnableWindow("display_rim_outer", true)
 		EnableWindow("display_rim_inner", true)
@@ -499,11 +577,316 @@ function DesignMode()
 		EnableWindow("display_rim_outer", false)
 		EnableWindow("display_rim_inner", false)
 	end
-	
+
 	-- Auto-generate a random color profile so the player doesn't have to start from blank white
 	if autoRandomize then
 		autoRandomize = false
 		RandomDesign()
+	end
+end
+
+-------------------------------------------------------------------------------
+-- Community Import / Duplicate Protection
+-------------------------------------------------------------------------------
+
+local function ColorChannelByte(value)
+	if type(value) ~= "number" then return nil end
+	if value >= 0 and value <= 1 then return Floor((value * 255) + 0.5) end
+	return Floor(value + 0.5)
+end
+
+local function FindPaletteIndex(red, green, blue)
+	for i, color in ipairs(colorOptions) do
+		local r = ColorChannelByte(color[1])
+		local g = ColorChannelByte(color[2])
+		local b = ColorChannelByte(color[3])
+		if r == red and g == green and b == blue then return i end
+	end
+	return 1
+end
+
+-- On some Playground builds, SetLayer() is effectively zero-based for real
+-- assets, meaning selector state 0 can legitimately resolve to layerN_01. The
+-- previous save/export logic treated any selector state <= 0 as blank, which
+-- silently dropped imported Community layers that used the first art option.
+-- Determine persistence from the resolved image name first, using selector
+-- state only as a final fallback for truly blank/pseudo-blank layers.
+local function HasPersistableLayer(layerIndexZeroBased)
+	local image = GetLayerImage(layerIndexZeroBased)
+	if not image or string.len(image) == 0 then
+		return false, image
+	end
+
+	-- Explicit blank sentinels from older/newer engine builds.
+	if string.find(image, "/layer[1-4]_0+$") then
+		return false, image
+	end
+
+	-- Any numbered real asset should persist, even if the selector state that
+	-- produced it happens to be zero on this build.
+	if string.find(image, "/layer[1-4]_[0-9]+$") then
+		return true, image
+	end
+
+	-- Last resort: preserve the legacy state-based behavior only for ambiguous
+	-- image names we do not recognize.
+	return (design[layerIndexZeroBased + 1] or 0) > 0, image
+end
+
+-- Restore a Community appearance by its exact registered asset name. The native
+-- SetLayer selector is zero-based in some Playground builds even though custom
+-- assets are numbered from 01. Try the expected corrected index first, then
+-- verify against GetLayerImage() so imports remain safe across engine builds.
+local function SetCommunityLayerImage(layer, image, option)
+	local candidates = { option - 1, option, option + 1 }
+	local tried = {}
+	for _, candidate in ipairs(candidates) do
+		if candidate >= 0 and not tried[candidate] then
+			tried[candidate] = true
+			local state = SetLayer(layer - 1, candidate)
+			if GetLayerImage(layer - 1) == image then
+				return state
+			end
+		end
+	end
+
+	DebugOut("COMMUNITY", string.format(
+		"Could not verify exact imported appearance '%s' on layer %d; using corrected selector index %d.",
+		tostring(image), layer, option - 1
+	))
+	local corrected = option - 1
+	if corrected < 0 then corrected = 0 end
+	return SetLayer(layer - 1, corrected)
+end
+
+local function HasCommunityTag(metadata, wanted)
+	if not metadata or type(metadata.tags) ~= "table" then return false end
+	for _, tag in ipairs(metadata.tags) do
+		if tag == wanted then return true end
+	end
+	return false
+end
+
+local function CommunityCategoryDescriptor(category)
+	local descriptors =
+	{
+		bar = "chocolate bar",
+		beverage = "drink",
+		infusion = "chocolate infusion",
+		truffle = "truffle",
+		blend = "beverage blend",
+		exotic = "exotic confection",
+	}
+	return descriptors[category] or "creation"
+end
+
+local function CommunityKitchenLoadedFeedback(imported, metadata)
+	metadata = metadata or {}
+	local candidates = {}
+	local function AddCandidate(key, weight)
+		weight = weight or 1
+		for i = 1, weight do table.insert(candidates, key) end
+	end
+
+	local categoryKey =
+	{
+		bar = "bar",
+		beverage = "drink",
+		infusion = "infusion",
+		truffle = "truffle",
+		blend = "bevblend",
+		exotic = "exotic",
+	}
+	local categorySuffix = categoryKey[imported.category]
+	if categorySuffix then
+		AddCandidate("community_kitchen_loaded_main_tedd_" .. categorySuffix, 3)
+	end
+
+	local ratingAverage = tonumber(metadata.rating_average) or 0
+	local ratingCount = tonumber(metadata.rating_count) or 0
+	if ratingCount >= 3 then
+		if ratingAverage >= 4.0 then
+			AddCandidate("community_kitchen_loaded_main_tedd_highrated", 4)
+		elseif ratingAverage <= 2.5 then
+			AddCandidate("community_kitchen_loaded_main_tedd_lowrated", 4)
+		end
+	end
+
+	local loadCount = tonumber(metadata.load_count) or 0
+	if loadCount >= 10 then
+		AddCandidate("community_kitchen_loaded_main_tedd_popular", 2)
+	end
+
+	if metadata.is_owned == true then
+		AddCandidate("community_kitchen_loaded_main_tedd_own", 2)
+	else
+		local author = metadata.author and tostring(metadata.author.public_name or "") or ""
+		if author ~= "" then
+			AddCandidate("community_kitchen_loaded_main_tedd_creator", 1)
+		end
+	end
+
+	if HasCommunityTag(metadata, "experimental") then
+		AddCandidate("community_kitchen_loaded_main_tedd_experimental", 2)
+	end
+	if HasCommunityTag(metadata, "boozy") then
+		AddCandidate("community_kitchen_loaded_main_tedd_boozy", 1)
+	end
+	if HasCommunityTag(metadata, "savoury") then
+		AddCandidate("community_kitchen_loaded_main_tedd_savoury", 1)
+	end
+	if HasCommunityTag(metadata, "tropical") then
+		AddCandidate("community_kitchen_loaded_main_tedd_tropical", 1)
+	end
+
+	AddCandidate("community_kitchen_loaded_main_tedd_general", 1)
+
+	local key = candidates[RandRange(1, table.getn(candidates))]
+	local authorName = metadata.author and tostring(metadata.author.public_name or "") or ""
+	local text = GetRandomString(
+		key,
+		imported.name,
+		CommunityCategoryDescriptor(imported.category),
+		string.format("%.1f", ratingAverage),
+		tostring(ratingCount),
+		tostring(loadCount),
+		authorName
+	)
+
+	if not text or text == "" or text == key then
+		return GetString("community_kitchen_loaded", imported.name)
+	end
+	return text
+end
+
+local function ApplyCommunityAppearance(imported)
+	if not imported then return end
+
+	-- Start from blank layer selectors, then restore each canonical layer by its
+	-- saved asset index and exact Test Kitchen palette colour.
+	for layer = 1, 4 do
+		design[layer] = SetLayer(layer - 1, 0)
+	end
+
+	for _, layerInfo in ipairs(imported.appearance or {}) do
+		local image = layerInfo[1]
+		local _, _, layerText, optionText = string.find(image or "", "/layer([1-4])_([0-9]+)$")
+		local layer = tonumber(layerText)
+		local option = tonumber(optionText)
+		if layer and option then
+			design[layer] = SetCommunityLayerImage(layer, image, option)
+			SetRecipeTint(layer, FindPaletteIndex(layerInfo[2], layerInfo[3], layerInfo[4]))
+		end
+	end
+end
+
+local function CurrentRecipeSignature()
+	local active = {}
+	for i = 1, usedSlotCount do
+		if ingredients[i] then table.insert(active, ingredients[i]) end
+	end
+	if table.getn(active) ~= usedSlotCount then return nil end
+	local codeTable = BuildCodeTable(active, targetCategory)
+	return string.lower(table.concat(codeTable, "_"))
+end
+
+local function HasSavedRecipeSignature(signature)
+	if not signature or not Player or type(Player.itemRecipes) ~= "table" then return false end
+	for _, codeTable in ipairs(Player.itemRecipes) do
+		if type(codeTable) == "table" and string.lower(table.concat(codeTable, "_")) == signature then
+			return true
+		end
+	end
+	if Player.IsFreePlay and Player:IsFreePlay() and Player.storyCreationLibrary then
+		for _, codeTable in ipairs(Player.storyCreationLibrary.recipes or {}) do
+			if type(codeTable) == "table" and string.lower(table.concat(codeTable, "_")) == signature then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+local function ApplyCommunityCreationToWorkspace(value, creationId, metadata)
+	local imported, importError = CommunityCreation.ToKitchenData(value)
+	if not imported then
+		DisplayDialog { "ui/ui_generic.lua", text = "#" .. tostring(importError) }
+		DebugOut("COMMUNITY", "Could not import Community Creation: " .. tostring(importError))
+		return false
+	end
+
+	-- Let the normal category method clear stale bowls and establish machinery,
+	-- then resize it to the exact imported ingredient count.
+	SetTargetCategory(imported.category)
+	usedSlotCount = table.getn(imported.ingredients)
+	UpdateBowlAndSlotVisibility()
+
+	for i = 1, usedSlotCount do
+		local ingObj = _AllIngredients[imported.ingredients[i]]
+		if not ingObj then
+			DisplayDialog { "ui/ui_generic.lua", text = "#Unknown imported ingredient." }
+			return false
+		end
+		ingredients[i] = ingObj
+		SetBitmap("slot_" .. i, "items/" .. ingObj.name .. "_big")
+	end
+
+	productName = imported.name
+	productDescription = imported.description
+	SetLabel("product_name", productName)
+	SetLabel("product_desc", productDescription)
+
+	-- The designer exists even while Creation Mode is visible. Prime its recipe
+	-- type and exact downloaded appearance without forcing the player into
+	-- Marketing Mode; they can inspect/edit ingredients immediately, then Taste.
+	autoRandomize = false
+	SetRecipeType(targetCategory)
+	ApplyCommunityAppearance(imported)
+
+	-- Set provenance only after the workspace has accepted the creation. The
+	-- earlier SetTargetCategory() call intentionally clears any previous source.
+	metadata = metadata or {}
+	local sourceSignature = CommunityCreation.CoreSignature(imported)
+	communitySource =
+	{
+		creation_id = tostring(creationId or ""),
+		profile_id = metadata.author and tostring(metadata.author.profile_id or "") or "",
+		public_name = metadata.author and tostring(metadata.author.public_name or "") or "",
+		is_owned = metadata.is_owned == true,
+		core_signature = sourceSignature or "",
+	}
+
+	UpdateRecipeButtons()
+	EnableWindow("design_recipe", true)
+	CreateMode()
+	SetDynamicFeedbackText(CommunityKitchenLoadedFeedback(imported, metadata))
+
+	DebugOut("COMMUNITY", "Loaded Community creation into the active Test Kitchen: " .. tostring(imported.name))
+
+	-- Count a load only after the workspace actually accepted the creation.
+	if creationId and creationId ~= "" and not CommunityTransport.IsBusy() then
+		CommunityApi.RecordLoad(creationId, function(body, response, err)
+			if err then
+				DebugOut("COMMUNITY", "Creation loaded, but load-count update failed: " .. tostring(err))
+			end
+		end)
+	end
+	return true
+end
+
+function OpenCommunityCookbook()
+	-- The modal Cookbook returns its selected Creation through a short-lived global.
+	gCommunityKitchenImport = nil
+	DisplayDialog {
+		"ui/community_cookbook.lua",
+		allow_load = true,
+		source = "test_kitchen",
+	}
+
+	local pending = gCommunityKitchenImport
+	gCommunityKitchenImport = nil
+	if pending and pending.creation then
+		ApplyCommunityCreationToWorkspace(pending.creation, pending.id, pending.metadata)
 	end
 end
 
@@ -517,26 +900,59 @@ local function DoRecipeCreation()
 	for i = 1, usedSlotCount do
 		if ingredients[i] then table.insert(ings, ingredients[i]) end
 	end
-	
+
 	productName = GetLabel("product_name")
 	productDescription = GetLabel("product_desc")
-	
+
 	-- Compile the active visual profile
 	local appearance = {}
 	for i = 0, 3 do
-		local image = GetLayerImage(i)
+		local shouldPersist, image = HasPersistableLayer(i)
 		local tint = colors[i + 1]
 		tint = colorOptions[tint]
-		
-		if image and string.len(image) then
-			table.insert(appearance, { image, tint[1], tint[2], tint[3] })
+
+		if shouldPersist and image and string.len(image) > 0 then
+			-- Local recipe persistence must keep the engine-native tint channel
+			-- representation exactly as the original game expects. Community
+			-- JSON uses byte RGB through CommunityCreation.Normalize(), but
+			-- Player.itemAppearance should continue storing the native values
+			-- directly so Recipe Book / factory / shop rendering does not
+			-- reinterpret 0-255 bytes as live tint channels.
+			table.insert(appearance, {
+				image,
+				tint[1],
+				tint[2],
+				tint[3]
+			})
 		end
 	end
-	
+
 	-- Commit the recipe permanently into the player's save structure
 	local recipe = CreateCustomRecipe(productName, productDescription, ings, appearance, targetCategory)
-	
+
 	if recipe then
+		-- If this began as a Community recipe, carry its origin into the saved
+		-- UGR. Only category + ordered ingredients define whether it remains an
+		-- unchanged copy or has become a remix; marketing changes alone do not.
+		if communitySource then
+			local savedIngredientNames = {}
+			for _, ing in ipairs(ings) do
+				table.insert(savedIngredientNames, ing.name)
+			end
+			local savedCreation =
+			{
+				name = productName,
+				description = productDescription,
+				category = targetCategory,
+				ingredients = savedIngredientNames,
+				appearance = appearance,
+			}
+			local recorded, recordError = CommunityCreation.RecordSavedRecipeSource(recipe, communitySource, savedCreation)
+			if not recorded then
+				DebugOut("COMMUNITY", "Could not preserve Community recipe provenance: " .. tostring(recordError))
+			end
+		end
+
 		gRecipeSelection = recipe
 		QueueCommand(function() DisplayDialog{"ui/ui_recipes.lua"} end)
 		CloseWindow()
@@ -547,33 +963,45 @@ end
 local function ConfirmRecipeCreation()
 	productName = GetLabel("product_name")
 	productDescription = GetLabel("product_desc")
-	
+
+	-- Free Play deliberately has no gameplay-imposed Creation cap.
+	if (not (Player.IsFreePlay and Player:IsFreePlay())) and (Player.categoryCount.user or 0) >= (Player.customSlots or 0) then
+		DisplayDialog { "ui/ui_generic.lua", text = "#" .. GetString("recipe_noslots") }
+		return
+	end
+
+	local signature = CurrentRecipeSignature()
+	if signature and HasSavedRecipeSignature(signature) then
+		DisplayDialog { "ui/ui_generic.lua", text = "#" .. GetString("recipe_saved_failed_duplicate", productName) }
+		return
+	end
+
 	if productName == "" or productName == defaultProductName or productDescription == "" or productDescription == defaultProductDescription then
 		DisplayDialog { "ui/ui_generic.lua", text = "#" .. GetRandomString("invent_noname") }
 	else
 		-- Ensure no existing product across the entire game uses this exact name string
 		local nameOk = true
 		local lowerName = string.lower(productName)
-		
+
 		for code, prod in pairs(_AllProducts) do
 			local s = string.lower(prod:GetName())
 			if lowerName == s then
 				nameOk = false
-				
-				-- If this is an existing custom UGR, we CAN overwrite it assuming the 
+
+				-- If this is an existing custom UGR, we CAN overwrite it assuming the
 				-- player actually owns it (prevents stomping on mod/DLC products).
-				if (not nameOk) and (prod.category.name == "user") and (not Player.itemNames[prod.code]) then 
-					nameOk = true 
+				if (not nameOk) and (prod.category.name == "user") and (not Player.itemNames[prod.code]) then
+					nameOk = true
 				end
-				
+
 				if (not nameOk) then break end
 			end
 		end
-		
+
 		if nameOk then
 			local text = GetRandomString("invent_confirm")
 			local yn = DisplayDialog { "ui/ui_generic_yn.lua", text = "#" .. text }
-			
+
 			if yn == "yes" then DoRecipeCreation() end
 		else
 			-- Utilizing the %1% dynamic formatting parameter required by standard localized strings
@@ -588,40 +1016,8 @@ end
 -------------------------------------------------------------------------------
 
 function LoadCreation()
-	DebugOut("UI", "Load Creation button clicked.")
-	local loadedData = DisplayDialog { "ui/ui_load_creation.lua" }
-	
-	if loadedData then
-		DebugOut("RECIPE", string.format("Loading external creation template: '%s'...", loadedData.name))
-		
-		-- Hard reset the UI bounds to accept the incoming configuration
-		ClearAllSlots()
-		SetTargetCategory(loadedData.category)
-		usedSlotCount = table.getn(loadedData.ingredients)
-		UpdateBowlAndSlotVisibility()
-
-		-- Inject physical ingredients
-		for i, ingName in ipairs(loadedData.ingredients) do
-			local ingObj = _AllIngredients[ingName]
-			if ingObj then
-				ingredients[i] = ingObj
-				SetBitmap("slot_" .. i, "items/" .. ingObj.name .. "_big")
-			end
-		end
-		
-		-- Pre-fill visual profiles and text metadata
-		appearance = loadedData.appearance
-		productName = loadedData.name
-		productDescription = loadedData.description
-		
-		-- Disable auto-randomization so we don't accidentally overwrite the imported visual profile
-		autoRandomize = false 
-
-		UpdateRecipeButtons()
-		DesignMode()
-	else
-		DebugOut("UI", "Load Creation action was cancelled.")
-	end
+	DebugOut("UI", "Opening Community Cookbook from the Test Kitchen.")
+	OpenCommunityCookbook()
 end
 
 function SaveCreation()
@@ -639,7 +1035,7 @@ function SaveCreation()
 	creationData.name = currentName
 	creationData.description = currentDesc
 	creationData.category = targetCategory
-	
+
 	creationData.ingredients = {}
 	for i = 1, usedSlotCount do
 		if ingredients[i] then
@@ -649,10 +1045,10 @@ function SaveCreation()
 
 	creationData.appearance = {}
 	for i = 0, 3 do
-		local image = GetLayerImage(i)
+		local shouldPersist, image = HasPersistableLayer(i)
 		local tintIndex = colors[i + 1]
 		local tint = colorOptions[tintIndex]
-		if image and string.len(image) > 0 then
+		if shouldPersist and image and string.len(image) > 0 then
 			table.insert(creationData.appearance, { image, tint[1], tint[2], tint[3] })
 		end
 	end
@@ -679,15 +1075,15 @@ local CreationModeWindow = Bitmap
 	SetStyle(C3ButtonStyle),
 	Button { x = 328, y = 148, name = "clear_recipe", label = "clear_recipe", command = function() ClearAllSlots() end },
 	Button { x = 470, y = 148, name = "design_recipe", label = "design_recipe", command = function() DesignMode() end },
-	
+
 	-- Machinery Category Toggles
 	BeginGroup(),
 	AppendStyle { tx = 30, type = kRadio, graphics = { "image/kitchen_category_unselected", "image/kitchen_category_selected", "image/kitchen_category_unselected", "image/kitchen_category_selected" } },
 	Button { x = 26, y = 58,  name = "bar", label = "bar", command = function() SetTargetCategory("bar") end },
-	Button { x = 173, y = 58, name = "beverage", label = "beverage", command = function() SetTargetCategory("beverage") end },
+	Button { x = 173, y = 58, name = "beverage", label = "kitchen_category_beverage", command = function() SetTargetCategory("beverage") end },
 	Button { x = 26, y = 91,  name = "infusion", label = "infusion", command = function() SetTargetCategory("infusion") end },
 	Button { x = 173, y = 91, name = "truffle", label = "truffle", command = function() SetTargetCategory("truffle") end },
-	Button { x = 26, y = 124, name = "blend", label = "blend", command = function() SetTargetCategory("blend") end },
+	Button { x = 26, y = 124, name = "blend", label = "kitchen_category_blend", command = function() SetTargetCategory("blend") end },
 	Button { x = 173, y = 124, name = "exotic", label = "exotic", command = function() SetTargetCategory("exotic") end },
 
 	-- Visual Bowls
@@ -702,10 +1098,14 @@ local CreationModeWindow = Bitmap
 	SetStyle(C3SmallRoundButtonStyle),
 	Button { x = 590, y = 185, name = "remove_slot_button", label = "#-", command = RemoveIngredientSlot },
 	Button { x = 630, y = 185, name = "add_slot_button", label = "#+", command = AddIngredientSlot },
-	
-	SetStyle(C3ButtonStyle),
-	Button { x = 601, y = 242, label = "invent_taste", command = function() TasteIt() end },
-	
+
+	SetStyle(C3ButtonMediumStyle),
+	Button { x = 601, y = 242, scale = 0.8, label = "invent_taste", command = function() TasteIt() end },
+
+	-- Load a compatible Community Creation into the Test Kitchen.
+	SetStyle(C3ButtonMediumStyle),
+	Button { x = 601, y = 278, scale = 0.8, label = "#" .. GetString("load_creation"), command = LoadCreation },
+
 	-- Active Slots
 	AppendStyle { type = kPush, graphics = {} },
 	Button { x = 65,  y = 196, w = 64, h = 64, Bitmap { x = 0, y = 0, name = "slot_6" }, command = function() ClearSlot(6) end },
@@ -714,25 +1114,58 @@ local CreationModeWindow = Bitmap
 	Button { x = 335, y = 196, w = 64, h = 64, Bitmap { x = 0, y = 0, name = "slot_3" }, command = function() ClearSlot(3) end },
 	Button { x = 425, y = 196, w = 64, h = 64, Bitmap { x = 0, y = 0, name = "slot_2" }, command = function() ClearSlot(2) end },
 	Button { x = 515, y = 196, w = 64, h = 64, Bitmap { x = 0, y = 0, name = "slot_1" }, command = function() ClearSlot(1) end },
-	
+
 	-- Ingredient Drawers
-	BeginGroup(),
-	AppendStyle { tx = 8, ty = 4, tw = 91, th = 17, flags = kVAlignCenter + kHAlignCenter, graphics = { "image/kitchen_drawer_closed" } },
-	Button { x = 16,  y = 320, label = "cacao",  font = { labelFontName, 16, BlackColor }, command = function() ToggleDrawer("cacao") end },
-	Button { x = 123, y = 320, label = "coffee", font = { labelFontName, 16, BlackColor }, command = function() ToggleDrawer("coffee") end },
-	Button { x = 230, y = 320, label = "dairy",  font = { labelFontName, 16, BlackColor }, command = function() ToggleDrawer("dairy") end },
-	Button { x = 337, y = 320, label = "sugar",  font = { labelFontName, 16, BlackColor }, command = function() ToggleDrawer("sugar") end },
-	Button { x = 444, y = 320, label = "fruit",  font = { labelFontName, 16, BlackColor }, command = function() ToggleDrawer("fruit") end },
-	Button { x = 551, y = 320, label = "nut",    font = { labelFontName, 16, BlackColor }, command = function() ToggleDrawer("nut") end },
-	Button { x = 658, y = 320, label = "flavor", font = { labelFontName, 16, BlackColor }, command = function() ToggleDrawer("flavor") end },
-	
-	IngredientDrawer { x = 16,  y = 320, name = "cacao" },
-	IngredientDrawer { x = 123, y = 320, name = "coffee" },
-	IngredientDrawer { x = 230, y = 320, name = "dairy" },
-	IngredientDrawer { x = 337, y = 320, name = "sugar" },
-	IngredientDrawer { x = 444, y = 320, name = "fruit" },
-	IngredientDrawer { x = 551, y = 320, name = "nut" },
-	IngredientDrawer { x = 658, y = 320, name = "flavor" },
+	-- Six full-width drawers fit comfortably between the scroll arrows.  The two
+	-- banks overlap by three categories so moving left/right feels continuous:
+	--   Page 1: Cacao, Coffee, Tea, Dairy, Sugar, Fruits
+	--   Page 2: Dairy, Sugar, Fruits, Nuts, Flavors, Liqueurs
+	Window { x = 0, y = 0, name = "drawer_tabs_page_1", fit = true,
+		BeginGroup(),
+		AppendStyle { tx = 8, ty = 4, tw = 91, th = 17, flags = kVAlignCenter + kHAlignCenter, graphics = { "image/kitchen_drawer_closed" } },
+		Button { x = 70,  y = 320, label = GetDrawerLabel("cacao"),   font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_cacao_p1") end },
+		Button { x = 177, y = 320, label = GetDrawerLabel("coffee"),  font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_coffee_p1") end },
+		Button { x = 284, y = 320, label = GetDrawerLabel("tea"),     font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_tea_p1") end },
+		Button { x = 391, y = 320, label = GetDrawerLabel("dairy"),   font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_dairy_p1") end },
+		Button { x = 498, y = 320, label = GetDrawerLabel("sugar"),   font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_sugar_p1") end },
+		Button { x = 605, y = 320, label = GetDrawerLabel("fruit"),   font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_fruit_p1") end },
+	},
+
+	Window { x = 0, y = 0, name = "drawer_tabs_page_2", fit = true,
+		BeginGroup(),
+		AppendStyle { tx = 8, ty = 4, tw = 91, th = 17, flags = kVAlignCenter + kHAlignCenter, graphics = { "image/kitchen_drawer_closed" } },
+		Button { x = 70,  y = 320, label = GetDrawerLabel("dairy"), font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_dairy_p2") end },
+		Button { x = 177, y = 320, label = GetDrawerLabel("sugar"), font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_sugar_p2") end },
+		Button { x = 284, y = 320, label = GetDrawerLabel("fruit"), font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_fruit_p2") end },
+		Button { x = 391, y = 320, label = GetDrawerLabel("nut"),     font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_nut_p2") end },
+		Button { x = 498, y = 320, label = GetDrawerLabel("flavor"),  font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_flavor_p2") end },
+		Button { x = 605, y = 320, label = GetDrawerLabel("liqueur"), font = { labelFontName, 14, BlackColor }, command = function() ToggleDrawer("drawer_liqueur_p2") end },
+	},
+
+	-- Dedicated drawer-bank navigation.  These use existing arrow artwork rather
+	-- than squeezing the drawer tabs narrower.
+	Button { x = 18,  y = 319, name = "drawer_scroll_left",  scale = 0.65,
+		graphics = { "image/button_arrow_left_up", "image/button_arrow_left_down", "image/button_arrow_left_over", "image/button_arrow_left_down" },
+		command = function() ScrollDrawers(-1) end },
+	Button { x = 739, y = 319, name = "drawer_scroll_right", scale = 0.65,
+		graphics = { "image/button_arrow_right_up", "image/button_arrow_right_down", "image/button_arrow_right_over", "image/button_arrow_right_down" },
+		command = function() ScrollDrawers(1) end },
+
+	-- Page-specific open-drawer windows keep the open drawer graphic physically
+	-- aligned to the current tab position without resizing any art assets.
+	IngredientDrawer { x = 70,  y = 320, name = "cacao",   window_name = "drawer_cacao_p1" },
+	IngredientDrawer { x = 177, y = 320, name = "coffee",  window_name = "drawer_coffee_p1" },
+	IngredientDrawer { x = 284, y = 320, name = "tea",     window_name = "drawer_tea_p1" },
+	IngredientDrawer { x = 391, y = 320, name = "dairy",   window_name = "drawer_dairy_p1" },
+	IngredientDrawer { x = 498, y = 320, name = "sugar",   window_name = "drawer_sugar_p1" },
+	IngredientDrawer { x = 605, y = 320, name = "fruit",   window_name = "drawer_fruit_p1" },
+
+	IngredientDrawer { x = 70,  y = 320, name = "dairy",   window_name = "drawer_dairy_p2" },
+	IngredientDrawer { x = 177, y = 320, name = "sugar",   window_name = "drawer_sugar_p2" },
+	IngredientDrawer { x = 284, y = 320, name = "fruit",   window_name = "drawer_fruit_p2" },
+	IngredientDrawer { x = 391, y = 320, name = "nut",     window_name = "drawer_nut_p2" },
+	IngredientDrawer { x = 498, y = 320, name = "flavor",  window_name = "drawer_flavor_p2" },
+	IngredientDrawer { x = 605, y = 320, name = "liqueur", window_name = "drawer_liqueur_p2" },
 }
 
 -------------------------------------------------------------------------------
@@ -755,13 +1188,13 @@ local rightArrowGraphics = { "image/button_arrow_right_up", "image/button_arrow_
 local DesignModeWindow = BSGWindow
 {
 	x = 0, y = 0, w = 782, h = 479, swallowmouse = true, fill = false, fit = true, color = { 0, 0, 0, -1 },
-	name = "design_mode", 
+	name = "design_mode",
 	RecipeDesigner { x = 0, y = 0, fit = true, Bitmap
 	{
 		x = 6, y = 16, w = 782, h = 467, image = "image/popup_back_designer",
-		
+
 		SetStyle(C3ButtonStyle),
-		
+
 		-- Layer 1 Toggles
 		Button { x = 73, y = 37, graphics = leftArrowGraphics, command = function() DecLayer(1) end },
 		Bitmap { x = 114, y = 41, image = "image/designer_custom_window",
@@ -771,7 +1204,7 @@ local DesignModeWindow = BSGWindow
 		Button { x = 120, y = 133, scale = 0.6, command = function() SelectTint(1, 32.5, 185) end,
 			Rectangle { name = "tint1", x = 10, y = 6, w = kMax - 12, h = kMax - 11, color = colorOptions[1] },
 		},
-		
+
 		-- Layer 2 Toggles
 		Button { x = 73, y = 162, graphics = leftArrowGraphics, command = function() DecLayer(2) end },
 		Bitmap { x = 114, y = 166, image = "image/designer_custom_window",
@@ -781,7 +1214,7 @@ local DesignModeWindow = BSGWindow
 		Button { x = 120, y = 258, scale = 0.6, command = function() SelectTint(2, 32.5, 308) end,
 			Rectangle { name = "tint2", x = 10, y = 6, w = kMax - 12, h = kMax - 11, color = colorOptions[1] },
 		},
-		
+
 		-- Layer 3 Toggles
 		Button { x = 536, y = 37, graphics = leftArrowGraphics, command = function() DecLayer(3) end },
 		Bitmap { x = 577, y = 41, image = "image/designer_custom_window",
@@ -801,13 +1234,13 @@ local DesignModeWindow = BSGWindow
 		Button { x = 583, y = 258, scale = 0.6, command = function() SelectTint(4, 495.5, 308) end,
 			Rectangle { name = "tint4", x = 10, y = 6, w = kMax - 12, h = kMax - 11, color = colorOptions[1] },
 		},
-		
+
 		-- Master Preview Display
 		BitmapTint { x = 327, y = 85, w = 128, h = 128, name = "display_layer0", scale = 0.5 },
 		BitmapTint { x = 327, y = 85, w = 128, h = 128, name = "display_highlight0", scale = 0.5 },
 		BitmapTint { x = 327, y = 85, w = 128, h = 128, name = "display_layer1", scale = 0.5 },
 		BitmapTint { x = 327, y = 85, w = 128, h = 128, name = "display_highlight1", scale = 0.5 },
-		
+
 		Bitmap { x = 327, y = 85, w = 128, h = 128, name = "display_mug", scale = 0.5 },
 		Bitmap { x = 327, y = 85, w = 128, h = 128, name = "display_rim_outer", scale = 0.5 },
 
@@ -826,7 +1259,7 @@ local DesignModeWindow = BSGWindow
 				font = { uiFontName, 25, WhiteColor }, flags = kVAlignCenter + kHAlignLeft,
 			},
 		},
-		
+
 		-- Description Input
 		Text { x = 18, y = 372, w = 184, h = 41, label = "recipe_description", font = whiteLabelFont, flags = kVAlignCenter + kHAlignCenter },
 		Bitmap { x = 202, y = 372, image = "image/designer_textentry_window",
@@ -859,7 +1292,7 @@ MakeDialog
 		Bitmap { image = "image/popup_nameplate", x = 230, y = 0,
 			Text { x = 34, y = 10, w = 270, h = 38, name = "nameplate", label = "title_kitchen", font = nameplateFont, flags = kVAlignCenter + kHAlignCenter },
 		},
-		
+
 		AppendStyle(C3ButtonStyle),
 		Button { x = 660, y = 10, name = "ok", label = "cancel", cancel = true, command = function() FadeCloseWindow("kitchen", "ok") end },
 
@@ -873,13 +1306,16 @@ MakeDialog
 }
 
 -- Post-Render Initialization
-EnableWindow("cacao", false)
-EnableWindow("coffee", false)
-EnableWindow("dairy", false)
-EnableWindow("sugar", false)
-EnableWindow("fruit", false)
-EnableWindow("nut", false)
-EnableWindow("flavor", false)
+for _, drawerWindow in ipairs({
+	"drawer_cacao_p1", "drawer_coffee_p1", "drawer_tea_p1", "drawer_dairy_p1", "drawer_sugar_p1", "drawer_fruit_p1",
+	"drawer_dairy_p2", "drawer_sugar_p2", "drawer_fruit_p2", "drawer_nut_p2", "drawer_flavor_p2", "drawer_liqueur_p2",
+}) do
+	EnableWindow(drawerWindow, false)
+end
+
+-- Begin with the leftmost bank visible.
+EnableWindow("drawer_tabs_page_1", true)
+EnableWindow("drawer_tabs_page_2", false)
 EnableWindow("design_recipe", false)
 
 -- Block tabs based on the player's progression state
@@ -892,15 +1328,24 @@ if not Player.categoryCount["exotic"] then EnableWindow("exotic", false) end
 
 SetTargetCategory(targetCategory)
 
--- Automatically open a drawer to hint UI functionality if none are opened
-if not openDrawer then ToggleDrawer("cacao") end
+-- Automatically open Cacao on the first bank to hint the drawer interaction.
+openDrawer = nil
+ToggleDrawer("drawer_cacao_p1")
 
 UpdateRecipeButtons()
 CreateMode()
+SetDynamicFeedbackText(GetRandomString("invent_instructions"))
+
+-- Developer import compatibility.
+if startupCommunityCreation then
+	QueueCommand(function()
+		ApplyCommunityCreationToWorkspace(startupCommunityCreation, startupCommunityCreationId)
+	end)
+end
 
 local building = gDialogTable.building
 if building and not Player.buildingsVisited[building.name] then
-	DebugOut("PLAYER", string.format("Recorded first visit to Secret Test Kitchen: %s", building.name))
+	DebugOut("PLAYER", string.format("Recorded first visit to the Secret Test Kitchen: %s", building.name))
 	Player.buildingsVisited[building.name] = true
 end
 

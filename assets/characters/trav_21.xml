@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE sequence SYSTEM "sidewalkdtd">
+<sequence name="C:\Documents and Settings\Stephen B. Lewis\Desktop\FINAL Expression frames GAMEREZ\trav_21.xml" source=".\trav_21*.png">
+  <img regx="91.000000" regy="111.000000" name="trav_21.png" w="0.000000" h="0.000000"/>
+  <framelist>
+    <frame regx="100" regy="100" name="trav_21.png" w="188" h="244" x="0" y="0"/>
+    <frame regx="31" regy="100" name="trav_21_displeased.png" w="56" h="98" x="194" y="0"/>
+    <frame regx="32" regy="100" name="trav_21_neutral.png" w="56" h="98" x="254" y="0"/>
+    <frame regx="32" regy="100" name="trav_21_pleased.png" w="56" h="98" x="316" y="0"/>
+  </framelist>
+</sequence>

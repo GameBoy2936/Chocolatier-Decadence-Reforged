@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Dev Ingredient Locks)
+	Chocolatier: Decadence by Design Reforged (Dev Ingredient Locks)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- Gathers all global ingredients and explicitly alphabetizes them for easier searching
@@ -18,17 +18,17 @@ local function ToggleIngredient(ing)
 	if ing:IsAvailable() then
 		ing:Lock()
 		SetLabel("dev_" .. ing.name, "+ " .. GetString(ing.name))
-		DebugOut("DEV", string.format("Admin Action: Locked ingredient '%s' (Will not spawn).", GetString(ing.name)))
+		DebugOut("DEV", string.format("Locked ingredient '%s' (Will not spawn).", GetString(ing.name)))
 	else
 		ing:Unlock()
 		SetLabel("dev_" .. ing.name, "- " .. GetString(ing.name))
-		DebugOut("DEV", string.format("Admin Action: Unlocked ingredient '%s' (Eligible to spawn).", GetString(ing.name)))
+		DebugOut("DEV", string.format("Unlocked ingredient '%s' (Eligible to spawn).", GetString(ing.name)))
 	end
 end
 
 -- Forces every single ingredient in the game state to become active
 local function UnlockAll()
-	DebugOut("DEV", "Admin Action: Bulk-unlocked ALL ingredients.")
+	DebugOut("DEV", "Bulk-unlocked all ingredients.")
 	for name, ing in pairs(ShowIngredients) do
 		ing:Unlock()
 		SetLabel("dev_" .. ing.name, "- " .. GetString(ing.name))
@@ -60,34 +60,34 @@ end
 for _, ing in pairs(ShowIngredients) do
 	local name = "dev_" .. ing.name
 	local label
-	
+
 	-- Apply state indicator prefix (+ is Locked, - is Unlocked)
-	if ing:IsAvailable() then 
+	if ing:IsAvailable() then
 		label = "#- "
-	else 
+	else
 		label = "#+ "
 	end
-	
+
 	label = label .. GetString(ing.name)
 	local temp = ing
-	
-	AddItem(Button { 
-		x = x, y = y, w = w, h = h, 
-		name = name, label = label, 
-		command = function() ToggleIngredient(temp) end 
+
+	AddItem(Button {
+		x = x, y = y, w = w, h = h,
+		name = name, label = label,
+		command = function() ToggleIngredient(temp) end
 	})
 end
 
 MakeDialog
 {
 	name = "dev_ingredients",
-	BSGWindow { 
+	BSGWindow {
 		x = gDialogTable.x, y = gDialogTable.y, w = w, h = h, fit = true, color = { 1, 1, 1, 0.8 }, SetStyle(devMenuStyle),
-		
+
 		Button { x = 0, y = 0, w = w, h = h, label = "#<b>CLOSE</b>", default = true, cancel = true, close = true },
 		TightText { x = 0, y = h, w = 3*w, h = h, label = "#<b>Click an item with a [+] to unlock it. Click an item with a [-] to lock it.</b>" },
 		Button { x = 0, y = 2*h, w = w, h = h, label = "#<b>Unlock All</b>", command = UnlockAll },
-		
+
 		Group(items),
 	},
 }

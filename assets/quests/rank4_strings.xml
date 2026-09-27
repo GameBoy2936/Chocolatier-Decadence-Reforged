@@ -71,11 +71,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring %evil_kath% [D|25|100|250] cases each of %b12%, %c10%, %i12%, %t11%, %m07% and %e12% at the %falklands%. Don't get me wrong, that is a long list of confections, but the sooner we get them to Kath, the better. She'll need to use those to help her escape from that toxic company of hers. Ready, &lt;player&gt;?</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring %evil_kath% [Q|unit_case|25|100|250] each of %b12%, %c10%, %i12%, %t11%, %m07% and %e12% at the %falklands%. Don't get me wrong, that is a long list of confections, but the sooner we get them to Kath, the better. She'll need to use those to help her escape from that toxic company of hers. Ready, &lt;player&gt;?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring a long list of confections - [D|25|100|250] cases each - to %evil_kath% in %falklands%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring a long list of confections - [Q|unit_case|25|100|250] each - to %evil_kath% in %falklands%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_kath_bribe_complete_1</Data></Cell>
@@ -159,19 +159,19 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_extra03_1</Data></Cell>
-	 <Cell><Data ss:Type="String">To support your case, we're going to need a heck of a lot of sweets. We need you to deliver [D|200|500|1,000] cases of each and every one of your recipes - from &lt;user1&gt; right up through the last recipe you still need to create - to %main_evan% at %san_bchq%. We'll collect them in two batches, and then submit all of those confections with your application.</Data></Cell>
+	 <Cell><Data ss:Type="String">To support your case, we're going to need a heck of a lot of sweets. We need you to deliver [Q|unit_case|200|500|1,000] of each and every one of your recipes - from &lt;user1&gt; right up through the last recipe you still need to create - to %main_evan% at %san_bchq%. We'll collect them in two batches, and then submit all of those confections with your application.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_extra04_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For the first batch, bring [D|200|500|1,000] cases each of &lt;user1&gt;, &lt;user2&gt;, &lt;user3&gt;, &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; to %san_bchq%. You'll also need to create that final recipe.</Data></Cell>
+	 <Cell><Data ss:Type="String">For the first batch, bring [Q|unit_case|200|500|1,000] each of &lt;user1&gt;, &lt;user2&gt;, &lt;user3&gt;, &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; to %san_bchq%. You'll also need to create that final recipe.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|200|500|1,000] cases of each of your first six creations to %san_bchq%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|200|500|1,000] of each of your first six creations to %san_bchq%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part1_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">For the first batch we need [D|200|500|1,000] cases of each of your first six creations, &lt;player&gt;, and you'll also need to create your final recipe.</Data></Cell>
+	 <Cell><Data ss:Type="String">For the first batch we need [Q|unit_case|200|500|1,000] of each of your first six creations, &lt;player&gt;, and you'll also need to create your final recipe.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2</Data></Cell>
@@ -179,15 +179,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">So far, so good, &lt;player&gt;. Now, for the second batch we'll need [D|200|500|1,000] cases each of &lt;user7&gt;, &lt;user8&gt;, &lt;user9&gt;, &lt;user10&gt;, &lt;user11&gt; and &lt;user12&gt;. After that, your application package will be complete.</Data></Cell>
+	 <Cell><Data ss:Type="String">So far, so good, &lt;player&gt;. Now, for the second batch we'll need [Q|unit_case|200|500|1,000] each of &lt;user7&gt;, &lt;user8&gt;, &lt;user9&gt;, &lt;user10&gt;, &lt;user11&gt; and &lt;user12&gt;. After that, your application package will be complete.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|200|500|1,000] cases of each of your final six creations to %san_bchq%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|200|500|1,000] of each of your final six creations to %san_bchq%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">&lt;player&gt;, for the second batch we need [D|200|500|1,000] cases of each of your final six creations, &lt;player&gt;. Then we'll be ready to get your application for %rank_5% into the appropriate parties...</Data></Cell>
+	 <Cell><Data ss:Type="String">&lt;player&gt;, for the second batch we need [Q|unit_case|200|500|1,000] of each of your final six creations, &lt;player&gt;. Then we'll be ready to get your application for %rank_5% into the appropriate parties...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank4_final_quest_part2_complete_1</Data></Cell>

@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Debug Console)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Debug Console)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- The interactive in-game viewer for the global `gDebugLog` array.
@@ -26,29 +26,41 @@ local filterOnColor = "66FF66"
 local filterOffColor = "999999"
 local consoleButtonStyle = { parent = devMenuStyle, font = consoleFont }
 
--- Global Tag Coloring configuration for text parsing
+-- Category colors mirror the canonical registry in ui/debug.lua.
 local categoryColors = {
-	DEFAULT		= "0xFFE2E2E2", -- White
-	ERROR		= "0xFFFF5252", -- Red
-	SIM			= "0xFFBB86FC", -- Purple
-	PLAYER		= "0xFF00E5FF", -- Cyan
-	QUEST		= "0xFFFFD54F", -- Gold
-	CHAR		= "0xFFFA708E", -- Coral
-	BUILDING	= "0xFFC48E7C", -- Tan
-	HAGGLE		= "0xFFFF9800", -- Orange
-	RECIPE		= "0xFFFFB74D", -- Caramel
-	TIP			= "0xFFF7D616", -- Yellow
-	DEV			= "0xFFF06292", -- Pink
-	DIALOGUE	= "0xFFF5F5F5", -- White
-	CATALOGUE	= "0xFF81C784", -- Sage
-	GENERAL		= "0xFFBDBDBD", -- Grey
-	LOAD		= "0xFF64B5F6", -- Light Blue
-	ECONOMY		= "0xFF4CE04C", -- Green
-	UI			= "0xFF80D8FF", -- Azure
-	AUDIO		= "0xFFE1BEE7", -- Lavender
-	FACTORY		= "0xFFFF5722", -- Rust
-	GAMBLE		= "0xFFEA00FF", -- Magenta
-	SAVE		= "0xFFA5FF00", -- Lime
+	DEFAULT		= "0xFFE2E2E2",
+	BUILDING	= "0xFFC48E7C",
+	CATALOGUE	= "0xFF81C784",
+	CHAR		= "0xFFFA708E",
+	COMMUNITY	= "0xFF90CAF9",
+	DEV			= "0xFFF06292",
+	DIALOGUE	= "0xFFF5F5F5",
+	DIFFICULTY	= "0xFFFFCC80",
+	ECONOMY	= "0xFF4CE04C",
+	ERROR		= "0xFFFF5252",
+	EVENT		= "0xFFFFE082",
+	FACTORY		= "0xFFFF5722",
+	FONT		= "0xFFB39DDB",
+	FREEPLAY	= "0xFF80CBC4",
+	GAMBLE		= "0xFFEA00FF",
+	GENERAL		= "0xFFBDBDBD",
+	HAGGLE		= "0xFFFF9800",
+	HINT		= "0xFFAED581",
+	HISCORE		= "0xFFFFD180",
+	KITCHEN		= "0xFFFFCCBC",
+	LOAD		= "0xFF64B5F6",
+	MIGRATION	= "0xFF9FA8DA",
+	PLAYER		= "0xFF00E5FF",
+	PORT		= "0xFF80DEEA",
+	QUEST		= "0xFFFFD54F",
+	RECIPE		= "0xFFFFB74D",
+	SAVE		= "0xFFA5FF00",
+	SIM			= "0xFFBB86FC",
+	TIP			= "0xFFF7D616",
+	TRAVEL		= "0xFF4DD0E1",
+	TUTORIAL	= "0xFFC5E1A5",
+	UI			= "0xFF80D8FF",
+	WARNING		= "0xFFFFB300",
 }
 
 local function Ceil(x) return Floor(x + 0.99999) end
@@ -63,21 +75,21 @@ local function Mod(a, n) if n == 0 then return a end return a - (n * Floor(a / n
 local function PopulateDisplay()
 	local linesOnScreen = Max(1, Floor((main_window_height - (4 * controlHeight) - padding) / logLineHeight))
 	local linesToDisplay = {}
-	
+
 	for i = 1, linesOnScreen do
 		local logIndex = topLineIndex + i - 1
 		if filteredLog[logIndex] then
 			local entry = filteredLog[logIndex]
 			local color = categoryColors[entry.category] or categoryColors.DEFAULT
-			
+
 			-- Sanitize the message text so the Engine doesn't think stray percentage signs are formatting args
 			local safeMessage = string.gsub(entry.message, "%%", "%%%%")
 			table.insert(linesToDisplay, string.format("<font color='%s'>[%d] [%s] %s</font>", color, entry.timestamp, entry.category, safeMessage))
 		end
 	end
-	
+
 	SetLabel("log_display_area", table.concat(linesToDisplay, "\n"))
-	
+
 	EnableWindow("scrollUp", topLineIndex > 1)
 	EnableWindow("scrollDown", topLineIndex + linesOnScreen <= table.getn(filteredLog))
 end
@@ -86,25 +98,25 @@ end
 local function ApplyFilters()
 	filteredLog = {}
 	local searchTerm = string.lower(gDebugFilters.searchTerm or "")
-	
+
 	for _, entry in ipairs(gDebugLog) do
 		local categoryMatch = gDebugFilters.categories[entry.category] or false
 		local searchMatch = (searchTerm == "") or string.find(string.lower(entry.message), searchTerm)
-		
+
 		if categoryMatch and searchMatch then
 			table.insert(filteredLog, entry)
 		end
 	end
-	
+
 	local linesOnScreen = Max(1, Floor((main_window_height - (4 * controlHeight) - padding) / logLineHeight))
-	
+
 	-- Auto-scroll to the absolute bottom of the log to see the newest entries
 	if table.getn(filteredLog) > linesOnScreen then
 		topLineIndex = table.getn(filteredLog) - linesOnScreen + 1
 	else
 		topLineIndex = 1
 	end
-	
+
 	PopulateDisplay()
 end
 
@@ -165,7 +177,7 @@ local function SetAllFilters(isEnabled)
 	ApplyFilters()
 end
 
--- Dumps the currently *visible* log block to a raw .txt file on the user's hard drive
+-- Writes the currently filtered log to a plain-text file.
 local function SaveLogToFile()
 	local playerName = Player.name or "Player"
 	local week = Player.time or 0
@@ -178,11 +190,11 @@ local function SaveLogToFile()
 
 		local lines = {}
 		for _, entry in ipairs(filteredLog) do
-			-- Strip out the HTML coloring for the raw text file
+			-- Export the raw message without UI markup.
 			local line = string.format("[%d] [%s] %s", entry.timestamp, entry.category, entry.message)
 			table.insert(lines, line)
 		end
-		
+
 		local contentString = table.concat(lines, "\n")
 		WriteToFile(fileName, contentString)
 
@@ -215,39 +227,39 @@ for i, category in ipairs(categories) do
 	local tempCategory = category
 	local col = Mod(i - 1, filter_buttons_per_row)
 	local row = Floor((i - 1) / filter_buttons_per_row)
-	
+
 	local x_pos = col * (filter_button_width + padding)
 	local y_pos = row * (controlHeight + padding)
-	
-	table.insert(filterButtons, Button { 
-		x = x_pos, y = y_pos, w = filter_button_width, h = controlHeight, 
-		name = "#filter_" .. tempCategory, 
-		label = tempCategory, 
+
+	table.insert(filterButtons, Button {
+		x = x_pos, y = y_pos, w = filter_button_width, h = controlHeight,
+		name = "#filter_" .. tempCategory,
+		label = tempCategory,
 		type = kPush,
-		command = function() ToggleCategoryFilter(tempCategory) end 
+		command = function() ToggleCategoryFilter(tempCategory) end
 	})
 end
 
 MakeDialog
 {
 	name = "dev_console",
-	BSGWindow { 
-		x = 0, y = 0, w = kScreenWidth, h = kScreenHeight, color = { 0.1, 0.1, 0.1, 0.85 }, 
-		
-		Window { 
+	BSGWindow {
+		x = 0, y = 0, w = kScreenWidth, h = kScreenHeight, color = { 0.1, 0.1, 0.1, 0.85 },
+
+		Window {
 			x = kCenter, y = kCenter, w = w, h = main_window_height,
 			SetStyle(consoleButtonStyle),
 
 			Button { x = 5, y = 0, w = 200, h = controlHeight, label = "#<b>DEBUG CONSOLE</b>", font = titleFont },
 			Button { x = w - 60, y = 0, w = 60, h = controlHeight, label = "#<b>CLOSE</b>", font = titleFont, default = true, cancel = true, close = true },
-			
+
 			-- Search Bar & Master Filters
-			Window { 
+			Window {
 				x = 5, y = y_search, w = w - 10, h = controlHeight,
 				Bitmap { x = 0, y = 0, w = 155, h = controlHeight, image = "image/textfield",
-					TextEdit { 
-						x = 5, y = 0, w = 145, h = controlHeight, 
-						name = "search_box", label = (gDebugFilters.searchTerm or ""), 
+					TextEdit {
+						x = 5, y = 0, w = 145, h = controlHeight,
+						name = "search_box", label = (gDebugFilters.searchTerm or ""),
 						length = 50, onkey = UpdateSearchTerm, font = searchBoxFont,
 					},
 				},
@@ -264,10 +276,10 @@ MakeDialog
 			-- Log Display Area
 			Window {
 				x = 5, y = y_log_start, w = w - 10, h = main_window_height - y_log_start - padding,
-				Text { 
-					x = 5, y = 0, w = w - 45, h = kMax, 
+				Text {
+					x = 5, y = 0, w = w - 45, h = kMax,
 					name = "log_display_area", label = "", font = consoleFont,
-					flags = kHAlignLeft + kVAlignTop 
+					flags = kHAlignLeft + kVAlignTop
 				},
 				Button { x = w - 40, y = 0, w = 20, h = controlHeight, label = "#^", font = titleFont, command = ScrollUp, name = "scrollUp" },
 				Button { x = w - 40, y = controlHeight + padding, w = 20, h = controlHeight, label = "#v", font = titleFont, command = ScrollDown, name = "scrollDown" },

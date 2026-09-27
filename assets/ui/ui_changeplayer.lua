@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Change Player Dialog)
+	Chocolatier: Decadence by Design Reforged (Change Player Dialog)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- Safety hook: Save the current player's state before they switch profiles
@@ -13,8 +13,8 @@ Player:SaveGame()
 -------------------------------------------------------------------------------
 
 local function okFunction()
-	DebugOut("UI", string.format("Profile Selected: Loading user '%s'.", GetCurrentUserName()))
-	Player:LoadGame()
+	DebugOut("UI", string.format("Loading selected profile '%s'.", GetCurrentUserName()))
+	Player:LoadGame("story")
 	FadeCloseWindow("changeplayer", "ok")
 end
 
@@ -26,14 +26,14 @@ end
 local function UpdatePlayers()
 	local n = GetNumUsers()
 	local i = 0
-	
+
 	-- Fill slots with existing player names
 	while i < n do
 		i = i + 1
 		SetLabel("name" .. i, GetUserName(i - 1))
 		SetBitmap("icon" .. i, "image/indicatorlight_off")
 	end
-	
+
 	-- Clear out the remaining empty slots
 	while i < 10 do
 		i = i + 1
@@ -67,10 +67,10 @@ end
 local function DeletePlayer()
 	local currentName = GetCurrentUserName()
 	DebugOut("UI", string.format("Player initiated deletion sequence for profile: %s", currentName))
-	
+
 	local promptStr = GetString("confirm_delete", currentName)
 	local yn = DisplayDialog { "ui/ui_generic_yn.lua", text = "#" .. promptStr }
-	
+
 	if yn == "yes" then
 		DebugOut("SAVE", string.format("Profile deletion confirmed: %s", currentName))
 		local n = GetCurrentUser()
@@ -84,7 +84,7 @@ end
 local function RenamePlayer()
 	local name = GetCurrentUserName()
 	DebugOut("UI", string.format("Player initiated rename sequence for profile: %s", name))
-	
+
 	local newName = DisplayDialog { "ui/ui_entername.lua", name = name }
 	if newName and newName ~= "" and newName ~= name then
 		DebugOut("SAVE", string.format("Profile renamed: '%s' -> '%s'.", name, newName))
@@ -100,20 +100,20 @@ end
 local function NewPlayer()
 	DebugOut("UI", "Player initiated New Profile creation sequence.")
 	local newName = DisplayDialog { "ui/ui_entername.lua" }
-	
+
 	if newName and newName ~= "" then
 		local difficultyChoice = DisplayDialog { "ui/ui_difficulty.lua" }
-		
+
 		-- Proceed only if the player actually selected a difficulty and didn't cancel
-		if difficultyChoice then 
-			DebugOut("SAVE", string.format("Creating new profile: '%s' (Difficulty: %d)", newName, difficultyChoice))
+		if difficultyChoice then
+			DebugOut("SAVE", string.format("Creating profile '%s' at difficulty tier %d.", newName, difficultyChoice))
 			CreateNewUser(newName)
-			
+
 			Player:Reset()
 			Player.name = newName
 			Player.stringTable.player = Player.name
-			Player.difficulty = difficultyChoice 
-			
+			Player.difficulty = difficultyChoice
+
 			Player:SaveGame()
 			UpdatePlayers()
 		end
@@ -140,21 +140,21 @@ MakeDialog
 		x = 1000, y = kCenter, image = "image/popup_back_generic_1",
 
 		AppendStyle { font = StandardButtonFont, type = kRadio, sound = kDefaultcontrolSound, graphics = {} },
-		
+
 		-- Column 1
 		Button { x = 40, y = 57 - 4,  h = 40, fit = true, name = "select1", command = function() SelectPlayer(1) end, PlayerInfo(1) },
 		Button { x = 40, y = 89 - 4,  h = 40, fit = true, name = "select2", command = function() SelectPlayer(2) end, PlayerInfo(2) },
 		Button { x = 40, y = 121 - 4, h = 40, fit = true, name = "select3", command = function() SelectPlayer(3) end, PlayerInfo(3) },
 		Button { x = 40, y = 153 - 4, h = 40, fit = true, name = "select4", command = function() SelectPlayer(4) end, PlayerInfo(4) },
 		Button { x = 40, y = 185 - 4, h = 40, fit = true, name = "select5", command = function() SelectPlayer(5) end, PlayerInfo(5) },
-		
+
 		-- Column 2
 		Button { x = 251, y = 57 - 4,  h = 40, fit = true, name = "select6", command = function() SelectPlayer(6) end, PlayerInfo(6) },
 		Button { x = 251, y = 89 - 4,  h = 40, fit = true, name = "select7", command = function() SelectPlayer(7) end, PlayerInfo(7) },
 		Button { x = 251, y = 121 - 4, h = 40, fit = true, name = "select8", command = function() SelectPlayer(8) end, PlayerInfo(8) },
 		Button { x = 251, y = 153 - 4, h = 40, fit = true, name = "select9", command = function() SelectPlayer(9) end, PlayerInfo(9) },
 		Button { x = 251, y = 185 - 4, h = 40, fit = true, name = "select10", command = function() SelectPlayer(10) end, PlayerInfo(10) },
-		
+
 		SetStyle(C3ButtonStyle),
 		Button { x = kCenter - 133, y = 230, name = "newplayer", command = NewPlayer, label = "newplayer" },
 		Button { x = kCenter, y = 230, name = "renameplayer", command = RenamePlayer, label = "renameplayer" },

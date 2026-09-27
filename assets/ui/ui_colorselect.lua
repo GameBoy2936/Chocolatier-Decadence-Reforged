@@ -1,10 +1,10 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Color Palette Picker)
+	Chocolatier: Decadence by Design Reforged (Color Palette Picker)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
--- This script renders a popup grid of colors. It is primarily utilized by 
+-- This script renders a popup grid of colors. It is primarily utilized by
 -- the custom recipe creator allowing players to tint their chocolates.
 
 local xDialog = gDialogTable.x or kCenter
@@ -20,21 +20,21 @@ for n, c in ipairs(colors) do
 	-- Calculate grid position: 12 colors per row
 	local x = Mod(n - 1, 12)
 	local y = Floor((n - 1) / 12)
-	
+
 	-- Each swatch is 20x20 pixels with a 2-pixel margin (22px total footprint)
 	x = x * 22
 	y = y * 22
-	
+
 	local index = n
-	
+
 	table.insert(buttons,
-		Button { 
-			x = x, y = y, w = 20, h = 20, 
-			graphics = {}, 
+		Button {
+			x = x, y = y, w = 20, h = 20,
+			graphics = {},
 			Rectangle { x = 0, y = 0, w = 20, h = 20, color = c },
-			command = function() 
+			command = function()
 				DebugOut("UI", string.format("Color selected: Index %d", index))
-				CloseWindow(index) 
+				CloseWindow(index)
 			end,
 		}
 	)
@@ -48,13 +48,13 @@ MakeDialog
 {
 	BSGWindow
 	{
-		name = "colors", 
-		x = xDialog, y = yDialog, 
-		fit = true, 
-		frame = "controls/rollover", 
-		color = WhiteColor, 
+		name = "colors",
+		x = xDialog, y = yDialog,
+		fit = true,
+		frame = "controls/rollover",
+		color = WhiteColor,
 		pad = 2,
-		
+
 		Group(buttons),
 	}
 }

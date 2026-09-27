@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three Port Data: Reykjavík, Iceland
+	Chocolatier: Decadence by Design Reforged (Port Data - Reykjavík, Iceland)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -35,15 +35,17 @@ rey_inn.x = 736
 rey_inn.y = 216
 rey_inn.layer = 901
 
---
---
+-- LIVING CHARACTER MOBILITY
+-- Venue metadata stays with the geography it describes.
+rey_inn:SetMobilityProfile({ lodging=true }, nil)
+
 CreateSprite("rey_streetmask", reykjavik)
 rey_streetmask.x = 400
 rey_streetmask.y = 249.5
 rey_streetmask.layer = 960
 
---ANIMATIONS
---Ice flow -Yes Bears
+-- ANIMATIONS
+-- Ice flow -Yes Bears
 CreateSprite("rey_iceflow_bear", reykjavik)
 rey_iceflow_bear.images = {"ports/reykjavik/rey_icebear1","ports/reykjavik/rey_icebear2"}
 rey_iceflow_bear.time=60000
@@ -53,7 +55,7 @@ rey_iceflow_bear.layer=964
 rey_iceflow_bear.scale=1.0
 rey_iceflow_bear.path= {{-150,283},{-9,283},{836,283},{825,283}}
 
---Ice flows -No Bears
+-- Ice flows -No Bears
 CreateSprite("rey_iceflow1", reykjavik)
 rey_iceflow1.images = {"ports/reykjavik/rey_ice1","ports/reykjavik/rey_ice2","ports/reykjavik/rey_ice3","ports/reykjavik/rey_ice4"}
 rey_iceflow1.time=50000
@@ -90,7 +92,7 @@ rey_iceflow4.layer=968
 rey_iceflow4.scale=1.0
 rey_iceflow4.path= {{-150,294},{-9,294},{836,294},{825,294}}
 
---Star Twinkles
+-- Star Twinkles
 CreateSprite("rey_startwinkle1", reykjavik)
 rey_startwinkle1.image = "ports/animations/startwinkleb.xml"
 rey_startwinkle1.frequency = 100

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE sequence SYSTEM "sidewalkdtd">
 <sequence name="E:\bigsplash\c3\temp\rollover.xml" source=".\rollover/rollover*.png">
-  <img regx="2.000000" regy="2.000000" name="rollover.jpg" mask="rollover.mask_old.png" w="0.000000" h="0.000000"/>
+  <img regx="2.000000" regy="2.000000" name="rollover.jpg" mask="rollover.mask.png" w="0.000000" h="0.000000"/>
   <framelist>  
   <frame regx="4" regy="4" name="rollover_01.png" w="4" h="4" x="0" y="0"/>
     <frame regx="0" regy="4" name="rollover_02.png" w="4" h="4" x="5" y="0"/>

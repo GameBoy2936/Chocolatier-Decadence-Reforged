@@ -1,8 +1,7 @@
 --[[--------------------------------------------------------------------------
-	Chocolatier Three: Quests
+	Chocolatier: Decadence by Design Reforged (Quests)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]--------------------------------------------------------------------------
-
 
 CreateQuest
 {
@@ -13,7 +12,7 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	require = { RequireMinRank(2), RequireQuestComplete("rank2_01"), RequireQuestIncomplete("rank2_coffee01") },
-  	repeatable = 0,
+	repeatable = 0,
 	visible = false,
 }
 
@@ -28,8 +27,8 @@ CreateQuest
 	onaccept = { AwardText("rank2_01_extra01", nil, {label = "rank2_01_extra01_label", length = "extralong"}), AwardUnlockIngredient("peanut"), AwardUnlockIngredient("hazelnut"), AwardUnlockIngredient("almond")},
 	require = { RequireMinRank(2)},
 	oncomplete = {AwardOfferQuest("rank2_02"), AwardDelayQuest("rank2_precoffee_hint", 4), AwardUnlockCharacter("main_feli")},
-    oncomplete_label = "rank2_01_complete_label",
-	oncomplete_label_length = "long",
+	oncomplete_label = "rank2_01_complete_label",
+	oncomplete_length = "long",
 }
 
 CreateQuest
@@ -43,17 +42,17 @@ CreateQuest
 	defer_length = "long",
 	reject = "none",
 	goals = { RequireItem("b04", 20), HintPerson("zur_schoolkeep", "zur_school", "zurich")},
-    goals_medium = { RequireItem("b04", 30), HintPerson("zur_schoolkeep", "zur_school", "zurich")},
-    goals_hard = { RequireItem("b04", 45), HintPerson("zur_schoolkeep", "zur_school", "zurich")},
+	goals_medium = { RequireItem("b04", 30), HintPerson("zur_schoolkeep", "zur_school", "zurich")},
+	goals_hard = { RequireItem("b04", 45), HintPerson("zur_schoolkeep", "zur_school", "zurich")},
 	onaccept = {AwardUnlockIngredient("peanut"), AwardUnlockIngredient("hazelnut"), AwardUnlockIngredient("almond")},
 	require = { RequireMinRank(2), RequireQuestComplete("rank2_01")},
 	oncomplete = { AwardItem("b04", -20), AwardOfferQuest("rank2_03"), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardUnlockCharacter("zur_schoolkeep")},
-    oncomplete_medium = { AwardItem("b04", -30), AwardOfferQuest("rank2_03"), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardUnlockCharacter("zur_schoolkeep")},
-    oncomplete_hard = { AwardItem("b04", -45), AwardOfferQuest("rank2_03"), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardUnlockCharacter("zur_schoolkeep")},
-    oncomplete_label = "yourewelcome",
-	oncomplete_label_length = "long",
-    onincomplete_label = "notjustyet",
-	onincomplete_label_length = "long",
+	oncomplete_medium = { AwardItem("b04", -30), AwardOfferQuest("rank2_03"), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardUnlockCharacter("zur_schoolkeep")},
+	oncomplete_hard = { AwardItem("b04", -45), AwardOfferQuest("rank2_03"), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardUnlockCharacter("zur_schoolkeep")},
+	oncomplete_label = "yourewelcome",
+	oncomplete_length = "long",
+	onincomplete_label = "notjustyet",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -67,16 +66,16 @@ CreateQuest
 	defer_length = "long",
 	reject = "none",
 	goals = { RequireItem("b04", 30), HintPerson("cap_mountainkeep", "cap_mountain", "capetown")},
-    goals_medium = { RequireItem("b04", 45), HintPerson("cap_mountainkeep", "cap_mountain", "capetown")},
-    goals_hard = { RequireItem("b04", 60), HintPerson("cap_mountainkeep", "cap_mountain", "capetown")},
+	goals_medium = { RequireItem("b04", 45), HintPerson("cap_mountainkeep", "cap_mountain", "capetown")},
+	goals_hard = { RequireItem("b04", 60), HintPerson("cap_mountainkeep", "cap_mountain", "capetown")},
 	oncomplete = {AwardItem("b04", -30), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardUnlockIngredient("mint"), AwardUnlockIngredient("orange"), AwardUnlockIngredient("lemon"), AwardUnlockCharacter("cap_mountainkeep"), AwardDiscoverPreference("cap_mountainkeep", "like", "peanut")},
 	oncomplete_medium = {AwardItem("b04", -45), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardUnlockIngredient("mint"), AwardUnlockIngredient("orange"), AwardUnlockIngredient("lemon"), AwardUnlockCharacter("cap_mountainkeep"), AwardDiscoverPreference("cap_mountainkeep", "like", "peanut")},
 	oncomplete_hard = {AwardItem("b04", -60), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardUnlockIngredient("mint"), AwardUnlockIngredient("orange"), AwardUnlockIngredient("lemon"), AwardUnlockCharacter("cap_mountainkeep"), AwardDiscoverPreference("cap_mountainkeep", "like", "peanut")},
-	require = { RequireMinRank(2), RequireQuestComplete("rank2_02")}, 
-    oncomplete_label = "goodtoknow",
-	oncomplete_label_length = "long",
-    onincomplete_label = "isee",
-	onincomplete_label_length = "long",
+	require = { RequireMinRank(2), RequireQuestComplete("rank2_02")},
+	oncomplete_label = "goodtoknow",
+	oncomplete_length = "long",
+	onincomplete_label = "isee",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -95,10 +94,10 @@ CreateQuest
 	oncomplete_medium = {IncrementVariable("rank2_work"),  IncrementVariable("lab"), AwardItem("b06", -25), AwardMoney(20000), AwardDiscoverPreference("zur_towerkeep", "like", "almond")},
 	oncomplete_hard = {IncrementVariable("rank2_work"),  IncrementVariable("lab"), AwardItem("b06", -40), AwardMoney(32500), AwardDiscoverPreference("zur_towerkeep", "like", "almond")},
 	require = { RequireMinRank(2) },
-    oncomplete_label = "mypleasure",
-	oncomplete_label_length = "long",
-    onincomplete_label = "illgetrightonit",
-	onincomplete_label_length = "long",
+	oncomplete_label = "mypleasure",
+	oncomplete_length = "long",
+	onincomplete_label = "illgetrightonit",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -121,10 +120,10 @@ CreateQuest
 	oncomplete_medium = {IncrementVariable("rank2_work"),  IncrementVariable("lab"), AwardItem("b08", -45), AwardUnlockCharacter("zur_mountainkeep")},
 	oncomplete_hard = {IncrementVariable("rank2_work"),  IncrementVariable("lab"), AwardItem("b08", -58), AwardUnlockCharacter("zur_mountainkeep")},
 	require = { RequireMinRank(2), RequireQuestComplete("rank2_03")},
-    oncomplete_label = "imgladyoulikethem",
-	oncomplete_label_length = "long",
-    onincomplete_label = "youmayberight",
-	onincomplete_label_length = "long",
+	oncomplete_label = "imgladyoulikethem",
+	oncomplete_length = "long",
+	onincomplete_label = "youmayberight",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -144,10 +143,10 @@ CreateQuest
 	oncomplete_medium = {AwardHappiness("cap_marketkeep", 100), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardItem("b10", -32), AwardItem("sugar", 1500), AwardDiscoverPreference("cap_marketkeep", "like", "mint")},
 	oncomplete_hard = {AwardHappiness("cap_marketkeep", 100), IncrementVariable("lab"), IncrementVariable("rank2_work"), AwardItem("b10", -46), AwardItem("sugar", 2000), AwardDiscoverPreference("cap_marketkeep", "like", "mint")},
 	require = {RequireMinRank(2), RequireQuestComplete("rank2_03")},
-    oncomplete_label = "pleasuredoingbusiness",
-	oncomplete_label_length = "long",
-    onincomplete_label = "theyareontheirway",
-	onincomplete_label_length = "long",
+	oncomplete_label = "pleasuredoingbusiness",
+	oncomplete_length = "long",
+	onincomplete_label = "theyareontheirway",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -161,15 +160,15 @@ CreateQuest
 	goals_medium = { RequireItem("b11", 50), HintPerson("evil_bian", "tan_bar", "tangiers")},
 	goals_hard = { RequireItem("b11", 100), HintPerson("evil_bian", "tan_bar", "tangiers")},
 	onaccept = {AwardItem("honey", 100), AwardUnlockIngredient("honey")},
-	onreject = {AwardText("rank2_07_rejected", nil, {mood = "angry"})},
+	onreject = {AwardText("rank2_07_rejected"), nil, {mood = "angry"}},
 	oncomplete = {AwardHappiness("evil_bian", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b11", -25), AwardUnlockIngredient("apricot"), AwardDiscoverPreference("evil_bian", "like", "honey")},
 	oncomplete_medium = {AwardHappiness("evil_bian", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b11", -50), AwardUnlockIngredient("apricot"), AwardDiscoverPreference("evil_bian", "like", "honey")},
 	oncomplete_hard = {AwardHappiness("evil_bian", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b11", -100), AwardUnlockIngredient("apricot"), AwardDiscoverPreference("evil_bian", "like", "honey")},
 	require = { RequireMinRank(2)},
 	oncomplete_label = "allright",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "myapologies",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -190,9 +189,9 @@ CreateQuest
 	oncomplete_hard = {AwardDelayQuest("rank2_coffee16", 2), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b09", -25)},
 	require = {RequireMinRank(2)},
 	oncomplete_label = "soundsgood",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "theyrecomingalong",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -227,9 +226,9 @@ CreateQuest
 	oncomplete_hard = {AwardHappiness("dou_plantationkeep", 100), IncrementVariable("rank2_work"), IncrementVariable("lab"), AwardItem("b12", -60), AwardMoney(85000), AwardDiscoverPreference("dou_plantationkeep", "like", "dou_cacao")},
 	require = {RequireMinRank(2), RequireAbsoluteTime(24)},
 	oncomplete_label = "thanks",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "iknow",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -253,9 +252,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"),  AwardItem("b07", -33)},
 	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome")},
 	oncomplete_label = "thanks",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "iknow",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -274,9 +273,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"), AwardMoney(32500), AwardItem("b08", -50)},
 	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome")},
 	oncomplete_label = "enjoy",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "illgetbacktoyou",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -295,9 +294,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"), AwardMoney(11000), AwardItem("b01", -80), AwardDiscoverPreference("zur_stationkeep", "like", "b01")},
 	require = {RequireMinRank(2), RequireQuestComplete("tedd_welcome")},
 	oncomplete_label = "lookingforwardtoit",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "illgetthemmade",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -309,13 +308,13 @@ CreateQuest
 	reject = "none",
 	visible = false,
 	onaccept = {AwardUnlockIngredient("anise"), AwardUnlockIngredient("currant"), AwardUnlockIngredient("cayenne")},
-	require = { RequireMinRank(2), RequireVariableMoreThan("lab", 3)}, 
+	require = { RequireMinRank(2), RequireVariableMoreThan("lab", 3)},
 }
 
 CreateQuest
 {
 	name = "open_reyk_prompt",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	ender = "main_feli",
 	priority = 1,
 	accept = "willdo",
@@ -346,7 +345,7 @@ CreateQuest
 	require_hard = { RequireMinRank(2),  RequireVariableMoreThan("rank2_work", 3)},
 	onaccept = { AwardText("open_reyk_extra01", nil, {label = "open_reyk_extra01_label", length = "extralong"}), AwardUnlockPort("reykjavik"), AwardCustomSlot(), AwardDelayQuest("ugr_prompt", 15), AwardDelayQuest("open_reyk_prompt", 28)},
 	goals = {HintPerson("main_tedd", "rey_kitchen", "reykjavik")},
-	oncomplete = {AwardOfferQuest("tedd_welcome")},  
+	oncomplete = {AwardOfferQuest("tedd_welcome")},
 }
 
 CreateQuest
@@ -363,7 +362,7 @@ CreateQuest
 CreateQuest
 {
 	name = "ugr_prompt",
-	starter = {"zur_factorykeep", "tor_factorykeep", "main_alex", "main_chas", "main_deit", "main_elen", "main_evan", "main_feli", "main_jose", "main_sean", "main_tedd", "main_whit", "main_zach", "tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"zur_factorykeep", "tor_factorykeep", "main_alex", "main_chas", "main_deit", "main_elen", "main_evan", "main_feli", "main_jose", "main_sean", "main_tedd", "main_whit", "main_zach", "tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -387,16 +386,16 @@ CreateQuest
 	goals = { RequireItem("user1", 10), HintPerson("zur_shopkeep", "zur_shop", "zurich")},
 	goals_medium = { RequireItem("user1", 15), HintPerson("zur_shopkeep", "zur_shop", "zurich")},
 	goals_hard = { RequireItem("user1", 25), HintPerson("zur_shopkeep", "zur_shop", "zurich")},
-	oncomplete = {AwardHappiness("zur_shopkeep", 100), AwardItem("user1", -10), AwardMoney(10000), AwardDelayQuest("ugr_02", 8), AwardDiscoverPreference("announcer", "like", "user")},  
-	oncomplete_medium = {AwardHappiness("zur_shopkeep", 100), AwardItem("user1", -15), AwardMoney(15000), AwardDelayQuest("ugr_02", 8), AwardDiscoverPreference("announcer", "like", "user")},  
+	oncomplete = {AwardHappiness("zur_shopkeep", 100), AwardItem("user1", -10), AwardMoney(10000), AwardDelayQuest("ugr_02", 8), AwardDiscoverPreference("announcer", "like", "user")},
+	oncomplete_medium = {AwardHappiness("zur_shopkeep", 100), AwardItem("user1", -15), AwardMoney(15000), AwardDelayQuest("ugr_02", 8), AwardDiscoverPreference("announcer", "like", "user")},
 	oncomplete_hard = {AwardHappiness("zur_shopkeep", 100), AwardItem("user1", -25), AwardMoney(25000), AwardDelayQuest("ugr_02", 8), AwardDiscoverPreference("announcer", "like", "user")},
-    isReal = true,
+	isReal = true,
 }
 
 CreateQuest
 {
 	name = "rank2_coffee01_prompt",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "goodtoknow",
 	accept_length = "long",
 	defer = "none",
@@ -405,7 +404,7 @@ CreateQuest
 	priority = 20,
 	repeatable = 8,
 	visible = false,
-	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome"), RequireRecipe("user1"), RequireVariableMoreThan("rank2_work", 4), RequireQuestNotActive("rank2_coffee01"), RequireQuestIncomplete("rank2_coffee01")}, 
+	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome"), RequireRecipe("user1"), RequireVariableMoreThan("rank2_work", 4), RequireQuestNotActive("rank2_coffee01"), RequireQuestIncomplete("rank2_coffee01")},
 }
 
 CreateQuest
@@ -420,7 +419,7 @@ CreateQuest
 	priority = 1,
 	repeatable = 0,
 	visible = false,
-	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome"), RequireVariableMoreThan("rank2_work", 3), RequireVariableMoreThan("ugr_slots", 0), RequireQuestNotActive("rank2_coffee01"), RequireQuestIncomplete("rank2_coffee01")}, 
+	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome"), RequireVariableMoreThan("rank2_work", 3), RequireVariableMoreThan("ugr_slots", 0), RequireQuestNotActive("rank2_coffee01"), RequireQuestIncomplete("rank2_coffee01")},
 }
 
 CreateQuest
@@ -435,7 +434,7 @@ CreateQuest
 	reject = "none",
 	autoComplete = true,
 	onaccept = {AwardUnlockHistory("catalogue_history_journal_felix_coffee"), AwardUnlockPort("kona"), AwardUnlockIngredient("kon_coffee"), AwardUnlockIngredient("cream"), AwardOfferQuest("rank2_coffee02")},
-	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome"), RequireRecipe("user1"), RequireVariableMoreThan("rank2_work", 3)}, 
+	require = { RequireMinRank(2), RequireQuestComplete("tedd_welcome"), RequireRecipe("user1"), RequireVariableMoreThan("rank2_work", 3)},
 }
 
 CreateQuest
@@ -504,7 +503,7 @@ CreateQuest
 {
 	name = "rank2_coffee03",
 	starter = "main_feli",
-	ender = "zur_schoolkeep",	
+	ender = "zur_schoolkeep",
 	accept = "imready",
 	accept_length = "long",
 	defer = "none",
@@ -539,12 +538,11 @@ CreateQuest
 {
 	name = "rank2_coffee04",
 	starter = "main_feli",
-	ender = "zur_schoolkeep",	
+	ender = "zur_schoolkeep",
 	accept = "sure",
 	defer = "anothertime",
 	reject = "nothankyou",
 	require = { RequireQuestActive("meta_feli")},
---	onaccept = {AwardUnblockBuilding("cap_factory"), AwardBuildingOwned("cap_factory"), AwardRecipe("c01")},
 	goals = {RequireItem("c05", 75),  HintPerson("zur_schoolkeep", "zur_school", "zurich")},
 	goals_medium = {RequireItem("c05", 100),  HintPerson("zur_schoolkeep", "zur_school", "zurich")},
 	goals_hard = {RequireItem("c05", 125),  HintPerson("zur_schoolkeep", "zur_school", "zurich")},
@@ -556,10 +554,9 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_coffee05",
-	starter = "tan_hotelkeep",	
+	starter = "tan_hotelkeep",
 	accept = "illdoit",
 	defer = "maybelater",
---	reject = "none",
 	require = { RequireRecipe("c01"), RequireRecipe("c05"), RequireRecipe("c07")},
 	goals = {RequireItem("c01", 65), RequireItem("c05", 65), RequireItem("c07", 65), HintPerson("tan_hotelkeep", "tan_hotel", "tangiers")},
 	goals_medium = {RequireItem("c01", 80), RequireItem("c05", 80), RequireItem("c07", 80), HintPerson("tan_hotelkeep", "tan_hotel", "tangiers")},
@@ -572,10 +569,9 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_coffee06",
-	starter = "kon_marketkeep",	
+	starter = "kon_marketkeep",
 	accept = "itsadeal",
 	defer = "maybelater",
---	reject = "none",
 	require = { RequireRecipe("c01"), RequireRecipe("c05")},
 	goals = {RequireItem("c01", 75), RequireItem("c05", 75), HintPerson("kon_marketkeep", "kon_market", "kona")},
 	goals_medium = {RequireItem("c01", 90), RequireItem("c05", 90), HintPerson("kon_marketkeep", "kon_market", "kona")},
@@ -662,7 +658,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_coffee17a_prompt",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -747,7 +743,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_coffee18_prompt",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "ok",
 	defer = "none",
 	reject = "none",
@@ -809,16 +805,16 @@ CreateQuest
 	goals = { RequireItem("c05", 100), RequireItem("user2", 100), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_medium = { RequireItem("c05", 150), RequireItem("user2", 150), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_hard = { RequireItem("c05", 200), RequireItem("user2", 200), HintPerson("main_zach", "tan_shop", "tangiers")},
-	oncomplete = { IncrementVariable("tanshop"), AwardItem("user2", -100), AwardItem("c05", -100), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
-	oncomplete_medium = { IncrementVariable("tanshop"), AwardItem("user2", -150), AwardItem("c05", -150), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
-	oncomplete_hard = { IncrementVariable("tanshop"), AwardItem("user2", -200), AwardItem("c05", -200), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
+	oncomplete = { IncrementVariable("tanshop"), AwardItem("user2", -100), AwardItem("c05", -100), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("tan_shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
+	oncomplete_medium = { IncrementVariable("tanshop"), AwardItem("user2", -150), AwardItem("c05", -150), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("tan_shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
+	oncomplete_hard = { IncrementVariable("tanshop"), AwardItem("user2", -200), AwardItem("c05", -200), AwardBuildingOwned("tan_shop"), IncrementVariable("shopsowned"), AwardText("tanshop_02_extra01"), AwardDelayQuest("tan_shop_owned_00", 11), AwardUnlockCharacter("main_zach"), AwardUnlockCharacter("tor_bldg2keep"), AwardUnlockCharacter("wel_bldg1keep"), AwardUnlockCharacter("dou_bldg1keep"), AwardUnlockCharacter("bag_bldg2keep"), AwardUnlockCharacter("kon_bldg2keep"), AwardUnlockCharacter("rey_xxxxkeep"), AwardUnlockCharacter("tor_bldg1keep"), AwardUnlockCharacter("zur_riverkeep"), AwardUnlockCharacter("tor_bldg2keep")},
 	require = {RequireQuestComplete("tanshop_01")},
 }
 
 CreateQuest
 {
 	name = "rank2_coffee19_prompt",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "illdoit",
 	defer = "none",
 	reject = "none",
@@ -853,7 +849,6 @@ CreateQuest
 	starter = "hav_plantationkeep",
 	accept = "soundsgood",
 	defer = "laterperhaps",
---	reject = "none",
 	require = { RequireMinRank(2), RequireRecipe("c03"), RequireIngredientAvailable("kon_coffee"), RequireIngredientAvailable("hav_coffee"), RequireIngredientAvailable("tan_coffee"), RequireNoOffers(1) },
 	onaccept = {AwardText("rank2_coffee20_extra01")},
 	goals = {RequireItem("c03", 75), HintPerson("hav_plantationkeep", "hav_plantation", "havana")},
@@ -954,36 +949,36 @@ CreateQuest
 	reject = "none",
 	goals = {HintPerson("main_alex", "ulu_rock", "uluru")},
 	onaccept = {AwardUnlockPort("uluru"), AwardPlaceCharacter("main_alex", "ulu_rock")},
-	oncomplete = {AwardCustomSlot(), AwardDialog("recipes"), AwardText("ugr_02_extra01", nil, {label = "isee"}), AwardText("ugr_02_extra01", nil, {label = "ugr_02_extra02_label"}), AwardRemoveCharacter("main_alex", "ulu_rock"), AwardDelayQuest("ugr_prompt", 15), AwardDelayQuest("ugr_02b_prompt", 29)},
+	oncomplete = {AwardUnlockHistory("catalogue_history_letter_alex_sean_2"), AwardCustomSlot(), AwardDialog("recipes"), AwardText("ugr_02_extra01", nil, {label = "isee"}), AwardText("ugr_02_extra01", nil, {label = "ugr_02_extra02_label"}), AwardRemoveCharacter("main_alex", "ulu_rock"), AwardDelayQuest("ugr_prompt", 15), AwardDelayQuest("ugr_02b_prompt", 29)},
 	require = { RequireMinRank(2), RequireQuestComplete("ugr_01"), RequireRecipe("c01"), RequireRecipe("c05"), RequireQuestComplete("rank2_coffee03"), RequireNoOffers(2), RequireNoCompletes(1), RequireVariableEqual("ugr_slots", 0)},
 	require_medium = { RequireMinRank(2), RequireQuestComplete("ugr_01"), RequireRecipe("c01"), RequireRecipe("c05"), RequireRecipesMade(2, "beverage"), RequireQuestComplete("rank2_coffee03"), RequireNoOffers(2), RequireNoCompletes(1), RequireVariableEqual("ugr_slots", 0)},
 	require_hard = { RequireMinRank(2), RequireQuestComplete("ugr_01"), RequireRecipe("c01"), RequireRecipe("c05"), RequireRecipesMade(4, "beverage"), RequireQuestComplete("rank2_coffee03"), RequireNoOffers(2), RequireNoCompletes(1), RequireVariableEqual("ugr_slots", 0)},
-    isReal = true,
+	isReal = true,
 	oncomplete_label = "thankyou",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 }
 
 CreateQuest
 {
-    name = "rank2_ulu_hut",
-    starter = "ulu_hutkeep",
-    accept = "rank2_ulu_hut_offer_accept",
+	name = "rank2_ulu_hut",
+	starter = "ulu_hutkeep",
+	accept = "rank2_ulu_hut_offer_accept",
 	accept_length = "long",
-    defer = "rank2_ulu_hut_offer_defer",
+	defer = "rank2_ulu_hut_offer_defer",
 	defer_length = "long",
-    reject = "none",
-    require = { RequireQuestComplete("ugr_02") },
-    onaccept = {AwardText("rank2_ulu_hut_extra01", nil, {label = "youhavemyword", length = "long"})},
-    goals = {RequireItem("b02", 50), HintPerson("ulu_hutkeep", "ulu_hut", "uluru")},
-    goals_medium = {RequireItem("b02", 75), HintPerson("ulu_hutkeep", "ulu_hut", "uluru")},
+	reject = "none",
+	require = { RequireQuestComplete("ugr_02") },
+	onaccept = {AwardText("rank2_ulu_hut_extra01", nil, {label = "youhavemyword", length = "long"})},
+	goals = {RequireItem("b02", 50), HintPerson("ulu_hutkeep", "ulu_hut", "uluru")},
+	goals_medium = {RequireItem("b02", 75), HintPerson("ulu_hutkeep", "ulu_hut", "uluru")},
 	goals_hard = {RequireItem("b02", 100), HintPerson("ulu_hutkeep", "ulu_hut", "uluru")},
-    oncomplete = {AwardItem("b02", -50), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
-    oncomplete_medium = {AwardItem("b02", -75), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
-    oncomplete_hard = {AwardItem("b02", -100), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
+	oncomplete = {AwardItem("b02", -50), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
+	oncomplete_medium = {AwardItem("b02", -75), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
+	oncomplete_hard = {AwardItem("b02", -100), AwardUnblockBuilding("ulu_hut"), AwardUnlockIngredient("lime"), AwardUnlockCharacter("ulu_hutkeep"), AwardDiscoverPreference("ulu_hutkeep", "like", "bar"), AwardDiscoverPreference("ulu_hutkeep", "like", "lime")},
 	oncomplete_label = "weareinbusiness",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "verywell",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -999,7 +994,7 @@ CreateQuest
 	require = { RequireNoOffers(2), RequireQuestIncomplete("ugr_02b"), RequireNoCompletes(1), RequireMinRank(2), RequireQuestComplete("ugr_02"), RequireRecipe("c01"), RequireRecipesKnown(4, "beverage"), RequireVariableEqual("ugr_slots", 0)},
 	require_medium = { RequireNoOffers(2), RequireQuestIncomplete("ugr_02b"), RequireNoCompletes(1), RequireMinRank(2), RequireQuestComplete("ugr_02"), RequireRecipe("c01"), RequireRecipesKnown(5, "beverage"), RequireVariableEqual("ugr_slots", 0)},
 	require_hard = { RequireNoOffers(2), RequireQuestIncomplete("ugr_02b"), RequireNoCompletes(1), RequireMinRank(2), RequireQuestComplete("ugr_02"), RequireRecipe("c01"), RequireRecipesKnown(6, "beverage"), RequireVariableEqual("ugr_slots", 0)},
-    isReal = true,
+	isReal = true,
 }
 
 CreateQuest
@@ -1015,7 +1010,7 @@ CreateQuest
 	require = { RequireNoOffers(2), RequireNoCompletes(2), RequireMinRank(2), RequireQuestComplete("ugr_02"), RequireQuestComplete("bali_01"), RequireUserRecipeMade(2,1), RequireRecipe("c01"), RequireRecipesKnown(4, "beverage"), RequireVariableEqual("ugr_slots", 0), AwardUnlockCharacter("rey_marketkeep"), AwardUnlockCharacter("rey_shopkeep")},
 	require_medium = { RequireNoOffers(2), RequireNoCompletes(2), RequireMinRank(2), RequireQuestComplete("ugr_02"), RequireQuestComplete("bali_01"), RequireUserRecipeMade(2,1), RequireRecipe("c01"), RequireRecipesKnown(5, "beverage"), RequireVariableEqual("ugr_slots", 0), AwardUnlockCharacter("rey_marketkeep"), AwardUnlockCharacter("rey_shopkeep")},
 	require_hard = { RequireNoOffers(2), RequireNoCompletes(2), RequireMinRank(2), RequireQuestComplete("ugr_02"), RequireQuestComplete("bali_01"), RequireUserRecipeMade(2,1), RequireRecipe("c01"), RequireRecipesKnown(6, "beverage"), RequireVariableEqual("ugr_slots", 0), AwardUnlockCharacter("rey_marketkeep"), AwardUnlockCharacter("rey_shopkeep")},
-    isReal = true,
+	isReal = true,
 }
 
 CreateQuest
@@ -1031,7 +1026,7 @@ CreateQuest
 	require = { RequireNoOffers(2), RequireNoCompletes(1), RequireMinRank(2),  RequireQuestComplete("ugr_02b"), RequireRecipe("c01"), RequireRecipesKnown(3, "infusion"), RequireVariableEqual("ugr_slots", 0)},
 	require_medium = { RequireNoOffers(2), RequireNoCompletes(1), RequireMinRank(2),  RequireQuestComplete("ugr_02b"), RequireRecipe("c01"), RequireRecipesMade(4, "infusion"), RequireVariableEqual("ugr_slots", 0)},
 	require_hard = { RequireNoOffers(2), RequireNoCompletes(1), RequireMinRank(2),  RequireQuestComplete("ugr_02b"), RequireRecipe("c01"), RequireRecipesMade(6, "infusion"), RequireVariableEqual("ugr_slots", 0)},
-    isReal = true,
+	isReal = true,
 }
 
 CreateQuest
@@ -1153,7 +1148,7 @@ CreateQuest
 	oncomplete_medium = {AwardItem("user1", - 30), AwardItem("user2", -30), AwardUnblockBuilding("bal_plantation"), AwardUnlockIngredient("bal_coffee"), AwardUnlockIngredient("bal_cacao"), AwardRecipe("c09"), AwardRecipe("c10"), AwardDialog("recipes"), AwardDelayQuest("ugr_02b", 5), AwardEnableOrderForChar("bal_xxxkeep"), AwardEnableOrderForBuilding("bal_plantation"), AwardUnlockCharacter("bal_xxxkeep")},
 	oncomplete_hard = {AwardItem("user1", - 50), AwardItem("user2", -50), AwardUnblockBuilding("bal_plantation"), AwardUnlockIngredient("bal_coffee"), AwardUnlockIngredient("bal_cacao"), AwardRecipe("c09"), AwardRecipe("c10"), AwardDialog("recipes"), AwardDelayQuest("ugr_02b", 5), AwardEnableOrderForChar("bal_xxxkeep"), AwardEnableOrderForBuilding("bal_plantation"), AwardUnlockCharacter("bal_xxxkeep")},
 	oncomplete_label = "thankyou",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 }
 
 CreateQuest
@@ -1185,7 +1180,7 @@ CreateQuest
 	require_hard = {RequireRecipesMade(8, "beverage"), RequireQuestComplete("meta_feli"), RequireBuildingOwned("tan_shop")},
 	onaccept = {AwardUnlockPort("tokyo"), AwardUnlockIngredient("chestnut"), AwardUnlockIngredient("pear"), AwardUnlockIngredient("wasabi"), AwardUnlockIngredient("matcha"), AwardUnlockIngredient("pecan"), AwardUnlockIngredient("ginger")},
 	goals = { HintPerson("main_deit", "tok_factory", "tokyo")},
-	oncomplete = {AwardOfferQuest("tokyo_01"), AwardUnlockCharacter("main_deit")},	
+	oncomplete = {AwardOfferQuest("tokyo_01"), AwardUnlockCharacter("main_deit")},
 }
 
 CreateQuest
@@ -1233,15 +1228,15 @@ CreateQuest
 	oncomplete_medium = {AwardUnlockIngredient("apricot"), AwardItem("i01", -45), AwardMoney(28000), AwardUnlockCharacter("evil_bian")},
 	oncomplete_hard = {AwardUnlockIngredient("apricot"), AwardItem("i01", -60), AwardMoney(35000), AwardUnlockCharacter("evil_bian")},
 	oncomplete_label = "tokyo_02_complete_label",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "tokyo_02_incomplete_label",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
 {
 	name = "rank2_sanfrancisco_prompt",
-	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
+	starter = {"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep"},
 	accept = "rank2_sanfrancisco_prompt_offer_label",
 	accept_length = "long",
 	defer = "none",
@@ -1341,9 +1336,9 @@ CreateQuest
 	oncomplete_hard = {IncrementVariable("rank2_work"), AwardItem("i04", -100), AwardRemoveCharacter("trav_02", "dou_emptybuilding1"), AwardPlaceCharacter("trav_02", "_travelers"), AwardEnableOrderForChar("trav_02"), AwardEnableOrderForBuilding("dou_emptybuilding1"), AwardUnlockCharacter("trav_02")},
 	require = {RequireMinRank(2), RequireRecipe("i01"), RequireIngredientAvailable("anise"), RequireIngredientAvailable("cayenne"), RequireCharHasNoActiveOrder("trav_02"), RequireBuildingHasNoActiveOrder("dou_emptybuilding1")},
 	oncomplete_label = "iappreciateit",
-	oncomplete_label_length = "long",
+	oncomplete_length = "long",
 	onincomplete_label = "fairenough",
-	onincomplete_label_length = "long",
+	onincomplete_length = "long",
 }
 
 CreateQuest
@@ -1354,7 +1349,7 @@ CreateQuest
 	accept = "itsadeal",
 	accept_length = "long",
 	defer = "maybelater",
-	defer_length = "long",
+	accept_length = "long",
 	reject = "none",
 	onaccept = {AwardRecipe("i06"), AwardDialog("recipes"), AwardUnlockCharacter("tok_shopkeep")},
 	goals = {RequireItem("i06", 50), HintPerson("tok_stationkeep", "tok_station", "tokyo")},
@@ -1385,7 +1380,6 @@ CreateQuest
 	oncomplete = {IncrementVariable("rank2_work"), AwardItem("i08", -31), AwardItem("cacao", 10000), AwardUnlockCharacter("tok_marketkeep")},
 	oncomplete_medium = {IncrementVariable("rank2_work"), AwardItem("i08", -63), AwardItem("cacao", 15000), AwardUnlockCharacter("tok_marketkeep")},
 	oncomplete_hard = {IncrementVariable("rank2_work"), AwardItem("i08", -97), AwardItem("cacao", 20000), AwardUnlockCharacter("tok_marketkeep")},
---	onexpire = {AwardText("rank2_35_expire", "tok_marketkeep")},
 	require = {RequireQuestComplete("rank2_34"), RequireMinRank(2), RequireRecipe("i01"), RequireIngredientAvailable("vanilla"), RequireIngredientAvailable("allspice"), RequireIngredientAvailable("cinnamon")},
 }
 
@@ -1398,7 +1392,6 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	onaccept = {AwardDelayQuest("rank2_36_prompt", 15)},
---	require = {RequireMinRank(2), RequireRecipe("i01"), RequireMinMoney(25000), RequireRecipesKnown(3, "infusion"), RequireQuestIncomplete("rank2_36"), RequireQuestNotActive("rank2_36")},
 	require = {RequireMinRank(2), RequireIngredientAvailable("lime"), RequireRecipe("i01"), RequireRecipe("user2"), RequireMinMoney(25000), RequireRecipesKnown(4, "infusion"), RequireQuestIncomplete("rank2_36"), RequireQuestNotActive("rank2_36")},
 	require_medium = {RequireMinRank(2), RequireIngredientAvailable("lime"), RequireRecipe("i01"), RequireRecipe("user2"), RequireMinMoney(25000), RequireRecipesKnown(6, "infusion"), RequireQuestIncomplete("rank2_36"), RequireQuestNotActive("rank2_36")},
 	require_hard = {RequireMinRank(2), RequireIngredientAvailable("lime"), RequireRecipe("i01"), RequireRecipe("user2"), RequireMinMoney(25000), RequireRecipesKnown(8, "infusion"), RequireQuestIncomplete("rank2_36"), RequireQuestNotActive("rank2_36")},
@@ -1435,7 +1428,6 @@ CreateQuest
 	defer = "notnow",
 	defer_length = "long",
 	reject = "none",
---	onaccept = {AwardMoney(-10000), AwardUnlockPort("bogota")},
 	goals = { RequireItem("user2", 25), HintPerson("bog_churchkeep", "bog_church", "bogota")},
 	goals_medium = { RequireItem("user2", 40), HintPerson("bog_churchkeep", "bog_church", "bogota")},
 	goals_hard = { RequireItem("user2", 55), HintPerson("bog_churchkeep", "bog_church", "bogota")},
@@ -1466,7 +1458,7 @@ CreateQuest
 CreateQuest
 {
 	name = "rank2_39_prompt",
-	starter = {"trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11"},
+	starter = {"trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21"},
 	accept = "goodtoknow",
 	accept_length = "long",
 	defer = "none",
@@ -1488,7 +1480,7 @@ CreateQuest
 	accept = "deal",
 	accept_length = "long",
 	defer = "notnow",
-	defer_length = "long",
+	accept_length = "long",
 	reject = "none",
 	onaccept = {AwardRecipe("i09"), AwardDialog("recipes")},
 	goals = { RequireItem("i09", 40), HintPerson("tan_portkeep", "tan_port", "tangiers")},
@@ -1510,7 +1502,7 @@ CreateQuest
 	defer_length = "long",
 	reject = "none",
 	priority = 99,
-	onaccept = {AwardUnlockPort("lasvegas"), AwardUnlockIngredient("strawberry"), AwardText("rank2_40_extra01")},
+	onaccept = {AwardText("rank2_40_extra01"), AwardUnlockPort("lasvegas"), AwardUnlockIngredient("strawberry")},
 	goals = {RequireRelativeTime(10, false), RequireItem("strawberry", 100), HintPerson("trav_08", "_travelers")},
 	goals_medium = {RequireRelativeTime(9, false), RequireItem("strawberry", 150), HintPerson("trav_08", "_travelers")},
 	goals_hard = {RequireRelativeTime(8, false), RequireItem("strawberry", 200), HintPerson("trav_08", "_travelers")},
@@ -1523,7 +1515,7 @@ CreateQuest
 CreateQuest
 {
 	name = "konshop_01_prompt",
-	starter = { "tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep", "main_zach" },
+	starter = { "tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", "kon_bldg2keep", "kon_hutkeep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21", "bag_towerkeep", "bag_churchkeep", "bog_churchkeep", "bog_customskeep", "bog_mountainkeep", "cap_bldg1keep", "cap_mountainkeep", "fal_xxxkeep", "hav_hotelkeep", "lim_churchkeep", "lim_mountainkeep", "lim_plazakeep", "main_loud", "main_sara", "san_barkeep", "tan_hotelkeep", "tan_portkeep", "tok_mountainkeep", "tok_palacekeep", "tok_stationkeep", "tok_towerkeep", "ulu_rockkeep", "zur_bankkeep", "zur_mountainkeep", "zur_schoolkeep", "zur_stationkeep", "zur_towerkeep", "main_zach" },
 	accept = "soundsgood",
 	accept_length = "long",
 	defer = "none",
@@ -1549,7 +1541,7 @@ CreateQuest
 	goals = { RequireItem("user1", 120), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_medium = { RequireItem("user1", 150), HintPerson("main_zach", "tan_shop", "tangiers")},
 	goals_hard = { RequireItem("user1", 180), HintPerson("main_zach", "tan_shop", "tangiers")},
-	onaccept = {AwardText("konshop_01_extra01"), AwardDelayQuest("shop_owned_00", 15)},
+	onaccept = {AwardText("konshop_01_extra01"), AwardDelayQuest("tan_shop_owned_00", 15)},
 	oncomplete = {AwardItem("user1", -120),  AwardOfferQuest("konshop_02")},
 	oncomplete_medium = {AwardItem("user1", -150),  AwardOfferQuest("konshop_02")},
 	oncomplete_hard = {AwardItem("user1", -180),  AwardOfferQuest("konshop_02")},
@@ -1560,16 +1552,15 @@ CreateQuest
 {
 	name = "konshop_02",
 	starter = "main_zach",
-	ender = "kon_shopkeep",	
+	ender = "kon_shopkeep",
 	accept = "allright",
 	accept_length = "long",
 	defer = "none",
 	reject = "none",
 	goals = { HintPerson("kon_shopkeep", "kon_shop", "kona")},
-	oncomplete = {AwardOfferQuest("konshop_03"), AwardDelayQuest("shop_owned_00", 5)},
+	oncomplete = {AwardOfferQuest("konshop_03"), AwardDelayQuest("tan_shop_owned_00", 5)},
 	require = {RequireQuestComplete("konshop_01")},
 }
-
 
 CreateQuest
 {
@@ -1590,12 +1581,11 @@ CreateQuest
 	require = {RequireQuestComplete("konshop_02")},
 }
 
-
 CreateQuest
 {
 	name = "konshop_04",
 	starter = "kon_plantationkeep",
-	ender = "kon_shopkeep",	
+	ender = "kon_shopkeep",
 	accept = "soundsgood",
 	accept_length = "long",
 	defer = "none",
@@ -1608,7 +1598,7 @@ CreateQuest
 CreateQuest
 {
 	name = "konshop_05",
-	starter = "kon_shopkeep",	
+	starter = "kon_shopkeep",
 	accept = "loudandclear",
 	accept_length = "long",
 	defer = "none",
@@ -1818,9 +1808,9 @@ CreateQuest
 	goals = {RequireItem("t04", 1)},
 	goals_medium = {RequireItem("t04", 10)},
 	goals_hard = {RequireItem("t04", 50)},
-	oncomplete ={AwardItem("t04", -1), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep")},
-	oncomplete_medium ={AwardItem("t04", -10), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep")},
-	oncomplete_hard ={AwardItem("t04", -50), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep")},
+	oncomplete ={AwardItem("t04", -1), AwardUnlockHistory("catalogue_history_letter_wolf_memo_1"), AwardUnlockHistory("catalogue_history_report_hardy_eyewitness"), AwardUnlockHistory("catalogue_history_record_sean_pow"), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep"), AwardUnlockCharacter("lim_plantationkeep")},
+	oncomplete_medium ={AwardItem("t04", -10), AwardUnlockHistory("catalogue_history_letter_wolf_memo_1"), AwardUnlockHistory("catalogue_history_report_hardy_eyewitness"), AwardUnlockHistory("catalogue_history_record_sean_pow"), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep"), AwardUnlockCharacter("lim_plantationkeep")},
+	oncomplete_hard ={AwardItem("t04", -50), AwardUnlockHistory("catalogue_history_letter_wolf_memo_1"), AwardUnlockHistory("catalogue_history_report_hardy_eyewitness"), AwardUnlockHistory("catalogue_history_record_sean_pow"), AwardUnlockPort("lima"), AwardUnlockIngredient("lim_cacao"), AwardUnlockIngredient("passionfruit"), AwardUnlockIngredient("cardamom"), AwardRecipe("t08"), AwardDialog("recipes"), IncrementVariable("metatruf"), AwardDelayQuest("rank2_51_done_hint", 6), AwardUnlockCharacter("lim_marketkeep"), AwardUnlockCharacter("lim_shopkeep"), AwardUnlockCharacter("lim_plantationkeep")},
 	require = {RequireItem("t04", 1), RequireQuestActive("rank2_51")},
 	require_medium = {RequireItem("t04", 10), RequireQuestActive("rank2_51")},
 	require_hard = {RequireItem("t04", 50), RequireQuestActive("rank2_51")},
@@ -1841,11 +1831,10 @@ CreateQuest
 	visible = false,
 }
 
-
 CreateQuest
 {
 	name = "rank2_51_done_hint",
-	starter = {"trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11"},
+	starter = {"trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09", "trav_10", "trav_11", "trav_16", "trav_21"},
 	accept = "ihearyou",
 	accept_length = "long",
 	defer = "none",
@@ -1916,15 +1905,15 @@ CreateQuest
 	reject = "none",
 	onaccept = {AwardRemoveCharacter("trav_11", "_travelers"), AwardPlaceCharacter("trav_11", "dou_emptybuilding1"), AwardDisableOrderForChar("trav_11"), AwardDisableOrderForBuilding("dou_emptybuilding1")},
 	goals = { RequireItem("c05", 60), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
-	goals_medium = { RequireItem("c05", 75), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
-	goals_hard = { RequireItem("c05", 90), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
+	goals = { RequireItem("c05", 75), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
+	goals = { RequireItem("c05", 90), HintPerson("trav_11", "dou_emptybuilding1", "douala"), HintExpirationDate()},
 	expires = 19,
 	expires_medium = 16,
 	expires_hard = 13,
 	onexpire = {AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
 	oncomplete = {AwardItem("c05", -60), AwardMoney(60000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
-	oncomplete_medium = {AwardItem("c05", -75), AwardMoney(75000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
-	oncomplete_hard = {AwardItem("c05", -90), AwardMoney(90000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
+	oncomplete = {AwardItem("c05", -75), AwardMoney(75000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
+	oncomplete = {AwardItem("c05", -90), AwardMoney(90000), AwardRemoveCharacter("trav_11", "dou_emptybuilding1"), AwardPlaceCharacter("trav_11", "_travelers"), AwardEnableOrderForChar("trav_11"), AwardEnableOrderForBuilding("dou_emptybuilding1")},
 	require = {RequireNoOffers(3), RequireMinRank(2), RequireRecipe("c05"), RequireCharHasNoActiveOrder("trav_11"), RequireBuildingHasNoActiveOrder("dou_emptybuilding1"), RequireQuestComplete("rank2_tangiersb")},
 }
 

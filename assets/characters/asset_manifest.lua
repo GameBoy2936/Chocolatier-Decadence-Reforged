@@ -1,10 +1,10 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Character Asset Manifest)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Character Asset Manifest)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This file acts as the visual configuration dictionary for the UI engine.
--- It tells the game which art assets exist for each character, their exact 
+-- It tells the game which art assets exist for each character, their exact
 -- pixel dimensions, and the precise X/Y offsets required to center them properly
 -- in dialogues, catalogues, and menus.
 
@@ -12,76 +12,80 @@ CharacterAssetManifest = {
 	-- ------------------------------------------------------------------------
 	-- Main Characters (Baumeister / Tangye Clan)
 	-- ------------------------------------------------------------------------
-	main_alex = { png = true, mask = false, silhouette = true, w = 150, h = 230, silhouette_x = 20, silhouette_y = 115, list_x_offset = 2 },
-	main_chas = { png = true, mask = false, silhouette = true, w = 172, h = 268, silhouette_x = 10, silhouette_y = 125, list_x_offset = 0 },
-	main_deit = { png = true, mask = false, silhouette = true, w = 156, h = 260, silhouette_x = 20, silhouette_y = 115, list_x_offset = 2 },
-	main_elen = { png = true, mask = false, silhouette = true, w = 156, h = 260, silhouette_x = 20, silhouette_y = 115, list_x_offset = 2 },
-	main_evan = { png = true, mask = false, silhouette = true, w = 154, h = 258, silhouette_x = 20, silhouette_y = 116, list_x_offset = 4 },
-	main_feli = { png = true, mask = false, silhouette = true, w = 160, h = 242, silhouette_x = 12, silhouette_y = 121, list_x_offset = 1 },
-	main_jose = { png = true, mask = false, silhouette = true, w = 166, h = 284, silhouette_x = 9,  silhouette_y = 141, list_x_offset = 2 },
-	main_loud = { png = true, mask = false, silhouette = true, w = 172, h = 242, silhouette_x = 10, silhouette_y = 121, list_x_offset = 0 },
-	main_sara = { png = true, mask = false, silhouette = true, w = 166, h = 252, silhouette_x = 10, silhouette_y = 116, list_x_offset = 2 },
-	main_sean = { png = true, mask = false, silhouette = true, w = 164, h = 270, silhouette_x = 9,  silhouette_y = 131, list_x_offset = 2 },
-	main_tedd = { png = true, mask = false, silhouette = true, w = 168, h = 252, silhouette_x = 6,  silhouette_y = 108, list_x_offset = 1 },
-	main_whit = { png = true, mask = false, silhouette = true, w = 173, h = 252, silhouette_x = 8,  silhouette_y = 110, list_x_offset = 1 },
-	main_zach = { png = true, mask = false, silhouette = true, w = 144, h = 234, silhouette_x = 18, silhouette_y = 112, list_x_offset = 5 },
-	
+	main_alex = { png = true, mask = false, silhouette = true },
+	main_chas = { png = true, mask = false, silhouette = true },
+	main_deit = { png = true, mask = false, silhouette = true },
+	main_elen = { png = true, mask = false, silhouette = true },
+	main_evan = { png = true, mask = false, silhouette = true },
+	main_feli = { png = true, mask = false, silhouette = true },
+	main_jose = { png = true, mask = false, silhouette = true },
+	main_loud = { png = true, mask = false, silhouette = true },
+	main_sara = { png = true, mask = false, silhouette = true },
+	main_sean = { png = true, mask = false, silhouette = true },
+	main_tedd = { png = true, mask = false, silhouette = true },
+	main_whit = { png = true, mask = false, silhouette = true },
+	main_zach = { png = true, mask = false, silhouette = true },
+
 	-- ------------------------------------------------------------------------
 	-- Antagonists
 	-- ------------------------------------------------------------------------
-	evil_bian = { png = true, mask = false, silhouette = true, w = 156, h = 224, silhouette_x = 20, silhouette_y = 121, list_x_offset = 2 },
-	evil_kath = { png = true, mask = false, silhouette = true, w = 172, h = 254, silhouette_x = 7,  silhouette_y = 110, list_x_offset = 0 },
-	evil_wolf = { png = true, mask = false, silhouette = true, w = 156, h = 268, silhouette_x = 11, silhouette_y = 125, list_x_offset = 3 },
-	evil_tyso = { png = true, mask = false, silhouette = true, w = 172, h = 262, silhouette_x = 10, silhouette_y = 121, list_x_offset = 0 },
+	evil_bian = { png = true, mask = false, silhouette = true },
+	evil_kath = { png = true, mask = false, silhouette = true },
+	evil_wolf = { png = true, mask = false, silhouette = true },
+	evil_tyso = { png = true, mask = false, silhouette = true },
 
 	-- ------------------------------------------------------------------------
 	-- Primary Building Caretakers (Shopkeepers, Farmers)
 	-- ------------------------------------------------------------------------
-	bag_marketkeep     = { png = true, mask = false, silhouette = true, w = 151, h = 270, silhouette_x = 12, silhouette_y = 130, list_x_offset = 4 },
-	bag_shopkeep       = { png = true, mask = false, silhouette = true, w = 172, h = 270, silhouette_x = 10, silhouette_y = 135, list_x_offset = 0 },
-	bag_towerkeep      = { png = true, mask = false, silhouette = true, w = 173, h = 270, silhouette_x = 8,  silhouette_y = 131, list_x_offset = 0 },
-	bal_marketkeep     = { png = true, mask = false, silhouette = true, w = 173, h = 256, silhouette_x = 10, silhouette_y = 115, list_x_offset = 0 },
-	bal_shopkeep       = { png = true, mask = false, silhouette = true, w = 166, h = 270, silhouette_x = 11, silhouette_y = 130, list_x_offset = 2 },
-	bal_xxxkeep        = { png = true, mask = false, silhouette = true, w = 172, h = 260, silhouette_x = 10, silhouette_y = 121, list_x_offset = 0 },
-	bog_marketkeep     = { png = true, mask = false, silhouette = true, w = 172, h = 268, silhouette_x = 7,  silhouette_y = 125, list_x_offset = 0 },
-	bog_plantationkeep = { png = true, mask = false, silhouette = true, w = 174, h = 266, silhouette_x = 8,  silhouette_y = 128, list_x_offset = 1 },
-	bog_shopkeep       = { png = true, mask = false, silhouette = true, w = 142, h = 254, silhouette_x = 22, silhouette_y = 126, list_x_offset = 4 },
-	cap_marketkeep     = { png = true, mask = false, silhouette = true, w = 172, h = 220, silhouette_x = 10, silhouette_y = 121, list_x_offset = 0 },
-	cap_shopkeep       = { png = true, mask = false, silhouette = true, w = 163, h = 270, silhouette_x = 15, silhouette_y = 131, list_x_offset = 1 },
-	dou_marketkeep     = { png = true, mask = false, silhouette = true, w = 172, h = 256, silhouette_x = 8,  silhouette_y = 113, list_x_offset = 0 },
-	dou_plantationkeep = { png = true, mask = false, silhouette = true, w = 172, h = 254, silhouette_x = 10, silhouette_y = 111, list_x_offset = 0 },
-	dou_shopkeep       = { png = true, mask = false, silhouette = true, w = 192, h = 236, silhouette_x = 7,  silhouette_y = 124, list_x_offset = -5 },
-	hav_marketkeep     = { png = true, mask = false, silhouette = true, w = 162, h = 262, silhouette_x = 10, silhouette_y = 123, list_x_offset = 2 },
-	hav_plantationkeep = { png = true, mask = false, silhouette = true, w = 172, h = 270, silhouette_x = 7,  silhouette_y = 128, list_x_offset = 0 },
-	hav_shopkeep       = { png = true, mask = false, silhouette = true, w = 156, h = 262, silhouette_x = 15, silhouette_y = 120, list_x_offset = 3 },
-	kon_marketkeep     = { png = true, mask = false, silhouette = true, w = 158, h = 256, silhouette_x = 10, silhouette_y = 118, list_x_offset = 3 },
-	kon_plantationkeep = { png = true, mask = false, silhouette = true, w = 168, h = 256, silhouette_x = 10, silhouette_y = 118, list_x_offset = 1 },
-	kon_shopkeep       = { png = true, mask = false, silhouette = true, w = 172, h = 258, silhouette_x = 10, silhouette_y = 116, list_x_offset = 0 },
-	lim_marketkeep     = { png = true, mask = false, silhouette = true, w = 172, h = 270, silhouette_x = 10, silhouette_y = 131, list_x_offset = 0 },
-	lim_shopkeep       = { png = true, mask = false, silhouette = true, w = 172, h = 262, silhouette_x = 10, silhouette_y = 121, list_x_offset = 0 },
+	bag_marketkeep     = { png = true, mask = false, silhouette = true },
+	bag_shopkeep       = { png = true, mask = false, silhouette = true },
+	bag_towerkeep      = { png = true, mask = false, silhouette = true },
+	bal_marketkeep     = { png = true, mask = false, silhouette = true },
+	bal_shopkeep       = { png = true, mask = false, silhouette = true },
+	bal_xxxkeep        = { png = true, mask = false, silhouette = true },
+	bel_hutkeep        = { png = true, mask = false, silhouette = true },
+	bog_marketkeep     = { png = true, mask = false, silhouette = true },
+	bog_plantationkeep = { png = true, mask = false, silhouette = true },
+	bog_shopkeep       = { png = true, mask = false, silhouette = true },
+	cap_marketkeep     = { png = true, mask = false, silhouette = true },
+	cap_shopkeep       = { png = true, mask = false, silhouette = true },
+	dou_marketkeep     = { png = true, mask = false, silhouette = true },
+	dou_plantationkeep = { png = true, mask = false, silhouette = true },
+	dou_shopkeep       = { png = true, mask = false, silhouette = true },
+	hav_marketkeep     = { png = true, mask = false, silhouette = true },
+	hav_plantationkeep = { png = true, mask = false, silhouette = true },
+	hav_shopkeep       = { png = true, mask = false, silhouette = true },
+	kon_hutkeep        = { png = true, mask = false, silhouette = true },
+	kon_marketkeep     = { png = true, mask = false, silhouette = true },
+	kon_plantationkeep = { png = true, mask = false, silhouette = true },
+	kon_shopkeep       = { png = true, mask = false, silhouette = true },
+	lim_marketkeep     = { png = true, mask = false, silhouette = true },
+	lim_shopkeep       = { png = true, mask = false, silhouette = true },
 	mah_shopkeep       = { png = true, mask = false },
-	rey_marketkeep     = { png = true, mask = false },
-	rey_shopkeep       = { png = true, mask = false },
-	san_marketkeep     = { png = true, mask = false, silhouette = true, w = 138, h = 258, silhouette_x = 21, silhouette_y = 114, list_x_offset = 5 },
-	san_shopkeep       = { png = true, mask = false, silhouette = true, w = 134, h = 252, silhouette_x = 29, silhouette_y = 133, list_x_offset = 16 },
-	tok_marketkeep     = { png = true, mask = false, silhouette = true, w = 170, h = 258, silhouette_x = 10, silhouette_y = 115, list_x_offset = 0 },
-	tok_shopkeep       = { png = true, mask = false, silhouette = true, w = 172, h = 262, silhouette_x = 10, silhouette_y = 121, list_x_offset = 0 },
-	tor_factorykeep    = { png = true, mask = false, silhouette = true, w = 164, h = 268, silhouette_x = 18, silhouette_y = 125, list_x_offset = 2 },
-	tor_marketkeep     = { png = true, mask = false, silhouette = true, w = 168, h = 268, silhouette_x = 11, silhouette_y = 126, list_x_offset = 1 },
-	tor_shopkeep       = { png = true, mask = false, silhouette = true, w = 162, h = 260, silhouette_x = 11, silhouette_y = 115, list_x_offset = 2 },
-	ulu_hutkeep        = { png = true, mask = false, silhouette = true, w = 152, h = 250, silhouette_x = 16, silhouette_y = 131, list_x_offset = 3 },
-	wel_marketkeep     = { png = true, mask = false, silhouette = true, w = 156, h = 250, silhouette_x = 21, silhouette_y = 130, list_x_offset = 2 },
-	wel_shopkeep       = { png = true, mask = false, silhouette = true, w = 134, h = 215, silhouette_x = 20, silhouette_y = 126, list_x_offset = 8 },
-	zur_factorykeep    = { png = true, mask = false, silhouette = true, w = 178, h = 250, silhouette_x = 6,  silhouette_y = 116, list_x_offset = -2 },
-	zur_marketkeep     = { png = true, mask = false, silhouette = true, w = 172, h = 264, silhouette_x = 8,  silhouette_y = 123, list_x_offset = 0 },
-	zur_shopkeep       = { png = true, mask = false, silhouette = true, w = 170, h = 260, silhouette_x = 11, silhouette_y = 118, list_x_offset = 0 },
+	rey_marketkeep     = { png = true, mask = false, silhouette = true },
+	rey_shopkeep       = { png = true, mask = false, silhouette = true },
+	san_marketkeep     = { png = true, mask = false, silhouette = true },
+	san_shopkeep       = { png = true, mask = false, silhouette = true },
+	tok_marketkeep     = { png = true, mask = false, silhouette = true },
+	tok_shopkeep       = { png = true, mask = false, silhouette = true },
+	tor_factorykeep    = { png = true, mask = false, silhouette = true },
+	tor_marketkeep     = { png = true, mask = false, silhouette = true },
+	tor_shopkeep       = { png = true, mask = false, silhouette = true },
+	trav_13            = { png = true, mask = false, silhouette = true },
+	trav_16            = { png = true, mask = false, silhouette = true },
+	trav_21            = { png = true, mask = false, silhouette = true },
+	ulu_hutkeep        = { png = true, mask = false, silhouette = true },
+	wel_marketkeep     = { png = true, mask = false, silhouette = true },
+	wel_shopkeep       = { png = true, mask = false, silhouette = true },
+	zur_factorykeep    = { png = true, mask = false, silhouette = true },
+	zur_marketkeep     = { png = true, mask = false, silhouette = true },
+	zur_shopkeep       = { png = true, mask = false, silhouette = true },
 
 	-- ------------------------------------------------------------------------
 	-- Unmasked Characters (No custom silhouettes required)
 	-- ------------------------------------------------------------------------
 	announcer          = { png = true, mask = false },
 	bag_bldg2keep      = { png = true, mask = false },
-	bel_hutkeep        = { png = true, mask = false, silhouette = true },
 	bog_churchkeep     = { png = true, mask = false },
 	bog_mountainkeep   = { png = true, mask = false },
 	cap_mountainkeep   = { png = true, mask = false },

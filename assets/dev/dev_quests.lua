@@ -1,11 +1,11 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Dev Quests Container)
+	Chocolatier: Decadence by Design Reforged (Dev Quests Container)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
--- This script renders the parent shell for the Developer Quest Manager. 
--- It houses the search bar and filter tabs, and uses a sub-window to render 
+-- This script renders the parent shell for the Developer Quest Manager.
+-- It houses the search bar and filter tabs, and uses a sub-window to render
 -- the actual scrolling list of quests dynamically without losing search focus.
 
 -------------------------------------------------------------------------------
@@ -15,7 +15,7 @@
 local h = devMenuStyle.font[2]
 
 -- Layout constraints
-local w = 112 
+local w = 112
 local y_content_start = 45
 
 -- Persist search state across UI reloads
@@ -41,20 +41,20 @@ function DevQuestSetFilter(filterName)
 	DevQuestRefreshList()
 end
 
--- Interrogates the clicked item to determine if it's a standard Quest or a 
+-- Interrogates the clicked item to determine if it's a standard Quest or a
 -- Special Order, and routes to the correct detail inspector UI.
 function DevQuestInspectItem(itemName, isPending)
 	local item = nil
-	
+
 	if isPending then
 		-- Target is a queued special order
 		for _, order in ipairs(Player.pendingSpecialOrders) do
 			if order.name == itemName then item = order; break end
 		end
-		
+
 		if item then
 			DebugOut("DEV", string.format("Opening Order Inspector for: %s", itemName))
-			CloseWindow() 
+			CloseWindow()
 			QueueCommand(function() DisplayDialog { "dev/dev_order_detail.lua", x = gDialogTable.x, y = gDialogTable.y, orderData = item } end)
 		end
 	else
@@ -62,7 +62,7 @@ function DevQuestInspectItem(itemName, isPending)
 		item = _AllQuests[itemName]
 		if item then
 			DebugOut("DEV", string.format("Opening Quest Inspector for: %s", itemName))
-			CloseWindow() 
+			CloseWindow()
 			QueueCommand(function() DisplayDialog { "dev/dev_quest_detail.lua", x = gDialogTable.x, y = gDialogTable.y, quest = item } end)
 		end
 	end
@@ -89,38 +89,38 @@ end
 
 local filterButtons = {}
 local filters = { "Active & Eligible", "Other", "Completed", "Order Management" }
-local filter_w = 135 
+local filter_w = 135
 
 for i, filterName in ipairs(filters) do
 	local tempFilter = filterName
-	table.insert(filterButtons, Button { 
+	table.insert(filterButtons, Button {
 		x = filter_w * (i - 1) + 75, y = 0, w = filter_w, h = h,
-		label = "#<b>" .. tempFilter .. "</b>", 
-		command = function() DevQuestSetFilter(tempFilter) end 
+		label = "#<b>" .. tempFilter .. "</b>",
+		command = function() DevQuestSetFilter(tempFilter) end
 	})
 end
 
 MakeDialog
 {
 	name = "dev_quests",
-	BSGWindow { 
+	BSGWindow {
 		x = gDialogTable.x, y = gDialogTable.y, w = 800, h = 600, fit = true, color = { 1, 1, 1, 0.8 }, SetStyle(devMenuStyle),
-		
+
 		-- Header & Tabs
 		Button { x = 0, y = 0, w = 60, h = h, label = "#<b>CLOSE</b>", default = true, cancel = true, close = true },
 		Group(filterButtons),
-		
+
 		-- Search Bar (Persistent)
-		Window { 
+		Window {
 			x = 0, y = h + 5, w = 400, h = h,
-			Bitmap { 
+			Bitmap {
 				x = 0, y = 0, w = 200, h = h, image = "image/textfield",
-				TextEdit { 
-					x = 5, y = 0, w = 190, h = h, 
-					name = "quest_search_box", 
-					label = gDevQuestSearchTerm, 
-					length = 30, 
-					onkey = UpdateSearch, 
+				TextEdit {
+					x = 5, y = 0, w = 190, h = h,
+					name = "quest_search_box",
+					label = gDevQuestSearchTerm,
+					length = 30,
+					onkey = UpdateSearch,
 					font = searchBoxFont,
 				},
 			},

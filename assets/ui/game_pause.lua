@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Minigame Pause)
+	Chocolatier: Decadence by Design Reforged (Minigame Pause)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ MakeDialog
 {
 	SetStyle(C3DialogBodyStyle),
 	Text { x = 20, y = 42, w = 459, h = 177, label = "#" .. GetString(text), flags = kVAlignCenter + kHAlignCenter },
-	
+
 	SetStyle(C3ButtonStyle),
 	Button { x = kCenter, y = 240, name = "ok", label = "ok", command = ResumeGame },
 }

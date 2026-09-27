@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Text Entry Dialog)
+	Chocolatier: Decadence by Design Reforged (Text Entry Dialog)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- Read context variables passed from the parent function
@@ -10,14 +10,14 @@ local name = gDialogTable.name
 local clearinitial = false
 
 if not name or name == "" then
-	-- Creating a new player profile. 
+	-- Creating a new player profile.
 	-- We inject a placeholder and set a flag telling the UI
 	-- engine to instantly clear the text box the moment the player begins typing.
 	clearinitial = true
 	name = GetString("default_name")
-	DebugOut("UI", "Text Entry Dialog opened in NEW PROFILE mode.")
+	DebugOut("UI", "Opened text-entry dialog for a new profile.")
 else
-	DebugOut("UI", string.format("Text Entry Dialog opened in RENAME mode for: %s", name))
+	DebugOut("UI", string.format("Opened text-entry dialog to rename profile %s.", name))
 end
 
 -------------------------------------------------------------------------------
@@ -27,21 +27,21 @@ end
 local function okFunction()
 	local rawName = GetLabel("entry")
 
-	-- Regular Expression Trimming: 
+	-- Regular Expression Trimming:
 	-- ^%s* matches leading whitespace. (.-) captures the core string. %s*$ matches trailing whitespace.
 	-- This strips accidental leading/trailing spaces without removing spaces between words.
 	local trimmedName = string.gsub(rawName, "^%s*(.-)%s*$", "%1")
-	
+
 	if string.len(trimmedName) == 0 then
 		DebugOut("UI", "Text validation failed: String is empty or contains only whitespace.")
 		DisplayDialog { "ui/ui_generic.lua", text = "badname" }
 		SetFocus("entry")
-		
+
 	elseif trimmedName ~= name and IsNameInUse(trimmedName) then
 		DebugOut("UI", string.format("Text validation failed: The profile name '%s' is already in use.", trimmedName))
 		DisplayDialog { "ui/ui_generic.lua", text = "nameinuse" }
 		SetFocus("entry")
-		
+
 	else
 		DebugOut("UI", string.format("Text validation successful. Returning valid string: '%s'", trimmedName))
 		FadeCloseWindow("entername", trimmedName)
@@ -63,21 +63,21 @@ MakeDialog
 	{
 		name = "entername",
 		x = 1000, y = kCenter, image = "image/popup_back_generic_1",
-		
+
 		SetStyle(C3DialogBodyStyle),
 		Text { x = 20, y = 42, w = 459, h = 100, label = "#" .. GetString("enternameprompt"), flags = kVAlignCenter + kHAlignCenter },
-		
+
 		-- Native OS Keyboard Hook Element
-		Bitmap { 
+		Bitmap {
 			x = kCenter, y = 142, image = "image/entername",
-			TextEdit { 
+			TextEdit {
 				typename = "TextEdit",
-				utf8 = true, 
-				x = 0, y = 0, w = kMax, h = kMax, 
-				name = "entry", 
+				utf8 = true,
+				x = 0, y = 0, w = kMax, h = kMax,
+				name = "entry",
 				label = name,
 				flags = kVAlignCenter + kHAlignCenter,
-				clearinitial = clearinitial, 
+				clearinitial = clearinitial,
 				enablewindow = "ok",
 				length = 30, -- Hard character limit
 			},
@@ -92,10 +92,10 @@ MakeDialog
 -- Force the OS to put the typing cursor into the text box automatically
 SetFocus("entry")
 
--- If we are in "New Player" mode using a placeholder string, disable the OK button 
+-- If we are in "New Player" mode using a placeholder string, disable the OK button
 -- until the user has actually typed something.
-if clearinitial then 
-	EnableWindow("ok", false) 
+if clearinitial then
+	EnableWindow("ok", false)
 end
 
 CenterFadeIn("entername")

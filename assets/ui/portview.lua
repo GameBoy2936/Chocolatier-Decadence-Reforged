@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Interior Port View)
+	Chocolatier: Decadence by Design Reforged (Interior Port View)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 gCurrentModal = "portview"
@@ -15,11 +15,11 @@ local port = _AllPorts[portName]
 -- If this is the absolute first time entering this port, flag it and unlock it in the Catalogue
 if not Player.portsVisited[portName] then
 	DebugOut("PLAYER", string.format("First arrival detected for Port: %s", portName))
-	
+
 	Player.portsVisited[portName] = true
 	Player.portsAvailable[portName] = "open"
 	Player.portVisitCount = Player.portVisitCount + 1
-	
+
 	Player.catalogue.unlockedPorts[portName] = true
 	DebugOut("CATALOGUE", string.format("Unlocked port entry for '%s'.", portName))
 end
@@ -34,7 +34,7 @@ if port and port.buildings then
 					-- Ensure safety arrays exist
 					Player.catalogue.discoveredIngredientLocations = Player.catalogue.discoveredIngredientLocations or {}
 					Player.catalogue.discoveredIngredientLocations[ing.name] = Player.catalogue.discoveredIngredientLocations[ing.name] or {}
-					
+
 					-- Register the discovery
 					if not Player.catalogue.discoveredIngredientLocations[ing.name][port.name] then
 						Player.catalogue.discoveredIngredientLocations[ing.name][port.name] = true
@@ -68,7 +68,7 @@ local labels = {}
 if port then
 	for _, b in ipairs(port.buildings) do
 		local buildingDisplayName = GetString(b.name)
-		
+
 		table.insert(labels, BSGWindow {
 			name = b.name, x = b.x, y = b.y, fit = true, color = rolloverColor, frame = "controls/rollover",
 			TightText { x = 0, y = 0, label = "#" .. buildingDisplayName, font = rolloverInfoFont, flags = kVAlignTop + kHAlignLeft }
@@ -83,20 +83,20 @@ end
 MakeDialog
 {
 	name = "port",
-	
+
 	-- Render the dynamic Port Engine component
 	PortWindow
 	{
 		x = kScreenCenterX, y = kScreenCenterY, w = kScreenWidth, h = kScreenHeight,
 		port = port, background = "ports/" .. portName .. "/" .. portName,
 		Group(labels),
-		
+
 		-- Port Title Banner
 		Bitmap { image = "image/banner", x = 275, y = 0,
-			Text { x = 0, y = 17, w = kMax, h = 25, flags = kVAlignTop + kHAlignCenter, label = "#" .. GetString(portName), font = portNameFont },
+			Text { x = 0, y = 12, w = kMax, h = 25, flags = kVAlignTop + kHAlignCenter, label = "#" .. GetString(portName), font = portNameFont },
 		},
 	},
-	
+
 	-- Inject the hidden developer menu wrapper
 	devMenu(),
 }

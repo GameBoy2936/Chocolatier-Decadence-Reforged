@@ -1,7 +1,9 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Catalogue Detail - Ports
-	Copyright (c) 2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Catalogue Detail - Ports)
+	Copyright (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
+
+ClearStringCache()
 
 local port = gCatalogueSelection
 
@@ -36,7 +38,7 @@ local right_col_x = 210
 local right_col_w = 230
 local right_col_h = 340      -- Reduced from 420 to accommodate bottom scroll buttons
 local chars_per_scroll = 130 -- Slightly less than History due to narrower column
-local chars_per_page = 750 
+local chars_per_page = 750
 
 -------------------------------------------------------------------------------
 -- HTML Tag Parsing & Safe Pagination Utilities
@@ -47,16 +49,16 @@ local function GetNextSafeOffset(text, start_offset, advance_chars)
 	local target = start_offset + advance_chars
 	local text_len = string.len(text)
 	if target >= text_len then return text_len end
-	
+
 	local in_tag = false
 	local i = start_offset + 1
-	
+
 	while i <= target do
 		local char = string.sub(text, i, i)
 		if char == "<" then in_tag = true elseif char == ">" then in_tag = false end
 		i = i + 1
 	end
-	
+
 	while i <= text_len do
 		local char = string.sub(text, i, i)
 		if char == "<" then
@@ -69,7 +71,7 @@ local function GetNextSafeOffset(text, start_offset, advance_chars)
 		end
 		i = i + 1
 	end
-	
+
 	return text_len
 end
 
@@ -79,7 +81,7 @@ local function GetOpenTagsForOffset(text, offset)
 	local current_tag = ""
 	local is_closing_tag = false
 	local active_format_tags = {}
-	
+
 	local i = 1
 	while i <= offset do
 		local char = string.sub(text, i, i)
@@ -97,7 +99,7 @@ local function GetOpenTagsForOffset(text, offset)
 		end
 		i = i + 1
 	end
-	
+
 	local prefix = ""
 	for j = 1, table.getn(active_format_tags) do prefix = prefix .. active_format_tags[j] end
 	return prefix
@@ -112,30 +114,30 @@ local function ScrollUp()
 		gCataloguePortPage = gCataloguePortPage - 1
 		DebugOut("UI", "Scrolling UP port description.", { newPage = gCataloguePortPage })
 		SoundEvent("cadi/ui_click.ogg")
-		
-		-- FIX: Ensure this perfectly matches your actual .lua file name
-		FillWindow("catalogue_detail", "ui/catalogue_port_detail.lua") 
+
+		-- Reload the same detail panel after changing pages.
+		FillWindow("catalogue_detail", "ui/catalogue_port_detail.lua")
 	end
 end
 
 local function ScrollDown()
 	if not showUnlockedView then return end
-	
+
 	local rawBody = GetString("catalogue_port_" .. port.name .. "_text")
 	if rawBody == "#####" then return end
-	
+
 	if gCataloguePortPage == table.getn(gCataloguePortOffsets) then
 		local current_offset = gCataloguePortOffsets[gCataloguePortPage]
 		local next_offset = GetNextSafeOffset(rawBody, current_offset, chars_per_scroll)
 		table.insert(gCataloguePortOffsets, next_offset)
 		DebugOut("UI", "Calculated safe scroll offset.", { offset = next_offset })
 	end
-	
+
 	gCataloguePortPage = gCataloguePortPage + 1
 	SoundEvent("cadi/ui_click.ogg")
-	
-	-- FIX: Ensure this perfectly matches your actual .lua file name
-	FillWindow("catalogue_detail", "ui/catalogue_port_detail.lua") 
+
+	-- Reload the same detail panel after changing pages.
+	FillWindow("catalogue_detail", "ui/catalogue_port_detail.lua")
 end
 
 -------------------------------------------------------------------------------
@@ -150,7 +152,7 @@ local function GatherPortData(port)
 
 	if port.buildings then
 		for _, building in ipairs(port.buildings) do
-			
+
 			-- 1. Buildings
 			if building.type ~= "special" and not bldg_seen[building.name] then
 				if gDevForceReveal or Player.buildingsVisited[building.name] then
@@ -196,11 +198,11 @@ local function GatherPortData(port)
 			end
 		end
 	end
-	
+
 	table.sort(data.buildings, function(a,b) return GetString(a.name) < GetString(b.name) end)
 	table.sort(data.ingredients, function(a,b) return a.name < b.name end)
 	table.sort(data.characters, function(a,b) return a.name < b.name end)
-	
+
 	return data
 end
 
@@ -234,16 +236,16 @@ end
 
 if showUnlockedView then
 	-- STATE 2: UNLOCKED PORT VIEW
-	DebugOut("UI", "Building layout: Unlocked Port.", { port = port.name })
-	
+	DebugOut("UI", "Rendering unlocked port layout.", { port = port.name })
+
 	-- 1. OVERLAY IMAGE
 	local overlay_x_offset = -462
-	local overlay_y_offset = -488 
+	local overlay_y_offset = -488
 	table.insert(contents, Bitmap { x = overlay_x_offset, y = overlay_y_offset, w = 457, h = 480, image = "image/catalogue_overlay_ports_" .. port.name .. ".png" })
-	
+
 	-- 2. TITLE
 	table.insert(contents, Text { x = 24, y = 10, w = 406, h = 40, label = "#" .. GetString(port.name), font = { labelFontName, 28, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-	
+
 	-- 3. LEFT COLUMN: PASSPORT DATA
 	local left_col_x = 14
 	local left_col_w = 194
@@ -252,50 +254,50 @@ if showUnlockedView then
 	local info_font2 = { uiFontName, 12, BlackColor }
 	local tiny_font = { uiFontName, 12, BlackColor }
 	local passport_y = 50
-	
+
 	local countryKey = port.country or "unknown"
 	table.insert(contents, Bitmap { x = left_col_x, y = passport_y, w = 40, h = 25, image = "image/flags/flag_" .. countryKey, scale = 0.3, flags = kVAlignCenter + kHAlignCenter })
-	
+
 	local locationStr = GetString("country_" .. countryKey)
 	if port.region then locationStr = locationStr .. "<br>" .. GetString("region_" .. port.region) end
 	table.insert(contents, Text { x = left_col_x + 55, y = passport_y, w = 125, h = 40, label = "#" .. locationStr, font = info_font, flags = kVAlignTop + kHAlignLeft })
-	
+
 	passport_y = passport_y + 35
-	
+
 	local hemiStr = GetString("hemisphere_" .. (port.hemisphere or "north"))
 	local cultStr = GetString("culture_" .. (port.culture or "western"))
 	table.insert(contents, Text { x = left_col_x, y = passport_y, w = 200, h = 30, label = "#" .. hemiStr .. " / " .. cultStr, font = info_font2, flags = kVAlignTop + kHAlignLeft })
-	
+
 	passport_y = passport_y + 20
-	
+
 	-- 4. LEFT COLUMN LOWER: DATA TABLES
 	local portData = GatherPortData(port)
 	local data_y = passport_y
 	local sub_col_w = Floor(left_col_w / 2)
 	local row_height = 12
-	
+
 	-- Holidays
 	local holidays = GetCelebratedHolidays(port)
 	if table.getn(holidays) > 0 then
 		table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_holidays_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
 		data_y = data_y + 20
-		
+
 		local h_names = {}
 		for _, h_key in ipairs(holidays) do table.insert(h_names, GetString("holiday_" .. h_key)) end
 		local holidayStr = table.concat(h_names, ", ")
-		
+
 		local est_height = 30
 		if string.len(holidayStr) > 30 then est_height = 30 end
-		
+
 		table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = est_height, label = "#" .. holidayStr, font = info_font, flags = kVAlignTop + kHAlignLeft })
 		data_y = data_y + est_height + 10
 	end
-	
+
 	-- Buildings
 	if table.getn(portData.buildings) > 0 then
 		table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_buildings_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
 		data_y = data_y + 20
-		
+
 		for i, bldg in ipairs(portData.buildings) do
 			local col_offset = Mod(i-1, 2) * sub_col_w
 			local row_offset = Floor((i-1)/2) * row_height
@@ -303,12 +305,12 @@ if showUnlockedView then
 		end
 		data_y = data_y + (Floor((table.getn(portData.buildings) + 1) / 2) * row_height) + 10
 	end
-	
+
 	-- Ingredients
 	if table.getn(portData.ingredients) > 0 then
 		table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_ingredients_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
 		data_y = data_y + 20
-		
+
 		for i, ing in ipairs(portData.ingredients) do
 			local col_offset = Mod(i-1, 2) * sub_col_w
 			local row_offset = Floor((i-1)/2) * row_height
@@ -321,7 +323,7 @@ if showUnlockedView then
 	if table.getn(portData.characters) > 0 then
 		table.insert(contents, Text { x = left_col_x, y = data_y, w = left_col_w, h = 20, label = "#<b>" .. GetString("catalogue_residents_label") .. "</b>", font = sub_header_font, flags = kVAlignTop + kHAlignLeft })
 		data_y = data_y + 20
-		
+
 		for i, char in ipairs(portData.characters) do
 			local col_offset = Mod(i-1, 2) * sub_col_w
 			local row_offset = Floor((i-1)/2) * row_height
@@ -342,44 +344,44 @@ if showUnlockedView then
 		DebugOut("UI", "Injected persistent formatting tags.", { tags = openTags })
 	end
 
-	table.insert(contents, Text { 
-		x = right_col_x, y = 55, w = right_col_w, h = right_col_h, 
-		name = "catalogue_description_text", 
+	table.insert(contents, Text {
+		x = right_col_x, y = 55, w = right_col_w, h = right_col_h,
+		name = "catalogue_description_text",
 		label = "#" .. visibleText,
 		font = { uiFontName, 15, BlackColor }, -- Statically set font size
-		flags = kVAlignTop + kHAlignLeft 
+		flags = kVAlignTop + kHAlignLeft
 	})
-	
+
 	-- 6. SCROLL CONTROLS
 	local btn_y = 395
 	local btn_spacing = 40
 	local btn_center_x = right_col_x + (right_col_w / 2) - 36 -- Center over the right column
 
-	table.insert(contents, Button { 
-		x = btn_center_x - btn_spacing, y = btn_y, w = 25, h = 25, 
-		name = "port_scrollUp", command = ScrollUp, 
-		graphics = {"image/button_arrow_up_up", "image/button_arrow_up_down", "image/button_arrow_up_over"}, 
+	table.insert(contents, Button {
+		x = btn_center_x - btn_spacing, y = btn_y, w = 25, h = 25,
+		name = "port_scrollUp", command = ScrollUp,
+		graphics = {"image/button_arrow_up_up", "image/button_arrow_up_down", "image/button_arrow_up_over"},
 		scale = 0.8
 	})
-	
-	table.insert(contents, Button { 
-		x = btn_center_x + btn_spacing, y = btn_y, w = 25, h = 25, 
-		name = "port_scrollDown", command = ScrollDown, 
-		graphics = {"image/button_arrow_down_up", "image/button_arrow_down_down", "image/button_arrow_down_over"}, 
+
+	table.insert(contents, Button {
+		x = btn_center_x + btn_spacing, y = btn_y, w = 25, h = 25,
+		name = "port_scrollDown", command = ScrollDown,
+		graphics = {"image/button_arrow_down_up", "image/button_arrow_down_down", "image/button_arrow_down_over"},
 		scale = 0.8
 	})
 
 else
 	-- STATE 1: LOCKED PORT VIEW
-	DebugOut("UI", "Building layout: Locked Port Fallback.", { port = port.name })
+	DebugOut("UI", "Rendering locked-port fallback layout.", { port = port.name })
 	table.insert(contents, Text { x = 24, y = 19, w = 406, h = 44, label ="#"..GetString("catalogue_locked_title"), font = { labelFontName, 22, BlackColor }, flags = kVAlignCenter + kHAlignCenter })
-	
-	table.insert(contents, Text { 
-		x = 192, y = 69, w = 238, h = 157, 
-		name = "catalogue_description_text", 
+
+	table.insert(contents, Text {
+		x = 192, y = 69, w = 238, h = 157,
+		name = "catalogue_description_text",
 		label = "#" .. GetString("catalogue_locked_default_desc"),
 		font = { uiFontName, 14, BlackColor },
-		flags = kVAlignTop + kHAlignLeft 
+		flags = kVAlignTop + kHAlignLeft
 	})
 end
 
@@ -397,17 +399,17 @@ if showUnlockedView then
 	QueueCommand(function()
 		local rawBody = GetString("catalogue_port_" .. port.name .. "_text")
 		local chars_remaining = string.len(rawBody) - gCataloguePortOffsets[gCataloguePortPage]
-		
+
 		local canScrollUp = gCataloguePortPage > 1
 		local canScrollDown = chars_remaining > chars_per_page
-		
+
 		EnableWindow("port_scrollUp", canScrollUp)
 		EnableWindow("port_scrollDown", canScrollDown)
-		
-		DebugOut("UI", "Post-render scroll states evaluated.", { 
-			canScrollUp = canScrollUp, 
-			canScrollDown = canScrollDown, 
-			charsRemaining = chars_remaining 
+
+		DebugOut("UI", "Post-render scroll states evaluated.", {
+			canScrollUp = canScrollUp,
+			canScrollDown = canScrollDown,
+			charsRemaining = chars_remaining
 		})
 	end)
 end

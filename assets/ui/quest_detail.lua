@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Quest Log Detail View)
+	Chocolatier: Decadence by Design Reforged (Quest Log Detail View)
 	Copyright (c) 2006-2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This script renders the right-hand panel of the Quest Log, detailing the
@@ -37,7 +37,7 @@ end
 for _, req in ipairs(goal_list) do
 	local desc = req.Description and req:Description(gDetailQuest)
 	if desc then table.insert(goals, req) end
-	
+
 	-- Check if any goal specifically requests displaying the recipient portrait
 	if req.showEnder then showEnder = true end
 end
@@ -60,18 +60,18 @@ for i, req in ipairs(goals) do
 	local y = yTopGoal + (i - 1) * 36 - 15
 	local desc = req:Description(gDetailQuest)
 	local image = "image/indicatorlight_off"
-	
+
 	-- Determine progress indicator light status
-	if gDetailQuest:IsComplete() then 
+	if gDetailQuest:IsComplete() then
 		image = "image/indicatorlight_green"
-	elseif req.hint then 
+	elseif req.hint then
 		-- Invisible/hidden goals (used for behind-the-scenes tracking)
 		image = "image/indicatorlight_blank"
-	elseif req:Evaluate(gDetailQuest) then 
+	elseif req:Evaluate(gDetailQuest) then
 		-- Active goal successfully met
 		image = "image/indicatorlight_green"
 	end
-	
+
 	table.insert(goalDisplay, Bitmap { x = 3, y = y + 2 + 15, image = image })
 	table.insert(goalDisplay, Text { x = 38, y = y, w = w, h = 36 + 30, label = "#" .. desc, flags = kVAlignCenter + kHAlignLeft })
 end
@@ -88,7 +88,7 @@ local starterDisplay = {}
 local starterName = gDetailQuest:GetStarterName()
 local isTelegram = gDetailQuest.forceTelegram
 
--- Only render the starter's portrait if they physically existed. 
+-- Only render the starter's portrait if they physically existed.
 -- Telegrams/Special Orders are remote and feature no initial starter avatar.
 if starterName and not isTelegram then
 	summaryX = 105
@@ -120,13 +120,13 @@ end
 MakeDialog
 {
 	x = 0, y = 0, w = 455, h = 435,
-	
+
 	Group(starterDisplay),
-	
+
 	-- Summary Text Box
 	SetStyle(C3CharacterDialogStyle),
 	Text { x = summaryX, y = 40, w = summaryW, h = 190, name = "quest_summary", flags = kVAlignTop + kHAlignLeft },
-	
+
 	Group(enderDisplay),
 	Group(goalDisplay),
 }
@@ -134,16 +134,16 @@ MakeDialog
 -- ----------------------------------------------------------------------------
 -- Final Summary Text Application
 -- ----------------------------------------------------------------------------
--- Check if a custom, pre-generated offer text was cached for this quest. 
+-- Check if a custom, pre-generated offer text was cached for this quest.
 -- This is primarily used for in-person delivery quests to override the generic telegram format.
 if Player.questOfferText[gDetailQuest.name] then
 	summaryText = Player.questOfferText[gDetailQuest.name]
-	DebugOut("UI", string.format("Quest Detail: Using pre-generated cached offer text for '%s'.", gDetailQuest.name))
+	DebugOut("UI", string.format("Using pre-generated cached offer text for '%s'.", gDetailQuest.name))
 else
 	-- If no custom text exists, regenerate the intro text from scratch.
 	-- This ensures that standard quests accurately reflect their difficulty-locked data.
 	summaryText = gDetailQuest:GetIntro()
-	DebugOut("UI", string.format("Quest Detail: Dynamically regenerating intro text for '%s'.", gDetailQuest.name))
+	DebugOut("UI", string.format("Dynamically regenerating intro text for '%s'.", gDetailQuest.name))
 end
 
 SetLabel("quest_summary", summaryText)

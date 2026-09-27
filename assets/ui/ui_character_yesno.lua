@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Character Yes/No Dialog)
+	Chocolatier: Decadence by Design Reforged (Character Yes/No Dialog)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local char = gDialogTable.char or gActiveCharacter
@@ -40,7 +40,7 @@ local function SetDynamicDialogueText(text)
 	local font_sizes_to_check = { 16, 15, 14, 13, 12 }
 	local chars_per_line_map = { [16] = 46, [15] = 49, [14] = 52, [13] = 56, [12] = 60 }
 	local line_thresholds = {[16] = 10, [15] = 11, [14] = 12, [13] = 13, [12] = 999 }
-	
+
 	local segments = {}
 	local current_pos = 1
 	if text then
@@ -64,10 +64,10 @@ local function SetDynamicDialogueText(text)
 		end
 		if total_lines <= line_threshold then
 			final_font_size = current_font_size
-			break 
+			break
 		end
 	end
-	
+
 	local formatted_text = string.format("<font size='%d'>%s</font>", final_font_size, text)
 	SetLabel("dialogue_text", formatted_text)
 end
@@ -122,21 +122,21 @@ local generatedButtons = {}
 for _, btn in ipairs(activeButtons) do
 	local style = buttonStyles[btn.length] or buttonStyles.standard
 	local width = buttonWidths[btn.length] or buttonWidths.standard
-	
+
 	table.insert(generatedButtons, Button {
 		x = currentX, y = buttonY, w = width, h = 50,
 		name = btn.name, label = "#" .. GetString(btn.label),
 		command = btn.command, default = btn.default, cancel = btn.cancel,
-		
-		font = buttonFont, 
+
+		font = buttonFont,
 		flags = kVAlignCenter + kHAlignCenter,
 		ty = kCenter - 3, tx = kCenter - 1,
-		
+
 		graphics = style.graphics,
 		sound = style.sound,
-		type = style.type, 
+		type = style.type,
 	})
-	
+
 	currentX = currentX + width + buttonSpacing
 end
 
@@ -152,13 +152,13 @@ MakeDialog
 		Bitmap
 		{
 			x = 0, y = 49, image = "image/popup_back_dialog",
-			
+
 			SetStyle(C3CharacterDialogStyle),
 			Text { x = 241, y = 48, w = 314, h = 172, name = "dialogue_text" },
-			
+
 			SetStyle(C3CharacterNameStyle),
 			Text { x = 41, y = 201, w = 187, h = 20, label = char.name, font = characterNameFont, flags = kVAlignCenter + kHAlignCenter },
-			
+
 			Group(generatedButtons),
 		},
 		CharWindow { x = 49, y = 0, name = char.name, happiness = char:GetHappiness() },

@@ -1,5 +1,5 @@
 --[[--------------------------------------------------------------------------
-	Chocolatier Three: Tutorial Quests
+	Chocolatier: Decadence by Design Reforged (Tutorial Quests)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]--------------------------------------------------------------------------
 
@@ -20,9 +20,9 @@ CreateQuest
 {
 	name = "tut_02",
 	starter = "main_alex",
-    accept = "yesplease",
+	accept = "yesplease",
 	accept_length = "long",
-    defer = "none",
+	defer = "none",
 	reject = "imgood",
 	reject_length = "long",
 	onaccept = {AwardBlockBuilding("zur_market"), AwardBlockBuilding("zur_shop"), AwardItem("sugar", 100), AwardItem("cacao", 100), AwardOfferQuest("tut_03")},
@@ -30,7 +30,7 @@ CreateQuest
 	goals_medium = { RequireMinMoney(15000), RequireRecipeMade("b03", 1),  RequireQuestComplete("tut_11")},
 	goals_hard = { RequireMinMoney(25000), RequireRecipeMade("b03", 1),  RequireQuestComplete("tut_11")},
 	oncomplete = {AwardOfferQuest("tut_over")},
-    onreject = {AwardOfferQuest("tut_over_notut")},
+	onreject = {AwardOfferQuest("tut_over_notut")},
 	priority = 3,
 }
 
@@ -85,7 +85,7 @@ CreateQuest
 	require = {RequireQuestActive("tut_03") },
 	repeatable = 0,
 	visible = false,
-}	
+}
 
 CreateQuest
 {
@@ -125,7 +125,7 @@ CreateQuest
 	reject = "none",
 	onaccept = {AwardText("tut_05_extra01"), AwardUnblockBuilding("zur_shop")},
 	goals = {HintPerson("zur_shopkeep", "zur_shop", "zurich") },
-	oncomplete = {AwardHappiness("zur_shopkeep", 80), AwardUnlockCharacter("zur_shopkeep")},	
+	oncomplete = {AwardHappiness("zur_shopkeep", 80), AwardUnlockCharacter("zur_shopkeep")},
 	require = { RequireQuestComplete("tut_04") },
 	followup = "tut_06",
 }
@@ -151,7 +151,7 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	goals = {RequireMinMoney(10), HintPerson("zur_shopkeep", "zur_shop", "zurich") },
-	oncomplete = {AwardHappiness("zur_shopkeep", 80)},	
+	oncomplete = {AwardHappiness("zur_shopkeep", 80)},
 	require = { RequireQuestComplete("tut_04") },
 	followup = "tut_07",
 }
@@ -190,11 +190,9 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	onaccept = {AwardOfferQuest("tut_09")},
---	goals = {RequireItem("sugar",100), RequireItem("cacao",100), HintPerson("main_alex", "zur_station", "zurich") },
 	require = { RequireQuestComplete("tut_07")},
 	autoComplete = true,
 }
-
 
 CreateQuest
 {
@@ -207,7 +205,6 @@ CreateQuest
 	reject = "none",
 	require = { RequireQuestComplete("tut_07")},
 	onaccept = {AwardMoney(5000), AwardUnblockBuilding("zur_market")},
---	onaccept = {AwardMoney(5000), AwardUnblockBuilding("zur_market"), AwardText("tut_09_extra01"), AwardDialog("quests"),},
 	goals = {HintPerson("zur_marketkeep", "zur_market", "zurich")},
 	oncomplete = { AwardOfferQuest("tut_10"), AwardUnlockCharacter("zur_marketkeep")},
 }
@@ -233,9 +230,7 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	goals = { RequireItem("sugar", 200)},
---	onaccept = {AwardDialog("inventory")},
 	oncomplete = {AwardHappiness("zur_marketkeep", 80), AwardOfferQuest("tut_11")},
---	onincomplete ={AwardDialog("inventory")},
 	require = { RequireQuestComplete("tut_09")},
 }
 
@@ -278,7 +273,6 @@ CreateQuest
 	visible = false,
 }
 
-
 CreateQuest
 {
 	name = "tut_11_helpb",
@@ -301,7 +295,6 @@ CreateQuest
 	goals = { RequireItem("cacao", 200)},
 	onaccept = {AwardUnlockCharacter("dou_marketkeep")},
 	oncomplete = {AwardHappiness("dou_marketkeep", 80), AwardOfferQuest("tut_13")},
---	onincomplete ={AwardDialog("inventory")},
 	require = { RequireQuestActive("tut_02"),  RequireQuestComplete("tut_11") },
 }
 
@@ -380,7 +373,6 @@ CreateQuest
 	defer = "none",
 	reject = "none",
 	goals = { RequireItem("sugar",1), RequireItem("cacao",1), RequireItem("milk",1), HintPerson("zur_factorykeep", "zur_factory", "zurich")},
---	onincomplete ={AwardDialog("inventory")},
 	require = { RequireQuestComplete("tut_14") },
 	oncomplete = {AwardOfferQuest("tut_16")},
 }
@@ -491,9 +483,8 @@ CreateQuest
 	onaccept = {AwardText("tut_18_extra01"), AwardFactoryPowerup("zur_factory", "bar", "recycler")},
 	goals = {RequireRecipeMade("b03")},
 	oncomplete = {AwardOfferQuest("tut_19")},
-	require = { RequireQuestComplete("tut_17") },	
+	require = { RequireQuestComplete("tut_17") },
 }
-
 
 CreateQuest
 {
@@ -505,7 +496,7 @@ CreateQuest
 	require = {RequireQuestActive("tut_18") },
 	repeatable = 0,
 	visible = false,
-}	
+}
 
 CreateQuest
 {
@@ -530,7 +521,7 @@ CreateQuest
 	require = {RequireQuestComplete("tut_18"), RequireRecipeMade("b03") },
 	visible = false,
 	autoComplete = true,
-}	
+}
 
 CreateQuest
 {

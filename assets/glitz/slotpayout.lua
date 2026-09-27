@@ -1,3 +1,9 @@
+--[[---------------------------------------------------------------------------
+	Chocolatier: Decadence by Design Reforged (Slot Payout Effect)
+	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
+	Reforged modifications (c) 2026 Michael Lane.
+--]]---------------------------------------------------------------------------
+
 ---------------------------------------------------------------
 -- SPARKLE: Spew generally vertically, falling down and spinning, with color fade
 -- Controllable:
@@ -22,9 +28,7 @@ SetNumParticles(80)
 -- Particle initialization
 
 pPosition:Init( fRange( Vec2(-5,0), Vec2(5,0) ) )
---pScale:Init( fRange(.3,1) )
 
---pVelocity:Init( fRange( Vec2(-53,100), Vec2(53,100) ) )
 pVelocity:Init( fRange( Vec2(-45,100), Vec2(45,100) ) )
 pAge:Init(0)
 

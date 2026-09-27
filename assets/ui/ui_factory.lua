@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Factory Status Dialog)
+	Chocolatier: Decadence by Design Reforged (Factory Status Dialog)
 	Copyright (c) 2006-2007 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local factory = gDialogTable.factory
@@ -26,7 +26,7 @@ local function UpdateDisplay()
 	if info and info.current then
 		local count, current = factory:GetProduction()
 		FillWindow("configuration", "ui/ui_factory_content.lua")
-		
+
 		-- Update the dynamic label on the "Make" button based on machinery type
 		local category = current:GetMachinery()
 		SetLabel("make", GetString("make_" .. category.factory))
@@ -45,8 +45,8 @@ end
 -- Developer Cheat: Forces the factory to produce a specific amount of cases per week
 local function devForceRate()
 	local count, product = factory:GetProduction()
-	DisplayDialog { 
-		"dev/dev_enter_amount.lua", 
+	DisplayDialog {
+		"dev/dev_enter_amount.lua",
 		prompt = "Force cases per week for " .. product:GetName() .. ":",
 		initialValue = tostring(count),
 		onOk = function(val)
@@ -60,7 +60,7 @@ end
 -- Triggers the factory minigame to set the weekly production yield
 local function MakeChocolates()
 	local count, product = factory:GetProduction()
-	
+
 	-- Tutorial Hook: Display a hint if the player is trying to make Milk Chocolate Bars
 	-- for the very first time during the Rank 1 tutorial sequence.
 	if product.code == "b01" and _AllQuests["tut_16"]:IsActive() then
@@ -68,17 +68,17 @@ local function MakeChocolates()
 		DisplayDialog { "ui/ui_character_generic.lua", char = char, building = factory, text = "tut16_configure_hint" }
 		return
 	end
-	
+
 	DebugOut("FACTORY", string.format("Launching manufacturing minigame for product: %s", product:GetName()))
-	
+
 	-- RunMinigame halts the normal UI and returns the final score/count.
 	count = product:RunMinigame { factory = factory, char = char }
 	count = tonumber(count)
-	
+
 	if count >= 0 then
 		factory:SetProduction(product, count)
 		UpdateDisplay()
-		
+
 		-- Advance time by 1 week to account for the time spent manufacturing
 		TickSim(1)
 		CloseDialog()
@@ -90,19 +90,19 @@ end
 -- Opens the recipe book to change what this factory is currently producing
 local function ChangeConfiguration()
 	DebugOut("FACTORY", string.format("Opening recipe book to configure factory: %s", factory.name))
-	
+
 	gRecipeSelection = _AllProducts[info.current]
 	local ok = DisplayDialog { "ui/ui_recipes.lua", factory = factory, building = factory }
 	local product = gRecipeSelection
 	gRecipeSelection = nil
-	
+
 	if product and ok then
 		-- If we have never successfully produced this item here before, force the minigame immediately
 		if factory:GetProduction(product) == 0 then
 			DebugOut("FACTORY", "New product configuration requires initial minigame run.")
 			local count = product:RunMinigame { factory = factory, char = char }
 			count = tonumber(count)
-			
+
 			if count >= 0 then
 				factory:SetProduction(product, count)
 				UpdateDisplay()
@@ -131,14 +131,14 @@ end
 -- Define the bitmap elements table dynamically so we can conditionally inject dev tools
 local ui_elements = {
 	x = 0, y = 49, image = "image/popup_back_dialog",
-	
+
 	-- Sub-panel container for the dynamic content UI
 	Window { x = 241, y = 35, w = kMax, h = 185, name = "configuration" },
-	
+
 	-- Character Identity Plate
 	SetStyle(C3CharacterNameStyle),
 	Text { x = 41, y = 201, w = 187, h = 20, label = "#" .. GetString(char.name), font = characterNameFont, flags = kVAlignCenter + kHAlignCenter },
-	
+
 	-- Action Buttons
 	SetStyle(C3ButtonStyle),
 	Button { x = kCenter - 133, y = 240, name = "upgrades", label = "upgrades", command = ManageUpgrades },
@@ -151,11 +151,11 @@ local ui_elements = {
 
 -- Conditional Injection: Add the Admin [SET RATE] button if developer mode is enabled
 if CheckConfig("dev") then
-	table.insert(ui_elements, Button { 
-		x = kCenter - 233, y = 230, w = 60, h = 18, 
-		label = "#SET RATE", 
-		font = { devMenuStyle.font[1], 10, Color(255, 0, 0, 255) }, 
-		command = devForceRate 
+	table.insert(ui_elements, Button {
+		x = kCenter - 233, y = 230, w = 60, h = 18,
+		label = "#SET RATE",
+		font = { devMenuStyle.font[1], 10, Color(255, 0, 0, 255) },
+		command = devForceRate
 	})
 end
 

@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three Port Data: Travel Routes
+	Chocolatier: Decadence by Design Reforged (Port Data - Travel Routes)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -16,7 +16,6 @@ baghdad:DefineRoute { havana, via=zurich }
 baghdad:DefineRoute { kona, via=toronto }
 baghdad:DefineRoute { lasvegas, via=zurich }
 baghdad:DefineRoute { lima, via=capetown }
--- baghdad:DefineRoute { mahajanga }
 baghdad:DefineRoute { reykjavik }
 baghdad:DefineRoute { sanfrancisco, via=zurich }
 baghdad:DefineRoute { tangiers }
@@ -38,7 +37,6 @@ bali:DefineRoute { havana, via=capetown }
 bali:DefineRoute { kona, via=capetown }
 bali:DefineRoute { lasvegas, via=capetown }
 bali:DefineRoute { lima, via=capetown }
--- bali:DefineRoute { mahajanga }
 bali:DefineRoute { reykjavik, via=capetown }
 bali:DefineRoute { sanfrancisco, via=capetown }
 bali:DefineRoute { tangiers }
@@ -59,7 +57,6 @@ belize:DefineRoute { havana }
 belize:DefineRoute { kona }
 belize:DefineRoute { lasvegas }
 belize:DefineRoute { lima }
--- belize:DefineRoute { mahajanga }
 belize:DefineRoute { reykjavik }
 belize:DefineRoute { sanfrancisco }
 belize:DefineRoute { tangiers }
@@ -79,7 +76,6 @@ bogota:DefineRoute { havana }
 bogota:DefineRoute { kona }
 bogota:DefineRoute { lasvegas }
 bogota:DefineRoute { lima }
--- bogota:DefineRoute { mahajanga }
 bogota:DefineRoute { reykjavik }
 bogota:DefineRoute { sanfrancisco }
 bogota:DefineRoute { tangiers }
@@ -98,7 +94,6 @@ capetown:DefineRoute { havana }
 capetown:DefineRoute { kona, via=bogota }
 capetown:DefineRoute { lasvegas }
 capetown:DefineRoute { lima }
--- capetown:DefineRoute { mahajanga }
 capetown:DefineRoute { reykjavik }
 capetown:DefineRoute { sanfrancisco }
 capetown:DefineRoute { tangiers }
@@ -116,7 +111,6 @@ douala:DefineRoute { havana }
 douala:DefineRoute { kona, via=bogota }
 douala:DefineRoute { lasvegas }
 douala:DefineRoute { lima }
--- douala:DefineRoute { mahajanga }
 douala:DefineRoute { reykjavik }
 douala:DefineRoute { sanfrancisco }
 douala:DefineRoute { tangiers }
@@ -133,7 +127,6 @@ falklands:DefineRoute { havana }
 falklands:DefineRoute { kona, via=lima }
 falklands:DefineRoute { lasvegas }
 falklands:DefineRoute { lima }
--- falklands:DefineRoute { mahajanga, via=capetown }
 falklands:DefineRoute { reykjavik, via=bogota }
 falklands:DefineRoute { sanfrancisco }
 falklands:DefineRoute { tangiers, via=capetown }
@@ -149,7 +142,6 @@ gobidesert:DefineRoute { havana, via=zurich }
 gobidesert:DefineRoute { kona, via=zurich }
 gobidesert:DefineRoute { lasvegas, via=zurich }
 gobidesert:DefineRoute { lima, via=douala }
--- gobidesert:DefineRoute { mahajanga }
 gobidesert:DefineRoute { reykjavik, via=zurich }
 gobidesert:DefineRoute { sanfrancisco, via=zurich }
 gobidesert:DefineRoute { tangiers }
@@ -164,7 +156,6 @@ gobidesert:DefineRoute { zurich }
 havana:DefineRoute { kona }
 havana:DefineRoute { lasvegas }
 havana:DefineRoute { lima }
--- havana:DefineRoute { mahajanga }
 havana:DefineRoute { reykjavik }
 havana:DefineRoute { sanfrancisco }
 havana:DefineRoute { tangiers }
@@ -178,7 +169,6 @@ havana:DefineRoute { zurich }
 -- KONA
 kona:DefineRoute { lasvegas }
 kona:DefineRoute { lima }
--- kona:DefineRoute { mahajanga, via=bogota }
 kona:DefineRoute { reykjavik, via=toronto }
 kona:DefineRoute { sanfrancisco }
 kona:DefineRoute { tangiers, via=sanfrancisco }
@@ -191,7 +181,6 @@ kona:DefineRoute { zurich, via=toronto }
 -------------------------------------------------------------------------------
 -- LASVEGAS
 lasvegas:DefineRoute { lima }
--- lasvegas:DefineRoute { mahajanga }
 lasvegas:DefineRoute { reykjavik }
 lasvegas:DefineRoute { sanfrancisco }
 lasvegas:DefineRoute { tangiers }
@@ -203,7 +192,6 @@ lasvegas:DefineRoute { zurich }
 
 -------------------------------------------------------------------------------
 -- LIMA
--- lima:DefineRoute { mahajanga }
 lima:DefineRoute { reykjavik }
 lima:DefineRoute { sanfrancisco }
 lima:DefineRoute { tangiers }
@@ -212,17 +200,6 @@ lima:DefineRoute { toronto }
 lima:DefineRoute { uluru, via=capetown }
 lima:DefineRoute { wellington, via=capetown }
 lima:DefineRoute { zurich }
-
--------------------------------------------------------------------------------
--- MAHAJANGA (NEW)
--- mahajanga:DefineRoute { reykjavik }
--- mahajanga:DefineRoute { sanfrancisco }
--- mahajanga:DefineRoute { tangiers }
--- mahajanga:DefineRoute { tokyo }
--- mahajanga:DefineRoute { toronto }
--- mahajanga:DefineRoute { uluru }
--- mahajanga:DefineRoute { wellington }
--- mahajanga:DefineRoute { zurich }
 
 -------------------------------------------------------------------------------
 -- REYKJAVIK

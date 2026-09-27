@@ -1,6 +1,6 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Port List Panel)
-	Copyright (c) 2025-2026 Michael Lane and Google Gemini AI.
+	Chocolatier: Decadence by Design Reforged (Port List Panel)
+	Copyright (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 local function Mod(a, n)
@@ -9,13 +9,13 @@ local function Mod(a, n)
 end
 
 local function SelectPort(port)
-	-- Strict Verification: The player is completely blocked from reading the 
+	-- Strict Verification: The player is completely blocked from reading the
 	-- detail pane of a port they haven't manually visited yet.
 	if port and Player.catalogue.unlockedPorts[port.name] then
 		if gCatalogueSelection ~= port then
 			gCatalogueSelection = port
 			DebugOut("UI", string.format("Catalogue selection changed to Port: %s", port.name))
-			
+
 			FillWindow("catalogue_list", "ui/catalogue_port_list.lua")
 			FillWindow("catalogue_detail", "ui/catalogue_detail.lua")
 		end
@@ -63,7 +63,7 @@ for i = gCatalogueTopIndex, gCatalogueTopIndex + layout.items_per_page - 1 do
 
 		local label = isUnlocked and GetString(port.name) or GetString("catalogue_locked_title")
 		local imagePath = "image/catalogue_thumb_" .. port.name .. ".png"
-		
+
 		local portDisplay
 		if isUnlocked then
 			portDisplay = Bitmap { image = imagePath, scale = thumbScale }
@@ -72,13 +72,13 @@ for i = gCatalogueTopIndex, gCatalogueTopIndex + layout.items_per_page - 1 do
 		end
 
 		table.insert(contents,
-			Button { 
+			Button {
 				x = x, y = y, w = 95, h = 95, graphics = {},
 				command = function() SoundEvent("cadi/ui_click.ogg"); SelectPort(tempPort) end,
-				
+
 				-- Dynamic Background Highlight
 				Bitmap { x = 0, y = 0, image = (gCatalogueSelection == tempPort) and "image/button_recipes_selected" or "image/button_recipes_up" },
-				
+
 				-- Bounded Thumbnail Container
 				Window { x = 15, y = 15, w = 74, h = 74, portDisplay },
 

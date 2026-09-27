@@ -111,11 +111,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Just bring her [D|a case|10 cases|25 cases] of those %m01%, and she'll let you know what she has in mind.</Data></Cell>
+	 <Cell><Data ss:Type="String">Just bring her [Q|unit_case|1|10|25] of those %m01%, and she'll let you know what she has in mind.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|a case|10 cases|25 cases] of %m01% to %main_whit% at %wel_factory% in %wellington%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|1|10|25] of %m01% to %main_whit% at %wel_factory% in %wellington%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">off_to_whitney_incomplete_1</Data></Cell>
@@ -155,7 +155,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">back_to_joseph_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|a case|10 cases|25 cases] of %e01% to %main_jose% at %tor_office% in %toronto%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|1|10|25] of %e01% to %main_jose% at %tor_office% in %toronto%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">back_to_joseph_incomplete_1</Data></Cell>
@@ -171,11 +171,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I happen to know a lady who is holding a pair of Exotics recipes. Frankly, my aged brain has gone a bit fuzzy on the specifics. I know her name is Keylla and that she is from a Spanish-speaking country; I simply cannot remember which one. If you want to persuade her to share the recipes, I suggest bringing her [D|60|90|150] cases of %t06%. Then, she'll set you up.</Data></Cell>
+	 <Cell><Data ss:Type="String">I happen to know a lady who is holding a pair of Exotics recipes. Frankly, my aged brain has gone a bit fuzzy on the specifics. I know her name is Keylla and that she is from a Spanish-speaking country; I simply cannot remember which one. If you want to persuade her to share the recipes, I suggest bringing her [Q|unit_case|60|90|150] of %t06%. Then, she'll set you up.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Deliver [D|60|90|150] cases of %t06% to someone named Keylla in a Spanish-speaking port.</Data></Cell>
+	 <Cell><Data ss:Type="String">Deliver [Q|unit_case|60|90|150] of %t06% to someone named Keylla in a Spanish-speaking port.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_incomplete_1</Data></Cell>
@@ -183,7 +183,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_01_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%lim_plazakeep% is holding a couple of recipes for exotics for you. As long as you show up with [D|60|90|150] cases of %t06%, she'll be willing to share what she's got.</Data></Cell>
+	 <Cell><Data ss:Type="String">%lim_plazakeep% is holding a couple of recipes for exotics for you. As long as you show up with [Q|unit_case|60|90|150] of %t06%, she'll be willing to share what she's got.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02</Data></Cell>
@@ -191,15 +191,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I am impressed, &lt;player&gt; - your %t06% are delicious.&lt;br&gt;&lt;br&gt;I have a couple of exotics recipes that I would be willing to part with. I tell you what - I'll hand over the first one now, and when you bring me [D|50|75|125] cases of those, I'll hand over the second. OK?</Data></Cell>
+	 <Cell><Data ss:Type="String">I am impressed, &lt;player&gt; - your %t06% are delicious.&lt;br&gt;&lt;br&gt;I have a couple of exotics recipes that I would be willing to part with. I tell you what - I'll hand over the first one now, and when you bring me [Q|unit_case|50|75|125] of those, I'll hand over the second. OK?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent - here's the recipe, and I look forward to receiving the [D|50|75|125] cases.</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent - here's the recipe, and I look forward to receiving the [Q|unit_case|50|75|125].</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e03% to Keylla at %lim_plaza% in %lima%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|50|75|125] of %e03% to Keylla at %lim_plaza% in %lima%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_complete_1</Data></Cell>
@@ -211,11 +211,11 @@
    </Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You've got the recipe, right? You do want the other recipe, right? Well, you need to bring me those [D|50|75|125] cases of %e03%...</Data></Cell>
+	 <Cell><Data ss:Type="String">You've got the recipe, right? You do want the other recipe, right? Well, you need to bring me those [Q|unit_case|50|75|125] of %e03%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_02_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%lim_plazakeep% is holding another recipe for you. Once you show up with [D|50|75|125] cases of %e03%, she'll be willing to share what she's got.</Data></Cell>
+	 <Cell><Data ss:Type="String">%lim_plazakeep% is holding another recipe for you. Once you show up with [Q|unit_case|50|75|125] of %e03%, she'll be willing to share what she's got.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03</Data></Cell>
@@ -223,15 +223,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm glad I ran into you, &lt;player&gt;. My friend Keylla told me that she had given you a recipe for %e02%. I happen to be able to offer you passage to the only place on earth where you'll be able to find the %date% you need for that recipe. If I can get you there, as well as promise a couple of recipes in return, will you be willing to bring me [D|50|75|125] cases of %e02%?</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm glad I ran into you, &lt;player&gt;. My friend Keylla told me that she had given you a recipe for %e02%. I happen to be able to offer you passage to the only place on earth where you'll be able to find the %date% you need for that recipe. If I can get you there, as well as promise a couple of recipes in return, will you be willing to bring me [Q|unit_case|50|75|125] of %e02%?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Great. I'm actually on my way to Keylla's place in Peru. I'll meet you there, at %lim_plaza%, and as soon as you arrive with [D|50|75|125] cases of %e02%, I'll hand over the other recipes.&lt;br&gt;&lt;br&gt;In the meantime, you can now travel to %gobidesert%, where you'll find the %date% you need...</Data></Cell>
+	 <Cell><Data ss:Type="String">Great. I'm actually on my way to Keylla's place in Peru. I'll meet you there, at %lim_plaza%, and as soon as you arrive with [Q|unit_case|50|75|125] of %e02%, I'll hand over the other recipes.&lt;br&gt;&lt;br&gt;In the meantime, you can now travel to %gobidesert%, where you'll find the %date% you need...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|50|75|125] cases of %e02% to %trav_05% at %lim_plaza% in %lima%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|50|75|125] of %e02% to %trav_05%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_complete_1</Data></Cell>
@@ -239,11 +239,35 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Here I am, as promised. You made a promise, too, &lt;player&gt;, do you remember? That's right - [D|50|75|125] cases of %e02%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Here I am, as promised. You made a promise, too, &lt;player&gt;, do you remember? That's right - [Q|unit_case|50|75|125] of %e02%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_03_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%trav_05% is waiting at %lim_plaza% with a couple of Exotics recipes for you, &lt;player&gt;. She is eager for you to arrive with the [D|50|75|125] cases of %e02% she is expecting...</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_05% is waiting at %lim_plaza% with a couple of Exotics recipes for you, &lt;player&gt;. She is eager for you to arrive with the [Q|unit_case|50|75|125] of %e02% she is expecting...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_03_extra01_met_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Great. Since we have already crossed paths here, I will stay at {quest_location_building} in {quest_location_port} while you make the trip. Bring me [Q|unit_case|50|75|125] of %e02% here and I'll hand over the other recipes.&lt;br&gt;&lt;br&gt;In the meantime, you can now travel to %gobidesert%, where you'll find the %date% you need...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_03_extra01_fallback_1</Data></Cell>
+	 <Cell><Data ss:Type="String">Great. I'm actually on my way to Keylla's place in Peru. I'll meet you there, at %lim_plaza%, and as soon as you arrive with [Q|unit_case|50|75|125] of %e02%, I'll hand over the other recipes.&lt;br&gt;&lt;br&gt;In the meantime, you can now travel to %gobidesert%, where you'll find the %date% you need...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_03_summary_met</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|50|75|125] of %e02% to %trav_05% at {quest_location_building} in {quest_location_port}.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_03_summary_fallback</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|50|75|125] of %e02% to %trav_05% at {quest_location_building} in {quest_location_port}.</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_03_hint_met_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_05% is waiting at {quest_location_building} in {quest_location_port} with a couple of Exotics recipes for you, &lt;player&gt;. She is eager for you to arrive with the [Q|unit_case|50|75|125] of %e02% she is expecting...</Data></Cell>
+	</Row>
+	<Row>
+	 <Cell><Data ss:Type="String">rank3_03_hint_fallback_1</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_05% is waiting at {quest_location_building} in {quest_location_port} with a couple of Exotics recipes for you, &lt;player&gt;. She is eager for you to arrive with the [Q|unit_case|50|75|125] of %e02% she is expecting...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04</Data></Cell>
@@ -255,11 +279,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Super. I'm going to give you a couple more Blends recipes. I want you to take [D|20|50|100] cases of each of %m01%, %m02% and %m03% to my brother Felix in %capetown%. That's [D|60|150|300] cases total.</Data></Cell>
+	 <Cell><Data ss:Type="String">Super. I'm going to give you a couple more Blends recipes. I want you to take [Q|unit_case|20|50|100] of each of %m01%, %m02% and %m03% to my brother Felix in %capetown%. That's [Q|unit_case|60|150|300] total.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|20|50|100] cases each of %m01%, %m02% and %m03% to %main_feli% in %capetown%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|20|50|100] each of %m01%, %m02% and %m03% to %main_feli% in %capetown%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_complete_1</Data></Cell>
@@ -271,7 +295,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_04_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to bring [D|20|50|100] cases each of %m01%, %m02% and %m03% to %main_feli% in %capetown% in order to get him comfortable with the expansion of the business into Blends.</Data></Cell>
+	 <Cell><Data ss:Type="String">You need to bring [Q|unit_case|20|50|100] each of %m01%, %m02% and %m03% to %main_feli% in %capetown% in order to get him comfortable with the expansion of the business into Blends.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05</Data></Cell>
@@ -283,11 +307,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Sweet! OK, here's [D|$100,000|$150,000|$250,000]. I'll track you down in a few months, and by that time please have on hand for me [D|35|60|100] cases each of your &lt;user4&gt; and &lt;user5&gt;. When you give me the confections, I'll give you the recipes I mentioned.</Data></Cell>
+	 <Cell><Data ss:Type="String">Sweet! OK, here's [D|$100,000|$150,000|$250,000]. I'll track you down in a few months, and by that time please have on hand for me [Q|unit_case|35|60|100] each of your &lt;user4&gt; and &lt;user5&gt;. When you give me the confections, I'll give you the recipes I mentioned.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Have [D|35|60|100] cases each of &lt;user4&gt; and &lt;user5&gt; on hand for %trav_06%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Have [Q|unit_case|35|60|100] each of &lt;user4&gt; and &lt;user5&gt; on hand for %trav_06%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_complete_1</Data></Cell>
@@ -303,7 +327,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_05_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%trav_06% is expecting [D|35|60|100] cases each of your &lt;user4&gt; and &lt;user5&gt;, for which he paid you in advance.</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_06% is expecting [Q|unit_case|35|60|100] each of your &lt;user4&gt; and &lt;user5&gt;, for which he paid you in advance.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06</Data></Cell>
@@ -319,11 +343,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_extra02_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Make [D|25|40|60] cases and bring them along with [D|65|100|150] cases of %t09% to my friend Pedro, whom you'll find in the %bog_mountain% in %bogota%. As far as I'm aware, the %sesame% you'll need can now be found in %tangiers%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Make [Q|unit_case|25|40|60] and bring them along with [Q|unit_case|65|100|150] of %t09% to my friend Pedro, whom you'll find in the %bog_mountain% in %bogota%. As far as I'm aware, the %sesame% you'll need can now be found in %tangiers%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|25|40|60] cases of %m10% and [D|65|100|150] cases of %t09% to Pedro in %bogota%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|25|40|60] of %m10% and [Q|unit_case|65|100|150] of %t09% to Pedro in %bogota%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_complete_1</Data></Cell>
@@ -335,7 +359,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_06_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%bog_mountainkeep% is expecting you to visit him at %bog_mountain% in %bogota% with [D|65|100|150] cases of %t09% and [D|25|40|60] cases of %m10%...</Data></Cell>
+	 <Cell><Data ss:Type="String">%bog_mountainkeep% is expecting you to visit him at %bog_mountain% in %bogota% with [Q|unit_case|65|100|150] of %t09% and [Q|unit_case|25|40|60] of %m10%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07</Data></Cell>
@@ -343,11 +367,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">By the way, I do happen to know where you can get a hold of a couple of additional recipes here in Colombia. You should bring [D|a dozen cases|30 cases|50 cases] of your delicious %i11%, as well as [D|a dozen cases|30 cases|50 cases] of %e10%, to %bog_churchkeep% here at %bog_church%.</Data></Cell>
+	 <Cell><Data ss:Type="String">By the way, I do happen to know where you can get a hold of a couple of additional recipes here in Colombia. You should bring [Q|unit_case|12|30|50] of your delicious %i11%, as well as [Q|unit_case|12|30|50] of %e10%, to %bog_churchkeep% here at %bog_church%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Give [D|12|30|50] cases each of %e10% and %i11% to %bog_churchkeep% in %bogota%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Give [Q|unit_case|12|30|50] each of %e10% and %i11% to %bog_churchkeep% in %bogota%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_complete_1</Data></Cell>
@@ -359,7 +383,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_07_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%bog_churchkeep% at %bog_church% in %bogota% is holding a couple of recipes for you, &lt;player&gt; - she'll exchange them for [D|12|30|50] cases of %e10% and [D|12|30|50] cases of %i11%...</Data></Cell>
+	 <Cell><Data ss:Type="String">%bog_churchkeep% at %bog_church% in %bogota% is holding a couple of recipes for you, &lt;player&gt; - she'll exchange them for [Q|unit_case|12|30|50] of %e10% and [Q|unit_case|12|30|50] of %i11%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_prep_offer_1</Data></Cell>
@@ -387,23 +411,23 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Excellent. I'll grab the [D|$25,000|$40,000|$65,000] and give you the recipe. What you need to do is bring [D|78|116|172] cases of the finished product to %dou_shopkeep% in %douala%. Good luck!</Data></Cell>
+	 <Cell><Data ss:Type="String">Excellent. I'll grab the [D|$25,000|$40,000|$65,000] and give you the recipe. What you need to do is bring [Q|unit_case|78|116|172] of the finished product to %dou_shopkeep% in %douala%. Good luck!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|78|116|172] cases of %e07% to %dou_shopkeep% at %dou_shop% in %douala%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|78|116|172] of %e07% to %dou_shopkeep% at %dou_shop% in %douala%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Your %e07% are simply divine. In exchange for the first [D|78|116|172] cases, I will now give you a recipe for %e09%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Your %e07% are simply divine. In exchange for the first [Q|unit_case|78|116|172], I will now give you a recipe for %e09%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I have a recipe for you, &lt;player&gt;, as well as an opportunity to discuss, as soon as you bring [D|78|116|172] cases of %e07% - the recipe you bought from %las_marketkeep% in Vegas.</Data></Cell>
+	 <Cell><Data ss:Type="String">I have a recipe for you, &lt;player&gt;, as well as an opportunity to discuss, as soon as you bring [Q|unit_case|78|116|172] of %e07% - the recipe you bought from %las_marketkeep% in Vegas.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_09_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You are on the hook for [D|78|116|172] cases of %e07%, which you must deliver to %dou_shopkeep% at %dou_shop% in %douala%...</Data></Cell>
+	 <Cell><Data ss:Type="String">You are on the hook for [Q|unit_case|78|116|172] of %e07%, which you must deliver to %dou_shopkeep% at %dou_shop% in %douala%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10</Data></Cell>
@@ -411,11 +435,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I'm not sure if Claudia mentioned this to you, &lt;player&gt;, but I have been looking for a partner for my shop. You have continued to impress me with your creations, and at this point I am willing to sign ownership of this shop over to you, in exchange for [D|100|150|250] cases of the recipe I gave you - %e09% - as well as [D|100|150|250] cases each of %c06% and your &lt;user2&gt;. Do we have a deal?</Data></Cell>
+	 <Cell><Data ss:Type="String">I'm not sure if Claudia mentioned this to you, &lt;player&gt;, but I have been looking for a partner for my shop. You have continued to impress me with your creations, and at this point I am willing to sign ownership of this shop over to you, in exchange for [Q|unit_case|100|150|250] of the recipe I gave you - %e09% - as well as [Q|unit_case|100|150|250] each of %c06% and your &lt;user2&gt;. Do we have a deal?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Exchange [D|100|150|250] cases each of %e09%, %c06% and &lt;user2&gt; for %dou_shop%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Exchange [Q|unit_case|100|150|250] each of %e09%, %c06% and &lt;user2&gt; for %dou_shop%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_complete_1</Data></Cell>
@@ -427,7 +451,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_10_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%dou_shopkeep% is ready to transfer ownership of his shop to you, as soon as you bring him [D|100|150|250] cases each of %c06%, %e09%, and your &lt;user2&gt;...</Data></Cell>
+	 <Cell><Data ss:Type="String">%dou_shopkeep% is ready to transfer ownership of his shop to you, as soon as you bring him [Q|unit_case|100|150|250] each of %c06%, %e09%, and your &lt;user2&gt;...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11</Data></Cell>
@@ -439,11 +463,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Magnifique. We must show him respect for the past and vision for the future. Bring him [D|50|85|130] cases of %c12% - the mint is a flavor he will respect. But to shock him a little, bring [D|50|85|130] cases of %m08% as well. He needs to see what the modern world is drinking!</Data></Cell>
+	 <Cell><Data ss:Type="String">Magnifique. We must show him respect for the past and vision for the future. Bring him [Q|unit_case|50|85|130] of %c12% - the mint is a flavor he will respect. But to shock him a little, bring [Q|unit_case|50|85|130] of %m08% as well. He needs to see what the modern world is drinking!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Take [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c12% to %bag_shop% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Take [Q|unit_case|50|85|130] of %m08% and [Q|unit_case|50|85|130] of %c12% to %bag_shop% in %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_complete_1</Data></Cell>
@@ -451,11 +475,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I was sincerely hoping you'd show up on our first meeting with [D|50|85|130] cases of %m08% and %c12% for me. I don't like giving reminders, but next time you step inside my shop, I would appreciate being given said products...</Data></Cell>
+	 <Cell><Data ss:Type="String">I was sincerely hoping you'd show up on our first meeting with [Q|unit_case|50|85|130] of %m08% and %c12% for me. I don't like giving reminders, but next time you step inside my shop, I would appreciate being given said products...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_11_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%trav_09% wants you to impress the owner of %bag_shop%. Deliver [D|50|85|130] cases of %m08% and [D|50|85|130] cases of %c12% to %bag_shopkeep% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">%trav_09% wants you to impress the owner of %bag_shop%. Deliver [Q|unit_case|50|85|130] of %m08% and [Q|unit_case|50|85|130] of %c12% to %bag_shopkeep% in %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12</Data></Cell>
@@ -467,11 +491,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_extra01_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Good. Take [D|200|280|440] cases of %m09% - the recipe I just gave you - to the %bag_tower%. He will appreciate the caramel. Speak with him, and he will guide you further.</Data></Cell>
+	 <Cell><Data ss:Type="String">Good. Take [Q|unit_case|200|280|440] of %m09% - the recipe I just gave you - to the %bag_tower%. He will appreciate the caramel. Speak with him, and he will guide you further.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Convey [D|200|280|440] cases of %m09% to %bag_towerkeep% at %bag_tower% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Convey [Q|unit_case|200|280|440] of %m09% to %bag_towerkeep% at %bag_tower% in %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_complete_1</Data></Cell>
@@ -479,11 +503,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Abrahem mentioned a delivery for the mosque. I am expecting [D|200|280|440] cases of %m09%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Abrahem mentioned a delivery for the mosque. I am expecting [Q|unit_case|200|280|440] of %m09%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_12_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">%bag_shopkeep% wants you to win the favor of the Imam. Deliver [D|200|280|440] cases of %m09% to %bag_towerkeep% at the %bag_tower% in %baghdad%.</Data></Cell>
+	 <Cell><Data ss:Type="String">%bag_shopkeep% wants you to win the favor of the Imam. Deliver [Q|unit_case|200|280|440] of %m09% to %bag_towerkeep% at the %bag_tower% in %baghdad%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13</Data></Cell>
@@ -491,11 +515,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">To be a partner in this city, you must bring gifts and understand our soul. Take the recipe I have given you. Go now, brew [D|200|300|460] cases of that %m11%, and present them to Abrahem at his shop. Show him also [D|50|80|130] cases each of your own &lt;user4&gt;, &lt;user5&gt;, and &lt;user6&gt;. If you can master our flavors alongside your own, he will surely sign the deed.</Data></Cell>
+	 <Cell><Data ss:Type="String">To be a partner in this city, you must bring gifts and understand our soul. Take the recipe I have given you. Go now, brew [Q|unit_case|200|300|460] of that %m11%, and present them to Abrahem at his shop. Show him also [Q|unit_case|50|80|130] each of your own &lt;user4&gt;, &lt;user5&gt;, and &lt;user6&gt;. If you can master our flavors alongside your own, he will surely sign the deed.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|200|300|460] cases of %m11% and [D|50|80|130] cases each of &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; to %bag_shop%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|200|300|460] of %m11% and [Q|unit_case|50|80|130] each of &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; to %bag_shop%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_complete_1</Data></Cell>
@@ -507,7 +531,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">rank3_13_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">In order to take ownership of %bag_shop% in %baghdad%, you must show up with [D|200|300|460] cases of %m11%, as well as [D|50|80|130] cases each of &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; for %bag_shopkeep%.</Data></Cell>
+	 <Cell><Data ss:Type="String">In order to take ownership of %bag_shop% in %baghdad%, you must show up with [Q|unit_case|200|300|460] of %m11%, as well as [Q|unit_case|50|80|130] each of &lt;user4&gt;, &lt;user5&gt; and &lt;user6&gt; for %bag_shopkeep%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">ugr_04_offer_1</Data></Cell>

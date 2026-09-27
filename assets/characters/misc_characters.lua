@@ -1,10 +1,10 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Traveler Instantiation)
+	Chocolatier: Decadence by Design Reforged (Traveler Instantiation)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
--- This script serves as the fundamental creation hook for all characters that 
+-- This script serves as the fundamental creation hook for all characters that
 -- do not physically own/operate a building in a port.
 
 -------------------------------------------------------------------------------
@@ -50,6 +50,9 @@ CreateCharacter("trav_08")
 CreateCharacter("trav_09")
 CreateCharacter("trav_10")
 CreateCharacter("trav_11")
+CreateCharacter("trav_13")
+CreateCharacter("trav_16")
+CreateCharacter("trav_21")
 
 -- Specific story characters that enter the traveler pool at various points
 CreateCharacter("main_loud")
@@ -57,6 +60,7 @@ CreateCharacter("main_sara")
 CreateCharacter("dou_bldg1keep")
 CreateCharacter("bag_bldg2keep")
 CreateCharacter("kon_bldg2keep")
+CreateCharacter("kon_hutkeep")
 CreateCharacter("mah_shopkeep")
 CreateCharacter("rey_xxxxkeep")
 CreateCharacter("tor_bldg1keep")
@@ -68,7 +72,7 @@ CreateCharacter("zur_riverkeep")
 -- 4. Global Encounter Pools (Ghost Buildings)
 -------------------------------------------------------------------------------
 -- The game engine uses "Buildings" as the fundamental container for character lists.
--- To facilitate random encounters during airplane flights or when wandering town, 
+-- To facilitate random encounters during airplane flights or when wandering town,
 -- we create invisible "Ghost" buildings to act as a global array for these characters.
 
 -- The "_travelers" building pool is checked during Airplane Flight encounters.
@@ -86,16 +90,19 @@ _travelers.characters[8] = { "trav_08" }
 _travelers.characters[9] = { "trav_09" }
 _travelers.characters[10] = { "trav_10" }
 _travelers.characters[11] = { "trav_11" }
-_travelers.characters[12] = { "mah_shopkeep" }
-_travelers.characters[13] = { "main_loud" }
-_travelers.characters[14] = { "main_sara" }
+_travelers.characters[12] = { "trav_21" }
+_travelers.characters[13] = { "mah_shopkeep" }
+_travelers.characters[14] = { "main_loud" }
+_travelers.characters[15] = { "main_sara" }
+_travelers.characters[16] = { "trav_16" }
+_travelers.characters[17] = { "trav_16" }
 
-_TravelCharacters = { 
-	"trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", 
-	"trav_08", "trav_09", "trav_10", "trav_11", "mah_shopkeep", "main_loud", "main_sara" 
+_TravelCharacters = {
+	"trav_01", "trav_02", "trav_03", "trav_04", "trav_05", "trav_06", "trav_07", "trav_08", "trav_09",
+	"trav_10", "trav_11", "trav_13", "trav_16", "trav_21", "mah_shopkeep", "main_loud", "main_sara"
 }
 
--- The "_empty" building pool is used as a fallback if the player enters a 
+-- The "_empty" building pool is used as a fallback if the player enters a
 -- physical building in a port that currently has no active quest NPCs assigned to it.
 EmptyBuilding("_empty")
 _empty.type = "special"
@@ -108,10 +115,11 @@ _empty.characters[5] = { "kon_bldg2keep" }
 _empty.characters[6] = { "rey_xxxxkeep" }
 _empty.characters[7] = { "tor_bldg1keep" }
 _empty.characters[8] = { "zur_riverkeep" }
+_empty.characters[9] = { "kon_hutkeep" }
 
--- NOTE: As long as these are defined with CreateCharacter above, do NOT use quotation marks 
+-- NOTE: As long as these are defined with CreateCharacter above, do NOT use quotation marks
 -- when referencing them in engine hooks.
-_EmptyCharacters = { 
-	"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep", 
-	"kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep" 
+_EmptyCharacters = {
+	"tor_bldg2keep", "wel_bldg1keep", "dou_bldg1keep", "bag_bldg2keep",
+	"kon_bldg2keep", "rey_xxxxkeep", "tor_bldg1keep", "zur_riverkeep", "kon_hutkeep"
 }

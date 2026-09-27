@@ -1,7 +1,7 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier Three: Decadence by Design Reforged (Simulator Master Core)
+	Chocolatier: Decadence by Design Reforged (Simulator Master Core)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Modified (c) 2026 Michael Lane and Google Gemini AI.
+	Reforged modifications (c) 2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -13,6 +13,7 @@ require("sim/category.lua")
 require("sim/ingredient.lua")
 require("sim/product.lua")
 require("sim/recipe.lua")
+require("sim/validation.lua")
 
 -- 2. Meta Economic & Data Handlers
 require("sim/tips.lua")
@@ -29,15 +30,13 @@ require("sim/kitchen.lua")
 -- 4. Lore & Interaction Objects
 require("sim/character_actions.lua")
 require("sim/character.lua")
+require("sim/character_mobility.lua")
 require("characters/misc_characters.lua")
 require("characters/asset_manifest.lua")
 
 -- 5. Logic & Quest Engine Handlers
 require("sim/quest.lua")
 require("sim/quest_functions.lua")
-
--- Legacy Analytics Engine (Disabled by default)
--- require("sim/firstpeek.lua")
 
 ------------------------------------------------------------------------------
 -- Master Clock execution
@@ -47,13 +46,16 @@ require("sim/quest_functions.lua")
 -- Advances time, handles physical processing, updates arrays, and ticks UI states.
 function TickSim(ticks)
 	ticks = ticks or 1
-	DebugOut("SIM", string.format("TickSim Called: Advancing global clock by %d week(s).", ticks))
+	DebugOut("SIM", string.format("Advancing global clock by %d week(s).", ticks))
 
 	-- 1. Time & Temporal Event Processing
 	Player.time = Player.time + ticks
 	Player.subticks = 0
 	Player:UpdateHolidays()
 	DebugOut("SIM", string.format("Date updated. Current week is now %d.", Player.time))
+
+	-- Living world: relocate mobile characters whose current stay has expired.
+	if CharacterMobility then CharacterMobility:Update(Player) end
 
 	-- 2. Industrial Processing
 	-- Commits ingredients to factories and generates finished products
@@ -65,26 +67,22 @@ function TickSim(ticks)
 	-- Refreshes the probability matrix for generating new telegram delivery quests
 	DebugOut("SIM", "Updating regional special order requests...")
 	UpdateSpecialOrders()
-	
+
 	-- 4. Inventory Degradation
 	-- Calculates spoilage logic for stagnant warehouse inventory
 	DebugOut("SIM", "Evaluating warehouse stocks for expired inventory...")
 	Player:ExpireInventory()
-	
+
 	-- 5. Economic Shifts
 	-- Triggers rumors, events, and applies dynamic market tip price modifiers
 	DebugOut("SIM", "Generating and applying global market tips...")
 	Tips.Update()
-	
+
 	-- 6. State Consolidation & UI Updates
 	-- Validates inventory numbers and broadcasts them to the Ledger interface
 	DebugOut("SIM", "Consolidating player supply chains and refreshing UI Ledger.")
 	Player:UpdateSupplies()
 	UpdateLedger("all")
-
-	-- Legacy Telemetry Hooks
-	-- SetState("GameWeeks", Player.time)
-	-- if Mod(Player.time, 6) == 0 then FirstPeekProgress() end
 
 	DebugOut("SIM", string.format("TickSim successfully completed for Week %d.", Player.time))
 end
@@ -95,9 +93,9 @@ function SubTickSim()
 	-- 4 subticks equals 1 real week tick
 	Player.subticks = Player.subticks + 1
 	DebugOut("SIM", string.format("SubTick advanced (%d/4).", Player.subticks))
-	
+
 	UpdateLedger("all")
-	
+
 	-- When 4 subticks accumulate, trigger a full standard simulation tick
 	if Player.subticks == 4 then
 		TickSim(1)

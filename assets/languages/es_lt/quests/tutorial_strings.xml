@@ -119,15 +119,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">I feel for what Alex is going through, &lt;player&gt;, but boy am I excited to get these machines working again!&lt;br&gt;&lt;br&gt;Click &quot;Make Chocolates&quot; and make at least [D|5|20|40] cases of %b01%...</Data></Cell>
+	 <Cell><Data ss:Type="String">I feel for what Alex is going through, &lt;player&gt;, but boy am I excited to get these machines working again!&lt;br&gt;&lt;br&gt;Click &quot;Make Chocolates&quot; and make at least [Q|unit_case|5|20|40] of %b01%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;%make_chocolate%&quot;&lt;br&gt;Make at least [D|5|20|40] cases of %b01%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Click &quot;%make_chocolate%&quot;&lt;br&gt;Make at least [Q|unit_case|5|20|40] of %b01%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Remember, you need to make at least [D|5|20|40] cases of %b01%. Ready to try again? Just click &quot;%make_chocolate%&quot; and be sure to make at least [D|5|20|40] cases of %b01%...</Data></Cell>
+	 <Cell><Data ss:Type="String">Remember, you need to make at least [Q|unit_case|5|20|40] of %b01%. Ready to try again? Just click &quot;%make_chocolate%&quot; and be sure to make at least [Q|unit_case|5|20|40] of %b01%...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_complete_1</Data></Cell>
@@ -135,15 +135,15 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_hint_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Remember to make at least [D|5|20|40] cases of %b01%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Remember to make at least [Q|unit_case|5|20|40] of %b01%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're going to need to make at least [D|5|20|40] cases of %b01%. The only place you can do that is at the red brick chocolate factory here in the middle of town - %zur_factory%.</Data></Cell>
+	 <Cell><Data ss:Type="String">You're going to need to make at least [Q|unit_case|5|20|40] of %b01%. The only place you can do that is at the red brick chocolate factory here in the middle of town - %zur_factory%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_help_offer_zur_marketkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You have your ingredients, yes? Good. Head right over the bridge to the %zur_factory%. Endrit has been pacing all morning waiting for you to start those machines! He needs you to make [D|5|20|40] cases of %b01%.</Data></Cell>
+	 <Cell><Data ss:Type="String">You have your ingredients, yes? Good. Head right over the bridge to the %zur_factory%. Endrit has been pacing all morning waiting for you to start those machines! He needs you to make [Q|unit_case|5|20|40] of %b01%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_04_help_offer_zur_shopkeep_1</Data></Cell>
@@ -171,11 +171,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_bankkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Now that you have manufactured some goods, it is time to liquidate it into cash, yes? Run those %b01% over to Analiese at %zur_shop% - you will find her shop on the opposite side of the canal, over the bridge.</Data></Cell>
+	 <Cell><Data ss:Type="String">Now that you have manufactured some goods, it is time to liquidate them into cash, yes? Run those %b01% over to Analiese at %zur_shop% - you will find her shop on the opposite side of the canal, over the bridge.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_marketkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Oh, your %b01% smell absolutely heavenly! You should take those straight to Analiese at %zur_shop%. Shes just across the canal, and I know she pays very fairly for quality work.</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh, your %b01% smell absolutely heavenly! You should take those straight to Analiese at %zur_shop%. She's just across the canal, and I know she pays very fairly for quality work.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_05_help_offer_zur_schoolkeep_1</Data></Cell>
@@ -451,19 +451,19 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Click &quot;Change Recipe&quot;, select %b02%, and make as many as you can. More complicated recipes mean higher profits!&lt;br&gt;&lt;br&gt;Keep trying until you've set production to at least [D|10|20|30] cases...</Data></Cell>
+	 <Cell><Data ss:Type="String">Click &quot;Change Recipe&quot;, select %b02%, and make as many as you can. More complicated recipes mean higher profits!&lt;br&gt;&lt;br&gt;Keep trying until you've set production to at least [Q|unit_case|10|20|30]...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Make at least [D|10|20|30] cases of %b02%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Make at least [Q|unit_case|10|20|30] of %b02%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Make sure that you have the needed ingredients (%sugar%, %cacao% and %milk%) in inventory, select %b02%, and make at least [D|10|20|30] cases.</Data></Cell>
+	 <Cell><Data ss:Type="String">Make sure that you have the needed ingredients (%sugar%, %cacao% and %milk%) in inventory, select %b02%, and make at least [Q|unit_case|10|20|30].</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're supposed to have at least [D|10|20|30] cases of your new recipe - %b02% - on hand. As long as you have %milk%, %sugar%, and %cacao% in your inventory, you can visit the factory in %zurich% to make more of the bars...</Data></Cell>
+	 <Cell><Data ss:Type="String">You're supposed to have at least [Q|unit_case|10|20|30] of your new recipe - %b02% - on hand. As long as you have %milk%, %sugar%, and %cacao% in your inventory, you can visit the factory in %zurich% to make more of the bars...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b</Data></Cell>
@@ -471,23 +471,23 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Nice work, &lt;player&gt;.&lt;br&gt;&lt;br&gt;Take [D|10|20|30] cases of those %b02% to %zur_towerkeep% at %zur_tower% here in town. I trust that you will find her quite generous...</Data></Cell>
+	 <Cell><Data ss:Type="String">Nice work, &lt;player&gt;.&lt;br&gt;&lt;br&gt;Take [Q|unit_case|10|20|30] of those %b02% to %zur_towerkeep% at %zur_tower% here in town. I trust that you will find her quite generous...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_summary</Data></Cell>
-	 <Cell><Data ss:Type="String">Bring [D|10|20|30] cases of your %b02% to %zur_towerkeep% at %zur_tower%.</Data></Cell>
+	 <Cell><Data ss:Type="String">Bring [Q|unit_case|10|20|30] of your %b02% to %zur_towerkeep% at %zur_tower%.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_complete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">How delightful! I am going to take [D|10|20|30] cases of your %b02%, give you [D|$3,000|$6,500|$10,000], as well as 200 sacks of %caramel% in return.</Data></Cell>
+	 <Cell><Data ss:Type="String">How delightful! I am going to take [Q|unit_case|10|20|30] of your %b02%, give you [D|$3,000|$6,500|$10,000], as well as 200 sacks of %caramel% in return.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_incomplete_1</Data></Cell>
-	 <Cell><Data ss:Type="String">My friend %zur_factorykeep% informed me that you'd be bringing [D|10|20|30] cases of %b02% to me one day - is my lucky day going to come soon?</Data></Cell>
+	 <Cell><Data ss:Type="String">My friend %zur_factorykeep% informed me that you'd be bringing [Q|unit_case|10|20|30] of %b02% to me one day - is my lucky day going to come soon?</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_help_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You need to have at least [D|10|20|30] cases of %b02% on hand. Once you do, go see %zur_towerkeep% - you'll find her at %zur_tower% - just look for the clock tower...</Data></Cell>
+	 <Cell><Data ss:Type="String">You need to have at least [Q|unit_case|10|20|30] of %b02% on hand. Once you do, go see %zur_towerkeep% - you'll find her at %zur_tower% - just look for the clock tower...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_bankkeep_1</Data></Cell>
@@ -499,11 +499,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_marketkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Our dear Liridona at the %zur_tower% is expecting you. I saw her sketching by the Limmat earlier, talking about how much she was looking forward to your %b02%. She has a very sophisticated palate, so do make sure those [D|10|20|30] cases are perfect!</Data></Cell>
+	 <Cell><Data ss:Type="String">Our dear Liridona at the %zur_tower% is expecting you. I saw her sketching by the Limmat earlier, talking about how much she was looking forward to your %b02%. She has a very sophisticated palate, so do make sure those [Q|unit_case|10|20|30] are perfect!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_16b_help_offer_zur_shopkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Liridona's opinion carries a lot of weight in Zürich's confection circles. Bringing her those [D|10|20|30] cases of %b02% you have on hand to %zur_tower% would be a very smart business move, &lt;player&gt;.</Data></Cell>
+	 <Cell><Data ss:Type="String">Liridona's opinion carries a lot of weight in Zürich's confection circles. Bringing her those [Q|unit_case|10|20|30] of %b02% you have on hand to %zur_tower% would be a very smart business move, &lt;player&gt;.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_17</Data></Cell>
@@ -679,7 +679,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_zur_towerkeep_offer_1</Data></Cell>
-	 <Cell><Data ss:Type="String">You're working with Endrit over at the factory, aren't you? He tries to act all business-like, but don't let him fool you. He was practically bouncing off the walls with excitement when Alex told him they were firing up the machines again.&lt;br&gt;&lt;br&gt;We grew up in the same neighborhood, you know. He's always been obsessed with how things work his whole life since his family seeked refuge from Albania...</Data></Cell>
+	 <Cell><Data ss:Type="String">You're working with Endrit over at the factory, aren't you? He tries to act all business-like, but don't let him fool you. He was practically bouncing off the walls with excitement when Alex told him they were firing up the machines again.&lt;br&gt;&lt;br&gt;We grew up in the same neighborhood, you know. He's been obsessed with how things work for as long as I've known him, ever since his family sought refuge from Albania...</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">tut_story_alex_01_offer_1</Data></Cell>

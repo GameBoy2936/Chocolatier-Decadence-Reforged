@@ -1,27 +1,16 @@
+--[[---------------------------------------------------------------------------
+	Chocolatier: Decadence by Design Reforged (Cross-Sell Styles)
+	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
+	Reforged modifications (c) 2026 Michael Lane.
+--]]---------------------------------------------------------------------------
+
 --- name of the font file you want to use.
-xsellFontFile = "fonts/mercurius.mvec";
+xsellFontFile = "fonts/mercurius.mvec"
+xsellSmallFontSize = 13
+xsellBigFontSize = 32
+xsellBackFontSize = 16
 
---- size of font to use for xsell descriptions.
-xsellSmallFontSize = 13;
-
---- size of font to use for center text.
-xsellBigFontSize = 32;
-			
-
-
---- size of font to use for the back button.
-xsellBackFontSize = 16;
-
-
---- definition for the style that is used for the xsell descriptions. 
---- You can put whatever you want here, but the w, h, flags, and font
---- fields will be overwritten by the xsell.lua file. Examples of things
---- you might put here are padding values or a custom text factory.
-xsellDescriptionStyle = {
-
-};
-
---- definition for the style that is used for the default style on this screen.   
-xsellDefaultStyle = {
-
-};
+-- Style definitions are populated by xsell.lua; width, height, flags and font
+-- are supplied by that screen at runtime.
+xsellDescriptionStyle = {}
+xsellDefaultStyle = {}
