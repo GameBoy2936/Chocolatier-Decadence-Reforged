@@ -6,7 +6,7 @@ This was added after an unsigned `ReforgedCommunityBridge.exe` was blocked by Wi
 
 ## Required setup
 
-Install a trusted Windows code-signing certificate in the certificate store on the release-build PC. Keep private keys and certificate passwords out of the repository.
+Install a trusted **RSA** Windows code-signing certificate from a certificate authority in Microsoft's Trusted Root Program in the certificate store on the release-build PC. Smart App Control does not currently accept ECC code-signing signatures. Keep private keys and certificate passwords out of the repository.
 
 Set:
 
@@ -48,9 +48,10 @@ The release pipeline signs and verifies:
 
 1. `community_bridge/ReforgedCommunityBridge.exe`
 2. `deployment/bin/Chocolatier Reforged.exe`
-3. the final `Chocolatier-Reforged-vX.Y.Z-Setup.exe`
+3. the Inno Setup installer
+4. the Inno-generated uninstaller
 
-The installer hash is calculated only **after** its final signature has been applied.
+Inno Setup performs the installer/uninstaller signing through its configured `SignTool` hook. The installer hash is calculated only **after** the signed installer has been produced.
 
 Development builds may leave `REFORGED_REQUIRE_SIGNING` unset. In that case the shared signing helper reports that signing was skipped instead of failing the build.
 
