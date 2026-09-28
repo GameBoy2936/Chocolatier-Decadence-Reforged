@@ -1,16 +1,87 @@
 # Chocolatier: Decadence by Design Reforged — v2.0.1 Change Notes
 
-Reforged v2.0.1 is a focused launch hotfix for Community startup reliability on modern Windows installations.
+Reforged v2.0.1 is the first post-launch hotfix for Reforged v2, focused on Community startup reliability on modern Windows systems, Secret Test Kitchen recipe evaluation, localization-safe interface fixes and several gameplay, quest and dialogue corrections discovered immediately after release.
 
-## Community startup & Windows security
+## Highlights
 
+- Improved Reforged Community startup compatibility with modern Windows security features.
 - Updated the Reforged Community Bridge to **0.2.13**.
-- Moved mutable launcher/bridge control files such as `bridge_status.txt` and `stop.txt` out of the game installation and into the current user's Local AppData folder.
-- Added detailed launcher diagnostics that distinguish a missing Community Bridge, a Windows launch failure, an early bridge exit and a startup timeout.
-- Added specific guidance when Windows reports that the Community Bridge was blocked by application-control or antivirus policy.
-- Added an Authenticode signing step for `ReforgedCommunityBridge.exe`, `Chocolatier Reforged.exe` and the public installer.
-- Public release builds now fail if trusted code signing is required but no signing certificate has been configured, preventing another unsigned Community helper from being published accidentally.
-- Community services remain optional: if the helper cannot start, ordinary offline single-player play still launches normally.
+- Added substantially better Community Bridge startup diagnostics.
+- Expanded and corrected numerous Secret Test Kitchen ingredient-pairing evaluations.
+- Activated several previously dormant Teddy Baumeister critique lines.
+- Fixed localization-related clipping in parts of the Community and Help interfaces.
+- Fixed a Rank 2 quest completion text error.
+- Fixed missing shop haggling dialogue caused by mismatched string IDs.
+- Restored the public release configuration to launch with developer/cheat mode disabled.
+
+## Reforged Community & Windows
+
+- Updated the Reforged Community Bridge from **0.2.12 to 0.2.13**.
+- Moved mutable launcher/bridge control files such as `bridge_status.txt` and `stop.txt` out of the game installation and into `%LOCALAPPDATA%\Chocolatier Reforged\Community Bridge`.
+- The Community Bridge can therefore keep its temporary runtime state in a normal per-user writable location instead of beside the installed executable.
+- Added detailed launcher diagnostics that now distinguish between:
+  - a missing Community Bridge executable;
+  - Windows refusing to start the bridge;
+  - the bridge exiting before reaching ready state;
+  - and the bridge starting but timing out before reporting status.
+- Added specific diagnostic guidance when Windows reports that the Community Bridge was blocked by application-control or antivirus policy.
+- Added mandatory Authenticode signing and signature verification to the public release pipeline for `ReforgedCommunityBridge.exe` and `Chocolatier Reforged.exe`.
+- Configured the installer build to sign both the Reforged installer and its generated Windows uninstaller.
+- Public release builds now require an appropriate RSA code-signing certificate and fail rather than silently producing unsigned release executables.
+- Installer builds now verify final signatures before generating release hashes and update-manifest information.
+- Added cleanup for stale per-user Community Bridge runtime files when updating.
+- Community services remain optional. If the bridge cannot start, ordinary offline single-player gameplay still launches normally.
+- Updated the Reforged Community client version to **2.0.1**.
+- Community Services remains at **1.1.2**.
+
+## Secret Test Kitchen & Recipe Evaluation
+
+- Expanded Teddy Baumeister's beverage evaluation for **Cayenne + Honey**.
+- Added **Cayenne + Lime** feedback for non-coffee beverages.
+- Activated the previously unused **Cayenne + Mango** feedback in both confection and beverage evaluations.
+- Added standard **Lemon + Honey** feedback for tea and other non-coffee drinks while preserving the separate coffee-specific evaluation.
+- Added **Rose + Saffron** evaluation to non-coffee beverages.
+- Added the following Black Tea pairings to confection evaluation:
+  - Black Tea + Lavender;
+  - Black Tea + Jasmine;
+  - Black Tea + Cardamom;
+  - Black Tea + Ginger;
+  - Black Tea + Peach.
+- Added **Matcha + Ginger** and **Matcha + Almond** to beverage evaluation.
+- Added **Jasmine + Honey** and **Jasmine + Lychee** to confection evaluation.
+- Added **Lemongrass + Honey** and **Lemongrass + Mint** to confection evaluation.
+- Activated previously dormant negative pairing feedback for:
+  - Cayenne + Mint;
+  - Lavender + Cinnamon;
+  - Rose + Mint;
+  - Ginger + Mint.
+- Non-coffee Ginger + Mint drinks now use the general Ginger/Mint critique, while coffee-based recipes retain their stronger coffee-specific critique.
+- Generalized several Teddy feedback lines so they read naturally in both beverages and confections rather than referring specifically to a cup, sipping or chocolates.
+- Applied those shared feedback wording corrections across all **38 current Kitchen string files**.
+
+## Interface & Localization
+
+- Increased the height of the Community Hub's signed-in/signed-out helper text area while keeping it in its original position.
+- Changed that helper text to top alignment while retaining its right alignment, giving longer translations room to wrap without moving the Hub's buttons or lower interface sections.
+- Reduced the width of Community Cookbook creation-name labels so long Creation names no longer encroach on the separate Ready/Locked status area.
+- Reduced body-text size slightly on the Catalogue, Market and Shop Help screens to improve fit for longer text.
+- Adjusted the Reforged Help screen's body text and expanded its Community information area to reduce clipping.
+- Improved Community Profile picker diagnostics so support logs more clearly identify when favorite-content selectors are queued, opened and closed.
+
+## Quests, Haggling & Dialogue
+
+- Fixed a Rank 2 Uluru quest completion sequence that incorrectly displayed `ugr_02_extra01` twice instead of advancing to `ugr_02_extra02`.
+- Corrected four soft shop **push-your-luck** haggling string IDs so they match the IDs generated by the haggling interface and can actually appear in play.
+- Polished several Special Order rejection and antagonist dialogue lines.
+- Improved formatting and punctuation in selected Special Order outcomes.
+
+## Release Safety & Technical
+
+- Restored the shipped `settings.xml` default to `<cheatmode>0</cheatmode>`.
+- Added a reusable Authenticode signing and verification helper to the release toolchain.
+- Added dedicated documentation for configuring trusted Windows release signing.
+- Added RSA certificate validation for Smart App Control compatibility.
+- Updated public build metadata, README information and release-component versions for Reforged **2.0.1** and Community Bridge **0.2.13**.
 
 ---
 
@@ -19,8 +90,6 @@ Reforged v2.0.1 is a focused launch hotfix for Community startup reliability on 
 Reforged v2.0.0 is the largest update to the project so far, expanding the game across Free Play, online Community features, the Secret Test Kitchen, the Catalogue, world simulation, quests, scoring, localization and general quality of life.
 
 These notes cover the major player-facing changes from the public Reforged v1 release.
-
----
 
 ## Highlights
 
@@ -34,8 +103,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Reworked **Special Orders** with multi-item requests, dynamic dialogue, stronger character integration and more varied outcomes.
 - Expanded localization support to **38 selectable languages**, with script-aware fonts and English fallback.
 - Added extensive save migration and repair support for Reforged v1 campaigns.
-
----
 
 ## Free Play
 
@@ -60,8 +127,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Every eligible shop in an accessible port can generate Special Orders in Free Play.
 - Free Play supports up to **three pending Special Orders** at once, with per-shop cooldowns and randomized shop evaluation.
 
----
-
 ## Reforged Community
 
 - Added Community Account registration, sign-in and persistent sessions.
@@ -82,8 +147,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Added safe external links to the Reforged Wiki and Discord through the Community Bridge.
 - Updated Community compatibility to **Community Services 1.1.2** and **Community Bridge 0.2.12**.
 
----
-
 ## Company Score & Statistics
 
 - Replaced the old cash-per-week leaderboard score with **Company Score**.
@@ -98,8 +161,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Older migrated campaigns are marked as legacy/unverified where historical statistics cannot be reconstructed.
 - Developer-mode campaigns are marked unranked.
 - Story Mode and Free Play scores are ranked separately.
-
----
 
 ## Secret Test Kitchen & Recipe Book
 
@@ -122,8 +183,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Improved feedback selection so useful ingredient feedback is not discarded by later structural checks.
 - Expanded validation for recipe definitions and feedback rules.
 
----
-
 ## Catalogue
 
 - The **History** tab is fully available and active! Expanded into an archive of letters, journals, correspondence, records and other historical documents.
@@ -136,8 +195,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Added pagination, locked-entry presentation and retroactive unlock restoration for those migrating from v1.
 - Added Catalogue discovery backfilling for compatible migrated saves.
 - Added broader country, culture, religion, holiday, region and dietary metadata used throughout the Catalogue.
-
----
 
 ## Ingredients & Recipes
 
@@ -171,8 +228,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Corrected Chestnut's wraparound seasonal definition.
 - Adjusted Strawberry seasonal pricing.
 
----
-
 ## Living World & Characters
 
 - Added persistent character-location tracking.
@@ -183,8 +238,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Added dietary checks such as alcohol-free, halal, kosher, lactose-free and no-beef requirements.
 - Expanded dynamic character grammar, including names, honorifics and pronouns for dialogue substitution.
 - Added and refreshed HD portraits, expression sheets and silhouettes for numerous characters.
-
----
 
 ## Quests & Special Orders
 
@@ -206,8 +259,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Added save-repair handling for older campaigns with disabled antagonist Special Orders.
 - Improved Quest Log sorting and prevented repeatable Special Orders from flooding completed quest history.
 
----
-
 ## Economy, Events & Difficulty
 
 - Increased the weekly dynamic-tip chance from **20% to 25%**.
@@ -219,8 +270,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Added richer dynamic event dialogue using ports, regions, products, characters and time remaining.
 - Reworked holiday handling around an actual campaign calendar beginning in 1946.
 - Added date-aware support for fixed and moving holidays.
-
----
 
 ## Factories, Markets & Shops
 
@@ -255,8 +304,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
   - **Zürich:** Added Blueberries and Hazelnuts; removed Cloves and Walnuts.
 - Specialty plantation inventories remain unchanged. The Falkland Islands, Mahajanga and Uluru receive no ingredient-inventory changes.
 
----
-
 ## Interface & Quality of Life
 
 - Replaced the main-menu High Scores entry with the new **Community** hub.
@@ -272,8 +319,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Added new Catalogue help and Reforged help.
 - Added clearer localization-safe quantity and transaction text.
 
----
-
 ## Localization
 
 - Rebuilt the language selector into a scrollable **3 × 7** browser.
@@ -281,8 +326,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Added script-specific font routing for Latin, Cyrillic, Greek, Chinese, Korean, Japanese and Thai.
 - Added separate indicators for the currently loaded language and the language selected for the next launch.
 - Expanded or refreshed localization files across the v2 string set. All core strings are complete, but dialogue, the catalogue, quests and the Secret Test Kitchen remain in English for native player translation.
-
----
 
 ## Art
 
@@ -292,8 +335,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Refreshed numerous ingredient icons and character portraits.
 - Added new and revised Test Kitchen visual layers.
 - Reworked beverage mug/rim presentation.
-
----
 
 ## Save Compatibility & Fixes
 
@@ -308,8 +349,6 @@ These notes cover the major player-facing changes from the public Reforged v1 re
 - Fixed Community imports that could lose visible first-option art layers.
 - Added stronger defensive handling for malformed or missing simulation data.
 - Added centralized simulation validation for ingredients, categories, products and Test Kitchen feedback rules.
-
----
 
 ## Technical & Modding
 
