@@ -1,6 +1,6 @@
 # Chocolatier: Decadence by Design Reforged
 
-**Version 2.0.1**  
+**Version 2.0.0**  
 Created by **Michael Lane**
 
 ---
@@ -37,7 +37,7 @@ Reforged v2 does not currently target OpenChoc as a supported runtime.
 
 Thankfully, installation is no longer the old "rename your assets folder and drag files around manually" process. Just run:
 
-`Chocolatier-Reforged-v2.0.1-Setup.exe`
+`Chocolatier-Reforged-v2.0.0-Setup.exe`
 
 The installer will ask you to choose your existing *Chocolatier: Decadence by Design* installation folder if it cannot detect it automatically.
 
@@ -316,9 +316,9 @@ The runtime Lua code also follows a shared Reforged layout and logging standard,
 
 If you are reporting a technical problem with this release, these are the component versions to include:
 
-- **Reforged:** 2.0.1
+- **Reforged:** 2.0.0
 - **Community Services:** 1.1.2
-- **Community Bridge:** 0.2.13
+- **Community Bridge:** 0.2.12
 
 Community Services 1.1.2 includes the current Community creation appearance allowlist used by this client.
 

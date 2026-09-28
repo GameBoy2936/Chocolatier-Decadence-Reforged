@@ -1,5 +1,5 @@
 // Chocolatier: Decadence by Design Reforged - Community HTTP bridge.
-// v0.2.13: authenticated profile presence plus allowlisted external links.
+// v0.2.12: authenticated profile presence plus allowlisted external links.
 // Playground's Lua ReadFromFile/WriteToFile helpers transparently use
 // the engine's virtual "user:" mount, not the process working directory. The
 // game writes community_bridge_probe.txt into that mount; this helper locates
@@ -57,7 +57,6 @@ typedef struct _WIN32_FIND_DATAA {
 #define HTTP_QUERY_FLAG_NUMBER       0x20000000UL
 #define SW_SHOWNORMAL 1
 #define PRESENCE_INTERVAL_MS 60000UL
-#define ERROR_ALREADY_EXISTS 183UL
 
 __declspec(dllimport) HANDLE WINAPI CreateFileA(LPCSTR,DWORD,DWORD,LPVOID,DWORD,DWORD,HANDLE);
 __declspec(dllimport) BOOL WINAPI ReadFile(HANDLE,LPVOID,DWORD,DWORD*,LPVOID);
@@ -68,7 +67,6 @@ __declspec(dllimport) BOOL WINAPI DeleteFileA(LPCSTR);
 __declspec(dllimport) BOOL WINAPI MoveFileExA(LPCSTR,LPCSTR,DWORD);
 __declspec(dllimport) DWORD WINAPI GetModuleFileNameA(HANDLE,LPSTR,DWORD);
 __declspec(dllimport) DWORD WINAPI GetEnvironmentVariableA(LPCSTR,LPSTR,DWORD);
-__declspec(dllimport) BOOL WINAPI CreateDirectoryA(LPCSTR,LPVOID);
 __declspec(dllimport) HANDLE WINAPI FindFirstFileA(LPCSTR,WIN32_FIND_DATAA*);
 __declspec(dllimport) BOOL WINAPI FindNextFileA(HANDLE,WIN32_FIND_DATAA*);
 __declspec(dllimport) BOOL WINAPI FindClose(HANDLE);
@@ -168,39 +166,15 @@ static void join_path(char *dst, DWORD cap, const char *base, const char *leaf) 
     if(at && dst[at-1]!='\\' && dst[at-1]!='/' && at+1<cap) dst[at++]='\\';
     n=s_len(leaf); for(i=0;i<n && at+1<cap;i++) dst[at++]=leaf[i]; dst[at]=0;
 }
-static int ensure_dir(const char *path) {
-    DWORD err;
-    if(CreateDirectoryA(path,0)) return 1;
-    err=GetLastError();
-    return err==ERROR_ALREADY_EXISTS;
-}
 static void init_control_paths(void) {
-    char install_base[PATHBUF_MAX],env[PATHBUF_MAX],parent[PATHBUF_MAX],runtime[PATHBUF_MAX];
-    DWORD n=GetModuleFileNameA(0,install_base,PATHBUF_MAX-1),i;
-
-    if(!n || n>=PATHBUF_MAX-1) { install_base[0]='.'; install_base[1]=0; }
+    DWORD n=GetModuleFileNameA(0,g_control_base,PATHBUF_MAX-1),i;
+    if(!n || n>=PATHBUF_MAX-1) { g_control_base[0]='.'; g_control_base[1]=0; }
     else {
-        install_base[n]=0;
-        for(i=n;i>0;i--) if(install_base[i-1]=='\\' || install_base[i-1]=='/') { install_base[i-1]=0; break; }
-        if(i==0) { install_base[0]='.'; install_base[1]=0; }
+        g_control_base[n]=0;
+        for(i=n;i>0;i--) if(g_control_base[i-1]=='\\' || g_control_base[i-1]=='/') { g_control_base[i-1]=0; break; }
+        if(i==0) { g_control_base[0]='.'; g_control_base[1]=0; }
     }
-
-    /* Configuration remains beside the executable, while mutable launcher/bridge
-       control files live under LOCALAPPDATA so normal Program Files installs do
-       not require write access to the installation directory. */
-    join_path(g_server_file,PATHBUF_MAX,install_base,"server.txt");
-    copy_text(g_control_base,PATHBUF_MAX,install_base);
-
-    n=GetEnvironmentVariableA("LOCALAPPDATA",env,PATHBUF_MAX-1);
-    if(n && n<PATHBUF_MAX-1) {
-        env[n]=0;
-        join_path(parent,PATHBUF_MAX,env,"Chocolatier Reforged");
-        if(ensure_dir(parent)) {
-            join_path(runtime,PATHBUF_MAX,parent,"Community Bridge");
-            if(ensure_dir(runtime)) copy_text(g_control_base,PATHBUF_MAX,runtime);
-        }
-    }
-
+    join_path(g_server_file,PATHBUF_MAX,g_control_base,"server.txt");
     join_path(g_stop_file,PATHBUF_MAX,g_control_base,"stop.txt");
     join_path(g_status_file,PATHBUF_MAX,g_control_base,"bridge_status.txt");
 }
@@ -216,7 +190,7 @@ static void init_ipc_paths(const char *base) {
 }
 static void write_status(const char *stage, DWORD code) {
     char buf[1536]; DWORD at=0;
-    at=append_text(buf,at,1535,"Community Bridge v0.2.13\r\nSTATUS: "); at=append_text(buf,at,1535,stage);
+    at=append_text(buf,at,1535,"Community Bridge v0.2.12\r\nSTATUS: "); at=append_text(buf,at,1535,stage);
     if(code){ at=append_text(buf,at,1535,"\r\nWIN32-ERROR: "); at=append_uint(buf,at,1535,code); }
     at=append_text(buf,at,1535,"\r\nHOST: "); at=append_text(buf,at,1535,g_host);
     if(g_ipc_ready){at=append_text(buf,at,1535,"\r\nIPC-ROOT: ");at=append_text(buf,at,1535,g_ipc_base);}
@@ -278,7 +252,7 @@ static int http_request(const char *method, DWORD method_n, const char *path, DW
     for(i=0;i<path_n;i++)if((unsigned char)path[i]<32U||(unsigned char)path[i]==127U)return 0;
     if(auth&&auth_n){if(auth_n!=64)return 0;for(i=0;i<auth_n;i++)if(!((auth[i]>='0'&&auth[i]<='9')||(auth[i]>='a'&&auth[i]<='f')))return 0;}
     for(i=0;i<method_n;i++)g_method[i]=method[i];g_method[method_n]=0; for(i=0;i<path_n;i++)g_path[i]=path[i];g_path[path_n]=0;
-    session=InternetOpenA("Chocolatier Reforged Community Bridge/0.2.13",INTERNET_OPEN_TYPE_PRECONFIG,0,0,0); if(!session){*winerr=GetLastError();goto done;}
+    session=InternetOpenA("Chocolatier Reforged Community Bridge/0.2.12",INTERNET_OPEN_TYPE_PRECONFIG,0,0,0); if(!session){*winerr=GetLastError();goto done;}
     connect=InternetConnectA(session,g_host,INTERNET_DEFAULT_HTTPS_PORT,0,0,INTERNET_SERVICE_HTTP,0,0); if(!connect){*winerr=GetLastError();goto done;}
     req=HttpOpenRequestA(connect,g_method,g_path,0,0,0,INTERNET_FLAG_SECURE|INTERNET_FLAG_RELOAD|INTERNET_FLAG_NO_CACHE_WRITE|INTERNET_FLAG_NO_UI,0); if(!req){*winerr=GetLastError();goto done;}
     if(body_n) hat=append_text(g_headers,hat,511,"Content-Type: application/json; charset=utf-8\r\n");
@@ -346,7 +320,7 @@ static void heartbeat_presence(void) {
     char body[180],token[65]; DWORD at=0,status=0,response_n=0,winerr=0,auth_n=0; int too_large=0;
     at=append_text(body,at,179,"{\"client_id\":\"");
     at=append_text(body,at,179,g_presence_id);
-    at=append_text(body,at,179,"\",\"bridge_version\":\"0.2.13\"}");
+    at=append_text(body,at,179,"\",\"bridge_version\":\"0.2.12\"}");
     body[at]=0;
     if(load_presence_auth(token,65)) auth_n=64;
     http_request("POST",4,"/api/v1/community/presence",26,auth_n?token:0,auth_n,body,at,&status,&response_n,&winerr,&too_large);
@@ -401,7 +375,7 @@ static void process_request(void) {
 }
 
 void mainCRTStartup(void) {
-    HANDLE stop; char discovered[PATHBUF_MAX]; const char *ready="CCB1 READY\r\nVERSION: 0.2.13\r\n";
+    HANDLE stop; char discovered[PATHBUF_MAX]; const char *ready="CCB1 READY\r\nVERSION: 0.2.12\r\n";
     init_control_paths();load_host();init_presence_id();write_status("WAITING FOR GAME USER-FILE ROOT",0);
     for(;;){
         stop=CreateFileA(g_stop_file,GENERIC_READ,FILE_SHARE_READ,0,OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,0);

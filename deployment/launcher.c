@@ -45,31 +45,6 @@ static int get_app_dir(wchar_t *out, size_t cap) {
     return 1;
 }
 
-static int ensure_directory(const wchar_t *path) {
-    DWORD attr;
-    if (CreateDirectoryW(path, NULL)) return 1;
-    if (GetLastError() != ERROR_ALREADY_EXISTS) return 0;
-    attr = GetFileAttributesW(path);
-    return attr != INVALID_FILE_ATTRIBUTES && (attr & FILE_ATTRIBUTE_DIRECTORY);
-}
-
-static int get_bridge_control_dir(wchar_t *out, size_t cap) {
-    wchar_t base[MAX_PATH * 4];
-    wchar_t parent[MAX_PATH * 4];
-    DWORD n;
-
-    n = GetEnvironmentVariableW(L"LOCALAPPDATA", base, (DWORD)_countof(base));
-    if (!n || n >= _countof(base)) {
-        n = GetEnvironmentVariableW(L"TEMP", base, (DWORD)_countof(base));
-    }
-    if (!n || n >= _countof(base)) return 0;
-
-    join_path(parent, _countof(parent), base, L"Chocolatier Reforged");
-    if (!ensure_directory(parent)) return 0;
-    join_path(out, cap, parent, L"Community Bridge");
-    return ensure_directory(out);
-}
-
 static void terminate_processes_named(const wchar_t *exe_name) {
     HANDLE snap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
     PROCESSENTRY32W pe;
@@ -91,19 +66,14 @@ static void terminate_processes_named(const wchar_t *exe_name) {
     CloseHandle(snap);
 }
 
-static int start_process(const wchar_t *exe, const wchar_t *cwd, DWORD flags, PROCESS_INFORMATION *pi, DWORD *error_out) {
+static int start_process(const wchar_t *exe, const wchar_t *cwd, DWORD flags, PROCESS_INFORMATION *pi) {
     STARTUPINFOW si;
     wchar_t cmd[32768];
     ZeroMemory(&si, sizeof(si));
     ZeroMemory(pi, sizeof(*pi));
     si.cb = sizeof(si);
     _snwprintf_s(cmd, _countof(cmd), _TRUNCATE, L"\"%ls\"", exe);
-    if (CreateProcessW(exe, cmd, NULL, NULL, FALSE, flags, NULL, cwd, &si, pi)) {
-        if (error_out) *error_out = ERROR_SUCCESS;
-        return 1;
-    }
-    if (error_out) *error_out = GetLastError();
-    return 0;
+    return CreateProcessW(exe, cmd, NULL, NULL, FALSE, flags, NULL, cwd, &si, pi) ? 1 : 0;
 }
 
 static void write_stop_file(const wchar_t *path) {
@@ -115,66 +85,15 @@ static void write_stop_file(const wchar_t *path) {
     CloseHandle(f);
 }
 
-enum {
-    BRIDGE_WAIT_TIMEOUT = 0,
-    BRIDGE_WAIT_READY = 1,
-    BRIDGE_WAIT_EXITED = -1
-};
-
-static int wait_for_bridge_start(const wchar_t *status_path, HANDLE process, DWORD *exit_code) {
+static int wait_for_bridge_start(const wchar_t *status_path, HANDLE process) {
     DWORD elapsed = 0;
     while (elapsed < 10000) {
-        if (file_exists(status_path)) return BRIDGE_WAIT_READY;
-        if (process && WaitForSingleObject(process, 0) == WAIT_OBJECT_0) {
-            if (exit_code) GetExitCodeProcess(process, exit_code);
-            return BRIDGE_WAIT_EXITED;
-        }
+        if (file_exists(status_path)) return 1;
+        if (process && WaitForSingleObject(process, 0) == WAIT_OBJECT_0) return 0;
         Sleep(200);
         elapsed += 200;
     }
-    if (file_exists(status_path)) return BRIDGE_WAIT_READY;
-    return BRIDGE_WAIT_TIMEOUT;
-}
-
-static void bridge_start_error_text(DWORD error_code, wchar_t *out, size_t cap) {
-    wchar_t system_text[512];
-    DWORD n = 0;
-    if (!out || cap == 0) return;
-    out[0] = L'\0';
-
-    if (error_code == ERROR_INVALID_IMAGE_HASH || error_code == ERROR_ACCESS_DISABLED_BY_POLICY ||
-        error_code == ERROR_VIRUS_INFECTED || error_code == ERROR_VIRUS_DELETED) {
-        _snwprintf_s(out, cap, _TRUNCATE,
-            L"Windows blocked ReforgedCommunityBridge.exe from starting (Windows error %lu).\n\n"
-            L"Check Windows Security > App & browser control and Protection history. "
-            L"Smart App Control, App Control or antivirus protection may have blocked the helper.",
-            error_code);
-        return;
-    }
-
-    ZeroMemory(system_text, sizeof(system_text));
-    n = FormatMessageW(FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL, error_code, 0,
-                       system_text, (DWORD)_countof(system_text), NULL);
-    if (n) {
-        while (n && (system_text[n - 1] == L'\r' || system_text[n - 1] == L'\n')) system_text[--n] = L'\0';
-        _snwprintf_s(out, cap, _TRUNCATE,
-            L"ReforgedCommunityBridge.exe could not be started (Windows error %lu: %ls).",
-            error_code, system_text);
-    } else {
-        _snwprintf_s(out, cap, _TRUNCATE,
-            L"ReforgedCommunityBridge.exe could not be started (Windows error %lu).", error_code);
-    }
-}
-
-static void show_bridge_unavailable(const wchar_t *detail) {
-    wchar_t message[2200];
-    _snwprintf_s(message, _countof(message), _TRUNCATE,
-        L"Community services could not be started.\n\n"
-        L"%ls\n\n"
-        L"The game will still open normally, but Community Accounts, the Community Cookbook, "
-        L"Cloud Saves and Community Scores will be unavailable for this session.",
-        (detail && *detail) ? detail : L"No additional diagnostic information was available.");
-    MessageBoxW(NULL, message, APP_TITLE, MB_OK | MB_ICONWARNING);
+    return file_exists(status_path);
 }
 
 static int read_small_text_file(const wchar_t *path, wchar_t *out, size_t cap) {
@@ -381,18 +300,12 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, LPWSTR command_line,
     wchar_t root[MAX_PATH * 4];
     wchar_t bridge_dir[MAX_PATH * 4];
     wchar_t bridge_exe[MAX_PATH * 4];
-    wchar_t bridge_control_dir[MAX_PATH * 4];
     wchar_t bridge_status[MAX_PATH * 4];
     wchar_t bridge_stop[MAX_PATH * 4];
-    wchar_t bridge_detail[1800];
     wchar_t game_exe[MAX_PATH * 4];
     PROCESS_INFORMATION bridge_pi, game_pi;
     HANDLE mutex;
     int bridge_started = 0;
-    int bridge_wait = BRIDGE_WAIT_TIMEOUT;
-    DWORD bridge_start_error = ERROR_SUCCESS;
-    DWORD bridge_exit_code = STILL_ACTIVE;
-    DWORD game_start_error = ERROR_SUCCESS;
     DWORD game_exit = 0;
     (void)instance; (void)previous; (void)show;
 
@@ -412,11 +325,8 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, LPWSTR command_line,
 
     join_path(bridge_dir, _countof(bridge_dir), root, L"community_bridge");
     join_path(bridge_exe, _countof(bridge_exe), bridge_dir, BRIDGE_EXE);
-    if (!get_bridge_control_dir(bridge_control_dir, _countof(bridge_control_dir))) {
-        copy_text(bridge_control_dir, _countof(bridge_control_dir), bridge_dir);
-    }
-    join_path(bridge_status, _countof(bridge_status), bridge_control_dir, L"bridge_status.txt");
-    join_path(bridge_stop, _countof(bridge_stop), bridge_control_dir, L"stop.txt");
+    join_path(bridge_status, _countof(bridge_status), bridge_dir, L"bridge_status.txt");
+    join_path(bridge_stop, _countof(bridge_stop), bridge_dir, L"stop.txt");
     join_path(game_exe, _countof(game_exe), root, GAME_EXE);
 
     if (!file_exists(game_exe)) {
@@ -439,26 +349,9 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, LPWSTR command_line,
     DeleteFileW(bridge_status);
 
     ZeroMemory(&bridge_pi, sizeof(bridge_pi));
-    bridge_detail[0] = L'\0';
-    if (!file_exists(bridge_exe)) {
-        _snwprintf_s(bridge_detail, _countof(bridge_detail), _TRUNCATE,
-            L"The Community Bridge executable is missing:\n%ls\n\n"
-            L"Reinstall Reforged using the official installer.", bridge_exe);
-    } else if (!start_process(bridge_exe, bridge_dir, CREATE_NO_WINDOW, &bridge_pi, &bridge_start_error)) {
-        bridge_start_error_text(bridge_start_error, bridge_detail, _countof(bridge_detail));
-    } else {
-        bridge_wait = wait_for_bridge_start(bridge_status, bridge_pi.hProcess, &bridge_exit_code);
-        bridge_started = bridge_wait == BRIDGE_WAIT_READY;
+    if (file_exists(bridge_exe) && start_process(bridge_exe, bridge_dir, CREATE_NO_WINDOW, &bridge_pi)) {
+        bridge_started = wait_for_bridge_start(bridge_status, bridge_pi.hProcess);
         if (!bridge_started) {
-            if (bridge_wait == BRIDGE_WAIT_EXITED) {
-                _snwprintf_s(bridge_detail, _countof(bridge_detail), _TRUNCATE,
-                    L"The Community Bridge started but exited before reporting ready status (exit code %lu).\n\n"
-                    L"Diagnostic status is stored at:\n%ls", bridge_exit_code, bridge_status);
-            } else {
-                _snwprintf_s(bridge_detail, _countof(bridge_detail), _TRUNCATE,
-                    L"The Community Bridge started but did not report startup status within 10 seconds.\n\n"
-                    L"Diagnostic status is stored at:\n%ls", bridge_status);
-            }
             if (WaitForSingleObject(bridge_pi.hProcess, 0) == WAIT_TIMEOUT)
                 TerminateProcess(bridge_pi.hProcess, 2);
             CloseHandle(bridge_pi.hThread);
@@ -468,11 +361,14 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, LPWSTR command_line,
     }
 
     if (!bridge_started) {
-        show_bridge_unavailable(bridge_detail);
+        MessageBoxW(NULL,
+            L"Community services could not be started.\n\n"
+            L"The game will still open normally, but Community Accounts, the Community Cookbook, Cloud Saves and Community Scores will be unavailable for this session.",
+            APP_TITLE, MB_OK | MB_ICONWARNING);
     }
 
     ZeroMemory(&game_pi, sizeof(game_pi));
-    if (!start_process(game_exe, root, 0, &game_pi, &game_start_error)) {
+    if (!start_process(game_exe, root, 0, &game_pi)) {
         if (bridge_started) {
             write_stop_file(bridge_stop);
             if (WaitForSingleObject(bridge_pi.hProcess, 1500) == WAIT_TIMEOUT)
@@ -480,9 +376,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, LPWSTR command_line,
             CloseHandle(bridge_pi.hThread);
             CloseHandle(bridge_pi.hProcess);
         }
-        _snwprintf_s(bridge_detail, _countof(bridge_detail), _TRUNCATE,
-            L"Chocolatier: Decadence by Design could not be started (Windows error %lu).", game_start_error);
-        MessageBoxW(NULL, bridge_detail, APP_TITLE, MB_OK | MB_ICONERROR);
+        MessageBoxW(NULL, L"Chocolatier: Decadence by Design could not be started.", APP_TITLE, MB_OK | MB_ICONERROR);
         CloseHandle(mutex);
         return 4;
     }

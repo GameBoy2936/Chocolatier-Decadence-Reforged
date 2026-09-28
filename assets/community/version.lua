@@ -5,4 +5,4 @@
 
 -- Keep the Reforged client version in one place. Community modules use this
 -- value in requests so server-side diagnostics do not drift between features.
-CommunityVersion = "2.0.1"
+CommunityVersion = "2.0.0"

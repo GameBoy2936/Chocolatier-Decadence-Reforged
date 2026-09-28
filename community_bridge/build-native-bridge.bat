@@ -5,7 +5,7 @@ cd /d "%~dp0"
 set "SOURCE=%~dp0community_bridge_source.c"
 set "OUTPUT=%~dp0ReforgedCommunityBridge.exe"
 set "OBJ=%TEMP%\ReforgedCommunityBridge.obj"
-set "BRIDGE_VERSION=0.2.13"
+set "BRIDGE_VERSION=0.2.12"
 set "VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
 
 if not exist "%SOURCE%" (
@@ -59,10 +59,6 @@ if not exist "%OUTPUT%" (
 echo Built successfully:
 echo   %OUTPUT%
 echo   Version: %BRIDGE_VERSION%
-
-call "%~dp0..\deployment\sign-artifact.bat" "%OUTPUT%"
-if errorlevel 1 goto failed
-
 del /q "%OBJ%" 2>nul
 exit /b 0
 
