@@ -949,7 +949,7 @@ CreateQuest
 	reject = "none",
 	goals = {HintPerson("main_alex", "ulu_rock", "uluru")},
 	onaccept = {AwardUnlockPort("uluru"), AwardPlaceCharacter("main_alex", "ulu_rock")},
-	oncomplete = {AwardUnlockHistory("catalogue_history_letter_alex_sean_2"), AwardCustomSlot(), AwardDialog("recipes"), AwardText("ugr_02_extra01", nil, {label = "isee"}), AwardText("ugr_02_extra01", nil, {label = "ugr_02_extra02_label"}), AwardRemoveCharacter("main_alex", "ulu_rock"), AwardDelayQuest("ugr_prompt", 15), AwardDelayQuest("ugr_02b_prompt", 29)},
+	oncomplete = {AwardUnlockHistory("catalogue_history_letter_alex_sean_2"), AwardCustomSlot(), AwardDialog("recipes"), AwardText("ugr_02_extra01", nil, {label = "isee"}), AwardText("ugr_02_extra02", nil, {label = "ugr_02_extra02_label"}), AwardRemoveCharacter("main_alex", "ulu_rock"), AwardDelayQuest("ugr_prompt", 15), AwardDelayQuest("ugr_02b_prompt", 29)},
 	require = { RequireMinRank(2), RequireQuestComplete("ugr_01"), RequireRecipe("c01"), RequireRecipe("c05"), RequireQuestComplete("rank2_coffee03"), RequireNoOffers(2), RequireNoCompletes(1), RequireVariableEqual("ugr_slots", 0)},
 	require_medium = { RequireMinRank(2), RequireQuestComplete("ugr_01"), RequireRecipe("c01"), RequireRecipe("c05"), RequireRecipesMade(2, "beverage"), RequireQuestComplete("rank2_coffee03"), RequireNoOffers(2), RequireNoCompletes(1), RequireVariableEqual("ugr_slots", 0)},
 	require_hard = { RequireMinRank(2), RequireQuestComplete("ugr_01"), RequireRecipe("c01"), RequireRecipe("c05"), RequireRecipesMade(4, "beverage"), RequireQuestComplete("rank2_coffee03"), RequireNoOffers(2), RequireNoCompletes(1), RequireVariableEqual("ugr_slots", 0)},
