@@ -2,9 +2,10 @@
 setlocal EnableExtensions EnableDelayedExpansion
 cd /d "%~dp0"
 
-set "REFORGED_PUBLIC_VERSION=2.0.0"
+set "REFORGED_PUBLIC_VERSION=2.0.1"
 rem Production Community server baseline: Chocolatier_Community_Server_v1.1.2-bar-appearance-hotfix.zip
 set "COMMUNITY_SERVER_VERSION=1.1.2"
+set "REFORGED_REQUIRE_SIGNING=1"
 set "PRODUCTION_HOST=scores.chocolatiercommunity.com"
 set "HISCORE_URL=http://scores.chocolatiercommunity.com/hiscore"
 set "UPDATE_BASE_URL=https://scores.chocolatiercommunity.com/releases"
@@ -129,7 +130,7 @@ if not exist "%~dp0generated" mkdir "%~dp0generated"
 >"%~dp0generated\RELEASE_CHANNEL.txt" echo %RELEASE_CHANNEL%
 >"%~dp0generated\REFORGED_RELEASE.txt" echo Chocolatier: Decadence by Design Reforged v%REFORGED_PUBLIC_VERSION%
 >>"%~dp0generated\REFORGED_RELEASE.txt" echo Community Services: %COMMUNITY_SERVER_VERSION%
->>"%~dp0generated\REFORGED_RELEASE.txt" echo Community Bridge: 0.2.12
+>>"%~dp0generated\REFORGED_RELEASE.txt" echo Community Bridge: 0.2.13
 >>"%~dp0generated\REFORGED_RELEASE.txt" echo Community Host: %PRODUCTION_HOST%
 >>"%~dp0generated\REFORGED_RELEASE.txt" echo Change Notes: CHANGELOG-Reforged.md
 
@@ -159,6 +160,10 @@ if not defined INSTALLER_PATH (
   echo ERROR: Expected installer output was not found.
   exit /b 8
 )
+
+call "%~dp0sign-artifact.bat" "!INSTALLER_PATH!"
+if errorlevel 1 exit /b 26
+
 for /f "usebackq delims=" %%H in (`powershell -NoProfile -ExecutionPolicy Bypass -Command "(Get-FileHash -LiteralPath '!INSTALLER_PATH!' -Algorithm SHA256).Hash.ToLowerInvariant()"`) do set "INSTALLER_SHA256=%%H"
 if not defined INSTALLER_SHA256 (
   echo ERROR: Could not calculate installer SHA-256.
