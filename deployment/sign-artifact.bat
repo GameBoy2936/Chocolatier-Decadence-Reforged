@@ -30,6 +30,12 @@ if errorlevel 1 (
   exit /b 5
 )
 
+set "CERT_STORE=Cert:\CurrentUser\My"
+if /I "%REFORGED_SIGN_MACHINE_STORE%"=="1" set "CERT_STORE=Cert:\LocalMachine\My"
+powershell -NoProfile -ExecutionPolicy Bypass -Command ^
+  "$t = '%REFORGED_SIGN_CERT_THUMBPRINT%'.Replace(' ','').ToUpperInvariant(); $c = Get-ChildItem '%CERT_STORE%' | Where-Object { $_.Thumbprint.ToUpperInvariant() -eq $t } | Select-Object -First 1; if (-not $c) { Write-Host 'ERROR: Signing certificate not found in %CERT_STORE%.'; exit 1 }; if ($c.PublicKey.Oid.Value -ne '1.2.840.113549.1.1.1') { Write-Host ('ERROR: Smart App Control requires RSA signing; certificate key algorithm is ' + $c.PublicKey.Oid.FriendlyName + '.'); exit 2 }"
+if errorlevel 1 exit /b 9
+
 if not defined REFORGED_SIGN_TIMESTAMP_URL set "REFORGED_SIGN_TIMESTAMP_URL=http://timestamp.digicert.com"
 
 set "STORE_SWITCH="
