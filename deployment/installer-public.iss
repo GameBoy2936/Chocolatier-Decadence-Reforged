@@ -1,6 +1,6 @@
 #define PublicVersion GetEnv("REFORGED_PUBLIC_VERSION")
 #if PublicVersion == ""
-  #define PublicVersion "2.0.0"
+  #define PublicVersion "2.0.1"
 #endif
 
 [Setup]
@@ -28,6 +28,8 @@ AppMutex=ChocolatierReforged_v2_Launcher
 SetupMutex=ChocolatierReforged_v2_Setup
 UninstallDisplayName=Chocolatier: Decadence by Design Reforged
 SetupLogging=yes
+SignTool=reforged
+SignedUninstaller=yes
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional shortcuts:"; Flags: checkedonce
@@ -53,6 +55,7 @@ Type: files; Name: "{app}\community_bridge\built-version.txt"
 Type: files; Name: "{app}\community_bridge\build-native-bridge.bat"
 Type: files; Name: "{app}\community_bridge\BUILD_NATIVE_BRIDGE.md"
 Type: files; Name: "{app}\community_bridge\community_bridge_source.c"
+Type: filesandordirs; Name: "{localappdata}\Chocolatier Reforged\Community Bridge"
 
 [Icons]
 Name: "{autoprograms}\Chocolatier Reforged"; Filename: "{app}\Chocolatier Reforged.exe"; WorkingDir: "{app}"; IconFilename: "{app}\chocolatier-decadence.exe"

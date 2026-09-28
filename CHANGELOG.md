@@ -1,3 +1,19 @@
+# Chocolatier: Decadence by Design Reforged — v2.0.1 Change Notes
+
+Reforged v2.0.1 is a focused launch hotfix for Community startup reliability on modern Windows installations.
+
+## Community startup & Windows security
+
+- Updated the Reforged Community Bridge to **0.2.13**.
+- Moved mutable launcher/bridge control files such as `bridge_status.txt` and `stop.txt` out of the game installation and into the current user's Local AppData folder.
+- Added detailed launcher diagnostics that distinguish a missing Community Bridge, a Windows launch failure, an early bridge exit and a startup timeout.
+- Added specific guidance when Windows reports that the Community Bridge was blocked by application-control or antivirus policy.
+- Added an Authenticode signing step for `ReforgedCommunityBridge.exe`, `Chocolatier Reforged.exe` and the public installer.
+- Public release builds now fail if trusted code signing is required but no signing certificate has been configured, preventing another unsigned Community helper from being published accidentally.
+- Community services remain optional: if the helper cannot start, ordinary offline single-player play still launches normally.
+
+---
+
 # Chocolatier: Decadence by Design Reforged — v2.0.0 Change Notes
 
 Reforged v2.0.0 is the largest update to the project so far, expanding the game across Free Play, online Community features, the Secret Test Kitchen, the Catalogue, world simulation, quests, scoring, localization and general quality of life.

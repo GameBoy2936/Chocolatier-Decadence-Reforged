@@ -37,6 +37,9 @@ if errorlevel 1 goto link_failed
 
 if not exist "%OUTDIR%\Chocolatier Reforged.exe" goto output_missing
 
+call "%~dp0sign-artifact.bat" "%OUTDIR%\Chocolatier Reforged.exe"
+if errorlevel 1 goto failed
+
 echo.
 echo SUCCESS
 echo Built: "%OUTDIR%\Chocolatier Reforged.exe"
