@@ -142,8 +142,12 @@ if not defined ISCC (
   exit /b 6
 )
 
+if not defined REFORGED_SIGN_TIMESTAMP_URL set "REFORGED_SIGN_TIMESTAMP_URL=http://timestamp.digicert.com"
+set "INNO_SIGN_STORE_SWITCH="
+if /I "%REFORGED_SIGN_MACHINE_STORE%"=="1" set "INNO_SIGN_STORE_SWITCH=/sm"
+
 if exist "%~dp0dist" rmdir /s /q "%~dp0dist"
-"%ISCC%" "%~dp0installer-public.iss"
+"%ISCC%" "--signtool=reforged=signtool.exe sign !INNO_SIGN_STORE_SWITCH! /sha1 %REFORGED_SIGN_CERT_THUMBPRINT% /fd SHA256 /tr %REFORGED_SIGN_TIMESTAMP_URL% /td SHA256 /v $f" "%~dp0installer-public.iss"
 if errorlevel 1 exit /b 7
 
 set "INSTALLER_PATH="
@@ -161,7 +165,7 @@ if not defined INSTALLER_PATH (
   exit /b 8
 )
 
-call "%~dp0sign-artifact.bat" "!INSTALLER_PATH!"
+call "%~dp0sign-artifact.bat" "!INSTALLER_PATH!" --verify-only
 if errorlevel 1 exit /b 26
 
 for /f "usebackq delims=" %%H in (`powershell -NoProfile -ExecutionPolicy Bypass -Command "(Get-FileHash -LiteralPath '!INSTALLER_PATH!' -Algorithm SHA256).Hash.ToLowerInvariant()"`) do set "INSTALLER_SHA256=%%H"
