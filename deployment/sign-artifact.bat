@@ -2,6 +2,7 @@
 setlocal EnableExtensions
 
 set "TARGET=%~1"
+set "MODE=%~2"
 if not defined TARGET (
   echo ERROR: sign-artifact.bat requires a file path.
   exit /b 2
@@ -34,12 +35,17 @@ if not defined REFORGED_SIGN_TIMESTAMP_URL set "REFORGED_SIGN_TIMESTAMP_URL=http
 set "STORE_SWITCH="
 if /I "%REFORGED_SIGN_MACHINE_STORE%"=="1" set "STORE_SWITCH=/sm"
 
-echo Signing:
-echo   %TARGET%
-signtool.exe sign %STORE_SWITCH% /sha1 "%REFORGED_SIGN_CERT_THUMBPRINT%" /fd SHA256 /tr "%REFORGED_SIGN_TIMESTAMP_URL%" /td SHA256 /v "%TARGET%"
-if errorlevel 1 (
-  echo ERROR: Authenticode signing failed for %~nx1.
-  exit /b 6
+if /I not "%MODE%"=="--verify-only" (
+  echo Signing:
+  echo   %TARGET%
+  signtool.exe sign %STORE_SWITCH% /sha1 "%REFORGED_SIGN_CERT_THUMBPRINT%" /fd SHA256 /tr "%REFORGED_SIGN_TIMESTAMP_URL%" /td SHA256 /v "%TARGET%"
+  if errorlevel 1 (
+    echo ERROR: Authenticode signing failed for %~nx1.
+    exit /b 6
+  )
+) else (
+  echo Verifying existing signature:
+  echo   %TARGET%
 )
 
 signtool.exe verify /pa /v "%TARGET%"
