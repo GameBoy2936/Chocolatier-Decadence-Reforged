@@ -4702,19 +4702,19 @@
 	 <Cell><Data ss:Type="String">I'll need a touch more incentive to sell these incredible sweets to you...</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">shop_haggle_good_pushedluck_soft_1</Data></Cell>
+	 <Cell><Data ss:Type="String">shop_haggle_good_soft_pushluck_1</Data></Cell>
 	 <Cell><Data ss:Type="String">Could you possibly squeeze out just a few more coins for me, {character_firstname}?</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">shop_haggle_good_pushedluck_soft_2</Data></Cell>
+	 <Cell><Data ss:Type="String">shop_haggle_good_soft_pushluck_2</Data></Cell>
 	 <Cell><Data ss:Type="String">I'm so grateful for the bump, but these confections are truly one-of-a-kind. Just a bit more?</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">shop_haggle_good_pushedluck_soft_3</Data></Cell>
+	 <Cell><Data ss:Type="String">shop_haggle_good_soft_pushluck_3</Data></Cell>
 	 <Cell><Data ss:Type="String">We're getting close to a golden number. Can you offer just a slight increase?</Data></Cell>
 	</Row>
 	<Row>
-	 <Cell><Data ss:Type="String">shop_haggle_good_pushedluck_soft_4</Data></Cell>
+	 <Cell><Data ss:Type="String">shop_haggle_good_soft_pushluck_4</Data></Cell>
 	 <Cell><Data ss:Type="String">I'll gladly hand these over right now if you can just sweeten the deal a tiny bit more...</Data></Cell>
 	</Row>
 	<Row>
@@ -5419,7 +5419,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_recipient_offer_evil_wolf_2</Data></Cell>
-	 <Cell><Data ss:Type="String">So we meet again, chocolatier. My logistics chain has a gap that needs filling - specifically {quantity} cases of {item}. My offer is {salary}.&lt;br&gt;&lt;br&gt;Do not mistake this for a request; it is a test of your efficiency. Pass it, and you are paid. Fail to deliver within {deadline_weeksleft} weeks, and... well... you know the drill.</Data></Cell>
+	 <Cell><Data ss:Type="String">So we meet again, chocolatier. My logistics chain has a gap that needs filling - specifically {quantity} cases of {item}. My offer is {salary}.&lt;br&gt;&lt;br&gt;Do not mistake this for a request - it is a test of your efficiency. Pass it, and you are paid. Fail to deliver within {deadline_weeksleft} weeks, and... well... you know how it all goes down.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_recipient_accept_1</Data></Cell>
@@ -5799,11 +5799,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_recipient_reject_wel_shopkeep_1</Data></Cell>
-	 <Cell><Data ss:Type="String">What a complete waste of time.</Data></Cell>
+	 <Cell><Data ss:Type="String">What a complete waste of time!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_recipient_reject_wel_shopkeep_2</Data></Cell>
-	 <Cell><Data ss:Type="String">Unbelievable. You'd rather do what, exactly? Sell boring bars for a fraction of the price? That makes no sense.</Data></Cell>
+	 <Cell><Data ss:Type="String">Unbelievable! You'd rather do what, exactly? Sell boring bars for a fraction of the price? That makes no sense.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_recipient_reject_wel_shopkeep_3</Data></Cell>
@@ -5823,7 +5823,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_recipient_reject_evil_bian_2</Data></Cell>
-	 <Cell><Data ss:Type="String">Wow, wow, wow. I totally saw that coming. You really don't trust me.</Data></Cell>
+	 <Cell><Data ss:Type="String">Wow, wow, wow. A lack of trust is a dreadful look on you. I thought we were friends!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_recipient_reject_evil_bian_3</Data></Cell>
@@ -6075,7 +6075,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_complete_evil_bian_fail_stall_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Ooh, now this looks beautiful. Having exclusive access to the best goods in the world really has its benefits, doesn't it?&lt;br&gt;&lt;br&gt;Oh, I forgot to mention! I made a tiny phone call to the labor union at your {factory} plant. They're on strike now. Something about 'working conditions'? I honestly wasn't listening. Have fun fixing it!</Data></Cell>
+	 <Cell><Data ss:Type="String">Ooh, now this looks bewitching. Having exclusive access to the best goods in the world really has its dividends, doesn't it?&lt;br&gt;&lt;br&gt;Oh, I forgot to mention! I made a tiny phone call to the labor union at your {factory} plant. They're on strike now. Something about 'working conditions'? It all sounded dreadfully tedious, so I naturally tuned out. Have fun fixing it!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_complete_evil_bian_fail_theft_1</Data></Cell>
@@ -6095,7 +6095,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_complete_evil_kath_fail_nopay_1</Data></Cell>
-	 <Cell><Data ss:Type="String">We have accepted the shipment. However, legal has flagged a compliance issue with your import papers. The payment of {salary} has been frozen pending an investigation. This could take years. My apologies.</Data></Cell>
+	 <Cell><Data ss:Type="String">We have accepted the shipment. However, legal has flagged a compliance issue with your import papers. The payment of {salary} has been frozen pending an investigation.&lt;br&gt;&lt;br&gt;This could take years. My apologies.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_complete_evil_kath_fail_stall_1</Data></Cell>
@@ -6123,11 +6123,11 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_complete_evil_tyso_fail_nopay_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Welcome back, &lt;player&gt;. Good to see you've made it in time. I've just reviewed the contract you verbally agreed to.&lt;br&gt;&lt;br&gt;Paragraph 4, Subsection B clearly states the buyer reserves the right to withhold payment for 'Quality Assurance Testing.' We'll possess the {item} for testing. By that, I mean indefinitely. Read the fine print next time, kid.</Data></Cell>
+	 <Cell><Data ss:Type="String">Welcome back, &lt;player&gt;. Good to see you've made it in time. I've just reviewed the contract you verbally agreed to.&lt;br&gt;&lt;br&gt;Paragraph 4, Subsection B clearly states the buyer reserves the right to withhold payment for 'Quality Assurance Testing.' We'll possess the {item} for testing. By that, I mean indefinitely. Read the fine print next time, kid!</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_complete_evil_tyso_fail_nopay_2</Data></Cell>
-	 <Cell><Data ss:Type="String">Thanks for the {item}. As for the money? I'm afraid Schokolade Weltreich has frozen all external vendor payments pending a 'strategic review.' You can file a complaint with our legal department in Berlin. They usually respond in... three to five years.</Data></Cell>
+	 <Cell><Data ss:Type="String">Oh, now this looks beautiful! As for the money? I'm afraid Schokolade Weltreich has frozen all external vendor payments pending a 'strategic review.' You can file a complaint with our legal department in Berlin. They usually respond in... three to five years.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">delivery_complete_evil_tyso_fail_stall_1</Data></Cell>

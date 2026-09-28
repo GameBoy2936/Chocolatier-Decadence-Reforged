@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Creation Upload)
+	Chocolatier Three: Decadence by Design Reforged (Community Creation Upload)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 

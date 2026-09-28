@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Score Results)
+	Chocolatier Three: Decadence by Design Reforged (Community Score Results)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 

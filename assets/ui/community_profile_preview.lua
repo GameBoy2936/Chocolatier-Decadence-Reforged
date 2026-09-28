@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Profile Flag Preview)
+	Chocolatier Three: Decadence by Design Reforged (Community Profile Flag Preview)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 

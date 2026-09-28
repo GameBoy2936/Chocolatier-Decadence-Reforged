@@ -8,7 +8,7 @@ require("community/hub.lua")
 -------------------------------------------------------------------------------
 
 local introFont = { uiFontName, 14, BlackColor }
-local bodyFont = { uiFontName, 13.5, BlackColor }
+local bodyFont = { uiFontName, 13, BlackColor }
 local communityFont = { uiFontName, 13, BlackColor }
 local sectionFont = { labelFontName, 18, MaroonColor }
 
@@ -49,7 +49,7 @@ MakeDialog
 	Text { x=384, y=118, w=350, h=112, flags=kVAlignTop+kHAlignLeft, font=bodyFont, label="#"..GetString("help_reforged_modding_text") },
 
 	Text { x=15, y=222, w=719, h=20, flags=kVAlignCenter+kHAlignCenter, font=sectionFont, label="#"..GetString("help_reforged_community") },
-	Text { x=45, y=243, w=659, h=25, flags=kVAlignCenter+kHAlignCenter, font=communityFont, label="#"..GetString("help_reforged_upsell") },
+	Text { x=45, y=240, w=659, h=34, flags=kVAlignCenter+kHAlignCenter, font=communityFont, label="#"..GetString("help_reforged_upsell") },
 
 	-- The native bridge opens these destinations directly, replacing the old raw
 	-- URLs and Discord QR code while keeping the page usable from inside the game.

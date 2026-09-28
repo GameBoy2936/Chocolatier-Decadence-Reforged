@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Account Sign In)
+	Chocolatier Three: Decadence by Design Reforged (Community Account Sign In)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 

@@ -5,7 +5,7 @@
 
 -------------------------------------------------------------------------------
 
-local bodyFont = { uiFontName, 18, BlackColor }
+local bodyFont = { uiFontName, 17, BlackColor }
 local smallFont = { uiFontName, 14, BlackColor }
 local reg_scale = 0.75
 

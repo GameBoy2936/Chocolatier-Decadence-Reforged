@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Hub UI)
+	Chocolatier Three: Decadence by Design Reforged (Community Hub UI)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -204,7 +204,7 @@ MakeDialog
 		Text { x = 260, y = 110, w = 185, h = 20, name = "community_hub_players",
 			label = "#" .. GetString("community_hub_players_unknown"), font = statusFont, flags = kHAlignRight + kVAlignCenter },
 		Text { x = 58, y = 132, w = 240, h = 20, name = "community_account_header", label = "", font = statusStrongFont, flags = kHAlignLeft + kVAlignCenter },
-		Text { x = 146, y = 132, w = 300, h = 20, name = "community_account_header_meta", label = "", font = smallFont, flags = kHAlignRight + kVAlignCenter },
+		Text { x = 146, y = 132, w = 300, h = 34, name = "community_account_header_meta", label = "", font = smallFont, flags = kHAlignRight + kVAlignTop },
 
 		SetStyle(C3ButtonMediumStyle),
 		Button { x = 72, y = 166, label = "#" .. GetString("high_scores"), command = OpenHighScores },

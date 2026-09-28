@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Profile)
+	Chocolatier Three: Decadence by Design Reforged (Community Profile)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -262,14 +262,14 @@ local function QueueProfilePicker(label, command)
 
 	pickerQueued = true
 	SetPickerButtonsEnabled(false)
-	DebugOut("UI", "queued " .. label .. " picker.")
+	DebugOut("UI", "Community Profile: queued " .. label .. " picker.")
 
 	-- Full-screen game dialogs are deferred until the button callback has returned.
 	-- This matches the engine's own safe transition pattern used by the developer UIs.
 	QueueCommand(function()
-		DebugOut("UI", "opening " .. label .. " picker.")
+		DebugOut("UI", "Community Profile: opening " .. label .. " picker.")
 		command()
-		DebugOut("UI", "closed " .. label .. " picker.")
+		DebugOut("UI", "Community Profile: closed " .. label .. " picker.")
 		pickerQueued = false
 		RefreshValues()
 		RefreshFavoriteActionButtons()

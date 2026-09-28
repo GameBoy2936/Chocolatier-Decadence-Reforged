@@ -6,7 +6,7 @@
 -------------------------------------------------------------------------------
 
 local reg_scale = 0.75
-local bodyFont = { uiFontName, 18, BlackColor }
+local bodyFont = { uiFontName, 17, BlackColor }
 local smallFont = { uiFontName, 15, BlackColor }
 
 local blueberry = _AllIngredients["blueberry"]

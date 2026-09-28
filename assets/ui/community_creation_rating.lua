@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Creation Rating)
+	Chocolatier Three: Decadence by Design Reforged (Community Creation Rating)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 require("community/api.lua")

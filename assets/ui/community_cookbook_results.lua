@@ -1,5 +1,5 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Community Cookbook Results)
+	Chocolatier Three: Decadence by Design Reforged (Community Cookbook Results)
 	Copyright (c) 2026 Michael Lane. All Rights Reserved.
 --]]---------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ for slot = 1, 7 do
 
 		table.insert(contents, CommunityCreationRender.Appearance(item.creation, 5, y + 2, 0.25))
 		table.insert(contents, Text {
-			x = 42, y = y + 2, w = 300, h = 18,
+			x = 43, y = y + 2, w = 235, h = 18,
 			label = "#" .. item.creation.name,
 			font = selected and selectedNameFont or nameFont,
 			flags = kHAlignLeft + kVAlignTop,

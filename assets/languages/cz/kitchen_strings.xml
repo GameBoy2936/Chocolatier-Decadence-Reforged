@@ -2422,7 +2422,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_lemon_honey_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Your lemon and honey chocolates will help soothe sore throats.</Data></Cell>
+	 <Cell><Data ss:Type="String">Lemon and honey. Simple, but it works. The honey takes the edge off that sharp lemon without burying it.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_lemon_lime_1</Data></Cell>
@@ -2506,7 +2506,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_lemongrass_honey_1</Data></Cell>
-	 <Cell><Data ss:Type="String">Lemongrass can taste a bit thin on its own, but honey gives it some actual body. Very easy to sip.</Data></Cell>
+	 <Cell><Data ss:Type="String">Lemongrass can taste a bit thin on its own, but honey gives it some actual body. That works nicely.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_lemongrass_mint_1</Data></Cell>
@@ -3618,7 +3618,7 @@
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_blacktea_cardamom_1</Data></Cell>
-	 <Cell><Data ss:Type="String">That cardamom aroma hits your nose before the cup even reaches your lips! Nice pairing.</Data></Cell>
+	 <Cell><Data ss:Type="String">That cardamom aroma hits your nose before the flavor even lands! Nice pairing.</Data></Cell>
 	</Row>
 	<Row>
 	 <Cell><Data ss:Type="String">taster_feedback_blacktea_ginger_1</Data></Cell>

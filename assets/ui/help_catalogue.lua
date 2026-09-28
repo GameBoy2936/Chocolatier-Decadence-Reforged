@@ -6,7 +6,7 @@
 -------------------------------------------------------------------------------
 
 local introFont = { uiFontName, 17, BlackColor }
-local bodyFont = { uiFontName, 15, BlackColor }
+local bodyFont = { uiFontName, 14, BlackColor }
 
 MakeDialog
 {

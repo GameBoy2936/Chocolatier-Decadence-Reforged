@@ -1,27 +1,27 @@
 --[[---------------------------------------------------------------------------
-	Chocolatier: Decadence by Design Reforged (Recipe Feedback Rules)
+	Chocolatier Three: Decadence by Design Reforged (Recipe Feedback Rules)
 	Copyright (c) 2008 Big Splash Games, LLC. All Rights Reserved.
-	Reforged modifications (c) 2025-2026 Michael Lane.
+	Modified (c) 2025-2026 Michael Lane.
 --]]---------------------------------------------------------------------------
 
 -- This file defines the culinary rule pools used by Teddy Baumeister in the
 -- Secret Test Kitchen. It is written for the current EvaluatePlayerRecipe()
 -- implementation in sim/recipe.lua and can replace the existing
 -- sim/recipe_feedback.lua directly.
-
+--
 -- IMPORTANT SCORING NOTES:
 --   * recipe.lua begins every original recipe at 140 points.
 --   * Every matching rule adds its score, even when its dialogue is voided.
 --   * "unique = true" limits dialogue selection only; it does not limit scoring.
 --   * Scores here are therefore deliberately conservative.
-
+--
 -- PRACTICAL SCORE TARGETS:
 --   100-139  Flawed, awkward, or underdeveloped
 --   140-164  Sound and commercially workable
 --   165-189  Strong, purposeful recipe
 --   190-219  Excellent layered recipe
 --   220+     Exceptional and intentionally difficult to reach
-
+--
 -- SUPPORTED RULE FIELDS:
 --   feedback:   Base localization key for Teddy's dialogue.
 --   score:      Points added to or removed from recipe quality.
@@ -33,23 +33,23 @@
 --   categories: Product categories to which the rule is restricted.
 --   unique:     Low-priority dialogue. One valid unique line is selected.
 --   voids:      Dialogue keys suppressed when this rule matches.
-
+--
 -- The current engine supports these ratio families:
 --   cacao, coffee, dairy, flavor, fruit, nut, sugar
 -- Supported count operators are the same as ratio operators.
 -- Supported trait counts currently include: alcohol
-
+--
 -- All culinary rules are declared directly inside ChocolateEvaluators or
 -- CoffeeEvaluators. recipe.lua selects one of these two lists and iterates it
 -- directly, so no feedback rules are injected afterward with table.insert().
-
+--
 -- Source layout:
 --   * Rules without a required ingredient stay in GLOBAL / STRUCTURAL.
 --   * Ingredient rules are grouped alphabetically under a primary ingredient.
 --   * The first required ingredient is the default owner; a shared-theme rule may
 --     be filed under the ingredient that best preserves its feedback priority.
 --   * Group ownership is only for maintainability; matching still checks every field.
-
+--
 -- All ingredient names and dialogue keys in this file are validated against
 -- the current Reforged data set.
 
@@ -159,8 +159,10 @@ ChocolateEvaluators =
 	{ requires = { "cayenne" }, counts = { { "cayenne", ">=", 2 } }, score = -26, feedback = "taster_feedback_cayenne_overuse", voids = { "taster_feedback_cayenne_solo" } },
 	{ requires = { "cayenne", "jasmine" }, score = -20, feedback = "taster_feedback_jasmine_cayenne_bad", voids = { "taster_feedback_cayenne_solo", "taster_feedback_jasmine_solo" } },
 	{ requires = { "cayenne", "chamomile" }, score = -18, feedback = "taster_feedback_chamomile_cayenne_bad", voids = { "taster_feedback_cayenne_solo", "taster_feedback_chamomile_solo" } },
+	{ requires = { "cayenne", "mint" }, score = -18, feedback = "taster_feedback_cayenne_mint_bad", voids = { "taster_feedback_cayenne_solo", "taster_feedback_mint_solo" } },
 	{ requires = { "cayenne", "honey" }, score = 8, feedback = "taster_feedback_cayenne_honey", unique = true, voids = { "taster_feedback_cayenne_solo", "taster_feedback_honey_solo" } },
 	{ requires = { "cayenne", "lime" }, score = 6, feedback = "taster_feedback_cayenne_lime", unique = true, voids = { "taster_feedback_cayenne_solo", "taster_feedback_lime_solo", "taster_feedback_spicy_chocolate" } },
+	{ requires = { "cayenne", "mango" }, score = 6, feedback = "taster_feedback_cayenne_mango", unique = true, voids = { "taster_feedback_cayenne_solo", "taster_feedback_mango_solo" } },
 	{ requires = { "cayenne" }, ratios = { { "cacao", ">", 0 } }, score = 4, feedback = "taster_feedback_spicy_chocolate", unique = true, voids = { "taster_feedback_cayenne_solo" } },
 	{ requires = { "cayenne" }, score = 0, feedback = "taster_feedback_cayenne_solo", unique = true },
 
@@ -243,6 +245,7 @@ ChocolateEvaluators =
 
 	-- GINGER ----------------------------------------------------------------
 	{ requires = { "ginger" }, counts = { { "ginger", ">=", 2 } }, score = -18, feedback = "taster_feedback_ginger_overuse", voids = { "taster_feedback_ginger_solo" } },
+	{ requires = { "ginger", "mint" }, score = -12, feedback = "taster_feedback_ginger_mint_bad", voids = { "taster_feedback_ginger_solo", "taster_feedback_mint_solo" } },
 	{ requires = { "ginger" }, score = 0, feedback = "taster_feedback_ginger_solo", unique = true },
 
 	-- GRAND MARNIER ---------------------------------------------------------
@@ -280,6 +283,8 @@ ChocolateEvaluators =
 	-- JASMINE ---------------------------------------------------------------
 	{ requires = { "jasmine" }, counts = { { "jasmine", ">=", 2 } }, score = -18, feedback = "taster_feedback_jasmine_overuse", voids = { "taster_feedback_jasmine_solo" } },
 	{ requires = { "jasmine", "peanut" }, ratios = { { "coffee", "==", 0 } }, score = -16, feedback = "taster_feedback_jasmine_peanut_bad", voids = { "taster_feedback_jasmine_solo", "taster_feedback_peanut_solo" } },
+	{ requires = { "jasmine", "honey" }, score = 5, feedback = "taster_feedback_jasmine_honey", unique = true, voids = { "taster_feedback_jasmine_solo", "taster_feedback_honey_solo" } },
+	{ requires = { "jasmine", "lychee" }, score = 6, feedback = "taster_feedback_jasmine_lychee", unique = true, voids = { "taster_feedback_jasmine_solo", "taster_feedback_lychee_solo" } },
 	{ requires = { "jasmine", "peach" }, score = 6, feedback = "taster_feedback_jasmine_peach", unique = true, voids = { "taster_feedback_jasmine_solo", "taster_feedback_peach_solo" } },
 	{ requires = { "jasmine" }, score = 0, feedback = "taster_feedback_jasmine_solo", unique = true },
 
@@ -291,6 +296,7 @@ ChocolateEvaluators =
 	-- LAVENDER --------------------------------------------------------------
 	{ requires = { "lavender" }, counts = { { "lavender", ">=", 2 } }, score = -20, feedback = "taster_feedback_lavender_overuse", voids = { "taster_feedback_lavender_solo" } },
 	{ requires = { "lavender", "cayenne" }, score = -18, feedback = "taster_feedback_lavender_cayenne_bad", voids = { "taster_feedback_lavender_solo", "taster_feedback_cayenne_solo" } },
+	{ requires = { "lavender", "cinnamon" }, score = -16, feedback = "taster_feedback_lavender_cinnamon_bad", voids = { "taster_feedback_lavender_solo", "taster_feedback_cinnamon_solo" } },
 	{ requires = { "lavender", "lime" }, score = -16, feedback = "taster_feedback_lavender_lime_bad", voids = { "taster_feedback_lavender_solo", "taster_feedback_lime_solo" } },
 	{ requires = { "lavender", "blueberry" }, score = 8, feedback = "taster_feedback_lavender_blueberry", unique = true, voids = { "taster_feedback_lavender_solo", "taster_feedback_blueberry_solo" } },
 	{ requires = { "lavender", "honey" }, score = 6, feedback = "taster_feedback_lavender_honey", unique = true, voids = { "taster_feedback_lavender_solo", "taster_feedback_honey_solo" } },
@@ -313,6 +319,8 @@ ChocolateEvaluators =
 	-- LEMONGRASS ------------------------------------------------------------
 	{ requires = { "lemongrass" }, counts = { { "lemongrass", ">=", 2 } }, score = -16, feedback = "taster_feedback_lemongrass_overuse", voids = { "taster_feedback_lemongrass_solo" } },
 	{ requires = { "lemongrass", "ginger" }, score = 6, feedback = "taster_feedback_lemongrass_ginger", unique = true, voids = { "taster_feedback_lemongrass_solo", "taster_feedback_ginger_solo" } },
+	{ requires = { "lemongrass", "honey" }, score = 5, feedback = "taster_feedback_lemongrass_honey", unique = true, voids = { "taster_feedback_lemongrass_solo", "taster_feedback_honey_solo" } },
+	{ requires = { "lemongrass", "mint" }, score = 5, feedback = "taster_feedback_lemongrass_mint", unique = true, voids = { "taster_feedback_lemongrass_solo", "taster_feedback_mint_solo" } },
 	{ requires = { "lemongrass" }, score = 0, feedback = "taster_feedback_lemongrass_solo", unique = true },
 
 	-- LIME ------------------------------------------------------------------
@@ -469,6 +477,7 @@ ChocolateEvaluators =
 	{ requires = { "rose" }, counts = { { "rose", ">=", 2 } }, score = -20, feedback = "taster_feedback_rose_overuse", voids = { "taster_feedback_rose_solo" } },
 	{ requires = { "rose" }, ratios = { { "cacao", ">=", 0.6 }, { "dairy", "==", 0 } }, score = -12, feedback = "taster_feedback_dark_rose_bad", voids = { "taster_feedback_rose_solo" } },
 	{ requires = { "rose", "lavender", "jasmine" }, score = -18, feedback = "taster_feedback_floral_overload_bad", voids = { "taster_feedback_rose_solo", "taster_feedback_lavender_solo", "taster_feedback_jasmine_solo" } },
+	{ requires = { "rose", "mint" }, score = -16, feedback = "taster_feedback_rose_mint_bad", voids = { "taster_feedback_rose_solo", "taster_feedback_mint_solo" } },
 	{ requires = { "rose", "saffron" }, score = 22, feedback = "taster_feedback_rose_saffron", voids = { "taster_feedback_saffron_solo", "taster_feedback_rose_pistachio", "taster_feedback_rose_raspberry", "taster_feedback_rose_solo" } },
 	{ requires = { "rose", "pistachio" }, score = 20, feedback = "taster_feedback_rose_pistachio", voids = { "taster_feedback_rose_raspberry", "taster_feedback_rose_solo", "taster_feedback_pistachio_solo" } },
 	{ requires = { "rose", "raspberry" }, score = 20, feedback = "taster_feedback_rose_raspberry", voids = { "taster_feedback_raspberry_solo", "taster_feedback_rose_solo" } },
@@ -555,6 +564,11 @@ ChocolateEvaluators =
 
 	-- TEA -------------------------------------------------------------------
 	{ requires = { "tea" }, counts = { { "tea", ">=", 2 } }, score = -16, feedback = "taster_feedback_tea_overuse", voids = { "taster_feedback_blacktea_solo" } },
+	{ requires = { "tea", "lavender" }, score = 10, feedback = "taster_feedback_blacktea_lavender", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_lavender_solo" } },
+	{ requires = { "tea", "jasmine" }, score = 10, feedback = "taster_feedback_blacktea_jasmine", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_jasmine_solo" } },
+	{ requires = { "tea", "cardamom" }, score = 6, feedback = "taster_feedback_blacktea_cardamom", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_cardamom_solo" } },
+	{ requires = { "tea", "ginger" }, score = 6, feedback = "taster_feedback_blacktea_ginger", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_ginger_solo" } },
+	{ requires = { "tea", "peach" }, score = 5, feedback = "taster_feedback_blacktea_peach", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_peach_solo" } },
 	{ requires = { "tea", "rose" }, score = 6, feedback = "taster_feedback_blacktea_rose", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_rose_solo" } },
 	{ requires = { "tea", "hibiscus" }, score = 6, feedback = "taster_feedback_blacktea_hibiscus", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_hibiscus_solo" } },
 	{ requires = { "tea", "cinnamon" }, score = 6, feedback = "taster_feedback_blacktea_cinnamon", unique = true, voids = { "taster_feedback_blacktea_solo", "taster_feedback_cinnamon_solo" } },
@@ -809,6 +823,10 @@ CoffeeEvaluators =
 	{ requires = { "cayenne" }, forbids = { "ginger", "sugar", "honey", "maple", "caramel", "toffee", "milk", "cream", "whipped_cream" }, ratios = { { "coffee", ">", 0 }, { "cacao", "==", 0 } }, score = -18, feedback = "taster_feedback_coffee_cayenne_bad", voids = { "taster_feedback_cayenne_solo" } },
 	{ requires = { "cayenne", "jasmine" }, score = -20, feedback = "taster_feedback_jasmine_cayenne_bad", voids = { "taster_feedback_cayenne_solo", "taster_feedback_jasmine_solo" } },
 	{ requires = { "cayenne", "chamomile" }, score = -18, feedback = "taster_feedback_chamomile_cayenne_bad", voids = { "taster_feedback_cayenne_solo", "taster_feedback_chamomile_solo" } },
+	{ requires = { "cayenne", "mint" }, score = -18, feedback = "taster_feedback_cayenne_mint_bad", voids = { "taster_feedback_cayenne_solo", "taster_feedback_mint_solo" } },
+	{ requires = { "cayenne", "honey" }, score = 8, feedback = "taster_feedback_cayenne_honey", unique = true, voids = { "taster_feedback_cayenne_solo", "taster_feedback_honey_solo" } },
+	{ requires = { "cayenne", "lime" }, ratios = { { "coffee", "==", 0 } }, score = 6, feedback = "taster_feedback_cayenne_lime", unique = true, voids = { "taster_feedback_cayenne_solo", "taster_feedback_lime_solo" } },
+	{ requires = { "cayenne", "mango" }, score = 6, feedback = "taster_feedback_cayenne_mango", unique = true, voids = { "taster_feedback_cayenne_solo", "taster_feedback_mango_solo" } },
 	{ requires = { "cayenne" }, score = 0, feedback = "taster_feedback_cayenne_solo", unique = true },
 
 	-- CHAMOMILE -------------------------------------------------------------
@@ -906,6 +924,7 @@ CoffeeEvaluators =
 
 	-- GINGER ----------------------------------------------------------------
 	{ requires = { "ginger" }, counts = { { "ginger", ">=", 2 } }, score = -18, feedback = "taster_feedback_ginger_overuse", voids = { "taster_feedback_ginger_solo" } },
+	{ requires = { "ginger", "mint" }, ratios = { { "coffee", "==", 0 } }, score = -12, feedback = "taster_feedback_ginger_mint_bad", voids = { "taster_feedback_ginger_solo", "taster_feedback_mint_solo" } },
 	{ requires = { "ginger" }, score = 0, feedback = "taster_feedback_ginger_solo", unique = true },
 
 	-- GRAND MARNIER ---------------------------------------------------------
@@ -975,6 +994,7 @@ CoffeeEvaluators =
 
 	-- LAVENDER --------------------------------------------------------------
 	{ requires = { "lavender" }, counts = { { "lavender", ">=", 2 } }, score = -20, feedback = "taster_feedback_lavender_overuse", voids = { "taster_feedback_lavender_solo" } },
+	{ requires = { "lavender", "cinnamon" }, score = -16, feedback = "taster_feedback_lavender_cinnamon_bad", voids = { "taster_feedback_lavender_solo", "taster_feedback_cinnamon_solo" } },
 	{ requires = { "lavender", "honey" }, score = 5, feedback = "taster_feedback_lavender_honey", unique = true, voids = { "taster_feedback_lavender_solo", "taster_feedback_honey_solo" } },
 	{ requires = { "lavender", "blueberry" }, score = 5, feedback = "taster_feedback_lavender_blueberry", unique = true, voids = { "taster_feedback_lavender_solo", "taster_feedback_blueberry_solo" } },
 	{ requires = { "lavender", "lemon" }, score = 5, feedback = "taster_feedback_lavender_lemon", unique = true, voids = { "taster_feedback_lavender_solo", "taster_feedback_lemon_solo" } },
@@ -987,6 +1007,7 @@ CoffeeEvaluators =
 	{ requires = { "lemon" }, counts = { { "lemon", ">=", 2 } }, score = -16, feedback = "taster_feedback_lemon_overuse", voids = { "taster_feedback_lemon_solo" } },
 	{ requires = { "lemon" }, forbids = { "honey", "espresso" }, ratios = { { "coffee", ">", 0 } }, score = -22, feedback = "taster_feedback_espresso_lime_bad", voids = { "taster_feedback_lemon_solo" } },
 	{ requires = { "lemon", "honey" }, ratios = { { "coffee", ">", 0 } }, score = 8, feedback = "taster_feedback_lemon_honey_coffee", voids = { "taster_feedback_lemon_solo", "taster_feedback_honey_solo" } },
+	{ requires = { "lemon", "honey" }, ratios = { { "coffee", "==", 0 } }, score = 5, feedback = "taster_feedback_lemon_honey", unique = true, voids = { "taster_feedback_lemon_solo", "taster_feedback_honey_solo" } },
 	{ requires = { "lemon", "ginger" }, score = 6, feedback = "taster_feedback_lemon_ginger", unique = true, voids = { "taster_feedback_lemon_solo", "taster_feedback_ginger_solo" } },
 	{ requires = { "lemon" }, score = 0, feedback = "taster_feedback_lemon_solo", unique = true },
 
@@ -1040,6 +1061,8 @@ CoffeeEvaluators =
 	{ requires = { "matcha", "yuzu" }, ratios = { { "coffee", "==", 0 }, { "sugar", ">", 0 } }, score = 12, feedback = "taster_feedback_matcha_yuzu", voids = { "taster_feedback_matcha_solo", "taster_feedback_yuzu_solo" } },
 	{ requires = { "matcha", "strawberry" }, ratios = { { "coffee", "==", 0 } }, score = 6, feedback = "taster_feedback_matcha_strawberry", unique = true, voids = { "taster_feedback_matcha_solo", "taster_feedback_strawberry_solo" } },
 	{ requires = { "matcha", "coconut" }, ratios = { { "coffee", "==", 0 } }, score = 5, feedback = "taster_feedback_matcha_coconut", unique = true, voids = { "taster_feedback_matcha_solo", "taster_feedback_coconut_solo" } },
+	{ requires = { "matcha", "ginger" }, score = 4, feedback = "taster_feedback_matcha_ginger", unique = true, voids = { "taster_feedback_matcha_solo", "taster_feedback_ginger_solo" } },
+	{ requires = { "matcha", "almond" }, score = 4, feedback = "taster_feedback_matcha_almond", unique = true, voids = { "taster_feedback_matcha_solo", "taster_feedback_almond_solo" } },
 	{ requires = { "matcha", "honey" }, score = 5, feedback = "taster_feedback_matcha_honey", unique = true, voids = { "taster_feedback_matcha_solo", "taster_feedback_honey_solo" } },
 	{ requires = { "matcha" }, score = 0, feedback = "taster_feedback_matcha_solo", unique = true },
 
@@ -1136,6 +1159,8 @@ CoffeeEvaluators =
 	-- ROSE ------------------------------------------------------------------
 	{ requires = { "rose" }, counts = { { "rose", ">=", 2 } }, score = -20, feedback = "taster_feedback_rose_overuse", voids = { "taster_feedback_rose_solo" } },
 	{ requires = { "rose", "lavender", "jasmine" }, score = -18, feedback = "taster_feedback_floral_overload_bad", voids = { "taster_feedback_rose_solo", "taster_feedback_lavender_solo", "taster_feedback_jasmine_solo" } },
+	{ requires = { "rose", "mint" }, score = -16, feedback = "taster_feedback_rose_mint_bad", voids = { "taster_feedback_rose_solo", "taster_feedback_mint_solo" } },
+	{ requires = { "rose", "saffron" }, ratios = { { "coffee", "==", 0 } }, score = 22, feedback = "taster_feedback_rose_saffron", voids = { "taster_feedback_saffron_solo", "taster_feedback_rose_pistachio", "taster_feedback_rose_raspberry", "taster_feedback_rose_solo" } },
 	{ requires = { "rose", "cardamom" }, score = 7, feedback = "taster_feedback_rose_cardamom", unique = true, voids = { "taster_feedback_rose_solo", "taster_feedback_cardamom_solo" } },
 	{ requires = { "rose", "pistachio" }, score = 7, feedback = "taster_feedback_rose_pistachio", unique = true, voids = { "taster_feedback_rose_solo", "taster_feedback_pistachio_solo" } },
 	{ requires = { "rose", "raspberry" }, score = 7, feedback = "taster_feedback_rose_raspberry", unique = true, voids = { "taster_feedback_rose_solo", "taster_feedback_raspberry_solo" } },
