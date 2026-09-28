@@ -28,6 +28,8 @@ AppMutex=ChocolatierReforged_v2_Launcher
 SetupMutex=ChocolatierReforged_v2_Setup
 UninstallDisplayName=Chocolatier: Decadence by Design Reforged
 SetupLogging=yes
+SignTool=reforged
+SignedUninstaller=yes
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional shortcuts:"; Flags: checkedonce
