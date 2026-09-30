@@ -1,6 +1,6 @@
 #define PublicVersion GetEnv("REFORGED_PUBLIC_VERSION")
 #if PublicVersion == ""
-  #define PublicVersion "2.0.0"
+  #define PublicVersion "2.0.1"
 #endif
 
 [Setup]
@@ -9,6 +9,9 @@ AppName=Chocolatier: Decadence by Design Reforged
 AppVersion={#PublicVersion}
 AppVerName=Chocolatier: Decadence by Design Reforged v{#PublicVersion}
 DefaultDirName={pf32}\PlayFirst\Chocolatier Decadence by Design
+; Reforged installs into an existing game folder. Do not append the default
+; folder name again when the user browses to that exact directory.
+AppendDefaultDirName=no
 DisableProgramGroupPage=yes
 PrivilegesRequired=admin
 ArchitecturesAllowed=x64compatible

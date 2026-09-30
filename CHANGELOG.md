@@ -1,38 +1,16 @@
 # Chocolatier: Decadence by Design Reforged — v2.0.1 Change Notes
 
-Reforged v2.0.1 is the first post-launch hotfix for Reforged v2, focused on Community startup reliability on modern Windows systems, Secret Test Kitchen recipe evaluation, localization-safe interface fixes and several gameplay, quest and dialogue corrections discovered immediately after release.
+Reforged v2.0.1 is the first post-launch hotfix for Reforged v2, focused on Secret Test Kitchen recipe evaluation, localization-safe interface fixes, installer compatibility and several gameplay, quest and dialogue corrections discovered immediately after release.
 
 ## Highlights
 
-- Improved Reforged Community startup compatibility with modern Windows security features.
-- Updated the Reforged Community Bridge to **0.2.13**.
-- Added substantially better Community Bridge startup diagnostics.
 - Expanded and corrected numerous Secret Test Kitchen ingredient-pairing evaluations.
 - Activated several previously dormant Teddy Baumeister critique lines.
 - Fixed localization-related clipping in parts of the Community and Help interfaces.
 - Fixed a Rank 2 quest completion text error.
 - Fixed missing shop haggling dialogue caused by mismatched string IDs.
 - Restored the public release configuration to launch with developer/cheat mode disabled.
-
-## Reforged Community & Windows
-
-- Updated the Reforged Community Bridge from **0.2.12 to 0.2.13**.
-- Moved mutable launcher/bridge control files such as `bridge_status.txt` and `stop.txt` out of the game installation and into `%LOCALAPPDATA%\Chocolatier Reforged\Community Bridge`.
-- The Community Bridge can therefore keep its temporary runtime state in a normal per-user writable location instead of beside the installed executable.
-- Added detailed launcher diagnostics that now distinguish between:
-  - a missing Community Bridge executable;
-  - Windows refusing to start the bridge;
-  - the bridge exiting before reaching ready state;
-  - and the bridge starting but timing out before reporting status.
-- Added specific diagnostic guidance when Windows reports that the Community Bridge was blocked by application-control or antivirus policy.
-- Added mandatory Authenticode signing and signature verification to the public release pipeline for `ReforgedCommunityBridge.exe` and `Chocolatier Reforged.exe`.
-- Configured the installer build to sign both the Reforged installer and its generated Windows uninstaller.
-- Public release builds now require an appropriate RSA code-signing certificate and fail rather than silently producing unsigned release executables.
-- Installer builds now verify final signatures before generating release hashes and update-manifest information.
-- Added cleanup for stale per-user Community Bridge runtime files when updating.
-- Community services remain optional. If the bridge cannot start, ordinary offline single-player gameplay still launches normally.
-- Updated the Reforged Community client version to **2.0.1**.
-- Community Services remains at **1.1.2**.
+- Fixed the installer repeatedly rejecting correctly selected Steam installations when browsing to the existing game folder.
 
 ## Secret Test Kitchen & Recipe Evaluation
 
@@ -77,11 +55,10 @@ Reforged v2.0.1 is the first post-launch hotfix for Reforged v2, focused on Comm
 
 ## Release Safety & Technical
 
+- Fixed the installer rejecting valid Steam installations after the user selected the correct existing game folder.
+- Disabled Inno Setup's automatic default-folder-name appending for the existing-game-folder picker, preventing duplicated paths such as `Chocolatier Decadence by Design\Chocolatier Decadence by Design`.
 - Restored the shipped `settings.xml` default to `<cheatmode>0</cheatmode>`.
-- Added a reusable Authenticode signing and verification helper to the release toolchain.
-- Added dedicated documentation for configuring trusted Windows release signing.
-- Added RSA certificate validation for Smart App Control compatibility.
-- Updated public build metadata, README information and release-component versions for Reforged **2.0.1** and Community Bridge **0.2.13**.
+- Updated public build metadata and README information for Reforged **2.0.1**; Community Services remains **1.1.2** and Community Bridge remains **0.2.12**.
 
 ---
 
