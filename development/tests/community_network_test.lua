@@ -85,7 +85,7 @@ local function TestEchoPost()
 		schema_version = 1,
 		game_id = "c3_dbd",
 		name = "Bridge Test Bar",
-		description = "Round-trip transport test from the Reforged Lua runtime.",
+		description = "Round-trip transport test from the Reforged Lua runtime " .. string.char(0x96) .. " legacy punctuation.",
 		category = "bar",
 		ingredients = { "cacao", "sugar" },
 		appearance =
