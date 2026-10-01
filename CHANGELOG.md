@@ -1,3 +1,26 @@
+# Chocolatier: Decadence by Design Reforged — v2.0.2 Change Notes
+
+Reforged v2.0.2 is a focused Community hotfix for Creation sharing. It fixes uploads that could be rejected when player-authored Creation names or descriptions contained legacy Windows text bytes produced by the original game's text controls.
+
+## Highlights
+
+- Fixed Community Creation uploads failing with `Request body must be UTF-8.` for otherwise valid player-created recipes.
+- Preserved valid UTF-8 text while safely converting legacy Windows-1252 punctuation and characters before Community submission.
+- Added a regression case covering legacy encoded punctuation in Community POST requests.
+
+## Community & Networking
+
+- Hardened `CommunityJSON.Encode` so valid UTF-8 byte sequences pass through unchanged.
+- Added Windows-1252 fallback conversion for legacy bytes that are not valid UTF-8, emitting JSON Unicode escapes rather than malformed request data.
+- This specifically covers common pasted or typed characters such as smart quotes, en/em dashes, ellipses and non-breaking spaces without requiring players to rename or rewrite their Creations.
+
+## Release & Versioning
+
+- Updated Reforged client, launcher, installer and public-release metadata to **2.0.2**.
+- Community Services remains **1.1.2** and Community Bridge remains **0.2.12**; neither component requires a version bump for this client-side fix.
+
+---
+
 # Chocolatier: Decadence by Design Reforged — v2.0.1 Change Notes
 
 Reforged v2.0.1 is the first post-launch hotfix for Reforged v2, focused on Secret Test Kitchen recipe evaluation, localization-safe interface fixes, installer compatibility and several gameplay, quest and dialogue corrections discovered immediately after release.
