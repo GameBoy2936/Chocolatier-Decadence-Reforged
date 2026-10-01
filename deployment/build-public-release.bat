@@ -2,7 +2,7 @@
 setlocal EnableExtensions EnableDelayedExpansion
 cd /d "%~dp0"
 
-set "REFORGED_PUBLIC_VERSION=2.0.1"
+set "REFORGED_PUBLIC_VERSION=2.0.2"
 rem Production Community server baseline: Chocolatier_Community_Server_v1.1.2-bar-appearance-hotfix.zip
 set "COMMUNITY_SERVER_VERSION=1.1.2"
 set "PRODUCTION_HOST=scores.chocolatiercommunity.com"
