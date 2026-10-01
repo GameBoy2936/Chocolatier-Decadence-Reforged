@@ -32,9 +32,64 @@ end
 -- JSON Encoding
 -------------------------------------------------------------------------------
 
+-- User-authored text comes from Playground's legacy Windows text controls. Most
+-- strings are ASCII and some newer paths already contain UTF-8, but pasted or
+-- typed punctuation can still arrive as Windows-1252 bytes (for example 0x96
+-- for an en dash or 0xA0 for a non-breaking space). Passing those bytes through
+-- verbatim produces invalid UTF-8 JSON and the Community service rejects the
+-- request before it can parse the creation. Preserve valid UTF-8 sequences and
+-- convert otherwise-invalid legacy bytes to JSON Unicode escapes.
+local cp1252 =
+{
+	[0x80] = 0x20AC, [0x82] = 0x201A, [0x83] = 0x0192, [0x84] = 0x201E,
+	[0x85] = 0x2026, [0x86] = 0x2020, [0x87] = 0x2021, [0x88] = 0x02C6,
+	[0x89] = 0x2030, [0x8A] = 0x0160, [0x8B] = 0x2039, [0x8C] = 0x0152,
+	[0x8E] = 0x017D, [0x91] = 0x2018, [0x92] = 0x2019, [0x93] = 0x201C,
+	[0x94] = 0x201D, [0x95] = 0x2022, [0x96] = 0x2013, [0x97] = 0x2014,
+	[0x98] = 0x02DC, [0x99] = 0x2122, [0x9A] = 0x0161, [0x9B] = 0x203A,
+	[0x9C] = 0x0153, [0x9E] = 0x017E, [0x9F] = 0x0178,
+}
+
+local function UnicodeEscape(codepoint)
+	if codepoint <= 0xFFFF then
+		return string.format('\\u%04x', codepoint)
+	end
+	local value = codepoint - 0x10000
+	local high = 0xD800 + Floor(value / 0x400)
+	local low = 0xDC00 + Mod(value, 0x400)
+	return string.format('\\u%04x\\u%04x', high, low)
+end
+
+local function ValidUtf8SequenceLength(value, at, length)
+	local b1 = string.byte(value, at)
+	local b2, b3, b4
+	if at + 1 <= length then b2 = string.byte(value, at + 1) end
+	if at + 2 <= length then b3 = string.byte(value, at + 2) end
+	if at + 3 <= length then b4 = string.byte(value, at + 3) end
+
+	if b1 >= 0xC2 and b1 <= 0xDF then
+		if b2 and b2 >= 0x80 and b2 <= 0xBF then return 2 end
+	elseif b1 == 0xE0 then
+		if b2 and b2 >= 0xA0 and b2 <= 0xBF and b3 and b3 >= 0x80 and b3 <= 0xBF then return 3 end
+	elseif (b1 >= 0xE1 and b1 <= 0xEC) or (b1 >= 0xEE and b1 <= 0xEF) then
+		if b2 and b2 >= 0x80 and b2 <= 0xBF and b3 and b3 >= 0x80 and b3 <= 0xBF then return 3 end
+	elseif b1 == 0xED then
+		if b2 and b2 >= 0x80 and b2 <= 0x9F and b3 and b3 >= 0x80 and b3 <= 0xBF then return 3 end
+	elseif b1 == 0xF0 then
+		if b2 and b2 >= 0x90 and b2 <= 0xBF and b3 and b3 >= 0x80 and b3 <= 0xBF and b4 and b4 >= 0x80 and b4 <= 0xBF then return 4 end
+	elseif b1 >= 0xF1 and b1 <= 0xF3 then
+		if b2 and b2 >= 0x80 and b2 <= 0xBF and b3 and b3 >= 0x80 and b3 <= 0xBF and b4 and b4 >= 0x80 and b4 <= 0xBF then return 4 end
+	elseif b1 == 0xF4 then
+		if b2 and b2 >= 0x80 and b2 <= 0x8F and b3 and b3 >= 0x80 and b3 <= 0xBF and b4 and b4 >= 0x80 and b4 <= 0xBF then return 4 end
+	end
+	return nil
+end
+
 local function EncodeString(value)
 	local out = { '"' }
-	for i = 1, string.len(value) do
+	local length = string.len(value)
+	local i = 1
+	while i <= length do
 		local b = string.byte(value, i)
 		if b == 34 then table.insert(out, '\\"')
 		elseif b == 92 then table.insert(out, '\\\\')
@@ -44,7 +99,18 @@ local function EncodeString(value)
 		elseif b == 12 then table.insert(out, '\\f')
 		elseif b == 13 then table.insert(out, '\\r')
 		elseif b < 32 then table.insert(out, string.format('\\u%04x', b))
-		else table.insert(out, string.char(b)) end
+		elseif b < 0x80 then table.insert(out, string.char(b))
+		else
+			local sequenceLength = ValidUtf8SequenceLength(value, i, length)
+			if sequenceLength then
+				table.insert(out, string.sub(value, i, i + sequenceLength - 1))
+				i = i + sequenceLength - 1
+			else
+				local codepoint = cp1252[b] or b
+				table.insert(out, UnicodeEscape(codepoint))
+			end
+		end
+		i = i + 1
 	end
 	table.insert(out, '"')
 	return table.concat(out)
