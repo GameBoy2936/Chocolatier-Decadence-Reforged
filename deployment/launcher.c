@@ -66,6 +66,50 @@ static void terminate_processes_named(const wchar_t *exe_name) {
     CloseHandle(snap);
 }
 
+static HANDLE find_matching_game_process(const wchar_t *expected_path, DWORD exclude_pid, DWORD *pid_out) {
+    HANDLE snap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+    PROCESSENTRY32W pe;
+    if (pid_out) *pid_out = 0;
+    if (snap == INVALID_HANDLE_VALUE) return NULL;
+
+    ZeroMemory(&pe, sizeof(pe));
+    pe.dwSize = sizeof(pe);
+    if (Process32FirstW(snap, &pe)) {
+        do {
+            if (pe.th32ProcessID != exclude_pid && _wcsicmp(pe.szExeFile, GAME_EXE) == 0) {
+                HANDLE process = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION | SYNCHRONIZE, FALSE, pe.th32ProcessID);
+                if (process) {
+                    wchar_t actual_path[32768];
+                    DWORD path_len = (DWORD)_countof(actual_path);
+                    if (QueryFullProcessImageNameW(process, 0, actual_path, &path_len) &&
+                        _wcsicmp(actual_path, expected_path) == 0 &&
+                        WaitForSingleObject(process, 0) == WAIT_TIMEOUT) {
+                        if (pid_out) *pid_out = pe.th32ProcessID;
+                        CloseHandle(snap);
+                        return process;
+                    }
+                    CloseHandle(process);
+                }
+            }
+        } while (Process32NextW(snap, &pe));
+    }
+
+    CloseHandle(snap);
+    return NULL;
+}
+
+static HANDLE wait_for_matching_game_process(const wchar_t *expected_path, DWORD exclude_pid, DWORD timeout_ms, DWORD *pid_out) {
+    DWORD elapsed = 0;
+    HANDLE process;
+    for (;;) {
+        process = find_matching_game_process(expected_path, exclude_pid, pid_out);
+        if (process) return process;
+        if (elapsed >= timeout_ms) return NULL;
+        Sleep(100);
+        elapsed += 100;
+    }
+}
+
 static int start_process(const wchar_t *exe, const wchar_t *cwd, DWORD flags, PROCESS_INFORMATION *pi) {
     STARTUPINFOW si;
     wchar_t cmd[32768];
@@ -381,10 +425,40 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, LPWSTR command_line,
         return 4;
     }
 
-    CloseHandle(game_pi.hThread);
-    WaitForSingleObject(game_pi.hProcess, INFINITE);
-    GetExitCodeProcess(game_pi.hProcess, &game_exit);
-    CloseHandle(game_pi.hProcess);
+    {
+        DWORD current_game_pid = game_pi.dwProcessId;
+        HANDLE current_game_process = game_pi.hProcess;
+
+        CloseHandle(game_pi.hThread);
+
+        /*
+         * Steam and some compatibility environments can hand the running game
+         * from the process returned by CreateProcessW to a replacement
+         * chocolatier-decadence.exe. If we tear down the Community Bridge as
+         * soon as that first process exits, the replacement game keeps running
+         * with Community permanently offline. Follow same-path replacement
+         * processes before deciding that the game session has actually ended.
+         */
+        for (;;) {
+            DWORD replacement_pid = 0;
+            HANDLE replacement_process;
+
+            WaitForSingleObject(current_game_process, INFINITE);
+            GetExitCodeProcess(current_game_process, &game_exit);
+            CloseHandle(current_game_process);
+
+            replacement_process = wait_for_matching_game_process(
+                game_exe,
+                current_game_pid,
+                5000,
+                &replacement_pid
+            );
+            if (!replacement_process) break;
+
+            current_game_process = replacement_process;
+            current_game_pid = replacement_pid;
+        }
+    }
 
     if (bridge_started) {
         write_stop_file(bridge_stop);

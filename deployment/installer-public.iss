@@ -1,6 +1,6 @@
 #define PublicVersion GetEnv("REFORGED_PUBLIC_VERSION")
 #if PublicVersion == ""
-  #define PublicVersion "2.0.2"
+  #define PublicVersion "2.0.3"
 #endif
 
 [Setup]
