@@ -1,3 +1,27 @@
+# Chocolatier: Decadence by Design Reforged — v2.0.3 Change Notes
+
+Reforged v2.0.3 is a focused Community launcher hotfix for a process-handoff issue discovered on some Steam installations.
+
+## Highlights
+
+- Fixed the Reforged Community Bridge shutting down while *Chocolatier: Decadence by Design* was still running on affected Steam systems.
+- The launcher now follows a replacement `chocolatier-decadence.exe` process when the initially launched game process hands off or relaunches.
+- Community Accounts, the Community Cookbook, Cloud Saves and Community Scores now remain available for the full game session in this case.
+
+## Community & Launcher
+
+- Previously, `Chocolatier Reforged.exe` treated the process handle returned by its initial `CreateProcessW` call as the entire game session. On affected systems that process could exit after handing execution to another `chocolatier-decadence.exe`, causing the launcher to create `community_bridge\\stop.txt` and shut down `ReforgedCommunityBridge.exe` even though the game remained open.
+- The launcher now waits briefly for same-installation replacement game processes after the original process exits.
+- Replacement detection matches the full executable path, rather than only the process name, so an unrelated Chocolatier installation does not keep the Community Bridge alive.
+- The handoff check is repeated if another same-path replacement occurs before the session genuinely ends.
+
+## Release & Versioning
+
+- Updated Reforged client, launcher, installer and public-release metadata to **2.0.3**.
+- Community Services remains **1.1.2** and Community Bridge remains **0.2.12**; this fix is entirely in the Reforged launcher.
+
+---
+
 # Chocolatier: Decadence by Design Reforged — v2.0.2 Change Notes
 
 Reforged v2.0.2 is a focused Community hotfix for Creation sharing. It fixes uploads that could be rejected when player-authored Creation names or descriptions contained legacy Windows text bytes produced by the original game's text controls.
